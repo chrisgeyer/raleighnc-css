@@ -1,0 +1,333 @@
+/*Main CSS
+============*/
+body {padding-bottom:15px; background:url(images/bodyBg.png) #8b9f8e repeat;}
+
+/*Generic styles*/
+.hidden, hr {display:none;}
+.left 			{float:left;}
+.right 			{float:right;}
+.third 			{width:33%;}
+.fourth 		{width:24%;}
+.half 			{width:48%;}
+.twothirds 	{width:64%;}
+.last 			{margin-right:0; border-right:0;}
+.quiet 			{color:#666;}
+img 				{border:0;}
+.tcalDiv 		{margin-bottom:20px;}
+h2 img 			{float:left; margin-right:6px; padding-top:4px; vertical-align:middle;}
+.faqqna, .projsect {color:#7f453b;}
+.clearfix:after{clear:both;display:block;content:".";height:0;visibility:hidden;}/*does this need an update?*/
+
+/*Links*/
+.jumper 			{text-decoration:underline; visibility:hidden;}
+.tcalLink 		{font-weight:700; text-decoration:underline;}
+a[name]:hover {text-decoration:none;}
+table a:link 	{text-decoration:underline;}
+.coricon 			{margin:0; padding-left:2px; vertical-align:middle;}
+.storyContentWrapper a:link, .storyContentWrapper a:visited, .contactBox a {text-decoration:underline;}
+
+/*Column*/
+#contentArea, #contentAreaGSA, #Main {margin:0; padding:0 0 20px 0; width:100%; border-top:3px solid #ddd; border-bottom:1px solid #ddd; overflow:hidden;}
+#col1 				{float:left; margin:20px 10px 10px 0; padding:0; width:20%;}
+#col2 				{float:left; margin:20px 5px; padding:0; width:58%; position:relative;}
+#col3 				{float:right; margin:20px 0 10px 0; padding:0 0 0 7px; width:19%;}
+#col1Large 		{margin:20px 0 0 0; padding:0; width:100%;}
+#col2Large 		{float:left; margin-top:18px; width:76%;}
+#addThisButtons	{margin:38px 0 0; position:absolute; right:0;}
+
+/*Pages*/
+.iwt_leftnav, .landingMainWindow, .storyContentWrapper, .statusBox, .contactBox, .mapBox, .employmentWrapper {background:#f1f2f1;}
+.storyContentWrapper {width:555px; margin:0 auto; font-size:1.08em;}
+#storyContentWrapper {padding:20px;}
+.callout	{margin:20px 10px; padding:5px; background:#FDFDFD; border:2px solid #E96629; border-radius:10px;}
+
+/*Left Col
+===========*/
+/*Discover*/
+.discover 				{margin:0 0 10px 0; padding:0 0 10px 0; height:54px; border-bottom:1px solid #ccc;}
+.discoverImgText 	{float:left; padding:0 0 0 6px; width:30%; text-align:center;}
+
+/*Department dropdown*/
+.deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 10px; border-bottom:1px solid #ccc;}
+#deptSelector select 	{width:175px; border:1px solid #333;}
+
+/*Left Nav*/
+.iwt_leftnav 					{padding:0 10px 0 0;}
+.iwt_section 					{margin:0 0 10px 10px;}
+.iwt_section_header 	{border-bottom:1px solid #bfbfbf; font-size:1.3em;}
+.iwt_leftnav li 			{margin:0 0 6px 0; list-style-type:none;}
+
+/*Right Col
+============*/
+/*Survey*/
+.surveyDisplayWrapper 	{margin:10px 0; padding:10px 0; border-bottom:1px solid #ccc;}
+.surveyQuestions h2 		{margin:0 10px 0 0; line-height:22px;}
+.surveyQuestionGroup 		{margin:10px 0; padding:0;}
+.surveyQuestion 				{color:#7f453b; font-weight:700;}
+.surveyFields input 		{float:left; clear:both; margin:2px 5px;}
+.surveyFieldTitle 			{margin:5px 0;}
+.surveyQuestions p 			{clear:both; margin:0 10px 0 0;}
+.surveyQuestions p:last-child {margin:0;}
+input.submitSurveyButton, 
+.action 								{float:right; margin:10px; padding:5px 12px; color:#fff; font-size:1.1em; font-weight:700; border:1px solid #666; background:#7f453b; border-radius:5px;}
+input.submitSurveyButton:hover, 
+.action:hover 					{text-decoration:underline; cursor:pointer; color:#fff;}
+input.submitSurveyButton:active, 
+.action:active 					{position:relative; top:1px; outline:0;}
+
+/*Most Popular*/
+#mostPopLinksArea 			{padding:10px 10px 10px 0; border-bottom:1px solid #ccc;}
+#mostPopular li 				{margin:0; padding:2px; background:$green; list-style:none;}
+a.ui-accordion-header 	{padding-left:20px; background:url(images/arrows.png) top left no-repeat; background-position:0 0; width:16px; height:16px; font-size:1.2em; font-weight:700; color:#fff;}
+#mostPopular li.selected {margin:0; padding-top:5px; background:$link;}
+#mostPopular li.selected a.ui-accordion-header {padding-left:20px; background-position:0 -21px; width:16px; height:16px; font-size:1.2em; font-weight:700; color:#fff;}
+#mostPopular ul.subMenu {background:#fdfdfd;}
+#mostPopular ul.subMenu li {margin:0; padding:5px; background:#fdfdfd;}
+ul.subMenu li a					{color:$link;}
+ul.subMenu li a:hover 	{color:$linkhover;}
+
+/*Popular portlets - april 20012*/
+#popularPages, #popularDocuments 							{padding:10px 10px 10px 0; border-bottom:1px solid #ccc;}
+#popularPages ul li, #popularDocuments ul li 	{margin:0; padding:5px; background:#fafafa;}
+#popularPages ul, #popularDocuments ul 				{border:1px solid #ccc;}
+
+/*Gov Delivery - march 2012*/
+.govdelivery 				{border-bottom:1px solid #ccc;}
+.govdelivery h3 		{font-size:1.5em; color:$green; margin:0 0 0 5px;}
+.govdelivery .box		{padding:5px; overflow:hidden;}
+.govdelivery a.action {background:$green; color:#fff;}
+#Govdelivery 				{margin:0 auto 5px; padding:2px 5px; width:172px; background:#d9decf; border-radius:2px; overflow:hidden; border:0;}
+#Govdelivery h3			{color:#111; font-size:1.4em; margin:2px;}
+#Govdelivery ul 		{background:#fafafa; padding:5px;}
+#Govdelivery li 		{padding:0 0 5px;}
+
+/*Related info - march 2012*/
+.mRelatedContentWrapper {margin:0 auto; padding:0; width:182px; background:#d7e2f1;}
+.mRelatedContentMain 		{margin:0; padding:5px;}
+.mRelatedContentMain h2 {font-size:1.4em;}
+.mRelatedContent 				{margin:0; padding:0; background:#f1f2f1;}
+.mRelatedContent li 		{margin:0; padding:3px;}
+.mRelatedTitle 					{margin:0 0 4px 0; padding:2px 0; color:#111; font-weight:700; font-size:1.1em;}
+
+/*Static pages
+====================*/
+/*Calendar*/
+#calendarArea {margin:185px 0 0 19px; width:509px; height:689px; position:relative;}
+.calTopic01, .calTopic02, .calTopic03, .calTopic04, .calTopicFullScreen {padding:0 5px; width:90px; background:#29527a; border-right:2px solid #f1f1f1; color:#fff; text-align:center; vertical-align:middle;}
+.calTopic02 {width:110px; background:#a32929;}
+.calTopic03 {width:240px; background:#ab8b00;}
+.calTopic04 {width:120px; background:#319331;}
+.calTopicFullScreen {padding:3px 0 0 0; width:80px; background:#aaa;}
+.calTopicFullScreen a {color:#fff;}
+
+/*Contact Directory - march 2012*/
+#contactForm	{margin:20px 10px; padding:5px; background:#FDFDFD; border:2px solid #ddd; border-radius:10px;}
+.contactSearchForm li {padding:2px;}
+.searchBox 			{margin:10px 0;}
+.nameBox				{margin-left:50px;}
+.nameBox:nth-of-type(2) {margin-left:52px;}
+.resultArea 		{padding:10px;}
+#viewBy 				{float:left;}
+.numberResults 	{float:right;}
+.paging 				{clear:both; float:right;}
+#peopleResults 	{clear:both; width:100%;}
+.departmentRow 	{clear:both; background:#3C61A5; font-weight:700; font-size:1.2em; color:#fff; padding:0 5px;}
+.contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {float:left; margin:5px 0 0 0; padding:2px 6px;}
+.contactResultsName, .contactResultsPhoneNumber {clear:both;}
+.contactResultsPhoneNumber {margin:0 0 10px 0; padding:0 6px; width:98%; border-bottom:1px solid #ddd;}
+.contactSearchForm input[type="submit"] {margin-left:135px;}
+
+/*Google Forms*/
+label {display:block;}
+.ss-q-help {color:green;}
+.ss-q-title {color:red;}
+.cn, .ph, .cty, .ste {float:left; padding:18px 20px 0 0;}
+.cn, .ph, .cty {clear:both;}
+
+/*iFrame*/
+iframe {border:none;}
+.iframeShim {margin:0; padding:0; border:none; background:none; position:absolute; overflow:hidden;}
+.interior {margin:54px 0 0 3px;}
+
+/*Landing
+================*/
+/*Main Feature*/
+.landingMainWindow h1 {margin:0; font-size:1.9em; text-align:center;}
+.landingPg {margin:0 auto; padding:0; width:555px; height:440px; position:relative;}	
+.mFeatureMainFrame {margin:-20px 0 0 -20px; padding:0; height:200px; z-index:8; position:absolute;}
+.mFeatureDescTxt {padding:0; width:485px; height:70px; position:absolute; left:35px; bottom:40px; z-index:9; text-align:center;}
+.mFeatureDescTxt a {color:#fff; font-size:1.5em; text-decoration:underline;}
+.mFeatureDescTxt a:hover {color:#ddd;}
+.mFeatureMainImg {margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0px 0px 15px #666; border-radius:5px;}
+.mFeatureDescBlkBg {padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.7;}
+
+/*Feature Table*/
+.twoCol {margin:0 0 10px 0; width:100%; border-collapse:collapse; border-bottom:1px solid #ccc;}
+td.twoColImage {width:129px; padding:5px 0;}
+td.shadow, td.oneColImage img {padding:0 1px 4px 1px; background:transparent url(images/imgShadow.png) left bottom repeat-x;}
+td.twoColImage td.shadow img {width:129px; border:1px solid #fff;}
+.twoColTextNarrow {width:134px; padding:5px;}
+.twoColFeature {margin:0;}
+.twoColTextWide {width:50%; padding:5px;}
+/*remove once news and events are on all landing pages*/
+.oneColLand {margin:0; padding:0 0 10px 0; width:100%; height:130px; color:inherit; border-collapse:collapse; border-bottom:1px solid #ccc;}
+td.oneColImage {width:50%; padding:0;}
+td.oneColImage img {width:268px; border:1px solid #fff;}
+
+/*News & Events
+================*/
+/*News List*/
+.mainarticlelinks {float:left; margin:25px 5px; padding:0 0 10px 0; width:58%;}
+.mainarticlelinks h2, .maineventslinks h2 {float:left;}
+.mainRss img {margin:5px 0 0 10px;}
+.mainarticlelinks ul, .newsList ul, .maineventslinks ul, .eventsList ul {margin-bottom:10px;}
+.mainarticlelinks li, .newsList li {clear:both; padding:7px 5px; list-style:none; border-bottom:1px dotted #ccc;}
+.malDate {font-size:0.9em; color:#666;}
+a.more {float:right; margin:5px 20px 10px 10px; text-decoration:underline;}
+
+/*Events List*/
+.maineventslinks {float:left; margin:25px 5px; padding:0 0 10px 0; width:38%;}
+.maineventslinks li, .eventsList li {clear:both; padding:5px; list-style:none;}
+.eventDate {float:left; margin:0 10px 0 0; padding:0; width:40px; background:#fdfdfd; border:2px solid #ddd; text-align:center; font-weight:700; letter-spacing:0.3em; border-radius:2px;}
+.eventDay {font-size:1.3em;}
+.eventTitle {display:inline;}
+.eventTitle a {margin:0;}
+.eventTimes {color:#666; margin:0 0 10px 55px;}
+
+/*News Article*/
+#Article {float:left; margin:0 10px 0 0; width:680px; min-height:540px;}
+#Article .storyContentWrapper {width:100%;}
+.newsAlert {margin-right:5px; color:#900; font-weight:700; display:inline;}
+.updatedDate, .issuedatetime, .alrtIssueDate, .alrtLastModified {margin:10px 0 20px 0; color:#666;}
+.line {clear:both; float:none; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd; border:none; color:#ddd;}
+.images {float:right; margin:10px 0 0 10px; padding:10px 0 0 10px; width:310px; height:210px; border:1px solid #ddd;}
+.images img {width:300px; height:200px;}
+.newseventmap {float:left; margin:0 0 0 10px; width:74%;}
+.storyContentWrapper .newseventmap li {margin:0; list-style:none;}
+.newseventlocation {float:left; width:40%}
+.gismap {float:left; margin:0 0 10px 10px; padding:0; width:56%; height:182px; overflow:hidden;}
+.addfiles {float:left; width:29%; margin:10px 10px 20px 0;}
+.newscontacts {float:left; width:35%;  margin:10px 15px 20px 0;}
+.relatedlinks {float:left; width:29%; margin:10px 15px 20px 0;}
+.rsssharing {clear:both; margin-top:20px;}
+.rsssharing img {vertical-align:middle;}
+
+/*News sidebar*/
+#sidebar {float:left; width:270px;}
+#sidebar .mainarticlelinks, #sidebar .maineventslinks {clear:both; float:none; margin:19px 0; width:98%;}
+#sidebar .mainRss {display:none;}
+#sidebar .mainarticlelinks ul, #sidebar .maineventslinks ul {margin:0 5px 0 0;}
+#sidebar .mainarticlelinks li, #sidebar .maineventslinks li {padding:6px 0;}
+#sidebar .malDate {display:block;}
+#sidebar .more {margin-right:10px;}
+
+/*Event*/
+.eventdates {float:left; width:24%;}
+
+/*Council Feature*/
+.councilfeature {clear:both; padding:2%; border-top:3px solid $green; border-bottom:3px solid $green; overflow:hidden;}
+
+/*Templates
+====================*/
+/*Boards-Commissions*/
+.bcmeetinginfo {margin-bottom:10px; padding:5px; height:120px; text-align:center; background:url(images/boards-gradient.png) repeat-x; overflow:hidden;}
+.storyContentWrapper .bcmeetinginfo li, .storyContentWrapper .members li, .storyContentWrapper .cacmeetinginfo li {margin:0; padding:1px; list-style:none;}
+.bcmeetinginfo h2 {font-size:1.4em;}
+.boards h2 {border-bottom:1px solid #bfbfbf;}
+.comm, .bcnews, .participate, .pgdesc, .purpose {margin:0 0 10px 0; padding:0 0 0 10px;}
+.bcnews {margin-bottom:20px;}
+.comm {background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
+.bcimage {margin:0 auto; width:515px; /*height:200px;*/}
+.mem_names {margin:0 0 15px 20px; width:515px; color:#666; text-align:center; font-weight:700;}
+.members {float:left; width:33%; margin-top:12px; padding:0;}
+.otherdetails, .adetail {padding:12px 0 0 0; clear:both;}
+
+/*CAC*/
+.cacmeetinginfo {margin-bottom:20px; padding:5px; height:120px; text-align:center; background:url(images/cacgradient.png) repeat-x;}
+.caclocation {clear:both; margin:0 0 20px 0;}
+.cacgismap {margin:5px 0 15px 10px; padding:0; width:356px; height:256px; overflow:hidden;}
+.cacimage {margin:10px; clear:both;}
+.caccaption {margin:0 0 15px 20px; color:#666; font-weight:700;}
+.cacactivity {margin:10px auto; padding:10px 0 0 10px; width:510px; height:310px; border:1px solid #ddd;}
+.cacactivity img {width:500px; height:300px;}
+
+/*Contact*/
+.contactImage {float:right; margin-right:50px; border:1px solid #333;}
+
+/*Department*/
+.deptImg {margin:7px 0 0;}
+.deptBodyTable .deptNewsCol, .deptBodyTable .secBody {padding:0 0 10px 10px;}
+.deptBodyTable .secBody p {margin-bottom:5px;}
+
+/*Employment list*/
+.empJump li a {float:left; margin:0 15px 20px 0; text-decoration:underline;}
+.empTitle {clear:both; margin-bottom:5px; font-size:1.167em; font-weight:700;}
+.empClose, .empDept, .empNo, .empSalary {float:left; margin:0 0 10px 10px;}
+.empSalary {clear:both;}
+.empNone {margin:15px 0;font-size:1.167em;}
+.empTop	{clear:both;}
+.empTop a {display:none;}
+
+/*Employment page*/
+.employmentRequirements li, .employmentDuties li {margin-left:20px;list-style-type:disc;}
+.employmentDisclaimer {margin-top:20px; color:#666;}
+.employmentType a h3 {clear:both; margin:15px 0;}
+
+/*Facility*/
+.gismap_iframe {float:left; margin:10px 0 0 0; padding:0; width:356px; height:256px; overflow:hidden;}
+.location {float:right; margin:10px 0 0 -20px; width:31%;}
+.facility_hours {margin:0 0 10px 0; border:1px solid #fff;}
+.facility_hours th {background:#d7e2f1;}
+
+/*FAQ*/
+.backtotop {display:none;}
+.qnaset {margin:0 0 20px 0;}
+
+/*Map Gallery*/
+.mapimage {width:100%;}
+.mapdownloads th {text-align:left;}
+
+/*Police Homicide*/
+.casedesc, .caseparagraph, .casenumber, .casePhone {width:100%; clear:both;}
+.casenumber {margin:0; padding:0; font-size:1.3em; font-weight:700;}
+.casePhone {float:left; margin:0 0 20px 15px;}
+.vic {float:left; margin:0 0 7px 0; width:175px; font-size:1.167em;}
+.vicImg {float:left; width:175px; border:solid 1px #111;}
+.vicloc {float:left; margin:0 0 20px 0; width:100%;}
+.locImg {float:left; margin-left:4px; width:333px; border:solid 1px #111;}
+
+/*Status*/
+#statusanchorlist li {margin:0 0 5px 20px; padding:0; list-style-type:disc;}
+.statusBody a, .statusSection a {text-decoration:underline;}
+.statusSection li {margin:0 0 6px 50px; padding:0; list-style-type:disc;}
+.statusGreen, .statusYellow, .statusRed {background:url(images/statuscolors.png) no-repeat top left; padding-left:20px;}
+.statusGreen {background-position:0 4px; height:23px;}
+.statusYellow {background-position:0 -48px; height:23px;}
+.statusRed {background-position:0 -22px; height:23px;}
+
+/*Images*/
+.largeFrameImage {max-width:495px; max-height:240px;}
+.smallFrameImage {max-width:240px; max-height:135px;}
+.tcalImg {margin:8px 10px 0 0;}
+
+.frameWrapper, .largeFrameWrapper {background:#fff; border:1px solid #aaa; border-radius:5px;}
+
+/*Image slideshow*/
+/*small*/.frameWrapper {float:left; margin:0 15px 0 0; width:290px; overflow:hidden; position:relative;}
+.largeFrameWrapper {margin:25px 0; width:545px; overflow:hidden; position:relative;}
+.frame {margin:0; padding:0; border:none; border-spacing:0; border-collapse:collapse;}
+tr.topRow .corner1, tr.topRow .corner2 {margin:0; padding:0; width:7px; /*background:url(images/Corner1.png) top left no-repeat;*/}
+tr.topRow .top, tr.bottomRow .bottom {margin:0; padding:0; /*background:url(images/Top.png) top left repeat-x;*/}
+tr.topRow .corner2 {/*background:url(images/Corner2.png) top right no-repeat;*/}
+tr.middleRow .side1, tr.middleRow .side2 {margin:0; padding:0; /*background:url(images/Side1.png) top left repeat-y;*/}
+tr.middleRow .largeImage, tr.middleRow .smallImage {border:none; width:515px; padding:8px; background:#fff; color:inherit; text-align:center; height:285px; overflow:hidden;}
+tr.middleRow .smallImage {width:252px; height:157px;}
+tr.middleRow .side2 {/*background:url(images/Side2.png) top right repeat-y;*/}
+tr.bottomRow .corner3, tr.bottomRow .corner4 {margin:0; padding:0; /*background:url(images/Corner3.png) bottom left no-repeat;*/}
+tr.bottomRow .bottom {/*background:url(images/Bottom.png) bottom left repeat-x;*/}
+tr.bottomRow .corner4 {/*background:url(images/Corner4.png) bottom right no-repeat;*/}
+tr.topRow, tr.bottomRow {height:7px;}
+.leftArrowContainer, .rightArrowContainer, .rightArrowContainerLarge {margin-top:-10px; position:absolute; top:50%; left:2px;}
+.rightArrowContainer {left:auto; right:12px;}
+.rightArrowContainerLarge {left:auto; right:4px;}
+.arrow {width:20px; height:20px; cursor:pointer;}

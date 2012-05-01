@@ -1,0 +1,99 @@
+/* ----------------------------------------------------
+Description:		Global structural elements
+Created:				3.2.2012
+Last Modified:	3.2.2012 (cwg)
+---------------------------------------------------- */
+
+/* Establish basic layout elements.
+-------------------------------------------------------------- */
+html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #accolade, #footerContent 
+										{margin:0; padding:0;}
+
+
+/* Text elements.
+-------------------------------------------------------------- */
+/*Link*/
+a:link, a:visited		{color:$link; text-decoration:none;
+	&:hover, 
+	&:focus 					{color:$linkhover; text-decoration:underline;}
+}
+
+#screenWrapper 			{margin:0 auto; width:960px; background:#f1f2f1; border:1px solid #202020; border-top:0; box-shadow:0px 2px 30px #444;}
+
+
+/* Header elements.
+-------------------------------------------------------------- */
+#header 						{width:100%; height:110px; background:transparent url(images/logo.png) top left no-repeat;}
+
+#head_logo 					{float:left; margin:5px 0 0 5px; width:230px; height:105px; cursor:pointer;}
+#city_seal img 			{float:left; margin:4px 0 0 10px;}
+.cityOfRaleigh 			{float:left; margin:30px 0 0 10px; color:#fff; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; text-shadow:1px 1px 0 #333;}
+
+#rssLayer 					{float:right; margin:10px 20px 5px 0; padding:0; border:0; color:#333;}
+#rssLayer a 				{text-decoration:underline; color:#fff;}
+
+#fontsizer 					{float:right; margin:10px 35px 5px 0; color:#fff;}
+
+.topLinks 					{clear:both; float:right; margin:-115px 20px 20px 0; display:none;}
+.topLinks li 				{float:left; padding:0 20px; border-right:1px solid #333;}
+.topLinks li:last-child {border-right:none;}
+
+#searchBoxArea 			{float:right; clear:right; margin:15px 35px 0 0;}
+#searchInput 				{float:left; margin:0 0 3px 0; padding:0 2px; width:270px; height:22px; background:#fdfdfd url(images/google.png) left no-repeat; border:2px inset #ddd;}
+#executeSEearch 		{margin:0; padding:4px 10px; color:#fff; font-size:1.1em; font-weight:700; border:1px solid #666; background:#666; cursor:pointer;}
+#executeSEearch:hover {text-decoration:underline;}
+#executeSEearch:active {position:relative; top:1px; outline:0;}
+#advSearch a 				{clear:both; float:left; color:$green; text-decoration:underline;}
+
+
+/* Main navigation elements.
+-------------------------------------------------------------- */
+#globalNavArea 						{float:left; width:100%; background:transparent url(images/mainMenuBg.png) repeat-x; border-top:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0;}
+#globalNavArea li 				{float:left; margin:0; padding:10px; font-size:1.1em; border-right:1px solid #9ba19b;}
+#globalNavArea a 					{padding:5px; color:#fff;}
+#tabsHeader li:hover, 
+#tabsHeader #tabSelected 	{font-weight:700; background:url(images/mainMenuLiHoverBg.png) repeat-x;}
+#tabsHeader li:hover a 		{font-weight:normal; text-decoration:underline;}
+#tabsHeader #tabSelected a:hover {font-weight:700;}
+#tabsHeader li#tabSelected:hover a {font-weight:700;}
+#globalNavArea li:last-child {border-right:none;}
+
+/* Main content areas that hold articles and section elements.
+-------------------------------------------------------------- 
+#Main											{width:100%;}
+#Article									{float:left;margin:0 10px 0 0;width:70%;min-height:540px;background:#fff;}
+#Article .section, 
+.section									{padding:1.5em;margin-bottom:0.5em;clear:both;overflow:hidden;}
+//#Article .section					{display:inline-block;}
+// * html #Article .section 	{height:1%;}
+// #Article .section					{display:block;}*/
+
+
+/* sidebar elements.
+-------------------------------------------------------------- 
+#sidebar									{float:left; width:28%; width:270px;}
+#sidebar .box							{margin:0 .9em 1em 0; padding:1.5em; background:#fff;}
+#sidebar h3								{margin-bottom:10px;}*/
+
+/* Footer elements.
+-------------------------------------------------------------- */
+/*Accolades*/
+#accolade 				{padding:19px; width:96%; background:#d7e2f1; border-bottom:1px solid #fff; border-top:1px solid #fff; text-align:center;}
+#accldePre {display:none;}
+#accolade h2 			{margin-right:5px; font:2em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline;}
+.accldeSource 		{font-size:1.08em; font-style:italic; text-align:right; display:inline;}
+#accldeMore a			{float:right; margin:0; /*font-size:0.92em;*/}
+
+/*Functional Footer*/
+.newfooter {margin:15px auto; width:670px; text-align:center;}
+#footer .left.third {margin:0 0 20px 0;}
+#hmNav {clear:both; margin:10px;}
+#hmMenu	{margin:20px auto 0; text-align:center;}
+#hmMenu li {display:inline;}
+.hmLink {margin:0 10px;}
+#google_translate_element {margin-top:15px;}
+.socialmedia 			{margin:5px 0 0 17px;}
+.socialmedia a img {float:left; margin-right:5px;}
+#copyright 				{padding:10px; color:#666; text-align:center; font-size:0.9em;}
+/*#FloatingTab {top:25%;right:0;margin:0;padding:20px;width:3px;height:110px;color:white;cursor:pointer;text-indent:-100000px; overflow:hidden;position:fixed;z-index:100000;margin-right:-7px;background:#c28176;background-image:url(images/websitesurvey.png);border:2px solid #666;}
+#FloatingTab:hover {margin-right:-5px;background:#7c443A;background-image:url(images/websitesurvey.png);}*/
