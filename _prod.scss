@@ -1,22 +1,32 @@
 /*Main CSS
 ============*/
-body {padding-bottom:15px; background:url(images/bodyBg.png) #8b9f8e repeat;}
+body {padding-bottom:15px; background:#8b9f8e;}
 
-/*Generic styles*/
-.hidden, hr {display:none;}
-.left 			{float:left;}
-.right 			{float:right;}
-.third 			{width:33%;}
-.fourth 		{width:24%;}
-.half 			{width:48%;}
-.twothirds 	{width:64%;}
-.last 			{margin-right:0; border-right:0;}
-.quiet 			{color:#666;}
-img 				{border:0;}
-.tcalDiv 		{margin-bottom:20px;}
-h2 img 			{float:left; margin-right:6px; padding-top:4px; vertical-align:middle;}
-.faqqna, .projsect {color:#7f453b;}
-.clearfix:after{clear:both;display:block;content:".";height:0;visibility:hidden;}/*does this need an update?*/
+/*Generic classes*/
+.cf							{overflow:hidden;}
+.hidden, hr 		{display:none;}
+.left 					{float:left;}
+.right 					{float:right;}
+.first 					{margin-left:0; padding-left:0;}
+.last 					{margin-right:0; padding-right:0; border-right:none;}
+.fifth					{width:19%;}
+.fourth					{width:24%;}
+.third 					{width:33%;}
+.half 					{width:48%;}
+.twothirds			{width:64%;}
+.small 					{width:25%;}
+.medium					{width:50%;}
+.large					{width:78%;}
+.full						{width:96%;}
+.align-justify	{text-align:justify;}
+.align-left			{text-align:left;}
+.align-center		{text-align:center;}
+.align-right		{text-align:right;}
+.line 					{clear:both; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd;}
+.quiet 					{color:#666;}
+img 						{border:0; max-width:100%;}
+.tcalDiv 				{margin-bottom:20px;}
+h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middle;}
 
 /*Links*/
 .jumper 			{text-decoration:underline; visibility:hidden;}
@@ -44,7 +54,7 @@ table a:link 	{text-decoration:underline;}
 /*Left Col
 ===========*/
 /*Discover*/
-.discover 				{margin:0 0 10px 0; padding:0 0 10px 0; height:54px; border-bottom:1px solid #ccc;}
+.discover 				{margin:0 0 10px 0; padding:0 0 10px 0; height:54px; border-bottom:1px dotted #ccc;}
 .discoverImgText 	{float:left; padding:0 0 0 6px; width:30%; text-align:center;}
 
 /*Department dropdown*/
@@ -52,15 +62,18 @@ table a:link 	{text-decoration:underline;}
 #deptSelector select 	{width:175px; border:1px solid #333;}
 
 /*Left Nav*/
-.iwt_leftnav 					{padding:0 10px 0 0;}
-.iwt_section 					{margin:0 0 10px 10px;}
-.iwt_section_header 	{border-bottom:1px solid #bfbfbf; font-size:1.3em;}
-.iwt_leftnav li 			{margin:0 0 6px 0; list-style-type:none;}
+.leftnav 							{padding:10px;}
+.leftnav h3 					{border-bottom:1px solid #ccc;}
+.leftnav ul 					{margin:0 0 10px 10px;}
+#sidebar .leftnav h3:first-child {margin-top:0;}
+#sidebar .leftnav ul	{margin:0 0 10px -25px; background:#ddd; padding:10px}
+.leftnav li 					{margin:0 0 6px 0; list-style-type:none;}
+#col1 .leftnav ul			{margin:0 0 10px 0;}
 
 /*Right Col
 ============*/
 /*Survey*/
-.surveyDisplayWrapper 	{margin:10px 0; padding:10px 0; border-bottom:1px solid #ccc;}
+.surveyDisplayWrapper 	{clear:both; float:left; margin:1%; padding:1%; width:45%;}
 .surveyQuestions h2 		{margin:0 10px 0 0; line-height:22px;}
 .surveyQuestionGroup 		{margin:10px 0; padding:0;}
 .surveyQuestion 				{color:#7f453b; font-weight:700;}
@@ -87,9 +100,10 @@ ul.subMenu li a					{color:$link;}
 ul.subMenu li a:hover 	{color:$linkhover;}
 
 /*Popular portlets - april 20012*/
-#popularPages, #popularDocuments 							{padding:10px 10px 10px 0; border-bottom:1px solid #ccc;}
-#popularPages ul li, #popularDocuments ul li 	{margin:0; padding:5px; background:#fafafa;}
-#popularPages ul, #popularDocuments ul 				{border:1px solid #ccc;}
+#popularPages 		{padding:0 1em 1em 0; float:right; width:105%;}
+#popularPages h2 	{font-size:1.3em;}
+#popularPages ul 	{border:1px solid #ccc;}
+#popularPages li 	{margin:0; padding:3px 5px; background:#fafafa;}
 
 /*Gov Delivery - march 2012*/
 .govdelivery 				{border-bottom:1px solid #ccc;}
@@ -101,24 +115,33 @@ ul.subMenu li a:hover 	{color:$linkhover;}
 #Govdelivery ul 		{background:#fafafa; padding:5px;}
 #Govdelivery li 		{padding:0 0 5px;}
 
-/*Related info - march 2012*/
+/*Related info - march 2012
 .mRelatedContentWrapper {margin:0 auto; padding:0; width:182px; background:#d7e2f1;}
 .mRelatedContentMain 		{margin:0; padding:5px;}
 .mRelatedContentMain h2 {font-size:1.4em;}
 .mRelatedContent 				{margin:0; padding:0; background:#f1f2f1;}
 .mRelatedContent li 		{margin:0; padding:3px;}
-.mRelatedTitle 					{margin:0 0 4px 0; padding:2px 0; color:#111; font-weight:700; font-size:1.1em;}
+.mRelatedTitle 					{margin:0 0 4px 0; padding:2px 0; color:#111; font-weight:700; font-size:1.1em;}*/
+
+/*Related info - march 2012*/
+.mRelatedContentMain h2 {display:none;}
+.mRelatedContent ul 		{margin:0 0 10px 0; padding:0; border:5px solid #d7e2f1;}
+.mRelatedContent li 		{margin:0; padding:3px; background:#fafafa;}
+li.mRelatedTitle 				{margin:0; padding:2px 0; color:#111; font-weight:700; font-size:1.1em; background:#d7e2f1;}
 
 /*Static pages
 ====================*/
 /*Calendar*/
-#calendarArea {margin:185px 0 0 19px; width:509px; height:689px; position:relative;}
-.calTopic01, .calTopic02, .calTopic03, .calTopic04, .calTopicFullScreen {padding:0 5px; width:90px; background:#29527a; border-right:2px solid #f1f1f1; color:#fff; text-align:center; vertical-align:middle;}
-.calTopic02 {width:110px; background:#a32929;}
-.calTopic03 {width:240px; background:#ab8b00;}
-.calTopic04 {width:120px; background:#319331;}
-.calTopicFullScreen {padding:3px 0 0 0; width:80px; background:#aaa;}
-.calTopicFullScreen a {color:#fff;}
+.calendar					{margin:0 1%; padding:1%; background:#fff; @extend .boxshadow;}
+.calendar h1			{font-size:1.3em;}
+#monthDetail 			{@extend #sidebar;}
+.calTopic01, 
+.calTopic02, 
+.calTopic04 			{padding:0; background:#29527a; border-right:2px solid #f1f1f1; color:#fff;}
+.calTopic02 			{background:#A32929;}
+.calTopic04 			{background:#0D7813;}
+#calFrame					{width:69%; height:500px;}
+.calTopicFullScreen 	{display:none;}	
 
 /*Contact Directory - march 2012*/
 #contactForm	{margin:20px 10px; padding:5px; background:#FDFDFD; border:2px solid #ddd; border-radius:10px;}
@@ -224,8 +247,8 @@ a.more {float:right; margin:5px 20px 10px 10px; text-decoration:underline;}
 /*Event*/
 .eventdates {float:left; width:24%;}
 
-/*Council Feature*/
-.councilfeature {clear:both; padding:2%; border-top:3px solid $green; border-bottom:3px solid $green; overflow:hidden;}
+/*Home Page Feature*/
+.twtr-widget, .open			{float:left; margin-right:1%; padding:0; width:39%;}
 
 /*Templates
 ====================*/
@@ -295,6 +318,9 @@ a.more {float:right; margin:5px 20px 10px 10px; text-decoration:underline;}
 .vicImg {float:left; width:175px; border:solid 1px #111;}
 .vicloc {float:left; margin:0 0 20px 0; width:100%;}
 .locImg {float:left; margin-left:4px; width:333px; border:solid 1px #111;}
+
+/*Projects*/
+.projsect {color:#7f453b;}
 
 /*Status*/
 #statusanchorlist li {margin:0 0 5px 20px; padding:0; list-style-type:disc;}
