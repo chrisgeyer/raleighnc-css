@@ -24,9 +24,13 @@ body {padding-bottom:15px; background:#8b9f8e;}
 .align-right		{text-align:right;}
 .line 					{clear:both; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd;}
 .quiet 					{color:#666;}
+.underline			{border-bottom:1px solid #bfbfbf;}
 img 						{border:0; max-width:100%;}
 .tcalDiv 				{margin-bottom:20px;}
 h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middle;}
+
+/*OOCSS*/
+.dotted					{border-bottom:1px dotted #ccc;}
 
 /*Links*/
 .jumper 			{text-decoration:underline; visibility:hidden;}
@@ -37,29 +41,24 @@ table a:link 	{text-decoration:underline;}
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .contactBox a {text-decoration:underline;}
 
 /*Column*/
-#contentArea, #contentAreaGSA, #Main {margin:0; padding:0 0 20px 0; width:100%; border-top:3px solid #ddd; border-bottom:1px solid #ddd; overflow:hidden;}
-#col1 				{float:left; margin:20px 10px 10px 0; padding:0; width:20%;}
-#col2 				{float:left; margin:20px 5px; padding:0; width:58%; position:relative;}
-#col3 				{float:right; margin:20px 0 10px 0; padding:0 0 0 7px; width:19%;}
-#col1Large 		{margin:20px 0 0 0; padding:0; width:100%;}
-#col2Large 		{float:left; margin-top:18px; width:76%;}
-#addThisButtons	{margin:38px 0 0; position:absolute; right:0;}
+#addThisButtons	{position:absolute; right:10px; top:3px;}
+#col2 .updatedDate, #col2 .issuedatetime {position:absolute; top:3px; left:0; color:#999;}
 
 /*Pages*/
 .iwt_leftnav, .landingMainWindow, .storyContentWrapper, .statusBox, .contactBox, .mapBox, .employmentWrapper {background:#f1f2f1;}
-.storyContentWrapper {width:555px; margin:0 auto; font-size:1.08em;}
+.storyContentWrapper {width:555px; margin:0 auto; padding-top:30px; font-size:1.08em;}
 #storyContentWrapper {padding:20px;}
 .callout	{margin:20px 10px; padding:5px; background:#FDFDFD; border:2px solid #E96629; border-radius:10px;}
 
 /*Left Col
 ===========*/
-/*Discover*/
+/*Discover
 .discover 				{margin:0 0 10px 0; padding:0 0 10px 0; height:54px; border-bottom:1px dotted #ccc;}
-.discoverImgText 	{float:left; padding:0 0 0 6px; width:30%; text-align:center;}
+.discoverImgText 	{float:left; padding:0 0 0 6px; width:30%; text-align:center;}*/
 
 /*Department dropdown*/
-.deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 10px; border-bottom:1px solid #ccc;}
-#deptSelector select 	{width:175px; border:1px solid #333;}
+.deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 10px; @extend .dotted;}
+#deptSelector select 	{width:175px; /*border:1px solid #333;*/}
 
 /*Left Nav*/
 .leftnav 							{padding:10px;}
@@ -70,11 +69,15 @@ table a:link 	{text-decoration:underline;}
 .leftnav li 					{margin:0 0 6px 0; list-style-type:none;}
 #col1 .leftnav ul			{margin:0 0 10px 0;}
 
+/*old leftnav*/
+.iwt_section {margin:0 0 10px 10px;}
+.iwt_section_header {border-bottom:1px solid #ccc; font-size:1.3em;}
+.iwt_leftnav li {margin:0 0 6px 0; list-style-type:none;}
+
 /*Right Col
 ============*/
 /*Survey*/
 .surveyDisplayWrapper 	{clear:both; float:left; margin:1%; padding:1%; width:45%;}
-.surveyQuestions h2 		{margin:0 10px 0 0; line-height:22px;}
 .surveyQuestionGroup 		{margin:10px 0; padding:0;}
 .surveyQuestion 				{color:#7f453b; font-weight:700;}
 .surveyFields input 		{float:left; clear:both; margin:2px 5px;}
@@ -89,7 +92,6 @@ input.submitSurveyButton:active,
 .action:active 					{position:relative; top:1px; outline:0;}
 
 /*Most Popular*/
-#mostPopLinksArea 			{padding:10px 10px 10px 0; border-bottom:1px solid #ccc;}
 #mostPopular li 				{margin:0; padding:2px; background:$green; list-style:none;}
 a.ui-accordion-header 	{padding-left:20px; background:url(images/arrows.png) top left no-repeat; background-position:0 0; width:16px; height:16px; font-size:1.2em; font-weight:700; color:#fff;}
 #mostPopular li.selected {margin:0; padding-top:5px; background:$link;}
@@ -100,13 +102,13 @@ ul.subMenu li a					{color:$link;}
 ul.subMenu li a:hover 	{color:$linkhover;}
 
 /*Popular portlets - april 20012*/
-#popularPages 		{padding:0 1em 1em 0; float:right; width:105%;}
+#popularPages, #mostPopLinksArea {padding:10px 10px 10px 0;}
 #popularPages h2 	{font-size:1.3em;}
 #popularPages ul 	{border:1px solid #ccc;}
 #popularPages li 	{margin:0; padding:3px 5px; background:#fafafa;}
 
 /*Gov Delivery - march 2012*/
-.govdelivery 				{border-bottom:1px solid #ccc;}
+.govdelivery 				{@extend .dotted;}
 .govdelivery h3 		{font-size:1.5em; color:$green; margin:0 0 0 5px;}
 .govdelivery .box		{padding:5px; overflow:hidden;}
 .govdelivery a.action {background:$green; color:#fff;}
@@ -127,7 +129,7 @@ ul.subMenu li a:hover 	{color:$linkhover;}
 .mRelatedContentMain h2 {display:none;}
 .mRelatedContent ul 		{margin:0 0 10px 0; padding:0; border:5px solid #d7e2f1;}
 .mRelatedContent li 		{margin:0; padding:3px; background:#fafafa;}
-li.mRelatedTitle 				{margin:0; padding:2px 0; color:#111; font-weight:700; font-size:1.1em; background:#d7e2f1;}
+li.mRelatedTitle 				{margin:0; padding:2px 0; color:#111; font-weight:700; font-size:1.2em; background:#d7e2f1;}
 
 /*Static pages
 ====================*/
@@ -144,7 +146,7 @@ li.mRelatedTitle 				{margin:0; padding:2px 0; color:#111; font-weight:700; font
 .calTopicFullScreen 	{display:none;}	
 
 /*Contact Directory - march 2012*/
-#contactForm	{margin:20px 10px; padding:5px; background:#FDFDFD; border:2px solid #ddd; border-radius:10px;}
+#contactForm	{margin:20px 10px; padding:5px; background:#fdfdfd; border:2px solid #ddd; border-radius:10px;}
 .contactSearchForm li {padding:2px;}
 .searchBox 			{margin:10px 0;}
 .nameBox				{margin-left:50px;}
@@ -185,7 +187,7 @@ iframe {border:none;}
 .mFeatureDescBlkBg {padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.7;}
 
 /*Feature Table*/
-.twoCol {margin:0 0 10px 0; width:100%; border-collapse:collapse; border-bottom:1px solid #ccc;}
+.twoCol {margin:0 0 10px 0; width:100%; border-collapse:collapse; @extend .dotted;}
 td.twoColImage {width:129px; padding:5px 0;}
 td.shadow, td.oneColImage img {padding:0 1px 4px 1px; background:transparent url(images/imgShadow.png) left bottom repeat-x;}
 td.twoColImage td.shadow img {width:129px; border:1px solid #fff;}
@@ -216,12 +218,11 @@ a.more {float:right; margin:5px 20px 10px 10px; text-decoration:underline;}
 .eventTitle {display:inline;}
 .eventTitle a {margin:0;}
 .eventTimes {color:#666; margin:0 0 10px 55px;}
+.eventdatetime {margin:1em 0px 1.168em;}
 
 /*News Article*/
-#Article {float:left; margin:0 10px 0 0; width:680px; min-height:540px;}
 #Article .storyContentWrapper {width:100%;}
 .newsAlert {margin-right:5px; color:#900; font-weight:700; display:inline;}
-.updatedDate, .issuedatetime, .alrtIssueDate, .alrtLastModified {margin:10px 0 20px 0; color:#666;}
 .line {clear:both; float:none; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd; border:none; color:#ddd;}
 .images {float:right; margin:10px 0 0 10px; padding:10px 0 0 10px; width:310px; height:210px; border:1px solid #ddd;}
 .images img {width:300px; height:200px;}
@@ -236,7 +237,6 @@ a.more {float:right; margin:5px 20px 10px 10px; text-decoration:underline;}
 .rsssharing img {vertical-align:middle;}
 
 /*News sidebar*/
-#sidebar {float:left; width:270px;}
 #sidebar .mainarticlelinks, #sidebar .maineventslinks {clear:both; float:none; margin:19px 0; width:98%;}
 #sidebar .mainRss {display:none;}
 #sidebar .mainarticlelinks ul, #sidebar .maineventslinks ul {margin:0 5px 0 0;}
@@ -248,7 +248,8 @@ a.more {float:right; margin:5px 20px 10px 10px; text-decoration:underline;}
 .eventdates {float:left; width:24%;}
 
 /*Home Page Feature*/
-.twtr-widget, .open			{float:left; margin-right:1%; padding:0; width:39%;}
+.open {float:right; width:45%; margin:1%; padding:1%;}
+.council {padding:5px; @extend .dotted;}
 
 /*Templates
 ====================*/
@@ -307,53 +308,76 @@ a.more {float:right; margin:5px 20px 10px 10px; text-decoration:underline;}
 .qnaset {margin:0 0 20px 0;}
 
 /*Map Gallery*/
-.mapimage {width:100%;}
 .mapdownloads th {text-align:left;}
 
-/*Police Homicide*/
+/*Map Gallery*/
+.mapdownloads th		{text-align:left;}
+
+/*New 1col - april 2012*/
+.outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; position:relative;}
+.largeimage					{margin-bottom:10px; width:98%;}
+.largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .largeimage .photoslider-1click-slideshow img {height:408px;}
+.smallimage					{float:left; margin-right:15px; width:50%;}
+.smallimage .slideshow, .smallimage .photoslider-1click-slideshow, .smallimage .photoslider-1click-slideshow img {height:210px;}
+.largeimage img, .smallimage img	{width:100%;}
+.lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
+.section						{clear:both; margin:1.5em 0;}
+.callout						{margin:20px 10px; padding:5px; background:#fafafa; border:2px solid #e96629; border-radius:10px;}
+.callout img				{max-width:98%;}
+.section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px;}
+.section img.left 	{margin:5px 10px 5px 0;}
+.section img.right 	{margin:5px 0 5px 10px;}
+.section h3					{border-bottom:1px dotted #ccc;}
+.accent							{color:#7f453b;}
+.jumper 						{text-decoration:underline; visibility:hidden;}
+
+/*Old One Column - seperate or remove after*/
+.faqqna 		{color:#7f453b;}
+.backtotop 	{display:none;}
+.tcalDiv 		{margin-bottom:20px;}
+.jumper 		{text-decoration:underline; visibility:hidden;}
+.tcalLink 	{font-weight:700; text-decoration:underline;}
+.tcalImg 		{margin:5px 0;}
+/*Image slideshow*/
+.frameWrapper, 
+.largeFrameWrapper 	{background:#fff; border:1px solid #aaa; border-radius:5px;}
+.frameWrapper 			{float:left; margin:0 15px 0 0; width:290px; overflow:hidden; position:relative;}
+.largeFrameWrapper 	{margin:25px 0; width:100%; overflow:hidden; position:relative;}
+.frame 							{margin:0; padding:0; border:none; border-spacing:0; border-collapse:collapse;}
+.frame td						{border:0;}
+tr.middleRow .largeImage, 
+tr.middleRow .smallImage {width:515px; padding:8px; background:#fff; text-align:center; height:285px; overflow:hidden;}
+tr.middleRow .smallImage {width:252px; height:157px;}
+.largeFrameImage 		{max-width:495px; max-height:240px;}
+.smallFrameImage 		{max-width:240px; max-height:135px;}
+.leftArrowContainer, 
+.rightArrowContainer, 
+.rightArrowContainerLarge {margin-top:-10px; position:absolute; top:50%; left:2px;}
+.rightArrowContainer, 
+.rightArrowContainerLarge {left:auto; right:4px;}
+.arrow 							{width:20px; height:20px; cursor:pointer;}
+#mStoryImgGalDescId {margin:0;}
+
+/*Police Homicide
 .casedesc, .caseparagraph, .casenumber, .casePhone {width:100%; clear:both;}
 .casenumber {margin:0; padding:0; font-size:1.3em; font-weight:700;}
 .casePhone {float:left; margin:0 0 20px 15px;}
 .vic {float:left; margin:0 0 7px 0; width:175px; font-size:1.167em;}
 .vicImg {float:left; width:175px; border:solid 1px #111;}
 .vicloc {float:left; margin:0 0 20px 0; width:100%;}
-.locImg {float:left; margin-left:4px; width:333px; border:solid 1px #111;}
+.locImg {float:left; margin-left:4px; width:333px; border:solid 1px #111;}*/
 
 /*Projects*/
 .projsect {color:#7f453b;}
 
 /*Status*/
-#statusanchorlist li {margin:0 0 5px 20px; padding:0; list-style-type:disc;}
-.statusBody a, .statusSection a {text-decoration:underline;}
-.statusSection li {margin:0 0 6px 50px; padding:0; list-style-type:disc;}
-.statusGreen, .statusYellow, .statusRed {background:url(images/statuscolors.png) no-repeat top left; padding-left:20px;}
-.statusGreen {background-position:0 4px; height:23px;}
-.statusYellow {background-position:0 -48px; height:23px;}
-.statusRed {background-position:0 -22px; height:23px;}
-
-/*Images*/
-.largeFrameImage {max-width:495px; max-height:240px;}
-.smallFrameImage {max-width:240px; max-height:135px;}
-.tcalImg {margin:8px 10px 0 0;}
-
-.frameWrapper, .largeFrameWrapper {background:#fff; border:1px solid #aaa; border-radius:5px;}
-
-/*Image slideshow*/
-/*small*/.frameWrapper {float:left; margin:0 15px 0 0; width:290px; overflow:hidden; position:relative;}
-.largeFrameWrapper {margin:25px 0; width:545px; overflow:hidden; position:relative;}
-.frame {margin:0; padding:0; border:none; border-spacing:0; border-collapse:collapse;}
-tr.topRow .corner1, tr.topRow .corner2 {margin:0; padding:0; width:7px; /*background:url(images/Corner1.png) top left no-repeat;*/}
-tr.topRow .top, tr.bottomRow .bottom {margin:0; padding:0; /*background:url(images/Top.png) top left repeat-x;*/}
-tr.topRow .corner2 {/*background:url(images/Corner2.png) top right no-repeat;*/}
-tr.middleRow .side1, tr.middleRow .side2 {margin:0; padding:0; /*background:url(images/Side1.png) top left repeat-y;*/}
-tr.middleRow .largeImage, tr.middleRow .smallImage {border:none; width:515px; padding:8px; background:#fff; color:inherit; text-align:center; height:285px; overflow:hidden;}
-tr.middleRow .smallImage {width:252px; height:157px;}
-tr.middleRow .side2 {/*background:url(images/Side2.png) top right repeat-y;*/}
-tr.bottomRow .corner3, tr.bottomRow .corner4 {margin:0; padding:0; /*background:url(images/Corner3.png) bottom left no-repeat;*/}
-tr.bottomRow .bottom {/*background:url(images/Bottom.png) bottom left repeat-x;*/}
-tr.bottomRow .corner4 {/*background:url(images/Corner4.png) bottom right no-repeat;*/}
-tr.topRow, tr.bottomRow {height:7px;}
-.leftArrowContainer, .rightArrowContainer, .rightArrowContainerLarge {margin-top:-10px; position:absolute; top:50%; left:2px;}
-.rightArrowContainer {left:auto; right:12px;}
-.rightArrowContainerLarge {left:auto; right:4px;}
-.arrow {width:20px; height:20px; cursor:pointer;}
+#statusanchorlist li 	{margin:0 0 5px 20px; padding:0; list-style-type:disc;}
+.statusBody a, 
+.statusSection a 			{text-decoration:underline;}
+.statusSection li 		{margin:0 0 6px 50px; padding:0; list-style-type:disc;}
+.statusGreen, 
+.statusYellow, 
+.statusRed 						{background:url(images/statuscolors.png) no-repeat top left; padding-left:20px; height:23px;}
+.statusGreen 					{background-position:0 4px;}
+.statusYellow 				{background-position:0 -48px;}
+.statusRed 						{background-position:0 -22px;}

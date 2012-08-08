@@ -2,3 +2,13 @@
 $link:#3c61a5;
 $linkhover:#900;
 $green:#657838;
+
+@mixin gradient ($origin:top, $start:#ffffff, $stop:#ffffff) {
+	background-color:$start;
+	background-image:-webkit-gradient(linear, $origin top, $origin bottom, from($start), to($stop));
+	background-image:-webkit-linear-gradient($origin, $start, $stop);
+	background-image:   -moz-linear-gradient($origin, $start, $stop);
+	background-image:    -ms-linear-gradient($origin, $start, $stop);
+	background-image:     -o-linear-gradient($origin, $start, $stop);
+	background-image:        linear-gradient($origin, $start, $stop);
+		filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorStr='#{$start}', EndColorStr='#{$stop}');}

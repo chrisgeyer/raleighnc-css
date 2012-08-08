@@ -8,92 +8,88 @@ Last Modified:	3.2.2012 (cwg)
 -------------------------------------------------------------- */
 html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #accolade, #footerContent 
 										{margin:0; padding:0;}
-
+#screenWrapper 			{margin:0 auto; width:960px; background:#f1f2f1; border:1px solid #202020; border-top:0; box-shadow:0px 2px 30px #444;}
 
 /* Text elements.
 -------------------------------------------------------------- */
 /*Link*/
-a:link, a:visited		{color:$link; text-decoration:none;
+a			{color:$link; text-decoration:none;
+	&:visited		{color:lighten($link, 10%);}
 	&:hover, 
-	&:focus 					{color:$linkhover; text-decoration:underline;}
+	&:focus 		{color:$linkhover; text-decoration:underline;}
+	&:active 		{position:relative; top:1px; outline:0;}
 }
-
-#screenWrapper 			{margin:0 auto; width:960px; background:#f1f2f1; border:1px solid #202020; border-top:0; box-shadow:0px 2px 30px #444;}
 
 
 /* Header elements.
 -------------------------------------------------------------- */
-#header 						{width:100%; height:110px; background:transparent url(images/logo.png) top left no-repeat;}
 
-#head_logo 					{float:left; margin:5px 0 0 5px; width:230px; height:105px; cursor:pointer;}
-#city_seal img 			{float:left; margin:4px 0 0 10px;}
-.cityOfRaleigh 			{float:left; margin:30px 0 0 10px; color:#fff; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; text-shadow:1px 1px 0 #333;}
+#header 						{height:110px; background:transparent url(images/logo.png) top left no-repeat; overflow:hidden; position:relative; color:#fff;}
+#header a						{color:#fff; text-decoration:underline;}
 
-#rssLayer 					{float:right; margin:10px 20px 5px 0; padding:0; border:0; color:#333;}
-#rssLayer a 				{text-decoration:underline; color:#fff;}
+#city_seal					{width:45%;}
+#city_seal img 			{margin:3px 0 0 5px; width:100px;}
+.cityOfRaleigh 			{margin:30px 0 0 5px; font:3em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333;}
+.cityOfRaleigh:hover {color:#900; cursor:pointer;}
 
-#fontsizer 					{float:right; margin:10px 35px 5px 0; color:#fff;}
+.topLinks, #fontsizer, #rssLayer, #searchBoxArea {position:absolute; right:25px;}
 
-.topLinks 					{clear:both; float:right; margin:-115px 20px 20px 0; display:none;}
-.topLinks li 				{float:left; padding:0 20px; border-right:1px solid #333;}
+.topLinks 					{top:5px; right:0px;}
+.topLinks li 				{float:left; padding:0 15px; border-right:1px solid #666;}
 .topLinks li:last-child {border-right:none;}
 
-#searchBoxArea 			{float:right; clear:right; margin:15px 35px 0 0;}
-#searchInput 				{float:left; margin:0 0 3px 0; padding:0 2px; width:270px; height:22px; background:#fdfdfd url(images/google.png) left no-repeat; border:2px inset #ddd;}
-#executeSEearch 		{margin:0; padding:4px 10px; color:#fff; font-size:1.1em; font-weight:700; border:1px solid #666; background:#666; cursor:pointer;}
+#rssLayer 					{top:27px; right:150px;}
+
+#fontsizer 					{top:27px;}
+
+#searchBoxArea 			{bottom:10px;}
+#searchInput 				{float:left; margin:0; padding:6.5px 5px; width:250px; background:#fdfdfd url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma';}
+#executeSEearch			{float:right; margin:0; padding:6px; color:#fff; font-size:1.1em; font-weight:700; border:1px solid #666; background:#666; border-radius: 0 3px 3px 0; overflow:visible; position:relative; cursor:pointer;}
 #executeSEearch:hover {text-decoration:underline;}
 #executeSEearch:active {position:relative; top:1px; outline:0;}
-#advSearch a 				{clear:both; float:left; color:$green; text-decoration:underline;}
+#advSearch a 				{clear:both; float:left; color:$green; text-decoration:none; font-size:0.9em;}
 
 
 /* Main navigation elements.
 -------------------------------------------------------------- */
-#globalNavArea 						{float:left; width:100%; background:transparent url(images/mainMenuBg.png) repeat-x; border-top:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0;}
+#globalNavArea 						{float:left; width:100%; border-top:1px solid #fff; border-bottom:1px solid #fff; @include gradient(top, #515a52, #293129);}
 #globalNavArea li 				{float:left; margin:0; padding:10px; font-size:1.1em; border-right:1px solid #9ba19b;}
-#globalNavArea a 					{padding:5px; color:#fff;}
+#tabSelected 							{font-weight:700; @include gradient(top, #5c8fea, #2e5baf);}
+#globalNavArea a 					{padding:15px 5px; color:#fff;}
 #tabsHeader li:hover, 
-#tabsHeader #tabSelected 	{font-weight:700; background:url(images/mainMenuLiHoverBg.png) repeat-x;}
 #tabsHeader li:hover a 		{font-weight:normal; text-decoration:underline;}
 #tabsHeader #tabSelected a:hover {font-weight:700;}
 #tabsHeader li#tabSelected:hover a {font-weight:700;}
 #globalNavArea li:last-child {border-right:none;}
 
-/* Main content areas that hold articles and section elements.
--------------------------------------------------------------- 
-#Main											{width:100%;}
-#Article									{float:left;margin:0 10px 0 0;width:70%;min-height:540px;background:#fff;}
-#Article .section, 
-.section									{padding:1.5em;margin-bottom:0.5em;clear:both;overflow:hidden;}
-//#Article .section					{display:inline-block;}
-// * html #Article .section 	{height:1%;}
-// #Article .section					{display:block;}*/
+/* Main content areas.
+-------------------------------------------------------------- */
+#contentArea, #Main {padding:20px 0; width:100%; border-top:3px solid #ddd; border-bottom:1px solid #ddd; overflow:hidden;}
+#col1 				{float:left; margin:0 1% 0 0; padding:0; width:20%;}
+#col2 				{float:left; margin:0 0 0 1%; padding:0; width:58%; position:relative;}
+#col3 				{float:right; margin:0; padding:0 0 0 1%; width:19%;}
+#col1Large 		{margin:0; padding:0; width:100%;}
+#col2Large 		{float:left; margin:0; padding:0; width:78.5%;}
+#Article 			{float:left; margin:0 1% 0 0; width:70%; min-height:540px; position:relative;}
+#sidebar 			{float:left; width:29%;}
 
-
-/* sidebar elements.
--------------------------------------------------------------- 
-#sidebar									{float:left; width:28%; width:270px;}
-#sidebar .box							{margin:0 .9em 1em 0; padding:1.5em; background:#fff;}
-#sidebar h3								{margin-bottom:10px;}*/
 
 /* Footer elements.
 -------------------------------------------------------------- */
 /*Accolades*/
 #accolade 				{padding:19px; width:96%; background:#d7e2f1; border-bottom:1px solid #fff; border-top:1px solid #fff; text-align:center;}
-#accldePre {display:none;}
+#accldePre 				{clear:both; text-align:left; font:1.5em bold Arial, "Helvetica Neue", Helvetica, sans-serif; font-weight:700;}
 #accolade h2 			{margin-right:5px; font:2em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline;}
 .accldeSource 		{font-size:1.08em; font-style:italic; text-align:right; display:inline;}
 #accldeMore a			{float:right; margin:0; /*font-size:0.92em;*/}
 
 /*Functional Footer*/
-.newfooter {margin:15px auto; width:670px; text-align:center;}
-#footer .left.third {margin:0 0 20px 0;}
-#hmNav {clear:both; margin:10px;}
-#hmMenu	{margin:20px auto 0; text-align:center;}
-#hmMenu li {display:inline;}
-.hmLink {margin:0 10px;}
-#google_translate_element {margin-top:15px;}
+.newfooter 				{margin:15px auto 0; width:70%; text-align:center;}
 .socialmedia 			{margin:5px 0 0 17px;}
-.socialmedia img {float:left; margin-right:5px; border-radius:3px; box-shadow:0px 1px 2px #666;}
+.socialmedia img 	{float:left; margin-right:5px; border-radius:3px; box-shadow:0px 1px 2px #666;} /*ADD SPRITE*/
+#hmMenu						{clear:both; margin:20px auto 0;}
+#hmMenu li 				{display:inline; margin:0 10px;}
+#google_translate_element {margin-top:15px;}
 #copyright 				{padding:10px; color:#666; text-align:center; font-size:0.9em;}
 /*#FloatingTab {top:25%;right:0;margin:0;padding:20px;width:3px;height:110px;color:white;cursor:pointer;text-indent:-100000px; overflow:hidden;position:fixed;z-index:100000;margin-right:-7px;background:#c28176;background-image:url(images/websitesurvey.png);border:2px solid #666;}
 #FloatingTab:hover {margin-right:-5px;background:#7c443A;background-image:url(images/websitesurvey.png);}*/
