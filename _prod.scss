@@ -23,7 +23,6 @@ body {padding-bottom:15px; background:#8b9f8e;}
 .align-center		{text-align:center;}
 .align-right		{text-align:right;}
 .line 					{clear:both; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd;}
-.quiet 					{color:#666;}
 .underline			{border-bottom:1px solid #bfbfbf;}
 img 						{border:0; max-width:100%;}
 .tcalDiv 				{margin-bottom:20px;}
@@ -37,18 +36,16 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 .tcalLink 		{font-weight:700; text-decoration:underline;}
 a[name]:hover {text-decoration:none;}
 table a:link 	{text-decoration:underline;}
-.coricon 			{margin:0; padding-left:2px; vertical-align:middle;}
+.section .coricon, .coricon 	{margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle;}
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .contactBox a {text-decoration:underline;}
-
-/*Column*/
-#addThisButtons	{position:absolute; right:10px; top:3px;}
-#col2 .updatedDate, #col2 .issuedatetime {position:absolute; top:3px; left:0; color:#999;}
 
 /*Pages*/
 .iwt_leftnav, .landingMainWindow, .storyContentWrapper, .statusBox, .contactBox, .mapBox, .employmentWrapper {background:#f1f2f1;}
 .storyContentWrapper {width:555px; margin:0 auto; padding-top:30px; font-size:1.08em;}
 #storyContentWrapper {padding:20px;}
-.callout	{margin:20px 10px; padding:5px; background:#FDFDFD; border:2px solid #E96629; border-radius:10px;}
+.callout	{margin:20px 10px; padding:5px; background:#fdfdfd; border:2px solid #E96629; border-radius:10px;}
+#addThisButtons	{position:absolute; right:10px; top:3px;}
+#col2 .updatedDate, #col2 .issuedatetime {position:absolute; top:3px; left:0; color:#999;}
 
 /*Left Col
 ===========*/
@@ -90,6 +87,7 @@ input.submitSurveyButton:hover,
 .action:hover 					{text-decoration:underline; cursor:pointer; color:#fff;}
 input.submitSurveyButton:active, 
 .action:active 					{position:relative; top:1px; outline:0;}
+.action img							{display:none;}
 
 /*Most Popular*/
 #mostPopular li 				{margin:0; padding:2px; background:$green; list-style:none;}
@@ -111,6 +109,7 @@ ul.subMenu li a:hover 	{color:$linkhover;}
 .govdelivery 				{@extend .dotted;}
 .govdelivery h3 		{font-size:1.5em; color:$green; margin:0 0 0 5px;}
 .govdelivery .box		{padding:5px; overflow:hidden;}
+.govdelivery p			{margin:0;}
 .govdelivery a.action {background:$green; color:#fff;}
 #Govdelivery 				{margin:0 auto 5px; padding:2px 5px; width:172px; background:#d9decf; border-radius:2px; overflow:hidden; border:0;}
 #Govdelivery h3			{color:#111; font-size:1.4em; margin:2px;}
@@ -169,35 +168,35 @@ label {display:block;}
 .cn, .ph, .cty, .ste {float:left; padding:18px 20px 0 0;}
 .cn, .ph, .cty {clear:both;}
 
+/*Home
+==========*/
+.slider 				{margin:0 auto; width:555px; height:440px;}
+
 /*iFrame*/
-iframe {border:none;}
+iframe 			{border:none;}
 .iframeShim {margin:0; padding:0; border:none; background:none; position:absolute; overflow:hidden;}
-.interior {margin:54px 0 0 3px;}
+.interior 	{margin:54px 0 0 3px;}
 
 /*Landing
 ================*/
 /*Main Feature*/
 .landingMainWindow h1 {margin:0; font-size:1.9em; text-align:center;}
-.landingPg {margin:0 auto; padding:0; width:555px; height:440px; position:relative;}	
-.mFeatureMainFrame {margin:-20px 0 0 -20px; padding:0; height:200px; z-index:8; position:absolute;}
-.mFeatureDescTxt {padding:0; width:485px; height:70px; position:absolute; left:35px; bottom:40px; z-index:9; text-align:center;}
-.mFeatureDescTxt a {color:#fff; font-size:1.5em; text-decoration:underline;}
+.landingPg 						{margin:0 auto; padding:0; width:555px; height:440px; position:relative;}	
+.mFeatureMainFrame 		{margin:-20px 0 0 -20px; padding:0; height:200px; z-index:8; position:absolute;}
+.mFeatureDescTxt 			{padding:0; width:485px; height:70px; position:absolute; left:35px; bottom:40px; z-index:9; text-align:center;}
+.mFeatureDescTxt a 		{color:#fff; font-size:1.5em; text-decoration:underline;}
 .mFeatureDescTxt a:hover {color:#ddd;}
-.mFeatureMainImg {margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0px 0px 15px #666; border-radius:5px;}
-.mFeatureDescBlkBg {padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.7;}
+.mFeatureMainImg 			{margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0px 0px 15px #666; border-radius:5px;}
+.mFeatureDescBlkBg 		{padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.7;}
 
 /*Feature Table*/
-.twoCol {margin:0 0 10px 0; width:100%; border-collapse:collapse; @extend .dotted;}
-td.twoColImage {width:129px; padding:5px 0;}
-td.shadow, td.oneColImage img {padding:0 1px 4px 1px; background:transparent url(images/imgShadow.png) left bottom repeat-x;}
-td.twoColImage td.shadow img {width:129px; border:1px solid #fff;}
-.twoColTextNarrow {width:134px; padding:5px;}
-.twoColFeature {margin:0;}
-.twoColTextWide {width:50%; padding:5px;}
-/*remove once news and events are on all landing pages*/
-.oneColLand {margin:0; padding:0 0 10px 0; width:100%; height:130px; color:inherit; border-collapse:collapse; border-bottom:1px solid #ccc;}
-td.oneColImage {width:50%; padding:0;}
-td.oneColImage img {width:268px; border:1px solid #fff;}
+.twoCol {margin:0; border-top:0; border-left:0; border-right:0; border-bottom:1px dotted #ccc;}
+.twoCol td	{border:0;}
+td.shadow {padding:0 1px 4px 1px; background:transparent url(images/imgShadow.png) left bottom repeat-x;}
+td.twoColImage td.shadow img {width:130px; border:1px solid #fff;}
+.twoColImage table {border:0;}
+.twoColTextNarrow {width:130px; padding:5px;}
+.twoColTextWide {width:50%; padding:5px;} only on govt*/
 
 /*News & Events
 ================*/
@@ -254,61 +253,53 @@ a.more {float:right; margin:5px 20px 10px 10px; text-decoration:underline;}
 /*Templates
 ====================*/
 /*Boards-Commissions*/
-.bcmeetinginfo {margin-bottom:10px; padding:5px; height:120px; text-align:center; background:url(images/boards-gradient.png) repeat-x; overflow:hidden;}
-.storyContentWrapper .bcmeetinginfo li, .storyContentWrapper .members li, .storyContentWrapper .cacmeetinginfo li {margin:0; padding:1px; list-style:none;}
-.bcmeetinginfo h2 {font-size:1.4em;}
-.boards h2 {border-bottom:1px solid #bfbfbf;}
-.comm, .bcnews, .participate, .pgdesc, .purpose {margin:0 0 10px 0; padding:0 0 0 10px;}
-.bcnews {margin-bottom:20px;}
-.comm {background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
-.bcimage {margin:0 auto; width:515px; /*height:200px;*/}
-.mem_names {margin:0 0 15px 20px; width:515px; color:#666; text-align:center; font-weight:700;}
-.members {float:left; width:33%; margin-top:12px; padding:0;}
-.otherdetails, .adetail {padding:12px 0 0 0; clear:both;}
+.bcmeetinginfo	{margin:10px 0; padding:5px; text-align:center; overflow:hidden; @include gradient(top, #d9cec2, #f1f2f1);}
+.bcmeetinginfo ul, .cacmeetinginfo ul {margin:1em 0 0;}
+.underline			{border-bottom:1px solid #bfbfbf;}
+.comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
+.bcimage 				{margin:10px auto; padding:5px; width:515px; background:#fff; border:1px solid #ddd; border-radius:5px;}
+.bcimage img		{width:515px;}
+.bcimage p 			{color:#666; text-align:center; font-weight:700;}
+.members				{overflow:hidden; margin-bottom:20px;}
+.storyContentWrapper ul.individual	{float:left; margin:1em 0 0 0; padding:0; width:33%;}
 
 /*CAC*/
-.cacmeetinginfo {margin-bottom:20px; padding:5px; height:120px; text-align:center; background:url(images/cacgradient.png) repeat-x;}
-.caclocation {clear:both; margin:0 0 20px 0;}
-.cacgismap {margin:5px 0 15px 10px; padding:0; width:356px; height:256px; overflow:hidden;}
-.cacimage {margin:10px; clear:both;}
-.caccaption {margin:0 0 15px 20px; color:#666; font-weight:700;}
-.cacactivity {margin:10px auto; padding:10px 0 0 10px; width:510px; height:310px; border:1px solid #ddd;}
-.cacactivity img {width:500px; height:300px;}
+.cacmeetinginfo 	{@extend .bcmeetinginfo; @include gradient(top, #829656, #f1f2f1);}
+.cacactivity 			{@extend .bcimage;}
+.cacactivity, .cacactivity .photoslider-1click-slideshow, .cacactivity .photoslider-1click-slideshow img 	{height:300px;}
+.cacgismap 				{margin:5px 0 15px 10px; width:356px; height:256px; overflow:hidden;}
 
 /*Contact*/
-.contactImage {float:right; margin-right:50px; border:1px solid #333;}
+.contactImage 		{float:right; margin-right:50px; border:1px solid #333;}
 
 /*Department*/
-.deptImg {margin:7px 0 0;}
-.deptBodyTable .deptNewsCol, .deptBodyTable .secBody {padding:0 0 10px 10px;}
-.deptBodyTable .secBody p {margin-bottom:5px;}
+.deptBodyTable, .deptBodyTable td {border:0;}
+.deptNewsCol, .secBody {padding:10px; width:74%;}
 
 /*Employment list*/
-.empJump li a {float:left; margin:0 15px 20px 0; text-decoration:underline;}
-.empTitle {clear:both; margin-bottom:5px; font-size:1.167em; font-weight:700;}
-.empClose, .empDept, .empNo, .empSalary {float:left; margin:0 0 10px 10px;}
-.empSalary {clear:both;}
-.empNone {margin:15px 0;font-size:1.167em;}
-.empTop	{clear:both;}
-.empTop a {display:none;}
+.empJump li a 				{float:left; margin:0 15px 20px 0; text-decoration:underline;}
+.employmentType h3 		{clear:both; margin:15px 0 5px;}
+.empTitle 						{clear:both; margin-bottom:5px; font-size:1.167em; font-weight:700;}
+.empClose, 
+.empDept, 
+.empNo, 
+.empSalary 						{float:left; margin:0 0 10px 10px;}
+.empSalary 						{clear:both;}
 
-/*Employment page*/
-.employmentRequirements li, .employmentDuties li {margin-left:20px;list-style-type:disc;}
+/*Job page*/
+.employmentRequirements li, 
+.employmentDuties li 	{margin-left:20px;list-style-type:disc;}
 .employmentDisclaimer {margin-top:20px; color:#666;}
-.employmentType a h3 {clear:both; margin:15px 0;}
 
 /*Facility*/
-.gismap_iframe {float:left; margin:10px 0 0 0; padding:0; width:356px; height:256px; overflow:hidden;}
-.location {float:right; margin:10px 0 0 -20px; width:31%;}
-.facility_hours {margin:0 0 10px 0; border:1px solid #fff;}
-.facility_hours th {background:#d7e2f1;}
+.gismap_iframe 			{float:left; margin:10px 0 0 0; padding:0; width:356px; height:256px; overflow:hidden;}
+.location 					{float:right; margin:10px 0 0 -20px; width:31%;}
+.facility_hours 		{margin:0 0 10px 0;}
+.facility_hours th 	{background:#d7e2f1;}
 
 /*FAQ*/
 .backtotop {display:none;}
 .qnaset {margin:0 0 20px 0;}
-
-/*Map Gallery*/
-.mapdownloads th {text-align:left;}
 
 /*Map Gallery*/
 .mapdownloads th		{text-align:left;}
@@ -317,7 +308,7 @@ a.more {float:right; margin:5px 20px 10px 10px; text-decoration:underline;}
 .outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; position:relative;}
 .largeimage					{margin-bottom:10px; width:98%;}
 .largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .largeimage .photoslider-1click-slideshow img {height:408px;}
-.smallimage					{float:left; margin-right:15px; width:50%;}
+.smallimage					{float:left; margin:0 15px 10px 0; width:50%;}
 .smallimage .slideshow, .smallimage .photoslider-1click-slideshow, .smallimage .photoslider-1click-slideshow img {height:210px;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
@@ -325,9 +316,9 @@ a.more {float:right; margin:5px 20px 10px 10px; text-decoration:underline;}
 .callout						{margin:20px 10px; padding:5px; background:#fafafa; border:2px solid #e96629; border-radius:10px;}
 .callout img				{max-width:98%;}
 .section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px;}
-.section img.left 	{margin:5px 10px 5px 0;}
-.section img.right 	{margin:5px 0 5px 10px;}
-.section h3					{border-bottom:1px dotted #ccc;}
+.section img.left 	{margin:5px 10px 10px 0;}
+.section img.right 	{margin:5px 0 10px 10px;}
+.section h3					{@extend .dotted;}
 .accent							{color:#7f453b;}
 .jumper 						{text-decoration:underline; visibility:hidden;}
 
@@ -361,11 +352,11 @@ tr.middleRow .smallImage {width:252px; height:157px;}
 /*Police Homicide
 .casedesc, .caseparagraph, .casenumber, .casePhone {width:100%; clear:both;}
 .casenumber {margin:0; padding:0; font-size:1.3em; font-weight:700;}
-.casePhone {float:left; margin:0 0 20px 15px;}
-.vic {float:left; margin:0 0 7px 0; width:175px; font-size:1.167em;}
-.vicImg {float:left; width:175px; border:solid 1px #111;}
-.vicloc {float:left; margin:0 0 20px 0; width:100%;}
-.locImg {float:left; margin-left:4px; width:333px; border:solid 1px #111;}*/
+.casePhone 	{float:left; margin:0 0 20px 15px;}
+.vic 				{float:left; margin:0 0 7px 0; width:175px; font-size:1.167em;}
+.vicImg 		{float:left; width:175px; border:solid 1px #111;}
+.vicloc 		{float:left; margin:0 0 20px 0; width:100%;}
+.locImg 		{float:left; margin-left:4px; width:333px; border:solid 1px #111;}*/
 
 /*Projects*/
 .projsect {color:#7f453b;}

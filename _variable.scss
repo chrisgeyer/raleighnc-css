@@ -1,7 +1,8 @@
 // Variables
 $link:#3c61a5;
 $linkhover:#900;
-$green:#657838;
+$green:#346535;
+$orange:#ee6d2b;
 
 @mixin gradient ($origin:top, $start:#ffffff, $stop:#ffffff) {
 	background-color:$start;
