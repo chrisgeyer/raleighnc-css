@@ -41,8 +41,10 @@ table a:link 	{text-decoration:underline;}
 
 /*Pages*/
 .iwt_leftnav, .landingMainWindow, .storyContentWrapper, .statusBox, .contactBox, .mapBox, .employmentWrapper {background:#f1f2f1;}
-.storyContentWrapper {width:555px; margin:0 auto; padding-top:30px; font-size:1.08em;}
-#storyContentWrapper {padding:20px;}
+.storyContentWrapper {width:555px; margin:0 auto; font-size:1.08em; padding-top:30px;}
+.statusBox, .contactBox, .mapBox, .employmentWrapper {padding-top:30px;}
+#Article .storyContentWrapper {width:100%; padding:0;}
+#storyContentWrapper {padding:0 20px;}
 .callout	{margin:20px 10px; padding:5px; background:#fdfdfd; border:2px solid #E96629; border-radius:10px;}
 #addThisButtons	{position:absolute; right:10px; top:3px;}
 #col2 .updatedDate, #col2 .issuedatetime {position:absolute; top:3px; left:0; color:#999;}
@@ -179,6 +181,7 @@ iframe 			{border:none;}
 
 /*Landing
 ================*/
+.landing {text-align:center;}
 /*Main Feature*/
 .landingMainWindow h1 {margin:0; font-size:1.9em; text-align:center;}
 .landingPg 						{margin:0 auto; padding:0; width:555px; height:440px; position:relative;}	
@@ -190,61 +193,62 @@ iframe 			{border:none;}
 .mFeatureDescBlkBg 		{padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.7;}
 
 /*Feature Table*/
-.twoCol {margin:0; border-top:0; border-left:0; border-right:0; border-bottom:1px dotted #ccc;}
+.twoCol {margin:0; border:0;}
 .twoCol td	{border:0;}
 td.shadow {padding:0 1px 4px 1px; background:transparent url(images/imgShadow.png) left bottom repeat-x;}
 td.twoColImage td.shadow img {width:130px; border:1px solid #fff;}
 .twoColImage table {border:0;}
 .twoColTextNarrow {width:130px; padding:5px;}
-.twoColTextWide {width:50%; padding:5px;} only on govt*/
+.twoColTextWide {width:50%; padding:5px;} /*only on govt*/
 
 /*News & Events
 ================*/
 /*News List*/
-.mainarticlelinks {float:left; margin:25px 5px; padding:0 0 10px 0; width:58%;}
-.mainarticlelinks h2, .maineventslinks h2 {float:left;}
+.mainarticlelinks {float:left; margin:25px 1%; padding:0 0 10px 0; width:58%;}
+.mainarticlelinks h2, .maineventslinks h2 {float:left; margin-left:5px;}
 .mainRss img {margin:5px 0 0 10px;}
-.mainarticlelinks ul, .newsList ul, .maineventslinks ul, .eventsList ul {margin-bottom:10px;}
-.mainarticlelinks li, .newsList li {clear:both; padding:7px 5px; list-style:none; border-bottom:1px dotted #ccc;}
+.newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
-a.more {float:right; margin:5px 20px 10px 10px; text-decoration:underline;}
+a.more {float:right; margin:5px 10px; text-decoration:underline;}
 
 /*Events List*/
-.maineventslinks {float:left; margin:25px 5px; padding:0 0 10px 0; width:38%;}
-.maineventslinks li, .eventsList li {clear:both; padding:5px; list-style:none;}
+.maineventslinks {@extend .mainarticlelinks; width:38%;}
+.eventsList li {clear:both; padding:5px; list-style:none;}
+.message 		{color:$orange;}
 .eventDate {float:left; margin:0 10px 0 0; padding:0; width:40px; background:#fdfdfd; border:2px solid #ddd; text-align:center; font-weight:700; letter-spacing:0.3em; border-radius:2px;}
 .eventDay {font-size:1.3em;}
 .eventTitle {display:inline;}
 .eventTitle a {margin:0;}
 .eventTimes {color:#666; margin:0 0 10px 55px;}
 .eventdatetime {margin:1em 0px 1.168em;}
+.line 				{clear:both; float:none; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd; border:none; color:#ddd;}
 
 /*News Article*/
-#Article .storyContentWrapper {width:100%;}
-.newsAlert {margin-right:5px; color:#900; font-weight:700; display:inline;}
-.line {clear:both; float:none; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd; border:none; color:#ddd;}
-.images {float:right; margin:10px 0 0 10px; padding:10px 0 0 10px; width:310px; height:210px; border:1px solid #ddd;}
-.images img {width:300px; height:200px;}
-.newseventmap {float:left; margin:0 0 0 10px; width:74%;}
+.newsAlert 		{margin-right:5px; color:#900; font-weight:700; display:inline;}
+.images {float:right; margin:10px 0 0 10px; padding:1%; background:#fff; border:1px solid #ddd; border-radius:5px;}
+.images, .images .photoslider-1click-slideshow, .images .photoslider-1click-slideshow img 	{width:352px; height:264px;}
+.eventdates {float:left; width:24%;}
+.newseventmap {float:left; margin:0 0 0 10px; width:74%; overflow:hidden;}
 .storyContentWrapper .newseventmap li {margin:0; list-style:none;}
 .newseventlocation {float:left; width:40%}
-.gismap {float:left; margin:0 0 10px 10px; padding:0; width:56%; height:182px; overflow:hidden;}
-.addfiles {float:left; width:29%; margin:10px 10px 20px 0;}
-.newscontacts {float:left; width:35%;  margin:10px 15px 20px 0;}
-.relatedlinks {float:left; width:29%; margin:10px 15px 20px 0;}
+.gismap {float:left; margin:0 0 10px 10px; padding:0; width:57%; height:182px; overflow:hidden;}
+.addfiles, .newscontacts, .relatedlinks {float:left; width:25%; margin:20px 10px;}
+#storyContentWrapper ul {margin:0 0 0 0.5em;}
+.newscontacts {width:35%;}
+.relatedlinks {width:30%;}
 .rsssharing {clear:both; margin-top:20px;}
 .rsssharing img {vertical-align:middle;}
 
 /*News sidebar*/
-#sidebar .mainarticlelinks, #sidebar .maineventslinks {clear:both; float:none; margin:19px 0; width:98%;}
+#sidebar .mainarticlelinks, 
+#sidebar .maineventslinks {clear:both; float:none; margin:0; width:98%;}
 #sidebar .mainRss {display:none;}
-#sidebar .mainarticlelinks ul, #sidebar .maineventslinks ul {margin:0 5px 0 0;}
-#sidebar .mainarticlelinks li, #sidebar .maineventslinks li {padding:6px 0;}
+#sidebar .mainarticlelinks ul, 
+#sidebar .maineventslinks ul {margin:0 5px 0 0;}
+#sidebar .mainarticlelinks li, 
+#sidebar .maineventslinks li {padding:6px 0;}
 #sidebar .malDate {display:block;}
 #sidebar .more {margin-right:10px;}
-
-/*Event*/
-.eventdates {float:left; width:24%;}
 
 /*Home Page Feature*/
 .open {float:right; width:45%; margin:1%; padding:1%;}
