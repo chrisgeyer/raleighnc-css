@@ -23,7 +23,6 @@ a			{color:$link; text-decoration:none;
 
 /* Header elements.
 -------------------------------------------------------------- */
-
 #header 						{height:110px; background:transparent url(images/logo.png) top left no-repeat; overflow:hidden; position:relative; color:#fff;}
 #header a						{color:#fff; text-decoration:underline;}
 
@@ -63,12 +62,13 @@ a			{color:$link; text-decoration:none;
 #tabsHeader li#tabSelected:hover a {font-weight:700;}
 #globalNavArea li:last-child {border-right:none;}
 
+
 /* Main content areas.
 -------------------------------------------------------------- */
 #contentArea, #Main {padding:20px 0; width:100%; border-top:3px solid #ddd; border-bottom:1px solid #ddd; overflow:hidden;}
-#col1 				{float:left; margin:0 1% 0 0; padding:0; width:20%;}
-#col2 				{float:left; margin:0 0 0 1%; padding:0; width:58%; position:relative;}
-#col3 				{float:right; margin:0; padding:0 0 0 1%; width:19%;}
+#col1 				{float:left; width:20%;}
+#col2 				{float:left; margin:0 1%; width:58%; position:relative;}
+#col3 				{float:right; padding:0 0 0 1%; width:19%;}
 #col1Large 		{margin:0; padding:0; width:100%;}
 #col2Large 		{float:left; margin:0; padding:0; width:78.5%;}
 #Article 			{float:left; margin:0 1% 0 0; width:70%; min-height:540px; position:relative;}
@@ -78,7 +78,7 @@ a			{color:$link; text-decoration:none;
 /* Footer elements.
 -------------------------------------------------------------- */
 /*Accolades*/
-#accolade 				{padding:19px; width:96%; background:#d7e2f1; border-bottom:1px solid #fff; border-top:1px solid #fff; text-align:center;}
+#accolade 				{padding:2%; width:96%; background:#d7e2f1; border-bottom:1px solid #fff; border-top:1px solid #fff; text-align:center;}
 #accldePre 				{clear:both; text-align:left; font:1.5em bold Arial, "Helvetica Neue", Helvetica, sans-serif; font-weight:700;}
 #accolade h2 			{margin-right:5px; font:2em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline;}
 .accldeSource 		{font-size:1.08em; font-style:italic; text-align:right; display:inline;}

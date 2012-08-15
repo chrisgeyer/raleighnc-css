@@ -41,7 +41,7 @@ table a:link 	{text-decoration:underline;}
 
 /*Pages*/
 .iwt_leftnav, .landingMainWindow, .storyContentWrapper, .statusBox, .contactBox, .mapBox, .employmentWrapper {background:#f1f2f1;}
-.storyContentWrapper {width:555px; margin:0 auto; font-size:1.08em; padding-top:30px;}
+.storyContentWrapper {margin:0 auto; font-size:1.08em; padding-top:30px;}
 .statusBox, .contactBox, .mapBox, .employmentWrapper {padding-top:30px;}
 #Article .storyContentWrapper {width:100%; padding:0;}
 #storyContentWrapper {padding:0 20px;}
@@ -57,7 +57,7 @@ table a:link 	{text-decoration:underline;}
 
 /*Department dropdown*/
 .deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 10px; @extend .dotted;}
-#deptSelector select 	{width:175px; /*border:1px solid #333;*/}
+#deptSelector select 	{width:95%; /*border:1px solid #333;*/}
 
 /*Left Nav*/
 .leftnav 							{padding:10px;}
