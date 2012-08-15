@@ -1,0 +1,6 @@
+/*Adaptive Mobile Layout*/
+@media only screen and (max-width:960px) {
+	#screenWrapper {width:100%;}
+	
+	body:after {position:fixed; bottom:0; left:0; z-index:100; background:#ffc; padding:1em 2%; font-size:.8em; content:"We're below 960px";}
+}

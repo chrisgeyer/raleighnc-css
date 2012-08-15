@@ -27,7 +27,7 @@ a			{color:$link; text-decoration:none;
 #header 						{height:110px; background:transparent url(images/logo.png) top left no-repeat; overflow:hidden; position:relative; color:#fff;}
 #header a						{color:#fff; text-decoration:underline;}
 
-#city_seal					{width:45%;}
+#city_seal					{width:45%; cursor:pointer;}
 #city_seal img 			{margin:3px 0 0 5px; width:100px;}
 .cityOfRaleigh 			{margin:30px 0 0 5px; font:3em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333;}
 .cityOfRaleigh:hover {color:#900; cursor:pointer;}
@@ -41,6 +41,7 @@ a			{color:$link; text-decoration:none;
 #rssLayer 					{top:27px; right:150px;}
 
 #fontsizer 					{top:27px;}
+#fontsizer span			{cursor:pointer;}
 
 #searchBoxArea 			{bottom:10px;}
 #searchInput 				{float:left; margin:0; padding:6.5px 5px; width:250px; background:#fdfdfd url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma';}
