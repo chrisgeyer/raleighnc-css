@@ -6,7 +6,7 @@ Last Modified:	3.2.2012 (cwg)
 
 /* Establish basic layout elements.
 -------------------------------------------------------------- */
-html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #accolade, #footerContent 
+html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent 
 										{margin:0; padding:0;}
 #screenWrapper 			{margin:0 auto; width:960px; background:#f1f2f1; border:1px solid #202020; border-top:0; box-shadow:0px 2px 30px #444;}
 
@@ -69,8 +69,7 @@ a			{color:$link; text-decoration:none;
 #col1 				{float:left; width:20%;}
 #col2 				{float:left; margin:0 1%; width:58%; position:relative;}
 #col3 				{float:right; padding:0 0 0 1%; width:19%;}
-#col1Large 		{margin:0; padding:0; width:100%;}
-#col2Large 		{float:left; margin:0; padding:0; width:78.5%;}
+#col2Large 		{float:left; width:78.5%;}
 #Article 			{float:left; margin:0 1% 0 0; width:70%; min-height:540px; position:relative;}
 #sidebar 			{float:left; width:29%;}
 
@@ -86,7 +85,7 @@ a			{color:$link; text-decoration:none;
 
 /*Functional Footer*/
 .newfooter 				{margin:15px auto 0; width:70%; text-align:center;}
-.socialmedia 			{width:75%; margin:0 auto;}
+.socialmedia 			{width:90%; margin:0 auto;}
 .socialmedia img 	{float:left; margin-right:5px; border-radius:3px; box-shadow:0px 1px 2px #666;} /*ADD SPRITE*/
 #hmMenu						{clear:both; margin:20px auto 0;}
 #hmMenu li 				{display:inline; margin:0 10px;}
