@@ -4,12 +4,25 @@
 }
 */
 @media only screen and (max-width:768px) {
+	#screenWrapper {width:auto; overflow:hidden; border:0;}
 	#header {background-position:50%;}
 	#globalNavArea li {width:17%;}
 	#col1 {width:24%;}
-	#col2 {width:74%;}
+	#col2, #col2Large {width:74%;}
 	#col3 {clear:both; width:74%; margin-left:25%;}
 	#right > div {float:left; width:45%; margin:1%; padding:1%;}
 	
 	//body:after {position:fixed; bottom:0; left:0; z-index:100; background:#ffc; padding:1em 2%; font-size:.8em; content:"We're below 960px";}
+}
+
+@media only screen and (max-width:480px) {
+	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element {display:none;}
+	.topLinks, #searchBoxArea {right:10%;}
+	.cityOfRaleigh {margin-top:20px; right:20%;}
+	#globalNavArea li {width:28%;}
+	#col1, #col2, #col2Large, #col3 {width:100%;}
+	.storyContentWrapper div, #right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .open, .newfooter {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
+	.storyContentWrapper .outline {padding:1%;}
+	.storyContentWrapper .callout {margin:1%; padding:1%; width:90%;}
+	#accldePre {text-align:center;}
 }

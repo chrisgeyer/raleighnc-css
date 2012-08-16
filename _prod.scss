@@ -132,6 +132,11 @@ ul.subMenu li a:hover 	{color:$linkhover;}
 .mRelatedContent li 		{margin:0; padding:3px; background:#fafafa;}
 li.mRelatedTitle 				{margin:0; padding:2px 0; color:#111; font-weight:700; font-size:1.2em; background:#d7e2f1;}
 
+/*New related*/
+.related 								{margin:0 0 10px 0; padding:0; border:5px solid #d7e2f1;}
+.related h3 						{margin:0; padding:2px 0; color:#111; font-weight:700; font-size:1.2em; background:#d7e2f1;}
+.related li 						{margin:0; padding:3px; background:#fafafa;}
+
 /*Static pages
 ====================*/
 /*Calendar*/
@@ -317,11 +322,11 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 .section						{clear:both; margin:1.5em 0;}
-.callout						{margin:20px 10px; padding:5px; background:#fafafa; border:2px solid #e96629; border-radius:10px;}
+.callout						{margin:1em; padding:.5em; background:#fafafa; border:2px solid #e96629; border-radius:10px;}
 .callout img				{max-width:98%;}
 .section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px;}
-.section img.left 	{margin:5px 10px 10px 0;}
-.section img.right 	{margin:5px 0 10px 10px;}
+.section img.left, 
+.section img.right 	{margin:0 10px 10px;}
 .section h3					{@extend .dotted;}
 .accent							{color:#7f453b;}
 .jumper 						{text-decoration:underline; visibility:hidden;}
