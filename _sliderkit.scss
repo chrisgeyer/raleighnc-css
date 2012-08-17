@@ -44,14 +44,16 @@ border:0;}
 /*---------------------------------
  *	News slider > Landing
  *---------------------------------*/	
-.newslider-horizontal{margin:10px auto 30px;padding:5px 0 0 0;width:553px;height:430px;overflow:visible;background:#fff;box-shadow:0px 0px 15px #666;border-radius:5px;/*height:480px;*/}
+.slider {margin:0 1%; width:98%; height:415px;}
+ 
+.newslider-horizontal{margin:10px auto 30px;padding:5px 0 0 0;/*width:553px;*/height:415px;overflow:visible;background:#fff;box-shadow:0px 0px 15px #666;border-radius:5px;/*height:480px;*/}
 
 /*Panel*/
-.newslider-horizontal .sliderkit-panels{margin:10px 15px;width:522px;height:390px;overflow:hidden;position:relative;}
-.newslider-horizontal .sliderkit-panel{width:520px;height:390px;padding:0;overflow:hidden;border:1px solid #888;}
+.newslider-horizontal .sliderkit-panels{margin:10px 15px;/*width:522px;*/height:380px;overflow:hidden;position:relative;}
+.newslider-horizontal .sliderkit-panel{width:99%;height:380px;padding:0;overflow:hidden;border:1px solid #aaa;}
 
 /*News block*/
-.newslider-horizontal .sliderkit-news	{margin:0;width:520px;}
+.newslider-horizontal .sliderkit-news	{margin:0;/*width:520px;*/}
 .newslider-horizontal .sliderkit-news a:link, .newslider-horizontal .sliderkit-news a:visited{color:#fff;font-size:1.5em;}
 .newslider-horizontal .sliderkit-news img{float:right;width:100%;height:auto;margin:0 0 0 10px;overflow:hidden;z-index:1;}
 
@@ -63,7 +65,7 @@ border:0;}
 .newslider-horizontal .sliderkit-nav-clip ul li.sliderkit-selected a{background:transparent url(images/bullet-on.png) no-repeat 0 0;}
 
 /*Captions*/
-.newslider-horizontal .sliderkit-panel .sliderkit-panel-textbox{bottom:-10px;left:0;width:520px;height:80px;}
+.newslider-horizontal .sliderkit-panel .sliderkit-panel-textbox{bottom:-10px;left:0;width:100%;height:80px;}
 .newslider-horizontal .sliderkit-panel .sliderkit-panel-text{height:50px;padding:5px 15px 10px;color:#fff;text-align:center;}
 .newslider-horizontal .sliderkit-panel .sliderkit-panel-text a{z-index:5;}
-.newslider-horizontal .sliderkit-panel .sliderkit-panel-overlay{width:520px;height:70px;background:#000;opacity:0.6;z-index:2;}
+.newslider-horizontal .sliderkit-panel .sliderkit-panel-overlay{width:100%;height:70px;background:#000;opacity:0.6;z-index:2;}

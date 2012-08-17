@@ -176,10 +176,6 @@ label {display:block;}
 .cn, .ph, .cty, .ste {float:left; padding:18px 20px 0 0;}
 .cn, .ph, .cty {clear:both;}
 
-/*Home
-==========*/
-.slider 				{margin:0 auto; width:555px; height:440px;}
-
 /*iFrame*/
 iframe 			{border:none;}
 .iframeShim {margin:0; padding:0; border:none; background:none; position:absolute; overflow:hidden;}
@@ -329,6 +325,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .section img.left, 
 .section img.right 	{margin:0 10px 10px;}
 .section h3					{@extend .dotted;}
+.callout h3					{border:0;}
 .accent							{color:#7f453b;}
 .jumper 						{text-decoration:underline; visibility:hidden;}
 
