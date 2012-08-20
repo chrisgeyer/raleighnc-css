@@ -110,11 +110,10 @@ ul.subMenu li a:hover 	{color:$linkhover;}
 
 /*Gov Delivery - march 2012*/
 .govdelivery 				{@extend .dotted;}
-.govdelivery h3 		{font-size:1.5em; color:$green; margin:0 0 0 5px;}
+.govdelivery h3 		{font-size:1.5em; color:$green;}
 .govdelivery .box		{padding:5px; overflow:hidden;}
 .govdelivery p			{margin:0;}
 .govdelivery a.action {background:$green; color:#fff;}
-#Govdelivery 				{margin:0 auto 5px; padding:2px 5px; width:172px; background:#d9decf; border-radius:2px; overflow:hidden; border:0;}
 #Govdelivery h3			{color:#111; font-size:1.4em; margin:2px;}
 #Govdelivery ul 		{background:#fafafa; padding:5px;}
 #Govdelivery li 		{padding:0 0 5px;}
@@ -129,13 +128,17 @@ ul.subMenu li a:hover 	{color:$linkhover;}
 
 /*Related info - march 2012*/
 .mRelatedContentMain h2 {display:none;}
-.mRelatedContent ul 		{margin:0 0 10px 0; padding:0; border:5px solid #d7e2f1;}
+.mRelatedContent ul 		{margin:0 2px 10px 0; padding:0.45em; background:#d7e2f1; border-radius:3px;}
 .mRelatedContent li 		{margin:0; padding:3px; background:#fafafa;}
-li.mRelatedTitle 				{margin:0; padding:2px 0; color:#111; font-weight:700; font-size:1.2em; background:#d7e2f1;}
+li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-size:1.2em; background:#d7e2f1;}
 
 /*New related*/
-.related 								{margin:0 0 10px 0; padding:0; border:5px solid #d7e2f1;}
-.related h3 						{margin:0; padding:2px 0; color:#111; font-weight:700; font-size:1.2em; background:#d7e2f1;}
+.box 										{margin:0 2px 10px 0; padding:0.45em; position:relative; overflow:hidden;}
+.govdelivery 						{background:#d9decf;}
+.govdelivery h3 				{font-size:1.45em;}
+.related 								{background:#d7e2f1; border-radius:3px;}
+.related h3 						{margin:0; padding:0; font-size:1.2em;}
+.related ul 						{margin:0;}
 .related li 						{margin:0; padding:3px; background:#fafafa;}
 
 /*Static pages
@@ -254,7 +257,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 
 /*Home Page Feature*/
 .open {float:right; width:45%; margin:1%; padding:1%;}
-.council {padding:5px; @extend .dotted;}
+.council {@extend .dotted;}
 
 /*Templates
 ====================*/
