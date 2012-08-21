@@ -23,7 +23,7 @@ a			{color:$link; text-decoration:none;
 
 /* Header elements.
 -------------------------------------------------------------- */
-#header 						{height:110px; background:transparent url(images/logo.png) no-repeat; background-position:50%; background-size:cover; overflow:hidden; position:relative; color:#fff;}
+#header 						{height:110px; background:transparent url(images/logo.png) top left no-repeat; background-position:50%; background-size:cover; overflow:hidden; position:relative; color:#fff;}
 #header a						{color:#fff; text-decoration:underline;}
 
 #city_seal					{width:45%; cursor:pointer;}
@@ -42,9 +42,9 @@ a			{color:$link; text-decoration:none;
 #fontsizer 					{top:27px;}
 #fontsizer span			{cursor:pointer;}
 
-#searchBoxArea 			{bottom:10px;}
+#searchBoxArea 			{bottom:10px; width:34%;}
 #searchInput 				{float:left; margin:0; padding:6.5px 5px; width:250px; background:#fdfdfd url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma';}
-#executeSEearch			{float:right; margin:0; padding:6px; color:#fff; font-size:1.1em; font-weight:700; border:1px solid #666; background:#666; border-radius: 0 3px 3px 0; overflow:visible; position:relative; cursor:pointer;}
+#executeSEearch			{float:left; margin:0; padding:6px; color:#fff; font-size:1.1em; font-weight:700; border:1px solid #666; background:#666; border-radius: 0 3px 3px 0; overflow:visible; position:relative; cursor:pointer;}
 #executeSEearch:hover {text-decoration:underline;}
 #executeSEearch:active {position:relative; top:1px; outline:0;}
 #advSearch a 				{clear:both; float:left; color:$green; text-decoration:none; font-size:0.9em;}
@@ -66,9 +66,9 @@ a			{color:$link; text-decoration:none;
 /* Main content areas.
 -------------------------------------------------------------- */
 #contentArea, #Main {padding:20px 0; width:100%; border-top:3px solid #ddd; border-bottom:1px solid #ddd; overflow:hidden;}
-#col1 				{float:left; width:20%;}
-#col2 				{float:left; margin:0 1%; width:58%; position:relative;}
-#col3 				{float:right; padding:0 0 0 1%; width:19%;}
+#col1 				{float:left; width:19%;}
+#col2 				{float:left; margin:0 0 0 1%; width:59%; position:relative;}
+#col3 				{float:right; width:20%;}
 #col2Large 		{float:left; width:78.5%;}
 #Article 			{float:left; margin:0 1% 0 0; width:70%; min-height:540px; position:relative;}
 #sidebar 			{float:left; width:29%;}
