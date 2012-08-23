@@ -41,14 +41,14 @@ table a:link 	{text-decoration:underline;}
 
 /*Pages*/
 .iwt_leftnav, .landingMainWindow, .storyContentWrapper, .statusBox, .contactBox, .mapBox, .employmentWrapper {background:#f1f2f1;}
-.storyContentWrapper {margin:0 auto; font-size:1.08em; padding-top:30px;}
+.storyContentWrapper {width:555px; margin:0 auto; font-size:1.08em; padding-top:30px;}
 .statusBox, .contactBox, .mapBox, .employmentWrapper {padding-top:30px;}
 #Article .storyContentWrapper {width:100%; padding:0;}
 #storyContentWrapper {padding:0 20px;}
-.callout	{margin:20px 10px; padding:5px; background:#fdfdfd; border:2px solid #E96629; border-radius:10px;}
-#addThisButtons	{position:absolute; right:10px; top:3px;}
-#col2 .updatedDate, #col2 .issuedatetime {position:absolute; top:3px; left:0; color:#999;}
 #col2Large .storyContentWrapper {padding:10px;}
+#col2 .updatedDate, #col2 .issuedatetime {position:absolute; top:3px; left:0; color:#999;}
+#Article .updatedDate{margin:10px 0 20px 0; color:#666;}
+#addThisButtons	{position:absolute; right:10px; top:3px;}
 
 /*Left Col
 ===========*/
@@ -238,7 +238,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .newseventlocation {float:left; width:40%}
 .gismap {float:left; margin:0 0 10px 10px; padding:0; width:57%; height:182px; overflow:hidden;}
 .addfiles, .newscontacts, .relatedlinks {float:left; width:25%; margin:20px 10px;}
-#storyContentWrapper ul {margin:0 0 0 0.5em;}
+#storyContentWrapper ul, #storyContentWrapper li {margin:0;}
 .newscontacts {width:35%;}
 .relatedlinks {width:30%;}
 .rsssharing {clear:both; margin-top:20px;}
@@ -247,6 +247,8 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 /*News sidebar*/
 #sidebar .mainarticlelinks, 
 #sidebar .maineventslinks {clear:both; float:none; margin:0; width:98%;}
+#sidebar .mainarticlelinks h2, 
+#sidebar .maineventslinks h2 {float:none; margin:0;}
 #sidebar .mainRss {display:none;}
 #sidebar .mainarticlelinks ul, 
 #sidebar .maineventslinks ul {margin:0 5px 0 0;}
@@ -322,7 +324,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 .section						{clear:both; margin:1.5em 0;}
-.callout						{margin:1em; padding:.5em; background:#fafafa; border:2px solid #e96629; border-radius:10px;}
+.callout						{margin:1em; padding:.5em; background:#fdfdfd; border:2px solid #e96629; border-radius:10px;}
 .callout img				{max-width:98%;}
 .section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px;}
 .section img.left, 
