@@ -128,7 +128,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .govdelivery p					{margin:0;}
 .govdelivery .action 		{background:$green; color:#fff;}
 .box.related.govdelivery,
-#Govdelivery 						{background:$green;}
+#Govdelivery 						{background:#d9decf;}
 .govdelivery h3 				{font-size:1.45em;}
 .related 								{background:#d7e2f1; border-radius:3px;}
 .related h3,
@@ -217,7 +217,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 /*Events List*/
 .maineventslinks {@extend .mainarticlelinks; width:37%;}
 .eventsList li {clear:both; padding:5px; list-style:none;}
-.message 		{color:$orange;}
+.message 		{color:$green;}
 .eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:40px; background:$offwhite; border:2px solid #ddd; text-align:center; font-weight:700; letter-spacing:0.3em; border-radius:2px;}
 .eventDay 	{font-size:1.3em;}
 .eventTitle {display:inline;}
