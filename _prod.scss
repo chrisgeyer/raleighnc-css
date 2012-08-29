@@ -25,15 +25,12 @@ body {padding-bottom:15px; background:#8b9f8e;}
 .line 					{clear:both; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd;}
 .underline			{border-bottom:1px solid #bfbfbf;}
 img 						{border:0; max-width:100%;}
-.tcalDiv 				{margin-bottom:20px;}
 h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middle;}
 
 /*OOCSS*/
 .dotted					{border-bottom:1px dotted #ccc;}
 
 /*Links*/
-.jumper 			{text-decoration:underline; visibility:hidden;}
-.tcalLink 		{font-weight:700; text-decoration:underline;}
 a[name]:hover {text-decoration:none;}
 table a:link 	{text-decoration:underline;}
 .section .coricon, .coricon 	{margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle;}
@@ -45,7 +42,7 @@ table a:link 	{text-decoration:underline;}
 .statusBox, .contactBox, .mapBox, .employmentWrapper {padding-top:30px;}
 #Article .storyContentWrapper {width:100%; padding:0;}
 #storyContentWrapper {padding:0 20px;}
-#col2Large .storyContentWrapper {padding:10px;}
+#col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
 #col2 .updatedDate, #col2 .issuedatetime {position:absolute; top:3px; left:0; color:#999;}
 #Article .updatedDate{margin:10px 0 20px 0; color:#666;}
 #addThisButtons	{position:absolute; right:10px; top:3px;}
@@ -197,7 +194,7 @@ iframe 			{border:none;}
 .mFeatureDescBlkBg 		{padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.7;}
 
 /*Feature Table*/
-.twoCol 	{margin:0; border:0; @extend .dotted;}
+.twoCol 	{margin:0 2%; border:0; @extend .dotted;}
 .twoCol td,
 .twoColImage table {border:0;}
 .twoColImage img {width:135px;}
@@ -306,10 +303,6 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .facility_hours 		{margin:0 0 10px 0;}
 .facility_hours th 	{background:#d7e2f1;}
 
-/*FAQ*/
-.backtotop {display:none;}
-.qnaset {margin:0 0 20px 0;}
-
 /*Map Gallery*/
 .mapdownloads th		{text-align:left;}
 
@@ -330,10 +323,9 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .section h3					{@extend .dotted;}
 .callout h3					{border:0;}
 .accent							{color:#7f453b;}
-.jumper 						{text-decoration:underline; visibility:hidden;}
 
 /*Old One Column - seperate or remove after*/
-.faqqna 		{color:#7f453b;}
+.faqqna 		{@extend .accent;}
 .backtotop 	{display:none;}
 .tcalDiv 		{margin-bottom:20px;}
 .jumper 		{text-decoration:underline; visibility:hidden;}
@@ -367,9 +359,6 @@ tr.middleRow .smallImage {width:252px; height:157px;}
 .vicImg 		{float:left; width:175px; border:solid 1px #111;}
 .vicloc 		{float:left; margin:0 0 20px 0; width:100%;}
 .locImg 		{float:left; margin-left:4px; width:333px; border:solid 1px #111;}
-
-/*Projects*/
-.projsect {color:#7f453b;}
 
 /*Status*/
 #statusanchorlist li 	{margin:0 0 5px 20px; padding:0; list-style-type:disc;}
