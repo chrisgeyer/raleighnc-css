@@ -38,7 +38,7 @@ table a:link 	{text-decoration:underline;}
 
 /*Pages*/
 .iwt_leftnav, .landingMainWindow, .storyContentWrapper, .statusBox, .contactBox, .mapBox, .employmentWrapper {background:#f1f2f1;}
-.storyContentWrapper {width:565px; margin:0 auto; font-size:1.08em; padding-top:30px;}
+.storyContentWrapper {min-width:320px; max-width:700px; margin:0 auto; font-size:1.08em; padding-top:30px;}
 .statusBox, .contactBox, .mapBox, .employmentWrapper {padding-top:30px;}
 #Article .storyContentWrapper {width:100%; padding:0;}
 #storyContentWrapper {padding:0 20px;}
@@ -252,6 +252,8 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 #sidebar .more {margin-right:10px;}
 
 /*Home Page Feature*/
+.surveyQuestions {float:left; width:48%; margin:1%;}
+.surveyQuestions .PDS_poll .pds-box {width:100%;}
 .open {float:right; width:45%; margin:1%; padding:1%;}
 .council {@extend .dotted;}
 
@@ -292,6 +294,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .empSalary 						{clear:both;}
 
 /*Job page*/
+.storyContentWrapper .job li	{list-style:none; padding:5px;}
 .employmentRequirements li, 
 .employmentDuties li 	{margin-left:20px;list-style-type:disc;}
 .employmentDisclaimer {margin-top:20px; color:#666;}
@@ -349,15 +352,6 @@ tr.middleRow .smallImage {width:252px; height:157px;}
 .rightArrowContainerLarge {left:auto; right:4px;}
 .arrow 							{width:20px; height:20px; cursor:pointer;}
 #mStoryImgGalDescId {margin:0;}
-
-/*Police Homicide*/
-.casedesc, .caseparagraph, .casenumber, .casePhone {width:100%; clear:both;}
-.casenumber {margin:0; padding:0; font-size:1.3em; font-weight:700;}
-.casePhone 	{float:left; margin:0 0 20px 15px;}
-.vic 				{float:left; margin:0 0 7px 0; width:175px; font-size:1.167em;}
-.vicImg 		{float:left; width:175px; border:solid 1px #111;}
-.vicloc 		{float:left; margin:0 0 20px 0; width:100%;}
-.locImg 		{float:left; margin-left:4px; width:333px; border:solid 1px #111;}
 
 /*Status*/
 #statusanchorlist li 	{margin:0 0 5px 20px; padding:0; list-style-type:disc;}
