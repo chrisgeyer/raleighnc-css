@@ -44,7 +44,7 @@ border:0;}
 /*---------------------------------
  *	News slider > Landing
  *---------------------------------*/	
-.slider {margin:0 2%; width:96%; min-height:420px;}
+.slider {margin:0 2%; width:96%; min-height:420px; /*add background loading icon?*/}
  
 .newslider-horizontal{margin:10px auto 30px;padding:5px 0 0 0;/*width:553px;*/height:100%;overflow:visible;background:#fff;box-shadow:0px 0px 15px #666;border-radius:5px;/*height:480px;*/}
 
@@ -53,7 +53,6 @@ border:0;}
 .newslider-horizontal .sliderkit-panel{width:99%;min-height:380px;padding:0;overflow:hidden;border:1px solid #aaa;}
 
 /*News block*/
-.newslider-horizontal .sliderkit-news{margin:0;/*width:520px;*/}
 .newslider-horizontal .sliderkit-news a:link, .newslider-horizontal .sliderkit-news a:visited{color:#fff;font-size:1.5em;}
 .newslider-horizontal .sliderkit-news img{float:right;width:100%;height:auto;margin:0 0 0 10px;overflow:hidden;z-index:1;}
 
