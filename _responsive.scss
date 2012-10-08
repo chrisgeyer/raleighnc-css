@@ -1,5 +1,6 @@
 /*Adaptive Mobile Layout*/
 @media only screen and (min-width:1380px) {
+	body {font-size:81.25%;}
 	#screenWrapper {width:1220px;}
 	#navigation	{@include gradient(top, #5487e9, #acb9ce);}
 	#navigation {@include gradient(top, #2e5baf, #5c8fea);}
@@ -8,7 +9,7 @@
 	.topLinks {display:block;}
 	#rssLayer, #fontsizer {top:30px;}
 	#searchBoxArea {bottom:5px;}
-	#globalNavArea li {width:9%; text-align:center;}
+	#globalNavArea li {width:11%; text-align:center;}
 	.discover {display:none;}
 	.slider {height:519px;}
 	.newslider-horizontal .sliderkit-panels{height:480px;}
@@ -47,3 +48,23 @@
 }
 
 //body:after {position:fixed; bottom:0; left:0; z-index:100; background:#ffc; padding:1em 2%; font-size:.8em; content:"We're below 960px";}
+
+
+@media only screen and (min-width: 480px) {
+  /* 480 =================================================== */
+}
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+}
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+}
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+}
+@media only screen and (min-width: 1382px) {
+  /* 1382 =================================================== */
+  body {
+    max-width: 1440px;
+  }
+}
