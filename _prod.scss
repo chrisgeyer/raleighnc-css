@@ -22,10 +22,10 @@ body {padding-bottom:15px; background:#8b9f8e;}
 .align-left			{text-align:left;}
 .align-center		{text-align:center;}
 .align-right		{text-align:right;}
-.line 					{clear:both; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd;}
 .underline			{border-bottom:1px solid #bfbfbf;}
 img 						{border:0; max-width:100%;}
 h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middle;}
+.storyContentWrapper .line 	{clear:both; margin:0.6em 0 1.2em 0; padding:0; width:100%; height:1px; background:#ddd;}
 
 /*OOCSS*/
 .dotted					{border-bottom:1px dotted #ccc;}
@@ -37,13 +37,12 @@ table a:link 	{text-decoration:underline;}
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .contactBox a {text-decoration:underline;}
 
 /*Pages*/
-.iwt_leftnav, .landingMainWindow, .storyContentWrapper, .statusBox, .contactBox, .mapBox, .employmentWrapper {background:#f1f2f1;}
+.iwt_leftnav, .landingMainWindow, .storyContentWrapper, .contactBox {background:#f1f2f1;}
 .storyContentWrapper {min-width:320px; max-width:850px; margin:0 auto; font-size:1.08em; padding-top:30px;}
-.statusBox, .contactBox, .mapBox, .employmentWrapper {padding-top:30px;}
 #Article .storyContentWrapper {width:100%; padding:0;}
-#storyContentWrapper {padding:0 20px;}
+#storyContentWrapper {padding:0 3%;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
-#col2 .updatedDate, #col2 .issuedatetime {position:absolute; top:3px; left:0; color:#999;}
+#col2 .updatedDate {position:absolute; top:3px; left:0; color:#999;}
 #Article .updatedDate{margin:10px 0 20px 0; color:#666;}
 #addThisButtons	{position:absolute; right:10px; top:3px;}
 
@@ -153,7 +152,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 #contactForm	{margin:20px 10px; padding:5px; background:$offwhite; border:2px solid #ddd; border-radius:10px;}
 .contactSearchForm li {padding:2px;}
 .searchBox 			{margin:10px 0;}
-.nameBox				{margin-left:50px;}
+.nameBox				{margin-left:8%;}
 .nameBox:nth-of-type(2) {margin-left:52px;}
 .resultArea 		{padding:10px;}
 #viewBy 				{float:left;}
@@ -270,8 +269,10 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 
 /*CAC*/
 .cacmeetinginfo 	{@extend .bcmeetinginfo; @include gradient(top, #829656, #f1f2f1);}
-.cacactivity 			{@extend .bcimage;}
-.cacactivity, .cacactivity .photoslider-1click-slideshow, .cacactivity .photoslider-1click-slideshow img 	{height:300px;}
+.cacactivity 			{}
+.cacactivity .photoslider-1click-slideshow {height:340px;}
+.cacactivity .photoslider-1click-slideshow img 	{width:97%;}
+.cacactivity .sliderkit-panel-textbox {left:1.5%; width:97%;}
 .cacgismap 				{margin:5px 0 15px 10px; width:356px; height:256px; overflow:hidden;}
 
 /*Contact*/
@@ -296,6 +297,18 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .employmentRequirements li, 
 .employmentDuties li 	{margin-left:20px;list-style-type:disc;}
 .employmentDisclaimer {margin-top:20px; color:#666;}
+
+/*Job sidebar - october 2012*/
+#sidebar .empJump,
+#sidebar .empNo,
+#sidebar .empSalary,
+#sidebar .empDept,
+#sidebar div[style]	{display:none;}
+#sidebar h1	{position:relative; color:#fff; background:dodgerblue; font-size:1.5em; float:right; clear:both; padding:10px 10px 10px 20px; margin-left:-20px; margin-bottom:20px; text-shadow:0 -1px #d0284b, 0 1px #f96080; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#sidebar h1:before {content:" "; background:url(images/ribbon.png); display:block; width:10px; height:10px; position:absolute; 	bottom:0; left:0; margin-bottom:-10px; z-index:-1;}
+#sidebar .employmentType h3 {font-size:1.54em;}
+#sidebar .empTitle {font-weight:normal; font-size:1.1em;}
+#sidebar .empClose {border-bottom:1px dotted #ccc; width:98%; color:#666; margin:0 0 6px 0;}
 
 /*Facility*/
 .gismap_iframe 			{float:left; margin:10px 0 0 0; padding:0; width:356px; height:256px; overflow:hidden;}
@@ -353,10 +366,6 @@ tr.middleRow .smallImage {width:252px; height:157px;}
 #mStoryImgGalDescId {margin:0;}
 
 /*Status*/
-#statusanchorlist li 	{margin:0 0 5px 20px; padding:0; list-style-type:disc;}
-.statusBody a, 
-.statusSection a 			{text-decoration:underline;}
-.statusSection li 		{margin:0 0 6px 50px; padding:0; list-style-type:disc;}
 .statusGreen, 
 .statusYellow, 
 .statusRed 						{background:url(images/statuscolors.png) no-repeat top left; padding-left:20px; height:23px;}
