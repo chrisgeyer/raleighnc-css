@@ -37,24 +37,26 @@ table a:link 	{text-decoration:underline;}
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .contactBox a {text-decoration:underline;}
 
 /*Pages*/
-.iwt_leftnav, .landingMainWindow, .storyContentWrapper, .contactBox {background:#f1f2f1;}
-.storyContentWrapper {min-width:320px; max-width:600px/*850px*/; margin:0 auto; font-size:1.08em; padding-top:30px;}
-#Article .storyContentWrapper {width:100%; padding:0;}
-#storyContentWrapper {padding:0 3%;}
+.storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:0 auto; font-size:1.1em; padding-top:20px; background:#f1f2f1;}
+#storyContentWrapper {margin-top:-20px; padding:0 3%;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
-#col2 .updatedDate {position:absolute; top:3px; left:0; color:#999;}
-#Article .updatedDate{margin:10px 0 20px 0; color:#666;}
+.updatedDate {position:absolute; top:0; left:0; color:#999;}
+#Article .updatedDate{position:static;}
 #addThisButtons	{position:absolute; right:10px; top:3px;}
 
 /*Left Col
 ===========*/
 /*Discover*/
-.discover 				{margin:0 0 10px 0; padding:0 0 10px 0; height:54px; @extend .dotted;}
-.discoverImgText 	{float:left; padding:0 0 0 6px; width:30%; text-align:center;}
+.icons 						{@extend .dotted;}
+.icons a 					{float:left; margin-left:3%; width:30%; text-align:center;}
+.icons a:hover		{text-decoration:none;}
+a.icon-calendar 	{color:#657838;}
+a.icon-location		{color:$link;}
+a.icon-envelope		{color:#7f453b;}
 
 /*Department dropdown*/
-.deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 10px; @extend .dotted;}
-#deptSelector select 	{width:95%; /*border:1px solid #333;*/}
+.depts 						{padding-left:10px; @extend .dotted;}
+.depts select 		{width:95%;}
 
 /*Left Nav*/
 .leftnav 							{padding:10px;}
@@ -80,12 +82,13 @@ table a:link 	{text-decoration:underline;}
 .surveyFieldTitle 			{margin:5px 0;}
 .surveyQuestions p 			{clear:both; margin:0 10px 0 0;}
 .surveyQuestions p:last-child {margin:0;}
-input.submitSurveyButton, 
-.action 								{float:right; margin:10px; padding:5px 12px; color:#fff; font-size:1.1em; font-weight:700; border:1px solid #666; background:#7f453b; border-radius:5px;}
-input.submitSurveyButton:hover, 
-.action:hover 					{text-decoration:underline; cursor:pointer; color:#fff;}
-input.submitSurveyButton:active, 
-.action:active 					{position:relative; top:1px; outline:0;}
+input.submitSurveyButton,
+.action, 
+.action:visited 				{margin:5%; padding:6px 18px; @include gradient(top, #B2B2B2, #666); border:1px solid $orange; border-radius:5px; text-shadow:0 1px rgba(0, 0, 0, 0.1); color:#fff; font-size:1.1em; font-weight:700;}
+input.submitSurveyButton:hover,
+.action:hover 					{border:1px solid #b2b2b2; color:#fff; text-shadow:0 2px rgba(0, 0, 0, 0.3); box-shadow:0 1px 1px rgba(0,0,0,0.2); @include gradient(top, #666, #B2B2B2); cursor:pointer; text-decoration:none;}
+input.submitSurveyButton:active,
+.action:active 					{box-shadow:inset 0 1px 2px rgba(0,0,0,0.3)}
 .action img							{display:none;}
 
 /*Most Popular*/
@@ -112,7 +115,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .govdelivery 						{@extend .dotted;}
 .box.govdelivery h3 		{font-size:1.5em; color:$green;}
 .govdelivery p					{margin:0;}
-.govdelivery .action 		{background:$green; color:#fff;}
+.govdelivery .action 		{@include gradient(top, #D9DECF, $green); border:1px solid $green;}
 .box.related.govdelivery,
 #Govdelivery 						{background:#d9decf;}
 .govdelivery h3 				{font-size:1.45em;}
@@ -244,6 +247,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .surveyQuestions .PDS_poll .pds-box {width:100%;}
 .open {float:right; width:45%; margin:1%; padding:1%;}
 .council {@extend .dotted;}
+.ecomment {background:#3C61A5; color:#fff; padding:0 5px; border-radius:5px;}
 
 /*Templates
 ====================*/
@@ -344,3 +348,43 @@ tr.middleRow .smallImage {width:252px; height:157px;}
 .confirm {border:2px solid #657838;}
 .warning {border:2px solid #eed45d;}
 .error	 {border:2px solid #C5312A;}
+
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.svg#icomoon') format('svg'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: 'icomoon';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	font-size:2em;
+	-webkit-font-smoothing: antialiased;}
+.icon-mail:before {content: "\21";}
+.icon-location:before {content: "\22";}
+.icon-calendar:before {content: "\23";}
+.icon-calendar-2:before {content: "\25";}
+.icon-facebook:before {content: "\24";}
+.icon-twitter:before {content: "\27";}
+.icon-feed:before {content: "\28";}
+.icon-flickr:before {content: "\29";}
+.icon-file-word:before {content: "\2a";}
+.icon-file-pdf:before {content: "\2b";}
+.icon-file-excel:before {content: "\2c";}
+.icon-envelope:before {content: "\26";}
