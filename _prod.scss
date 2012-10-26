@@ -380,11 +380,13 @@ tr.middleRow .smallImage {width:252px; height:157px;}
 .icon-location:before {content: "\22";}
 .icon-calendar:before {content: "\23";}
 .icon-calendar-2:before {content: "\25";}
-.icon-facebook:before {content: "\24";}
-.icon-twitter:before {content: "\27";}
+.icon-facebook:before {content: "\24"; color:#3B5999;}
+.icon-twitter:before {content: "\27"; color:#4099FF;}
 .icon-feed:before {content: "\28";}
 .icon-flickr:before {content: "\29";}
 .icon-file-word:before {content: "\2a";}
 .icon-file-pdf:before {content: "\2b";}
 .icon-file-excel:before {content: "\2c";}
 .icon-envelope:before {content: "\26";}
+
+.screen-reader-text {position:absolute; top:-9999px; left:-9999px;}
