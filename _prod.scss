@@ -115,7 +115,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .govdelivery 						{@extend .dotted;}
 .box.govdelivery h3 		{font-size:1.5em; color:$green;}
 .govdelivery p					{margin:0;}
-.govdelivery .action 		{@include gradient(top, #D9DECF, $green); border:1px solid $green;}
+.govdelivery .action 		{@include gradient(top, lighten($green, 15%)/*#D9DECF*/, $green); border:1px solid $green;}
 .box.related.govdelivery,
 #Govdelivery 						{background:#d9decf;}
 .govdelivery h3 				{font-size:1.45em;}
