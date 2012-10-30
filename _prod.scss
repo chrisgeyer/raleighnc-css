@@ -300,7 +300,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 #sidebar .empSalary,
 #sidebar .empDept,
 #sidebar div[style]	{display:none;}
-#sidebar h1	{position:relative; color:#fff; background:$link; font-size:1.5em; float:left; clear:both; padding:5px 30px 10px 20px; margin-left:-20px; margin-bottom:15px; text-shadow:0 -1px $linkhover, 0 1px $linkhover; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#sidebar h1	{position:relative; color:#fff; background:$link; font-size:1.5em; float:left; clear:both; padding:5px 30px 10px 20px; margin-left:-20px; margin-bottom:15px; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 #sidebar h1:before {content:" "; background:url(images/ribbon.png); display:block; width:10px; height:10px; position:absolute; bottom:0; left:0; margin-bottom:-10px;}
 #sidebar .employmentType h3 {font-size:1.54em;}
 #sidebar .empTitle {font-weight:normal; font-size:1.1em;}
