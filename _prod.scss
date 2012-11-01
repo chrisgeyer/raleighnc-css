@@ -191,7 +191,7 @@ iframe 			{border:none;}
 /*News List*/
 .mainarticlelinks {float:left; margin:25px 1%; padding:0; width:58%;}
 .mainarticlelinks h2, .maineventslinks h2 {float:left; margin-left:5px;}
-.mainRss img {margin:5px 0 0 10px;}
+.mainRss img {margin:0 0 0 10px;}
 .newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
 a.more {float:right; margin:5px 10px; text-decoration:underline;}
@@ -265,9 +265,9 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .cacgismap 				{margin:5px 0 15px 10px; width:356px; height:256px; overflow:hidden;}
 
 /*Contact*/
-.contact					{margin-top:2em;}
-.contact img.left	{width:250px; margin-left:0;}
-.contactImage 		{float:right; margin-right:50px; border:1px solid #333;}
+.contact					{@extend .callout;}
+#col2 .contact		{margin-top:2em; border:2px solid #ccc;}
+.contact img.left	{width:43%; margin-left:0;}
 
 /*Department*/
 .deptBodyTable, .deptBodyTable td {border:0;} 
