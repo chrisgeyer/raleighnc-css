@@ -38,7 +38,7 @@
 @media only screen and (max-width:480px) {
 	html {-webkit-text-size-adjust:none;}
 	#screenWrapper {width:auto; overflow:hidden; border:0;}
-	#header {@include gradient(top, #5c8fea, #2e5baf); text-align:center;}
+	#header {text-align:center; @include gradient(top, #5c8fea, #2e5baf);}
 	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img {display:none;}
 	#searchBoxArea, .eventdates, .newseventlocation, .gismap_iframe {width:100%;}
 	#searchInput {width:75%;}
