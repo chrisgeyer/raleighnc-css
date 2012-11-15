@@ -52,9 +52,15 @@ a			{color:$link; text-decoration:none;
 #fontsizer 					{top:10px;}
 #fontsizer span			{cursor:pointer;}
 
-#searchBoxArea 			{bottom:15px; right:0; width:35%;}
-#searchInput 				{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fdfdfd url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma';}
-#searchBoxArea #executeSEearch, #searchBoxArea #executeSearch {float:left; margin:-1px 0; padding:7px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; color:#fff; font-size:1.1em; font-weight:700; @include gradient(top, #B2B2B2, #666);}
+#searchBoxArea 			{bottom:25px; right:0; width:35%;}
+#searchInput 				{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fdfdfd url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma';
+										 -webkit-transition:box-shadow .3s ease-in-out;
+												-moz-transition:box-shadow .3s ease-in-out;
+									 			 -ms-transition:box-shadow .3s ease-in-out;
+									  			-o-transition:box-shadow .3s ease-in-out;
+											 			 transition:box-shadow .3s ease-in-out;}
+#searchInput:focus	{box-shadow: 0 0 5px rgba(81, 203, 238, 1);}
+#executeSEearch, #executeSearch {float:left; margin:-1px 0; padding:7px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; color:#fff; font-size:1.1em; font-weight:700; @include gradient(top, #B2B2B2, #666);}
 #executeSEearch:hover, #executeSearch:hover {@extend .action:hover;}
 #executeSEearch:active, #executeSearch:active {@extend .action:active;}
 
