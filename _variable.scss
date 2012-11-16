@@ -14,3 +14,11 @@ $offwhite:#fafafa;
 	background-image:     -o-linear-gradient($origin, $start, $stop);
 	background-image:        linear-gradient($origin, $start, $stop);
 		filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorStr='#{$start}', EndColorStr='#{$stop}');}
+		
+@mixin transition ($property, $time, $method) {
+	-webkit-transition:$property $time $method;
+	   -moz-transition:$property $time $method;
+	    -ms-transition:$property $time $method;
+	     -o-transition:$property $time $method;
+	        transition:$property $time $method;
+}
