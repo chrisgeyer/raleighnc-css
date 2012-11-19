@@ -56,8 +56,9 @@ a			{color:$link; text-decoration:none;
 /* Main navigation elements.
 -------------------------------------------------------------- */
 #globalNavArea 						{float:left; margin-left:-1%; padding:0 1%; width:100%; border-top:1px solid #999; position:relative; box-shadow:0px 5px 6px #aaa; @include gradient(top, #515a52, #293129);}
-#globalNavArea:before,  #globalNavArea:after	{content:" "; background:url(images/ribbon-left.png); display:block; width:10px; height:10px; position:absolute; bottom:0; left:0; margin-bottom:-10px;}
-#globalNavArea:after			{background:url(images/ribbon-right.png);}
+#globalNavArea:before, #globalNavArea:after	{content:" "; display:block; width:10px; height:10px; position:absolute; bottom:0; margin-bottom:-10px;}
+#globalNavArea:before 		{left:0; background:url(images/ribbon-left.png);}
+#globalNavArea:after			{right:0; background:url(images/ribbon-right.png);}
 #globalNavArea ul					{clear:both;}
 #globalNavArea li 				{float:left; border-left:1px solid #999; text-align:center; @include transition(background, .2s, ease-in-out);}
 #tabSelected 							{font-weight:700; @include gradient(top, #5c8fea, #2e5baf);}
