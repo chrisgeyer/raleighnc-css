@@ -48,13 +48,11 @@ table a:link 	{text-decoration:underline;}
 /*Discover*/
 .icons 						{@extend .dotted;}
 .icons a 					{float:left; margin-left:3%; width:30%; text-align:center;}
-.icons a:hover		{text-decoration:none; position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
-.icons a:hover .icon-calendar:before, 
-.icons a:hover .icon-location:before,
-.icons a:hover .icon-envelope:before, {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
-a.icon-calendar 	{color:$link;}
+// .icons a:hover		{text-decoration:none; position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
+a.icon-calendar-2 {color:$link;}
 a.icon-location		{color:#657838;}
-a.icon-envelope		{color:#7f453b;}
+a.icon-envelope, a.icon-user	{color:#7f453b;}
+.icons a:hover 		{text-decoration:none; opacity:0.6; @include transition(opacity, .25s, ease-in-out);}
 
 /*Department dropdown*/
 #col1 .depts 			{padding-left:10px; @extend .dotted;}
@@ -84,23 +82,23 @@ a.icon-envelope		{color:#7f453b;}
 .surveyFieldTitle 			{margin:5px 0;}
 .surveyQuestions p 			{clear:both; margin:0 10px 0 0;}
 .surveyQuestions p:last-child {margin:0;}*/
-.action, .action:visited 	{margin:5%; padding:6px 18px; border:1px solid $orange; border-radius:5px; text-shadow:0 1px rgba(0, 0, 0, 0.1); color:#fff; font-size:1.1em; font-weight:700; @include gradient(top, #B2B2B2, #666);}
-.action:hover 						{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(top, #666, #B2B2B2);}
+.action, .action:visited 	{margin:5%; padding:6px 18px; border:1px solid #666; border-radius:5px; text-shadow:0 1px rgba(0, 0, 0, 0.1); color:#fff; font-size:1.1em; font-weight:700; @include gradient(top, #B2B2B2, #666665);}
+.action:hover 						{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(top, #666665, #B2B2B2);}
 .action:active 						{box-shadow:inset 0 1px 2px rgba(0,0,0,0.3)}
 .action img								{display:none;}
 
-/*Most Popular*/
+/*Most Popular - removed Nov 2012
 #mostPopular li 				{margin:0; padding:2px; background:$green; list-style:none;}
 a.ui-accordion-header, #mostPopular li.selected a.ui-accordion-header	{padding-left:20px; background:url(images/sprites.png) no-repeat; background-position:0 1px; width:16px; height:16px; font-size:1.2em; font-weight:700; color:#fff;}
 #mostPopular li.selected {margin:0; padding-top:5px; background:$link;}
 #mostPopular li.selected a.ui-accordion-header {background-position:0 -13px;}
 #mostPopular ul.subMenu {background:$offwhite;}
-#mostPopular ul.subMenu li {margin:0; padding:5px; background:$offwhite;}
+#mostPopular ul.subMenu li {margin:0; padding:5px; background:$offwhite;}*/
 
 /*Popular portlets - april 20012*/
-#popularPages, #mostPopLinksArea {padding:10px 10px 10px 0;}
-#popularPages ul 	{border:1px solid #ccc; border-radius:2px;}
-#popularPages li 	{margin:0; padding:3px 5px; background:$offwhite;}
+#popularPages, #popularSearch {padding:10px 10px 10px 0;}
+#popularPages ul, #popularSearch ul {border:1px solid #ccc; border-radius:2px;}
+#popularPages li, #popularSearch li {margin:0; padding:3px 5px; background:$offwhite;}
 
 /*Related info - march 2012*/
 .mRelatedContentMain h2 {display:none;}
@@ -113,7 +111,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .govdelivery 						{@extend .dotted;}
 .box.govdelivery h3 		{font-size:1.5em; color:$green;}
 .govdelivery p					{margin:0;}
-.govdelivery .action 		{border:1px solid $green; @include gradient(top, lighten($green, 15%)/*#D9DECF*/, $green);}
+.govdelivery .action 		{padding-top:3px; border:1px solid $green; @include gradient(top, lighten($green, 15%)/*#D9DECF*/, $green);}
 .box.related.govdelivery,
 #Govdelivery 						{background:#d9decf;}
 .govdelivery h3 				{font-size:1.45em;}
@@ -341,8 +339,6 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 
 /*Old One Column - seperate or remove after*/
 .faqqna 		{@extend .accent;}
-.tcalDiv 		{margin-bottom:20px;}
-.jumper 		{text-decoration:underline; visibility:hidden;}
 
 /*Status*/
 .confirm {border:2px solid #657838;}
@@ -360,14 +356,6 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 	font-weight: normal;
 	font-style: normal;}
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-	font-family: 'icomoon';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;}
-
 /* Use the following CSS code if you want to have a class per icon */
 [class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, .coricon {
 	font-family: 'icomoon';
@@ -376,7 +364,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 	font-weight: normal;
 	font-size:2em;
 	-webkit-font-smoothing: antialiased;}
-.icon-mail:before {content: "\21";}
+.icon-mail:before {content: "\21"; font-size:1.25em;}
 .icon-location:before {content: "\22";}
 .icon-calendar:before {content: "\23";}
 .icon-calendar-2:before {content: "\25";}
@@ -408,4 +396,4 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 
 
 /*replace coricon*/
-.coricon [src*="icon-pdf.png"] {@extend .icon-file-pdf;}
+img.coricon [src="/content/static/images/icon-pdf.png"] {@extend .icon-file-pdf;}
