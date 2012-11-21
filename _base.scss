@@ -8,7 +8,7 @@ Last Modified:	11.2.2012 (cwg)
 -------------------------------------------------------------- */
 html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent 
 										{margin:0; padding:0;}
-#screenWrapper 			{margin:0 auto; width:960px; background:#f1f2f1; border:1px solid #555; border-top:0; box-shadow:0px 2px 30px #444;}
+#screenWrapper 			{margin:0 auto; width:960px; background:#eee; border:1px solid #555; border-top:0; box-shadow:0px 2px 30px #444;}
 
 /* Text elements.
 -------------------------------------------------------------- */
@@ -44,7 +44,7 @@ a			{color:$link; text-decoration:none;
 #fontsizer span			{cursor:pointer;}
 
 #searchBoxArea 			{bottom:25px; right:0; width:35%;}
-#searchInput 				{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fdfdfd url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
+#searchInput 				{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:$offwhite url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
 #searchInput:focus	{box-shadow: 0 0 5px rgba(81, 203, 238, 1);}
 #executeSEearch, #executeSearch {float:left; margin:-1px 0; padding:7px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; color:#fff; font-size:1.1em; font-weight:700; @include gradient(top, #B2B2B2, #666665);}
 #executeSEearch:hover, #executeSearch:hover {@extend .action:hover;}
@@ -71,17 +71,20 @@ a			{color:$link; text-decoration:none;
 -------------------------------------------------------------- */
 #contentArea, #Main {padding:20px 0; width:100%; border-top:3px solid #ddd; border-bottom:1px solid #ddd; overflow:hidden;}
 #col1 				{float:left; width:19%;}
-#col2 				{float:left; margin:0 0 0 1%; width:59%; position:relative; padding:0 0 0 1%; box-shadow:-1px 1px 6px #ccc; background:#fff;}
-#col3 				{float:right; width:20%;}
+#col2 				{float:left; margin:0 0 0 1%; width:59%; position:relative; padding:0 0 0 1%; box-shadow:-1px 1px 6px #ccc; background:$offwhite; border-radius:2px;}
+#col3 				{float:right; width:20%; position:relative;}
+#col3:before	{content:" "; display:block; width:100%; height:33px; border-radius:0 100px 100px 0; @include gradient(top, $link, $lightblue);}
+.storyContentWrapper h1	{margin-left:-2%; padding-left:2%; color:#fff; text-shadow:1px 1px 3px #111; @include gradient(top, $link, $lightblue);}
 #col2Large 		{float:left; width:78.5%;}
 #Article 			{float:left; margin:0 1% 0 0; width:70%; min-height:540px; position:relative;}
 #sidebar 			{float:left; width:29%;}
+#sidebar > .box {margin-top:0.5em;}
 
 
 /* Footer elements.
 -------------------------------------------------------------- */
 /*Accolades*/
-#accolade 				{margin-left:-1.2%; padding:3% 1.1%; width:100%; background:#d7e2f1; border:1px solid #fff; border-bottom:0; text-align:center; position:relative; @include gradient(top, #d7e2f1, darken(#d7e2f1, 10%));}
+#accolade 				{margin-left:-1.2%; padding:3% 1.1%; width:100%; background:$lightblue; border:1px solid #fff; border-bottom:0; text-align:center; position:relative; box-shadow:1px 3px 5px #ccc; @include gradient(top, $lightblue, darken($lightblue, 10%));}
 #accolade:before, #accolade:after	{content:" "; display:block; width:10px; height:10px; position:absolute; bottom:0; margin-bottom:-10px;}
 #accolade:before 		{left:0; background:url(images/ribbon-left.png);}
 #accolade:after			{right:0; background:url(images/ribbon-right.png);}
@@ -91,7 +94,6 @@ a			{color:$link; text-decoration:none;
 #accldeMore a			{float:right; margin:0;}
 
 /*Footer*/
-#footerContent		{border-top:1px solid #fff;}
 .newfooter 				{margin:0 auto; padding-top:15px; width:70%; text-align:center;}
 .socialmedia 			{width:165px; margin:0 auto;}
 .socialmedia img 	{float:left; margin-right:5px; border-radius:3px; box-shadow:0px 1px 2px #666;} /*ADD SPRITE OR ICONS*/
