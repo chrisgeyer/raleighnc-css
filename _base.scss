@@ -71,7 +71,7 @@ a			{color:$link; text-decoration:none;
 -------------------------------------------------------------- */
 #contentArea, #Main {padding:20px 0; width:100%; border-top:3px solid #ddd; border-bottom:1px solid #ddd; overflow:hidden;}
 #col1 				{float:left; width:19%;}
-#col2 				{float:left; margin:0 0 0 1%; width:59%; position:relative;}
+#col2 				{float:left; margin:0 0 0 1%; width:59%; position:relative; padding:0 0 0 1%; box-shadow:-1px 1px 6px #ccc; background:#fff;}
 #col3 				{float:right; width:20%;}
 #col2Large 		{float:left; width:78.5%;}
 #Article 			{float:left; margin:0 1% 0 0; width:70%; min-height:540px; position:relative;}
@@ -81,7 +81,7 @@ a			{color:$link; text-decoration:none;
 /* Footer elements.
 -------------------------------------------------------------- */
 /*Accolades*/
-#accolade 				{margin-left:-1.2%; padding:3% 1.1%; width:100%; background:#d7e2f1; border:1px solid #fff; border-bottom:0; text-align:center; position:relative; @include gradient(top, #d7e2f1, darken(#d7e2f1, 15%));}
+#accolade 				{margin-left:-1.2%; padding:3% 1.1%; width:100%; background:#d7e2f1; border:1px solid #fff; border-bottom:0; text-align:center; position:relative; @include gradient(top, #d7e2f1, darken(#d7e2f1, 10%));}
 #accolade:before, #accolade:after	{content:" "; display:block; width:10px; height:10px; position:absolute; bottom:0; margin-bottom:-10px;}
 #accolade:before 		{left:0; background:url(images/ribbon-left.png);}
 #accolade:after			{right:0; background:url(images/ribbon-right.png);}
