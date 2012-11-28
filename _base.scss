@@ -76,6 +76,7 @@ a			{color:$link; text-decoration:none;
 #col3 				{float:right; width:21%; position:relative;}
 #col3:before	{content:" "; margin-bottom:10px; display:block; width:99%; height:33px; border-radius:0 10px 0 0; @include gradient(top, #666, #b2b2b2);}
 .storyContentWrapper h1	{margin-left:-1.7%; padding-left:1.7%; width:104%; color:#fff; text-shadow:1px 1px 3px #111; border-radius:10px 0 0 0; @include gradient(top, #666, #b2b2b2);}
+#storyContentWrapper h1 {margin:0; padding:0; width:auto; height:auto; color:#111; border-radius:0; @include gradient(top, #eee, #eee);}
 #col2Large 		{float:left; margin-left:1%; width:78.5%;}
 #Article 			{float:left; margin:0 1% 0 0; width:70%; min-height:540px; position:relative;}
 #sidebar 			{float:left; width:29%;}
