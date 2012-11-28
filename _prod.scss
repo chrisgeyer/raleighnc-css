@@ -147,12 +147,13 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .calTopicFullScreen 	{display:none;}	
 
 /*Contact Directory - march 2012*/
-#contactForm	{margin:20px 10px; padding:5px; background:$offwhite; border:2px solid #ddd; border-radius:10px;}
-.contactSearchForm li {padding:2px;}
-.searchBox 			{margin:10px 0;}
-.nameBox				{margin-left:8%;}
-.nameBox:nth-of-type(2) {margin-left:52px;}
-.resultArea 		{padding:10px;}
+#contactForm	{margin:20px 10px; padding:10px; background:#fff; border:2px solid #ddd; border-radius:10px; box-shadow:1px 2px 10px #ccc;}
+#contactSearchForm li {padding:2px;}
+#contactSearchForm input[name=fName]	{margin-left:7.5%;}
+#contactSearchForm input[name=lName]	{margin-left:7.7%;}
+#contactSearchForm input[type="submit"]:first-child {@extend .action; margin:0 6% 0 20%;}
+#contactSearchForm input[type="submit"]:last-child {@extend .removed;}
+.resultArea p   {display:none;}
 #viewBy 				{float:left;}
 .numberResults 	{float:right;}
 .paging 				{clear:both; float:right;}
@@ -160,8 +161,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .departmentRow 	{clear:both; background:$link; font-weight:700; font-size:1.2em; color:#fff; padding:0 5px;}
 .contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {float:left; margin:5px 0 0 0; padding:2px 6px;}
 .contactResultsName, .contactResultsPhoneNumber {clear:both;}
-.contactResultsPhoneNumber {margin:0 0 10px 0; padding:0 6px; width:98%; border-bottom:1px solid #ddd;}
-.contactSearchForm input[type="submit"] {margin-left:135px;}
+.contactResultsPhoneNumber {margin:0 0 10px 0; padding:0 6px; width:98%; border-bottom:1px dotted #ddd;}
 #peopleResults a[href^="mailto:"] {padding:1px 20px 1px 0; background:transparent url(../images/icon-email.png) center right no-repeat;}
 
 /*iFrame*/
@@ -314,8 +314,8 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 #sidebar .empSalary,
 #sidebar .empDept,
 #sidebar div[style]	{display:none;}
-#sidebar h1	{position:relative; color:#fff; background:$link; font-size:1.5em; float:left; clear:both; padding:5px 30px 10px 20px; margin-left:-11px; margin-bottom:15px; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
-#sidebar h1:before {content:" "; background:url(images/ribbon.png); display:block; width:10px; height:10px; position:absolute; bottom:0; left:0; margin-bottom:-10px;}
+#sidebar #top h1	{position:relative; color:#fff; background:$link; font-size:1.5em; float:right; clear:both; padding:5px 30px 10px 20px; margin-left:-11px; margin-bottom:15px; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#sidebar #top h1:after {content:" "; background:url(images/ribbon-right.png); display:block; width:10px; height:10px; position:absolute; bottom:0; right:0; margin-bottom:-10px;}
 #sidebar .employmentType h3 {font-size:1.54em;}
 #sidebar .empTitle {font-weight:normal; font-size:1.1em;}
 #sidebar .empClose {border-bottom:1px dotted #ccc; width:98%; color:#666; margin:0 0 6px 0;}
@@ -350,7 +350,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .warning {border:2px solid #eed45d;}
 .error	 {border:2px solid #C5312A;}
 
-.screen-reader-text {position:absolute; top:-9999px; left:-9999px;}
+.screen-reader-text {position:absolute; top:-9999em; left:-9999em;}
 @font-face {
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot');
@@ -362,7 +362,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 	font-style: normal;}
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, .coricon {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, .coricon, #globalNavArea li:first-child:before {
 	font-family: 'icomoon';
 	font-style: normal;
 	speak: none;
@@ -398,6 +398,9 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .icon-camera:before {content: "\3b";}
 .icon-file-powerpoint:before {content: "\3c";}
 .icon-file-zip:before {content: "\3d";}
+.icon-home:before {content: "\3e"; line-height:40px; color:#fff; padding:0 5px; text-shadow:1px 1px 3px #111; cursor:pointer;}
+.icon-home-2:before {content: "\3f";}
+.icon-home-3:before {content: "\40";}
 
 
 /*replace coricon*/
