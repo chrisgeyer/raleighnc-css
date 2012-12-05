@@ -34,11 +34,11 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 a[name]:hover {text-decoration:none;}
 table a:link 	{text-decoration:underline;}
 .section .coricon, .coricon 	{margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle;}
-.storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited {text-decoration:underline;}
+.storyContentWrapper a:link, .storyContentWrapper a:visited, .contactBox a {text-decoration:underline;}
 
 /*Pages*/
-.storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:1.5em auto; font-size:1.1em; background:#f1f2f1;}
-#storyContentWrapper {margin-top:-1.5em; padding:0 3%;}
+.storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:0 auto; font-size:1.1em; padding-top:20px; background:#f1f2f1;}
+#storyContentWrapper {margin-top:-20px; padding:0 3%;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
 .updatedDate {position:absolute; top:0; left:0; color:#999;}
 #Article .updatedDate{position:static;}
@@ -159,8 +159,14 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .contactResultsPhoneNumber {margin:0 0 10px 0; padding:0 6px; width:98%; border-bottom:1px solid #ddd;}
 .contactSearchForm input[type="submit"] {margin-left:135px;}
 
+/*Google Forms*/
+label {display:block;}
+.ss-q-help {color:green;}
+.ss-q-title {color:red;}
+.cn, .ph, .cty, .ste {float:left; padding:18px 20px 0 0;}
+.cn, .ph, .cty {clear:both;}
+
 /*iFrame*/
-label 			{display:block; @extend .quiet;}
 iframe 			{border:none;}
 .iframeShim {margin:0; padding:0; border:none; background:none; position:absolute; overflow:hidden;}
 .interior 	{margin:54px 0 0 3px;}
@@ -265,8 +271,6 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .cacgismap 				{margin:5px 0 15px 10px; width:356px; height:256px; overflow:hidden;}
 
 /*Contact*/
-.contact					{margin-top:2em;}
-.contact img.left	{width:250px; margin-left:0;}
 .contactImage 		{float:right; margin-right:50px; border:1px solid #333;}
 
 /*Department*/
@@ -284,7 +288,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .empSalary 						{clear:both;}
 
 /*Job page*/
-.storyContentWrapper .job li, .content .job li {list-style:none; padding:5px;}
+.storyContentWrapper .job li	{list-style:none; padding:5px;}
 .employmentRequirements li, 
 .employmentDuties li 	{margin-left:20px;list-style-type:disc;}
 .employmentDisclaimer {margin-top:20px; color:#666;}
@@ -303,7 +307,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 #sidebar .empClose {border-bottom:1px dotted #ccc; width:98%; color:#666; margin:0 0 6px 0;}
 
 /*Facility*/
-.gismap_iframe 			{float:left; margin:10px 0 0 0; padding:0; width:65%; height:256px; overflow:hidden;}
+.gismap_iframe 			{float:left; margin:10px 0 0 0; padding:0; width:356px; height:256px; overflow:hidden;}
 .location 					{float:right; margin:10px 0 0 -20px; width:31%;}
 .facility_hours 		{margin:0 0 10px 0;}
 .facility_hours th 	{background:#d7e2f1;}
@@ -331,6 +335,14 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .faqqna 		{@extend .accent;}
 .tcalDiv 		{margin-bottom:20px;}
 .jumper 		{text-decoration:underline; visibility:hidden;}
+/*Image slideshow*/
+.largeFrameWrapper 	{background:#fff; border:1px solid #aaa; border-radius:5px; margin:25px 0; width:100%; overflow:hidden; position:relative;}
+.frame 							{margin:0; padding:0; border:none; border-spacing:0; border-collapse:collapse;}
+.frame td						{border:0;}
+tr.middleRow .largeImage, 
+tr.middleRow .smallImage {width:515px; padding:8px; background:#fff; text-align:center; height:285px; overflow:hidden;}
+tr.middleRow .smallImage {width:252px; height:157px;}
+.largeFrameImage 		{max-width:495px; max-height:240px;}
 
 /*Status*/
 .confirm {border:2px solid #657838;}

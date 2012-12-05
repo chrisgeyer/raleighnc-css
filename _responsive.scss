@@ -40,7 +40,7 @@
 	#screenWrapper {width:auto; overflow:hidden; border:0;}
 	#header {@include gradient(top, #5c8fea, #2e5baf); text-align:center;}
 	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img {display:none;}
-	#searchBoxArea, .eventdates, .gismap_iframe {width:100%;}
+	#searchBoxArea, .eventdates {width:100%;}
 	#searchInput {width:75%;}
 	.cityOfRaleigh {margin-top:20px;}
 	#globalNavArea li {width:49%; border-bottom:1px solid #999;}

@@ -44,7 +44,7 @@ ol 							{list-style-type:decimal;}*/
 
 ul, ol 	{margin:0 0 10px 0; padding:0;}
 ul li 	{margin:0; padding:0; list-style:none;}
-.storyContentWrapper, .content {
+.storyContentWrapper {
 	ul, ol 			{margin-left:1em;}
 	li 					{margin-left:1em; list-style-position:inside;}
 	ul li 			{list-style-type:disc;}
@@ -77,7 +77,7 @@ table tr:nth-child(even) {background:#fff;}
 --------------------------------------------------------------
 .small 				{margin-bottom:1.875em; font-size:.8em; line-height:1.875em;}
 .large 				{margin-bottom:1.25em; font-size:1.2em; line-height:2.5em;}*/
-.quiet 				{color:#666;}
+.quiet				{color:#666;}
 .loud 				{color:#000;}
 .highlight 		{background:#ffc;}
 .added 				{background:#060; color:#fff;}
