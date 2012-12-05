@@ -1,24 +1,13 @@
 /*Adaptive Mobile Layout*/
-@media only screen and (min-width:1380px) {
+@media only screen and (min-width:1360px) {
 	#screenWrapper {width:1220px;}
-	#navigation	{@include gradient(top, #5487e9, #acb9ce);}
-	#navigation {@include gradient(top, #2e5baf, #5c8fea);}
-	#header {background-image:url(images/watermark2.png); background-repeat:no-repeat; background-position:70% 15%;}
-	#header {@include gradient(top, #5c8fea, #2e5baf);}
-	.topLinks {display:block;}
-	#rssLayer, #fontsizer {top:30px;}
-	#searchBoxArea {bottom:5px;}
 	#globalNavArea li {width:9%; text-align:center;}
-	.discover {display:none;}
-	.slider {max-height:510px;}
-	.newslider-horizontal .sliderkit-panels{min-height:470px;}
-	.newslider-horizontal .sliderkit-panel{min-height:470px;}
-	.storyContentWrapper {width:700px;}
+	.slider {width:680px; height:510px;}
 }
 
 @media only screen and (max-width:768px) {
 	#screenWrapper {width:auto; overflow:hidden; border:0;}
-	#searchBoxArea {width:44%;}
+	#searchBoxArea {width:50%;}
 	#globalNavArea li {width:17%;}
 	#col1 {width:24%;}
 	#col2, #col2Large {width:74%;}
@@ -27,22 +16,16 @@
 }
 
 @media only screen and (max-width:480px) {
-	#header {@include gradient(top, #5c8fea, #2e5baf); text-align:center;}
 	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element {display:none;}
-	#searchBoxArea {width:100%;}
-	#searchInput {width:75%;}
-	.cityOfRaleigh {margin-top:20px;}
-	#globalNavArea li {width:43%;}
-	#globalNavArea li:nth-child(even) {border:0;}
+	.topLinks, #searchBoxArea {right:10%;}
+	.cityOfRaleigh {margin-top:20px; right:20%;}
+	#globalNavArea li {width:28%;}
 	#col1, #col2, #col2Large, #col3 {width:100%;}
 	.storyContentWrapper div, #right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .open, .newfooter {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
 	.storyContentWrapper .outline {padding:1%;}
 	.storyContentWrapper .callout {margin:1%; padding:1%; width:90%;}
 	#accldePre {text-align:center;}
-	.slider {min-height:225px;}
-	.newslider-horizontal .sliderkit-panels{min-height:180px;}
-	.newslider-horizontal .sliderkit-panel{min-height:180px;}
-	.newfooter ul {clear:both; width:100%; text-align:center;}
+	.slider {width:300px; height:225px;}
 }
 
 //body:after {position:fixed; bottom:0; left:0; z-index:100; background:#ffc; padding:1em 2%; font-size:.8em; content:"We're below 960px";}
