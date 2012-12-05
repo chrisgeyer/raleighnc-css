@@ -50,12 +50,12 @@ table a:link 	{text-decoration:underline;}
 .icons 						{@extend .dotted;}
 .icons a 					{float:left; margin-left:3%; width:30%; text-align:center;}
 .icons a:hover		{text-decoration:none;}
-a.icon-calendar 	{color:$link;}
-a.icon-location		{color:#657838;}
+a.icon-calendar 	{color:#657838;}
+a.icon-location		{color:$link;}
 a.icon-envelope		{color:#7f453b;}
 
 /*Department dropdown*/
-#col1 .depts 			{padding-left:10px; @extend .dotted;}
+.depts 						{padding-left:10px; @extend .dotted;}
 .depts select 		{width:95%;}
 
 /*Left Nav*/
