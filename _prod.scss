@@ -38,7 +38,7 @@ table a:link 	{text-decoration:underline;}
 
 /*Pages*/
 .iwt_leftnav, .landingMainWindow, .storyContentWrapper, .contactBox {background:#f1f2f1;}
-.storyContentWrapper {min-width:320px; max-width:600px/*850px*/; margin:0 auto; font-size:1.08em; padding-top:30px;}
+.storyContentWrapper {min-width:320px; max-width:850px; margin:0 auto; font-size:1.08em; padding-top:30px;}
 #Article .storyContentWrapper {width:100%; padding:0;}
 #storyContentWrapper {padding:0 3%;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
@@ -101,6 +101,14 @@ a.ui-accordion-header 	{padding-left:20px; background:url(images/arrows.png) top
 #popularPages ul 	{border:1px solid #ccc; border-radius:2px;}
 #popularPages li 	{margin:0; padding:3px 5px; background:$offwhite;}
 
+/*Related info - march 2012
+.mRelatedContentWrapper {margin:0 auto; padding:0; width:182px; background:#d7e2f1;}
+.mRelatedContentMain 		{margin:0; padding:5px;}
+.mRelatedContentMain h2 {font-size:1.4em;}
+.mRelatedContent 				{margin:0; padding:0; background:#f1f2f1;}
+.mRelatedContent li 		{margin:0; padding:3px;}
+.mRelatedTitle 					{margin:0 0 4px 0; padding:2px 0; color:#111; font-weight:700; font-size:1.1em;}*/
+
 /*Related info - march 2012*/
 .mRelatedContentMain h2 {display:none;}
 .mRelatedContent ul 		{margin:0 2px 10px 0; padding:0.45em; background:#d7e2f1; border-radius:3px;}
@@ -124,6 +132,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 #Govdelivery ul	 				{margin:0;}
 .related li,
 #Govdelivery li	 				{margin:0; padding:3px; background:$offwhite;}
+
 
 /*Static pages
 ====================*/
@@ -220,7 +229,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .newseventlocation {float:left; width:40%}
 .gismap {float:left; margin:0 0 10px 10px; padding:0; width:57%; height:182px; overflow:hidden;}
 .addfiles, .newscontacts, .relatedlinks {float:left; width:25%; margin:20px 10px;}
-.addfiles ul, .newscontacts ul, .relatedlinks ul, .addfiles li, .newscontacts li, .relatedlinks li {margin:0;}
+#storyContentWrapper ul, #storyContentWrapper li {margin:0;}
 .newscontacts {width:35%;}
 .relatedlinks {width:30%;}
 .rsssharing {clear:both; margin-top:20px;}
