@@ -10,16 +10,16 @@
 	#searchBoxArea {bottom:5px;}
 	#globalNavArea li {width:9%; text-align:center;}
 	.discover {display:none;}
-	.slider {height:519px;}
-	.newslider-horizontal .sliderkit-panels{height:480px;}
-	.newslider-horizontal .sliderkit-panel{height:470px;}
+	.slider {max-height:510px;}
+	.newslider-horizontal .sliderkit-panels{min-height:470px;}
+	.newslider-horizontal .sliderkit-panel{min-height:470px;}
 	.storyContentWrapper {width:700px;}
 }
 
 @media only screen and (max-width:768px) {
 	#screenWrapper {width:auto; overflow:hidden; border:0;}
 	#searchBoxArea {width:44%;}
-	#globalNavArea li {width:16.7%;}
+	#globalNavArea li {width:17%;}
 	#col1 {width:24%;}
 	#col2, #col2Large {width:74%;}
 	#col3 {clear:both; width:77%; margin-left:25%;}
@@ -32,16 +32,16 @@
 	#searchBoxArea {width:100%;}
 	#searchInput {width:75%;}
 	.cityOfRaleigh {margin-top:20px;}
-	#globalNavArea li {width:42%;}
+	#globalNavArea li {width:43%;}
 	#globalNavArea li:nth-child(even) {border:0;}
 	#col1, #col2, #col2Large, #col3 {width:100%;}
 	.storyContentWrapper div, #right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .open, .newfooter {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
 	.storyContentWrapper .outline {padding:1%;}
 	.storyContentWrapper .callout {margin:1%; padding:1%; width:90%;}
 	#accldePre {text-align:center;}
-	.slider {height:225px;}
-	.newslider-horizontal .sliderkit-panels{height:180px;}
-	.newslider-horizontal .sliderkit-panel{height:180px;}
+	.slider {min-height:225px;}
+	.newslider-horizontal .sliderkit-panels{min-height:180px;}
+	.newslider-horizontal .sliderkit-panel{min-height:180px;}
 	.newfooter ul {clear:both; width:100%; text-align:center;}
 }
 
