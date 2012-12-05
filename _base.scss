@@ -1,7 +1,7 @@
 /* ----------------------------------------------------
 Description:		Global structural elements
 Created:				3.2.2012
-Last Modified:	11.2.2012 (cwg)
+Last Modified:	3.2.2012 (cwg)
 ---------------------------------------------------- */
 
 /* Establish basic layout elements.
@@ -16,7 +16,12 @@ html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #gl
 a			{color:$link; text-decoration:none;
 	&:visited		{color:lighten($link, 10%);}
 	&:hover, 
-	&:focus 		{color:$linkhover; text-decoration:underline; @include transition(color, .4s, linear);}
+	&:focus 		{color:$linkhover; text-decoration:underline;
+							 -webkit-transition:color .4s linear;
+									-moz-transition:color .4s linear;
+									 -ms-transition:color .4s linear;
+									  -o-transition:color .4s linear;
+											 transition:color .4s linear;}
 	&:active 		{position:relative; top:1px; outline:0;}
 }
 
@@ -28,9 +33,13 @@ a			{color:$link; text-decoration:none;
 
 #city_seal					{width:45%; cursor:pointer;}
 #city_seal img 			{float:left; margin:4px 0 0 10px;}
-.cityOfRaleigh 			{margin:30px 0 0 5px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333;
-										/* failed attempt at sag - did not work in chrome - margin:0 0 0 15px; padding:30px 0 30px 105px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333; background:transparent url(images/cityseal.svg) top left no-repeat; background-position: 0 5px; background-size:30% 100%;*/}
-.cityOfRaleigh:hover{cursor:pointer; font-size:3.2em; @include transition(font-size, .4s, ease-in-out);}
+.cityOfRaleigh 			{margin:30px 0 0 5px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333;}
+.cityOfRaleigh:hover{cursor:pointer; font-size:3.2em; 
+											-webkit-transition:font-size .4s ease-in-out;
+										     -moz-transition:font-size .4s ease-in-out;
+										      -ms-transition:font-size .4s ease-in-out;
+											     -o-transition:font-size .4s ease-in-out;
+														  transition:font-size .4s ease-in-out;}
 
 .topLinks, #fontsizer, #rssLayer, #searchBoxArea {position:absolute; right:25px;}
 
@@ -44,7 +53,12 @@ a			{color:$link; text-decoration:none;
 #fontsizer span			{cursor:pointer;}
 
 #searchBoxArea 			{bottom:25px; right:0; width:35%;}
-#searchInput 				{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fdfdfd url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
+#searchInput 				{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fdfdfd url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma';
+										 -webkit-transition:box-shadow .3s ease-in-out;
+												-moz-transition:box-shadow .3s ease-in-out;
+									 			 -ms-transition:box-shadow .3s ease-in-out;
+									  			-o-transition:box-shadow .3s ease-in-out;
+											 			 transition:box-shadow .3s ease-in-out;}
 #searchInput:focus	{box-shadow: 0 0 5px rgba(81, 203, 238, 1);}
 #executeSEearch, #executeSearch {float:left; margin:-1px 0; padding:7px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; color:#fff; font-size:1.1em; font-weight:700; @include gradient(top, #B2B2B2, #666);}
 #executeSEearch:hover, #executeSearch:hover {@extend .action:hover;}

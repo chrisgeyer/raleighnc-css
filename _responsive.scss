@@ -48,7 +48,7 @@
 	#globalNavArea li:last-child {border-bottom:0; border-right:1px solid #999;}
 	#col1 {/*add leftnav to col3 and hide default, in this mq hide col1 and display col3 nav*/}
 	#col1, #col2, #col2Large, #col3, #Article, #sidebar {width:100%;}
-	#contentArea, #Main, #Search {padding:5px 0;}
+	#contentArea, #Main {padding:5px 0;}
 	#col2 .updatedDate, #col2 .issuedatetime {position:relative;}
 	.storyContentWrapper > div, #right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .videos, .open, .newfooter {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
 	.storyContentWrapper .outline {padding:1%;}
@@ -68,12 +68,6 @@
 	#globalNavArea ul	{border-top:1px solid #999;}
 	#globalNavArea #lines	{display:block; line-height:20px; width:10%; padding-left:25px; float:right; margin:2%;}
 	#tabsHeader, #col1 {display:none;}
-	
-	/*Search*/
-	#Search #sidebar {display:none;}
-	#Search #Article {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
-	.url {word-wrap:break-word;}
-	
 }
 
 //body:after {position:fixed; bottom:0; left:0; z-index:100; background:#ffc; padding:1em 2%; font-size:.8em; content:"We're below 960px";}

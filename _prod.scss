@@ -49,9 +49,6 @@ table a:link 	{text-decoration:underline;}
 .icons 						{@extend .dotted;}
 .icons a 					{float:left; margin-left:3%; width:30%; text-align:center;}
 .icons a:hover		{text-decoration:none;}
-.icons a:hover .icon-calendar:before, 
-.icons a:hover .icon-location:before,
-.icons a:hover .icon-envelope:before, {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
 a.icon-calendar 	{color:$link;}
 a.icon-location		{color:#657838;}
 a.icon-envelope		{color:#7f453b;}
@@ -126,8 +123,6 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .related li,
 #Govdelivery li	 				{margin:0; padding:3px; background:$offwhite;}
 
-.action.right:hover .icon-mail {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
-
 /*Static pages
 ====================*/
 /*Calendar*/
@@ -191,8 +186,7 @@ iframe 			{border:none;}
 /*News List*/
 .mainarticlelinks {float:left; margin:25px 1%; padding:0; width:54%;}
 .mainarticlelinks h2, .maineventslinks h2 {float:left; margin-left:5px;}
-.mainRss img {margin:0 0 0 10px; display:none;}
-.mainRss a	{@extend .icon-feed; color:$orange; padding:0 5px; font-size:0.8em;}
+.mainRss img {margin:0 0 0 10px;}
 .newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
 a.more {float:right; margin:5px 10px; text-decoration:underline;}
@@ -281,7 +275,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 #top img							{margin-bottom:-5px;}
 .employmentType				{padding-left:11.5%;}
 .employmentType div[style] {display:none;}
-.empJump 							{position:fixed; color:#fff; background:$link; float:left; clear:both; padding:5px 10px 5px 20px; margin-left:-9%; margin-bottom:15px; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.empJump 							{position:fixed; color:#fff; background:$link; float:left; clear:both; padding:5px 10px 5px 20px; margin-left:-8%; margin-bottom:15px; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 .empJump:before 			{content:" "; background:url(images/ribbon.png); display:block; width:10px; height:10px; position:absolute; bottom:0; left:0; margin-bottom:-10px;}
 .empJump a:link, .empJump a:visited	{color:#fff;}
 // .empJump li a 				{float:left; margin:0 15px 20px 0; text-decoration:underline;}
@@ -369,7 +363,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 	-webkit-font-smoothing: antialiased;}
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, .coricon [src*="icon-pdf.png"] {
+[class^="icon-"]:before, [class*=" icon-"]:before {
 	font-family: 'icomoon';
 	font-style: normal;
 	speak: none;
@@ -390,7 +384,3 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .icon-envelope:before {content: "\26";}
 
 .screen-reader-text {position:absolute; top:-9999px; left:-9999px;}
-
-
-/*replace coricon*/
-.coricon [src*="icon-pdf.png"] {@extend .icon-file-pdf;}
