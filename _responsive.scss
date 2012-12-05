@@ -1,4 +1,4 @@
-/*Adaptive Mobile Layout
+/*Adaptive Mobile Layout*/
 @media only screen and (min-width:1380px) {
 	body {font-size:81.25%;}
 	#screenWrapper {width:1220px;}
@@ -34,17 +34,16 @@
 	#col3 {clear:both; width:77%; margin-left:25%;}
 	#right > div {float:left; width:45%; margin:1%; padding:1%;}
 }
-*/
+
 @media only screen and (max-width:480px) {
-	#screenWrapper {width:auto; overflow:hidden; border:0;}
 	#header {@include gradient(top, #5c8fea, #2e5baf); text-align:center;}
 	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element {display:none;}
 	#searchBoxArea {width:100%;}
 	#searchInput {width:75%;}
 	.cityOfRaleigh {margin-top:20px;}
-	#globalNavArea li {width:49%; border-bottom:1px solid #999;}
-	#globalNavArea li:nth-child(even) {border-left:0;}
-	#col1 {/*add leftnav to col3 and hide default, in this mq hide col1 and display col3 nav*/}
+	#globalNavArea li {width:49%;}
+	#globalNavArea li:nth-child(even) {border:0;}
+	#col1 {float:right;}
 	#col1, #col2, #col2Large, #col3, #Article, #sidebar {width:100%;}
 	#contentArea, #Main {padding:5px 0;}
 	#col2 .updatedDate, #col2 .issuedatetime {position:relative;}
@@ -62,3 +61,23 @@
 }
 
 //body:after {position:fixed; bottom:0; left:0; z-index:100; background:#ffc; padding:1em 2%; font-size:.8em; content:"We're below 960px";}
+
+
+@media only screen and (min-width: 480px) {
+  /* 480 =================================================== */
+}
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+}
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+}
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+}
+@media only screen and (min-width: 1382px) {
+  /* 1382 =================================================== */
+  body {
+    max-width: 1440px;
+  }
+}
