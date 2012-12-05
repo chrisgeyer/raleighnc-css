@@ -38,7 +38,7 @@ table a:link 	{text-decoration:underline;}
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited {text-decoration:underline;}
 
 /*Pages*/
-.storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:0 auto; font-size:1.15em;}
+.storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:0 auto; font-size:1.1em;}
 #storyContentWrapper {padding:0 2%;}
 #col2Large .storyContentWrapper, #col2Large .content {margin:0; padding:10px; width:auto;}
 .updatedDate {position:absolute; top:-20px; left:10px; color:#666;}
@@ -71,7 +71,7 @@ a.icon-envelope, a.icon-user	{margin-left:1%; color:#7f453b;}
 
 /*old leftnav*/
 .iwt_section {margin:0 0 10px 10px;}
-.iwt_section_header {border-bottom:1px solid #ccc; font-size:1.2em; font-weight:normal;}
+.iwt_section_header {border-bottom:1px solid #ccc; font-size:1.3em;}
 .iwt_leftnav li, #popularPages li, #popularSearch li {margin:0 0 6px 0; list-style-type:none;}
 
 /*Right Col
@@ -121,7 +121,7 @@ a.ui-accordion-header, #mostPopular li.selected a.ui-accordion-header	{padding-l
 .related 								{padding:0.3em; background:#b6b6b6; border-radius:3px 10px 10px 3px;}
 .related h3,
 .box.related.govdelivery h3,
-#Govdelivery h3					{margin:0; padding:0; /*color:#fff;*/ font-size:1.2em; font-weight:normal; font-family:Verdana, Geneva, sans-serif; /*text-shadow:1px 1px 3px #111;*/}
+#Govdelivery h3					{margin:0; padding:0; color:#fff; font-size:1.2em; font-weight:normal; font-family:Verdana, Geneva, sans-serif; text-shadow:1px 1px 3px #111;}
 .related ul,
 #Govdelivery ul	 				{margin:0;}
 .related li,
@@ -343,7 +343,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .section img.right 	{margin:0 10px 10px;}
 .section h3					{@extend .dotted;}
 .callout h3					{border:0;}
-.accent							{color:#e96629; /*#7f453b*/}
+.accent							{color:#7f453b;}
 
 /*Status*/
 .confirm {border:2px solid #657838;}

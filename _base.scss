@@ -73,8 +73,8 @@ a			{color:$link; text-decoration:none;
 #contentArea, #Main {padding:20px 0; width:100%; border-top:3px solid #ddd; border-bottom:1px solid #ddd; overflow:hidden;}
 #col1 				{float:left; width:17%;}
 #col2 				{float:left; margin:0 0 0 1%; padding:0 1%; width:59%; position:relative; box-shadow:-2px 4px 8px #ccc; background:$offwhite; border-radius:10px 10px 2px 2px; z-index:10;}
-#col3 				{float:right; width:21%; position:relative; z-index:5; background:#f7f7f7;}
-#col3:before	{content:" "; margin-bottom:10px; display:block; width:99%; height:35px; border-radius:0 10px 0 0; @include gradient(top, #666665, #b2b2b2);}
+#col3 				{float:right; width:21%; position:relative; z-index:5;}
+#col3:before	{content:" "; margin-bottom:10px; display:block; width:99%; height:33px; border-radius:0 10px 0 0; @include gradient(top, #666665, #b2b2b2);}
 .storyContentWrapper h1, .content h1, #top h1	{margin-left:-1.7%; padding-left:1.7%; width:104%; color:#fff; font-weight:normal; text-shadow:1px 1px 3px #111; border-radius:10px 0 0 0; white-space:nowrap; @include gradient(top, #666665, #b2b2b2);}
 #storyContentWrapper h1 {margin-left:-2.1%; padding-left:2.1%; width:102.1%; border-radius:10px 10px 0 0; white-space:normal;}
 #col2Large 		{float:left; margin-left:1%; width:78.5%;}
