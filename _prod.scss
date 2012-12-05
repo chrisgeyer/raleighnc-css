@@ -31,6 +31,7 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 .dotted					{border-bottom:1px dotted #ccc;}
 
 /*Links*/
+a[name]:hover {text-decoration:none;}
 table a:link 	{text-decoration:underline;}
 .section .coricon, .coricon 	{margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle;}
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited {text-decoration:underline;}
@@ -273,21 +274,20 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 /*Employment list*/
 #top h1								{margin-top:10px;}
 #top img							{margin-bottom:-5px;}
-.employmentType				{padding-left:11.5%;}
+.employmentType				{padding-left:-12%;}
 .employmentType div[style] {display:none;}
-.empJump 							{position:fixed; color:#fff; background:$link; float:left; clear:both; padding:5px 10px 5px 20px; margin-left:-8%; margin-bottom:15px; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.empJump 							{position:relative; color:#fff; background:$link; float:left; clear:both; padding:5px 10px 5px 20px; margin-left:-9.25%; margin-bottom:15px; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 .empJump:before 			{content:" "; background:url(images/ribbon.png); display:block; width:10px; height:10px; position:absolute; bottom:0; left:0; margin-bottom:-10px;}
-.empJump a:link, .empJump a:visited	{color:#fff;}
+.empJump a:link				{color:#fff;}
 // .empJump li a 				{float:left; margin:0 15px 20px 0; text-decoration:underline;}
 .employmentType h3 		{clear:both; margin:15px 0 5px;}
-.empTitle 						{clear:both; float:left; display:inline; font-size:1.167em; font-weight:700;}
+.empTitle 						{clear:both; float:left; display:inline; margin-bottom:5px; font-size:1.167em; font-weight:700;}
 .empClose, 
 .empDept, 
 .empNo, 
-.empSalary 						{float:left; margin:0 0 15px 10px;}
-.empNo 								{clear:both; margin-left:0;}
-.empClose							{@extend .quiet; margin:3px 0 0 10px;}
-.employmentType > a:hover {text-decoration:none;}
+.empSalary 						{float:left; margin:3px 0 8px 10px;}
+.empNo 								{clear:both;}
+a#top:hover, a#00:hover, a#01:hover, a#02:hover, a#03:hover, a#04:hover {text-decoration:none;}
 
 /*Job page*/
 .storyContentWrapper .job li, .content .job li {list-style:none; padding:5px;}
