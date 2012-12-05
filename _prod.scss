@@ -41,7 +41,7 @@ table a:link 	{text-decoration:underline;}
 .storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:0 auto; font-size:1.1em;}
 #storyContentWrapper {padding:0 2%;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
-.updatedDate {position:absolute; top:-20px; left:10px; color:#666;}
+.updatedDate {position:absolute; top:-20px; left:10px; color:#999;}
 #Article .updatedDate{position:static;}
 #addThisButtons	{position:absolute; right:15px; top:8px;}
 
@@ -110,14 +110,14 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 
 /*New related - sept 2012*/
 .box, #Govdelivery 			{margin:0 2px 10px 0; padding:0.45em; position:relative; overflow:hidden;}
-.govdelivery 						{@extend .dotted; margin-top:-40px; background:#eee;}
+.govdelivery 						{@extend .dotted;}
 .box.govdelivery h3 		{font-size:1.5em; color:$green;}
 .govdelivery p					{margin:0;}
 .govdelivery .action 		{padding-top:3px; border:1px solid $green; @include gradient(top, lighten($green, 15%)/*#D9DECF*/, $green);}
 .box.related.govdelivery,
 #Govdelivery 						{background:#d9decf;}
 .govdelivery h3 				{font-size:1.45em;}
-.related 								{background:$lightblue; border-radius:3px 10px 10px 3px;}
+.related 								{background:$lightblue; border-radius:3px;}
 .related h3,
 .box.related.govdelivery h3,
 #Govdelivery h3					{margin:0; padding:0; font-size:1.2em;}
@@ -125,7 +125,6 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 #Govdelivery ul	 				{margin:0;}
 .related li,
 #Govdelivery li	 				{margin:0; padding:3px; background:$offwhite;}
-#col3 .box:first-child	{border-radius:2px 2px 10px;}
 
 .action.right:hover .icon-mail {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
 

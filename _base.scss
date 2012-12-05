@@ -71,10 +71,10 @@ a			{color:$link; text-decoration:none;
 -------------------------------------------------------------- */
 #contentArea, #Main {padding:20px 0; width:100%; border-top:3px solid #ddd; border-bottom:1px solid #ddd; overflow:hidden;}
 #col1 				{float:left; width:18%;}
-#col2 				{float:left; margin:0 0 0 1%; padding:0 1%; width:59%; position:relative; box-shadow:-1px 2px 10px #ccc; background:$offwhite; border-radius:10px 2px 2px 2px;}
+#col2 				{float:left; margin:0 0 0 1%; padding:0 1%; width:59%; position:relative; box-shadow:-1px 1px 6px #ccc; background:$offwhite; border-radius:2px;}
 #col3 				{float:right; width:20%; position:relative;}
-#col3:before	{content:" "; /*margin-bottom:10px;*/ display:block; width:99%; height:33px; border-radius:0 10px 0 0; @include gradient(top, lighten($link, 10%), $lightblue);}
-.storyContentWrapper h1	{margin-left:-1.7%; padding-left:1.7%; width:102%; color:#fff; text-shadow:1px 1px 3px #111; border-radius:10px 0 0 0; @include gradient(top, lighten($link, 10%), $lightblue);}
+#col3:before	{content:" "; margin-bottom:10px; display:block; width:99%; height:33px; border-radius:0 100px 100px 0; @include gradient(top, $link, $lightblue);}
+#col2 h1	{margin-left:-1.7%; padding-left:1.7%; width:102%; color:#fff; text-shadow:1px 1px 3px #111; @include gradient(top, $link, $lightblue);}
 #col2Large 		{float:left; margin-left:1%; width:78.5%;}
 #Article 			{float:left; margin:0 1% 0 0; width:70%; min-height:540px; position:relative;}
 #sidebar 			{float:left; width:29%;}
@@ -83,7 +83,7 @@ a			{color:$link; text-decoration:none;
 /* Footer elements.
 -------------------------------------------------------------- */
 /*Accolades*/
-#accolade 				{margin-left:-1.2%; padding:3% 1.1%; width:100%; background:$lightblue; border:1px solid #fff; border-bottom:0; border-radius:2px; text-align:center; position:relative; box-shadow:1px 3px 5px #ccc; @include gradient(top, $lightblue, darken($lightblue, 10%));}
+#accolade 				{margin-left:-1.2%; padding:3% 1.1%; width:100%; background:$lightblue; border:1px solid #fff; border-bottom:0; text-align:center; position:relative; box-shadow:1px 3px 5px #ccc; @include gradient(top, $lightblue, darken($lightblue, 10%));}
 #accolade:before, #accolade:after	{content:" "; display:block; width:10px; height:10px; position:absolute; bottom:0; margin-bottom:-10px;}
 #accolade:before 		{left:0; background:url(images/ribbon-left.png);}
 #accolade:after			{right:0; background:url(images/ribbon-right.png);}
