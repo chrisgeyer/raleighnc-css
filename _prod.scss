@@ -38,8 +38,8 @@ table a:link 	{text-decoration:underline;}
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited {text-decoration:underline;}
 
 /*Pages*/
-.storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:0 auto; font-size:1.1em;}
-#storyContentWrapper {padding:0 2%;}
+.storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:/*1.5em*/0 auto; font-size:1.1em; /*background:#f1f2f1;*/}
+#storyContentWrapper {margin-top:-1.5em; padding:0 3%;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
 .updatedDate {position:absolute; top:-20px; left:10px; color:#999;}
 #Article .updatedDate{position:static;}
@@ -98,7 +98,7 @@ a.ui-accordion-header, #mostPopular li.selected a.ui-accordion-header	{padding-l
 #mostPopular ul.subMenu li {margin:0; padding:5px; background:$offwhite;}*/
 
 /*Popular portlets - april 20012*/
-#popularPages, #popularSearch {@extend .box}
+#popularPages, #popularSearch {padding:10px 10px 10px 0;}
 #popularPages ul, #popularSearch ul {border:1px solid #ccc; border-radius:2px;}
 #popularPages li, #popularSearch li {margin:0; padding:3px 5px; background:$offwhite;}
 
@@ -167,7 +167,7 @@ iframe 			{border:none;}
 
 /*Landing
 ================*/
-.landing {text-align:center; font-size:2em;}
+.landing {text-align:center;}
 /*Main Feature*/
 .landingMainWindow h1 {margin:0; font-size:1.9em; text-align:center;}
 .landingPg 						{margin:0 auto; padding:0; width:555px; height:440px; position:relative;}	
