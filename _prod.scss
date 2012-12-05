@@ -96,6 +96,8 @@ a.ui-accordion-header 	{padding-left:20px; background:url(images/arrows.png) top
 #mostPopular li.selected a.ui-accordion-header {padding-left:20px; background-position:0 -21px; width:16px; height:16px; font-size:1.2em; font-weight:700; color:#fff;}
 #mostPopular ul.subMenu {background:$offwhite;}
 #mostPopular ul.subMenu li {margin:0; padding:5px; background:$offwhite;}
+ul.subMenu li a					{color:$link;}
+ul.subMenu li a:hover 	{color:$linkhover;}
 
 /*Popular portlets - april 20012*/
 #popularPages, #mostPopLinksArea {padding:10px 10px 10px 0;}

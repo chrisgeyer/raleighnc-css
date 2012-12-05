@@ -8,7 +8,7 @@ Last Modified:	3.2.2012 (cwg)
 -------------------------------------------------------------- */
 html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent 
 										{margin:0; padding:0;}
-#screenWrapper 			{margin:0 auto; width:960px; background:#f1f2f1; border:1px solid #555; border-top:0; box-shadow:0px 2px 30px #444;}
+#screenWrapper 			{margin:0 auto; width:980px; background:#f1f2f1; border:1px solid #202020; border-top:0; box-shadow:0px 2px 30px #444;}
 
 /* Text elements.
 -------------------------------------------------------------- */
@@ -23,7 +23,7 @@ a			{color:$link; text-decoration:none;
 
 /* Header elements.
 -------------------------------------------------------------- */
-#header 						{height:110px; background:#ddd url(images/logo.png) top left no-repeat; background-position:50%; background-size:cover; overflow:hidden; position:relative; color:#fff;}
+#header 						{height:110px; background:transparent url(images/logo.png) top left no-repeat; background-position:50%; background-size:cover; overflow:hidden; position:relative; color:#fff;}
 #header a						{color:#fff; text-decoration:underline;}
 
 #city_seal					{width:45%; cursor:pointer;}
@@ -52,8 +52,8 @@ a			{color:$link; text-decoration:none;
 
 /* Main navigation elements.
 -------------------------------------------------------------- */
-#globalNavArea 						{float:left; width:100%; border-top:1px solid #ddd; @include gradient(top, #515a52, #293129);}
-#globalNavArea li 				{float:left; border-left:1px solid #999; text-align:center;}
+#globalNavArea 						{float:left; width:100%; border-top:1px solid #eee; @include gradient(top, #515a52, #293129);}
+#globalNavArea li 				{float:left; border-left:1px solid #9ba19b; text-align:center;}
 #tabSelected 							{font-weight:700; @include gradient(top, #5c8fea, #2e5baf);}
 #globalNavArea a 					{padding:5px 14px; color:#fff; font-size:1.1em; line-height:40px;}
 #tabsHeader li:hover, 

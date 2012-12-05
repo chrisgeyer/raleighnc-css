@@ -20,8 +20,8 @@
 @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
 	body {background:#f1f2f1;}
 	#screenWrapper {border:0; box-shadow:none;}
-	#navigation, #accolade {margin-left:-3.5%; width:107%;}
-	#accolade {width:103%;}
+	#navigation, #accolade {margin-left:-2.5%; width:105%;}
+	#accolade {width:101%;}
 	#contentArea {border:0;}
 }
 
@@ -44,19 +44,14 @@
 	#globalNavArea li {width:49%;}
 	#globalNavArea li:nth-child(even) {border:0;}
 	#col1 {float:right;}
-	#col1, #col2, #col2Large, #col3, #Article, #sidebar {width:100%;}
-	#contentArea, #Main {padding:5px 0;}
-	#col2 .updatedDate, #col2 .issuedatetime {position:relative;}
+	#col1, #col2, #col2Large, #col3 {width:100%;}
 	.storyContentWrapper div, #right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .open, .newfooter {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
 	.storyContentWrapper .outline {padding:1%;}
 	.storyContentWrapper .callout {margin:1%; padding:1%; width:90%;}
-	.section img.left, .section img.right {margin:0;}
-	.section img {padding:0; width:100%;}
 	#accldePre {text-align:center;}
 	.slider {height:225px;}
 	.newslider-horizontal .sliderkit-panels{height:180px;}
 	.newslider-horizontal .sliderkit-panel{height:180px;}
-	#monthDetail, #calFrame {clear:both; width:100%;}
 	.newfooter ul {clear:both; width:100%; text-align:center;}
 }
 
