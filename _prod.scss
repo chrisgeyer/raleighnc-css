@@ -98,16 +98,16 @@ a.ui-accordion-header, #mostPopular li.selected a.ui-accordion-header	{padding-l
 #mostPopular ul.subMenu li {margin:0; padding:5px; background:$offwhite;}*/
 
 /*Popular portlets - april 20012*/
-#popularPages, #popularSearch {margin:10px;}
+#popularPages, #popularSearch {@extend .iwt_section;}
 #popularPages h2, #popularSearch h2 {@extend .iwt_section_header;}
 // #popularPages ul, #popularSearch ul {border:1px solid #ccc; border-radius:2px;}
 // #popularPages li, #popularSearch li {margin:0; padding:3px 5px; background:$offwhite;}
 
 /*Related info - march 2012*/
 .mRelatedContentMain h2 {display:none;}
-.mRelatedContent ul 		{margin:0 2px 10px 0; padding:0.45em; background:#ccc; border-radius:3px;}
+.mRelatedContent ul 		{margin:0 2px 10px 0; padding:0.45em; background:#c2c2c2; border-radius:3px;}
 .mRelatedContent li 		{margin:0; padding:3px; background:$offwhite;}
-li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-size:1.2em; background:#ccc;}
+li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-size:1.2em; background:#c2c2c2;}
 
 /*New related - sept 2012*/
 .box, #Govdelivery 			{margin:0 2px 10px 0; padding:0.45em; position:relative; overflow:hidden;}
@@ -118,7 +118,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .box.related.govdelivery,
 #Govdelivery 						{background:#d9decf;}
 .govdelivery h3 				{font-size:1.45em;}
-.related 								{padding:0.3em; background:#ccc; border-radius:3px 10px 10px 3px;}
+.related 								{background:#c2c2c2; border-radius:3px 10px 10px 3px;}
 .related h3,
 .box.related.govdelivery h3,
 #Govdelivery h3					{margin:0; padding:0; font-size:1.2em;}
@@ -180,7 +180,7 @@ iframe 			{border:none;}
 .mFeatureDescTxt 			{padding:0; width:485px; height:70px; position:absolute; left:35px; bottom:40px; z-index:9; text-align:center;}
 .mFeatureDescTxt a 		{color:#fff; font-size:1.5em; text-decoration:underline;}
 .mFeatureDescTxt a:hover {color:#ddd;}
-.mFeatureMainImg 			{margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0px 3px 10px #999; border-radius:5px;}
+.mFeatureMainImg 			{margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0px 0px 15px #999; border-radius:5px;}
 .mFeatureDescBlkBg 		{padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.7;}
 
 /*Feature Table*/
@@ -284,9 +284,9 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 /*Employment list*/
 #top h1								{margin-top:10px;}
 #top img							{margin-bottom:-5px;}
-.employmentType				{padding-left:12.5%;}
+.employmentType				{padding-left:11.5%;}
 .employmentType div[style] {display:none;}
-.empJump 							{position:fixed; color:#fff; background:$link; float:left; clear:both; padding:5px 10px 5px 20px; margin-left:-8.25%; margin-bottom:15px; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.empJump 							{position:fixed; color:#fff; background:$link; float:left; clear:both; padding:5px 10px 5px 20px; margin-left:-9%; margin-bottom:15px; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 .empJump:before 			{content:" "; background:url(images/ribbon.png); display:block; width:10px; height:10px; position:absolute; bottom:0; left:0; margin-bottom:-10px;}
 .empJump a:link, .empJump a:visited	{color:#fff;}
 // .empJump li a 				{float:left; margin:0 15px 20px 0; text-decoration:underline;}
@@ -336,7 +336,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 .section						{clear:both; margin:1.5em 0;}
-.callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px; box-shadow:0 3px 5px #666;}
+.callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px; box-shadow:0 3px 5px #999;}
 .callout img				{max-width:98%;}
 .section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999;}
 .section img.left, 
