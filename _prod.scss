@@ -48,7 +48,7 @@ table a:link 	{text-decoration:underline;}
 /*Discover*/
 .icons 						{@extend .dotted;}
 .icons a 					{float:left; margin-left:3%; width:30%; text-align:center;}
-.icons a:hover		{text-decoration:none; position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
+.icons a:hover		{text-decoration:none;}
 .icons a:hover .icon-calendar:before, 
 .icons a:hover .icon-location:before,
 .icons a:hover .icon-envelope:before, {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
@@ -349,7 +349,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .warning {border:2px solid #eed45d;}
 .error	 {border:2px solid #C5312A;}
 
-.screen-reader-text {position:absolute; top:-9999px; left:-9999px;}
+
 @font-face {
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot');
@@ -369,7 +369,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 	-webkit-font-smoothing: antialiased;}
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, .coricon {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, .coricon [src*="icon-pdf.png"] {
 	font-family: 'icomoon';
 	font-style: normal;
 	speak: none;
@@ -388,23 +388,8 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .icon-file-pdf:before {content: "\2b";}
 .icon-file-excel:before {content: "\2c";}
 .icon-envelope:before {content: "\26";}
-.icon-address-book:before {content: "\2d";}
-.icon-user:before {content: "\2e";}
-.icon-play:before {content: "\2f";}
-.icon-calendar-alt-stroke:before {content: "\30";}
-.icon-calendar-alt-fill:before {content: "\31";}
-.icon-location-2:before {content: "\32";}
-.icon-map-pin-fill:before {content: "\33";}
-.icon-lines:before {content: "\34"; vertical-align:middle;}
-.icon-new-tab:before {content: "\35";}
-.icon-new-tab-2:before {content: "\36";}
-.icon-warning:before {content: "\37";}
-.icon-mail-2:before {content: "\38";}
-.icon-play-alt:before {content: "\39";}
-.icon-play-2:before {content: "\3a";}
-.icon-camera:before {content: "\3b";}
-.icon-file-powerpoint:before {content: "\3c";}
-.icon-file-zip:before {content: "\3d";}
+
+.screen-reader-text {position:absolute; top:-9999px; left:-9999px;}
 
 
 /*replace coricon*/
