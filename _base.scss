@@ -60,7 +60,8 @@ a			{color:$link; text-decoration:none;
 #globalNavArea li 				{float:left; border-left:1px solid #999; text-align:center; @include transition(background, .2s, ease-in-out);}
 #tabSelected 							{font-weight:700; @include gradient(top, $link, lighten($link, 10%));}
 #globalNavArea a 					{padding:0 9px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; text-decoration:none;}
-#globalNavArea a[title=Home]:before {@extend .icon-home:before;}
+#globalNavArea a[title=Home] {position:absolute; top:-9999em; left:-9999em;}
+#globalNavArea li:first-child:before {@extend .icon-home:before;}
 #tabsHeader li:hover/*, 
 #tabsHeader li:hover a*/ 	{font-weight:normal; color:#fff; @include gradient(top, $link, lighten($link, 10%));}
 #tabSelected a:hover, li#tabSelected:hover a {font-weight:700; color:#fff;}

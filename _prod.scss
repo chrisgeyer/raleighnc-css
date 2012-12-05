@@ -362,7 +362,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 	font-style: normal;}
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, .coricon, #globalNavArea a[title=Home]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, .coricon, #globalNavArea li:first-child:before {
 	font-family: 'icomoon';
 	font-style: normal;
 	speak: none;
