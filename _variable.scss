@@ -13,7 +13,7 @@ $offwhite:#fafafa;
 	background-image:    -ms-linear-gradient($origin, $start, $stop);
 	background-image:     -o-linear-gradient($origin, $start, $stop);
 	background-image:        linear-gradient($origin, $start, $stop);
-		filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorStr='#{$start}', EndColorStr='#{$stop}');}
+		filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorStr='#{$start}', EndColorStr='#{$stop}');}
 		
 @mixin transition ($property, $time, $method) {
 	-webkit-transition:$property $time $method;
