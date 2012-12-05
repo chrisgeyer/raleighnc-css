@@ -36,7 +36,7 @@ table a:link 	{text-decoration:underline;}
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited {text-decoration:underline;}
 
 /*Pages*/
-.storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:1.5em auto; font-size:1.1em; /*background:#f1f2f1;*/}
+.storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:1.5em auto; font-size:1.1em; background:#f1f2f1;}
 #storyContentWrapper {margin-top:-1.5em; padding:0 3%;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
 .updatedDate {position:absolute; top:0; left:0; color:#999;}
