@@ -16,12 +16,7 @@ html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #gl
 a			{color:$link; text-decoration:none;
 	&:visited		{color:lighten($link, 10%);}
 	&:hover, 
-	&:focus 		{color:$linkhover; text-decoration:underline;
-							 -webkit-transition: color .4s linear;
-									-moz-transition: color .4s linear;
-									 -ms-transition: color .4s linear;
-									  -o-transition: color .4s linear;
-											 transition: color .4s linear;}
+	&:focus 		{color:$linkhover; text-decoration:underline;}
 	&:active 		{position:relative; top:1px; outline:0;}
 }
 
@@ -49,10 +44,9 @@ a			{color:$link; text-decoration:none;
 
 #searchBoxArea 			{bottom:15px; right:0; width:35%;}
 #searchInput 				{float:left; margin:0 0 0 1%; padding:6.5px 5px; width:70%; background:#fdfdfd url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma';}
-#searchBoxArea #executeSEearch {float:left; margin:-1px 0; padding:7px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; @include gradient(top, #B2B2B2, #666); border:1px solid #666; text-shadow:0 1px rgba(0, 0, 0, 0.1); color:#fff; font-size:1.1em; font-weight:700;}
-#executeSEearch:hover {@extend .action:hover;}
-#executeSEearch:active {@extend .action:active;}
-
+#executeSEearch			{float:left; margin:0; padding:6px; width:20%; color:#fff; font-size:1.1em; font-weight:700; border:1px solid #666; background:#666; border-radius: 0 3px 3px 0; overflow:visible; position:relative; cursor:pointer;}
+#executeSEearch:hover {text-decoration:underline;}
+#executeSEearch:active {position:relative; top:1px; outline:0;}
 #advSearch a 				{clear:both; float:left; color:#888; text-decoration:none; font-size:0.9em;}
 
 
@@ -61,7 +55,7 @@ a			{color:$link; text-decoration:none;
 #globalNavArea 						{float:left; width:100%; border-top:1px solid #ddd; @include gradient(top, #515a52, #293129);}
 #globalNavArea li 				{float:left; border-left:1px solid #999; text-align:center;}
 #tabSelected 							{font-weight:700; @include gradient(top, #5c8fea, #2e5baf);}
-#globalNavArea a 					{padding:5px 14px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111;}
+#globalNavArea a 					{padding:5px 14px; color:#fff; font-size:1.1em; line-height:40px;}
 #tabsHeader li:hover, 
 #tabsHeader li:hover a 		{font-weight:normal; text-decoration:underline;}
 #tabsHeader #tabSelected a:hover {font-weight:700;}
@@ -91,7 +85,7 @@ a			{color:$link; text-decoration:none;
 
 /*Functional Footer*/
 .newfooter 				{margin:15px auto 0; width:70%; text-align:center;}
-.socialmedia 			{width:165px; margin:0 auto;}
+.socialmedia 			{width:200px; margin:0 auto;}
 .socialmedia img 	{float:left; margin-right:5px; border-radius:3px; box-shadow:0px 1px 2px #666;} /*ADD SPRITE*/
 #hmMenu						{clear:both; margin:20px auto 0;}
 #hmMenu li 				{display:inline; margin:0 10px;}
