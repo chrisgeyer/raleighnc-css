@@ -142,7 +142,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 #monthDetail 			{@extend #sidebar;}
 .calTopic01, 
 .calTopic02, 
-.calTopic04 			{clear:both; padding:0; background:#29527a; border-right:2px solid #f1f1f1; color:#fff;}
+.calTopic04 			{padding:0; background:#29527a; border-right:2px solid #f1f1f1; color:#fff;}
 .calTopic02 			{background:#A32929;}
 .calTopic04 			{background:#0D7813;}
 #calFrame					{width:69%; height:500px;}
@@ -299,14 +299,13 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .employmentDisclaimer {margin-top:20px; color:#666;}
 
 /*Job sidebar - october 2012*/
-#sidebar h1 img,
 #sidebar .empJump,
 #sidebar .empNo,
 #sidebar .empSalary,
 #sidebar .empDept,
 #sidebar div[style]	{display:none;}
-#sidebar h1	{position:relative; color:#fff; background:$link; font-size:1.5em; float:left; clear:both; padding:5px 30px 10px 20px; margin-left:-20px; margin-bottom:15px; text-shadow:0 -1px $linkhover, 0 1px $linkhover; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
-#sidebar h1:before {content:" "; background:url(images/ribbon.png); display:block; width:10px; height:10px; position:absolute; bottom:0; left:0; margin-bottom:-10px;}
+#sidebar h1	{position:relative; color:#fff; background:dodgerblue; font-size:1.5em; float:right; clear:both; padding:10px 10px 10px 20px; margin-left:-20px; margin-bottom:20px; text-shadow:0 -1px #d0284b, 0 1px #f96080; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#sidebar h1:before {content:" "; background:url(images/ribbon.png); display:block; width:10px; height:10px; position:absolute; 	bottom:0; left:0; margin-bottom:-10px; z-index:-1;}
 #sidebar .employmentType h3 {font-size:1.54em;}
 #sidebar .empTitle {font-weight:normal; font-size:1.1em;}
 #sidebar .empClose {border-bottom:1px dotted #ccc; width:98%; color:#666; margin:0 0 6px 0;}
@@ -367,6 +366,9 @@ tr.middleRow .smallImage {width:252px; height:157px;}
 #mStoryImgGalDescId {margin:0;}
 
 /*Status*/
-.confirm {border:2px solid #657838;}
-.warning {border:2px solid #eed45d;}
-.error	 {border:2px solid #C5312A;}
+.statusGreen, 
+.statusYellow, 
+.statusRed 						{background:url(images/statuscolors.png) no-repeat top left; padding-left:20px; height:23px;}
+.statusGreen 					{background-position:0 4px;}
+.statusYellow 				{background-position:0 -48px;}
+.statusRed 						{background-position:0 -22px;}
