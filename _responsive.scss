@@ -40,7 +40,7 @@
 	#screenWrapper {width:auto; overflow:hidden; border:0;}
 	#header {@include gradient(top, #5c8fea, #2e5baf); text-align:center;}
 	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img {display:none;}
-	#searchBoxArea, .eventdates, .newseventlocation, .gismap_iframe {width:100%;}
+	#searchBoxArea, .eventdates, .gismap_iframe {width:100%;}
 	#searchInput {width:75%;}
 	.cityOfRaleigh {margin-top:20px;}
 	#globalNavArea li {width:49%; border-bottom:1px solid #999;}
@@ -53,16 +53,16 @@
 	.storyContentWrapper > div, #right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .open, .newfooter {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
 	.storyContentWrapper .outline {padding:1%;}
 	.storyContentWrapper .callout {margin:1%; padding:1%; width:90%;}
-	.section img.left, .section img.right, .contact img.left {margin:0;}
+	.section img.left, .section img.right {margin:0;}
 	.section img, .images {padding:0; width:100%;}
 	.section img.coricon {width:auto;}
 	#accldePre {text-align:center;}
-	//.slider {height:225px;}
-	#col2 .newslider-horizontal .sliderkit-panels{height:280px;}
-	//.newslider-horizontal .sliderkit-panel{height:180px;}
+	.slider {height:225px;}
+	.newslider-horizontal .sliderkit-panels{height:180px;}
+	.newslider-horizontal .sliderkit-panel{height:180px;}
 	#monthDetail, #calFrame {clear:both; width:100%;}
 	.storyContentWrapper ul.individual {width:48%;}
-	.images, .cacgismap, .gismap {margin:0;}
+	.cacgismap, .gismap {margin:0;}
 	.newfooter ul {clear:both; width:100%; text-align:center;}
 }
 
