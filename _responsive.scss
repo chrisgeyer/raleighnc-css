@@ -36,33 +36,28 @@
 }
 */
 @media only screen and (max-width:480px) {
-	html {-webkit-text-size-adjust:none;}
 	#screenWrapper {width:auto; overflow:hidden; border:0;}
 	#header {@include gradient(top, #5c8fea, #2e5baf); text-align:center;}
-	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img {display:none;}
+	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element {display:none;}
 	#searchBoxArea {width:100%;}
 	#searchInput {width:75%;}
 	.cityOfRaleigh {margin-top:20px;}
 	#globalNavArea li {width:49%; border-bottom:1px solid #999;}
-	#globalNavArea li:nth-child(odd) {border-left:0;}
-	#globalNavArea li:last-child {border-bottom:0; border-right:1px solid #999;}
+	#globalNavArea li:nth-child(even) {border-left:0;}
 	#col1 {/*add leftnav to col3 and hide default, in this mq hide col1 and display col3 nav*/}
 	#col1, #col2, #col2Large, #col3, #Article, #sidebar {width:100%;}
 	#contentArea, #Main {padding:5px 0;}
 	#col2 .updatedDate, #col2 .issuedatetime {position:relative;}
-	.storyContentWrapper > div, #right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .open, .newfooter {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
+	.storyContentWrapper div, #right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .open, .newfooter {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
 	.storyContentWrapper .outline {padding:1%;}
 	.storyContentWrapper .callout {margin:1%; padding:1%; width:90%;}
 	.section img.left, .section img.right {margin:0;}
 	.section img {padding:0; width:100%;}
-	.section img.coricon {width:auto;}
 	#accldePre {text-align:center;}
 	.slider {height:225px;}
 	.newslider-horizontal .sliderkit-panels{height:180px;}
 	.newslider-horizontal .sliderkit-panel{height:180px;}
 	#monthDetail, #calFrame {clear:both; width:100%;}
-	.storyContentWrapper ul.individual {width:48%;}
-	.cacgismap {margin:0;}
 	.newfooter ul {clear:both; width:100%; text-align:center;}
 }
 
