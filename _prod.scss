@@ -34,7 +34,7 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 
 /*Links*/
 table a:link 	{text-decoration:underline;}
-.section .coricon, .coricon 	{margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
+.section .coricon, .coricon 	{margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle;}
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited {text-decoration:underline;}
 
 /*Pages*/
@@ -49,11 +49,11 @@ table a:link 	{text-decoration:underline;}
 ===========*/
 /*Discover*/
 .icons 						{@extend .dotted;}
-.icons a 					{float:left; width:30%; text-align:center;}
+.icons a 					{float:left; margin-left:3%; width:30%; text-align:center;}
 // .icons a:hover		{text-decoration:none; position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
 a.icon-calendar-2 {color:$link;}
-a.icon-location		{margin-left:5%; color:#657838;}
-a.icon-envelope, a.icon-user	{margin-left:1%; color:#7f453b;}
+a.icon-location		{color:#657838;}
+a.icon-envelope, a.icon-user	{color:#7f453b;}
 .icons a:hover 		{text-decoration:none; opacity:0.6; @include transition(opacity, .25s, ease-in-out);}
 
 /*Department dropdown*/
@@ -72,7 +72,7 @@ a.icon-envelope, a.icon-user	{margin-left:1%; color:#7f453b;}
 /*old leftnav*/
 .iwt_section {margin:0 0 10px 10px;}
 .iwt_section_header {border-bottom:1px solid #ccc; font-size:1.3em;}
-.iwt_leftnav li, #popularPages li, #popularSearch li {margin:0 0 6px 0; list-style-type:none;}
+.iwt_leftnav li {margin:0 0 6px 0; list-style-type:none;}
 
 /*Right Col
 ============*/
@@ -98,27 +98,26 @@ a.ui-accordion-header, #mostPopular li.selected a.ui-accordion-header	{padding-l
 #mostPopular ul.subMenu li {margin:0; padding:5px; background:$offwhite;}*/
 
 /*Popular portlets - april 20012*/
-#popularPages, #popularSearch {@extend .iwt_section;}
-#popularPages h2, #popularSearch h2 {@extend .iwt_section_header;}
-// #popularPages ul, #popularSearch ul {border:1px solid #ccc; border-radius:2px;}
-// #popularPages li, #popularSearch li {margin:0; padding:3px 5px; background:$offwhite;}
+#popularPages, #popularSearch {@extend .box}
+#popularPages ul, #popularSearch ul {border:1px solid #ccc; border-radius:2px;}
+#popularPages li, #popularSearch li {margin:0; padding:3px 5px; background:$offwhite;}
 
 /*Related info - march 2012*/
 .mRelatedContentMain h2 {display:none;}
-.mRelatedContent ul 		{margin:0 2px 10px 0; padding:0.45em; background:#c2c2c2; border-radius:3px;}
+.mRelatedContent ul 		{margin:0 2px 10px 0; padding:0.45em; background:$lightblue; border-radius:3px;}
 .mRelatedContent li 		{margin:0; padding:3px; background:$offwhite;}
-li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-size:1.2em; background:#c2c2c2;}
+li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-size:1.2em; background:$lightblue;}
 
 /*New related - sept 2012*/
 .box, #Govdelivery 			{margin:0 2px 10px 0; padding:0.45em; position:relative; overflow:hidden;}
-.govdelivery 						{@extend .dotted; margin-top:-45px; padding-left:10px; background:#eee; /*needed to hide col3 banner*/}
+.govdelivery 						{@extend .dotted; margin-top:-40px; background:#eee;}
 .box.govdelivery h3 		{font-size:1.5em; color:$green;}
 .govdelivery p					{margin:0;}
 .govdelivery .action 		{padding-top:3px; border:1px solid $green; @include gradient(top, lighten($green, 15%)/*#D9DECF*/, $green);}
 .box.related.govdelivery,
 #Govdelivery 						{background:#d9decf;}
 .govdelivery h3 				{font-size:1.45em;}
-.related 								{background:#c2c2c2; border-radius:3px 10px 10px 3px;}
+.related 								{background:$lightblue; border-radius:3px 10px 10px 3px;}
 .related h3,
 .box.related.govdelivery h3,
 #Govdelivery h3					{margin:0; padding:0; font-size:1.2em;}
@@ -126,9 +125,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 #Govdelivery ul	 				{margin:0;}
 .related li,
 #Govdelivery li	 				{margin:0; padding:3px; background:$offwhite;}
-#right .related:first-child	{border-radius:2px 2px 10px;}
-.related li:first-child	{border-radius:3px 3px 0 0;}
-.related li:last-child	{border-radius:0 0 3px 3px;}
+#col3 .box:first-child	{border-radius:2px 2px 10px;}
 
 .action.right:hover .icon-mail {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
 
@@ -162,7 +159,6 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .contactResultsName, .contactResultsPhoneNumber {clear:both;}
 .contactResultsPhoneNumber {margin:0 0 10px 0; padding:0 6px; width:98%; border-bottom:1px solid #ddd;}
 .contactSearchForm input[type="submit"] {margin-left:135px;}
-#peopleResults a[href^="mailto:"] {padding:1px 20px 1px 0; background:transparent url(../images/icon-email.png) center right no-repeat;}
 
 /*iFrame*/
 label 			{display:block; @extend .quiet;}
@@ -180,7 +176,7 @@ iframe 			{border:none;}
 .mFeatureDescTxt 			{padding:0; width:485px; height:70px; position:absolute; left:35px; bottom:40px; z-index:9; text-align:center;}
 .mFeatureDescTxt a 		{color:#fff; font-size:1.5em; text-decoration:underline;}
 .mFeatureDescTxt a:hover {color:#ddd;}
-.mFeatureMainImg 			{margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0px 0px 15px #999; border-radius:5px;}
+.mFeatureMainImg 			{margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0px 0px 15px #666; border-radius:5px;}
 .mFeatureDescBlkBg 		{padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.7;}
 
 /*Feature Table*/
@@ -247,7 +243,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .surveyQuestions .PDS_poll .pds-box {width:100%;}
 .videos {float:left; width:52%; margin:1%;}
 .open {float:right; width:40%; margin:1%; padding:1%;}
-.council {padding-left:10px; @extend .dotted;}
+.council {@extend .dotted;}
 .ecomment {background:#3C61A5; color:#fff; padding:0 5px; border-radius:5px;}
 
 /*Templates
@@ -291,7 +287,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .empJump a:link, .empJump a:visited	{color:#fff;}
 // .empJump li a 				{float:left; margin:0 15px 20px 0; text-decoration:underline;}
 .employmentType h3 		{clear:both; margin:15px 0 5px;}
-.empTitle 						{clear:both; margin-bottom:3px; float:left; display:inline; font-size:1.167em; font-weight:700;}
+.empTitle 						{clear:both; float:left; display:inline; font-size:1.167em; font-weight:700;}
 .empClose, 
 .empDept, 
 .empNo, 
@@ -307,14 +303,13 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .employmentDisclaimer {margin-top:20px; color:#666;}
 
 /*Job sidebar - october 2012*/
-#sidebar .employmentType {padding:0;}
 #sidebar h1 img,
 #sidebar .empJump,
 #sidebar .empNo,
 #sidebar .empSalary,
 #sidebar .empDept,
 #sidebar div[style]	{display:none;}
-#sidebar h1	{position:relative; color:#fff; background:$link; font-size:1.5em; float:left; clear:both; padding:5px 30px 10px 20px; margin-left:-11px; margin-bottom:15px; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#sidebar h1	{position:relative; color:#fff; background:$link; font-size:1.5em; float:left; clear:both; padding:5px 30px 10px 20px; margin-left:-20px; margin-bottom:15px; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 #sidebar h1:before {content:" "; background:url(images/ribbon.png); display:block; width:10px; height:10px; position:absolute; bottom:0; left:0; margin-bottom:-10px;}
 #sidebar .employmentType h3 {font-size:1.54em;}
 #sidebar .empTitle {font-weight:normal; font-size:1.1em;}
@@ -327,7 +322,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .facility_hours th 	{background:$lightblue;}
 
 /*New 1col - april 2012*/
-.outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; position:relative; box-shadow:0px 3px 5px #999;}
+.outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; position:relative;}
 .outline a:active		{position:absolute;}
 .largeimage					{margin-bottom:10px; width:98%;}
 .largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .largeimage .photoslider-1click-slideshow img {height:408px;}
@@ -336,9 +331,9 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 .section						{clear:both; margin:1.5em 0;}
-.callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px; box-shadow:0 3px 5px #999;}
+.callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px;}
 .callout img				{max-width:98%;}
-.section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999;}
+.section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px;}
 .section img.left, 
 .section img.right 	{margin:0 10px 10px;}
 .section h3					{@extend .dotted;}
