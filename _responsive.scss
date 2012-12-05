@@ -39,20 +39,20 @@
 	html {-webkit-text-size-adjust:none;}
 	#screenWrapper {width:auto; overflow:hidden; border:0;}
 	#header {text-align:center; @include gradient(top, #5c8fea, #2e5baf);}
-	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before {display:none;}
+	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img {display:none;}
 	#searchBoxArea, .eventdates, .newseventlocation, .gismap_iframe {width:100%;}
 	#searchInput {width:75%;}
 	.cityOfRaleigh {margin-top:10px;}
-	#globalNavArea li {width:49%; /*border-right:1px solid #999;*/ border-bottom:1px solid #999;}
-	#globalNavArea li:first-child {float:none; border:0;}
-	// #globalNavArea li:nth-child(odd) {border-left:0;}
-	#globalNavArea a[title=Home] {position:absolute; top:5px; left:0;}
-	#globalNavArea a:nth-child(4) {font-size:0.8em;}
+	#globalNavArea li {width:49%; border-bottom:1px solid #999;}
+	#globalNavArea li:nth-child(odd) {border-left:0;}
+	#globalNavArea li:last-child {border-bottom:0; border-right:1px solid #999;}
+	#col1 {/*add leftnav to col3 and hide default, in this mq hide col1 and display col3 nav*/}
 	#col1, #col2, #col2Large, #col3, #Article, #sidebar {width:100%;}
 	#contentArea, #Main, #Search {padding:5px 0;}
-	#col2 .updatedDate, #col2 .issuedatetime {position:relative; top:0; left:0;}
-	.storyContentWrapper > div, #right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .videos, .open, .newfooter {clear:both; float:none; margin:1%; padding:1%; width:95%; display:block;}
-	.storyContentWrapper .callout, .content .callout {margin:1%; padding:1%; width:90%;}
+	#col2 .updatedDate, #col2 .issuedatetime {position:relative;}
+	.storyContentWrapper > div, #right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .videos, .open, .newfooter {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
+	.storyContentWrapper .outline {padding:1%;}
+	.storyContentWrapper .callout {margin:1%; padding:1%; width:90%;}
 	.section img.left, .section img.right, .contact img.left {margin:0;}
 	.section img, .images {padding:0; width:100%;}
 	.section img.coricon {width:auto;}
@@ -60,10 +60,9 @@
 	#col2 .slider {height:225px; overflow:hidden;}
 	#col2 .newslider-horizontal .sliderkit-panels{height:280px;}
 	#monthDetail, #calFrame {clear:both; width:100%;}
-	.storyContentWrapper ul.individual, .content ul.individual {width:48%;}
+	.storyContentWrapper ul.individual {width:48%;}
 	.images, .cacgismap, .gismap {margin:0;}
 	.newfooter ul {clear:both; width:100%; text-align:center;}
-	.bow {width:30%;}
 	
 	/*nav hide*/
 	#globalNavArea ul	{border-top:1px solid #999;}
