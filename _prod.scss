@@ -115,7 +115,7 @@ a.ui-accordion-header 	{padding-left:20px; background:url(images/arrows.png) top
 .mRelatedContent li 		{margin:0; padding:3px; background:$offwhite;}
 li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-size:1.2em; background:#d7e2f1;}
 
-/*New related - sept 2012*/
+/*New related*/
 .box, #Govdelivery 			{margin:0 2px 10px 0; padding:0.45em; position:relative; overflow:hidden;}
 .govdelivery 						{@extend .dotted;}
 .box.govdelivery h3 		{font-size:1.5em; color:$green;}
@@ -279,7 +279,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .contactImage 		{float:right; margin-right:50px; border:1px solid #333;}
 
 /*Department*/
-.deptBodyTable, .deptBodyTable td {border:0;} 
+.deptBodyTable, .deptBodyTable td {border:0;}
 .deptNewsCol, .secBody {padding:10px; width:74%;}
 
 /*Employment list*/
@@ -317,6 +317,9 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .facility_hours 		{margin:0 0 10px 0;}
 .facility_hours th 	{background:#d7e2f1;}
 
+/*Map Gallery*/
+.mapdownloads th		{text-align:left;}
+
 /*New 1col - april 2012*/
 .outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; position:relative;}
 .outline a:active		{position:absolute;}
@@ -338,16 +341,30 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 
 /*Old One Column - seperate or remove after*/
 .faqqna 		{@extend .accent;}
+.backtotop 	{display:none;}
 .tcalDiv 		{margin-bottom:20px;}
 .jumper 		{text-decoration:underline; visibility:hidden;}
+.tcalLink 	{font-weight:700; text-decoration:underline;}
+.tcalImg 		{margin:5px 0;}
 /*Image slideshow*/
-.largeFrameWrapper 	{background:#fff; border:1px solid #aaa; border-radius:5px; margin:25px 0; width:100%; overflow:hidden; position:relative;}
+.frameWrapper, 
+.largeFrameWrapper 	{background:#fff; border:1px solid #aaa; border-radius:5px;}
+.frameWrapper 			{float:left; margin:0 15px 0 0; width:290px; overflow:hidden; position:relative;}
+.largeFrameWrapper 	{margin:25px 0; width:100%; overflow:hidden; position:relative;}
 .frame 							{margin:0; padding:0; border:none; border-spacing:0; border-collapse:collapse;}
 .frame td						{border:0;}
 tr.middleRow .largeImage, 
 tr.middleRow .smallImage {width:515px; padding:8px; background:#fff; text-align:center; height:285px; overflow:hidden;}
 tr.middleRow .smallImage {width:252px; height:157px;}
 .largeFrameImage 		{max-width:495px; max-height:240px;}
+.smallFrameImage 		{max-width:240px; max-height:135px;}
+.leftArrowContainer, 
+.rightArrowContainer, 
+.rightArrowContainerLarge {margin-top:-10px; position:absolute; top:50%; left:2px;}
+.rightArrowContainer, 
+.rightArrowContainerLarge {left:auto; right:4px;}
+.arrow 							{width:20px; height:20px; cursor:pointer;}
+#mStoryImgGalDescId {margin:0;}
 
 /*Status*/
 .confirm {border:2px solid #657838;}
