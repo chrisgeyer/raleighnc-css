@@ -1,8 +1,6 @@
 /*Main CSS
 ============*/
-body {padding-bottom:15px; background: lighten(#8b9f8e, 15%);}
-
-/*#a7b6a9*/
+body {padding-bottom:15px; background:#8b9f8e;}
 
 /*Generic classes*/
 .cf							{overflow:hidden;}
@@ -38,12 +36,12 @@ table a:link 	{text-decoration:underline;}
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited {text-decoration:underline;}
 
 /*Pages*/
-.storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:/*1.5em*/0 auto; font-size:1.1em; /*background:#f1f2f1;*/}
+.storyContentWrapper, .content {min-width:320px; max-width:650px/*850px*/; margin:1.5em auto; font-size:1.1em; /*background:#f1f2f1;*/}
 #storyContentWrapper {margin-top:-1.5em; padding:0 3%;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
-.updatedDate {position:absolute; top:-20px; left:10px; color:#999;}
+.updatedDate {position:absolute; top:0; left:0; color:#999;}
 #Article .updatedDate{position:static;}
-#addThisButtons	{position:absolute; right:15px; top:8px;}
+#addThisButtons	{position:absolute; right:10px; top:3px;}
 
 /*Left Col
 ===========*/
@@ -104,9 +102,9 @@ a.ui-accordion-header, #mostPopular li.selected a.ui-accordion-header	{padding-l
 
 /*Related info - march 2012*/
 .mRelatedContentMain h2 {display:none;}
-.mRelatedContent ul 		{margin:0 2px 10px 0; padding:0.45em; background:$lightblue; border-radius:3px;}
+.mRelatedContent ul 		{margin:0 2px 10px 0; padding:0.45em; background:#d7e2f1; border-radius:3px;}
 .mRelatedContent li 		{margin:0; padding:3px; background:$offwhite;}
-li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-size:1.2em; background:$lightblue;}
+li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-size:1.2em; background:#d7e2f1;}
 
 /*New related - sept 2012*/
 .box, #Govdelivery 			{margin:0 2px 10px 0; padding:0.45em; position:relative; overflow:hidden;}
@@ -117,7 +115,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .box.related.govdelivery,
 #Govdelivery 						{background:#d9decf;}
 .govdelivery h3 				{font-size:1.45em;}
-.related 								{background:$lightblue; border-radius:3px;}
+.related 								{background:#d7e2f1; border-radius:3px;}
 .related h3,
 .box.related.govdelivery h3,
 #Govdelivery h3					{margin:0; padding:0; font-size:1.2em;}
@@ -318,7 +316,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .gismap_iframe 			{float:left; margin:10px 0 0 0; padding:0; width:65%; height:256px; overflow:hidden;}
 .location 					{float:right; margin:10px 0 0 -20px; width:31%;}
 .facility_hours 		{margin:0 0 10px 0;}
-.facility_hours th 	{background:$lightblue;}
+.facility_hours th 	{background:#d7e2f1;}
 
 /*New 1col - april 2012*/
 .outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; position:relative;}
@@ -330,7 +328,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 .section						{clear:both; margin:1.5em 0;}
-.callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px;}
+.callout						{margin:1em; padding:.5em; background:$offwhite; border:2px solid #e96629; border-radius:10px;}
 .callout img				{max-width:98%;}
 .section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px;}
 .section img.left, 
@@ -338,6 +336,9 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .section h3					{@extend .dotted;}
 .callout h3					{border:0;}
 .accent							{color:#7f453b;}
+
+/*Old One Column - seperate or remove after*/
+.faqqna 		{@extend .accent;}
 
 /*Status*/
 .confirm {border:2px solid #657838;}
