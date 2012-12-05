@@ -50,7 +50,7 @@ border:0;}
 
 /*Panel*/
 .newslider-horizontal .sliderkit-panels{margin:2.5%;width:95%;min-height:390px;overflow:hidden;position:relative;}
-.newslider-horizontal .sliderkit-panel{width:99%;height:380px;padding:0;overflow:hidden;border:1px solid #aaa;}
+.newslider-horizontal .sliderkit-panel{width:99%;min-height:380px;padding:0;overflow:hidden;border:1px solid #aaa;}
 
 /*News block*/
 .newslider-horizontal .sliderkit-news a:link, .newslider-horizontal .sliderkit-news a:visited{color:#fff;font-size:1.5em;}

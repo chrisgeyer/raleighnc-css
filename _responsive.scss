@@ -19,7 +19,7 @@
 @media only screen and (max-width:768px) {
 	#screenWrapper {width:auto; overflow:hidden; border:0;}
 	#searchBoxArea {width:44%;}
-	#globalNavArea li {width:19%; border-left:0; border-right:1px solid #9ba19b;}
+	#globalNavArea li {width:16.7%;}
 	#col1 {width:24%;}
 	#col2, #col2Large {width:74%;}
 	#col3 {clear:both; width:77%; margin-left:25%;}
@@ -32,9 +32,8 @@
 	#searchBoxArea {width:100%;}
 	#searchInput {width:75%;}
 	.cityOfRaleigh {margin-top:20px;}
-	#globalNavArea li {width:49%;}
+	#globalNavArea li {width:42%;}
 	#globalNavArea li:nth-child(even) {border:0;}
-	#col1 {float:right;}
 	#col1, #col2, #col2Large, #col3 {width:100%;}
 	.storyContentWrapper div, #right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .open, .newfooter {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
 	.storyContentWrapper .outline {padding:1%;}
