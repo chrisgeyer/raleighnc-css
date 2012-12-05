@@ -8,7 +8,7 @@ Last Modified:	3.2.2012 (cwg)
 -------------------------------------------------------------- */
 html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent 
 										{margin:0; padding:0;}
-#screenWrapper 			{margin:0 auto; width:1005px; background:#f1f2f1; border:1px solid #202020; border-top:0; box-shadow:0px 2px 30px #444;}
+#screenWrapper 			{margin:0 auto; width:960px; background:#f1f2f1; border:1px solid #202020; border-top:0; box-shadow:0px 2px 30px #444;}
 
 /* Text elements.
 -------------------------------------------------------------- */
@@ -53,7 +53,7 @@ a			{color:$link; text-decoration:none;
 /* Main navigation elements.
 -------------------------------------------------------------- */
 #globalNavArea 						{float:left; width:100%; border-top:1px solid #fff; border-bottom:1px solid #fff; @include gradient(top, #515a52, #293129);}
-#globalNavArea li 				{float:left; margin:0; padding:10px 12px; font-size:1.1em; border-right:1px solid #9ba19b;}
+#globalNavArea li 				{float:left; margin:0; padding:10px; font-size:1.1em; border-right:1px solid #9ba19b;}
 #tabSelected 							{font-weight:700; @include gradient(top, #5c8fea, #2e5baf);}
 #globalNavArea a 					{padding:15px 5px; color:#fff;}
 #tabsHeader li:hover, 
