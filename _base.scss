@@ -59,9 +59,7 @@ a			{color:$link; text-decoration:none;
 #globalNavArea ul					{clear:both;}
 #globalNavArea li 				{float:left; border-left:1px solid #999; text-align:center; @include transition(background, .2s, ease-in-out);}
 #tabSelected 							{font-weight:700; @include gradient(top, $link, lighten($link, 10%));}
-#globalNavArea a 					{padding:0 9px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; text-decoration:none;}
-#globalNavArea a[title=Home] {position:absolute; top:-9999em; left:-9999em;}
-#globalNavArea li:first-child:before {@extend .icon-home:before;}
+#globalNavArea a 					{padding:5px 14px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; text-decoration:none;}
 #tabsHeader li:hover/*, 
 #tabsHeader li:hover a*/ 	{font-weight:normal; color:#fff; @include gradient(top, $link, lighten($link, 10%));}
 #tabSelected a:hover, li#tabSelected:hover a {font-weight:700; color:#fff;}
@@ -73,14 +71,14 @@ a			{color:$link; text-decoration:none;
 -------------------------------------------------------------- */
 #contentArea, #Main {padding:20px 0; width:100%; border-top:3px solid #ddd; border-bottom:1px solid #ddd; overflow:hidden;}
 #col1 				{float:left; width:17%;}
-#col2 				{float:left; margin:0 0 0 1%; padding:0 1%; width:59%; position:relative; box-shadow:-1px 2px 10px #ccc, 1px 2px 10px #ccc; background:$offwhite; border-radius:10px 10px 2px 2px; z-index:10;}
-#col3 				{float:right; width:21%; position:relative; z-index:5;}
-#col3:before	{content:" "; margin-bottom:10px; display:block; width:99%; height:33px; border-radius:0 10px 0 0; @include gradient(top, #666665, #b2b2b2);}
-.storyContentWrapper h1	{margin-left:-1.7%; padding-left:1.7%; width:104%; color:#fff; text-shadow:1px 1px 3px #111; border-radius:10px 0 0 0; white-space:nowrap; @include gradient(top, #666665, #b2b2b2);}
-#storyContentWrapper h1 {margin-left:-2.1%; padding-left:2.1%; width:102.1%; border-radius:10px 10px 0 0; white-space:normal;}
+#col2 				{float:left; margin:0 0
+ 0 1%; padding:0 1%; width:59%; position:relative; box-shadow:-1px 2px 10px #ccc; background:$offwhite; border-radius:10px 10px 2px 2px;}
+#col3 				{float:right; width:21%; position:relative;}
+#col3:before	{content:" "; margin-bottom:10px; display:block; width:99%; height:33px; border-radius:0 10px 0 0; @include gradient(top, #666, #b2b2b2);}
+.storyContentWrapper h1	{margin-left:-1.7%; padding-left:1.7%; width:104%; color:#fff; text-shadow:1px 1px 3px #111; border-radius:10px 0 0 0; @include gradient(top, #666, #b2b2b2);}
+#storyContentWrapper h1 {margin:0; padding:0; width:auto; height:auto; color:#111; border-radius:0; @include gradient(top, #eee, #eee);}
 #col2Large 		{float:left; margin-left:1%; width:78.5%;}
-#col2Large .storyContentWrapper h1 {margin:0; padding:0; width:auto; height:auto; color:#111; border-radius:0; text-shadow:none; @include gradient(top, #eee, #eee);}
-#Article 			{float:left; margin:0 1% 0 0; width:70%; min-height:540px; position:relative; box-shadow:1px 2px 10px #ccc; background:$offwhite; border-radius:10px 10px 2px 2px;}
+#Article 			{float:left; margin:0 1% 0 0; width:70%; min-height:540px; position:relative;}
 #sidebar 			{float:left; width:29%;}
 
 
