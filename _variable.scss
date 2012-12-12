@@ -8,18 +8,12 @@ $lightblue:#d7e2f1;
 
 @mixin gradient ($origin:top, $start:#ffffff, $stop:#ffffff) {
 	background-color:$start;
-	background-image:-webkit-gradient(linear, $origin top, $origin bottom, from($start), to($stop));
+	// background-image:-webkit-gradient(linear, $origin top, $origin bottom, from($start), to($stop));
 	background-image:-webkit-linear-gradient($origin, $start, $stop);
-	background-image:   -moz-linear-gradient($origin, $start, $stop);
-	background-image:    -ms-linear-gradient($origin, $start, $stop);
-	background-image:     -o-linear-gradient($origin, $start, $stop);
 	background-image:        linear-gradient($origin, $start, $stop);
 		filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorStr='#{$start}', EndColorStr='#{$stop}');}
 		
 @mixin transition ($property, $time, $method) {
 	-webkit-transition:$property $time $method;
-	   -moz-transition:$property $time $method;
-	    -ms-transition:$property $time $method;
-	     -o-transition:$property $time $method;
 	        transition:$property $time $method;
 }
