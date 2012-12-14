@@ -197,7 +197,7 @@ iframe 			{border:none;}
 a.more {float:right; margin:5px 10px; text-decoration:underline;}
 
 /*Events List*/
-.maineventslinks {@extend .mainarticlelinks; width:42%;}
+.maineventslinks {@extend .mainarticlelinks; width:41%;}
 .eventsList li {clear:both; padding:5px; list-style:none;}
 .message 		{color:$green;}
 .eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:40px; background:$offwhite; border:2px solid #ddd; text-align:center; font-weight:700; letter-spacing:0.3em; border-radius:2px;}
