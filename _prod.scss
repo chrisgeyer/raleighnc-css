@@ -258,7 +258,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 
 /*CAC*/
 .cacmeetinginfo 	{@extend .bcmeetinginfo; @include gradient(#829656, #eee);}
-.cacactivity 			{@extend .bcimage;}
+.cacactivity 			{@extend .outline; @extend .bcimage;}
 .cacactivity .photoslider-1click-slideshow {height:340px;}
 .cacactivity .photoslider-1click-slideshow img 	{width:97%;}
 .cacactivity .sliderkit-panel-textbox {left:1.5%; width:97%;}
