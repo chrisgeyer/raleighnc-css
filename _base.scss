@@ -57,7 +57,7 @@ a			{color:$link; text-decoration:none;
 #globalNavArea 						{float:left; width:100%; border-top:1px solid #999; box-shadow:0 5px 5px #aaa; position:relative; @include gradient(#515a52, #293129);}
 #globalNavArea li 				{float:left; border-right:1px solid #999; text-align:center; @include transition(background, .2s, ease-in-out);}
 #tabSelected 							{font-weight:700; @include gradient($link, lighten($link, 10%));}
-#globalNavArea a 					{padding:0 14px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; text-decoration:none;}
+#globalNavArea a 					{padding:14px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; text-decoration:none;}
 #tabsHeader li:hover			{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
 #tabSelected a:hover, #tabSelected:hover a {font-weight:700; color:#fff;}
 #globalNavArea li:last-child {border-right:none;}
