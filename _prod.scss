@@ -247,7 +247,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 /*Templates
 ====================*/
 /*Boards-Commissions*/
-.bcmeetinginfo	{margin:10px 0; padding:5px; text-align:center; overflow:hidden; border-radius:10px 10px 0 0; @include gradient(#d9cec2, #eee);}
+.bcmeetinginfo	{margin:10px 0; padding:5px; text-align:center; overflow:hidden; border-radius:10px 10px 0 0; @include gradient(#d9cec2, #efefef);}
 .bcmeetinginfo ul, .cacmeetinginfo ul {margin:1em 0 0;}
 .underline			{border-bottom:1px solid #bfbfbf;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
