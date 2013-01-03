@@ -292,6 +292,20 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .employmentDuties li 	{margin-left:20px;list-style-type:disc;}
 .employmentDisclaimer {margin-top:20px; color:#666;}
 
+/*Job sidebar - october 2012*/
+#sidebar .employmentType {padding:0;}
+#sidebar h1 img,
+#sidebar .empJump,
+#sidebar .empNo,
+#sidebar .empSalary,
+#sidebar .empDept,
+#sidebar div[style]	{display:none;}
+#sidebar #top h1	{margin-left:-20px; padding:5px 20px; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#sidebar #top h1:after {content:" "; background:url(images/ribbon-right.png); display:block; width:10px; height:10px; position:absolute; bottom:0; right:0; margin-bottom:-10px;}
+// #sidebar .employmentType h3 {font-size:1.4em;}
+#sidebar .empTitle {font-weight:normal; font-size:1.1em;}
+#sidebar .empClose {border-bottom:1px dotted #ccc; width:98%; color:#666; margin:0 0 6px 0;}
+
 /*Facility*/
 .gismap_iframe 			{float:left; margin:10px 0 0 0; padding:0; width:65%; height:256px; overflow:hidden;}
 .location 					{float:right; margin:10px 0 0 -20px; width:31%;}
@@ -306,7 +320,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .smallimage					{float:left; margin:0 15px 10px 0; width:50%;}
 .smallimage .slideshow, .smallimage .photoslider-1click-slideshow, .smallimage .photoslider-1click-slideshow img {height:210px;}
 .largeimage img, .smallimage img	{width:100%;}
-.lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
+.slideshow .lightbox{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 .section						{clear:both; margin:1.5em 0;}
 .callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px; box-shadow:0 3px 5px #999;}
 .callout img				{max-width:98%;}
