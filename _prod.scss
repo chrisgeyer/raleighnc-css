@@ -257,7 +257,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .storyContentWrapper ul.individual, .content ul.individual	{float:left; margin:1em 0 0 0; padding:0; width:33%;}
 
 /*CAC*/
-.cacmeetinginfo 	{@extend .bcmeetinginfo; @include gradient(#829656, #eee);}
+.cacmeetinginfo 	{@extend .bcmeetinginfo; @include gradient(#829656, #efefef);}
 .cacactivity 			{@extend .outline; @extend .bcimage;}
 .cacactivity .photoslider-1click-slideshow {height:300px;}
 .cacgismap 				{margin:5px 0 15px 10px; width:356px; height:256px; overflow:hidden;}
