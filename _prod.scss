@@ -23,12 +23,12 @@ body {padding-bottom:15px; background:lighten(#8b9f8e, 15%);}
 .align-center		{text-align:center;}
 .align-right		{text-align:right;}
 .line 					{clear:both; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd;}
-.underline			{border-bottom:1px solid #bfbfbf;}
 img 						{border:0; max-width:100%;}
 h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middle;}
 
 /*OOCSS*/
 .dotted					{border-bottom:1px dotted #ccc;}
+.underline			{border-bottom:1px solid #ccc;}
 
 /*Links*/
 table a:link 	{text-decoration:underline;}
@@ -53,7 +53,7 @@ table a:link 	{text-decoration:underline;}
 
 /*Left Nav*/
 .leftnav 							{padding:10px;}
-.leftnav h3 					{border-bottom:1px solid #ccc;}
+.leftnav h3 					{@extend .underline;}
 .leftnav ul 					{margin:0 0 10px 10px;}
 #sidebar .leftnav h3:first-child {margin-top:0;}
 #sidebar .leftnav ul	{margin:0 0 10px -25px; background:#ddd; padding:10px}
@@ -62,7 +62,7 @@ table a:link 	{text-decoration:underline;}
 
 /*old leftnav*/
 .iwt_section {margin:0 0 10px 10px;}
-.iwt_section_header {border-bottom:1px solid #ccc; font-size:1.25em;}
+.iwt_section_header {font-size:1.25em; @extend .underline;}
 .iwt_leftnav li, #popularPages li, #popularSearch li {margin:0 0 6px 0; list-style-type:none;}
 
 /*Right Col
@@ -248,13 +248,12 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 ====================*/
 /*Boards-Commissions*/
 .bcmeetinginfo	{margin:10px 0; padding:5px; text-align:center; overflow:hidden; border-radius:10px 10px 0 0; @include gradient(#d9cec2, #efefef);}
-.bcmeetinginfo ul, .cacmeetinginfo ul {margin:1em 0 0;}
-.underline			{border-bottom:1px solid #bfbfbf;}
+.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.5%; vertical-align:top;}
+// .bcmeetinginfo ul, .cacmeetinginfo ul {margin:1em 0 0;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
 .bcimage 				{margin:10px auto; width:515px;}
 .bcimage img		{width:515px;}
 .members				{overflow:hidden; margin-bottom:20px;}
-.storyContentWrapper ul.individual, .content ul.individual	{float:left; margin:1em 0 0 0; padding:0; width:33%;}
 
 /*CAC*/
 .cacmeetinginfo 	{@extend .bcmeetinginfo; @include gradient(#829656, #efefef);}
