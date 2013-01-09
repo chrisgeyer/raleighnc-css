@@ -161,7 +161,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 
 /*iFrame*/
 label 			{display:block; @extend .quiet;}
-iframe 			{border:none;}
+iframe 			{@extend .outline;}
 .iframeShim {margin:0; padding:0; border:none; background:none; position:absolute; overflow:hidden;}
 .interior 	{margin:54px 0 0 3px;}
 
