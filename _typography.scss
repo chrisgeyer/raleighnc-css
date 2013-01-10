@@ -13,20 +13,19 @@ body	{color:#333; font:75%/1.4 Verdana, Geneva, sans-serif;}
 -------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {margin:0 0 5px 0; color:#111; font-weight:700; font-family:Arial, "Helvetica Neue", Helvetica, sans-serif; text-shadow:1px 1px 1px #ccc;}
 
-h1, .h1 			{/*26px*/   font-size:1.8em; margin-bottom:0.5em; font-size:em(26px);}
-h2, .h2				{/*20px*/   font-size:1.54em; font-size:em(20px);}
-h3, .h3 			{/*17px*/ 	font-size:1.31em; font-size:em(17px);}
-h4, .h4 			{/*14px*/		font-size:1.075em; font-size:em(14px);}
-h5, .h5 			{/*13px*/   font-size:1em; font-size:em(13px);}
-h6, .h6 			{/*12px*/ 	font-size:0.9em; font-size:em(12px);}
+h1, .h1 			{/*26px*/   font-size:1.8em; margin-bottom:0.5em;}
+h2, .h2				{/*20px*/   font-size:1.54em;}
+h3, .h3 			{/*17px*/ 	font-size:1.31em;}
+h4, .h4 			{/*14px*/		font-size:1.075em;}
+h5, .h5 			{/*13px*/   font-size:1em;}
+h6, .h6 			{/*12px*/ 	font-size:0.9em;}
 
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 
 
 /* Text elements
 -------------------------------------------------------------- */
-p 						{margin:0 0 1.2em 0; padding:0; line-height:1.5;}
-.storyContentWrapper p, .content p, .storyContentWrapper li, .content li {font-size:em(14px);}
+p 						{margin:0 0 1.167em 0; padding:0; line-height:1.5;}
 
 blockquote 		{margin:1.5em;color:#777;font-style:italic;}
 strong 				{font-weight:700;}

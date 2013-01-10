@@ -1,5 +1,4 @@
 // Variables
-$base-font-size:12px; // 75%;
 $link:#3c61a5;
 $linkhover:#900;
 $green:#657838;
@@ -19,6 +18,3 @@ $lightblue:#d7e2f1;
 	-webkit-transition:$property $time $method;
 	        transition:$property $time $method;
 }
-
-// converting px to em
-@function em($px, $base:$base-font-size) {@return ($px / $base) * 1em;}
