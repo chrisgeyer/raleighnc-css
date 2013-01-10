@@ -8,7 +8,7 @@ Last Modified:	11.2.2012 (cwg)
 -------------------------------------------------------------- */
 html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent 
 										{margin:0; padding:0;}
-#screenWrapper 			{margin:0 auto; width:960px; background:#eee; border:1px solid #666; border-top:0; box-shadow:0px 2px 30px #444;}
+#screenWrapper 			{margin:0 auto; width:em(960px); max-width:95%; background:#eee; border:1px solid #666; border-top:0; box-shadow:0px 2px 30px #444;}
 
 /* Text elements.
 -------------------------------------------------------------- */
@@ -28,7 +28,7 @@ a			{color:$link; text-decoration:none;
 
 #city_seal					{width:45%; cursor:pointer;}
 #city_seal img 			{float:left; margin:4px 0 0 10px;}
-.cityOfRaleigh 			{margin:30px 0 0 5px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333;}
+.cityOfRaleigh 			{margin:30px 0 0 5px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333; color:#fff;}
 .cityOfRaleigh:hover{cursor:pointer; font-size:3.2em; @include transition(font-size, .4s, ease-in-out);}
 
 .topLinks, #fontsizer, #rssLayer, #searchBoxArea {position:absolute; right:25px;}
