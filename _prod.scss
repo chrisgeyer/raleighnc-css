@@ -11,7 +11,7 @@ body {padding-bottom:15px; background:lighten(#8b9f8e, 15%);}
 .last 					{margin-right:0; padding-right:0; border-right:none;}
 .fifth					{width:19%;}
 .fourth					{width:24%;}
-.third 					{width:33%;}
+.third 					{width:33%;} // extend this and get rid of in html
 .half 					{width:48%;}
 .twothirds			{width:64%;}
 .small 					{width:25%;}
@@ -37,7 +37,7 @@ table a:link 	{text-decoration:underline;}
 
 /*Pages*/
 .landingMainWindow, .storyContentWrapper, .content {background:#eee;}
-.storyContentWrapper, .content {width:565px; margin:0 auto; font-size:1.1em; padding-top:30px;}
+.storyContentWrapper, .content {margin:0 auto; padding-top:30px; width:565px;}
 #Article .storyContentWrapper {width:100%; padding:0;}
 #storyContentWrapper {padding:0 20px;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
@@ -276,13 +276,13 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .employmentType div[style] {display:none;}
 .empJump li a 				{float:left; margin:0 15px 20px 0; text-decoration:underline;}
 .employmentType h3 		{clear:both; margin:15px 0 5px;}
-.empTitle 						{clear:both; margin-bottom:3px; float:left; display:inline; font-size:1.167em; font-weight:700;}
+.empTitle 						{clear:both; margin:0 10px 3px 0; float:left; display:inline; font-size:1.167em; font-weight:700;}
 .empClose, 
 .empDept, 
 .empNo, 
 .empSalary 						{float:left; margin:0 0 15px 10px;}
 .empNo 								{clear:both; margin-left:0;}
-.empClose							{@extend .quiet; margin:3px 0 0 10px;}
+.empClose							{@extend .quiet; margin:3px 0 0 0;}
 #top:hover, #top:active, .employmentType > a:hover, .employmentType > a:active {text-decoration:none;}
 
 /*Job page*/
