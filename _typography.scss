@@ -45,8 +45,8 @@ ol 							{list-style-type:decimal;}*/
 ul, ol 	{margin:0 0 10px 0; padding:0;}
 ul li 	{margin:0; padding:0; list-style:none;}
 .storyContentWrapper, .content {
-	ul, ol 			{margin-left:1em;}
-	li 					{margin-left:1em; list-style-position:inside;}
+	ul, ol 			{overflow:hidden;}
+	li 					{margin-left:1.5em;}
 	ul li 			{list-style-type:disc;}
 	ol li 			{list-style-type:decimal;}
 	ul li ul li {list-style-type:circle;}
