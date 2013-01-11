@@ -76,7 +76,7 @@ table a:link 	{text-decoration:underline;}
 .surveyQuestions p 			{clear:both; margin:0 10px 0 0;}
 .surveyQuestions p:last-child {margin:0;}*/
 .action, .action:visited 	{margin:5%; padding:6px 18px; border:1px solid #666; border-radius:5px; text-shadow:0 1px rgba(0, 0, 0, 0.1); color:#fff; font-size:1.1em; font-weight:700; @include gradient(#B2B2B2, #666665);}
-.action:hover 						{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(#666665, #B2B2B2);}
+.action:hover 						{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(#666665, #B2B2B2);}
 .action:active 						{box-shadow:inset 0 1px 2px rgba(0,0,0,0.3)}
 .action img								{display:none;}
 
@@ -130,7 +130,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 /*Static pages
 ====================*/
 /*Calendar*/
-.calendar					{margin:0 1%; padding:1%; background:#fff; box-shadow:1px 2px 10px #ccc; border-radius:10px; position:relative;}
+.calendar					{margin:0 1%; padding:1%; background:#fff; box-shadow:1px 2px 10px #ccc; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130)"; border-radius:10px; position:relative;}
 .calendar h1			{font-size:1.3em;}
 #monthDetail 			{@extend #sidebar;}
 .calTopic01, 
@@ -142,7 +142,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .calTopicFullScreen 	{display:none;}	
 
 /*Contact Directory - nov 2012*/
-#contactForm	{margin:20px 10px; padding:10px; background:#fff; border:2px solid #ddd; border-radius:10px; box-shadow:1px 2px 10px #ccc;}
+#contactForm	{margin:20px 10px; padding:10px; background:#fff; border:2px solid #ddd; border-radius:10px; box-shadow:1px 2px 10px #ccc; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130)";}
 #contactSearchForm li {padding:2px;}
 #contactSearchForm input[name=fName]	{margin-left:7.5%;}
 #contactSearchForm input[name=lName]	{margin-left:7.7%;}
@@ -175,15 +175,15 @@ iframe 			{@extend .outline;}
 .mFeatureDescTxt 			{padding:0; width:485px; height:70px; position:absolute; left:35px; bottom:40px; z-index:9; text-align:center;}
 .mFeatureDescTxt a 		{color:#fff; font-size:1.5em; text-decoration:underline;}
 .mFeatureDescTxt a:hover {color:#ddd;}
-.mFeatureMainImg 			{margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0 3px 10px #999; border-radius:5px;}
-.mFeatureDescBlkBg 		{padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.7;}
+.mFeatureMainImg 			{margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0 3px 10px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130)"; border-radius:5px;}
+.mFeatureDescBlkBg 		{padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.6; -ms-filter:"alpha(opacity=60)";}
 
 /*Feature Table*/
 .twoCol 	{margin:0 2%; border:0; @extend .dotted;}
 .twoCol td,
 .twoColImage table {border:0;}
 .twoColImage img {width:135px;}
-.shadow 	{padding:3px; background:#fff; box-shadow:0 3px 5px #999; border-radius:5px;}
+.shadow 	{padding:3px; background:#fff; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130)"; border-radius:5px;}
 .twoColTextNarrow {width:25%; padding:1%;}
 
 /*News & Events
@@ -248,7 +248,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 ====================*/
 /*Boards-Commissions*/
 .bcmeetinginfo	{margin:10px 0; padding:5px; text-align:center; overflow:hidden; border-radius:10px 10px 0 0; @include gradient(#d9cec2, #efefef);}
-.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.5%; vertical-align:top;}
+.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.5%; vertical-align:top; /*for ie*/ zoom:1; *display:inline;}
 // .bcmeetinginfo ul, .cacmeetinginfo ul {margin:1em 0 0;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
 .bcimage 				{margin:10px auto; width:515px;}
@@ -312,7 +312,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .facility_hours th 	{background:$lightblue;}
 
 /*New 1col - april 2012*/
-.outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999; position:relative;}
+.outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130)"; position:relative;}
 .outline a:active		{position:absolute;}
 .largeimage					{margin-bottom:10px; width:98%;}
 .largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .largeimage .photoslider-1click-slideshow img {height:408px;}
@@ -321,9 +321,9 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .largeimage img, .smallimage img	{width:100%;}
 .slideshow .lightbox{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 .section						{clear:both; margin:1.5em 0;}
-.callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px; box-shadow:0 3px 5px #999;}
+.callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130)";}
 .callout img				{max-width:98%;}
-.section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999;}
+.section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130)";}
 .section img.left, 
 .section img.right 	{margin:0 10px 10px;}
 .section h3					{@extend .dotted;}

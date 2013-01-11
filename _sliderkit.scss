@@ -39,14 +39,14 @@ border:0;}
 .photoslider-1click-slideshow .sliderkit-panel .sliderkit-panel-textbox{bottom:0;left:0;width:100%;height:65px;}
 .smallimage .sliderkit-panel-textbox{font-size:0.95em;}
 .photoslider-1click-slideshow .sliderkit-panel .sliderkit-panel-text{height:40px;padding:5px 15px 10px;font-size:0.9em;color:#fff;font-weight:700;}
-.photoslider-1click-slideshow .sliderkit-panel .sliderkit-panel-overlay{width:100%;height:50px;background:#444;opacity:0.5;}
+.photoslider-1click-slideshow .sliderkit-panel .sliderkit-panel-overlay{width:100%;height:50px;background:#444;opacity:0.6;-ms-filter:"alpha(opacity=60)";}
 
 /*---------------------------------
  *	News slider > Landing
  *---------------------------------*/	
 .slider {/*margin:2%;width:96%;*/margin:10px auto;width:545px;height:415px;background:transparent url(images/ajax-loader.gif) no-repeat center;}
  
-.newslider-horizontal{margin:0 auto;padding-top:5px;/*width:553px;height:100%;overflow:visible;*/background:#fff;box-shadow:0 3px 10px #999;border-radius:5px;}
+.newslider-horizontal{margin:0 auto;padding-top:5px;/*width:553px;height:100%;overflow:visible;*/background:#fff;box-shadow:0 3px 10px #999;-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130)";border-radius:5px;}
 
 /*Panel*/
 .newslider-horizontal .sliderkit-panels{margin:2% 3% 4%;width:95%;height:390px;overflow:hidden;position:relative;}
@@ -67,4 +67,4 @@ border:0;}
 .newslider-horizontal .sliderkit-panel .sliderkit-panel-textbox{bottom:-10px;left:0;width:100%;height:80px;}
 .newslider-horizontal .sliderkit-panel .sliderkit-panel-text{height:50px;padding:5px 15px 10px;color:#fff;text-align:center;}
 .newslider-horizontal .sliderkit-panel .sliderkit-panel-text a{z-index:5;}
-.newslider-horizontal .sliderkit-panel .sliderkit-panel-overlay{width:100%;height:70px;background:#000;opacity:0.6;z-index:2;}
+.newslider-horizontal .sliderkit-panel .sliderkit-panel-overlay{width:100%;height:70px;background:#000;opacity:0.6;-ms-filter:"alpha(opacity=60)";z-index:2;}
