@@ -29,11 +29,12 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 /*OOCSS*/
 .dotted					{border-bottom:1px dotted #ccc;}
 .underline			{border-bottom:1px solid #ccc;}
+.ie9						{-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(enabled='false')" !important;}						
 
 /*Links*/
-table a:link 	{text-decoration:underline;}
-.section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none; -ms-filter:"progid:DXImageTransform.Microsoft.gradient(enabled='false')" !important;}
-.storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited {text-decoration:underline;}
+.storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited, table a:link 	{text-decoration:underline;}
+.section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none; display:none;}
+// :root .section .coricon, .coricon {@extend .ie9;}
 
 /*Pages*/
 .landingMainWindow, .storyContentWrapper, .content {background:#eee;}
@@ -143,7 +144,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 
 /*Contact Directory - nov 2012*/
 #contactForm	{margin:20px 10px; padding:10px; background:#fff; border:2px solid #ddd; border-radius:10px; box-shadow:1px 2px 10px #ccc; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";}
-:root #contactForm {-ms-filter:"progid:DXImageTransform.Microsoft.gradient(enabled='false')" !important;}
+:root #contactForm {@extend .ie9;}
 #contactSearchForm li {padding:2px;}
 #contactSearchForm input[name=fName]	{margin-left:7.5%;}
 #contactSearchForm input[name=lName]	{margin-left:7.7%;}
@@ -162,9 +163,7 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 
 /*iFrame*/
 label 			{display:block; @extend .quiet;}
-iframe 			{@extend .outline;}
-.iframeShim {margin:0; padding:0; border:none; background:none; position:absolute; overflow:hidden;}
-.interior 	{margin:54px 0 0 3px;}
+iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999;}
 
 /*Landing
 ================*/
@@ -177,6 +176,7 @@ iframe 			{@extend .outline;}
 .mFeatureDescTxt a 		{color:#fff; font-size:1.5em; text-decoration:underline;}
 .mFeatureDescTxt a:hover {color:#ddd;}
 .mFeatureMainImg 			{margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0 3px 10px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)"; border-radius:5px;}
+:root .mFeatureMainImg {@extend .ie9;}
 .mFeatureDescBlkBg 		{padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.6; -ms-filter:"alpha(opacity=60)";}
 
 /*Feature Table*/
@@ -185,6 +185,7 @@ iframe 			{@extend .outline;}
 .twoColImage table {border:0;}
 .twoColImage img {width:135px;}
 .shadow 	{padding:3px; background:#fff; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)"; border-radius:5px;}
+:root .shadow {@extend .ie9;}
 .twoColTextNarrow {width:25%; padding:1%;}
 
 /*News & Events
@@ -210,13 +211,13 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 
 /*News Article*/
 .newsAlert 		{margin-right:5px; color:#900; font-weight:700; display:inline;}
-.images {float:right; margin:0 0 10px 10px; padding:1%; background:#fff; border:1px solid #ddd; border-radius:5px;}
+.images {float:right; margin:0 0 10px 10px; @extend.outline;}
 .images, .images .photoslider-1click-slideshow, .images .photoslider-1click-slideshow img 	{width:352px; height:264px;}
 .eventdates {clear:both; float:left; width:24%;}
 .newseventmap {float:left; margin:0 0 0 10px; width:74%; overflow:hidden;}
 .storyContentWrapper .newseventmap li, .content .newseventmap li {margin:0; list-style:none;}
 .newseventlocation {float:left; width:40%}
-.gismap {float:left; margin:0 0 10px 10px; padding:0; width:57%; height:182px; overflow:hidden;}
+.gismap {float:left; margin:0 0 10px 10px; width:46%; height:182px; overflow:hidden; @extend .ie9;}
 .addfiles, .newscontacts, .relatedlinks {float:left; width:25%; margin:20px 10px;}
 #storyContentWrapper ul, #storyContentWrapper li {margin:0;}
 .newscontacts {width:35%;}
@@ -249,7 +250,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 ====================*/
 /*Boards-Commissions*/
 .bcmeetinginfo	{margin:10px 0; padding:5px; text-align:center; overflow:hidden; border-radius:10px 10px 0 0; @include gradient(#d9cec2, #efefef);}
-.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.5%; vertical-align:top; /*for ie*/ zoom:1; *display:inline;}
+.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.5%; vertical-align:top;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
 .bcimage 				{margin:10px auto; width:515px;}
 .bcimage img		{width:515px;}
@@ -259,7 +260,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .cacmeetinginfo 	{@extend .bcmeetinginfo; @include gradient(#829656, #efefef);}
 .cacactivity 			{@extend .outline; @extend .bcimage;}
 .cacactivity .photoslider-1click-slideshow {height:300px;}
-.cacgismap 				{margin:5px 0 15px 10px; width:356px; height:256px; overflow:hidden;}
+.cacgismap 				{margin:5px 0 15px 10px; width:62%; height:256px; overflow:hidden; @extend .ie9;}
 
 /*Contact - Nov 2012*/
 .contact					{@extend .callout;}
@@ -306,13 +307,14 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 #sidebar .empClose {border-bottom:1px dotted #ccc; width:98%; color:#666; margin:0 0 6px 0;}
 
 /*Facility*/
-.gismap_iframe 			{float:left; margin:10px 0 0 0; padding:0; width:65%; height:256px; overflow:hidden;}
+.gismap_iframe 			{float:left; margin:10px 0 0 0; width:63%; height:256px; overflow:hidden; @extend .ie9;}
 .location 					{float:right; margin:10px 0 0 -20px; width:31%;}
 .facility_hours 		{margin:0 0 10px 0;}
 .facility_hours th 	{background:$lightblue;}
 
 /*New 1col - april 2012*/
 .outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)"; position:relative;}
+:root .outline 			{@extend .ie9;}
 .outline a:active		{position:absolute;}
 .largeimage					{margin-bottom:10px; width:98%;}
 .largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .largeimage .photoslider-1click-slideshow img {height:408px;}
@@ -322,8 +324,10 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .slideshow .lightbox{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 .section						{clear:both; margin:1.5em 0;}
 .callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";}
+:root .callout {@extend .ie9;}
 .callout img				{max-width:98%;}
 .section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";}
+:root .section img {@extend .ie9;}
 .section img.left, 
 .section img.right 	{margin:0 10px 10px;}
 .section h3					{@extend .dotted;}
