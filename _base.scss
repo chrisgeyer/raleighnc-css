@@ -54,7 +54,7 @@ a			{color:$link; text-decoration:none;
 
 /* Main navigation elements.
 -------------------------------------------------------------- */
-#globalNavArea 						{float:left; width:100%; border-top:1px solid #999; box-shadow:0 5px 5px #aaa; position:relative; @include gradient(#515a52, #293129);}
+#globalNavArea 						{float:left; width:100%; border-top:1px solid #999; position:relative; box-shadow:0 5px 5px #aaa; @include gradient(#515a52, #293129);}
 #globalNavArea li 				{float:left; border-right:1px solid #999; text-align:center; @include transition(background, .2s, ease-in-out);}
 #tabSelected 							{font-weight:700; @include gradient($link, lighten($link, 10%));}
 #globalNavArea a 					{padding:14px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; text-decoration:none;}
@@ -62,7 +62,7 @@ a			{color:$link; text-decoration:none;
 #tabSelected a:hover, #tabSelected:hover a {font-weight:700; color:#fff;}
 #globalNavArea li:last-child {border-right:none;}
 
-#lines	{display:none;}
+#lines, #home	{display:none;}
 
 /* Main content areas.
 -------------------------------------------------------------- */
