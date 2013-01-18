@@ -33,7 +33,7 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 
 /*Links*/
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited, table a:link 	{text-decoration:underline;}
-.section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none; display:none;}
+.section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
 // :root .section .coricon, .coricon {@extend .ie9;}
 
 /*Pages*/
@@ -202,12 +202,13 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .maineventslinks {@extend .mainarticlelinks; width:41%;}
 .eventsList li {clear:both; padding:5px; list-style:none;}
 .message 		{color:$green;}
-.eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:40px; background:$offwhite; border:2px solid #ddd; text-align:center; font-weight:700; letter-spacing:0.3em; border-radius:2px;}
+.eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:16%; background:$offwhite; /*border:2px solid #ddd;*/ text-align:center; font-weight:700; /*letter-spacing:0.2em;*/ border-radius:3px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";}
+:root .eventDate {@extend .ie9;}
+.eventMonth	{background:#ddd;}
 .eventDay 	{font-size:1.3em;}
 .eventTitle {display:inline;}
 .eventTitle a {margin:0;}
-.eventTimes {color:#666; margin:0 0 10px 55px;}
-.eventdatetime 	{margin:1em 0 1.168em;}
+.eventTimes {color:#666; margin:0 0 10px 45px;}
 
 /*News Article*/
 .newsAlert 		{margin-right:5px; color:#900; font-weight:700; display:inline;}
@@ -249,7 +250,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 /*Templates
 ====================*/
 /*Boards-Commissions*/
-.bcmeetinginfo	{margin:10px 0; padding:5px; text-align:center; overflow:hidden; border-radius:10px 10px 0 0; @include gradient(#d9cec2, #efefef);}
+.bcmeetinginfo	{padding:5px; text-align:center; overflow:hidden; border-radius:10px 10px 0 0; @include gradient(#d9cec2, #efefef);}
 .bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.5%; vertical-align:top;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
 .bcimage 				{margin:10px auto; width:515px;}
@@ -260,7 +261,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .cacmeetinginfo 	{@extend .bcmeetinginfo; @include gradient(#829656, #efefef);}
 .cacactivity 			{@extend .outline; @extend .bcimage;}
 .cacactivity .photoslider-1click-slideshow {height:300px;}
-.cacgismap 				{margin:5px 0 15px 10px; width:62%; height:256px; overflow:hidden; @extend .ie9;}
+.cacgismap 				{margin:0 0 0 2%; width:62%; height:256px; overflow:hidden; @extend .ie9;}
 
 /*Contact - Nov 2012*/
 .contact					{@extend .callout;}
@@ -307,9 +308,9 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 #sidebar .empClose {border-bottom:1px dotted #ccc; width:98%; color:#666; margin:0 0 6px 0;}
 
 /*Facility*/
-.gismap_iframe 			{float:left; margin:10px 0 0 0; width:63%; height:256px; overflow:hidden; @extend .ie9;}
-.location 					{float:right; margin:10px 0 0 -20px; width:31%;}
-.facility_hours 		{margin:0 0 10px 0;}
+.gismap_iframe 			{float:left; @extend .cacgismap;}
+.location 					{float:right; width:31%;}
+.facility_hours 		{margin-top:0;}
 .facility_hours th 	{background:$lightblue;}
 
 /*New 1col - april 2012*/
