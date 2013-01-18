@@ -4,42 +4,50 @@
 	#screenWrapper {width:auto; overflow:hidden; border:0;}
 	#header {text-align:center; @include gradient(#5c8fea, #2e5baf);}
 	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump {display:none;}
-	#searchBoxArea, .eventdates, .newseventlocation, .gismap_iframe {width:100%;}
+	#searchBoxArea, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks {width:100%;}
+	.gismap_iframe, .cacgismap {width:94%;}
 	#searchInput {width:75%;}
+	#city_seal img {display:block; position:absolute; right:0; margin:0; padding:0; width:60px;}
 	.cityOfRaleigh {margin-top:10px;}
 	#globalNavArea li {width:49%; /*border-right:1px solid #999;*/ border-bottom:1px solid #999;}
-	// #globalNavArea li:first-child {float:none; border:0;}
-	#globalNavArea li:last-child {border:0;}
-	#globalNavArea li:nth-child(even) {border-right:0;}
+	#globalNavArea li:first-child {display:none;}
+	#globalNavArea li:nth-child(odd) {border-right:0;}
 	// #globalNavArea a[title=Home] {position:absolute; top:5px; left:0;}
-	// #globalNavArea a:nth-child(4) {font-size:0.8em;}
-	#col1, #col2, #col2Large, #col3, #Article, #sidebar {width:100%; margin:0;}
-	#col2 .updatedDate, #col2 .issuedatetime {position:relative; top:0; left:0;}
+	#col1, #col2, #col2Large, #col3, #Article, #sidebar, .newseventmap {width:100%; margin:0;}
+	#col2 .updatedDate {position:relative; top:0; left:0;}
 	.storyContentWrapper, .content {width:95%; padding:0 2.5%;}
-	/*.storyContentWrapper > div,*/#right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .videos, .open, .newfooter {clear:both; float:none; margin:1.5%; padding:1.5%; width:94%; display:block;}
-	.storyContentWrapper .callout, .content .callout {margin:1%; padding:1%; width:90%;}
-	.section img.left, .section img.right, .contact img.left {margin:0;}
-	.section img, .images {padding:0; width:100%;}
+	.storyContentWrapper ul, .storyContentWrapper ol, .content ul, .content ol {clear:both;}
+	storyContentWrapper > div,#right > div, .mainarticlelinks, .maineventslinks, .surveyDisplayWrapper, .videos, .open, .newfooter {clear:both; float:none; margin:1.5%; padding:1.5%; width:94%; display:block;}
+	.storyContentWrapper .callout, .content .callout, #col2 .contact {margin:1%; padding:1%; width:90%;}
+	.contact img.left {float:right;}
+	.section img.left, .section img.right {margin:10px 0;}
+	.section img, .images, .bcimage {width:98%;}
 	.section img.coricon {width:auto;}
 	.employmentType {padding-left:0;}
 	.empClose, .empNo, .empSalary, .empDept {clear:both; margin:0 0 5px 0;}
 	#accldePre {text-align:center;}
-	#col2 .slider {height:225px; overflow:hidden;}
-	#col2 .newslider-horizontal .sliderkit-panels{height:280px;}
+	// #col2 .slider, .cacactivity .photoslider-1click-slideshow  {height:225px; overflow:hidden;}
+	// #col2 .newslider-horizontal .sliderkit-panels{height:280px;}
 	#monthDetail, #calFrame {clear:both; width:100%;}
+	.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {width:98%; margin-bottom:10px;}
 	.storyContentWrapper ul.individual, .content ul.individual {width:48%;}
-	.images, .cacgismap, .gismap {margin:0;}
+	.storyContentWrapper ul.individual li, .content ul.individual li, .bcmeetinginfo li, .cacmeetinginfo li {margin:0; padding:0;}
 	.newfooter ul {clear:both; width:100%; text-align:center;}
 	.bow {width:30%;}
+	.facility_hours {
+		table,thead,tbody,tfoot,th,td,tr{display:block}
+    tr+tr{margin-top:1em}
+   }
 	
 	/*nav hide*/
 	#globalNavArea ul	{clear:both; border-top:1px solid #999;}
 	#globalNavArea #lines	{display:block; line-height:20px; padding:5px; float:right; margin:2%;}
+	#globalNavArea #home	{display:block; line-height:20px; padding:5px; float:left; margin:2%;}
 	#tabsHeader, #col1 {display:none;}
 	
 	/*Search*/
 	#Search #sidebar {display:none;}
-	#Search #Article {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;}
-	.url {word-wrap:break-word;}
-	
+	#Search #Article {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;} 
+	// add artcile to gsa template?
+	.url {word-wrap:break-word;}	
 }
