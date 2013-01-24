@@ -28,7 +28,7 @@ a			{color:$link; text-decoration:none;
 
 #city_seal					{width:45%; cursor:pointer;}
 #city_seal img 			{float:left; margin:4px 0 0 10px;}
-.cityOfRaleigh 			{margin:30px 0 0 5px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333;}
+.cityOfRaleigh 			{margin:30px 0 0 5px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#333333)"; color:#fff;}
 .cityOfRaleigh:hover{cursor:pointer; font-size:3.2em; @include transition(font-size, .4s, ease-in-out);}
 
 .topLinks, #fontsizer, #rssLayer, #searchBoxArea {position:absolute; right:25px;}
@@ -54,7 +54,7 @@ a			{color:$link; text-decoration:none;
 
 /* Main navigation elements.
 -------------------------------------------------------------- */
-#globalNavArea 						{float:left; width:100%; border-top:1px solid #999; box-shadow:0 5px 5px #aaa; position:relative; @include gradient(#515a52, #293129);}
+#globalNavArea 						{float:left; width:100%; border-top:1px solid #999; position:relative; box-shadow:0 5px 5px #aaa; @include gradient(#515a52, #293129);}
 #globalNavArea li 				{float:left; border-right:1px solid #999; text-align:center; @include transition(background, .2s, ease-in-out);}
 #tabSelected 							{font-weight:700; @include gradient($link, lighten($link, 10%));}
 #globalNavArea a 					{padding:14px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; text-decoration:none;}
@@ -62,7 +62,7 @@ a			{color:$link; text-decoration:none;
 #tabSelected a:hover, #tabSelected:hover a {font-weight:700; color:#fff;}
 #globalNavArea li:last-child {border-right:none;}
 
-#lines	{display:none;}
+#lines, #home	{display:none;}
 
 /* Main content areas.
 -------------------------------------------------------------- */
