@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {margin:0 0 5px 0; color:#1
 
 h1, .h1 			{/*26px*/   font-size:1.8em; margin-bottom:0.5em;}
 h2, .h2				{/*20px*/   font-size:1.54em;}
-h3, .h3 			{/*17px*/ 	font-size:1.31em;;}
+h3, .h3 			{/*17px*/ 	font-size:1.31em;}
 h4, .h4 			{/*14px*/		font-size:1.075em;}
 h5, .h5 			{/*13px*/   font-size:1em;}
 h6, .h6 			{/*12px*/ 	font-size:0.9em;}
@@ -25,7 +25,7 @@ h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 
 /* Text elements
 -------------------------------------------------------------- */
-p 						{margin:0 0 1.168em 0; padding:0; line-height:1.5;}
+p 						{margin:0 0 1.167em 0; padding:0; line-height:1.5;}
 
 blockquote 		{margin:1.5em;color:#777;font-style:italic;}
 strong 				{font-weight:700;}
@@ -45,8 +45,8 @@ ol 							{list-style-type:decimal;}*/
 ul, ol 	{margin:0 0 10px 0; padding:0;}
 ul li 	{margin:0; padding:0; list-style:none;}
 .storyContentWrapper, .content {
-	ul, ol 			{margin-left:1em;}
-	li 					{margin-left:1em; list-style-position:inside;}
+	ul, ol 			{overflow:hidden;}
+	li 					{margin-left:2.5em;}
 	ul li 			{list-style-type:disc;}
 	ol li 			{list-style-type:decimal;}
 	ul li ul li {list-style-type:circle;}
