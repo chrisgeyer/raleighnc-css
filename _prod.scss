@@ -168,16 +168,15 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 /*Landing
 ================*/
 .landing {text-align:center; font-size:2em;}
+
 /*Main Feature*/
-.landingMainWindow h1 {margin:0; font-size:1.9em; text-align:center;}
-.landingPg 						{margin:0 auto; padding:0; width:555px; height:440px; position:relative;}	
-.mFeatureMainFrame 		{margin:-20px 0 0 -20px; padding:0; height:200px; z-index:8; position:absolute;}
-.mFeatureDescTxt 			{padding:0; width:485px; height:70px; position:absolute; left:35px; bottom:40px; z-index:9; text-align:center;}
-.mFeatureDescTxt a 		{color:#fff; font-size:1.5em; text-decoration:underline;}
+.landingPg 						{/*margin:0 auto; padding:0; width:555px; height:440px;*/ position:relative;}	
+.mFeatureDescTxt 			{width:88%; height:70px; position:absolute; left:5%; bottom:40px; z-index:9; @extend .align-center;}
+.mFeatureDescTxt a 		{color:#fff; font-size:1.4em; text-decoration:underline;}
 .mFeatureDescTxt a:hover {color:#ddd;}
-.mFeatureMainImg 			{margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0 3px 10px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)"; border-radius:5px;}
+.mFeatureMainImg 			{margin:1.8%; padding-bottom:71%; width:91%; height:0; border:15px solid #fff; box-shadow:0 3px 10px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)"; border-radius:5px;}
 :root .mFeatureMainImg {@extend .ie9;}
-.mFeatureDescBlkBg 		{padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.6; -ms-filter:"alpha(opacity=60)";}
+.mFeatureDescBlkBg 		{width:90%; height:85px; position:absolute; left:3%; bottom:30px; background:#111; opacity:0.6; -ms-filter:"alpha(opacity=60)";}
 
 /*Feature Table*/
 .twoCol 	{margin:0 2%; border:0; @extend .dotted;}
@@ -312,6 +311,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .location 					{float:right; width:31%;}
 .facility_hours 		{margin-top:0;}
 .facility_hours th 	{background:$lightblue;}
+.facility_hours td 	{@extend .align-center;}
 
 /*New 1col - april 2012*/
 .outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)"; position:relative;}
