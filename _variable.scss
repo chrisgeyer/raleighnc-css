@@ -11,8 +11,8 @@ $lightblue:#d7e2f1;
 	// background-image:-webkit-gradient(linear, top, bottom, from($start), to($stop));
 	background-image:-webkit-linear-gradient($start, $stop);
 	background-image:        linear-gradient(to bottom, $start, $stop);
-	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$start}, endColorstr=#{$stop})";}
-	// filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorStr='#{$start}', EndColorStr='#{$stop}');}
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorStr=#{$start}, EndColorStr=#{$stop})";}
+		//filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorStr='#{$start}', EndColorStr='#{$stop}');}
 		
 @mixin transition ($property, $time, $method) {
 	-webkit-transition:$property $time $method;
