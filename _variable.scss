@@ -7,7 +7,7 @@ $offwhite:#f7f7f7;
 $lightblue:#d7e2f1;
 
 @mixin gradient ($start:#ffffff, $stop:#ffffff) {
-	background-color:$start;
+	background-color:mix($start, $stop);
 	// background-image:-webkit-gradient(linear, top, bottom, from($start), to($stop));
 	background-image:-webkit-linear-gradient($start, $stop);
 	background-image:        linear-gradient(to bottom, $start, $stop);
