@@ -4,8 +4,9 @@
 	#screenWrapper {width:auto; overflow:hidden; border:0;}
 	#header {@include gradient(#5c8fea, #2e5baf);}
 	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump, .twoColImage {display:none;}
-	#searchBoxArea, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles {width:100%;}
-	.gismap_iframe, .cacgismap {float:none; margin:1%; width:93%;}
+	#searchBoxArea, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation {width:100%;}
+	.newseventlocation li {display:inline;}
+	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
 	#searchInput {width:75%;}
 	#city_seal img {display:block; position:absolute; right:3%; margin:0; padding:0; width:60px;}
 	.cityOfRaleigh {margin-top:10px; font-size:2.5em;}
@@ -22,7 +23,8 @@
 	.storyContentWrapper .callout, .content .callout, #col2 .contact {margin:1%; padding:1%; width:90%;}
 	.largeimage	, .smallimage {float:none; margin:10px auto; width:295px;}
 	.largeimage .photoslider-1click-slideshow img, .smallimage .photoslider-1click-slideshow img {height:240px;}
-	.newslider-horizontal .sliderkit-news a{font-size:1.3em;}
+	.newslider-horizontal .sliderkit-panels{margin-bottom:6%;}
+	.sliderkit-news-readmore, .sliderkit-panel-text {font-size:1.3em;}
 	.section img, .images, .bcimage {width:98%;}
 	.section img.left, .section img.right {margin:10px 0;}
 	.contact img.left {float:right;}
@@ -43,12 +45,14 @@
 		table,thead,tbody,tfoot,th,td,tr{display:block}
     tr+tr{margin-top:1em}
    }
+   table {overflow:auto;}
 
   .ss-form-container {width:100%;}
 	
 	/*nav hide*/
 	#globalNavArea ul	{clear:both; border-top:1px solid #999;}
 	#globalNavArea #lines	{display:block; line-height:20px; padding:5px; float:right; margin:2%;}
+	#lines img {display:inline; float:left; vertical-align:middle;}
 	#globalNavArea #home	{display:block; line-height:20px; padding:5px; float:left; margin:2%;}
 	#tabsHeader, #col1 {display:none;}
 	
