@@ -177,7 +177,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 .mFeatureMainImg 			{margin:1.8%; padding-bottom:71%; width:91%; height:0; border:15px solid #fff; box-shadow:0 3px 10px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)"; border-radius:5px;}
 :root .mFeatureMainImg {@extend .ie9;}
 .mFeatureMainImg img 	{width:100%;}
-.mFeatureDescBlkBg 		{width:91%; height:85px; position:absolute; left:4.5%; bottom:30px; background:#111; opacity:0.6; -ms-filter:"alpha(opacity=60)";}
+.mFeatureDescBlkBg 		{width:91%; height:85px; position:absolute; left:4.5%; bottom:30px; background:#222; opacity:0.6; -ms-filter:"alpha(opacity=60)";}
 
 /*Feature Table*/
 .twoCol 	{margin:0 2%; border:0; @extend .dotted;}
@@ -282,7 +282,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .empDept, 
 .empNo, 
 .empSalary 						{float:left; margin:0 0 15px 10px;}
-.empNo 								{clear:both; margin-left:0;}
+.empSalary						{clear:both; margin-left:0;}
 .empClose							{@extend .quiet; margin:3px 0 0 0;}
 #top:hover, #top:active, .employmentType > a:hover, .employmentType > a:active {text-decoration:none;}
 
