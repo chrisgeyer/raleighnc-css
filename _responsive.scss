@@ -59,8 +59,8 @@
 	#tabsHeader, #col1 {display:none;}
 	
 	/*Search*/
-	#Search h2 {float:none;}
-	#search_stats {margin:10px;}
+	#screenWrapper #Search h2 {float:none;}
+	#Search #search_stats {margin:10px;}
 	#Search #sidebar {display:none;}
 	#Search #Article, #Search .main-results {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;} // add article to gsa template?
 	.url {word-wrap:break-word;}	
