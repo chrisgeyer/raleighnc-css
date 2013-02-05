@@ -11,7 +11,7 @@ body {padding-bottom:15px; background:lighten(#8b9f8e, 15%);}
 .last 					{margin-right:0; padding-right:0; border-right:none;}
 .fifth					{width:19%;}
 .fourth					{width:24%;}
-.third 					{width:33%;}
+.third 					{width:33%;} // extend this and get rid of in html
 .half 					{width:48%;}
 .twothirds			{width:64%;}
 .small 					{width:25%;}
@@ -29,15 +29,17 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 /*OOCSS*/
 .dotted					{border-bottom:1px dotted #ccc;}
 .underline			{border-bottom:1px solid #ccc;}
+.ie9						{-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(enabled='false')" !important;}						
 
 /*Links*/
-.storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited, table a:link	{text-decoration:underline;}
+.storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited, table a:link 	{text-decoration:underline;}
 .section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
+// :root .section .coricon, .coricon {@extend .ie9;}
 
 /*Pages*/
 .landingMainWindow, .storyContentWrapper, .content {background:#eee;}
 .storyContentWrapper, .content {margin:0 auto; padding-top:30px; width:565px; font-size:1.1em;}
-#Article .storyContentWrapper {width:100%; padding:0;}
+#Article .storyContentWrapper, #Article .content {width:100%; padding:0;}
 #storyContentWrapper {padding:0 20px;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
 #col2 .updatedDate {position:absolute; top:3px; left:0; color:#999;}
@@ -75,7 +77,7 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 .surveyQuestions p 			{clear:both; margin:0 10px 0 0;}
 .surveyQuestions p:last-child {margin:0;}*/
 .action, .action:visited 	{margin:5%; padding:6px 18px; border:1px solid #666; border-radius:5px; text-shadow:0 1px rgba(0, 0, 0, 0.1); color:#fff; font-size:1.1em; font-weight:700; @include gradient(#B2B2B2, #666665);}
-.action:hover 						{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(#666665, #B2B2B2);}
+.action:hover 						{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(#666665, #B2B2B2);}
 .action:active 						{box-shadow:inset 0 1px 2px rgba(0,0,0,0.3)}
 .action img								{display:none;}
 
@@ -141,7 +143,8 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .calTopicFullScreen 	{display:none;}	
 
 /*Contact Directory - nov 2012*/
-#contactForm	{margin:20px 10px; padding:10px; background:#fff; border:2px solid #ddd; border-radius:10px; box-shadow:1px 2px 10px #ccc;}
+#contactForm	{margin:20px 10px; padding:10px; background:#fff; border:2px solid #ddd; border-radius:10px; box-shadow:1px 2px 10px #ccc; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";}
+:root #contactForm {@extend .ie9;}
 #contactSearchForm li {padding:2px;}
 #contactSearchForm input[name=fName]	{margin-left:7.5%;}
 #contactSearchForm input[name=lName]	{margin-left:7.7%;}
@@ -165,22 +168,24 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 /*Landing
 ================*/
 .landing {text-align:center; font-size:2em;}
+
 /*Main Feature*/
-.landingMainWindow h1 {margin:0; font-size:1.9em; text-align:center;}
-.landingPg 						{margin:0 auto; padding:0; width:555px; height:440px; position:relative;}	
-.mFeatureMainFrame 		{margin:-20px 0 0 -20px; padding:0; height:200px; z-index:8; position:absolute;}
-.mFeatureDescTxt 			{padding:0; width:485px; height:70px; position:absolute; left:35px; bottom:40px; z-index:9; text-align:center;}
-.mFeatureDescTxt a 		{color:#fff; font-size:1.5em; text-decoration:underline;}
+.landingPg 						{/*margin:0 auto; padding:0; width:555px; height:440px;*/ position:relative;}	
+.mFeatureDescTxt 			{width:88%; height:70px; position:absolute; left:5%; bottom:40px; z-index:9; @extend .align-center;}
+.mFeatureDescTxt a 		{color:#fff; font-size:1.4em; text-decoration:underline;}
 .mFeatureDescTxt a:hover {color:#ddd;}
-.mFeatureMainImg 			{margin:10px;width:505px; height:394px; z-index:6; border:15px solid #fff; box-shadow:0 3px 10px #999; border-radius:5px;}
-.mFeatureDescBlkBg 		{padding:0; width:505px; height:85px; position:absolute; left:25px; bottom:30px; vertical-align:top; z-index:7; background:#111; opacity:0.6; -ms-filter:"alpha(opacity=60)";}
+.mFeatureMainImg 			{margin:1.8%; padding-bottom:71%; width:91%; height:0; border:15px solid #fff; box-shadow:0 3px 10px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)"; border-radius:5px;}
+:root .mFeatureMainImg {@extend .ie9;}
+.mFeatureMainImg img 	{width:100%;}
+.mFeatureDescBlkBg 		{width:91%; height:85px; position:absolute; left:4.5%; bottom:30px; background:#222; opacity:0.6; -ms-filter:"alpha(opacity=60)";}
 
 /*Feature Table*/
 .twoCol 	{margin:0 2%; border:0; @extend .dotted;}
 .twoCol td,
 .twoColImage table {border:0;}
 .twoColImage img {width:135px;}
-.shadow 	{padding:3px; background:#fff; box-shadow:0 3px 5px #999; border-radius:5px;}
+.shadow 	{padding:3px; background:#fff; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)"; border-radius:5px;}
+:root .shadow {@extend .ie9;}
 .twoColTextNarrow {width:25%; padding:1%;}
 
 /*News & Events
@@ -197,29 +202,28 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .maineventslinks {@extend .mainarticlelinks; width:41%;}
 .eventsList li {clear:both; padding:5px; list-style:none;}
 .message 		{color:$green;}
-.eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:16%; background:$offwhite; text-align:center; font-weight:700; border-radius:3px; box-shadow:0 3px 5px #999;}
+.eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:16%; background:$offwhite; /*border:2px solid #ddd;*/ text-align:center; font-weight:700; /*letter-spacing:0.2em;*/ border-radius:3px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";}
+:root .eventDate {@extend .ie9;}
 .eventMonth	{background:#ddd;}
 .eventDay 	{font-size:1.3em;}
 .eventTitle {display:inline;}
 .eventTitle a {margin:0;}
 .eventTimes {color:#666; margin:0 0 10px 45px;}
-.eventdatetime 	{margin:1em 0 1.168em;}
 
 /*News Article*/
 .newsAlert 		{margin-right:5px; color:#900; font-weight:700; display:inline;}
-.images {float:right; margin:0 0 10px 10px; @extend .outline;}
+.images {float:right; margin:0 0 10px 10px; @extend.outline;}
 .images, .images .photoslider-1click-slideshow, .images .photoslider-1click-slideshow img {width:352px; height:264px;}
 .eventdates {clear:both; float:left; width:24%;}
 .newseventmap {float:left; margin:0 0 0 10px; width:74%; overflow:hidden;}
 .storyContentWrapper .newseventmap li, .content .newseventmap li {margin:0; list-style:none;}
 .newseventlocation {float:left; width:40%}
-.gismap {float:left; margin:0 0 10px 10px; padding:0; width:46%; height:182px; overflow:hidden;}
+.gismap {float:left; margin:0 0 10px 10px; width:46%; height:182px; overflow:hidden; @extend .ie9;}
 .addfiles, .newscontacts, .relatedlinks {float:left; width:25%; margin:20px 10px;}
-#storyContentWrapper ul, #storyContentWrapper li {margin:0;}
 .newscontacts {width:35%;}
 .relatedlinks {width:30%;}
 .rsssharing {clear:both; margin-top:20px;}
-.rsssharing img {vertical-align:middle;}
+.rsssharing img {vertical-align:middle; width:40px;}
 
 /*News sidebar*/
 #sidebar .mainarticlelinks, 
@@ -255,8 +259,8 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 /*CAC*/
 .cacmeetinginfo 	{@extend .bcmeetinginfo; @include gradient(#829656, #efefef);}
 .cacactivity 			{@extend .outline; @extend .bcimage;}
-.cacactivity .photoslider-1click-slideshow {height:300px;}
-.cacgismap 				{margin:0 0 0 2%; width:62%; height:256px; overflow:hidden;}
+.cacactivity .photoslider-1click-slideshow {height:0; padding-bottom:60%;}
+.cacgismap 				{margin:0 0 0 2%; width:62%; height:256px; overflow:hidden; @extend .ie9;}
 
 /*Contact - Nov 2012*/
 .contact					{@extend .callout;}
@@ -278,7 +282,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .empDept, 
 .empNo, 
 .empSalary 						{float:left; margin:0 0 15px 10px;}
-.empNo 								{clear:both; margin-left:0;}
+.empSalary						{clear:both; margin-left:0;}
 .empClose							{@extend .quiet; margin:3px 0 0 0;}
 #top:hover, #top:active, .employmentType > a:hover, .employmentType > a:active {text-decoration:none;}
 
@@ -307,20 +311,25 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .location 					{float:right; width:31%;}
 .facility_hours 		{margin-top:0;}
 .facility_hours th 	{background:$lightblue;}
+.facility_hours td 	{@extend .align-center;}
 
 /*New 1col - april 2012*/
-.outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999; position:relative;}
+.outline 						{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)"; position:relative;}
+:root .outline 			{@extend .ie9;}
 .outline a:active		{position:absolute;}
 .largeimage					{margin-bottom:10px; width:98%;}
-.largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .largeimage .photoslider-1click-slideshow img {height:408px;}
+.largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:74%;}
+.largeimage .photoslider-1click-slideshow img {height:408px;}
 .smallimage					{float:left; margin:0 15px 10px 0; width:50%;}
-.smallimage .slideshow, .smallimage .photoslider-1click-slideshow, .smallimage .photoslider-1click-slideshow img {height:210px;}
+.smallimage .photoslider-1click-slideshow img {height:210px;}
 .largeimage img, .smallimage img	{width:100%;}
-.lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
+.slideshow .lightbox{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 .section						{clear:both; margin:1.5em 0;}
-.callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px; box-shadow:0 3px 5px #999;}
+.callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";}
+:root .callout {@extend .ie9;}
 .callout img				{max-width:98%;}
-.section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999;}
+.section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";}
+:root .section img {@extend .ie9;}
 .section img.left, 
 .section img.right 	{margin:0 10px 10px;}
 .section h3					{@extend .dotted;}
