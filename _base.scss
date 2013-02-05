@@ -8,7 +8,7 @@ Last Modified:	11.2.2012 (cwg)
 -------------------------------------------------------------- */
 html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent 
 										{margin:0; padding:0;}
-#screenWrapper 			{margin:0 auto; width:960px; background:#eee; border:1px solid #666; border-top:0; box-shadow:0px 2px 30px #444;}
+#screenWrapper, .wrapper	{margin:0 auto; width:960px; background:#eee; border:1px solid #666; border-top:0; box-shadow:0px 2px 30px #444;}
 
 /* Text elements.
 -------------------------------------------------------------- */
@@ -45,7 +45,7 @@ a			{color:$link; text-decoration:none;
 #searchBoxArea 			{bottom:15px; right:0; width:35%;}
 #searchInput 				{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fff url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
 #searchInput:focus	{box-shadow: 0 0 5px rgba(81, 203, 238, 1);}
-#executeSEearch, #executeSearch {float:left; margin:-1px 0; padding:7px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; color:#fff; font-size:1.1em; font-weight:700; @include gradient(#B2B2B2, #666665);}
+#executeSEearch, #executeSearch {float:left; margin:-1px 0; padding:7px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; color:#fff; font-size:1.1em; font-weight:700; @include gradient(#B2B2B2, #666665);}
 #executeSEearch:hover, #executeSearch:hover {@extend .action:hover;}
 #executeSEearch:active, #executeSearch:active {@extend .action:active;}
 
@@ -57,7 +57,7 @@ a			{color:$link; text-decoration:none;
 #globalNavArea 						{float:left; width:100%; border-top:1px solid #999; position:relative; box-shadow:0 5px 5px #aaa; @include gradient(#515a52, #293129);}
 #globalNavArea li 				{float:left; border-right:1px solid #999; text-align:center; @include transition(background, .2s, ease-in-out);}
 #tabSelected 							{font-weight:700; @include gradient($link, lighten($link, 10%));}
-#globalNavArea a 					{padding:14px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; text-decoration:none;}
+#globalNavArea a 					{padding:14px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; text-decoration:none;}
 #tabsHeader li:hover			{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
 #tabSelected a:hover, #tabSelected:hover a {font-weight:700; color:#fff;}
 #globalNavArea li:last-child {border-right:none;}

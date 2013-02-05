@@ -2,7 +2,7 @@
 ====================*/
 
 @media print {
-  * {background:transparent !important; color:black !important; text-shadow:none !important; box-shadow:none !important; filter:none !important; -ms-filter:none;} /*Black prints faster: h5bp.com/s*/
+  * {background:transparent !important; color:black !important; text-shadow:none !important; box-shadow:none !important; -ms-filter:none;} /*Black prints faster: h5bp.com/s*/
   a, a:visited {text-decoration:underline; color:#781351;}
   a[href]:after {content:" (" attr(href) ")"; font-size:80%; font-style:italic;}
   abbr[title]:after {content:" (" attr(title) ")";}
