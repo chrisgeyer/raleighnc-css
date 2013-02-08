@@ -6,7 +6,7 @@ Last Modified:	11.2.2012 (cwg)
 
 /* Establish basic layout elements.
 -------------------------------------------------------------- */
-html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent 
+html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent
 										{margin:0; padding:0;}
 #screenWrapper, .wrapper	{margin:0 auto; width:960px; background:#eee; border:1px solid #666; border-top:0; box-shadow:0px 2px 30px #444;}
 
@@ -15,7 +15,7 @@ html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #gl
 /*Link*/
 a			{color:$link; text-decoration:none;
 	&:visited		{color:lighten($link, 10%);}
-	&:hover, 
+	&:hover,
 	&:focus 		{color:$linkhover; text-decoration:underline; @include transition(color, .4s, linear);}
 	&:active 		{position:relative; top:1px; outline:0;}
 }

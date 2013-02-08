@@ -1,9 +1,9 @@
 /*  sliderkit-core.css
  *	> Core CSS styles
- *  
+ *
  *  This file is part of Slider Kit jQuery plugin.
  *  http://www.kyrielles.net/sliderkit/
- *  
+ *
  *  Copyright (c) 2010-2011 Alan Frog
  *  Licensed under the GNU General Public License
  *  See <license.txt> or <http://www.gnu.org/licenses/>
@@ -47,7 +47,7 @@ border:0;}
 
 /*---------------------------------
  *	News slider > Landing
- *---------------------------------*/	
+ *---------------------------------*/
 .slider {margin:10px auto;width:96%;height:0;padding-bottom:73%;background:transparent url(images/ajax-loader.gif) no-repeat center;}
 .newslider-horizontal{background:#fff;box-shadow:0 3px 10px #999;-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";border-radius:5px;}
 :root .newslider-horizontal {@extend .ie9;}

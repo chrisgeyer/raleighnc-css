@@ -50,18 +50,18 @@
    table {overflow:auto;}
 
   .ss-form-container {width:100%;}
-	
+
 	/*nav hide*/
 	#globalNavArea ul	{clear:both; border-top:1px solid #999;}
 	#globalNavArea #lines	{display:block; line-height:20px; padding:5px; float:right; margin:2%;}
 	#lines img {display:inline; float:left; vertical-align:middle;}
 	#globalNavArea #home	{display:block; line-height:20px; padding:5px; float:left; margin:2%;}
 	#tabsHeader, #col1 {display:none;}
-	
+
 	/*Search*/
 	#screenWrapper #Search h2 {float:none;}
 	#Search #search_stats {margin:10px;}
 	#Search #sidebar {display:none;}
 	#Search #Article, #Search .main-results {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;} // add article to gsa template?
-	.url {word-wrap:break-word;}	
+	.url {word-wrap:break-word;}
 }
