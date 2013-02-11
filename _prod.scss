@@ -29,7 +29,7 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 /*OOCSS*/
 .dotted					{border-bottom:1px dotted #ccc;}
 .underline			{border-bottom:1px solid #ccc;}
-.ie9						{-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(enabled='false')" !important;}						
+.ie9						{-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(enabled='false')" !important;}
 
 /*Links*/
 .storyContentWrapper a:link, .storyContentWrapper a:visited, .content a:link, .content a:visited, table a:link 	{text-decoration:underline;}
@@ -68,28 +68,10 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 
 /*Right Col
 ============*/
-/*Survey - removed Nov 2012
-.surveyDisplayWrapper 	{clear:both; float:left; margin:1%; padding:1%; width:45%;}
-.surveyQuestionGroup 		{margin:10px 0; padding:0;}
-.surveyQuestion 				{color:#7f453b; font-weight:700;}
-.surveyFields input 		{float:left; clear:both; margin:2px 5px;}
-.surveyFieldTitle 			{margin:5px 0;}
-.surveyQuestions p 			{clear:both; margin:0 10px 0 0;}
-.surveyQuestions p:last-child {margin:0;}*/
 .action, .action:visited 	{margin:5%; padding:6px 18px; border:1px solid #666; border-radius:5px; text-shadow:0 1px rgba(0, 0, 0, 0.1); color:#fff; font-size:1.1em; font-weight:700; @include gradient(#B2B2B2, #666665);}
 .action:hover 						{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(#666665, #B2B2B2);}
 .action:active 						{box-shadow:inset 0 1px 2px rgba(0,0,0,0.3)}
 .action img								{display:none;}
-
-/*Most Popular - removed Nov 2012
-#mostPopular li 				{margin:0; padding:2px; background:$green; list-style:none;}
-a.ui-accordion-header 	{padding-left:20px; background:url(images/arrows.png) top left no-repeat; background-position:0 0; width:16px; height:16px; font-size:1.2em; font-weight:700; color:#fff;}
-#mostPopular li.selected {margin:0; padding-top:5px; background:$link;}
-#mostPopular li.selected a.ui-accordion-header {padding-left:20px; background-position:0 -21px; width:16px; height:16px; font-size:1.2em; font-weight:700; color:#fff;}
-#mostPopular ul.subMenu {background:$offwhite;}
-#mostPopular ul.subMenu li {margin:0; padding:5px; background:$offwhite;}
-ul.subMenu li a					{color:$link;}
-ul.subMenu li a:hover 	{color:$linkhover;}*/
 
 /*Popular portlets - april 20012*/
 #popularPages, #popularSearch {margin:10px;}
@@ -127,20 +109,19 @@ li.mRelatedTitle 				{margin:0; padding:0; color:#111; font-weight:700; font-siz
 .related li,
 #Govdelivery li	 				{margin:0; padding:3px; background:$offwhite;}
 
-
 /*Static pages
 ====================*/
 /*Calendar*/
 .calendar					{margin:0 1%;}
 .calendar h1			{font-size:1.3em;}
 #monthDetail 			{@extend #sidebar;}
-.calTopic01, 
-.calTopic02, 
+.calTopic01,
+.calTopic02,
 .calTopic04 			{padding:0; background:#29527a; border-right:2px solid #f1f1f1; color:#fff;}
 .calTopic02 			{background:#A32929;}
 .calTopic04 			{background:#0D7813;}
 #calFrame					{margin-left:-1%; width:69%; height:500px;}
-.calTopicFullScreen 	{display:none;}	
+.calTopicFullScreen 	{display:none;}
 
 /*Contact Directory - nov 2012*/
 #contactForm	{margin:20px 10px; padding:10px; background:#fff; border:2px solid #ddd; border-radius:10px; box-shadow:1px 2px 10px #ccc; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";}
@@ -169,8 +150,8 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 ================*/
 .landing {text-align:center; font-size:2em;}
 
-/*Main Feature*/
-.landingPg 						{/*margin:0 auto; padding:0; width:555px; height:440px;*/ position:relative;}	
+/*Main Feature
+.landingPg 						{position:relative;}
 .mFeatureDescTxt 			{width:88%; height:70px; position:absolute; left:5%; bottom:40px; z-index:9; @extend .align-center;}
 .mFeatureDescTxt a 		{color:#fff; font-size:1.4em; text-decoration:underline;}
 .mFeatureDescTxt a:hover {color:#ddd;}
@@ -178,15 +159,14 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 :root .mFeatureMainImg {@extend .ie9;}
 .mFeatureMainImg img 	{width:100%;}
 .mFeatureDescBlkBg 		{width:91%; height:85px; position:absolute; left:4.5%; bottom:30px; background:#222; opacity:0.6; -ms-filter:"alpha(opacity=60)";}
-
-/*Feature Table*/
+Feature Table
 .twoCol 	{margin:0 2%; border:0; @extend .dotted;}
 .twoCol td,
 .twoColImage table {border:0;}
 .twoColImage img {width:135px;}
 .shadow 	{padding:3px; background:#fff; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)"; border-radius:5px;}
 :root .shadow {@extend .ie9;}
-.twoColTextNarrow {width:25%; padding:1%;}
+.twoColTextNarrow {width:25%; padding:1%;}*/
 
 /*News & Events
 ================*/
@@ -226,14 +206,14 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .rsssharing img {vertical-align:middle; width:40px;}
 
 /*News sidebar*/
-#sidebar .mainarticlelinks, 
+#sidebar .mainarticlelinks,
 #sidebar .maineventslinks {clear:both; float:none; margin:0; width:98%;}
-#sidebar .mainarticlelinks h2, 
+#sidebar .mainarticlelinks h2,
 #sidebar .maineventslinks h2 {float:none; margin:0;}
 #sidebar .mainRss {display:none;}
-#sidebar .mainarticlelinks ul, 
+#sidebar .mainarticlelinks ul,
 #sidebar .maineventslinks ul {margin:0 5px 0 0;}
-#sidebar .mainarticlelinks li, 
+#sidebar .mainarticlelinks li,
 #sidebar .maineventslinks li {padding:6px 0;}
 #sidebar .malDate {display:block;}
 #sidebar .more {margin-right:10px;}
@@ -278,9 +258,9 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .empJump li a 				{float:left; margin:0 15px 20px 0; text-decoration:underline;}
 .employmentType h3 		{clear:both; margin:15px 0 5px;}
 .empTitle 						{clear:both; margin:0 10px 3px 0; float:left; display:inline; font-size:1.167em; font-weight:700;}
-.empClose, 
-.empDept, 
-.empNo, 
+.empClose,
+.empDept,
+.empNo,
 .empSalary 						{float:left; margin:0 0 15px 10px;}
 .empSalary						{clear:both; margin-left:0;}
 .empClose							{@extend .quiet; margin:3px 0 0 0;}
@@ -288,7 +268,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 
 /*Job page*/
 .storyContentWrapper .job li, .content .job li {list-style:none; padding:5px;}
-.employmentRequirements li, 
+.employmentRequirements li,
 .employmentDuties li 	{margin-left:20px;list-style-type:disc;}
 .employmentDisclaimer {margin-top:20px; color:#666;}
 
@@ -299,7 +279,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 #sidebar .empNo,
 #sidebar .empSalary,
 #sidebar .empDept,
-#sidebar div[style]	{display:none;}
+#sidebar div[style], #sidebar #04, .empNone:last-child	{display:none;}
 #sidebar #top h1	{margin-left:-20px; padding:5px 20px; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 #sidebar #top h1:after {content:" "; background:url(images/ribbon-right.png); display:block; width:10px; height:10px; position:absolute; bottom:0; right:0; margin-bottom:-10px;}
 // #sidebar .employmentType h3 {font-size:1.4em;}
@@ -322,15 +302,16 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .largeimage .photoslider-1click-slideshow img {height:408px;}
 .smallimage					{float:left; margin:0 15px 10px 0; width:50%;}
 .smallimage .photoslider-1click-slideshow img {height:210px;}
+#col2 .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .smallimage .sliderkit-panel .sliderkit-panel-overlay {padding-bottom:20%;}
 .largeimage img, .smallimage img	{width:100%;}
-.slideshow .lightbox{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
+.lightbox{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 .section						{clear:both; margin:1.5em 0;}
 .callout						{margin:1em; padding:.5em; background:#fff; border:2px solid #e96629; border-radius:10px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";}
 :root .callout {@extend .ie9;}
 .callout img				{max-width:98%;}
 .section img				{padding:5px; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999; -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";}
 :root .section img {@extend .ie9;}
-.section img.left, 
+.section img.left,
 .section img.right 	{margin:0 10px 10px;}
 .section h3					{@extend .dotted;}
 .callout h3					{border:0;}
