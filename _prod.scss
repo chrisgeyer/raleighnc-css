@@ -246,7 +246,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .contact					{@extend .callout;}
 #col2 .contact		{margin-top:2em; border:2px solid #ccc;}
 .contact img.left	{width:43%; margin-left:0;}
-.bio							{@extend .rsssharing;}
+.bio							{clear:both;}
 
 /*Department*/
 .deptBodyTable, .deptBodyTable td {border:0;}
