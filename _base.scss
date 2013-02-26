@@ -6,7 +6,7 @@ Last Modified:	11.2.2012 (cwg)
 
 /* Establish basic layout elements.
 -------------------------------------------------------------- */
-html, body, #Main, #Article, #sidebar, #screenWrapper, #navigation, #header, #globalNavArea, #contentArea, #contentAreaGSA, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent
+html, body, #Main, #Article, #Sidebar, #sidebar, #screenWrapper, .wrapper, #navigation, #header, #globalNavArea, #contentArea, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent
 										{margin:0; padding:0;}
 #screenWrapper, .wrapper	{margin:0 auto; width:960px; background:#eee; border:1px solid #666; border-top:0; box-shadow:0px 2px 30px #444;}
 
@@ -23,7 +23,7 @@ a			{color:$link; text-decoration:none;
 
 /* Header elements.
 -------------------------------------------------------------- */
-#header 						{height:110px; background:#eee url(images/logo.png) top left no-repeat; background-position:50%; background-size:cover; overflow:hidden; position:relative; color:#fff;}
+#header 						{height:110px; background:transparent url(images/logo.png) top left no-repeat; background-position:50%; background-size:cover; overflow:hidden; position:relative; color:#fff;}
 #header a						{color:#fff; text-decoration:underline;}
 
 #city_seal					{width:45%; cursor:pointer;}
@@ -31,15 +31,17 @@ a			{color:$link; text-decoration:none;
 .cityOfRaleigh 			{margin:30px 0 0 5px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#333333)"; color:#fff;}
 .cityOfRaleigh:hover{cursor:pointer; font-size:3.2em; @include transition(font-size, .4s, ease-in-out);}
 
-.topLinks, #fontsizer, #rssLayer, #searchBoxArea {position:absolute; right:25px;}
+.topLinks, #fontsizer, #Weather, #searchBoxArea {position:absolute; right:10px;}
 
-.topLinks 					{top:5px; right:0; display:none;}
+.topLinks 					{top:5px;}
 .topLinks li 				{float:left; padding:0 15px; border-right:1px solid #666;}
 .topLinks li:last-child {border-right:none;}
 
-#rssLayer 					{top:10px; right:150px;}
+#Weather 						{right:27%;}
+#Weather img 				{float:left; margin-top:-1%; width:40%;}
+.temp								{font-size:2.2em;}
 
-#fontsizer 					{top:10px;}
+#fontsizer 					{top:10px; display:none;}
 #fontsizer span			{cursor:pointer;}
 
 #searchBoxArea 			{bottom:15px; right:0; width:35%;}
@@ -49,7 +51,7 @@ a			{color:$link; text-decoration:none;
 #executeSEearch:hover, #executeSearch:hover {@extend .action:hover;}
 #executeSEearch:active, #executeSearch:active {@extend .action:active;}
 
-#advSearch a 				{clear:both; float:left; color:#888; text-decoration:none; font-size:0.9em;}
+#advSearch a 				{clear:both; float:left; color:#888; text-decoration:none; font-size:0.9em; display:none;}
 
 
 /* Main navigation elements.
