@@ -6,7 +6,7 @@ Last Modified:	11.2.2012 (cwg)
 
 /* Establish basic layout elements.
 -------------------------------------------------------------- */
-html, body, #Main, #Article, #Sidebar, #sidebar, #screenWrapper, .wrapper, #navigation, #header, #globalNavArea, #contentArea, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent
+html, body, #Main, #Article, #Sidebar, #sidebar, #screenWrapper, .wrapper, #navigation, #header, #Header, #globalNavArea, #Nav, #contentArea, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent
 										{margin:0; padding:0;}
 #screenWrapper, .wrapper	{margin:0 auto; width:960px; background:#eee; border:1px solid #666; border-top:0; box-shadow:0px 2px 30px #444;}
 
@@ -20,51 +20,47 @@ a			{color:$link; text-decoration:none;
 	&:active 		{position:relative; top:1px; outline:0;}
 }
 
-
 /* Header elements.
 -------------------------------------------------------------- */
-#header 						{height:110px; background:transparent url(images/logo.png) top left no-repeat; background-position:50%; background-size:cover; overflow:hidden; position:relative; color:#fff;}
-#header a						{color:#fff; text-decoration:underline;}
+#header, #Header 		{height:110px; background:transparent url(images/logo.png) top left no-repeat; background-position:50%; background-size:cover; overflow:hidden; position:relative; color:#fff;}
+#header a, #Header a	{color:#fff; text-decoration:underline;}
 
-#city_seal					{width:45%; cursor:pointer;}
-#city_seal img 			{float:left; margin:4px 0 0 10px;}
-.cityOfRaleigh 			{margin:30px 0 0 5px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#333333)"; color:#fff;}
-.cityOfRaleigh:hover{cursor:pointer; font-size:3.2em; @include transition(font-size, .4s, ease-in-out);}
+#city_seal, #CitySeal			{width:45%; cursor:pointer;}
+#city_seal img, .logo 		{float:left; margin:4px 0 0 10px;}
+.cityOfRaleigh, .raleigh 	{margin:30px 0 0 5px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#333333)"; color:#fff;}
+.cityOfRaleigh:hover, .raleigh:hover{cursor:pointer; font-size:3.2em; @include transition(font-size, .4s, ease-in-out);}
 
-.topLinks, #fontsizer, #Weather, #searchBoxArea {position:absolute; right:10px;}
+.topLinks, .utility, #fontsizer, .sizer, #rssLayer, #Weather, #searchBoxArea, #SearchBox {position:absolute; right:2%;}
 
-.topLinks 					{top:5px;}
-.topLinks li 				{float:left; padding:0 15px; border-right:1px solid #666;}
-.topLinks li:last-child {border-right:none;}
+.topLinks, .utility 					{top:5%; display:none;}
+.topLinks li, .utility li 		{float:left; padding:0 15px; border-right:1px solid #666;}
+.topLinks li:last-child, .utility li:last-child {border-right:none;}
 
-#Weather 						{right:27%;}
-#Weather img 				{float:left; margin-top:-1%; width:40%;}
-.temp								{font-size:2.2em;}
+#rssLayer, #Weather 					{top:5%; right:14%;}
+#rssLayer img, #Weather img 	{float:left; margin:-1% -10% 0 0; width:40%;}
+.temp													{font-size:1.5em;}
 
-#fontsizer 					{top:10px; display:none;}
-#fontsizer span			{cursor:pointer;}
+#fontsizer, .sizer 						{top:10%;}
+#fontsizer span, .sizer span	{cursor:pointer;}
 
-#searchBoxArea 			{bottom:15px; right:0; width:35%;}
-#searchInput 				{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fff url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
-#searchInput:focus	{box-shadow: 0 0 5px rgba(81, 203, 238, 1);}
-#executeSEearch, #executeSearch {float:left; margin:-1px 0; padding:7px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; color:#fff; font-size:1.1em; font-weight:700; @include gradient(#B2B2B2, #666665);}
-#executeSEearch:hover, #executeSearch:hover {@extend .action:hover;}
-#executeSEearch:active, #executeSearch:active {@extend .action:active;}
-
-#advSearch a 				{clear:both; float:left; color:#888; text-decoration:none; font-size:0.9em; display:none;}
-
+#searchBoxArea, #SearchBox 		{bottom:15%; right:0; width:35%;}
+#searchInput, #SearchInput 		{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fff url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
+#searchInput:focus, #SearchInput:focus	{box-shadow:0 0 5px rgba(81, 203, 238, 1);}
+#SearchBox .action 						{float:left; margin:-1px 0; padding:7px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)";}
+// #executeSEearch:hover, #executeSearch:hover {@extend .action:hover;}
+// #executeSEearch:active, #executeSearch:active {@extend .action:active;}
+// #advSearch a 	{clear:both; float:left; color:#888; text-decoration:none; font-size:0.9em; display:none;}
 
 /* Main navigation elements.
 -------------------------------------------------------------- */
-#globalNavArea 						{float:left; width:100%; border-top:1px solid #999; position:relative; box-shadow:0 5px 5px #aaa; @include gradient(#515a52, #293129);}
-#globalNavArea li 				{float:left; border-right:1px solid #999; text-align:center; @include transition(background, .2s, ease-in-out);}
-#tabSelected 							{font-weight:700; @include gradient($link, lighten($link, 10%));}
-#globalNavArea a 					{padding:14px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; text-decoration:none;}
-#tabsHeader li:hover			{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
-#tabSelected a:hover, #tabSelected:hover a {font-weight:700; color:#fff;}
-#globalNavArea li:last-child {border-right:none;}
-
-#lines, #home	{display:none;}
+#globalNavArea, #Nav 				{float:left; width:100%; border-top:1px solid #999; position:relative; box-shadow:0 5px 5px #aaa; @include gradient(#515a52, #293129);}
+#lines, #home, #Lines, #Home{display:none;}
+#globalNavArea li, #Nav li 	{float:left; border-right:1px solid #999; text-align:center; @include transition(background, .2s, ease-in-out);}
+#tabSelected, .current 			{font-weight:700; @include gradient($link, lighten($link, 10%));}
+#globalNavArea a, #Nav a 		{padding:14px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; text-decoration:none;}
+#tabsHeader li:hover, #Nav li:hover	{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
+#tabSelected a:hover, #tabSelected:hover a, .current a:hover, .current:hover a  {font-weight:700; color:#fff;}
+#globalNavArea li:last-child, #Nav li:last-child {border-right:none;}
 
 /* Main content areas.
 -------------------------------------------------------------- */
@@ -74,8 +70,7 @@ a			{color:$link; text-decoration:none;
 #col3 				{float:right; width:20%;}
 #col2Large 		{float:left; width:78.5%;}
 #Article 			{float:left; margin:0 1% 0 0; width:70%; min-height:540px; position:relative;}
-#sidebar 			{float:left; width:29%;}
-
+#sidebar, #Sidebar 			{float:left; width:29%;}
 
 /* Footer elements.
 -------------------------------------------------------------- */
