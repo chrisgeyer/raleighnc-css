@@ -48,6 +48,14 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 
 /*Left Col
 ===========*/
+.icons 								{height:55px;}
+.icons a 							{float:left; margin:1%; width:31%; line-height:30px; text-align:center;}
+.sprites 							{background:url(images/sprites.png) no-repeat;}
+.icon 								{width:36px; height:37px;}
+.icon-calendar 				{background-position:-8.5% 27%; @extend .sprites; @extend .icon;}
+.icon-location 				{background-position:-8.5% 54%; @extend .sprites; @extend .icon;}
+.icon-user 						{background-position:-8.5% 80%; @extend .sprites; @extend .icon;}
+
 /*Department dropdown*/
 .deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 10px; @extend .dotted;}
 #deptSelector select 	{width:95%; /*border:1px solid #333;*/}
