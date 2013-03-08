@@ -22,12 +22,12 @@ a			{color:$link; text-decoration:none;
 
 /* Header elements.
 -------------------------------------------------------------- */
-#header, #Header 		{height:110px; background:transparent url(images/logo.png) top left no-repeat; background-position:50%; background-size:cover; overflow:hidden; position:relative; color:#fff;}
+#header, #Header 		{height:110px; background:$link url(images/logo.png) top left no-repeat; background-position:50%; background-size:cover; overflow:hidden; position:relative; color:#fff;}
 #header a, #Header a	{color:#fff; text-decoration:underline;}
 
 #city_seal, #CitySeal			{width:45%; cursor:pointer;}
 #city_seal img, .logo 		{float:left; margin:4px 0 0 10px;}
-.cityOfRaleigh, .raleigh 	{margin:30px 0 0 5px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#333333)"; color:#fff;}
+.cityOfRaleigh, .raleigh 	{margin:30px 0 0 5px; font:2.8em "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#333333)"; color:#fff; @include transition(font-size, .4s, ease-in-out);}
 .cityOfRaleigh:hover, .raleigh:hover{cursor:pointer; font-size:3.2em; @include transition(font-size, .4s, ease-in-out);}
 
 .topLinks, .utility, #fontsizer, .sizer, #rssLayer, #Weather, #searchBoxArea, #SearchBox {position:absolute; right:2%;}
@@ -44,7 +44,7 @@ a			{color:$link; text-decoration:none;
 #fontsizer span, .sizer span	{cursor:pointer;}
 
 #searchBoxArea, #SearchBox 		{bottom:15%; right:0; width:35%;}
-#searchInput, #SearchInput 		{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fff url(images/google.png) left no-repeat; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
+#searchInput, #SearchInput 		{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fff url(images/sprites.png) left no-repeat; background-position:0 0; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
 #searchInput:focus, #SearchInput:focus	{box-shadow:0 0 5px rgba(81, 203, 238, 1);}
 #SearchBox .action 						{float:left; margin:-1px 0; padding:7px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)";}
 // #executeSEearch:hover, #executeSearch:hover {@extend .action:hover;}
@@ -55,6 +55,7 @@ a			{color:$link; text-decoration:none;
 -------------------------------------------------------------- */
 #globalNavArea, #Nav 				{float:left; width:100%; border-top:1px solid #999; position:relative; box-shadow:0 5px 5px #aaa; @include gradient(#515a52, #293129);}
 #lines, #home, #Lines, #Home{display:none;}
+// #Lines 											{background:url(images/sprites.png) no-repeat; background-position:0 -200px; width:35px; height:23px;}
 #globalNavArea li, #Nav li 	{float:left; border-right:1px solid #999; text-align:center; @include transition(background, .2s, ease-in-out);}
 #tabSelected, .current 			{font-weight:700; @include gradient($link, lighten($link, 10%));}
 #globalNavArea a, #Nav a 		{padding:14px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; text-decoration:none;}
