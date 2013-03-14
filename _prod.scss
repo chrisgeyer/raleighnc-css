@@ -52,9 +52,9 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 .icons a 							{float:left; margin:1%; width:31%; line-height:30px; text-align:center;}
 .sprites 							{background:url(images/sprites.png) no-repeat;}
 .icon 								{width:36px; height:37px;}
-.icon-calendar 				{background-position:-8.5% 27%; @extend .sprites; @extend .icon;}
-.icon-location 				{background-position:-8.5% 54%; @extend .sprites; @extend .icon;}
-.icon-user 						{background-position:-8.5% 80%; @extend .sprites; @extend .icon;}
+.icon-calendar 				{background-position:-1.5% 11.75%; @extend .sprites; @extend .icon;}
+.icon-location 				{background-position:-1.5% 23%; @extend .sprites; @extend .icon;}
+.icon-user 						{background-position:-1.5% 34%; @extend .sprites; @extend .icon;}
 
 /*Department dropdown*/
 .deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 10px; @extend .dotted;}
@@ -318,8 +318,10 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .section img.left,
 .section img.right 	{margin:0 10px 10px;}
 .section h3					{@extend .dotted;}
-.callout h3					{border:0;}
+.callout h3					{border:0; color:#111;}
 .accent							{color:#7f453b;}
+.arrow							{padding-left:30px; @extend .sprites; background-position:3.5% 45%; @include transition(background-position, .4s, ease-in-out);}
+.arrow.expand				{background-position:3.5% 55%; @include transition(background-position, .4s, ease-in-out);}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid #657838;}
