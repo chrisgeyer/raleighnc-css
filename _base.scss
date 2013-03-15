@@ -43,7 +43,7 @@ a			{color:$link; text-decoration:none;
 #fontsizer, .sizer 						{top:10%;}
 #fontsizer span, .sizer span	{cursor:pointer;}
 
-#searchBoxArea, #SearchBox 		{bottom:20%; right:0; width:35%;}
+#searchBoxArea, #SearchBox 		{bottom:25%; right:0; width:35%;}
 #searchInput, #SearchInput 		{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fff url(images/sprites.png) left no-repeat; background-position:0 0; border:0; border-radius:3px 0 0 3px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
 #searchInput:focus, #SearchInput:focus	{box-shadow:0 0 5px rgba(81, 203, 238, 1);}
 #SearchBox .action 						{float:left; margin:-1px 0; padding:7px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)";}

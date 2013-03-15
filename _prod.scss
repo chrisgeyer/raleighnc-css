@@ -38,7 +38,8 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 
 /*Pages*/
 .landingMainWindow, .storyContentWrapper, .content {background:#eee;}
-.storyContentWrapper, .content {margin:0 auto; padding-top:30px; width:565px; font-size:1.1em;}
+.storyContentWrapper, .content {margin:0 auto; padding-top:30px; width:565px; font-size:1.15em;}
+#col3, #sidebar, #Sidebar {font-size:1.05em;}
 #Article .storyContentWrapper, #Article .content {width:100%; padding:0;}
 #storyContentWrapper {padding:0 20px;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
@@ -58,7 +59,7 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 
 /*Department dropdown*/
 .deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 10px; @extend .dotted;}
-#deptSelector select 	{width:95%; /*border:1px solid #333;*/}
+#deptSelector select 	{width:95%;}
 
 /*Left Nav*/
 .leftnav 							{padding:10px;}
