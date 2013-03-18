@@ -321,7 +321,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .section h3					{@extend .dotted;}
 .callout h3					{border:0; color:#111;}
 .accent							{color:#7f453b;}
-.arrow							{padding-left:30px; @extend .sprites; background-position:3.5% 45%; @include transition(background-position, .4s, ease-in-out);}
+.arrow							{width:0; height:0; border-top:10px solid transparent; border-bottom:10px solid transparent; border-left:10px solid $link;}
 .arrow.expand				{background-position:3.5% 55%; @include transition(background-position, .4s, ease-in-out);}
 
 /*Status - oct 2012*/
