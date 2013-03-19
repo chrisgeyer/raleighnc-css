@@ -319,11 +319,11 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .section img.left,
 .section img.right 	{margin:0 10px 10px;}
 .section h3					{@extend .dotted;}
-.callout h3					{border:0; color:#111;}
+.callout h3					{border:0; color:#111; background:#fff;}
 .accent							{color:#7f453b;}
-.expand							{margin:0; padding:3px 5px; background:#ddd; border:none; border-radius:10px; cursor:pointer;}
-.arrow							{margin-right:5px; width:0; height:0; border-top:10px solid $link; border-right:10px solid transparent; border-bottom:none; border-left:10px solid transparent; display:inline-block; vertical-align:middle;}
-.expand .arrow			{border-top:10px solid transparent; border-right:none; border-bottom:10px solid transparent; border-left:10px solid $link;}
+.close							{margin:0; padding:3px 5px; background:#ddd; border:none; border-radius:10px; cursor:pointer;}
+.arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px solid transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
+.close .arrow			{border-top:8px solid transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $link;}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid #657838;}
