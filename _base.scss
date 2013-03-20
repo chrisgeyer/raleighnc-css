@@ -13,7 +13,7 @@ html, body, #Main, #Article, #Sidebar, #sidebar, #screenWrapper, .wrapper, #navi
 /* Text elements.
 -------------------------------------------------------------- */
 /*Link*/
-a			{color:$link; text-decoration:none;
+a			{color:$link; text-decoration:none; @include transition(color, .4s, linear);
 	&:visited		{color:lighten($link, 10%);}
 	&:hover,
 	&:focus 		{color:$linkhover; text-decoration:underline; @include transition(color, .4s, linear);}
