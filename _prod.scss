@@ -38,7 +38,8 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 
 /*Pages*/
 .landingMainWindow, .storyContentWrapper, .content {background:#eee;}
-.storyContentWrapper, .content {margin:0 auto; padding-top:30px; width:565px; font-size:1.1em;}
+.storyContentWrapper, .content {margin:0 auto; padding-top:30px; width:565px; font-size:1.15em;}
+#col3, #sidebar, #Sidebar {font-size:1.05em;}
 #Article .storyContentWrapper, #Article .content {width:100%; padding:0;}
 #storyContentWrapper {padding:0 20px;}
 #col2Large .storyContentWrapper {margin:0; padding:10px; width:auto;}
@@ -48,9 +49,17 @@ h2 img 					{float:left; margin-right:6px; padding-top:4px; vertical-align:middl
 
 /*Left Col
 ===========*/
+.icons 								{height:55px;}
+.icons a 							{float:left; margin:1%; width:31%; line-height:30px; text-align:center;}
+.sprites 							{background:url(images/sprites.png) no-repeat;}
+.icon 								{width:36px; height:37px;}
+.icon-calendar 				{background-position:-1.5% 11.75%; @extend .sprites; @extend .icon;}
+.icon-location 				{background-position:-1.5% 23%; @extend .sprites; @extend .icon;}
+.icon-user 						{background-position:-1.5% 34%; @extend .sprites; @extend .icon;}
+
 /*Department dropdown*/
 .deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 10px; @extend .dotted;}
-#deptSelector select 	{width:95%; /*border:1px solid #333;*/}
+#deptSelector select 	{width:95%;}
 
 /*Left Nav*/
 .leftnav 							{padding:10px;}
@@ -246,7 +255,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .contact					{@extend .callout;}
 #col2 .contact		{margin-top:2em; border:2px solid #ccc;}
 .contact img.left	{width:43%; margin-left:0;}
-.bio							{@extend .rsssharing;}
+.bio							{clear:both;}
 
 /*Department*/
 .deptBodyTable, .deptBodyTable td {border:0;}
@@ -264,6 +273,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .empSalary 						{float:left; margin:0 0 15px 10px;}
 .empSalary						{clear:both; margin-left:0;}
 .empClose							{@extend .quiet; margin:3px 0 0 0;}
+.empNone:last-child		{display:none;}
 #top:hover, #top:active, .employmentType > a:hover, .employmentType > a:active {text-decoration:none;}
 
 /*Job page*/
@@ -274,12 +284,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 
 /*Job sidebar - october 2012*/
 #sidebar .employmentType {padding:0;}
-#sidebar h1 img,
-#sidebar .empJump,
-#sidebar .empNo,
-#sidebar .empSalary,
-#sidebar .empDept,
-#sidebar div[style], #sidebar #04, .empNone:last-child	{display:none;}
+#sidebar h1 img, #sidebar .empJump, #sidebar .empNo, #sidebar .empSalary, #sidebar .empDept, #sidebar div[style] {display:none;}
 #sidebar #top h1	{margin-left:-20px; padding:5px 20px; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 #sidebar #top h1:after {content:" "; background:url(images/ribbon-right.png); display:block; width:10px; height:10px; position:absolute; bottom:0; right:0; margin-bottom:-10px;}
 // #sidebar .employmentType h3 {font-size:1.4em;}
@@ -314,8 +319,11 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .section img.left,
 .section img.right 	{margin:0 10px 10px;}
 .section h3					{@extend .dotted;}
-.callout h3					{border:0;}
+.callout h3					{border:0; color:#111; background:#fff;}
 .accent							{color:#7f453b;}
+.close							{margin:0; padding:3px 5px; background:#ddd; border:none; border-radius:10px; cursor:pointer;}
+.arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px solid transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
+.close .arrow			{border-top:8px solid transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $link;}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid #657838;}

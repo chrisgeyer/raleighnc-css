@@ -1,19 +1,19 @@
 @media only screen and (max-width:480px) {
 	html {-webkit-text-size-adjust:none;}
 	body	{font:87.5%/1.5 Verdana, Geneva, sans-serif;}
-	#screenWrapper {width:auto; overflow:hidden; border:0;}
-	#header {@include gradient(#5c8fea, #2e5baf);}
-	#city_seal img, #fontsizer, #rssLayer, #advSearch, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump, .twoColImage, .lightbox {display:none;}
-	#searchBoxArea, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation {width:100%;}
+	#screenWrapper, .wrapper {width:auto; overflow:hidden; border:0;}
+	#header, #Header {@include gradient(#5c8fea, #2e5baf);}
+	#city_seal img, #CitySeal img, #fontsizer, .sizer, #rssLayer, #Weather, #advSearch, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump, .twoColImage, .lightbox {display:none;}
+	#searchBoxArea, #SearchBox, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation {width:100%;}
 	.newseventlocation li {display:inline;}
 	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
-	#searchInput {width:75%;}
-	#city_seal img {display:block; position:absolute; right:3%; margin:0; padding:0; width:60px;}
-	.cityOfRaleigh {margin-top:10px; font-size:2.5em;}
-	cityOfRaleigh:hover{font-size:2.8em;}
-	#globalNavArea li {width:49%; /*border-right:1px solid #999;*/ border-bottom:1px solid #999;}
-	#globalNavArea li:first-child {display:none;}
-	#globalNavArea li:nth-child(odd) {border-right:0;}
+	#searchInput, #SearchInput {width:75%;}
+	#city_seal img, #CitySeal img {display:block; position:absolute; right:3%; margin:0; padding:0; width:60px;}
+	.cityOfRaleigh, .raleigh {margin-top:10px; font-size:2.5em;}
+	cityOfRaleigh:hover, .raleigh:hover{font-size:2.8em;}
+	#globalNavArea li, #Nav li {width:49%; /*border-right:1px solid #999;*/ border-bottom:1px solid #999;}
+	#globalNavArea li:first-child, #Nav li:first-child {display:none;}
+	#globalNavArea li:nth-child(odd), #Nav li:nth-child(odd) {border-right:0;}
 	#col1, #col2, #col2Large, #col3, #Article, #sidebar, .newseventmap {width:100%; margin:0;}
 	#col2 .updatedDate {position:relative; top:0; left:0;}
 	.storyContentWrapper, .content, #Article .storyContentWrapper {width:95%; padding:0 2.5%;}
@@ -49,19 +49,21 @@
    }
    table {overflow:auto;}
 
-  .ss-form-container {width:100%;}
+  .icon-calendar 				{background-position:-5% 11%;}
+	.icon-location 				{background-position:-5% 22%;}
+	.icon-user 						{background-position:-5% 34%;}
 
 	/*nav hide*/
-	#globalNavArea ul	{clear:both; border-top:1px solid #999;}
-	#globalNavArea #lines	{display:block; line-height:20px; padding:5px; float:right; margin:2%;}
-	#lines img {display:inline; float:left; vertical-align:middle;}
-	#globalNavArea #home	{display:block; line-height:20px; padding:5px; float:left; margin:2%;}
-	#tabsHeader, #col1 {display:none;}
+	#globalNavArea ul, #Nav ul	{clear:both; border-top:1px solid #999;}
+	#globalNavArea #Lines, #Nav #Lines	{display:block; line-height:20px; padding:5px; float:right; margin:2%;}
+	#Lines img {display:inline; float:left; vertical-align:middle;}
+	#globalNavArea #Home, #Nav #Home	{display:block; line-height:20px; padding:5px; float:left; margin:2%;}
+	#tabsHeader, #Nav ul, #col1 {display:none;}
 
 	/*Search*/
-	#screenWrapper #Search h2 {float:none;}
+	#screenWrapper #Search h2, .wrapper #Search h2 {float:none;}
 	#Search #search_stats {margin:10px;}
-	#Search #sidebar {display:none;}
+	#Search #sidebar, #Search #Sidebar {display:none;}
 	#Search #Article, #Search .main-results {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;} // add article to gsa template?
 	.url {word-wrap:break-word;}
 }

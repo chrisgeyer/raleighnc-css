@@ -13,7 +13,7 @@
 .sliderkit {
 	.sliderkit-nav{z-index:10;position:absolute;text-align:center;}
 	.sliderkit-nav-clip{position:relative;overflow:hidden;margin:0 auto;}
-	.sliderkit-nav-clip ul{position:relative;left:0;top:0;list-style:none;margin:0;padding:0;}
+	.sliderkit-nav-clip ul{position:relative;left:0;top:0;margin:0;}
 	.sliderkit-nav-clip ul li{float:left; margin:0 1px 0 0;}
 	.sliderkit-nav-clip ul li a{display:block;overflow:hidden;}
 	.sliderkit-btn{z-index:10;}
@@ -37,7 +37,7 @@
 	.sliderkit-nav-clip li a{display:block;padding:2px 6px;color:#fff;background:#444;font-size:0.8em;
 border:0;}
 	.sliderkit-nav-clip li.sliderkit-selected a{color:#111;background:#fff;}
-	.sliderkit-nav-clip a:hover{color:#fff;background:#00668d;}
+	.sliderkit-nav-clip a:hover{color:#fff;background:$link;}
 	.sliderkit-panel{width:100%;}
 	.sliderkit-panel .sliderkit-panel-textbox{padding-bottom:10%;}
 	.smallimage .sliderkit-panel-textbox{font-size:0.95em;}
@@ -56,8 +56,9 @@ border:0;}
 	/*Nav*/
 	.sliderkit-nav{bottom:5px;right:15px;}
 	// .sliderkit-nav-clip{overflow:visible;} // is this for ie?
-	.sliderkit-nav-clip li a{width:13px;height:13px;background:transparent url(images/bullet-off.png) no-repeat 0 0; text-indent:100px;}
-	.sliderkit-nav-clip .sliderkit-selected a{background:transparent url(images/bullet-on.png) no-repeat 0 0;}
+	.sliderkit-nav-clip ul li{margin:0;}
+	.sliderkit-nav-clip li a{margin-right:2px;width:9px;height:9px;/*background:transparent url(images/bullet-off.png) no-repeat 0 0;*/text-indent:100px;  background:#91caf3;border:1px solid #fff;border-radius:10px;}
+	.sliderkit-nav-clip .sliderkit-selected a{margin:0;background:$link;border:1px solid $link; /*transparent url(images/bullet-on.png) no-repeat 0 0;*/}
 
 	/*Panels*/
 	.sliderkit-panels{margin:2% 3% 4%;width:95%;height:0;padding-bottom:71%;overflow:hidden;position:relative;}
