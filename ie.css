@@ -1,0 +1,5 @@
+/*body {padding-bottom:15px; background:#c3cec5;}
+#screenWrapper, .wrapper {margin:0 auto; width:960px; background:#eee; border:1px solid #666; border-top:0;}*/
+:root #Nav li:first-child a {font-size:0.5em;}
+.arrow 				{border-right:8px solid transparent;}
+.close .arrow {border-top:8px solid transparent;}
