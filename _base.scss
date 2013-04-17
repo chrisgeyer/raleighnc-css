@@ -29,8 +29,8 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 #Header a						{color:#fff; text-decoration:underline;}
 
 #CitySeal						{width:45%; cursor:pointer;}
-.logo 							{float:left; margin:4px 0 0 10px;}
-.raleigh 						{margin:30px 0 0 5px; font-size:2.8em; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 0 #333; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#333333)"; color:#fff; @include transition(font-size, .4s, ease-in-out);}
+.logo 							{float:left; margin:4px 0 0 10px; -webkit-filter:drop-shadow(1px 1px 5px #555); filter:drop-shadow(1px 1px 5px #555);}
+.raleigh 						{margin:30px 0 0 5px; font-size:2.8em; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=2,offY=2,color=#666666)"; color:#fff; @include transition(font-size, .4s, ease-in-out);}
 .raleigh:hover			{cursor:pointer; font-size:3.2em; @include transition(font-size, .4s, ease-in-out);}
 
 .utility, .sizer, #Weather, #SearchBox {position:absolute; right:2%;}
@@ -80,19 +80,20 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 /* Footer elements.
 -------------------------------------------------------------- */
 /*Accolades*/
-#accolade 				{padding:2% 10%; width:80%; border-bottom:1px solid lighten($link, 20%); border-top:1px solid lighten($link, 20%); text-align:center; @include gradient(darken($lightblue, 5%), darken($lightblue, 15%));}
-#accldePre 				{clear:both; text-align:left; font:1.5em bold Arial, "Helvetica Neue", Helvetica, sans-serif; font-weight:700;}
+#accolade 				{padding:1% 10% 2%; width:80%; border-bottom:1px solid lighten($link, 20%); border-top:1px solid lighten($link, 20%); text-align:center; box-shadow:0 4px 4px #aaa; /*@include gradient(darken($lightblue, 5%), darken($lightblue, 15%));*/ @include gradient(#b3c8dc, #9eb7ce); /*@include gradient($link, $lightblue);*/}
+#accldePre 				{clear:both; text-align:left; font:1.5em bold Arial, "Helvetica Neue", Helvetica, sans-serif; font-weight:700; /*font-size:0px;*/}
+// #accldePre:after  {content:"Raleigh is..."; font-size:1.5em;}
 #accolade h2 			{@extend .raleigh; margin:0 5px 0 0; font-size:2em; position:relative;}
 #accolade h2:hover {font-size:2em;}
 .accldeSource 		{font-size:1.08em; font-style:italic; text-align:right; display:inline;}
-#accldeMore a			{float:right; margin:0;}
+#accldeMore a			{float:right; margin:0; color:#7f453b;}
 
 /*Footer*/
-.newfooter 				{margin:0 auto; padding-top:15px; width:70%; text-align:center;}
+#footer 					{margin:0 auto; padding-top:15px; width:70%; text-align:center;}
 .socialmedia 			{width:165px; margin:0 auto;}
 .socialmedia img 	{float:left; margin-right:5px; border-radius:3px; box-shadow:0px 1px 2px #666;} /*ADD SPRITE OR ICONS*/
 .bow 							{width:65%;}
-#hmMenu						{clear:both; margin:20px auto 0;}
-#hmMenu li 				{display:inline; margin:0 10px;}
+.legal						{clear:both; margin:20px auto 0;}
+.legal li 				{display:inline; margin:0 10px;}
 #google_translate_element {margin-top:15px;}
 #copyright 				{padding:10px; color:#666; text-align:center; font-size:0.9em;}

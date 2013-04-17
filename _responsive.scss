@@ -1,6 +1,31 @@
+/*@media only screen and (min-width:1380px) {
+	body {font-size:81.25%;}
+	#screenWrapper, .wrapper, .fixedwidth {width:1220px;}
+	#navigation	{@include gradient(#5487e9, #acb9ce);}
+	#navigation {@include gradient(#2e5baf, #5c8fea);}
+	#Header {background-image:url(images/watermark2.png); background-repeat:no-repeat; background-position:-2% 15%; background-size:400px; -webkit-filter:drop-shadow(1px 1px 5px #555); filter:drop-shadow(1px 1px 5px #555);}
+	#Header .raleigh {margin-left:30%;}
+	.utility {display:block;}
+	.sizer {top:30px;}
+	#SearchBox {bottom:10%;}
+	#Nav li {width:10.3%;}
+	#Nav li:first-child {width:4%;}
+	#Nav li:last-child {border-right:1px solid #515f55;}
+	.logo, .icons {display:none;}
+	.slider {height:519px;}
+	.newslider-horizontal .sliderkit-panels{height:480px;}
+	.newslider-horizontal .sliderkit-panel{height:470px;}
+	#col1 {width:15%;}
+	#col2 {margin-left:1%;}
+	#col3 {width:23%;}
+	.deptDropdown {margin:0; padding:0; border:none;}
+	.deptDropdown h2 {display:none;}
+	#deptSelector select {position:absolute; top:5.5%; right:8%; width:9%; z-index:100;}
+}*/
+
 @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
 	body {background:#eee;}
-	#screenWrapper {border:0; box-shadow:none; width:100%;}
+	#screenWrapper, .wrapper {border:0; box-shadow:none; width:100%;}
 	.fixedwidth {width:100%;}
 	.sizer {display:none;}
 	#Nav li:first-child {width:8%;}
@@ -9,7 +34,7 @@
 	#contentArea {border:0;}
 }
 
-@media only screen and (min-width:41em) and (max-width:60em) {
+@media only screen and (min-width:40em) and (max-width:60em) {
 	body	{font:81.25%/1.5 Verdana, Geneva, sans-serif;}
 	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
 	.fixedwidth {width:100%;}
@@ -32,13 +57,13 @@
 	#col3 {clear:both; width:77%; margin-left:25%;}
 	#right > div {float:left; width:45%; margin:1%; padding:1%;}
 	#accolade {padding-bottom:3%;}
-	.newfooter {width:90%;}
+	#footer {width:90%;}
 }
 
 @media only screen and (max-width:40em) {
 	html {-webkit-text-size-adjust:none;}
 	body	{font:87.5%/1.5 Verdana, Geneva, sans-serif;}
-	#screenWrapper,.wrapper{width:auto; overflow:hidden; border:0;}
+	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
 	.fixedwidth {width:100%;}
 	#Header {@include gradient(#5c8fea, #2e5baf);}
 	#CitySeal img, .sizer, #Weather, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump, .lightbox {display:none;}
@@ -59,7 +84,7 @@
 	.storyContentWrapper, .content, #Article .storyContentWrapper {width:95%; padding:0 2.5%;}
 	#storyContentWrapper {padding:0;}
 	.storyContentWrapper ul, .storyContentWrapper ol, .content ul, .content ol {clear:both;}
-	#right > div, .mainarticlelinks, .maineventslinks, #sidebar .mainarticlelinks, #sidebar .maineventslinks, .surveyDisplayWrapper, .videos, .open, .newfooter {clear:both; float:none; margin:1.5%; padding:1.5%; width:94%; display:block;}
+	#right > div, .mainarticlelinks, .maineventslinks, #sidebar .mainarticlelinks, #sidebar .maineventslinks, .surveyDisplayWrapper, .videos, .open, #footer {clear:both; float:none; margin:1.5%; padding:1.5%; width:94%; display:block;}
 	.storyContentWrapper .callout, .content .callout, #col2 .contact {margin:1%; padding:1%; width:90%;}
 	.largeimage	, .smallimage {float:none; margin:10px auto; width:295px;}
 	.largeimage .photoslider-1click-slideshow img, .smallimage .photoslider-1click-slideshow img {height:240px;}
@@ -80,7 +105,7 @@
 	.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {width:98%; margin-bottom:10px;}
 	.storyContentWrapper ul.individual, .content ul.individual {width:48%;}
 	.storyContentWrapper ul.individual li, .content ul.individual li, .bcmeetinginfo li, .cacmeetinginfo li {margin:0; padding:0;}
-	.newfooter ul {clear:both; width:100%; text-align:center;}
+	#footer ul {clear:both; width:100%; text-align:center;}
 	.bow {width:30%;}
 	.council li {display:inline;}
 	.facility_hours {

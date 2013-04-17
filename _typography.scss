@@ -61,16 +61,10 @@ ul li 	{margin:0; padding:0; list-style:none;}
 -------------------------------------------------------------- */
 // caption 					{background:transparent; font-size:1.25em; font-weight:700;}
 table 						{margin:1.25em 0 1.5em 0; width:100%; border-collapse:collapse; border:1px solid #ccc;}
+table th 					{padding:4px 10px 4px 5px; background:$lightblue; color:#666; font-weight:700; text-align:center;}
 table[border="0"], table[border="0"] td {border:0;}
 table td					{border:1px solid #ccc;}
-// table tr:nth-child(even) {background:#eee;}
-
-// table th 					{padding:4px 10px 4px 5px; background:#efefef repeat-x; color:#666; font-weight:normal; text-align:center;}
-// table td 					{padding:4px 10px 4px 5px; color:#777;}
-// tr:nth-child(even){background:#fff;}
-// tr:nth-child(odd) {background:#eee;}
-// .none							{border:0;}
-// tfoot 						{font-style:italic;}
+table.stripe tr:nth-child(even) {background:#fff;}
 
 /* Messaging
 --------------------------------------------------------------

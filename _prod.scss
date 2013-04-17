@@ -43,11 +43,11 @@ img 						{border:0; max-width:100%;}
 // :root .section .coricon, .coricon {@extend .ie9;}
 
 /*Pages*/
-.storyContentWrapper, .content {margin:0 auto; padding-top:30px; min-width:300px; max-width:700px; font-size:1.15em;}
+.storyContentWrapper, .content {margin:0 auto; padding-top:30px; min-width:300px; max-width:735px; font-size:1.15em; background:#eee;}
 #col3, #sidebar, #Sidebar {font-size:1.05em;}
 #Article .storyContentWrapper, #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
-#col2 .updatedDate {position:absolute; top:3px; left:5px; color:#999;}
+#col2 .updatedDate {position:absolute; top:3px; left:5px; color:#666;}
 #Article .updatedDate{margin:10px 0 20px 0; color:#666;}
 #addThisButtons	{position:absolute; right:10px; top:3px;}
 
@@ -55,13 +55,13 @@ img 						{border:0; max-width:100%;}
 ===========*/
 /*Global*/
 .icons 								{height:55px; @extend .dotted;}
-.icons a 							{float:left; margin:1%; width:31%; /*line-height:30px;*/ text-align:center;}
+.icons a 							{float:left; margin:1% 0; width:31%; /*line-height:30px;*/ text-align:center; text-shadow:1px 1px 1px #ccc;}
 .icons a:hover 				{text-decoration:none;}
 // .sprites 							{background:url(images/sprites.png) no-repeat;}
 // .icon 								{width:36px; height:37px;}
 a.icon-calendar 			{background-position:-1.5% 11.75%; @extend .sprites; @extend .icon; color:$link;}
-a.icon-location 			{background-position:-1.5% 23%; @extend .sprites; @extend .icon; color:$green; margin:1% 0 1% 2%;}
-a.icon-user 					{background-position:-1.5% 34%; @extend .sprites; @extend .icon; color:#7f453b; margin-left:0;}
+a.icon-location 			{background-position:-1.5% 23%; @extend .sprites; @extend .icon; color:$green; margin-left:4%;}
+a.icon-user 					{background-position:-1.5% 34%; @extend .sprites; @extend .icon; color:#7f453b;}
 
 /*Department dropdown*/
 .deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 10px; @extend .dotted;}
@@ -97,7 +97,8 @@ a.icon-user 					{background-position:-1.5% 34%; @extend .sprites; @extend .icon
 .box.related.govdelivery,
 #Govdelivery 						{padding:0.45em; background:#d9decf;}
 .govdelivery h3 				{font-size:1.45em;}
-.related 								{background:$lightblue; border-radius:3px;}
+.related 								{background:$lightblue; border-radius:3px; box-shadow:2px 8px 10px -5px #aaa;}
+// .related:hover          {box-shadow:0 3px 5px #999;}
 .related h3,
 .box.related.govdelivery h3,
 #Govdelivery h3					{margin:0; padding:0; font-size:1.2em;}
@@ -165,7 +166,7 @@ Feature Table
 .mainarticlelinks {float:left; margin:25px 1%; padding:0; width:54%; font-size:1.1em;}
 .mainarticlelinks h2, .maineventslinks h2 {float:left; margin-left:5px;}
 .mainRss img {margin:0 0 0 10px; display:none;}
-.mainRss a	 {@extend .icon-feed; color:$orange; padding:0 5px; font-size:0.8em;}
+.mainRss a	 {@extend .icon-feed; color:$orange; padding:0 5px; font-size:0.8em; text-shadow:1px 1px 1px #ccc;}
 .mainRss a:hover {text-decoration:none;}
 .newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
@@ -313,7 +314,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 
 /*Ally*/
 .ally, .homeicon		{position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
-.homeicon						{*position:relative; *height:auto; *width:auto;} /*IE7/
+.homeicon						{*position:relative; *height:auto; *width:auto;} /*IE7*/
 
 /*Icons*/
 @font-face {
@@ -334,7 +335,9 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 	font-size:2em;
 	-webkit-font-smoothing: antialiased;}
 
-.icon-mail:before {content: "\21"; font-size:1.25em;}
+.action.right:hover .icon-mail {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
+
+.icon-mail:before {content: "\21"; font-size:1.2em; vertical-align:middle; padding-left:3px;}
 .icon-location:before {content: "\22";}
 .icon-calendar:before {content: "\23";}
 .icon-calendar-2:before {content: "\25";}
@@ -345,27 +348,23 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 .icon-file-word:before {content: "\2a";}
 .icon-file-pdf:before {content: "\2b";}
 .icon-file-excel:before {content: "\2c";}
-.icon-envelope:before {content: "\26";}
-.icon-address-book:before {content: "\2d";}
 .icon-user:before {content: "\2e";}
 .icon-play:before {content: "\2f";}
-.icon-calendar-alt-stroke:before {content: "\30";}
-.icon-calendar-alt-fill:before {content: "\31";}
-.icon-location-2:before {content: "\32";}
-.icon-map-pin-fill:before {content: "\33";}
 .icon-lines:before {content: "\34"; vertical-align:middle; font-size:1.5em;}
 .icon-new-tab:before {content: "\35";}
 .icon-new-tab-2:before {content: "\36";}
 .icon-warning:before {content: "\37";}
-.icon-mail-2:before {content: "\38";}
 .icon-play-alt:before {content: "\39";}
 .icon-play-2:before {content: "\3a";}
 .icon-camera:before {content: "\3b";}
 .icon-file-powerpoint:before {content: "\3c";}
 .icon-file-zip:before {content: "\3d";}
-.icon-home:before {content: "\3e"; line-height:38px; vertical-align:sub;}
-.icon-home-2:before {content: "\3f";}
-.icon-home-3:before {content: "\40";}
+.icon-home:before {content: "\3e"; line-height:36px; vertical-align:sub;}
+.icon-document-alt-fill:before {content:"\43";}
+.icon-folder:before {content:"\44";}
+.icon-folder-2:before {content:"\45";}
+.icon-file-powerpoint:before {content:"\3c";}
+.icon-file-zip:before {content:"\3d";}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid #657838;}
