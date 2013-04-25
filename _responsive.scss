@@ -1,25 +1,90 @@
-@media only screen and (max-width:480px) {
+/*@media only screen and (min-width:1380px) {
+	body {font-size:81.25%;}
+	#screenWrapper, .wrapper, .fixedwidth {width:1220px;}
+	#navigation	{@include gradient(#5487e9, #acb9ce);}
+	#navigation {@include gradient(#2e5baf, #5c8fea);}
+	#Header {background-image:url(images/watermark2.png); background-repeat:no-repeat; background-position:-2% 15%; background-size:400px; -webkit-filter:drop-shadow(1px 1px 5px #555); filter:drop-shadow(1px 1px 5px #555);}
+	#Header .raleigh {margin-left:30%;}
+	.utility {display:block;}
+	.sizer {top:30px;}
+	#SearchBox {bottom:10%;}
+	#Nav li {width:10.3%;}
+	#Nav li:first-child {width:4%;}
+	#Nav li:last-child {border-right:1px solid #515f55;}
+	.logo, .icons {display:none;}
+	.slider {height:519px;}
+	.newslider-horizontal .sliderkit-panels{height:480px;}
+	.newslider-horizontal .sliderkit-panel{height:470px;}
+	#col1 {width:15%;}
+	#col2 {margin-left:1%;}
+	#col3 {width:23%;}
+	.deptDropdown {margin:0; padding:0; border:none;}
+	.deptDropdown h2 {display:none;}
+	#deptSelector select {position:absolute; top:5.5%; right:8%; width:9%; z-index:100;}
+}*/
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
+	body {background:#eee;}
+	#screenWrapper, .wrapper {border:0; box-shadow:none; width:100%;}
+	.fixedwidth {width:100%;}
+	.sizer {display:none;}
+	#Nav li:first-child {width:8%;}
+	#Nav li {width:11%;}
+	#Nav a {font-size:1em;}
+	#contentArea {border:0;}
+}
+
+@media only screen and (min-width:40em) and (max-width:60em) {
+	body	{font:81.25%/1.5 Verdana, Geneva, sans-serif;}
+	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
+	.fixedwidth {width:100%;}
+	#addThisButtons {display:none;}
+	#Header {height:80px;}
+	.logo {height:70px;}
+	.raleigh {margin-top:10px;}
+	#SearchBox {bottom:25px; width:44%;}
+	.sizer {display:none;}
+	#Nav li {width:19.85%; border-left:0; border-right:1px solid #999; text-align:center;}
+	#Nav li:nth-child(-n+5) {border-bottom:1px solid #999;}
+	#Nav li:nth-child(5) {border-right:none;}
+	#Nav li:last-child {border-right:1px solid #999;}
+	#col1 {width:23%;}
+	#col2, #col2Large {width:74%;}
+	#col3:before {display:none;}
+	.icons {font-size:0.9em;}
+	.videos {width:51%;}
+	.storyContentWrapper, .content {width:98%;}
+	#col3 {clear:both; width:77%; margin-left:25%;}
+	#right > div {float:left; width:45%; margin:1%; padding:1%;}
+	#accolade {padding-bottom:3%;}
+	#footer {width:90%;}
+}
+
+@media only screen and (max-width:40em) {
 	html {-webkit-text-size-adjust:none;}
 	body	{font:87.5%/1.5 Verdana, Geneva, sans-serif;}
-	#screenWrapper, .wrapper {width:auto; overflow:hidden; border:0;}
-	#header, #Header {@include gradient(#5c8fea, #2e5baf);}
-	#city_seal img, #CitySeal img, #fontsizer, .sizer, #rssLayer, #Weather, #advSearch, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump, .twoColImage, .lightbox {display:none;}
-	#searchBoxArea, #SearchBox, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation {width:100%;}
+	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
+	.fixedwidth {width:100%;}
+	#Header {@include gradient(#5c8fea, #2e5baf);}
+	#CitySeal img, .sizer, #Weather, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump, .lightbox {display:none;}
+	#SearchBox, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation {width:100%;}
 	.newseventlocation li {display:inline;}
 	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
-	#searchInput, #SearchInput {width:75%;}
-	#city_seal img, #CitySeal img {display:block; position:absolute; right:3%; margin:0; padding:0; width:60px;}
-	.cityOfRaleigh, .raleigh {margin-top:10px; font-size:2.5em;}
-	cityOfRaleigh:hover, .raleigh:hover{font-size:2.8em;}
-	#globalNavArea li, #Nav li {width:49%; /*border-right:1px solid #999;*/ border-bottom:1px solid #999;}
-	#globalNavArea li:first-child, #Nav li:first-child {display:none;}
-	#globalNavArea li:nth-child(odd), #Nav li:nth-child(odd) {border-right:0;}
-	#col1, #col2, #col2Large, #col3, #Article, #sidebar, .newseventmap {width:100%; margin:0;}
+	#SearchBox {bottom:10%;}
+	#SearchInput {width:75%;}
+	#CitySeal img {display:block; position:absolute; right:3%; margin:0; padding:0; width:60px;}
+	.raleigh {margin-top:10px; font-size:2.5em;}
+	.raleigh:hover{font-size:2.8em;}
+	#Nav li {width:49%; /*border-right:1px solid #999;*/ border-bottom:1px solid #999;}
+	#Nav li:first-child {display:none;}
+	#Nav li:nth-child(odd) {border-right:0;}
+	.icons {font-size:0.9em;}
+	#col1, #col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {width:100%; margin:0;}
 	#col2 .updatedDate {position:relative; top:0; left:0;}
 	.storyContentWrapper, .content, #Article .storyContentWrapper {width:95%; padding:0 2.5%;}
 	#storyContentWrapper {padding:0;}
 	.storyContentWrapper ul, .storyContentWrapper ol, .content ul, .content ol {clear:both;}
-	#right > div, .mainarticlelinks, .maineventslinks, #sidebar .mainarticlelinks, #sidebar .maineventslinks, .surveyDisplayWrapper, .videos, .open, .newfooter {clear:both; float:none; margin:1.5%; padding:1.5%; width:94%; display:block;}
+	#right > div, .mainarticlelinks, .maineventslinks, #sidebar .mainarticlelinks, #sidebar .maineventslinks, .surveyDisplayWrapper, .videos, .open, #footer {clear:both; float:none; margin:1.5%; padding:1.5%; width:94%; display:block;}
 	.storyContentWrapper .callout, .content .callout, #col2 .contact {margin:1%; padding:1%; width:90%;}
 	.largeimage	, .smallimage {float:none; margin:10px auto; width:295px;}
 	.largeimage .photoslider-1click-slideshow img, .smallimage .photoslider-1click-slideshow img {height:240px;}
@@ -34,13 +99,13 @@
 	.employmentType {padding-left:0;}
 	.empClose, .empNo, .empSalary, .empDept {clear:both; margin:0 0 5px 0;}
 	#accldePre {text-align:center;}
-	.landing, .mFeatureDescTxt a {font-size:1.2em;}
-	.mFeatureDescBlkBg {margin-left:1%;}
+	#accolade h2, #accolade h2:hover {font-size:2em;}
+	.landing {font-size:1.2em;}
 	#monthDetail, #calFrame {clear:both; width:100%;}
 	.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {width:98%; margin-bottom:10px;}
 	.storyContentWrapper ul.individual, .content ul.individual {width:48%;}
 	.storyContentWrapper ul.individual li, .content ul.individual li, .bcmeetinginfo li, .cacmeetinginfo li {margin:0; padding:0;}
-	.newfooter ul {clear:both; width:100%; text-align:center;}
+	#footer ul {clear:both; width:100%; text-align:center;}
 	.bow {width:30%;}
 	.council li {display:inline;}
 	.facility_hours {
@@ -54,11 +119,13 @@
 	.icon-user 						{background-position:-5% 34%;}
 
 	/*nav hide*/
-	#globalNavArea ul, #Nav ul	{clear:both; border-top:1px solid #999;}
-	#globalNavArea #Lines, #Nav #Lines	{display:block; line-height:20px; padding:5px; float:right; margin:2%;}
-	#Lines img {display:inline; float:left; vertical-align:middle;}
-	#globalNavArea #Home, #Nav #Home	{display:block; line-height:20px; padding:5px; float:left; margin:2%;}
-	#tabsHeader, #Nav ul, #col1 {display:none;}
+	#Nav ul	{clear:both; border-top:1px solid #999;}
+	#Nav #Lines	{display:block; line-height:20px; padding:5px; float:right; margin:2%; @extend .icon-lines;}
+	#Lines img {display:inline; float:left; vertical-align:middle; display:none;}
+	#Nav #Home	{display:block; line-height:20px; padding:5px; float:left; margin:2%; @extend .icon-home;}
+	.icon-home:before {line-height:20px; margin-right:5%; vertical-align:middle;}
+	#Nav ul, #col1 {display:none;}
+	.fixed {position:relative !important;}
 
 	/*Search*/
 	#screenWrapper #Search h2, .wrapper #Search h2 {float:none;}
