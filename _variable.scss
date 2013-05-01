@@ -5,6 +5,7 @@ $green:#657838;
 $orange:#ee6d2b;
 $offwhite:#f7f7f7;
 $lightblue:#d7e2f1;
+$header:#0069af;
 
 @mixin gradient ($start:#ffffff, $stop:#ffffff) {
 	background-color:mix($start, $stop);

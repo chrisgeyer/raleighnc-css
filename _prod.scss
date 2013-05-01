@@ -1,7 +1,5 @@
 /*Main CSS
 ============*/
-body {padding-bottom:15px; background:lighten(#b5c2b7, 7%);}
-
 /*Generic classes*/
 .cf							{overflow:hidden;}
 .hidden 				{display:none;}
@@ -43,7 +41,7 @@ img 						{border:0; max-width:100%;}
 // :root .section .coricon, .coricon {@extend .ie9;}
 
 /*Pages*/
-.storyContentWrapper, .content {margin:0 auto; padding-top:30px; min-width:300px; max-width:735px; font-size:1.15em; background:#eee;}
+.storyContentWrapper, .content {margin:0 auto; padding-top:30px; min-width:300px; max-width:735px; font-size:1.15em; /*background:#eee;*/}
 #col3, #sidebar, #Sidebar {font-size:1.05em;}
 #Article .storyContentWrapper, #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
@@ -75,6 +73,7 @@ a.icon-user 					{background-position:-1.5% 34%; @extend .sprites; @extend .icon
 #sidebar .leftnav h3:first-child {margin-top:0;}
 #sidebar .leftnav ul	{margin:0 0 10px -25px; background:#ddd; padding:10px}
 .leftnav li 					{margin:0 0 6px 0; list-style-type:none;}
+#col1 .leftnav 				{padding:0;}
 #col1 .leftnav ul			{margin:0 0 10px 0;}
 
 /*old leftnav*/
@@ -97,7 +96,7 @@ a.icon-user 					{background-position:-1.5% 34%; @extend .sprites; @extend .icon
 .box.related.govdelivery,
 #Govdelivery 						{padding:0.45em; background:#d9decf;}
 .govdelivery h3 				{font-size:1.45em;}
-.related 								{background:$lightblue; border-radius:3px; box-shadow:2px 8px 10px -5px #aaa;}
+.related 								{background:lighten($header, 40%); border-radius:3px; box-shadow:2px 8px 10px -5px #aaa;}
 // .related:hover          {box-shadow:0 3px 5px #999;}
 .related h3,
 .box.related.govdelivery h3,
