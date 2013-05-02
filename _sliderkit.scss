@@ -17,7 +17,7 @@
 	.sliderkit-nav-clip ul li{float:left; margin:0 1px 0 0;}
 	.sliderkit-nav-clip ul li a{display:block;overflow:hidden;}
 	.sliderkit-btn{z-index:10;}
-	.sliderkit-panel{z-index:1;position:absolute;overflow:hidden;  width:99%;border:1px solid #aaa;}
+	.sliderkit-panel{z-index:1;position:absolute;overflow:hidden;  width:100%;border:1px solid #aaa;}
 	.sliderkit-panel-active{z-index:5;}
 	.sliderkit-panel-old{z-index:4;}
 	.sliderkit-panel .sliderkit-panel-textbox{position:absolute;z-index:1;  bottom:0;left:0;width:100%;height:0;}
@@ -48,8 +48,8 @@ border:0;}
 /*---------------------------------
  *	News slider > Landing
  *---------------------------------*/
-.slider {margin:10px auto;width:96%;height:0;padding-bottom:73%;background:transparent url(images/ajax-loader.gif) no-repeat center;}
-.newslider-horizontal{background:#fff;box-shadow:0 3px 10px #999;-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";border-radius:5px;}
+.slider {margin:2% auto;width:96%;height:0;padding-bottom:73%;background:transparent url(images/ajax-loader.gif) no-repeat center;}
+.newslider-horizontal{background:#fff;box-shadow:0 2px 3px #999;-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";border-radius:3px;border:1px solid #ddd;}
 :root .newslider-horizontal {@extend .ie9;}
 
 .newslider-horizontal {
@@ -57,15 +57,14 @@ border:0;}
 	.sliderkit-nav{bottom:5px;right:15px;}
 	// .sliderkit-nav-clip{overflow:visible;} // is this for ie?
 	.sliderkit-nav-clip ul li{margin:0;}
-	.sliderkit-nav-clip li a{margin-right:2px;width:9px;height:9px;/*background:transparent url(images/bullet-off.png) no-repeat 0 0;*/text-indent:100px;  background:#91caf3;border:1px solid #fff;border-radius:10px;}
-	.sliderkit-nav-clip .sliderkit-selected a{margin:0;background:$link;border:1px solid $link; /*transparent url(images/bullet-on.png) no-repeat 0 0;*/}
+	.sliderkit-nav-clip li a{margin-right:2px;width:9px;height:9px;text-indent:100px;  background:#91caf3;border:1px solid #fff;border-radius:10px;}
+	.sliderkit-nav-clip .sliderkit-selected a{margin:0;background:$link;border:1px solid $link;}
 
 	/*Panels*/
-	.sliderkit-panels{margin:2% 3% 4%;width:95%;height:0;padding-bottom:71%;overflow:hidden;position:relative;}
-	/*.sliderkit-news img{float:right;width:100%;height:auto;margin:0 0 0 10px;overflow:hidden;z-index:1;}*/
-	/*.sliderkit-panel*/ .sliderkit-panel-textbox, .sliderkit-panel-overlay{padding-bottom:15%;}
-	/*.sliderkit-panel*/ .sliderkit-panel-text{text-align:center;}
-	/*.sliderkit-panel*/ .sliderkit-panel-text a{font-size:1.5em;color:#fff;z-index:5;}
+	.sliderkit-panels{margin:1% 1% 3%;width:98%;height:0;padding-bottom:71%;overflow:hidden;position:relative;}
+	.sliderkit-panel-textbox, .sliderkit-panel-overlay{padding-bottom:15%;}
+	.sliderkit-panel-text{text-align:center;}
+	.sliderkit-panel-text a{font-size:1.5em;color:#fff;z-index:5;}
 
 	// .sliderkit-news a:link, .newslider-horizontal .sliderkit-news a:visited{color:#fff;}
 }
