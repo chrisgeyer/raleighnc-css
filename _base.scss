@@ -27,7 +27,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 /* Header elements.
 -------------------------------------------------------------- */
 // #navigation					{background:$link url(images/logo.png) top left no-repeat; background-position:50% 100%; background-size:cover;}
-#navigation					{background:#537ac1; /*@include gradient(darken($lightblue, 20%), darken($lightblue, 10%));*/}
+#navigation					{background:#537ac1; @include gradient(#5c8fea, #537ac1)}
 #Header 						{height:95px; overflow:hidden; position:relative; color:#fff; background:url(images/Skyline1.png) top left no-repeat; background-position:30% 50%; @extend .fixedwidth;}
 #Header a						{color:#fff; text-decoration:underline;}
 
@@ -53,21 +53,28 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 #SearchBox label    {@extend .ally;}
 #SearchInput 				{float:left; margin:0 0 0 1%; padding:7px 5px; width:70%; background:#fff url(images/sprites.png) left no-repeat; background-position:0 0; border:1px solid #ddd; border-bottom:1px solid #aaa; border-radius:2px 0 0 2px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
 #SearchInput:focus	{box-shadow:0 0 5px rgba(81, 203, 238, 1);}
-#SearchBox .action 	{float:left; margin:-1px 0; padding:8px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111;}
+#SearchBox .action 	{float:left; margin:-1px 0; padding:8px; width:20%; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; @extend .icon-camera;}
 
 /* Main navigation elements.
 -------------------------------------------------------------- */
 #Nav 								{float:left; width:100%; border-top:1px solid #666; position:relative; z-index:100; box-shadow:0 4px 4px #aaa; @include gradient(#515f55, #1f311a);}
 #Nav ul 						{@extend .fixedwidth;}
-#Nav li 						{float:left; text-align:center; /*border-left:1px solid mix(#515a52, #293129);*/ border-left:1px solid #515f55; @include transition(background, .2s, ease-in-out);}
+#Nav li 						{height:45px;  float:left; text-align:center; /*border-left:1px solid mix(#515a52, #293129);*/ border-left:1px solid #515f55; @include transition(background, .2s, ease-in-out);}
 .current 						{font-weight:700; @include gradient($link, lighten($link, 10%));}
-#Nav a 							{padding:13px; color:#fff; font-size:1.1em; line-height:40px; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; text-decoration:none;}
+#Nav a 							{padding:13px; color:#fff; font-size:1.1em; line-height:55px; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=1,offY=1,color=#111111)"; text-decoration:none;}
 #Nav li:hover				{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
 .current a:hover, .current:hover a {font-weight:700; color:#fff;}
 #Nav li:first-child {border-left:none;}
-// #Nav li:first-child a {@extend .ally;}
+
 #Nav li:first-child a:before {@extend .icon-home; font-size:1.5em;}
-// :root #Nav li:first-child a:before {font-size:0.5em /IE9;}
+#Nav li:nth-child(2) a:before {content:"Arts &"; @extend .navtext;}
+#Nav li:nth-child(3) a:before, #Nav li:nth-child(4) a:before, #Nav li:nth-child(7) a:before {content:"City"; @extend .navtext;}
+#Nav li:nth-child(5) a:before {content:"Business &"; @extend .navtext;}
+#Nav li:nth-child(6) a:before {content:"Neighbors &"; @extend .navtext;}
+#Nav li:nth-child(8) a:before {content:"Sustainability &"; @extend .navtext;}
+#Nav li:nth-child(9) a:before {content:"Public"; @extend .navtext;}
+.navtext 						{/*display:block; margin-top:-35px;*/ line-height:20px; text-align:center; font-size:0.75em; position:absolute; top:10%;}
+
 // #Lines 					{background:url(images/sprites.png) no-repeat; background-position:0 -200px; width:35px; height:23px;}
 #Lines, #Home				{display:none; font-weight:700;}
 
@@ -87,12 +94,12 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 .box.accolades, #accolade 		{padding:1% 10% 2%; border-bottom:1px solid lighten($link, 20%); border-top:1px solid lighten($link, 20%); text-align:center; position:relative; box-shadow:0 4px 4px #aaa; /*@include gradient(darken($lightblue, 5%), darken($lightblue, 15%));*/ @include gradient(#b3c8dc, #9eb7ce); /*@include gradient($link, $lightblue);*/}
 .accolades h3, #accldePre     {text-align:left;}
 .accolades h2, #accolade h2 		{@extend .raleigh; margin:0 5px 0 0; font-size:2em; position:relative;}
-.accolades h2:hover {font-size:2em;}
+.accolades h2:hover, #accolade h2:hover {font-size:2em;}
 .source, #accldeSource 					{font-size:1.08em; font-style:italic; text-align:right; display:inline;}
 .accolades a, #accldeMore a			{position:absolute; bottom:5%; right:10%; margin:30px 10px 0; color:#7f453b; text-decoration:none;}
 
 /*Footer*/
-#Footer 					{margin:0 auto; padding-top:15px; width:70%; text-align:center;}
+#Footer, #footer 	{margin:0 auto; padding-top:15px; width:70%; text-align:center;}
 .socialmedia 			{width:165px; margin:0 auto;}
 .socialmedia img 	{float:left; margin-right:5px; border-radius:3px; box-shadow:0px 1px 2px #666;} /*ADD SPRITE OR ICONS*/
 .bow 							{width:65%;}

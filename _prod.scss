@@ -58,7 +58,7 @@ img 						{border:0; max-width:100%;}
 .icons a 							{float:left; margin:1% 0; width:31%; /*line-height:30px;*/ text-align:center; text-shadow:1px 1px 1px #ccc;}
 .icons a:hover 				{text-decoration:none;}
 a.icon-calendar 			{color:$link;}
-a.icon-location 			{margin-left:4%;}
+a.icon-location 			{margin-left:4%; color:$green;}
 a.icon-user 					{color:#7f453b;}
 
 /*Department dropdown*/
@@ -305,7 +305,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 	font-weight: normal;
 	font-style: normal;}
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, .coricon, #Nav a[title=Home]:before, #Home, #Lines {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav a[title=Home]:before, #Home, #Lines, .homeicon {
 	font-family: 'icomoon';
 	font-style: normal;
 	speak: none;
@@ -314,6 +314,13 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 	-webkit-font-smoothing: antialiased;}
 
 .action.right:hover .icon-mail {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
+a[href $='.doc'] {@extend .icon-file-word;}
+a[href $='.pdf'] {@extend .icon-file-pdf;}
+a[href $='.ppt'] {@extend .icon-file-powerpoint;}
+a[href $='.xls'] {@extend .icon-file-excel;}
+a[href $='.zip'] {@extend .icon-file-zip;}
+a[href ^="mailto:"] {@extend .icon-mail;}
+a[href^='http:'] {@extend .icon-new-tab;}
 
 .icon-mail:before {content: "\21"; font-size:1.2em; vertical-align:middle; padding-left:3px;}
 .icon-location:before {content: "\22";}
@@ -323,9 +330,9 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 .icon-twitter:before {content: "\27"; color:#4099FF;}
 .icon-feed:before {content: "\28";}
 .icon-flickr:before {content: "\29";}
-.icon-file-word:before {content: "\2a";}
-.icon-file-pdf:before {content: "\2b";}
-.icon-file-excel:before {content: "\2c";}
+.icon-file-word:after {content: "\2a";}
+.icon-file-pdf:after {content: "\2b";}
+.icon-file-excel:after {content: "\2c";}
 .icon-user:before {content: "\2e";}
 .icon-play:before {content: "\2f";}
 .icon-lines:before {content: "\34"; vertical-align:middle; font-size:1.5em;}
@@ -335,14 +342,14 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 .icon-play-alt:before {content: "\39";}
 .icon-play-2:before {content: "\3a";}
 .icon-camera:before {content: "\3b";}
-.icon-file-powerpoint:before {content: "\3c";}
-.icon-file-zip:before {content: "\3d";}
+.icon-file-powerpoint:after {content: "\3c";}
+.icon-file-zip:after {content: "\3d";}
 .icon-home:before {content: "\3e"; line-height:36px; vertical-align:sub;}
 .icon-document-alt-fill:before {content:"\43";}
 .icon-folder:before {content:"\44";}
 .icon-folder-2:before {content:"\45";}
-.icon-file-powerpoint:before {content:"\3c";}
-.icon-file-zip:before {content:"\3d";}
+.icon-file-powerpoint:after {content:"\3c";}
+.icon-file-zip:after {content:"\3d";}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid #657838;}
