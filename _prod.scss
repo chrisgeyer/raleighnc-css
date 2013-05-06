@@ -49,7 +49,7 @@ img 						{border:0; max-width:100%;}
 #Article .updatedDate{margin:10px 0 20px 0; color:#666;}
 #addThisButtons	{position:absolute; right:10px; top:3px;}
 
-.content h1 {color:$header;}
+.content h1 {color:$link;}
 
 /*Left Col
 ===========*/
@@ -247,7 +247,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 /*Job sidebar - october 2012*/
 #sidebar .employmentType {padding:0;}
 #sidebar h1 img, #sidebar .empJump, #sidebar .empNo, #sidebar .empSalary, #sidebar .empDept, #sidebar div[style] {display:none;}
-#sidebar #top h1, #Sidebar h3	{margin-left:-20px; padding:5px 20px; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#sidebar #top h1, #Sidebar h3	{margin-left:-4%; padding:5px 20px; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 #sidebar #top h1:after, #Sidebar h3:after {content:" "; background:url(images/ribbon-right.png); display:block; width:10px; height:10px; position:absolute; bottom:0; right:0; margin-bottom:-10px;}
 // #sidebar .employmentType h3 {font-size:1.4em;}
 #sidebar .empTitle {font-weight:normal; font-size:1.1em;}
@@ -284,7 +284,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 .section h3					{@extend .dotted;}
 .callout h3					{color:#222; background:#fff; border:0;}
 // .accent							{color:#7f453b;}
-.section .close			{margin:0; padding:3px 5px; background:#ddd; border:none; border-radius:10px; font-weight:normal; cursor:pointer; box-shadow:-2px 4px 8px #ccc}
+.section .close			{margin:0; padding:3px 5px; background:#ddd; border:none; border-radius:5px; font-weight:normal; cursor:pointer; box-shadow:-2px 4px 8px #ccc}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid #7f453b; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
 // :root .arrow 				{border-right:8px solid transparent;}
 .close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid #7f453b;}
@@ -305,7 +305,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 	font-weight: normal;
 	font-style: normal;}
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav a[title=Home]:before, #Home, #Lines, .homeicon {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav a[title=Home]:before, #Home, #Lines, .homeicon, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after {
 	font-family: 'icomoon';
 	font-style: normal;
 	speak: none;
@@ -320,7 +320,7 @@ a[href $='.ppt'] {@extend .icon-file-powerpoint;}
 a[href $='.xls'] {@extend .icon-file-excel;}
 a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
-a[href^='http:'] {@extend .icon-new-tab;}
+#col1 a[href^='http:'], #col2 a[href^='http:'], #col3 a[href^='http:'], #Article a[href^='http:'], #Sidebar a[href^='http:'] {@extend .icon-new-tab;}
 
 .icon-mail:before {content: "\21"; font-size:1.2em; vertical-align:middle; padding-left:3px;}
 .icon-location:before {content: "\22";}
@@ -330,26 +330,24 @@ a[href^='http:'] {@extend .icon-new-tab;}
 .icon-twitter:before {content: "\27"; color:#4099FF;}
 .icon-feed:before {content: "\28";}
 .icon-flickr:before {content: "\29";}
-.icon-file-word:after {content: "\2a";}
-.icon-file-pdf:after {content: "\2b";}
-.icon-file-excel:after {content: "\2c";}
+.icon-file-word:after {content: "\2a"; font-size:1.25em; color:#00178f; background:#fff; border-radius:10px;}
+.icon-file-pdf:after {content: "\2b"; font-size:1.25em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
+.icon-file-excel:after {content: "\2c"; font-size:1.25em; color:#007133;}
 .icon-user:before {content: "\2e";}
 .icon-play:before {content: "\2f";}
 .icon-lines:before {content: "\34"; vertical-align:middle; font-size:1.5em;}
-.icon-new-tab:before {content: "\35";}
+.icon-new-tab:after {content: "\35";}
 .icon-new-tab-2:before {content: "\36";}
 .icon-warning:before {content: "\37";}
 .icon-play-alt:before {content: "\39";}
 .icon-play-2:before {content: "\3a";}
 .icon-camera:before {content: "\3b";}
-.icon-file-powerpoint:after {content: "\3c";}
-.icon-file-zip:after {content: "\3d";}
+.icon-file-powerpoint:after {content: "\3c"; font-size:1.25em; color:#dd5800;}
+.icon-file-zip:after {content: "\3d"; font-size:1.25em; color:#666;}
 .icon-home:before {content: "\3e"; line-height:36px; vertical-align:sub;}
 .icon-document-alt-fill:before {content:"\43";}
 .icon-folder:before {content:"\44";}
 .icon-folder-2:before {content:"\45";}
-.icon-file-powerpoint:after {content:"\3c";}
-.icon-file-zip:after {content:"\3d";}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid #657838;}
