@@ -320,7 +320,7 @@ a[href $='.ppt'] {@extend .icon-file-powerpoint;}
 a[href $='.xls'] {@extend .icon-file-excel;}
 a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
-#col1 a[href^='http:'], #col2 a[href^='http:'], #col3 a[href^='http:'], #Article a[href^='http:'], #Sidebar a[href^='http:'] {@extend .icon-new-tab;}
+#col1 a[href^='http:'], #col2 :not(.slider) a[href^='http:'], #col3 a[href^='http:'], #Article a[href^='http:'], #Sidebar a[href^='http:'] {@extend .icon-new-tab;}
 
 .icon-mail:before {content: "\21"; font-size:1.2em; vertical-align:middle; padding-left:3px;}
 .icon-location:before {content: "\22";}
