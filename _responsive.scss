@@ -38,8 +38,8 @@
 	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
 	.fixedwidth {width:100%;}
 	#addThisButtons {display:none;}
-	#Header {height:80px;}
-	.logo {height:70px;}
+	#Header {height:80px; background-position:0% 40%;}
+	.logo {width:70px;}
 	.raleigh {margin-top:10px;}
 	#SearchBox {bottom:25px; width:44%;}
 	.sizer {display:none;}
@@ -47,16 +47,18 @@
 	#Nav li:nth-child(-n+5) {border-bottom:1px solid #999;}
 	#Nav li:nth-child(5) {border-right:none;}
 	#Nav li:last-child {border-right:1px solid #999;}
-	#col1 {width:23%;}
+	#Nav a {line-height:45px;}
+	.navtext {display:none;}
+	#col1 {width:25%; padding-left:1%;}
 	#col2, #col2Large {width:74%;}
-	#col3:before {display:none;}
 	.icons {font-size:0.9em;}
 	.videos {width:51%;}
 	.storyContentWrapper, .content {width:98%;}
-	#col3 {clear:both; width:77%; margin-left:25%;}
+	#col3 {clear:both; width:75%;}
 	#right > div {float:left; width:45%; margin:1%; padding:1%;}
-	#accolade {padding-bottom:3%;}
-	#footer {width:90%;}
+	.accolades, #accolade {padding-bottom:3%;}
+	#Footer, #footer {width:90%;}
+	#Sidebar .empClose {display:none;}
 }
 
 @media only screen and (max-width:40em) {
@@ -64,27 +66,31 @@
 	body	{font:87.5%/1.5 Verdana, Geneva, sans-serif;}
 	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
 	.fixedwidth {width:100%;}
-	#Header {@include gradient(#5c8fea, #2e5baf);}
+	// #Header {@include gradient(#5c8fea, #2e5baf);}
 	#CitySeal img, .sizer, #Weather, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump, .lightbox {display:none;}
+	#CitySeal {margin-top:-10px;}
 	#SearchBox, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation {width:100%;}
 	.newseventlocation li {display:inline;}
 	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
 	#SearchBox {bottom:10%;}
 	#SearchInput {width:75%;}
-	#CitySeal img {display:block; position:absolute; right:3%; margin:0; padding:0; width:60px;}
+	.logo {display:block; position:absolute; right:3%; margin:0; padding:0; width:60px;}
 	.raleigh {margin-top:10px; font-size:2.5em;}
 	.raleigh:hover{font-size:2.8em;}
 	#Nav li {width:49%; /*border-right:1px solid #999;*/ border-bottom:1px solid #999;}
 	#Nav li:first-child {display:none;}
 	#Nav li:nth-child(odd) {border-right:0;}
+	.navtext {display:none;}
 	.icons {font-size:0.9em;}
 	#col1, #col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {width:100%; margin:0;}
+	#col2 {width:99%;}
+	#col1 {text-align:center;}
 	#col2 .updatedDate {position:relative; top:0; left:0;}
-	.storyContentWrapper, .content, #Article .storyContentWrapper {width:95%; padding:0 2.5%;}
+	// .storyContentWrapper, .content, #Article .storyContentWrapper {width:95%; padding:0 2.5%;}
 	#storyContentWrapper {padding:0;}
 	.storyContentWrapper ul, .storyContentWrapper ol, .content ul, .content ol {clear:both;}
 	#right > div, .mainarticlelinks, .maineventslinks, #sidebar .mainarticlelinks, #sidebar .maineventslinks, .surveyDisplayWrapper, .videos, .open, #footer {clear:both; float:none; margin:1.5%; padding:1.5%; width:94%; display:block;}
-	.storyContentWrapper .callout, .content .callout, #col2 .contact {margin:1%; padding:1%; width:90%;}
+	.storyContentWrapper .callout, .content .callout, #col2 .contact {margin:1%; /*padding:1%; width:90%;*/}
 	.largeimage	, .smallimage {float:none; margin:10px auto; width:295px;}
 	.largeimage .photoslider-1click-slideshow img, .smallimage .photoslider-1click-slideshow img {height:240px;}
 	.slider .newslider-horizontal .sliderkit-panels{margin-bottom:6%;}
@@ -97,14 +103,14 @@
 	.section img.coricon {width:auto;}
 	.employmentType {padding-left:0;}
 	.empClose, .empNo, .empSalary, .empDept {clear:both; margin:0 0 5px 0;}
-	#accldePre {text-align:center;}
-	#accolade h2, #accolade h2:hover {font-size:2em;}
+	.accolades h3, #accldePre {text-align:center;}
+	.accolades h2, .accolades h2:hover, #accolade h2, #accolade h2:hover {font-size:2em;}
 	.landing {font-size:1.2em;}
 	#monthDetail, #calFrame {clear:both; width:100%;}
 	.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {width:98%; margin-bottom:10px;}
 	.storyContentWrapper ul.individual, .content ul.individual {width:48%;}
 	.storyContentWrapper ul.individual li, .content ul.individual li, .bcmeetinginfo li, .cacmeetinginfo li {margin:0; padding:0;}
-	#footer ul {clear:both; width:100%; text-align:center;}
+	#Footer ul, #footer ul {clear:both; width:100%; text-align:center;}
 	.bow {width:30%;}
 	.council li {display:inline;}
 	.facility_hours {

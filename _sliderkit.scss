@@ -49,8 +49,7 @@ border:0;}
  *	News slider > Landing
  *---------------------------------*/
 .slider {margin:2% auto;width:96%;height:0;padding-bottom:73%;background:transparent url(images/ajax-loader.gif) no-repeat center;}
-.newslider-horizontal{background:#fff;box-shadow:0 2px 3px #999;-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=130), progid:DXImageTransform.Microsoft.Shadow(color=#999999,strength=3,direction=270)";border-radius:3px;border:1px solid #ddd;}
-:root .newslider-horizontal {@extend .ie9;}
+.newslider-horizontal{background:#fff;box-shadow:0 2px 3px #999;border-radius:3px;border:1px solid #ddd;}
 
 .newslider-horizontal {
 	/*Nav*/
