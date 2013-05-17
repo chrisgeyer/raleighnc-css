@@ -1,25 +1,23 @@
-@media only screen and (min-width:1380px) {
-	body {font-size:81.25%;}
+@media only screen and (min-width:1500px) {
+	body {font-size:87.5%/1.5 Verdana, Geneva, sans-serif;;}
 	.fixedwidth {width:1220px;}
-	// #navigation {@include gradient(#2e5baf, #5c8fea);}
-	// #Header {background-image:url(images/watermark2.png); background-repeat:no-repeat; background-position:-2% 15%; background-size:400px; -webkit-filter:drop-shadow(1px 1px 5px #555); filter:drop-shadow(1px 1px 5px #555);}
-	// #Header .raleigh {margin-left:30%;}
-	// .utility {display:block;}
-	.sizer {top:30px;}
-	#SearchBox {bottom:10%;}
+	.utility {display:block; right:11%;}
 	#Nav li {width:10.3%;}
 	#Nav li:first-child {width:4%;}
 	#Nav li:last-child {border-right:1px solid #515f55;}
 	.logo, .icons {display:none;}
-	.slider {height:519px;}
-	.newslider-horizontal .sliderkit-panels{height:480px;}
-	.newslider-horizontal .sliderkit-panel{height:470px;}
-	#col1 {width:15%;}
-	#col2 {margin-left:1%;}
-	#col3 {width:23%;}
 	.deptDropdown {margin:0; padding:0; border:none;}
 	.deptDropdown h2 {display:none;}
-	#deptSelector select {position:absolute; top:5.5%; right:8%; width:9%; z-index:100;}
+	#deptSelector select {position:absolute; top:110px; width:8%; z-index:100;}
+	#col1 #deptSelector select {margin-left:1070px;}
+	#Sidebar #deptSelector select {margin-left:200px;}
+	.slider, .newslider-horizontal .sliderkit-panels {padding-bottom:60%;}
+	.newslider-horizontal .sliderkit-nav-clip li a {width:15px; height:15px;}
+	#col1 {width:15%;}
+	#col2 {margin-left:1%;}
+	.box.accolades {padding-left:20%; padding-right:20%;}
+	#Footer {width:55%;}
+	.bow {width:55%;}
 }
 
 @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {

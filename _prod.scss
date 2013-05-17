@@ -43,15 +43,15 @@ img 						{border:0; max-width:100%;}
 #col3, #sidebar, #Sidebar {font-size:1.05em;}
 #Article .storyContentWrapper, #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
-#col2 .updatedDate {position:absolute; top:-23px; left:5px; color:#666; font-size:0.9em;}
+#col2 .updatedDate {position:absolute; top:-20px; left:5px; color:#666; font-size:0.9em;}
 #Article .updatedDate {margin:10px 0 20px 0; color:#666;}
 #addThisButtons	{position:absolute; right:10px; top:-20px;}
 
 #col1Large {position:relative;}
 .updated {position:absolute; right:11%; color:#666;}
 
-.content h1 {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px;}
-#Sidebar h3, #popularPages h2, #popularSearch h2 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.content h1 {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#Sidebar h3, #popularPages h2, #popularSearch h2 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 
 /*Left Col
 ===========*/
@@ -61,7 +61,7 @@ img 						{border:0; max-width:100%;}
 .icons a:hover 				{text-decoration:none;}
 a.icon-calendar 			{color:$link; width:35%;}
 a.icon-location 			{color:$green; width:28%;}
-a.icon-user 					{color:#7f453b;}
+a.icon-user 					{color:$maroon;}
 
 /*Department dropdown*/
 .deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 0; @extend .dotted;}
@@ -93,24 +93,20 @@ a.icon-user 					{color:#7f453b;}
 // #popularPages h2, #popularSearch h2 {@extend .iwt_section_header;}
 
 /*New related - sept 2012*/
-.box, #Govdelivery 			{margin:0 2px 10px 0; padding:0.45em; position:relative; overflow:hidden;}
-.govdelivery 						{padding-left:10px; @extend .dotted;}
-.box.govdelivery h3 		{font-size:1.5em; color:$green;}
-.govdelivery p					{margin:0;}
-.govdelivery .action 		{padding-top:3px; border:1px solid $green; @include gradient(lighten($green, 15%)/*#D9DECF*/, $green);}
-.box.related.govdelivery,
-#Govdelivery 						{padding:0.45em; background:#d9decf;}
-.govdelivery h3 				{font-size:1.45em;}
-// .related 								{background:mix($lightblue, $link); border-radius:3px; box-shadow:2px 8px 10px -5px #aaa;}
-// .related:hover          {box-shadow:0 3px 5px #999;}
-.related h3,
-.box.related.govdelivery h3,
-#Govdelivery h3					{/*margin:0; padding:0; font-size:1.2em;*/ background:$link; color:#fff; text-shadow: 1px 3px 5px #333; padding:0 5%; border-radius:3px 3px 0 0; margin:0; box-shadow:0 3px 5px #999;}
-.related ul,
-#Govdelivery ul	 				{margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px;
-box-shadow:0 3px 5px #999;}
-.related li,
-#Govdelivery li	 				{margin:0; padding:2%; background:$offwhite; background:#fdfdfd;}
+.box 								{margin:0 2px 10px 0; padding:0.45em; position:relative; overflow:hidden;}
+.related h3  				{margin:0; padding:0 5%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:0 3px 5px #999;}
+.related ul	 				{margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
+.related li  				{margin:0; padding:2%; background:$offwhite; background:#fdfdfd;}
+
+.govdelivery h3 		{font-size:1.2em; background:$green;}
+.govdelivery ul	 		{background:#d9decf;}
+
+.govdelivery 				{padding-left:10px;}
+.govdelivery p			{margin:0;}
+.govdelivery .action {padding-top:3px; border:1px solid $green; @include gradient(lighten($green, 15%)/*#D9DECF*/, $green);}
+
+// .related 				{background:mix($lightblue, $link); border-radius:3px; box-shadow:2px 8px 10px -5px #aaa;}
+// .related:hover   {box-shadow:0 3px 5px #999;}
 
 /*Static pages
 ====================*/
@@ -141,7 +137,7 @@ box-shadow:0 3px 5px #999;}
 .contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {float:left; margin:5px 0 0 0; padding:2px 6px;}
 .contactResultsName, .contactResultsPhoneNumber {clear:both;}
 .contactResultsPhoneNumber {margin:0 0 10px 0; padding:0 6px; width:98%; border-bottom:1px dotted #ddd;}
-#peopleResults a[href^="mailto:"] {padding:1px 20px 1px 0; background:transparent url(../images/icon-email.png) center right no-repeat;}
+// #peopleResults a[href^="mailto:"] {padding:1px 20px 1px 0; background:transparent url(../images/icon-email.png) center right no-repeat;}
 
 /*News & Events
 ================*/
@@ -149,7 +145,7 @@ box-shadow:0 3px 5px #999;}
 .mainarticlelinks {float:left; margin:25px 1%; padding:0; width:54%; font-size:1.1em;}
 .mainarticlelinks h2, .maineventslinks h2 {float:left; margin-left:5px;}
 // .mainRss img {margin:0 0 0 10px; display:none;}
-.mainRss a	 {@extend .icon-feed; color:$orange; padding:0 5px; font-size:0.8em; text-shadow:1px 1px 1px #ccc;} /* remember rss for news */
+.mainRss a	 {@extend .icon-feed; color:$orange; padding:0 5px; font-size:0.5em; text-shadow:1px 1px 1px #ccc;} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
 .newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
@@ -159,7 +155,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .maineventslinks {@extend .mainarticlelinks; width:41%;}
 .eventsList li {clear:both; padding:5px; list-style:none;}
 .message 		{color:$green;}
-.eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:16%; background:$offwhite; /*border:2px solid #ddd;*/ text-align:center; font-weight:700; /*letter-spacing:0.2em;*/ border-radius:3px; box-shadow:0 3px 5px #999;}
+.eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:16%; background:$offwhite; /*border:2px solid #ddd;*/ text-align:center; font-weight:700; /*letter-spacing:0.2em;*/ border-radius:2px; box-shadow:0 2px 3px #999;}
 .eventMonth	{background:#ddd;}
 .eventDay 	{font-size:1.3em;}
 .eventTitle {display:inline;}
@@ -199,15 +195,15 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 #Sidebar .more, #sidebar .more {margin-right:10px;}
 
 /*Home Page Feature*/
-.landing 		{text-align:center; font-size:2em;}
+.landing 		{text-align:center; font-size:2em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 // .surveyQuestions {float:left; width:48%; margin:1%;}
 // .surveyQuestions .PDS_poll .pds-box {width:100%;}
 .videos 		{float:left; width:52%; margin:1%;}
 .open 			{float:right; width:40%; margin:1%; padding:1%;}
-.council 		{padding-left:10px; @extend .dotted;}
-.ecomment 	{background:#3C61A5; color:#fff; padding:0 5px; border-radius:5px;}
+.council 		{padding-left:10px; /*@extend .dotted;*/}
+// .ecomment 	{background:#3C61A5; color:#fff; padding:0 5px; border-radius:5px;}
 label 			{display:block; @extend .quiet;}
-iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 3px 5px #999;}
+iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
 
 /*Templates
 ====================*/
@@ -232,10 +228,11 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 .bio							{clear:both;}
 
 /*Employment list*/
-#top img							{margin-bottom:-5px;}
+#top h1								{background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px;}
+#top img							{margin-bottom:-5px; display:none;}
 .employmentType div[style] {display:none;}
 .empJump li a 				{float:left; margin:0 15px 20px 0; text-decoration:underline;}
-.employmentType h3 		{clear:both; margin:15px 0 5px;}
+.employmentType h3 		{clear:both; margin:15px 0 5px; padding:3px 5px; border-radius:5px; cursor:pointer; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
 .empTitle 						{clear:both; margin:0 10px 3px 0; float:left; display:inline; font-size:1.167em; font-weight:700;}
 .empClose,
 .empDept,
@@ -254,12 +251,11 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 
 /*Job sidebar - october 2012*/
 #Sidebar .employmentType, #sidebar .employmentType {padding:0;}
-#Sidebar h1 img, #Sidebar .empJump, #Sidebar .empNo, #Sidebar .empSalary, #Sidebar .empDept, #Sidebar div[style], #sidebar h1 img, #sidebar .empJump, #sidebar .empNo, #sidebar .empSalary, #sidebar .empDept, #sidebar div[style] {display:none;}
+#Sidebar h1 img, #Sidebar .empJump, #Sidebar .empNo, #Sidebar .empSalary, #Sidebar .empDept, #Sidebar .empClose, #Sidebar div[style], #sidebar h1 img, #sidebar .empJump, #sidebar .empNo, #sidebar .empSalary, #sidebar .empDept, #sidebar .empClose, #sidebar div[style] {display:none;}
 #Sidebar #top h1, #sidebar #top h1 {margin-left:-4%; padding:5px 20px; background:$link; color:#fff; font-size:1.4em; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1); border-radius:0 20px 20px 0;}
 #Sidebar #top h1:after, #sidebar #top h1:after, #Sidebar h3:after {content:" "; background:url(images/ribbon-right.png); display:block; width:10px; height:10px; position:absolute; bottom:0; right:0; margin-bottom:-10px;}
 // #sidebar .employmentType h3 {font-size:1.4em;}
-#Sidebar .empTitle, #sidebar .empTitle {font-weight:normal; font-size:1.1em;}
-#Sidebar .empClose, #sidebar .empClose {border-bottom:1px dotted #ccc; width:98%; color:#666; margin:0 0 6px 0;}
+#Sidebar .empTitle, #sidebar .empTitle {font-weight:normal; font-size:1.1em; border-bottom:1px dotted #ccc; width:98%; margin:0 0 6px 0;}
 
 /*Facility*/
 .gismap_iframe 			{float:left; @extend .cacgismap;}
@@ -269,7 +265,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 .facility_hours td 	{@extend .align-center;}
 
 /*New 1col - april 2012*/
-.outline 						{padding:1% 1% 2%; background:#fff; border:1px solid #ddd; border-radius:5px; box-shadow:0 3px 5px #999; position:relative;}
+.outline 						{padding:1% 1% 2%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999; position:relative;}
 .outline a:active		{position:absolute;}
 .largeimage					{margin-bottom:10px; width:98%;}
 .largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:74%;}
@@ -289,8 +285,8 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:5px
 .section h3					{margin:0; padding:3px 5px; border-radius:5px; cursor:pointer; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
 .callout h3					{color:#222; background:$orange; border-radius:0;}
 .section .close			{font-weight:normal; box-shadow:0 1px 8px #999; @include gradient(#eeeeef, #ddddde);}
-.arrow							{margin-right:5px; width:0; height:0; border-top:12px solid #7f453b; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
-.close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid #7f453b;}
+.arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $maroon; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
+.close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $maroon;}
 .collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:1%;}
 .callout .collapse 	{border:0;}
 .block 							{clear:both;}
