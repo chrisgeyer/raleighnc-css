@@ -51,7 +51,7 @@ img 						{border:0; max-width:100%;}
 .updated {position:absolute; right:11%; color:#666;}
 
 .content h1 {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
-#Sidebar h3, #popularPages h2, #popularSearch h2 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#Sidebar h3, #col3 #Govdelivery h3, #popularPages h2, #popularSearch h2 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 
 /*Left Col
 ===========*/
@@ -98,12 +98,12 @@ a.icon-user 					{color:$maroon;}
 .related ul	 				{margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
 .related li  				{margin:0; padding:2%; background:$offwhite; background:#fdfdfd;}
 
-.govdelivery h3 		{font-size:1.2em; background:$green;}
+.govdelivery h3 		{/*font-size:1.1em;*/ background:$green;}
 .govdelivery ul	 		{background:#d9decf;}
 
-.govdelivery 				{padding-left:10px;}
-.govdelivery p			{margin:0;}
-.govdelivery .action {padding-top:3px; border:1px solid $green; @include gradient(lighten($green, 15%)/*#D9DECF*/, $green);}
+#Govdelivery 				{padding-left:10px;}
+#Govdelivery p			{margin:0;}
+#Govdelivery .action {padding-top:3px; border:1px solid $green; @include gradient(lighten($green, 15%), $green);}
 
 // .related 				{background:mix($lightblue, $link); border-radius:3px; box-shadow:2px 8px 10px -5px #aaa;}
 // .related:hover   {box-shadow:0 3px 5px #999;}
@@ -180,19 +180,17 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 /*News sidebar*/
 #Sidebar .mainarticlelinks,
 #Sidebar .maineventslinks, #sidebar .mainarticlelinks,
-#Sidebar .maineventslinks, #sidebar .maineventslinks {clear:both; float:none; margin:0; width:98%; font-size:1em;}
+#Sidebar .maineventslinks, #sidebar .maineventslinks {clear:both; float:none; margin:0; width:100%; font-size:1.05em;}
 #Sidebar .mainarticlelinks h2,
 #Sidebar .maineventslinks h2 , #sidebar .mainarticlelinks h2,
-#Sidebar .maineventslinks h2, #sidebar .maineventslinks h2 {float:none; margin:0; @extend .iwt_section_header;}
+#Sidebar .maineventslinks h2, #sidebar .maineventslinks h2 {float:none; margin:0; margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 #Sidebar .mainRss, #sidebar .mainRss {display:none;}
 #Sidebar .mainarticlelinks ul,
 #Sidebar .maineventslinks ul , #sidebar .mainarticlelinks ul,
-#Sidebar .maineventslinks ul, #sidebar .maineventslinks ul {margin:0 5px 0 0;}
-#Sidebar .mainarticlelinks li,
-#Sidebar .maineventslinks li , #sidebar .mainarticlelinks li,
-#Sidebar .maineventslinks li , #sidebar .maineventslinks li {padding:6px 0;}
+#Sidebar .maineventslinks ul, #sidebar .maineventslinks ul {margin:0;}
+// #Sidebar .mainarticlelinks li, #Sidebar .maineventslinks li , #sidebar .mainarticlelinks li, #Sidebar .maineventslinks li , #sidebar .maineventslinks li {padding:6px 0;}
 #Sidebar .malDate, #sidebar .malDate {display:block;}
-#Sidebar .more, #sidebar .more {margin-right:10px;}
+// #Sidebar .more, #sidebar .more {margin-right:10px;}
 
 /*Home Page Feature*/
 .landing 		{text-align:center; font-size:2em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
@@ -208,15 +206,19 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 /*Templates
 ====================*/
 /*Boards-Commissions*/
-.bcmeetinginfo	{padding:5px; text-align:center; overflow:hidden; border-radius:10px 10px 0 0; @include gradient(#d9cec2, #efefef);}
-.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.5%; vertical-align:top;}
+.bcmeetinginfo	{@extend .callout;}
+#col2 .bcmeetinginfo {text-align:center; border-radius:5px 5px 0 0; border:2px solid $maroon; border-bottom:10px solid lighten($maroon, 15%);}
+.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.7%; vertical-align:top;}
+.bcmeetinginfo h4 {background:$maroon; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
-.bcimage 				{margin:10px auto; width:515px;}
-.bcimage img		{width:515px;}
-.members				{overflow:hidden; margin-bottom:20px;}
+.bcimage 				{margin:10px auto; width:100%;}
+.bcimage img		{width:100%;}
+.members				{overflow:hidden; margin-bottom:1.5em;}
 
 /*CAC*/
-.cacmeetinginfo 	{@extend .bcmeetinginfo; @include gradient(lighten($green, 15%), #efefef);}
+.cacmeetinginfo 	{@extend .bcmeetinginfo;}
+#col2 .cacmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%);}
+.cacmeetinginfo h4 {background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .cacactivity 			{@extend .outline; @extend .bcimage;}
 .cacactivity .photoslider-1click-slideshow {height:0; padding-bottom:60%;}
 .cacgismap 				{margin:0 0 0 2%; width:62%; height:256px; overflow:hidden;}
@@ -267,23 +269,24 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 /*New 1col - april 2012*/
 .outline 						{padding:1% 1% 2%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999; position:relative;}
 .outline a:active		{position:absolute;}
-.largeimage					{margin-bottom:10px; width:98%;}
-.largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:74%;}
+.largeimage					{margin-bottom:1em; width:100%;}
+.largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:80%;}
 .largeimage .photoslider-1click-slideshow img {height:408px;}
-.smallimage					{float:left; margin:0 15px 10px 0; width:50%;}
+.smallimage					{float:left; margin:0 2% 1em 0; width:50%;}
 .smallimage .photoslider-1click-slideshow img {height:210px;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 #col2 .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .smallimage .sliderkit-panel .sliderkit-panel-overlay		{padding-bottom:20%;}
 .section						{clear:both; margin:1.5em 0;}
-.callout						{margin:0.5em; background:#fff; border:2px solid lighten($orange, 15%); border-radius:5px; box-shadow:0 3px 5px #999;}
+.callout						{margin:1.5em 0.5em; background:#fff; border:2px solid $orange; border-radius:5px; box-shadow:0 3px 5px #999; overflow:hidden;}
 .closed							{@extend .ally;}
 .callout img				{max-width:98%;}
 .section img				{padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
 .section img.left,
 .section img.right 	{margin:0 10px 10px;}
-.section h3					{margin:0; padding:3px 5px; border-radius:5px; cursor:pointer; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
-.callout h3					{color:#222; background:$orange; border-radius:0;}
+.section h3					{margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
+.expand							{cursor:pointer;}
+.callout h3					{color:#fff; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333;}
 .section .close			{font-weight:normal; box-shadow:0 1px 8px #999; @include gradient(#eeeeef, #ddddde);}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $maroon; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
 .close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $maroon;}
@@ -316,7 +319,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 
 .action.right:hover .icon-mail {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
 a[href $='.doc'] {@extend .icon-file-word;}
-a[href $='.pdf'] {@extend .icon-file-pdf;}
+a[href $='.pdf'], a[href $='.pdf'] :not(img) {@extend .icon-file-pdf;}
 a[href $='.ppt'] {@extend .icon-file-powerpoint;}
 a[href $='.xls'] {@extend .icon-file-excel;}
 a[href $='.zip'] {@extend .icon-file-zip;}
@@ -351,6 +354,11 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-folder-2:before {content:"\45";}
 
 /*Status - oct 2012*/
-.confirm {border:2px solid #657838;}
+.confirm {border:2px solid $green;}
+.section.confirm .close, .confirm h3 {background:$green}
 .warning {border:2px solid #eed45d;}
+.section.warning .close, .warning h3 {background:#eed45d;}
 .error	 {border:2px solid #C5312A;}
+.section.error .close, .error h3 {background:#C5312A;}
+.section.confirm .arrow, .section.warning .arrow, .section.error .arrow	{border-top:12px solid #fff; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent;}
+.section.confirm .close .arrow, .section.warning .close .arrow, .section.error .close .arrow {border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid #fff;}

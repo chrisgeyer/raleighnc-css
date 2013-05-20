@@ -21,7 +21,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 	&:visited		{color:lighten($link, 10%);}
 	&:hover,
 	&:focus 		{color:$linkhover; text-decoration:underline; @include transition(color, .5s, ease-in-out);}
-	&:active 		{position:relative; top:1px; outline:0;}
+	&:active 		{position:relative; top:1px;}
 }
 
 /* Header elements.
@@ -33,7 +33,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 
 #CitySeal						{width:45%; cursor:pointer;}
 .logo 							{float:left; margin:4px 0 0 10px; width:85px; -webkit-filter:drop-shadow(1px 1px 5px #333); filter:drop-shadow(1px 1px 5px #333);}
-.raleigh 						{margin:30px 0 0 5px; font-size:2.8em; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=2,offY=2,color=#666666)"; color:#fff; @include transition(font-size, .4s, ease-in-out);}
+.raleigh 						{margin:25px 0 0 5px; font-size:2.8em; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=2,offY=2,color=#666666)"; color:#fff; @include transition(font-size, .4s, ease-in-out);}
 .raleigh:hover			{cursor:pointer; font-size:3.2em; @include transition(font-size, .4s, ease-in-out);}
 
 .utility, .sizer, #Weather, #SearchBox {position:absolute; right:2%;}
@@ -60,22 +60,25 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 -------------------------------------------------------------- */
 #Nav 								{float:left; width:100%; border-top:1px solid #666; position:relative; z-index:100; box-shadow:0 4px 4px #aaa; @include gradient(#515f55, #1f311a);}
 #Nav ul 						{@extend .fixedwidth;}
-#Nav li 						{height:45px;  float:left; text-align:center; /*border-left:1px solid mix(#515a52, #293129);*/ border-left:1px solid #515f55; @include transition(background, .2s, ease-in-out);}
+#Nav li 						{float:left; /*width:12%;*/ height:45px; text-align:center; border-left:1px solid #515f55; @include transition(background, .2s, ease-in-out);}
+// #Nav li:first-child {width:5%;}
+// #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
 .current 						{font-weight:700; @include gradient($link, lighten($link, 10%));}
-#Nav a 							{padding:13px; color:#fff; font-size:1.1em; line-height:55px; text-shadow:1px 1px 3px #111; text-decoration:none;}
+#Nav a 							{padding:0 20px; color:#fff; font-size:1.1em; line-height:55px; text-shadow:1px 1px 3px #111; text-decoration:none;}
 #Nav li:hover				{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
 .current a:hover, .current:hover a {font-weight:700; color:#fff;}
 #Nav li:first-child {border-left:none;}
 
 #Nav li:first-child a:before {@extend .icon-home; font-size:1.5em;}
 #Nav li:nth-child(2) a:before {content:"Arts &"; @extend .navtext;}
-#Nav li:nth-child(3) a:before, #Nav li:nth-child(4) a:before, #Nav li:nth-child(7) a:before {content:"City"; @extend .navtext;}
+#Nav li:nth-child(3) a:before, #Nav li:nth-child(4) a:before, #Nav li:nth-child(8) a:before {content:"City"; @extend .navtext;}
 #Nav li:nth-child(5) a:before {content:"Business &"; @extend .navtext;}
 #Nav li:nth-child(6) a:before {content:"Neighbors &"; @extend .navtext;}
-#Nav li:nth-child(8) a:before {content:"Sustainability &"; @extend .navtext;}
+#Nav li:nth-child(7) a:before {content:"Sustainability &"; @extend .navtext;}
 #Nav li:nth-child(9) a:before {content:"Public"; @extend .navtext;}
-.navtext 						{/*display:block; margin-top:-35px;*/ line-height:20px; text-align:center; font-size:0.75em; position:absolute; top:10%;}
-#Nav li a:active:before {position:absolute;}
+.navtext 						{/*display:block; margin-top:-35px;*/ line-height:20px; font-size:0.75em; position:absolute; top:3px; margin:0; padding:0;}
+#navigation .navtext:active	{position:absolute; top:3px;}
+#Nav a:active:before {position:absolute;}
 
 // #Lines 					{background:url(images/sprites.png) no-repeat; background-position:0 -200px; width:35px; height:23px;}
 #Lines, #Home				{display:none; font-weight:700;}
@@ -83,7 +86,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 /* Main content areas.
 -------------------------------------------------------------- */
 #contentArea, #Main, #Search/*, #col1Large*/ {padding:1% 0; overflow:hidden; @extend .fixedwidth;}
-#col1 						{float:left; width:16%; padding:1.5% 0.5% 0 0;}
+#col1 						{float:left; width:16%; padding:1.5% 0.5% 0 0; font-size:0.9em;}
 #col2 						{float:left; margin:2% 0 0 0.5%; padding:1%; width:60%; position:relative; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;}
 #col3 						{float:right; width:23%; padding:2.5% 0 0 0;}
 #col2Large 				{float:left; width:78.5%;}
