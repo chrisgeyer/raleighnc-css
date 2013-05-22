@@ -135,4 +135,6 @@
 	#Search #sidebar, #Search #Sidebar {display:none;}
 	#Search #Article, #Search .main-results {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;} // add article to gsa template?
 	.url {word-wrap:break-word;}
+
+	@-ms-viewport {width:device-width;}
 }
