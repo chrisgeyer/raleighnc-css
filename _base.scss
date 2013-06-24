@@ -46,7 +46,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 #Weather img 				{float:left; margin:-1% -10% 0 0; width:40%;}
 .temp								{font-size:1.5em;}
 
-.sizer 							{top:5%;}
+.sizer 							{top:5%; display:none;}
 .sizer span					{cursor:pointer;}
 
 #SearchBox 					{bottom:27%; right:0; width:35%;}
@@ -64,29 +64,29 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 // #Nav li:first-child {width:5%;}
 // #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
 .current 						{font-weight:700; @include gradient($link, lighten($link, 10%));}
-#Nav a 							{padding:0 20px; color:#fff; font-size:1.1em; line-height:55px; text-shadow:1px 1px 3px #111; text-decoration:none;}
+#Nav a 							{padding:0 15px; color:#fff; font-size:1.1em; line-height:55px; text-shadow:1px 1px 3px #111; text-decoration:none;}
 #Nav li:hover				{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
 .current a:hover, .current:hover a {font-weight:700; color:#fff;}
 #Nav li:first-child {border-left:none;}
 
 #Nav li:first-child a:before {@extend .icon-home; font-size:1.5em;}
-#Nav li:nth-child(2) a:before {content:"Arts &"; @extend .navtext;}
-#Nav li:nth-child(3) a:before, #Nav li:nth-child(4) a:before, #Nav li:nth-child(8) a:before {content:"City"; @extend .navtext;}
-#Nav li:nth-child(5) a:before {content:"Business &"; @extend .navtext;}
-#Nav li:nth-child(6) a:before {content:"Neighbors &"; @extend .navtext;}
-#Nav li:nth-child(7) a:before {content:"Sustainability &"; @extend .navtext;}
-#Nav li:nth-child(9) a:before {content:"Public"; @extend .navtext;}
-.navtext 						{/*display:block; margin-top:-35px;*/ line-height:20px; font-size:0.75em; position:absolute; top:3px; margin:0; padding:0;}
+// #Nav li:nth-child(2) a:before {content:"Arts &"; @extend .navtext;}
+// #Nav li:nth-child(3) a:before, #Nav li:nth-child(4) a:before, #Nav li:nth-child(8) a:before {content:"City"; @extend .navtext;}
+// #Nav li:nth-child(5) a:before {content:"Business &"; @extend .navtext;}
+// #Nav li:nth-child(6) a:before {content:"Neighbors &"; @extend .navtext;}
+// #Nav li:nth-child(7) a:before {content:"Sustainability &"; @extend .navtext;}
+// #Nav li:nth-child(9) a:before {content:"Public"; @extend .navtext;}
+// .navtext 						{/*display:block; margin-top:-35px;*/ line-height:20px; font-size:0.75em; position:absolute; top:3px; margin:0; padding:0;}
 #navigation .navtext:active	{position:absolute; top:3px;}
 #Nav a:active:before {position:absolute;}
 
-// #Lines 					{background:url(images/sprites.png) no-repeat; background-position:0 -200px; width:35px; height:23px;}
-#Lines, #Home				{display:none; font-weight:700;}
+#Lines 					{position:absolute; left:215px; top:-10px; line-height:30px;}
+/*#Lines,*/ #Home				{display:none; font-weight:700;}
 
 /* Main content areas.
 -------------------------------------------------------------- */
 #contentArea, #Main, #Search/*, #col1Large*/ {padding:1% 0; overflow:hidden; @extend .fixedwidth;}
-#col1 						{float:left; width:16%; padding:1.5% 0.5% 0 0; font-size:0.9em;}
+#col1 						{float:left; width:16%; padding:1.5% 0.5% 0 0; font-size:0.8em;}
 #col2 						{float:left; margin:2% 0 0 0.5%; padding:1%; width:60%; position:relative; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;}
 #col3 						{float:right; width:23%; padding:2.5% 0 0 0;}
 #col2Large 				{float:left; width:78.5%;}
@@ -110,5 +110,5 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 .bow 							{width:65%;}
 .legal						{clear:both; margin:20px auto 0;}
 .legal li 				{display:inline; margin:0 10px;}
-#google_translate_element {margin-top:15px;}
+#google_translate_element {position:absolute; right:2%; top:5%;}
 .copyright 				{color:#666; text-align:center; font-size:0.9em; padding-bottom:10px;}

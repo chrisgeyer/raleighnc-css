@@ -43,7 +43,7 @@ img 						{border:0; max-width:100%;}
 #col3, #sidebar, #Sidebar {font-size:1.05em;}
 #Article .storyContentWrapper, #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
-#col2 .updatedDate {position:absolute; top:-20px; left:5px; color:#666; font-size:0.9em;}
+#col2 .updatedDate {/*position:absolute; top:-20px; left:5px;*/ color:#666; font-size:0.8em;}
 #Article .updatedDate {margin:10px 0 20px 0; color:#666;}
 #addThisButtons	{position:absolute; right:10px; top:-20px;}
 
@@ -52,6 +52,8 @@ img 						{border:0; max-width:100%;}
 
 .content h1 {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 #Sidebar h3, #col3 #Govdelivery h3, #popularPages h2, #popularSearch h2 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+
+.shortdesc {font-style:italic; color:#666;}
 
 /*Left Col
 ===========*/
