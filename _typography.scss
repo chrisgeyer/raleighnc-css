@@ -6,7 +6,7 @@ LastModified:	2.22.2012 (cwg)
 
 ---------------------------------------------------- */
 
-body	{color:#444; font:81.25%/1.5 sans-serif;}
+body	{color:#444; font:100%/1.5 sans-serif;}
 .content {font-family:Tahoma; font-family:Optima;}
 
 
@@ -14,7 +14,7 @@ body	{color:#444; font:81.25%/1.5 sans-serif;}
 -------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {margin:0 0 0.5em 0; color:mix(#222, #333); font-weight:300; font-family:sans-serif; text-shadow:1px 1px 1px #ccc;}
 
-h1, .h1 			{/*26px*/   font-size:2.5em;}
+h1, .h1 			{/*26px*/   font-size:2.5em; margin-bottom:0;}
 h2, .h2				{/*20px*/   font-size:1.9em;}
 h3, .h3 			{/*17px*/ 	font-size:1.5em;}
 h4, .h4 			{/*14px*/		font-size:1.2em;}

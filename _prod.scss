@@ -39,26 +39,26 @@ img 						{border:0; max-width:100%;}
 .section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
 
 /*Pages*/
-.storyContentWrapper, .content {margin:0 auto; /*padding-top:30px;*/ min-width:300px; max-width:735px; font-size:1.15em;}
-#col3, #sidebar, #Sidebar {font-size:1.05em;}
+.storyContentWrapper, .content {margin:0 auto; /*padding-top:30px;*/ min-width:300px; max-width:735px; /*font-size:1.15em;*/}
+// #col3, #sidebar, #Sidebar {font-size:1.05em;}
 #Article .storyContentWrapper, #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
-#col2 .updatedDate {/*position:absolute; top:-20px; left:5px;*/ color:#666; font-size:0.8em;}
+#col2 .updatedDate {/*position:absolute; top:-20px; left:5px;*/ color:#999; font-size:0.8em; margin-bottom:0.5em;}
 #Article .updatedDate {margin:10px 0 20px 0; color:#666;}
-#addThisButtons	{position:absolute; right:10px; top:-20px;}
+#addThisButtons	{position:absolute; right:10px; top:-20px; display:none;}
 
 #col1Large {position:relative;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
 
 .content h1 {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
-#Sidebar h3, #col3 #Govdelivery h3, #popularPages h2, #popularSearch h2 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#Sidebar h3, #col3 #Govdelivery h3, .council h3, #popularPages h2, #popularSearch h2 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 
 .shortdesc {font-style:italic; color:#666;}
 
 /*Left Col
 ===========*/
 /*Global*/
-.box.icons 						{margin-right:0; padding:0; @extend .dotted;}
+.box.icons 						{margin-right:0; padding:0; @extend .dotted; display:none;}
 .icons a 							{float:left; margin:1% 0; width:31%; /*line-height:30px;*/ text-align:center; text-shadow:1px 1px 1px #ccc;}
 .icons a:hover 				{text-decoration:none;}
 a.icon-calendar 			{color:$link; width:35%;}
@@ -66,9 +66,9 @@ a.icon-location 			{color:$green; width:28%;}
 a.icon-user 					{color:$maroon;}
 
 /*Department dropdown*/
-.deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 0; @extend .dotted;}
-#col1 .deptDropdown h2 {@extend .iwt_section_header; border:none;}
-#Sidebar .deptDropdown h2	{font-size:1.25em; font-weight:normal; background:none; text-shadow:1px 1px 1px #ccc;}
+.deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 0; /*@extend .dotted;*/}
+#col1 .deptDropdown h2 {@extend .iwt_section_header; /*border:none;*/}
+#Sidebar .deptDropdown h2	{font-size:1.25em; background:none; text-shadow:1px 1px 1px #ccc;}
 #deptSelector select 	{width:95%;}
 
 /*Left Nav*/
@@ -84,7 +84,7 @@ a.icon-user 					{color:$maroon;}
 /*old leftnav*/
 .iwt_section {margin:0 0 10px 10px;}
 #col1 .iwt_section {margin:0;}
-.iwt_section_header {font-size:1.25em; font-weight:normal; @extend .underline;}
+.iwt_section_header {font-size:1.25em; @extend .underline;}
 #Sidebar .iwt_section_header {border-radius:0 20px 20px 0; background:$orange; text-shadow:1px 2px 3px #333;}
 .iwt_leftnav li, #popularPages li, #popularSearch li {margin:0 0 0.5em 0; list-style-type:none;}
 
@@ -106,6 +106,9 @@ a.icon-user 					{color:$maroon;}
 
 .govdelivery h3 		{/*font-size:1.1em;*/ background:$green;}
 .govdelivery ul	 		{background:#d9decf;}
+.govdelivery a 			{color:$green;
+	&:visited					{color:lighten($link, 10%);}
+}
 
 #Govdelivery 				{padding-left:10px;}
 #Govdelivery p			{margin:0;}
@@ -151,7 +154,7 @@ a.icon-user 					{color:$maroon;}
 .mainarticlelinks {float:left; margin:25px 1%; padding:0; width:54%; font-size:1.1em;}
 .mainarticlelinks h2, .maineventslinks h2 {float:left; margin-left:5px;}
 // .mainRss img {margin:0 0 0 10px; display:none;}
-.mainRss a	 {@extend .icon-feed; color:$orange; padding:0 5px; font-size:0.5em; text-shadow:1px 1px 1px #ccc;} /* remember rss for news */
+.mainRss a	 {@extend .icon-feed; color:$orange; padding:0 5px; font-size:0.4em; text-shadow:1px 1px 1px #ccc;} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
 .newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
@@ -169,7 +172,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 .eventTimes {color:#666; margin:0 0 10px 45px;}
 
 /*News Article*/
-.newsAlert 		{margin-right:5px; color:#900; font-weight:700; display:inline;}
+.newsAlert 		{margin-right:5px; color:#b74742; font-weight:700; display:inline;}
 .images {float:right; margin:0 0 10px 10px; @extend.outline;}
 .images, .images .photoslider-1click-slideshow, .images .photoslider-1click-slideshow img {width:352px; height:264px;}
 .eventdates {clear:both; float:left; width:24%;}
@@ -308,7 +311,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .section h3					{margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
 .callout h3					{color:#fff; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333;}
-.section .close			{font-weight:normal; box-shadow:0 1px 8px #999; @include gradient(#eeeeef, #ddddde);}
+.section .close			{box-shadow:0 1px 8px #999; @include gradient(#eeeeef, #ddddde);}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $maroon; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
 .close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $maroon;}
 .collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:1%; overflow:hidden;}
@@ -330,7 +333,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 	font-weight: normal;
 	font-style: normal;}
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav a[title=Home]:before, #Home, #Lines, .homeicon, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav a[title=Home]:before, #Home, #Lines, .homeicon, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before {
 	font-family: 'icomoon';
 	font-style: normal;
 	speak: none;
@@ -347,7 +350,7 @@ a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
 #col1 a[href^='http:'], #col2 :not(.slider) a[href^='http:'], #col3 a[href^='http:'], #Article a[href^='http:'], #Sidebar a[href^='http:'] {@extend .icon-new-tab;}
 
-.icon-mail:after {content: "\21"; font-size:1.2em; vertical-align:middle; padding-left:3px;}
+.icon-mail:before {content: "\21"; /*font-size:1.2em; vertical-align:middle; padding-left:3px;*/}
 .icon-location:before {content: "\22";}
 .icon-calendar:before {content: "\23";}
 .icon-calendar-2:before {content: "\25";}
@@ -360,8 +363,8 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-file-excel:after {content: "\2c"; margin-left:0.25em; font-size:1.1em; color:#007133;}
 .icon-user:before {content: "\2e";}
 .icon-play:before {content: "\2f";}
-.icon-lines:before {content: "\34"; vertical-align:middle; font-size:1.5em;}
-.icon-new-tab:after {content: "\35"; margin-left:0.25em; font-size:1.1em;}
+.icon-lines:after {content: "\34"; vertical-align:middle; font-size:1.5em;}
+.icon-new-tab:after {content: "\35"; margin-left:0.25em; font-size:1em;}
 .icon-new-tab-2:before {content: "\36";}
 .icon-warning:before {content: "\37";}
 .icon-play-alt:before {content: "\39";}
