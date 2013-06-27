@@ -11,9 +11,9 @@
 
 .sliderkit{display:none;position:relative;overflow:hidden;text-align:left;}
 .sliderkit {
-	.sliderkit-nav{z-index:10;position:absolute;text-align:center;}
-	.sliderkit-nav-clip{position:relative;overflow:hidden;margin:0 auto;}
-	.sliderkit-nav-clip ul{position:relative;left:0;top:0;margin:0;}
+	.sliderkit-nav{z-index:10;position:absolute;/*text-align:center;*/}
+	// .sliderkit-nav-clip{position:relative;overflow:hidden;margin:0 auto;}
+	// .sliderkit-nav-clip ul{position:relative;left:0;top:0;margin:0;}
 	.sliderkit-nav-clip ul li{float:left; margin:0 1px 0 0;}
 	.sliderkit-nav-clip ul li a{display:block;overflow:hidden;}
 	.sliderkit-btn{z-index:10;}
@@ -30,12 +30,11 @@
 /*---------------------------------
  *  1 click Photos slider > slideshow
  *---------------------------------*/
-.photoslider-1click-slideshow{width:100%;}
+// .photoslider-1click-slideshow{width:100%;}
 .photoslider-1click-slideshow	{
 	.sliderkit-nav{top:0;left:0;}
 	.sliderkit-nav-clip li{list-style:none;}
-	.sliderkit-nav-clip li a{display:block;padding:2px 6px;color:#fff;background:#444;font-size:0.8em;
-border:0;}
+	.sliderkit-nav-clip li a{display:block;padding:2px 6px;color:#fff;background:#444;font-size:0.8em;text-decoration:none;}
 	.sliderkit-nav-clip li.sliderkit-selected a{color:#111;background:#fff;}
 	.sliderkit-nav-clip a:hover{color:#fff;background:$link;}
 	.sliderkit-panel{width:100%;}

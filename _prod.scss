@@ -39,7 +39,7 @@ img 						{border:0; max-width:100%;}
 .section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
 
 /*Pages*/
-.storyContentWrapper, .content {margin:0 auto; /*padding-top:30px;*/ min-width:300px; max-width:735px; /*font-size:1.15em;*/}
+.storyContentWrapper, .content {margin:0 auto; /*padding-top:30px;*/ min-width:10em; max-width:50em; /*font-size:1.15em;*/}
 // #col3, #sidebar, #Sidebar {font-size:1.05em;}
 #Article .storyContentWrapper, #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
@@ -294,10 +294,10 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .outline 						{padding:1% 1% 2%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999; position:relative;}
 .outline a:active		{position:absolute;}
 .largeimage					{margin-bottom:1em; width:100%;}
-.largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:80%;}
-.largeimage .photoslider-1click-slideshow img {height:408px;}
+.largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:80%; padding-bottom:75%;}
+.largeimage .photoslider-1click-slideshow img {max-height:482px;}
 .smallimage					{float:left; margin:0 2% 1em 0; width:50%;}
-.smallimage .photoslider-1click-slideshow img {height:210px;}
+.smallimage .photoslider-1click-slideshow img {max-height:235px;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 #col2 .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .smallimage .sliderkit-panel .sliderkit-panel-overlay		{padding-bottom:20%;}
@@ -358,9 +358,9 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-twitter:before {content: "\27"; color:#4099FF;}
 .icon-feed:before {content: "\28";}
 .icon-flickr:before {content: "\29";}
-.icon-file-word:after {content: "\2a"; margin-left:0.25em; font-size:1.1em; color:#00178f; background:#fff; border-radius:10px;}
-.icon-file-pdf:after {content: "\2b"; margin-left:0.25em; font-size:1.1em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
-.icon-file-excel:after {content: "\2c"; margin-left:0.25em; font-size:1.1em; color:#007133;}
+.icon-file-word:after {content: "\2a"; margin-left:0.25em; font-size:1em; color:#00178f; background:#fff; border-radius:10px;}
+.icon-file-pdf:after {content: "\2b"; margin-left:0.25em; font-size:1em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
+.icon-file-excel:after {content: "\2c"; margin-left:0.25em; font-size:1em; color:#007133;}
 .icon-user:before {content: "\2e";}
 .icon-play:before {content: "\2f";}
 .icon-lines:after {content: "\34"; vertical-align:middle; font-size:1.5em;}
@@ -370,8 +370,8 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-play-alt:before {content: "\39";}
 .icon-play-2:before {content: "\3a";}
 .icon-camera:before {content: "\3b";}
-.icon-file-powerpoint:after {content: "\3c"; margin-left:0.25em; font-size:1.1em; color:#dd5800;}
-.icon-file-zip:after {content: "\3d"; margin-left:0.25em; font-size:1.1em; color:#666;}
+.icon-file-powerpoint:after {content: "\3c"; margin-left:0.25em; font-size:1em; color:#dd5800;}
+.icon-file-zip:after {content: "\3d"; margin-left:0.25em; font-size:1em; color:#666;}
 .icon-home:before {content: "\3e"; line-height:42px; /*vertical-align:sub;*/}
 .icon-document-alt-fill:before {content:"\43";}
 .icon-folder:before {content:"\44";}
