@@ -51,14 +51,15 @@ img 						{border:0; max-width:100%;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
 
 .content h1 {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
-#Sidebar h3, #col3 #Govdelivery h3, .council h3, #popularPages h2, #popularSearch h2 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#Sidebar h3, .council h3, #popularPages h2, #popularSearch h2, .findmyservice, #col3 #Govdelivery h3 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+#col3 #Govdelivery h3 {background:$green;}
 
 .shortdesc {font-style:italic; color:#666;}
 
 /*Left Col
 ===========*/
 /*Global*/
-.box.icons 						{margin-right:0; padding:0; @extend .dotted; display:none;}
+.box.icons 						{margin-right:0; padding:0; @extend .dotted;}
 .icons a 							{float:left; margin:1% 0; width:31%; /*line-height:30px;*/ text-align:center; text-shadow:1px 1px 1px #ccc;}
 .icons a:hover 				{text-decoration:none;}
 a.icon-calendar 			{color:$link; width:35%;}
@@ -66,8 +67,8 @@ a.icon-location 			{color:$green; width:28%;}
 a.icon-user 					{color:$maroon;}
 
 /*Department dropdown*/
-.deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 0; /*@extend .dotted;*/}
-#col1 .deptDropdown h2 {@extend .iwt_section_header; /*border:none;*/}
+.deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 0; @extend .dotted;}
+#col1 .deptDropdown h2 {@extend .iwt_section_header; border:none;}
 #Sidebar .deptDropdown h2	{font-size:1.25em; background:none; text-shadow:1px 1px 1px #ccc;}
 #deptSelector select 	{width:95%;}
 
@@ -112,7 +113,7 @@ a.icon-user 					{color:$maroon;}
 
 #Govdelivery 				{padding-left:10px;}
 #Govdelivery p			{margin:0;}
-#Govdelivery .action {padding-top:3px; border:1px solid $green; @include gradient(lighten($green, 15%), $green);}
+#Govdelivery .action {padding-top:3px; color:#fff; border:1px solid $green; @include gradient(lighten($green, 15%), $green);}
 
 // .related 				{background:mix($lightblue, $link); border-radius:3px; box-shadow:2px 8px 10px -5px #aaa;}
 // .related:hover   {box-shadow:0 3px 5px #999;}
@@ -206,7 +207,7 @@ a.more {float:right; margin:5px 10px; text-decoration:underline;}
 // .surveyQuestions {float:left; width:48%; margin:1%;}
 // .surveyQuestions .PDS_poll .pds-box {width:100%;}
 .videos 		{float:left; width:52%; margin:1%;}
-.open 			{float:right; width:40%; margin:1%; padding:1%;}
+.open 			{float:right; width:40%; margin:1%;}
 .council 		{padding-left:10px; /*@extend .dotted;*/}
 // .ecomment 	{background:#3C61A5; color:#fff; padding:0 5px; border-radius:5px;}
 label 			{display:block; @extend .quiet;}
@@ -308,7 +309,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .section img				{padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
 .section img.left,
 .section img.right 	{margin:0 10px 10px;}
-.section h3					{margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
+.section h3, .videos h2, .open h2 {margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
 .callout h3					{color:#fff; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333;}
 .section .close			{box-shadow:0 1px 8px #999; @include gradient(#eeeeef, #ddddde);}

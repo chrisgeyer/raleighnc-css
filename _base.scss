@@ -12,7 +12,7 @@ body 	{background:#ececec;}
 html, body, #Main, #Article, #sidebar, #Sidebar, #screenWrapper, .wrapper, #navigation, #Header, #Nav, #contentArea, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent
 										{margin:0; padding:0;}
 // #screenWrapper, .wrapper	{margin:0 auto; width:960px; background:#eee; border:1px solid #666; border-top:0;box-shadow:0px 2px 30px #444;}
-.fixedwidth					{margin:0 auto; width:80%;}
+.fixedwidth					{margin:0 auto; width:960px;}
 
 /* Text elements.
 -------------------------------------------------------------- */
@@ -41,6 +41,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 .utility 						{top:5%; font-size:0.9em;}
 .utility li 				{float:left; padding:0 15px; /*border-right:1px solid #666;*/}
 .utility li:last-child {border-right:none;}
+.utility li:first-child {display:none;}
 .utility li:first-child a {@extend .icon-user;}
 .utility li:nth-child(2) a {@extend .icon-mail;}
 .utility li:nth-child(3) a {@extend .icon-location;}
@@ -68,7 +69,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 // #Nav li:first-child {width:5%;}
 // #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
 .current 						{font-weight:700; @include gradient($link, lighten($link, 10%));}
-#Nav a 							{padding:0 20px; color:#fff; /*font-size:1.1em;*/ line-height:45px; text-shadow:1px 1px 3px #111; text-decoration:none;}
+#Nav a 							{padding:0 16px; color:#fff; /*font-size:1.1em;*/ line-height:45px; text-shadow:1px 1px 3px #111; text-decoration:none;}
 #Nav li:hover				{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
 .current a:hover, .current:hover a {font-weight:700; color:#fff;}
 #Nav li:first-child {border-left:none;}
@@ -113,10 +114,10 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 .socialmedia 			{width:165px; margin:0 auto;}
 .socialmedia img 	{float:left; margin-right:5px; border-radius:3px; box-shadow:0px 1px 2px #666;}
 .bow 							{width:50%; border-radius:3px; box-shadow:0px 1px 2px #666;}
-.legal						{clear:both; margin-bottom:0; padding-bottom:20px;}
+.legal						{clear:both; margin-bottom:0; /*padding-bottom:20px;*/}
 .legal li 				{display:inline; margin:0 10px;}
-#google_translate_element {position:absolute; right:1%; top:0;}
-#google_translate_element select {width:100px;}
-#Footer .goog-te-gadget 	{font-size:0;}
-.goog-te-gadget span {display:none;}
+#google_translate_element {margin-top:15px; /*position:absolute; right:1%; top:0;*/}
+// #google_translate_element select {width:100px;}
+// #Footer .goog-te-gadget 	{font-size:0;}
+// .goog-te-gadget span {display:none;}
 .copyright 				{background:#333; color:#fff; text-align:center; font-size:0.8em; margin-bottom:0; padding-bottom:10px;}

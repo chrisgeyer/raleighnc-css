@@ -1,6 +1,6 @@
-@media only screen and (min-width:1500px) {
+@media only screen and (min-width:95em) {
 	body {font-size:87.5%/1.5 Verdana, Geneva, sans-serif;;}
-	.fixedwidth {width:1220px;}
+	.fixedwidth {width:80%; max-width:1220px;}
 	#Nav li {width:11%;}
 	#Nav li:first-child {width:4.5%;}
 	#Nav li:nth-child(5) {width:17%;}
@@ -31,7 +31,7 @@
 	#contentArea {border:0;}
 }
 
-@media only screen and (min-width:40em) and (max-width:50em) {
+@media only screen and (min-width:40em) and (max-width:60em) {
 	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
 	.fixedwidth {width:100%;}
 	#addThisButtons {display:none;}
