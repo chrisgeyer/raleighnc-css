@@ -43,8 +43,7 @@ img 						{border:0; max-width:100%;}
 // #col3, #sidebar, #Sidebar {font-size:1.05em;}
 #Article .storyContentWrapper, #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
-#col2 .updatedDate {/*position:absolute; top:-20px; left:5px;*/ color:#999; font-size:0.8em; margin-bottom:0.5em;}
-#Article .updatedDate {margin:10px 0 20px 0; color:#666;}
+.updatedDate {background:#999; color:#fff; font-size:0.8em; margin-bottom:0.5em; padding:1%; border-radius:3px;}
 #addThisButtons	{position:absolute; right:10px; top:-20px; display:none;}
 
 #col1Large {position:relative;}
@@ -152,14 +151,14 @@ a.icon-user 					{color:$maroon;}
 /*News & Events
 ================*/
 /*News List*/
-.mainarticlelinks {float:left; margin:25px 1%; padding:0; width:54%; font-size:1.1em;}
-.mainarticlelinks h2, .maineventslinks h2 {float:left; margin-left:5px;}
+.mainarticlelinks {float:left; margin:1%; padding:0; width:54%; font-size:1.1em;}
+.mainarticlelinks h2, .maineventslinks h2 {float:left; margin:0 0 0 0.1em;}
 // .mainRss img {margin:0 0 0 10px; display:none;}
 .mainRss a	 {@extend .icon-feed; color:$orange; padding:0 5px; font-size:0.4em; text-shadow:1px 1px 1px #ccc;} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
 .newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
-a.more {float:right; margin:5px 10px; text-decoration:underline;}
+a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 
 /*Events List*/
 .maineventslinks {@extend .mainarticlelinks; width:41%;}
@@ -351,7 +350,7 @@ a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
 #col1 a[href^='http:'], #col2 :not(.slider) a[href^='http:'], #col3 a[href^='http:'], #Article a[href^='http:'], #Sidebar a[href^='http:'] {@extend .icon-new-tab;}
 
-.icon-mail:before {content: "\21"; /*font-size:1.2em; vertical-align:middle; padding-left:3px;*/}
+.icon-mail:before {content: "\21"; font-size:1.2em; vertical-align:middle; padding-left:3px;}
 .icon-location:before {content: "\22";}
 .icon-calendar:before {content: "\23";}
 .icon-calendar-2:before {content: "\25";}

@@ -43,7 +43,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 .utility li:last-child {border-right:none;}
 .utility li:first-child {display:none;}
 .utility li:first-child a {@extend .icon-user;}
-.utility li:nth-child(2) a {@extend .icon-mail;}
+.utility li:nth-child(2) a {@extend .icon-calendar;}
 .utility li:nth-child(3) a {@extend .icon-location;}
 .utility li:last-child a {@extend .icon-user;}
 
