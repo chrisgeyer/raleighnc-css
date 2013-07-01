@@ -43,15 +43,14 @@ img 						{border:0; max-width:100%;}
 // #col3, #sidebar, #Sidebar {font-size:1.05em;}
 #Article .storyContentWrapper, #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
-.updatedDate {background:#999; color:#fff; font-size:0.8em; margin-bottom:0.5em; padding:1%; border-radius:3px;}
+.updatedDate {background:#ccc; font-size:0.8em; margin:0.5em; padding:1%; border-radius:3px;}
 #addThisButtons	{position:absolute; right:10px; top:-20px; display:none;}
 
 #col1Large {position:relative;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
 
 .content h1 {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
-#Sidebar h3, .council h3, #popularPages h2, #popularSearch h2, .findmyservice, #col3 #Govdelivery h3 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
-#col3 #Govdelivery h3 {background:$green;}
+#Sidebar h3, .findmyservice, .calendar h1 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 
 .shortdesc {font-style:italic; color:#666;}
 
@@ -86,32 +85,22 @@ a.icon-user 					{color:$maroon;}
 #col1 .iwt_section {margin:0;}
 .iwt_section_header {font-size:1.25em; @extend .underline;}
 #Sidebar .iwt_section_header {border-radius:0 20px 20px 0; background:$orange; text-shadow:1px 2px 3px #333;}
-.iwt_leftnav li, #popularPages li, #popularSearch li {margin:0 0 0.5em 0; list-style-type:none;}
+.iwt_leftnav li {margin:0 0 0.5em 0; list-style-type:none;}
 
 /*Right Col
 ============*/
-/*Popular portlets - april 20012*/
-#popularPages, #popularSearch {margin:10px;}
-// #popularPages h2, #popularSearch h2 {@extend .iwt_section_header;}
-
-/*New related - sept 2012*/
-.box 								{margin:2% 0 4%; padding:0 1% 1%; position:relative; overflow:hidden;}
-.related h3  				{margin:0; padding:0 5%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:0 3px 5px #999;}
-.related ul	 				{margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
-.related li  				{margin:0; padding:2%; background:$offwhite; background:#fdfdfd;}
-
-#Sidebar .related 	{padding-bottom:1%;}
-#Sidebar .related ul {background:#fff;}
-#Sidebar .related li {background:lighten($link, 50%);}
+/*New related - july 2013*/
+.box, #popularPages, #popularSearch {margin:2% 0 4%; padding:0 1% 1%; position:relative; overflow:hidden;}
+.related h3, #popularPages h2, #popularSearch h2 {margin:0; padding:0 5%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:0 3px 5px #999;}
+#popularPages h2, #popularSearch h2 {@extend .h3;}
+.related ul, #popularPages ul, #popularSearch ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
+.related li, #popularPages li, #popularSearch li {margin:0; padding:2%; background:$offwhite; background:#fdfdfd;}
 
 .govdelivery h3 		{/*font-size:1.1em;*/ background:$green;}
 .govdelivery ul	 		{background:#d9decf;}
-.govdelivery a 			{color:$green;
+/*.govdelivery a 			{color:$green;
 	&:visited					{color:lighten($link, 10%);}
-}
-
-#Govdelivery 				{padding-left:10px;}
-#Govdelivery p			{margin:0;}
+}*/
 #Govdelivery .action {padding-top:3px; color:#fff; border:1px solid $green; @include gradient(lighten($green, 15%), $green);}
 
 // .related 				{background:mix($lightblue, $link); border-radius:3px; box-shadow:2px 8px 10px -5px #aaa;}
@@ -121,7 +110,6 @@ a.icon-user 					{color:$maroon;}
 ====================*/
 /*Calendar*/
 .calendar					{margin:0 1%; font-size:1.1em;}
-.calendar h1			{font-size:1.3em;}
 #monthDetail 			{@extend #sidebar;}
 .calTopic01,
 .calTopic02,
@@ -202,7 +190,7 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 // #Sidebar .more, #sidebar .more {margin-right:10px;}
 
 /*Home Page Feature*/
-.landing 		{text-align:center; font-size:2em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.landing 		{margin-bottom:0.5em; text-align:center; font-size:2em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 // .surveyQuestions {float:left; width:48%; margin:1%;}
 // .surveyQuestions .PDS_poll .pds-box {width:100%;}
 .videos 		{float:left; width:52%; margin:1%;}
@@ -217,7 +205,8 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 /*Boards-Commissions*/
 .bcmeetinginfo	{@extend .callout;}
 #col2 .bcmeetinginfo {text-align:center; border-radius:5px 5px 0 0; border:2px solid $maroon; border-bottom:10px solid lighten($maroon, 15%);}
-.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.7%; vertical-align:top;}
+.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.85%; vertical-align:top;}
+.bcmeetinginfo div {padding:0;}
 .bcmeetinginfo h4 {background:$maroon; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
 .bcimage 				{margin:10px auto; width:100%;}
@@ -226,7 +215,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 
 /*CAC*/
 .cacmeetinginfo 	{@extend .bcmeetinginfo;}
-#col2 .cacmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%);}
+#col2 .cacmeetinginfo {@extend .confirm;border-bottom:10px solid lighten($green, 15%);}
 .cacmeetinginfo h4 {background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .cacactivity 			{@extend .outline; @extend .bcimage;}
 .cacactivity .photoslider-1click-slideshow {height:0; padding-bottom:60%;}
@@ -297,6 +286,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:80%; padding-bottom:75%;}
 .largeimage .photoslider-1click-slideshow img {max-height:482px;}
 .smallimage					{float:left; margin:0 2% 1em 0; width:50%;}
+#Playgrounds .smallimage {float:right;}
 .smallimage .photoslider-1click-slideshow img {max-height:235px;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
@@ -310,12 +300,13 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .section img.right 	{margin:0 10px 10px;}
 .section h3, .videos h2, .open h2 {margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
-.callout h3					{color:#fff; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333;}
+.callout h3					{padding:3px 5px; color:#fff; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333;}
+.contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none;}
 .section .close			{box-shadow:0 1px 8px #999; @include gradient(#eeeeef, #ddddde);}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $maroon; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
 .close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $maroon;}
 .collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:1%; overflow:hidden;}
-.callout .collapse 	{border:0;}
+.callout div 				{padding:1%}
 .block 							{clear:both;}
 
 /*Ally*/

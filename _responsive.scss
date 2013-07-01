@@ -19,6 +19,10 @@
 	.content {max-width:52em;}
 }
 
+/*@media only screen and (min-width:74em) {
+	#Lines {@extend .ally;}
+} - need to add a span with class*/
+
 @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
 	body {background:#eee;}
 	#screenWrapper, .wrapper {border:0; box-shadow:none; width:100%;}
@@ -53,7 +57,11 @@
 	.accolades, #accolade {padding-bottom:3%;}
 	#Sidebar .empClose {display:none;}
 	#Home {display:block; position:absolute; height:45px; width:15%; border-bottom:1px solid #999; text-align:center;}
-	#Nav Lines {margin:5.5% 2%;}
+	#Nav #Lines {margin:5.5% 2%;}
+}
+
+@media only screen and (max-width:54em) {
+	#Nav li:nth-child(5) {font-size:0.65em;}
 }
 
 @media only screen and (max-width:40em) {
