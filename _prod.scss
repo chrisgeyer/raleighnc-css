@@ -43,14 +43,15 @@ img 						{border:0; max-width:100%;}
 // #col3, #sidebar, #Sidebar {font-size:1.05em;}
 #Article .storyContentWrapper, #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
-.updatedDate {background:#ccc; font-size:0.8em; margin:0.5em; padding:1%; border-radius:3px;}
+span.updatedDate {}
+div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0; border-bottom:1px solid #ddd;}
 #addThisButtons	{position:absolute; right:10px; top:-20px; display:none;}
 
 #col1Large {position:relative;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
 
 .content h1 {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
-#Sidebar h3, .findmyservice, .calendar h1 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.findmyservice, .calendar h1 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 
 .shortdesc {font-style:italic; color:#666;}
 
@@ -101,7 +102,7 @@ a.icon-user 					{color:$maroon;}
 /*.govdelivery a 			{color:$green;
 	&:visited					{color:lighten($link, 10%);}
 }*/
-#Govdelivery .action {padding-top:3px; color:#fff; border:1px solid $green; @include gradient(lighten($green, 15%), $green);}
+#Govdelivery .action {padding-top:3px; color:#fff; border:1px solid $green; box-shadow:0 4px 0 darken($green, 10%); @include gradient(lighten($green, 15%), $green);}
 
 // .related 				{background:mix($lightblue, $link); border-radius:3px; box-shadow:2px 8px 10px -5px #aaa;}
 // .related:hover   {box-shadow:0 3px 5px #999;}
@@ -205,8 +206,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 /*Boards-Commissions*/
 .bcmeetinginfo	{@extend .callout;}
 #col2 .bcmeetinginfo {text-align:center; border-radius:5px 5px 0 0; border:2px solid $maroon; border-bottom:10px solid lighten($maroon, 15%);}
-.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.85%; vertical-align:top;}
-.bcmeetinginfo div {padding:0;}
+.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.85%; vertical-align:top; padding:0;}
 .bcmeetinginfo h4 {background:$maroon; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
 .bcimage 				{margin:10px auto; width:100%;}
@@ -224,7 +224,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 /*Contact - Nov 2012*/
 .contact					{@extend .callout;}
 #col2 .contact		{margin-top:2em; border:2px solid #ccc;}
-.contact img.left	{width:43%; margin-left:0;}
+.section.contact img.left	{width:43%; margin-left:0;}
 .bio							{clear:both;}
 
 /*Employment list*/
@@ -269,7 +269,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 .map {background:#aaa; height:175px; text-align:center;}
 ul.progress {padding-left:2%;}
 ul.progress li {float:left; text-align:center; position:relative; background:#666; color:#fff; display:inline; margin:2%; width:21%; text-shadow:1px 3px 5px #333;}
-ul.progress li:before, ul.progress li:after {content:' '; height:0; position:absolute; width:0; border:11px solid transparent; border-left-width:8px; border-right-width:8px; top:0;}
+ul.progress li:before, ul.progress li:after {content:' '; height:0; position:absolute; width:0; border:12px solid transparent; border-left-width:8px; border-right-width:8px; top:0;}
 ul.progress li:before {border-top-color:#666; border-bottom-color:#666; border-right-color:#666; right:100%;}
 ul.progress li:after {border-left-color:#666; left:100%;}
 ul.progress li.first {width:12%;}
