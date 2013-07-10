@@ -13,15 +13,16 @@
 	// #Sidebar #deptSelector select {margin-left:200px;}
 	.slider, .newslider-horizontal .sliderkit-panels {padding-bottom:60%;}
 	.newslider-horizontal .sliderkit-nav-clip li a {width:15px; height:15px;}
-	#col1 {display:block; float:left; position:static;}
+	#col1 {margin:0; float:left; position:static;}
 	#col2 {width:60%;}
 	#col3 {width:24%;}
 	.content {max-width:52em;}
 }
 
-/*@media only screen and (min-width:74em) {
-	#Lines {@extend .ally;}
-} - need to add a span with class*/
+@media only screen and (max-width:74em) {
+	#Nav a {padding:0 15px;}
+	#Nav li:first-child {margin-left:1%;}
+} /*- need to add a span with class on #lines*/
 
 @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
 	body {background:#eee;}
@@ -50,14 +51,14 @@
 	#Nav li:nth-child(5) {border-right:none; font-size:0.9em;}
 	#Nav li:last-child {border-right:1px solid #999;}
 	#Nav a {line-height:45px;}
-	#col1 {width:20%; top:170px;}
+	#col1 {width:20%; top:170px; margin-left:-20%;}
 	.icons {font-size:0.9em;}
 	.videos {width:51%;}
 	#right > div {margin:1% 1% 0 0; padding:1%;}
 	.accolades, #accolade {padding-bottom:3%;}
 	#Sidebar .empClose {display:none;}
 	#Home {display:block; position:absolute; height:45px; width:15%; border-bottom:1px solid #999; text-align:center;}
-	#Nav #Lines {margin:5.5% 2%;}
+	#Nav #Lines, #Nav #Lines:active {margin:5.5% 2%;}
 }
 
 @media only screen and (max-width:54em) {
@@ -129,7 +130,7 @@
 
 	/*nav hide*/
 	#Nav ul	{clear:both; border-top:1px solid #999;}
-	#Nav #Lines	{display:block; line-height:20px; padding:5px; float:right; margin:2%; @extend .icon-lines;}
+	#Nav #Lines	{line-height:20px; padding:5px; right:0; margin:2%; @extend .icon-lines;}
 	#Lines img {display:inline; float:left; vertical-align:middle; display:none;}
 	#Nav #Home	{display:block; line-height:20px; padding:5px; float:left; margin:2%; @extend .icon-home;}
 	.icon-home:before {line-height:20px; margin-right:5%; vertical-align:middle;}
