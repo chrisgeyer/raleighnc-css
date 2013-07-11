@@ -91,11 +91,11 @@ a.icon-user 					{color:$maroon;}
 /*Right Col
 ============*/
 /*New related - july 2013*/
-.box, #popularPages, #popularSearch {margin:2% 0 4%; padding:0 1% 1%; position:relative; overflow:hidden;}
-.related h3, #popularPages h2, #popularSearch h2 {margin:0; padding:0 5%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:0 3px 5px #999;}
+.box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {margin:2% 0 4%; padding:0 1% 1%; position:relative; overflow:hidden;}
+.related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:0 5%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:0 3px 5px #999;}
 #popularPages h2, #popularSearch h2 {@extend .h3;}
-.related ul, #popularPages ul, #popularSearch ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
-.related li, #popularPages li, #popularSearch li {margin:0; padding:2%; background:$offwhite; background:#fdfdfd;}
+.related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
+.related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li {margin:0; padding:2%; background:$offwhite; background:#fdfdfd;}
 
 .govdelivery h3 		{/*font-size:1.1em;*/ background:$green;}
 .govdelivery ul	 		{background:#d9decf;}
@@ -143,7 +143,7 @@ a.icon-user 					{color:$maroon;}
 .mainarticlelinks {float:left; margin:1%; padding:0; width:54%; font-size:1.1em;}
 .mainarticlelinks h2, .maineventslinks h2 {float:left; margin:0 0 0 0.1em;}
 // .mainRss img {margin:0 0 0 10px; display:none;}
-.mainRss a	 {@extend .icon-feed; color:$orange; padding:0 5px; font-size:0.4em; text-shadow:1px 1px 1px #ccc;} /* remember rss for news */
+.mainRss a	 {@extend .icon-feed; color:$orange; padding:0 5px; font-size:0.3em; text-shadow:1px 1px 1px #ccc;} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
 .newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
@@ -189,6 +189,11 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 // #Sidebar .mainarticlelinks li, #Sidebar .maineventslinks li , #sidebar .mainarticlelinks li, #Sidebar .maineventslinks li , #sidebar .maineventslinks li {padding:6px 0;}
 #Sidebar .malDate, #sidebar .malDate {display:block;}
 // #Sidebar .more, #sidebar .more {margin-right:10px;}
+
+#col3 .mainarticlelinks, #col3 .maineventslinks {float:none; width:100%; font-size:1.05em;}
+#col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {float:none;}
+#col3 .mainRss {display:none;}
+
 
 /*Home Page Feature*/
 .landing 		{margin-bottom:0.5em; text-align:center; font-size:2em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
