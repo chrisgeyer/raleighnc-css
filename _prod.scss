@@ -259,7 +259,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 #Sidebar h1 img, #Sidebar .empJump, #Sidebar .empNo, #Sidebar .empSalary, #Sidebar .empDept, #Sidebar .empClose, #Sidebar div[style], #sidebar h1 img, #sidebar .empJump, #sidebar .empNo, #sidebar .empSalary, #sidebar .empDept, #sidebar .empClose, #sidebar div[style], #col3 h1 img, #col3 .empJump, #col3 .empNo, #col3 .empSalary, #col3 .empDept, #col3 .empClose, #col3 div[style] {display:none;}
 #Sidebar #top h1, #sidebar #top h1, #col3 #top h1 {margin-left:-4%; padding:5px 20px; background:$link; color:#fff; font-size:1.4em; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1); border-radius:0 20px 20px 0;}
 // #Sidebar #top h1:after, #sidebar #top h1:after, #Sidebar h3:after {content:" "; background:url(images/ribbon-right.png); display:block; width:10px; height:10px; position:absolute; bottom:0; right:0; margin-bottom:-10px;}
-// #sidebar .employmentType h3 {font-size:1.4em;}
+#sidebar .employmentType h3, #sidebar .employmentType h3 {border-radius:3px; font-size:1.4em;}
 #Sidebar .empTitle, #sidebar .empTitle, #col3 .empTitle {font-weight:normal; font-size:1.1em; border-bottom:1px dotted #ccc; width:98%; margin:0 0 6px 0;}
 
 /*Facility*/
