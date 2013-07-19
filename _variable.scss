@@ -11,7 +11,8 @@ $maroon:#7f453b;
 	background-color:mix($start, $stop);
 	background-image:-webkit-linear-gradient($start, $stop);
 	background-image:        linear-gradient(to bottom, $start, $stop);
-	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorStr=#{$start}, EndColorStr=#{$stop})";}
+	//-ms-filter:"progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorStr=#{$start}, EndColorStr=#{$stop})";
+}
 
 @mixin transition ($property, $time, $method) {
 	-webkit-transition:$property $time $method;

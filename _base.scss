@@ -33,12 +33,12 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 
 #CitySeal						{width:45%; cursor:pointer;}
 .logo 							{float:left; margin:5px; width:85px; -webkit-filter:drop-shadow(1px 1px 5px #333); filter:drop-shadow(1px 1px 5px #333);}
-.raleigh 						{margin:15px 0 0 5px; font-size:2.6em; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 3px #111; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=2,offY=2,color=#666666)"; color:#fff; @include transition(font-size, .4s, ease-in-out);}
+.raleigh 						{margin:15px 0 0 5px; font-size:2.6em; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 3px #111; color:#fff; @include transition(font-size, .4s, ease-in-out);}
 .raleigh:hover			{cursor:pointer; font-size:3.2em; @include transition(font-size, .4s, ease-in-out);}
 
 .utility, .sizer, #Weather, #SearchBox {position:absolute; right:2%;}
 
-.utility 						{top:5%; font-size:0.9em;}
+.utility 						{top:5%; font-size:0.9em; display:none;}
 .utility li 				{float:left; padding:0 15px; /*border-right:1px solid #666;*/}
 .utility li:last-child {border-right:none;}
 .utility li:first-child {display:none;}

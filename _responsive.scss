@@ -4,8 +4,8 @@
 	#Nav li:first-child {width:4.5%;}
 	#Nav li:nth-child(5) {width:17%;}
 	#Nav li:last-child {border-right:1px solid #515f55;}
-	#Lines {display:none;}
-	.logo, .icons {display:none;}
+	#Lines, .logo, .icons {display:none;}
+	.utility {display:block;}
 	// .deptDropdown {margin:0; padding:0; border:none;}
 	// .deptDropdown h2 {display:none;}
 	// #deptSelector select {position:absolute; top:110px; width:8%; z-index:100;}
@@ -22,7 +22,24 @@
 @media only screen and (max-width:74em) {
 	#Nav a {padding:0 15px;}
 	#Nav li:first-child {margin-left:1%;}
-} /*- need to add a span with class on #lines*/
+}
+/*- need to add a span with class on #lines*/
+@media only screen and (max-width:71em) {
+	#Nav a {padding:0 14px;}
+	#Nav li:first-child {margin-left:2%;}
+}
+@media only screen and (max-width:69em) {
+	#Nav a {padding:0 13px;}
+	#Nav li:first-child {margin-left:4%;}
+}
+@media only screen and (max-width:66em) {
+	#Nav a {padding:0 12px;}
+	#Nav li:first-child {margin-left:5%;}
+}
+@media only screen and (max-width:64em) {
+	#Nav a {padding:0 11px;}
+	#Nav li:first-child {margin-left:6%;}
+}
 
 @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
 	body {background:#eee;}
@@ -75,20 +92,20 @@
 	#SearchBox, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation {width:100%;}
 	.newseventlocation li {display:inline;}
 	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
-	#SearchBox {bottom:10%;}
 	#SearchInput {width:75%;}
 	.logo {display:block; position:absolute; right:3%; margin:0; padding:0; width:60px;}
 	.raleigh {margin-top:10px; font-size:2.5em;}
 	.raleigh:hover{font-size:2.8em;}
 	.utility {display:none;}
-	#Nav li {width:49%; /*border-right:1px solid #999;*/ border-bottom:1px solid #999;}
+	#Nav li {width:100%; /*border-right:1px solid #999;*/ border-bottom:1px solid #999;}
 	#Nav li:first-child {display:none;}
 	#Nav li:nth-child(odd) {border-right:0;}
+	#Nav li:nth-child(5) {font-size:1em;}
 	.navtext {display:none;}
 	.icons {font-size:0.9em;}
-	#col1, #col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {width:100%; margin:0;}
+	#col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {width:100%; margin:0;}
 	#col2 {width:99%;}
-	#col1 {text-align:center;}
+	#col1, #col1.docked {text-align:center; width:50%; margin-left:-55%; top:148px; z-index:100;}
 	#col2 .updatedDate {position:relative; top:0; left:0;}
 	// .storyContentWrapper, .content, #Article .storyContentWrapper {width:95%; padding:0 2.5%;}
 	#storyContentWrapper {padding:0;}
@@ -124,18 +141,13 @@
    }
    table {overflow:auto;}
 
-  .icon-calendar 				{background-position:-5% 11%;}
-	.icon-location 				{background-position:-5% 22%;}
-	.icon-user 						{background-position:-5% 34%;}
-
 	/*nav hide*/
-	#Nav ul	{clear:both; border-top:1px solid #999;}
-	#Nav #Lines	{line-height:20px; padding:5px; right:0; margin:2%; @extend .icon-lines;}
+	#Nav ul	{display:none; clear:both; border-top:1px solid #999;  width:50%; float:right; @include transition(display, .15s, cubic-bezier(0,1.12,.39,.98));}
+	#Nav #Lines, #Nav #Lines:active	{line-height:20px; padding:5px; margin:8px; @extend .icon-lines;}
 	#Lines img {display:inline; float:left; vertical-align:middle; display:none;}
-	#Nav #Home	{display:block; line-height:20px; padding:5px; float:left; margin:2%; @extend .icon-home;}
+	#Nav #Home	{display:block; line-height:20px; padding:5px; float:right; margin:2%; @extend .icon-home;}
 	.icon-home:before {line-height:20px; margin-right:5%; vertical-align:middle;}
-	#Nav ul, #col1 {display:none;}
-	.fixed {position:relative !important;}
+	.fixed, .docked {position:relative !important;}
 
 	/*Search*/
 	#screenWrapper #Search h2, .wrapper #Search h2 {float:none;}
