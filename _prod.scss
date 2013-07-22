@@ -98,6 +98,8 @@ a.icon-user 					{color:$maroon;}
 .related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
 .related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li {margin:0; padding:2%; background:$offwhite; background:#fdfdfd;}
 
+#col2Large #popularPages {float:left; margin:0 1%; padding:0; width:54%;}
+
 .govdelivery h3 		{/*font-size:1.1em;*/ background:$green;}
 .govdelivery ul	 		{background:#d9decf;}
 /*.govdelivery a 			{color:$green;
@@ -143,7 +145,7 @@ a.icon-user 					{color:$maroon;}
 /*News List*/
 .mainarticlelinks {float:left; margin:1%; padding:0; width:54%; font-size:1.1em;}
 .mainarticlelinks h2, .maineventslinks h2 {float:left; margin:0 0 0 0.1em;}
-// .mainRss img {margin:0 0 0 10px; display:none;}
+.mainRss {position:absolute; top:0; right:0;}
 .mainRss a  {@extend .icon-feed; /*color:$orange; padding:0 5px; font-size:0.3em; text-shadow:1px 1px 1px #ccc;*/} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
 .newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
@@ -210,9 +212,9 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 ====================*/
 /*Boards-Commissions*/
 .bcmeetinginfo	{@extend .callout;}
-#col2 .bcmeetinginfo {text-align:center; border-radius:5px 5px 0 0; border:2px solid $maroon; border-bottom:10px solid lighten($maroon, 15%);}
+#col2 .bcmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%); text-align:center;}
 .bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .storyContentWrapper ul.individual, .content ul.individual {float:none; display:inline-block; width:32.85%; vertical-align:top; padding:0;}
-.bcmeetinginfo h4 {background:$maroon; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
+.bcmeetinginfo h4 {background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
 .bcimage 				{margin:10px auto; width:100%;}
 .bcimage img		{width:100%;}
@@ -220,7 +222,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 
 /*CAC*/
 .cacmeetinginfo 	{@extend .bcmeetinginfo;}
-#col2 .cacmeetinginfo {@extend .confirm;border-bottom:10px solid lighten($green, 15%);}
+#col2 .cacmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%); text-align:center;}
 .cacmeetinginfo h4 {background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .cacactivity 			{@extend .outline; @extend .bcimage;}
 .cacactivity .photoslider-1click-slideshow {height:0; padding-bottom:60%;}
@@ -228,7 +230,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 
 /*Contact - Nov 2012*/
 .contact					{@extend .callout;}
-#col2 .contact		{margin-top:2em; border:2px solid #ccc;}
+#col2 .contact		{border:2px solid #ccc;}
 .section.contact img.left	{width:43%; margin-left:0;}
 .bio							{clear:both;}
 
@@ -303,13 +305,13 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .section img				{padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
 .section img.left,
 .section img.right 	{margin:0 10px 10px;}
-.section h3, .videos h2, .open h2 {margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
+.section h3, .videos h2, .open h2, .mainarticlelinks h2, .maineventslinks h2 {margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
-.callout h3					{padding:3px 5px; color:#fff; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333;}
+.callout h3					{padding:3px 5px; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333;}
 .contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none;}
 .section .close			{box-shadow:0 1px 8px #999; @include gradient(#eeeeef, #ddddde);}
-.arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $maroon; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
-.close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $maroon;}
+.arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
+.close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $link;}
 .collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:1%; overflow:hidden;}
 .callout div 				{padding:1%}
 .block 							{clear:both;}

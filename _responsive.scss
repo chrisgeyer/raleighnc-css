@@ -25,20 +25,24 @@
 }
 /*- need to add a span with class on #lines*/
 @media only screen and (max-width:71em) {
-	#Nav a {padding:0 14px;}
+	#Nav a {padding:0 13px;}
 	#Nav li:first-child {margin-left:2%;}
 }
 @media only screen and (max-width:69em) {
-	#Nav a {padding:0 13px;}
+	#Nav a {padding:0 12px;}
 	#Nav li:first-child {margin-left:4%;}
 }
 @media only screen and (max-width:66em) {
-	#Nav a {padding:0 12px;}
+	#Nav a {padding:0 11px;}
 	#Nav li:first-child {margin-left:5%;}
 }
 @media only screen and (max-width:64em) {
-	#Nav a {padding:0 11px;}
+	#Nav a {padding:0 10px;}
 	#Nav li:first-child {margin-left:6%;}
+}
+@media only screen and (max-width:62em) {
+	#Nav a {padding:0 9px;}
+	#Nav li:first-child {margin-left:7%;}
 }
 
 @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {

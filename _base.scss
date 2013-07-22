@@ -70,7 +70,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 // #Nav li:first-child {width:5%;}
 // #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
 .current 						{font-weight:700; @include gradient($link, lighten($link, 10%));}
-#Nav a 							{padding:0 16px; color:#fff; /*font-size:1.1em;*/ line-height:45px; text-shadow:1px 1px 3px #111; text-decoration:none;}
+#Nav a 							{padding:0 15px; color:#fff; /*font-size:1.1em;*/ line-height:45px; text-shadow:1px 1px 3px #111; text-decoration:none;}
 #Nav li:hover				{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
 .current a:hover, .current:hover a {font-weight:700; color:#fff;}
 #Nav li:first-child {border-left:none;}
@@ -95,10 +95,11 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 #col1 						{width:15%; /*height:90%;*/ margin-left:-16%; padding:1%; font-size:0.75em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; transition:width 0.3s ease; z-index:50; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
 #col1.menu				{margin:0;}
 #col1.docked 			{top:35px;}
+#col2Large ~ #col1 {margin:0 0 0 1%; width:17%; float:left; position:static;}
 // #col1:target			{width:150px;}
 #col2 						{float:left; margin:2% 0 0 0.5%; padding:1%; width:60%; position:relative; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;   margin:0 0 0 1%; padding:1%; width:70%;}
 #col3 						{float:right; width:23%; padding:2.5% 0 0 0;  width:29%; padding:0.5% 0 0 1%;}
-#col2Large 				{width:100%;}
+#col2Large 				{float:right; width:80%; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999; margin:0 1%; padding:1%;}
 #Article 					{float:left; margin:0 0 0 1%; padding:1%; width:70%; min-height:540px; position:relative; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;}
 #Sidebar, #sidebar 	{float:left; width:29%; padding:0.5% 0 0 1%;}
 
