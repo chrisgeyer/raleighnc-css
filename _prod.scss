@@ -143,9 +143,9 @@ a.icon-user 					{color:$maroon;}
 /*News & Events
 ================*/
 /*News List*/
-.mainarticlelinks {float:left; margin:1%; padding:0; width:54%; font-size:1.1em;}
-.mainarticlelinks h2, .maineventslinks h2 {float:left; margin:0 0 0 0.1em;}
-.mainRss {position:absolute; top:0; right:0;}
+.mainarticlelinks {float:left; margin:1%; padding:0; width:54%; font-size:1.1em; position:relative;}
+// .mainarticlelinks h2, .maineventslinks h2 {float:left; margin:0 0 0 0.1em;}
+.mainRss {position:absolute; top:0; right:3%;}
 .mainRss a  {@extend .icon-feed; /*color:$orange; padding:0 5px; font-size:0.3em; text-shadow:1px 1px 1px #ccc;*/} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
 .newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
@@ -305,7 +305,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .section img				{padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
 .section img.left,
 .section img.right 	{margin:0 10px 10px;}
-.section h3, .videos h2, .open h2, .mainarticlelinks h2, .maineventslinks h2 {margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
+.section h3, .videos h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
 .callout h3					{padding:3px 5px; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333;}
 .contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none;}
@@ -357,7 +357,7 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-calendar-2:before {content: "\25";}
 .icon-facebook:before {content: "\24"; color:#3B5999;}
 .icon-twitter:before {content: "\27"; color:#4099FF;}
-.icon-feed:before {content: "\28"; color:$orange; font-size:0.5em; padding:0 5px; text-shadow:1px 1px 1px #ccc;}
+.icon-feed:before {content: "\28"; color:$orange; background:#fff; font-size:0.5em; border-radius:10px; text-shadow:1px 1px 1px #ccc;}
 .icon-flickr:before {content: "\29";}
 .icon-file-word:after {content: "\2a"; margin-left:0.25em; font-size:1em; color:#00178f; background:#fff; border-radius:10px;}
 .icon-file-pdf:after {content: "\2b"; margin-left:0.25em; font-size:1em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
