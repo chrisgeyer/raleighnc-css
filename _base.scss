@@ -69,10 +69,10 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 #Nav li 						{float:left; /*width:12%;*/ height:45px; text-align:center; border-left:1px solid #515f55; @include transition(background, .2s, ease-in-out);}
 // #Nav li:first-child {width:5%;}
 // #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
-.current 						{font-weight:700; @include gradient($link, lighten($link, 10%));}
+.current 						{@include gradient($link, lighten($link, 10%));}
 #Nav a 							{padding:0 15px; color:#fff; /*font-size:1.1em;*/ line-height:45px; text-shadow:1px 1px 3px #111; text-decoration:none;}
 #Nav li:hover				{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
-.current a:hover, .current:hover a {font-weight:700; color:#fff;}
+.current a:hover, .current:hover a {color:#fff;}
 #Nav li:first-child {border-left:none;}
 
 #Nav li:first-child a:before {@extend .icon-home; font-size:1.5em;}

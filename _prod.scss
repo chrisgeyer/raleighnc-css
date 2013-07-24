@@ -9,7 +9,7 @@
 .last 					{margin-right:0; padding-right:0; border-right:none;}
 .fifth					{width:19%;}
 .fourth					{width:24%;}
-.third 					{width:33%;} // extend this and get rid of in html
+.third 					{width:32%;}
 .half 					{width:48%;}
 .twothirds			{width:64%;}
 .small 					{width:25%;}
@@ -29,7 +29,7 @@ img 						{border:0; max-width:100%;}
 .action:hover 	{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(#666665, #B2B2B2);}
 .action:active 	{box-shadow:inset 0 1px 2px rgba(0,0,0,0.3)}
 .action img			{display:none;}
-.toggle 				{display:inline-block;}
+.toggle 				{display:inline-block; vertical-align:top;}
 
 /*OOCSS - start using % for placeholders not needed in compiled css*/
 .dotted					{border-bottom:1px dotted #ccc;}
@@ -45,7 +45,7 @@ img 						{border:0; max-width:100%;}
 #Article .storyContentWrapper, #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
 span.updatedDate {}
-div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0; border-bottom:1px solid #ddd;}
+div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd;}
 #addThisButtons	{position:absolute; right:10px; top:-20px; display:none;}
 
 #col1Large {position:relative;}
@@ -229,9 +229,6 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 .cacgismap 				{margin:0 0 0 2%; width:62%; height:256px; overflow:hidden;}
 
 /*Contact - Nov 2012*/
-.contact					{@extend .callout;}
-#col2 .contact		{border:2px solid #ccc;}
-.section.contact img.left	{width:43%; margin-left:0;}
 .bio							{clear:both;}
 
 /*Employment list*/
@@ -273,7 +270,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 .parkmap						{width:100%;}
 
 /*Project*/
-.map {background:#aaa; height:175px; text-align:center;}
+// .map {background:#aaa; height:175px; text-align:center;}
 ul.progress {padding-left:2%;}
 ul.progress li {float:left; text-align:center; position:relative; background:#666; color:#fff; display:inline; margin:2%; width:21%; text-shadow:1px 3px 5px #333;}
 ul.progress li:before, ul.progress li:after {content:' '; height:0; position:absolute; width:0; border:12px solid transparent; border-left-width:8px; border-right-width:8px; top:0;}
@@ -285,6 +282,12 @@ ul.progress li.last:after {border:none !important;}
 ul.progress li.current {background:$link;}
 ul.progress li.current:before {border-top-color:$link; border-bottom-color:$link; border-right-color:$link; right:100%;}
 ul.progress li.current:after {border-left-color:$link; left:100%;}
+
+/*Shares*/
+.sharing {float:right; font-size:1.1em;}
+.content a.tweets {background:#00acee; color:#fff; text-decoration:none; padding:1%; border-radius:3px;}
+.content a.shares {background:#3b5998; color:#fff; text-decoration:none; padding:1%; border-radius:3px;}
+.sharing .count {background:#fff; border:1px solid #aaa; color:#aaa; padding:0 3%;}
 
 /*New 1col - april 2012*/
 .outline 						{padding:1% 1% 2%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999; position:relative;}
@@ -318,6 +321,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 
 /*DevServ*/
 #Developer, #Homeowner {display:none;}
+.map {float:right; width:50%;}
 
 /*Ally*/
 .ally, .homeicon		{position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
@@ -328,18 +332,26 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot');
 	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('fonts/icomoon.svg#icomoon') format('svg'),
-		url('fonts/icomoon.woff') format('woff'),
-		url('fonts/icomoon.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;}
+			url('fonts/icomoon.svg#icomoon') format('svg'),
+			url('fonts/icomoon.woff') format('woff'),
+			url('fonts/icomoon.ttf') format('truetype');
+	font-weight: normal; font-style: normal;}
+
 /* Use the following CSS code if you want to have a class per icon */
 [class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav a[title=Home]:before, #Home, #Lines, .homeicon, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before {
-	font-family: 'icomoon';
+	/*font-family: 'icomoon';
 	font-style: normal;
 	speak: none;
 	font-weight: normal;
-	font-size:2em;
+	font-size:1.5em;
+	-webkit-font-smoothing: antialiased;*/
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
 	-webkit-font-smoothing: antialiased;}
 
 .action.right:hover .icon-mail {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
@@ -351,32 +363,37 @@ a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
 #col1 a[href^='http:'], #col2 :not(.slider) a[href^='http:'], #col3 a[href^='http:'], #Article a[href^='http:'], #Sidebar a[href^='http:'] {@extend .icon-new-tab;}
 
-.icon-mail:before {content: "\21"; font-size:1.2em; vertical-align:middle; padding-left:3px;}
+.icon-mail:after {content: "\21"; font-size:1.2em; vertical-align:middle; padding-left:3px;}
 .icon-location:before {content: "\22";}
 .icon-calendar:before {content: "\23";}
 .icon-calendar-2:before {content: "\25";}
 .icon-facebook:before {content: "\24"; color:#3B5999;}
 .icon-twitter:before {content: "\27"; color:#4099FF;}
-.icon-feed:before {content: "\28"; color:$orange; background:#fff; font-size:0.5em; border-radius:10px; text-shadow:1px 1px 1px #ccc;}
+.icon-feed:before {content: "\28"; color:$orange; background:#fff; font-size:0.6em; border-radius:10px; text-shadow:1px 1px 1px #ccc;}
 .icon-flickr:before {content: "\29";}
-.icon-file-word:after {content: "\2a"; margin-left:0.25em; font-size:1em; color:#00178f; background:#fff; border-radius:10px;}
-.icon-file-pdf:after {content: "\2b"; margin-left:0.25em; font-size:1em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
-.icon-file-excel:after {content: "\2c"; margin-left:0.25em; font-size:1em; color:#007133;}
+.icon-file-word:after {content: "\2a"; margin-left:0.25em; font-size:0.8em; color:#00178f; background:#fff; border-radius:10px;}
+.icon-file-pdf:after {content: "\2b"; margin-left:0.25em; font-size:0.8em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
+.icon-file-excel:after {content: "\2c"; margin-left:0.25em; font-size:0.8em; color:#007133;}
 .icon-user:before {content: "\2e";}
 .icon-play:before {content: "\2f";}
 .icon-lines:after {content: "\34"; vertical-align:middle; font-size:1.5em;}
-.icon-new-tab:after {content: "\35"; margin-left:0.25em; font-size:1em;}
+.icon-new-tab:after {content: "\35"; margin-left:0.25em; font-size:0.8em;}
 .icon-new-tab-2:before {content: "\36";}
 .icon-warning:before {content: "\37";}
 .icon-play-alt:before {content: "\39";}
 .icon-play-2:before {content: "\3a";}
 .icon-camera:before {content: "\3b";}
-.icon-file-powerpoint:after {content: "\3c"; margin-left:0.25em; font-size:1em; color:#dd5800;}
-.icon-file-zip:after {content: "\3d"; margin-left:0.25em; font-size:1em; color:#666;}
+.icon-file-powerpoint:after {content: "\3c"; margin-left:0.25em; font-size:0.8em; color:#dd5800;}
+.icon-file-zip:after {content: "\3d"; margin-left:0.25em; font-size:0.8em; color:#666;}
 .icon-home:before {content: "\3e"; line-height:42px; /*vertical-align:sub;*/}
 .icon-document-alt-fill:before {content:"\43";}
-.icon-folder:before {content:"\44";}
-.icon-folder-2:before {content:"\45";}
+.icon-folder:before {content: "\44";}
+.icon-folder-2:before {content: "\45";}
+.icon-phone:before {content: "\26";}
+.icon-share:before {content: "\30";}
+.icon-search:before {content: "\2d";}
+.icon-feed-2:before {content: "\31";}
+.icon-flickr-2:before {content: "\32";}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid $green;}
