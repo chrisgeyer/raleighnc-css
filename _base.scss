@@ -21,7 +21,10 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 	&:visited		{color:lighten($link, 10%);}
 	&:hover,
 	&:focus 		{color:$linkhover; text-decoration:underline; @include transition(color, .5s, ease-in-out);}
-	&:active 		{position:relative; top:1px;}
+	&:active 		{position:relative; top:1px;
+	/*-webkit-transform: translate(2px);
+			-ms-transform: translate(2px);
+			 		transform: translate(2px);*/}
 }
 
 /* Header elements.
@@ -70,7 +73,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 // #Nav li:first-child {width:5%;}
 // #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
 .current 						{@include gradient($link, lighten($link, 10%));}
-#Nav a 							{padding:0 15px; color:#fff; /*font-size:1.1em;*/ line-height:45px; text-shadow:1px 1px 3px #111; text-decoration:none;}
+#Nav a 							{padding:0 14px; color:#fff; /*font-size:1.1em;*/ line-height:45px; text-shadow:1px 1px 3px #111; text-decoration:none;}
 #Nav li:hover				{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
 .current a:hover, .current:hover a {color:#fff;}
 #Nav li:first-child {border-left:none;}
@@ -86,7 +89,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 #navigation .navtext:active	{position:absolute; top:3px;}
 #Nav a:active:before {position:absolute;}
 
-#Nav #Lines, #Nav #Lines:active	{position:absolute; /*left:50px; top:-10px;*/ margin:0.5%; line-height:30px; font-size:1.1em; padding:0 1%;}
+#Nav #Lines, #Nav #Lines:active	{position:absolute; /*left:50px; top:-10px;*/ margin:0.5%; line-height:30px; font-size:1.1em; padding:0 1%; font-weight:normal; @extend .icon-lines;}
 /*#Lines,*/ #Home				{display:none; font-weight:700;}
 
 /* Main content areas.
@@ -95,11 +98,13 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 #col1 						{width:15%; /*height:90%;*/ margin-left:-16%; padding:1%; font-size:0.75em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; transition:width 0.3s ease; z-index:50; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
 #col1.menu				{margin:0;}
 #col1.docked 			{top:35px;}
-#col2Large ~ #col1 {margin:0 0 0 1%; width:17%; float:left; position:static;}
+#col1.land				{margin:0 1%; width:20%; float:left; position:static;}
 // #col1:target			{width:150px;}
-#col2 						{float:left; margin:2% 0 0 0.5%; padding:1%; width:60%; position:relative; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;   margin:0 0 0 1%; padding:1%; width:70%;}
-#col3 						{float:right; width:23%; padding:2.5% 0 0 0;  width:29%; padding:0.5% 0 0 1%;}
-#col2Large 				{float:right; width:80%; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999; margin:0 1%; padding:1%;}
+#col2 						{float:left; position:relative; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;   margin:0 0 0 1%; padding:1%; width:70%;}
+#col3 						{float:right; width:29%; padding:0.5% 0 0 1%;}
+#col1.land ~ #col3 {margin-right:3%; width:74%;}
+#col1.land ~ #col3 #right > div {float:left; width:47%;}
+#col2Large 				{float:right; width:76%; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999; margin:0 1%; padding:1%;}
 #Article 					{float:left; margin:0 0 0 1%; padding:1%; width:70%; min-height:540px; position:relative; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;}
 #Sidebar, #sidebar 	{float:left; width:29%; padding:0.5% 0 0 1%;}
 
@@ -108,7 +113,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 /*Accolades*/
 .box.accolades, #accolade 		{margin:0; padding:0.5% 10%; font-size:0.9em; border-bottom:1px solid lighten($link, 20%); border-top:1px solid lighten($link, 20%); text-align:center; position:relative; box-shadow:0 2px 3px #999; /*@include gradient(darken($lightblue, 5%), darken($lightblue, 15%));*/ @include gradient(#b3c8dc, #9eb7ce); /*@include gradient($link, $lightblue);*/}
 .accolades h3, #accldePre     {text-align:left; margin-bottom:0;}
-.accolades h2, #accolade h2 	{@extend .raleigh; margin:0 5px 0 0; font-size:2em; position:relative; -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(offX=2,offY=2,color=#666666)";}
+.accolades h2, #accolade h2 	{@extend .raleigh; margin:0 5px 0 0; font-size:2em; position:relative;}
 .accolades h2:hover, #accolade h2:hover {font-size:2em;}
 .source, #accldeSource 				{font-size:1.08em; font-style:italic; text-align:right; display:inline;}
 .accolades a.more, #accldeMore a		{/*position:absolute; bottom:5%; right:10%; margin:30px 0 0;*/ clear:both; color:#7f453b; text-decoration:none; padding-top:30px; margin:0;}

@@ -45,7 +45,7 @@ img 						{border:0; max-width:100%;}
 #Article .storyContentWrapper, #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
 span.updatedDate {}
-div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd;}
+div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd; position:relative;}
 #addThisButtons	{position:absolute; right:10px; top:-20px; display:none;}
 
 #col1Large {position:relative;}
@@ -93,7 +93,7 @@ a.icon-user 					{color:$maroon;}
 ============*/
 /*New related - july 2013*/
 .box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {margin:2% 0 4%; padding:0 1% 1%; position:relative; overflow:hidden;}
-.related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:0 5%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:0 3px 5px #999;}
+.related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:0 5%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:0 3px 5px #999; line-height:1.3}
 #popularPages h2, #popularSearch h2 {@extend .h3;}
 .related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
 .related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li {margin:0; padding:2%; background:$offwhite; background:#fdfdfd;}
@@ -284,7 +284,7 @@ ul.progress li.current:before {border-top-color:$link; border-bottom-color:$link
 ul.progress li.current:after {border-left-color:$link; left:100%;}
 
 /*Shares*/
-.sharing {float:right; font-size:1.1em;}
+.sharing {position:absolute; top:0; right:0; font-size:1.1em;}
 .content a.tweets {background:#00acee; color:#fff; text-decoration:none; padding:1%; border-radius:3px;}
 .content a.shares {background:#3b5998; color:#fff; text-decoration:none; padding:1%; border-radius:3px;}
 .sharing .count {background:#fff; border:1px solid #aaa; color:#aaa; padding:0 3%;}
@@ -332,19 +332,14 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot');
 	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-			url('fonts/icomoon.svg#icomoon') format('svg'),
 			url('fonts/icomoon.woff') format('woff'),
-			url('fonts/icomoon.ttf') format('truetype');
+			url('fonts/icomoon.ttf') format('truetype'),
+			url('fonts/icomoon.svg#icomoon') format('svg');
 	font-weight: normal; font-style: normal;}
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav a[title=Home]:before, #Home, #Lines, .homeicon, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before {
-	/*font-family: 'icomoon';
-	font-style: normal;
-	speak: none;
-	font-weight: normal;
-	font-size:1.5em;
-	-webkit-font-smoothing: antialiased;*/
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav a[title=Home]:before, #Home, #Nav #Lines:after, .homeicon, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before {
+	/*font-size:1.5em;*/
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -394,6 +389,18 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-search:before {content: "\2d";}
 .icon-feed-2:before {content: "\31";}
 .icon-flickr-2:before {content: "\32";}
+.icon-copy:before {content: "\33";}
+.icon-DSFormDirectory:before {content: "\38";}
+.icon-DSFeeSchedule:before {content: "\3f";}
+.icon-DSFaceToFace:before {content: "\40";}
+.icon-clipboard:before {content: "\41";}
+.icon-DSOnlineDevelopment:before {content: "\42";}
+.icon-screen:before {content: "\46";}
+.icon-monitor:before {content: "\47";}
+.icon-DSStandardDrawing:before {content: "\48";}
+.icon-pencil:before {content: "\49";}
+.icon-pencil-2:before {content: "\4a";}
+.icon-DSZonning:before {content: "\4b";}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid $green;}
