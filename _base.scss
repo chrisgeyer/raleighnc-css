@@ -87,10 +87,11 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 // #Nav li:nth-child(9) a:before {content:"Public"; @extend .navtext;}
 // .navtext 						{/*display:block; margin-top:-35px;*/ line-height:20px; font-size:0.75em; position:absolute; top:3px; margin:0; padding:0;}
 #navigation .navtext:active	{position:absolute; top:3px;}
-#Nav a:active:before {position:absolute;}
+// #Nav a:active:before {position:absolute;} /*messing up on mobile*/
 
 #Nav #Lines, #Nav #Lines:active	{position:absolute; /*left:50px; top:-10px;*/ margin:0.5%; line-height:30px; font-size:1.1em; padding:0 1%; font-weight:normal; @extend .icon-lines;}
 /*#Lines,*/ #Home				{display:none; font-weight:700;}
+#Lines.display {display:none;}
 
 /* Main content areas.
 -------------------------------------------------------------- */

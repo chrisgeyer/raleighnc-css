@@ -305,7 +305,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .callout						{margin:1.5em 0.5em; background:#fff; border:2px solid $orange; border-radius:5px; box-shadow:0 3px 5px #999; overflow:hidden;}
 .closed							{@extend .ally;}
 .callout img				{max-width:98%;}
-.section img				{padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
+.section img/*, .section .map*/	{padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
 .section img.left,
 .section img.right 	{margin:0 10px 10px;}
 .section h3, .videos h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
@@ -380,7 +380,7 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-camera:before {content: "\3b";}
 .icon-file-powerpoint:after {content: "\3c"; margin-left:0.25em; font-size:0.8em; color:#dd5800;}
 .icon-file-zip:after {content: "\3d"; margin-left:0.25em; font-size:0.8em; color:#666;}
-.icon-home:before {content: "\3e"; line-height:42px; /*vertical-align:sub;*/}
+.icon-home:before {content: "\3e"; line-height:42px; font-size:1.5em; /*vertical-align:sub;*/}
 .icon-document-alt-fill:before {content:"\43";}
 .icon-folder:before {content: "\44";}
 .icon-folder-2:before {content: "\45";}
@@ -401,6 +401,7 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-pencil:before {content: "\49";}
 .icon-pencil-2:before {content: "\4a";}
 .icon-DSZonning:before {content: "\4b";}
+.icon-mail-2:before {content: "\4c";}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid $green;}
