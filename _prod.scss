@@ -61,18 +61,20 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 /*Left Col
 ===========*/
 /*Global*/
-.box.icons 						{margin-right:0; padding:0; @extend .dotted;}
-.icons a 							{float:left; margin:1% 0; width:31%; /*line-height:30px;*/ text-align:center; text-shadow:1px 1px 1px #ccc;}
-.icons a:hover 				{text-decoration:none;}
-a.icon-calendar 			{color:$link; width:35%;}
-a.icon-location 			{color:$green; width:28%;}
-a.icon-user 					{color:$maroon;}
+.box.icons 						{/*margin-right:0;*/ padding:0;}
+.icons ul 						{margin:0;}
+.icons a 							{margin:2% 0; padding:3%; text-shadow:1px 1px 1px #ccc; display:block; background:#ececec; border-radius:3px;}
+.icons a:hover 				{text-decoration:none; font-size:1.3em;}
+.icon-location:hover  {color:#edb261;}
+.icon-user:hover			{color:$maroon;}
+.icon-calendar:hover  {color:lighten($link, 10%);}
+.icon-mail-2:hover		{color:$green;}
+.icons a:hover:before	{font-size:1.2em;}
 
 /*Department dropdown*/
-.deptDropdown 				{margin:0 0 10px 0; padding:0 0 10px 0; @extend .dotted;}
-#col1 .deptDropdown h2 {@extend .iwt_section_header; border:none;}
-#Sidebar .deptDropdown h2	{font-size:1.25em; background:none; text-shadow:1px 1px 1px #ccc;}
-#deptSelector select 	{width:95%;}
+.deptDropdown, .box.depts {margin:0; padding:0;}
+.deptDropdown h2 {@extend .iwt_section_header;}
+#deptSelector select, .depts select {width:100%; background:#ececec; border-radius:3px; border:0; height:30px;}
 
 /*Left Nav*/
 .leftnav 							{padding:10px;}
@@ -87,7 +89,7 @@ a.icon-user 					{color:$maroon;}
 /*old leftnav*/
 .iwt_section {margin:0 0 10px 10px;}
 #col1 .iwt_section {margin:0;}
-.iwt_section_header {font-size:1.25em; @extend .underline;}
+.iwt_section_header, #col1 h3 {font-size:1.25em; @extend .underline;}
 #Sidebar .iwt_section_header {border-radius:0 20px 20px 0; background:$orange; text-shadow:1px 2px 3px #333;}
 .iwt_leftnav li {margin:0 0 0.5em 0; list-style-type:none;}
 
@@ -146,7 +148,7 @@ a.icon-user 					{color:$maroon;}
 ================*/
 /*News List*/
 .mainarticlelinks {float:left; margin:1%; padding:0; width:54%; font-size:1.1em; position:relative;}
-// .mainarticlelinks h2, .maineventslinks h2 {float:left; margin:0 0 0 0.1em;}
+#col2 .mainarticlelinks > h2/*, .maineventslinks > h2*/ {padding:0 5px;}
 .mainRss {position:absolute; top:0; right:3%;}
 .mainRss a  {@extend .icon-feed; /*color:$orange; padding:0 5px; font-size:0.3em; text-shadow:1px 1px 1px #ccc;*/} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
@@ -156,9 +158,10 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 
 /*Events List*/
 .maineventslinks {@extend .mainarticlelinks; width:41%;}
+.eventsList  {padding-top:5px;}
 .eventsList li {clear:both; padding:5px; list-style:none;}
 .message 		{color:$green;}
-.eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:16%; background:$offwhite; /*border:2px solid #ddd;*/ text-align:center; font-weight:700; /*letter-spacing:0.2em;*/ border-radius:2px; box-shadow:0 2px 3px #999;}
+.eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:18%; background:$offwhite; /*border:2px solid #ddd;*/ text-align:center; font-weight:700; /*letter-spacing:0.2em;*/ border-radius:2px; box-shadow:0 2px 3px #999;}
 .eventMonth	{background:#ddd;}
 .eventDay 	{font-size:1.3em;}
 .eventTitle {display:inline;}
@@ -203,9 +206,9 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 .landing 		{margin-bottom:0.5em; text-align:center; font-size:2em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 // .surveyQuestions {float:left; width:48%; margin:1%;}
 // .surveyQuestions .PDS_poll .pds-box {width:100%;}
-.videos 		{float:left; width:52%; margin:1%;}
+.videos, .council {float:left; width:52%; margin:1%;}
 .open 			{float:right; width:40%; margin:1%;}
-.council 		{padding-left:10px; /*@extend .dotted;*/}
+// .council 		{padding-left:10px; /*@extend .dotted;*/}
 // .ecomment 	{background:#3C61A5; color:#fff; padding:0 5px; border-radius:5px;}
 label 			{display:block; @extend .quiet;}
 iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
@@ -360,9 +363,9 @@ a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
 #col1 a[href^='http:'], #col2 :not(.slider) a[href^='http:'], #col3 a[href^='http:'], #Article a[href^='http:'], #Sidebar a[href^='http:'] {@extend .icon-new-tab;}
 
-.icon-mail:after {content: "\21"; font-size:1.2em; vertical-align:middle; padding-left:3px;}
-.icon-location:before {content: "\22";}
-.icon-calendar:before {content: "\23";}
+.icon-mail:after {content: "\21"; font-size:0.8em; margin-left:0.25em;}
+.icon-location:before {content: "\22"; font-size:2em; vertical-align:middle; padding-right:5px;}
+.icon-calendar:before {content: "\23"; font-size:2em; vertical-align:middle; padding-right:5px;}
 .icon-calendar-2:before {content: "\25";}
 .icon-facebook:before {content: "\24"; color:#3B5999;}
 .icon-twitter:before {content: "\27"; color:#4099FF;}
@@ -371,7 +374,7 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-file-word:after {content: "\2a"; margin-left:0.25em; font-size:0.8em; color:#00178f; background:#fff; border-radius:10px;}
 .icon-file-pdf:after {content: "\2b"; margin-left:0.25em; font-size:0.8em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
 .icon-file-excel:after {content: "\2c"; margin-left:0.25em; font-size:0.8em; color:#007133;}
-.icon-user:before {content: "\2e";}
+.icon-user:before {content: "\2e"; font-size:2em; vertical-align:middle; padding-right:5px;}
 .icon-play:before {content: "\2f";}
 .icon-lines:after {content: "\34"; vertical-align:middle; font-size:1.5em;}
 .icon-new-tab:after {content: "\35"; margin-left:0.25em; font-size:0.8em;}
@@ -392,18 +395,18 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-feed-2:before {content: "\31";}
 .icon-flickr-2:before {content: "\32";}
 .icon-copy:before {content: "\33";}
-.icon-DSFormDirectory:before {content: "\38";}
-.icon-DSFeeSchedule:before {content: "\3f";}
-.icon-DSFaceToFace:before {content: "\40";}
+.icon-DSFormDirectory:before {content: "\38"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
+.icon-DSFeeSchedule:before {content: "\3f"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
+.icon-DSFaceToFace:before {content: "\40"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
 .icon-clipboard:before {content: "\41";}
-.icon-DSOnlineDevelopment:before {content: "\42";}
+.icon-DSOnlineDevelopment:before {content: "\42"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
 .icon-screen:before {content: "\46";}
 .icon-monitor:before {content: "\47";}
-.icon-DSStandardDrawing:before {content: "\48";}
+.icon-DSStandardDrawing:before {content: "\48"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
 .icon-pencil:before {content: "\49";}
 .icon-pencil-2:before {content: "\4a";}
-.icon-DSZonning:before {content: "\4b";}
-.icon-mail-2:before {content: "\4c";}
+.icon-DSZonning:before {content: "\4b"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
+.icon-mail-2:before {content: "\4c"; font-size:2em; vertical-align:middle; padding-right:5px;}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid $green;}
