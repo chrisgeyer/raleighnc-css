@@ -20,7 +20,7 @@ html, body, #Main, #Article, #sidebar, #Sidebar, #screenWrapper, .wrapper, #navi
 a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-out);
 	&:visited		{color:lighten($link, 10%);}
 	&:hover,
-	&:focus 		{color:$linkhover; text-decoration:underline; @include transition(color, .5s, ease-in-out);}
+	&:focus 		{color:$green; text-decoration:underline; @include transition(color, .5s, ease-in-out);}
 	&:active 		{position:relative; top:1px;
 	/*-webkit-transform: translate(2px);
 			-ms-transform: translate(2px);
