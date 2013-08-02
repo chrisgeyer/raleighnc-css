@@ -9,7 +9,7 @@
 	.utility {display:block;}
 	.deptDropdown, .box.depts {margin:0; padding:0; border:none;}
 	.deptDropdown h2, .depts h3 {display:none;}
-	#deptSelector select, .depts select {position:absolute; top:110px; width:8%; z-index:100; margin-left:1070px;}
+	.dropdown {position:absolute; top:110px; width:8%; z-index:100; margin-left:1070px;}
 	.slider, .newslider-horizontal .sliderkit-panels {padding-bottom:60%;}
 	.newslider-horizontal .sliderkit-nav-clip li a {width:15px; height:15px;}
 	#col1 {margin:0 0 0 1%; float:left; position:static; width:14%;}

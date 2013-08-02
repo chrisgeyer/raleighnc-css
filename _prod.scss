@@ -65,10 +65,10 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .icons ul 						{margin:0;}
 .icons a 							{margin:2% 0; padding:3%; text-shadow:1px 1px 1px #ccc; display:block; background:#ececec; border-radius:3px;}
 .icons a:hover 				{text-decoration:none; font-size:1.3em;}
-.icon-location:hover  {color:#edb261;}
-.icon-user:hover			{color:$maroon;}
-.icon-calendar:hover  {color:lighten($link, 10%);}
-.icon-mail-2:hover		{color:$green;}
+// .icon-location:hover  {color:#edb261;}
+// .icon-user:hover			{color:$maroon;}
+// .icon-calendar:hover  {color:lighten($link, 10%);}
+// .icon-mail-2:hover		{color:$green;}
 .icons a:hover:before	{font-size:1.2em;}
 
 /*Department dropdown*/
@@ -77,18 +77,12 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 #deptSelector select, .depts select {display:none;}
 
 /* General dropdown styles */
-.dropdown dd, .dropdown dt, .dropdown ul { margin:0px; padding:0px; }
-.dropdown dd { position:relative; }
-/* DT styles for sliding doors */
-.dropdown dt a {background:#e4dfcb url(arrow.png) no-repeat scroll right center;
-    display:block; padding-right:20px; border:1px solid #d4ca9a; width:150px;}
-.dropdown dt a span {cursor:pointer; display:block; padding:5px;}
-/* UL styles */
-.dropdown dd ul { background:#e4dfcb none repeat scroll 0 0; display:none;
-    list-style:none; padding:5px 0px; position:absolute;
-    left:0px; top:2px; width:auto; min-width:170px;}
-.dropdown span.value { display:none;}
-.dropdown dd ul li a { padding:5px; display:block;}
+.dropdown {@extend .icons; position:relative;}
+.dropdown .arrow {float:right; margin:5px;}
+.dropdown a {font-size:1.3em;}
+.dropdown a:hover ul {display:block;}
+.dropdown ul {display:none; z-index:1000; float:left; margin:2px 0 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:0 6px 12px rgba(0, 0, 0, 0.175); background-clip:padding-box;}
+.dropdown li a {padding:0 5px; font-size:1em; background:#fff;}
 
 /*Left Nav*/
 .leftnav 							{padding:10px;}
@@ -172,8 +166,8 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 
 /*Events List*/
 .maineventslinks {@extend .mainarticlelinks; width:41%;}
-.eventsList  {padding-top:5px;}
 .eventsList li {clear:both; padding:5px; list-style:none;}
+.eventsList li:first-child {padding-top:5px;}
 .message 		{font-style:italic;}
 .eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:18%; background:$offwhite; /*border:2px solid #ddd;*/ text-align:center; font-weight:700; /*letter-spacing:0.2em;*/ border-radius:2px; box-shadow:0 2px 3px #999;}
 .eventMonth	{background:#ddd;}
@@ -215,6 +209,8 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 #col3 .mainarticlelinks, #col3 .maineventslinks {float:none; width:100%; font-size:1.05em;}
 #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {float:none;}
 #col3 .mainRss {display:none;}
+
+#col1Large .mainarticlelinks, #col1Large .maineventslinks {background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;}
 
 /*Home Page Feature*/
 .landing 		{margin-bottom:0.5em; text-align:center; font-size:2em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
@@ -327,7 +323,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .section img/*, .section .map*/	{padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
 .section img.left,
 .section img.right 	{margin:0 10px 10px;}
-.section h3, .videos h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
+.section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:3px 5px; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
 .callout h3					{padding:3px 5px; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333;}
 .contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none;}
