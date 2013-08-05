@@ -96,7 +96,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 /* Main content areas.
 -------------------------------------------------------------- */
 #contentArea, #Main, #Search/*, #col1Large*/ {padding:1% 0; overflow:hidden; @extend .fixedwidth;}
-#col1 						{width:15%; /*height:90%;*/ margin-left:-16%; padding:1%; font-size:0.75em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; transition:width 0.3s ease; z-index:50; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
+#col1 						{width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; transition:width 0.3s ease; z-index:50; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
 #col1.menu				{margin:0;}
 #col1.docked 			{top:35px;}
 #col1.land				{margin:0 1%; width:20%; float:left; position:static;}
