@@ -53,10 +53,10 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 #col1Large {position:relative;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
 
-.content h1 {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.content h1 {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:2% 2% 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 .findmyservice, .calendar h1 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 
-.shortdesc {font-style:italic; color:#666;}
+.shortdesc {font-style:italic; color:#666; padding:0 2%;}
 
 /*Left Col
 ===========*/
@@ -104,11 +104,11 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 /*Right Col
 ============*/
 /*New related - july 2013*/
-.box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {margin:2% 0 4%; padding:0 1% 1%; position:relative; overflow:hidden;}
-.related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:2%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:0 3px 5px #999; line-height:1.3}
+.box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {margin:2% 0 4%; padding:0 1% 2%; position:relative; overflow:hidden;}
+.related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:4% 4% 2%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:0 3px 5px #999; line-height:1;}
 #popularPages h2, #popularSearch h2 {@extend .h3;}
 .related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
-.related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li {margin:0; padding:2%; background:#fdfdfd;}
+.related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li {margin:0; padding:2% 4%; background:#fdfdfd;}
 
 #col2Large #popularPages {float:left; margin:0 1%; padding:0; width:54%;}
 
@@ -156,18 +156,19 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 ================*/
 /*News List*/
 .mainarticlelinks {float:left; margin:1%; padding:0; width:54%; position:relative;}
-// #col2 .mainarticlelinks > h2/*, .maineventslinks > h2*/ {padding:0 5px;}
+#col2 .mainarticlelinks > h2/*, .maineventslinks > h2*/ {padding:2% 2% 1%; line-height:1;}
 .mainRss {position:absolute; top:0; right:3%;}
 .mainRss a  {@extend .icon-feed; /*color:$orange; padding:0 5px; font-size:0.3em; text-shadow:1px 1px 1px #ccc;*/} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
 .newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
+.newsList li:first-child {padding-top:1em;}
 .malDate {font-size:0.9em; color:#666;}
 a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 
 /*Events List*/
 .maineventslinks {@extend .mainarticlelinks; width:41%;}
 .eventsList li {clear:both; padding:5px; list-style:none;}
-.eventsList li:first-child {padding-top:5px;}
+.eventsList li:first-child {padding-top:1em;}
 .message 		{font-style:italic;}
 .eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:18%; background:$offwhite; /*border:2px solid #ddd;*/ text-align:center; font-weight:700; /*letter-spacing:0.2em;*/ border-radius:2px; box-shadow:0 2px 3px #999;}
 .eventMonth	{background:#ddd;}
@@ -323,14 +324,14 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .section img/*, .section .map*/	{padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
 .section img.left,
 .section img.right 	{margin:0 10px 10px;}
-.section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
+.section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 2px 4px #aaa; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
-.callout h3					{padding:3px 5px; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333;}
+.callout h3					{padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
 .contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none;}
-.section .close			{box-shadow:0 1px 8px #999; @include gradient(#eeeeef, #ddddde);}
+.section .close			{box-shadow:0 2px 4px #bbb; border:1px solid #ccc; @include gradient(#eeeeef, #ddddde);}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
 .close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $link;}
-.collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:1%; overflow:hidden;}
+.collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:2%; overflow:hidden;}
 .callout div 				{padding:1%}
 .block 							{clear:both;}
 
@@ -417,6 +418,7 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-pencil-2:before {content: "\4a";}
 .icon-DSZonning:before {content: "\4b"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
 .icon-mail-2:before {content: "\4c"; font-size:2em; vertical-align:middle; padding-right:5px;}
+.icon-DSCurrentDevelopment:before {content: "\4d"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid $green;}
