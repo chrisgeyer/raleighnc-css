@@ -29,8 +29,8 @@ img 						{border:0; max-width:100%;}
 .action:hover 	{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(#666665, #B2B2B2);}
 .action:active 	{box-shadow:inset 0 1px 2px rgba(0,0,0,0.3)}
 .action img			{display:none;}
-.toggle 				{display:inline-block; vertical-align:top; opacity:0.5; -webkit-filter:#{'grayscale(100%)'};}
-.toggle a:hover	{@extend .active;}
+.toggle 				{display:inline-block; vertical-align:top; cursor:pointer; opacity:0.5; -webkit-filter:#{'grayscale(100%)'};}
+.toggle:hover		{@extend .active;}
 .active 				{opacity:1; -webkit-filter:#{'grayscale(0%)'};}
 
 /*OOCSS - start using % for placeholders not needed in compiled css*/
@@ -53,10 +53,13 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 #col1Large {position:relative;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
 
-.content h1 {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:2% 2% 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.pagetitle {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:2% 2% 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.sectiontitle {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 2px 4px #aaa; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
+
+.content h1 {@extend .pagetitle;}
 .findmyservice, .calendar h1 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 
-.shortdesc {font-style:italic; color:#666; padding:0 2%;}
+.shortdesc, .content h1 + h3 {font-style:italic; color:#666; padding:0 2%;}
 
 /*Left Col
 ===========*/
@@ -64,12 +67,12 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .box.icons 						{/*margin-right:0;*/ padding:0;}
 .icons ul 						{margin:0;}
 .icons a 							{margin:2% 0; padding:3%; text-shadow:1px 1px 1px #ccc; display:block; background:#ececec; border-radius:3px;}
-.icons a:hover 				{text-decoration:none; font-size:1.3em;}
+.icons a:hover 				{text-decoration:none; font-size:1.2em;}
 // .icon-location:hover  {color:#edb261;}
 // .icon-user:hover			{color:$maroon;}
 // .icon-calendar:hover  {color:lighten($link, 10%);}
 // .icon-mail-2:hover		{color:$green;}
-.icons a:hover:before	{font-size:1.2em;}
+.icons a:hover:before	{font-size:1.4em;}
 
 /*Department dropdown*/
 .deptDropdown, .box.depts {margin:0; padding:0;}
@@ -214,11 +217,12 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 #col1Large .mainarticlelinks, #col1Large .maineventslinks {background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;}
 
 /*Home Page Feature*/
-.landing 		{margin-bottom:0.5em; text-align:center; background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.landing 		{margin-bottom:0.5em; text-align:center; @extend .pagetitle;}
 // .surveyQuestions {float:left; width:48%; margin:1%;}
 // .surveyQuestions .PDS_poll .pds-box {width:100%;}
 .videos, .council {float:left; width:52%; margin:1%;}
 .open 			{float:right; width:40%; margin:1%;}
+.open p:first-child {padding-top:2%;}
 // .council 		{padding-left:10px; /*@extend .dotted;*/}
 // .ecomment 	{background:#3C61A5; color:#fff; padding:0 5px; border-radius:5px;}
 label 			{display:block; @extend .quiet;}
@@ -248,7 +252,7 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 .bio							{clear:both;}
 
 /*Employment list*/
-#top h1								{background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:0 1%; border-radius:3px;}
+#top h1								{@extend .pagetitle;}
 #top img							{margin-bottom:-5px; display:none;}
 .employmentType div[style] {display:none;}
 .empJump li a 				{float:left; margin:0 15px 20px 0; text-decoration:underline;}
@@ -272,9 +276,9 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 /*Job sidebar - october 2012*/
 #Sidebar .employmentType, #sidebar .employmentType, #col3 .employmentType {padding:0;}
 #Sidebar h1 img, #Sidebar .empJump, #Sidebar .empNo, #Sidebar .empSalary, #Sidebar .empDept, #Sidebar .empClose, #Sidebar div[style], #sidebar h1 img, #sidebar .empJump, #sidebar .empNo, #sidebar .empSalary, #sidebar .empDept, #sidebar .empClose, #sidebar div[style], #col3 h1 img, #col3 .empJump, #col3 .empNo, #col3 .empSalary, #col3 .empDept, #col3 .empClose, #col3 div[style] {display:none;}
-#Sidebar #top h1, #sidebar #top h1, #col3 #top h1 {margin-left:-4%; padding:5px 20px; background:$link; color:#fff; font-size:1.4em; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1); border-radius:0 20px 20px 0;}
+#Sidebar #top h1, #sidebar #top h1, #col3 #top h1 {margin-left:-4%; padding:5px 20px; background:$link; color:#fff; font-size:1.4em; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1); border-radius:0 20px 20px 0; @extend .sectiontitle;}
 // #Sidebar #top h1:after, #sidebar #top h1:after, #Sidebar h3:after {content:" "; background:url(images/ribbon-right.png); display:block; width:10px; height:10px; position:absolute; bottom:0; right:0; margin-bottom:-10px;}
-#sidebar .employmentType h3, #sidebar .employmentType h3 {border-radius:3px; font-size:1.4em;}
+#sidebar .employmentType h3, #sidebar .employmentType h3 {border-radius:3px; font-size:1.4em; @extend .pagetitle;}
 #Sidebar .empTitle, #sidebar .empTitle, #col3 .empTitle {font-weight:normal; font-size:1.1em; border-bottom:1px dotted #ccc; width:98%; margin:0 0 6px 0;}
 
 /*Facility*/
@@ -332,7 +336,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
 .close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $link;}
 .collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:2%; overflow:hidden;}
-.callout div 				{padding:1%}
+.callout div 				{padding:2%}
 .block 							{clear:both;}
 
 /*DevServ*/
@@ -354,7 +358,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 	font-weight: normal; font-style: normal;}
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav a[title=Home]:before, #Home, #Nav #Lines:after, .homeicon, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child a:before, #Nav a[title=Home]:before, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before {
 	/*font-size:1.5em;*/
 	font-family: 'icomoon';
 	speak: none;
@@ -387,7 +391,7 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-file-excel:after {content: "\2c"; margin-left:0.25em; font-size:0.8em; color:#007133;}
 .icon-user:before {content: "\2e"; font-size:2em; vertical-align:middle; padding-right:5px;}
 .icon-play:before {content: "\2f";}
-.icon-lines:after {content: "\34"; vertical-align:middle; font-size:1.5em;}
+.icon-lines:after, #Nav #Lines:after {content: "\34"; vertical-align:middle; font-size:1.5em;}
 .icon-new-tab:after {content: "\35"; margin-left:0.25em; font-size:0.8em;}
 .icon-new-tab-2:before {content: "\36";}
 .icon-warning:before {content: "\37";}
@@ -396,7 +400,7 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-camera:before {content: "\3b";}
 .icon-file-powerpoint:after {content: "\3c"; margin-left:0.25em; font-size:0.8em; color:#dd5800;}
 .icon-file-zip:after {content: "\3d"; margin-left:0.25em; font-size:0.8em; color:#666;}
-.icon-home:before {content: "\3e"; line-height:42px; font-size:1.5em; /*vertical-align:sub;*/}
+.icon-home:before, #Nav li:first-child a:before, #Nav a[title=Home]:before {content: "\3e"; line-height:42px; font-size:1.5em; /*vertical-align:sub;*/}
 .icon-document-alt-fill:before {content:"\43";}
 .icon-folder:before {content: "\44";}
 .icon-folder-2:before {content: "\45";}
@@ -422,10 +426,10 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid $green;}
-.section.confirm .close, .confirm h3 {background:$green}
+.section.confirm .close, .confirm h3 {background:$green; border:0;}
 .warning {border:2px solid #eed45d;}
-.section.warning .close, .warning h3 {background:#eed45d;}
+.section.warning .close, .warning h3 {background:#eed45d; border:0;}
 .error	 {border:2px solid #C5312A;}
-.section.error .close, .error h3 {background:#C5312A;}
+.section.error .close, .error h3 {background:#C5312A; border:0;}
 .section.confirm .arrow, .section.warning .arrow, .section.error .arrow	{border-top:12px solid #fff; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent;}
 .section.confirm .close .arrow, .section.warning .close .arrow, .section.error .close .arrow {border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid #fff;}
