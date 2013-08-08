@@ -59,7 +59,7 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .content h1 {@extend .pagetitle;}
 .findmyservice, .calendar h1 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 
-.shortdesc, .content h1 + h3 {font-style:italic; color:#666; padding:0 2%;}
+.shortdesc, .content h1 + h3 {font-style:italic; color:#666;}
 
 /*Left Col
 ===========*/
@@ -67,12 +67,9 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .box.icons 						{/*margin-right:0;*/ padding:0;}
 .icons ul 						{margin:0;}
 .icons a 							{margin:2% 0; padding:3%; text-shadow:1px 1px 1px #ccc; display:block; background:#ececec; border-radius:3px;}
-.icons a:hover 				{text-decoration:none; font-size:1.2em;}
+.icons a:hover 				{text-decoration:none; font-size:1.3em;}
 // .icon-location:hover  {color:#edb261;}
-// .icon-user:hover			{color:$maroon;}
-// .icon-calendar:hover  {color:lighten($link, 10%);}
-// .icon-mail-2:hover		{color:$green;}
-.icons a:hover:before	{font-size:1.4em;}
+.icons a:hover:before	{font-size:1.7em;}
 
 /*Department dropdown*/
 .deptDropdown, .box.depts {margin:0; padding:0;}
@@ -83,8 +80,8 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .dropdown {@extend .icons; position:relative;}
 .dropdown .arrow {float:right; margin:5px;}
 .dropdown a {font-size:1.3em;}
-.dropdown a:hover ul {display:block;}
-.dropdown ul {display:none; z-index:1000; float:left; margin:2px 0 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:0 6px 12px rgba(0, 0, 0, 0.175); background-clip:padding-box;}
+.dropdown a:hover ul {display:block; font-size:1em;}
+.dropdown ul {z-index:1000; float:left; margin:2px 0 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:0 6px 12px rgba(0, 0, 0, 0.175); background-clip:padding-box;}
 .dropdown li a {padding:0 5px; font-size:1em; background:#fff;}
 
 /*Left Nav*/
@@ -113,6 +110,8 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
 .related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li {margin:0; padding:2% 4%; background:#fdfdfd;}
 
+.content .related a {text-decoration:none;}
+
 #col2Large #popularPages {float:left; margin:0 1%; padding:0; width:54%;}
 
 .govdelivery h3 		{/*font-size:1.1em;*/ background:$green;}
@@ -121,9 +120,6 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 	&:visited					{color:lighten($link, 10%);}
 }*/
 #Govdelivery .action {padding-top:3px; color:#fff; border:1px solid $green; box-shadow:0 4px 0 darken($green, 10%); @include gradient(lighten($green, 15%), $green);}
-
-// .related 				{background:mix($lightblue, $link); border-radius:3px; box-shadow:2px 8px 10px -5px #aaa;}
-// .related:hover   {box-shadow:0 3px 5px #999;}
 
 /*Static pages
 ====================*/
@@ -193,7 +189,8 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 .newscontacts {width:35%;}
 .relatedlinks {width:30%;}
 .rsssharing {clear:both; margin-top:20px;}
-.rsssharing img {vertical-align:middle; width:40px;}
+.rsssharing a {text-decoration:none;}
+.rsssharing .icon-feed:before {font-size:1em;}
 
 /*News sidebar*/
 #Sidebar .mainarticlelinks,
@@ -211,7 +208,7 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 // #Sidebar .more, #sidebar .more {margin-right:10px;}
 
 #col3 .mainarticlelinks, #col3 .maineventslinks {float:none; width:100%; font-size:1.05em;}
-#col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {float:none;}
+#col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {float:none; font-size:1.4em;}
 #col3 .mainRss {display:none;}
 
 #col1Large .mainarticlelinks, #col1Large .maineventslinks {background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;}
@@ -222,11 +219,11 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 // .surveyQuestions .PDS_poll .pds-box {width:100%;}
 .videos, .council {float:left; width:52%; margin:1%;}
 .open 			{float:right; width:40%; margin:1%;}
-.open p:first-child {padding-top:2%;}
+.open p {padding-top:2%;}
 // .council 		{padding-left:10px; /*@extend .dotted;*/}
 // .ecomment 	{background:#3C61A5; color:#fff; padding:0 5px; border-radius:5px;}
 label 			{display:block; @extend .quiet;}
-iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
+iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
 
 /*Templates
 ====================*/
@@ -276,10 +273,11 @@ iframe 			{padding:1%; background:#fff; border:1px solid #ccc; border-radius:3px
 /*Job sidebar - october 2012*/
 #Sidebar .employmentType, #sidebar .employmentType, #col3 .employmentType {padding:0;}
 #Sidebar h1 img, #Sidebar .empJump, #Sidebar .empNo, #Sidebar .empSalary, #Sidebar .empDept, #Sidebar .empClose, #Sidebar div[style], #sidebar h1 img, #sidebar .empJump, #sidebar .empNo, #sidebar .empSalary, #sidebar .empDept, #sidebar .empClose, #sidebar div[style], #col3 h1 img, #col3 .empJump, #col3 .empNo, #col3 .empSalary, #col3 .empDept, #col3 .empClose, #col3 div[style] {display:none;}
-#Sidebar #top h1, #sidebar #top h1, #col3 #top h1 {margin-left:-4%; padding:5px 20px; background:$link; color:#fff; font-size:1.4em; text-shadow:0 -1px $link, 0 1px $link; box-shadow:2px 2px 0 rgba(0,0,0,0.1); border-radius:0 20px 20px 0; @extend .sectiontitle;}
+#Sidebar #top h1, #sidebar #top h1, #col3 #top h1 {margin-top:2%; width:99%; padding:3% 1%; color:#333; font-size:1.4em; text-shadow:none; @extend .sectiontitle;}
 // #Sidebar #top h1:after, #sidebar #top h1:after, #Sidebar h3:after {content:" "; background:url(images/ribbon-right.png); display:block; width:10px; height:10px; position:absolute; bottom:0; right:0; margin-bottom:-10px;}
-#sidebar .employmentType h3, #sidebar .employmentType h3 {border-radius:3px; font-size:1.4em; @extend .pagetitle;}
-#Sidebar .empTitle, #sidebar .empTitle, #col3 .empTitle {font-weight:normal; font-size:1.1em; border-bottom:1px dotted #ccc; width:98%; margin:0 0 6px 0;}
+#sidebar .employmentType h3, #sidebar .employmentType h3, #col3 .employmentType h3 {border-radius:3px; font-size:1.4em; @extend .pagetitle;}
+#Sidebar .empTitle, #sidebar .empTitle, #col3 .empTitle {font-weight:normal; font-size:1em; border-bottom:1px dotted #ccc; width:98%; margin:0 0 6px 0;}
+#col3 a[title=Volunteer] {display:none;}
 
 /*Facility*/
 .gismap_iframe 			{float:left; @extend .cacgismap;}
@@ -336,7 +334,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
 .close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $link;}
 .collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:2%; overflow:hidden;}
-.callout div 				{padding:2%}
+.callout div 				{padding:2%; background:$offwhite;}
 .block 							{clear:both;}
 
 /*DevServ*/
@@ -400,7 +398,7 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-camera:before {content: "\3b";}
 .icon-file-powerpoint:after {content: "\3c"; margin-left:0.25em; font-size:0.8em; color:#dd5800;}
 .icon-file-zip:after {content: "\3d"; margin-left:0.25em; font-size:0.8em; color:#666;}
-.icon-home:before, #Nav li:first-child a:before, #Nav a[title=Home]:before {content: "\3e"; line-height:42px; font-size:1.5em; /*vertical-align:sub;*/}
+.icon-home:before, #Nav li:first-child a:before, #Nav a[title=Home]:before {content: "\3e"; line-height:42px; font-size:1.5em;}
 .icon-document-alt-fill:before {content:"\43";}
 .icon-folder:before {content: "\44";}
 .icon-folder-2:before {content: "\45";}
