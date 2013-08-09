@@ -128,11 +128,10 @@
 	#col1.land ~ #col3 #right > div {float:none; width:100%%;}
 	#col1, #col1.docked, #col1.land {text-align:center; width:50%; margin-left:-55%; top:150px; z-index:100; position:fixed !important;}
 	#col2 .updatedDate {position:relative; top:0; left:0;}
-	// .storyContentWrapper, .content, #Article .storyContentWrapper {width:95%; padding:0 2.5%;}
 	#storyContentWrapper {padding:0;}
-	.storyContentWrapper ul, .storyContentWrapper ol, .content ul, .content ol {clear:both;}
+	.content ul, .content ol {clear:both;}
 	#right > div, .mainarticlelinks, .maineventslinks, #sidebar .mainarticlelinks, #sidebar .maineventslinks, .surveyDisplayWrapper, .videos, .open, #footer {clear:both; float:none; margin:1.5%; padding:1.5%; width:94%; display:block;}
-	.storyContentWrapper .callout, .content .callout, #col2 .contact {margin:1%; /*padding:1%; width:90%;*/}
+	.callout, .content .callout, #col2 .contact {margin:1%; /*padding:1%; width:90%;*/}
 	.largeimage	, .smallimage {float:none; margin:10px auto; width:295px;}
 	.largeimage .photoslider-1click-slideshow img, .smallimage .photoslider-1click-slideshow img {height:240px;}
 	.content {max-width:40em;}
@@ -150,9 +149,9 @@
 	.accolades h2, .accolades h2:hover, #accolade h2, #accolade h2:hover {font-size:2em;}
 	.landing {font-size:1.2em;}
 	#monthDetail, #calFrame {clear:both; width:100%;}
-	.bcmeetinginfo > div, .cacmeetinginfo > div, .storyContentWrapper ul.individual, .content ul.individual {width:98%; margin-bottom:10px;}
-	.storyContentWrapper ul.individual, .content ul.individual {width:48%;}
-	.storyContentWrapper ul.individual li, .content ul.individual li, .bcmeetinginfo li, .cacmeetinginfo li {margin:0; padding:0;}
+	.bcmeetinginfo > div, .cacmeetinginfo > div, .content ul.individual {width:98%; margin-bottom:10px;}
+	.content ul.individual {width:48%;}
+	.content ul.individual li, .bcmeetinginfo li, .cacmeetinginfo li {margin:0; padding:0;}
 	#Footer ul, #footer ul {clear:both; width:100%; text-align:center;}
 	.bow {width:30%;}
 	.council li {display:inline;}
