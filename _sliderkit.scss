@@ -10,6 +10,7 @@
  */
 
 .sliderkit{display:none;position:relative;overflow:hidden;text-align:left;}
+.section .sliderkit {display:block;}
 .sliderkit {
 	.sliderkit-nav{z-index:10;position:absolute;/*text-align:center;*/}
 	// .sliderkit-nav-clip{position:relative;overflow:hidden;margin:0 auto;}

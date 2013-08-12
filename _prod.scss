@@ -79,6 +79,7 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .dropdown {@extend .icons; position:relative;}
 .dropdown .arrow {float:right; margin:5px;}
 .dropdown a, .dropdown a:hover {font-size:1.3em;}
+.related .dropdown a {font-size:1em;}
 .dropdown ul {z-index:1000; float:left; margin:2px 0 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:0 6px 12px rgba(0, 0, 0, 0.175); background-clip:padding-box;}
 .dropdown li a, .dropdown li a:hover {padding:0 5px; font-size:1em; background:#fff;}
 
@@ -270,7 +271,7 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 
 /*Job sidebar - october 2012*/
 #Sidebar .employmentType, #sidebar .employmentType, #col3 .employmentType {padding:0;}
-#Sidebar h1 img, #Sidebar .empJump, #Sidebar .empNo, #Sidebar .empSalary, #Sidebar .empDept, #Sidebar .empClose, #Sidebar div[style], #sidebar h1 img, #sidebar .empJump, #sidebar .empNo, #sidebar .empSalary, #sidebar .empDept, #sidebar .empClose, #sidebar div[style], #col3 h1 img, #col3 .empJump, #col3 .empNo, #col3 .empSalary, #col3 .empDept, #col3 .empClose, #col3 div[style] {display:none;}
+#Sidebar h1 img, #Sidebar .empJump, #Sidebar .empNo, #Sidebar .empSalary, #Sidebar .empDept, #Sidebar .empClose, #Sidebar .employmentType div[style], #sidebar h1 img, #sidebar .empJump, #sidebar .empNo, #sidebar .empSalary, #sidebar .empDept, #sidebar .empClose, #sidebar div[style], #col3 h1 img, #col3 .empJump, #col3 .empNo, #col3 .empSalary, #col3 .empDept, #col3 .empClose, #col3 .employmentType div[style] {display:none;}
 #Sidebar #top h1, #sidebar #top h1, #col3 #top h1 {margin-top:2%; width:99%; padding:3% 1%; color:#333; font-size:1.4em; text-shadow:none; @extend .sectiontitle;}
 // #Sidebar #top h1:after, #sidebar #top h1:after, #Sidebar h3:after {content:" "; background:url(images/ribbon-right.png); display:block; width:10px; height:10px; position:absolute; bottom:0; right:0; margin-bottom:-10px;}
 #sidebar .employmentType h3, #sidebar .employmentType h3, #col3 .employmentType h3 {border-radius:3px; font-size:1.4em; @extend .pagetitle;}
@@ -284,6 +285,8 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 .facility_hours th 	{background:$lightblue;}
 .facility_hours td 	{@extend .align-center;}
 .parkmap						{width:100%;}
+
+.park {width:100%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
 
 /*Project*/
 // .map {background:#aaa; height:175px; text-align:center;}
@@ -312,7 +315,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:80%; padding-bottom:75%;}
 .largeimage .photoslider-1click-slideshow img {max-height:482px;}
 .smallimage					{float:left; margin:0 2% 1em 0; width:50%;}
-#Playgrounds .smallimage {float:right;}
+.section .smallimage {float:right;}
 .smallimage .photoslider-1click-slideshow img {max-height:235px;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
@@ -338,7 +341,8 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 
 /*DevServ*/
 #Developer, #Homeowner {display:none;}
-.map {float:right; width:50%;}
+.content .map {float:right; width:50%;}
+.related .map {float:none; width:100%;}
 
 /*Ally*/
 .ally, .homeicon		{position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
