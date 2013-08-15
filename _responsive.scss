@@ -1,6 +1,6 @@
 @media only screen and (min-width:95em) {
 	.fixedwidth {width:80%; max-width:1220px;}
-	#Nav li {width:9.5%;}
+	#Nav li {width:11%;}
 	#Nav li:first-child {width:4.5%;}
 	#Nav li:nth-child(5) {width:17%;}
 	#Nav li:last-child {border-right:1px solid #515f55;}
@@ -15,6 +15,7 @@
 	#col1 {margin:0 0 0 1%; float:left; position:static; width:14%;}
 	#col1.land {margin-right:0; width:14%;}
 	#col2 {width:60%;}
+	#col2Large {width:83%;}
 	#col3 {width:24%;}
 	.content {max-width:52em;}
 	#col1.land ~ #col3 {margin-right:0%; width:24%;}
