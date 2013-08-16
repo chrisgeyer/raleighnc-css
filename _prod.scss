@@ -77,8 +77,9 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 
 /* General dropdown styles */
 .dropdown {@extend .icons; position:relative;}
-.dropdown .arrow {float:right; margin:5px;}
-.dropdown a, .dropdown a:hover {font-size:1.3em;}
+.dropdown .arrow {float:right; margin:6px;}
+.dropdown a, .dropdown a:hover {font-size:1.3em; cursor:pointer;}
+.dropdown a:hover .arrow {border-top:12px solid $green;}
 .related .dropdown a {font-size:1em;}
 .dropdown ul {z-index:1000; float:left; margin:2px 0 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:0 6px 12px rgba(0, 0, 0, 0.175); background-clip:padding-box;}
 .dropdown li a, .dropdown li a:hover {padding:0 5px; font-size:1em; background:#fff;}
