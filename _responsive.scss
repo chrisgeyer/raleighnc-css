@@ -16,14 +16,15 @@
 	.dropdown li a:hover {color:$green;}
 	.slider, .newslider-horizontal .sliderkit-panels {padding-bottom:60%;}
 	.newslider-horizontal .sliderkit-nav-clip li a {width:15px; height:15px;}
-	#col1 {margin:0; padding-top:1.5%; float:left; position:static; width:14%; background:transparent; box-shadow:none;}
-	#col1.land {margin-right:0; width:14%;}
-	#col2 {width:60%;}
+	#col1 {margin:0.5%; padding-top:1.5%; float:left; position:static; width:14%; background:#eee; box-shadow:none; border-radius:3px; border:1px solid #ddd;}
+	#col1.land {margin-left:0; width:14%;}
+	#col2, #col1.land ~ #col2  {width:60%;}
 	#col2Large {width:83%;}
 	#col3 {width:25%;}
 	.content {max-width:52em;}
 	#col1.land ~ #col3 {margin-right:0%; width:24%;}
 	#col1.land ~ #col3 #right > div {float:none; width:100%;}
+	#Footer .logo, #footer .logo {display:block;}
 }
 
 @media only screen and (max-width:74em) {
