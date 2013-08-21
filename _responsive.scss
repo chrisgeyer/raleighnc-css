@@ -15,8 +15,9 @@
 	.dropdown li a, .dropdown li a:hover {color:$link; text-shadow:none; margin-bottom:0.25em;}
 	.dropdown li a:hover {color:$green;}
 	.slider, .newslider-horizontal .sliderkit-panels {padding-bottom:60%;}
+	.largeimage .photoslider-1click-slideshow img {height:482px;}
 	.newslider-horizontal .sliderkit-nav-clip li a {width:15px; height:15px;}
-	#col1 {margin:0.5%; padding-top:1.5%; float:left; position:static; width:14%; background:#eee; box-shadow:none; border-radius:3px; border:1px solid #ddd;}
+	#col1 {margin:0.5%; padding-top:1.5%; float:left; position:static; width:14%; background:$offwhite; box-shadow:none; border-radius:3px; border:1px solid #ddd;}
 	#col1.land {margin-left:0; width:14%;}
 	#col2, #col1.land ~ #col2  {width:60%;}
 	#col2Large {width:83%;}
@@ -107,7 +108,7 @@
 	.icons {font-size:0.9em;}
 	.depts select {display:block;}
 	#col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {width:100%; margin:0;}
-	#col2 {width:99%;}
+	#col2, #col1.land ~ #col2 {width:99%;}
 	#col1.land.menu {margin-left:0; position:fixed;}
 	#col1.land ~ #col3 {margin-right:3%; width:97%;}
 	#col1.land ~ #col3 #right > div {float:none; width:100%%;}

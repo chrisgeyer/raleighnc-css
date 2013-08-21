@@ -34,8 +34,8 @@ img 						{border:0; max-width:100%;}
 .active 				{opacity:1; -webkit-filter:#{'grayscale(0%)'};}
 
 /*OOCSS - start using % for placeholders not needed in compiled css*/
-.dotted					{border-bottom:1px dotted #ccc;}
-.underline			{border-bottom:1px solid #ccc;}
+.dotted					{border-bottom:1px dotted #ddd;}
+.underline			{border-bottom:1px solid #ddd;}
 
 /*Links*/
 .content a:link, .content a:visited, table a:link 	{text-decoration:underline;}
@@ -72,7 +72,7 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .icons a:hover:before	{font-size:1.7em;}
 
 /*Department dropdown*/
-.deptDropdown, .box.depts {margin:0; padding:0;}
+.deptDropdown, .box.depts {margin:0; padding:0; overflow:visible;}
 .deptDropdown h2 {@extend .iwt_section_header;}
 #deptSelector select, .depts select {display:none;}
 
@@ -82,8 +82,8 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .dropdown a, .dropdown a:hover {font-size:1.3em; cursor:pointer;}
 .dropdown a:hover .arrow {border-top:12px solid $green;}
 .related .dropdown a {font-size:1em;}
-.dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:0 6px 12px rgba(0, 0, 0, 0.175); background-clip:padding-box;}
-.dropdown li a, .dropdown li a:hover {padding:0 5px; font-size:1em; background:#fff;}
+.dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5p #666;}
+.dropdown li a, .dropdown li a:hover {padding:0 0 0 5px; font-size:1em; background:#fff;}
 
 /*Left Nav*/
 .leftnav 							{padding:10px;}
@@ -110,8 +110,8 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .related h3 {box-shadow:none;}
 #popularPages h2, #popularSearch h2 {@extend .h3;}
 .related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
-.related ul {box-shadow:none;}
-.related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li {margin:0; padding:2% 4%; background:#eee;}
+.related ul {box-shadow:none; border-left:1px solid #ddd; border-right:1px solid #ddd;}
+.related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li {margin:0; padding:2% 4%; background:$offwhite;}
 
 .content .related a {text-decoration:none;}
 
@@ -232,7 +232,7 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 /*Boards-Commissions*/
 .bcmeetinginfo	{@extend .callout;}
 #col2 .bcmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%); text-align:center; background:#f7f7f7;}
-.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {float:none; display:inline-block; width:32.85%; vertical-align:top; padding:0;}
+.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {float:none; display:inline-block; width:32.89%; vertical-align:top; padding:0;}
 .bcmeetinginfo h4 {background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
 .bcimage 				{margin:10px auto; width:100%;}
@@ -307,7 +307,7 @@ ul.progress li.current:before {border-top-color:$link; border-bottom-color:$link
 ul.progress li.current:after {border-left-color:$link; left:100%;}
 
 /*Shares*/
-.sharing {position:absolute; top:-5px; right:0;}
+.sharing {position:absolute; top:-2px; right:0;}
 .content a.tweets {background:#00acee; color:#fff; text-decoration:none; padding:1%; border-radius:3px;}
 .content a.shares {background:#3b5998; color:#fff; text-decoration:none; padding:1%; border-radius:3px;}
 .sharing .count {background:#fff; border:1px solid #aaa; color:#aaa; padding:0 3%;}
@@ -326,7 +326,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 #col2 .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .smallimage .sliderkit-panel .sliderkit-panel-overlay		{padding-bottom:20%;}
 .section						{clear:both; margin:1.5em 0;}
-.callout						{margin:1.5em 0.5em; background:#fff; border:2px solid $orange; border-radius:5px; box-shadow:0 3px 5px #999; overflow:hidden;}
+.callout						{margin:1.5em 0.5em; background:$offwhite; border:2px solid $orange; border-radius:5px; box-shadow:0 3px 5px #999; overflow:hidden;}
 .closed							{@extend .ally;}
 .callout img				{max-width:98%;}
 .section img/*, .section .map*/	{padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
@@ -348,8 +348,9 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 #Developer, #Homeowner, #Tools {display:none;}
 #Developer h3, #Homeowner h3 {background:$teal;}
 #Developer ul, #Homeowner ul {background:$teal;}
-.content .map {float:right; width:50%;}
-.related .map {float:none; width:100%;}
+#Tools li {@extend .dotted;}
+.content .map {float:right; width:20em; height:200px; @extend iframe;}
+.related .map {float:none; width:100%; height:200px; border:1px solid #fff;}
 
 /*Ally*/
 .ally, .homeicon		{position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
@@ -384,9 +385,9 @@ a[href $='.ppt'] {@extend .icon-file-powerpoint;}
 a[href $='.xls'] {@extend .icon-file-excel;}
 a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
-#col1 a[href^='http:'], #col2 :not(.slider) a[href^='http:'], #col3 a[href^='http:'], #Article a[href^='http:'], #Sidebar a[href^='http:'] {@extend .icon-new-tab;}
+#col1 a[href^='http:'], #col2 :not(.slider) a[href^='http:www.'], #col3 a[href^='http:'], #Article a[href^='http:'], #Sidebar a[href^='http:'] {@extend .icon-new-tab;}
 
-.icon-mail:after {content: "\21"; font-size:0.8em; margin-left:0.25em;}
+.icon-mail:after {content: "\21"; font-size:0.9em; margin-left:0.25em;}
 .icon-location:before {content: "\22"; font-size:2em; vertical-align:middle; padding-right:5px;}
 .icon-calendar:before {content: "\23"; font-size:2em; vertical-align:middle; padding-right:5px;}
 .icon-calendar-2:before {content: "\25";}
@@ -394,20 +395,20 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-twitter:before {content: "\27"; color:#4099FF;}
 .icon-feed:before {content: "\28"; color:$orange; background:#fff; font-size:0.6em; border-radius:10px; text-shadow:1px 1px 1px #ccc;}
 .icon-flickr:before {content: "\29";}
-.icon-file-word:after {content: "\2a"; margin-left:0.25em; font-size:0.8em; color:#00178f; background:#fff; border-radius:10px;}
-.icon-file-pdf:after, a:not(.imglink)[href $='.pdf']:after {content: "\2b"; margin-left:0.25em; font-size:0.8em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
-.icon-file-excel:after {content: "\2c"; margin-left:0.25em; font-size:0.8em; color:#007133;}
+.icon-file-word:after {content: "\2a"; margin-left:0.25em; font-size:1em; color:#00178f; background:#fff; border-radius:10px;}
+.icon-file-pdf:after, a:not(.imglink)[href $='.pdf']:after {content: "\2b"; margin-left:0.25em; font-size:1em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
+.icon-file-excel:after {content: "\2c"; margin-left:0.25em; font-size:1em; color:#007133;}
 .icon-user:before {content: "\2e"; font-size:2em; vertical-align:middle; padding-right:5px;}
 .icon-play:before {content: "\2f";}
 .icon-lines:after, #Nav #Lines:after {content: "\34"; vertical-align:middle; font-size:1.5em;}
-.icon-new-tab:after {content: "\35"; margin-left:0.25em; font-size:0.8em;}
+.icon-new-tab:after {content: "\35"; margin-left:0.25em; font-size:0.9em;}
 .icon-new-tab-2:before {content: "\36";}
 .icon-warning:before {content: "\37";}
 .icon-play-alt:before {content: "\39";}
 .icon-play-2:before {content: "\3a";}
 .icon-camera:before {content: "\3b";}
-.icon-file-powerpoint:after {content: "\3c"; margin-left:0.25em; font-size:0.8em; color:#dd5800;}
-.icon-file-zip:after {content: "\3d"; margin-left:0.25em; font-size:0.8em; color:#666;}
+.icon-file-powerpoint:after {content: "\3c"; margin-left:0.25em; font-size:1em; color:#dd5800;}
+.icon-file-zip:after {content: "\3d"; margin-left:0.25em; font-size:1em; color:#666;}
 .icon-home:before/*, #Nav li:first-child > a:before*/ {content: "\3e"; line-height:42px; font-size:1.5em;}
 .icon-document-alt-fill:before {content:"\43";}
 .icon-folder:before {content: "\44";}
