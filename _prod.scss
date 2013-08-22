@@ -83,6 +83,7 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .dropdown a:hover .arrow {border-top:12px solid $green;}
 .related .dropdown a {font-size:1em;}
 .dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5p #666;}
+.dropdown ul:after {content:''; display:inline-block; border-left:9px solid transparent; border-right:9px solid transparent; border-bottom:9px solid #fff; position:absolute; top:39px; left:105px;}
 .dropdown li a, .dropdown li a:hover {padding:0 0 0 5px; font-size:1em; background:#fff;}
 
 /*Left Nav*/
@@ -216,14 +217,11 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 #col1Large .mainarticlelinks, #col1Large .maineventslinks {background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;}
 
 /*Home Page Feature*/
-.landing 		{margin-bottom:0.5em; text-align:center; @extend .pagetitle;}
-// .surveyQuestions {float:left; width:48%; margin:1%;}
-// .surveyQuestions .PDS_poll .pds-box {width:100%;}
+.landing 		{margin:1% 2%; text-align:center; @extend .pagetitle;}
 .videos, .council {float:left; width:52%; margin:1%;}
 .open 			{float:right; width:40%; margin:1%;}
 .open p {padding-top:2%;}
-// .council 		{padding-left:10px; /*@extend .dotted;*/}
-// .ecomment 	{background:#3C61A5; color:#fff; padding:0 5px; border-radius:5px;}
+.boxcouncil 	{background:#fff;}
 label 			{display:block; @extend .quiet;}
 iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
 
@@ -318,7 +316,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .outline a:active		{position:absolute;}
 .largeimage					{margin-bottom:1em; width:100%;}
 .largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:80%; padding-bottom:75%;}
-.largeimage .photoslider-1click-slideshow img {max-height:482px;}
+.largeimage .photoslider-1click-slideshow img {height:460px;}
 .smallimage					{float:left; margin:0 2% 1em 0; width:50%;}
 .section .smallimage {float:right;}
 .smallimage .photoslider-1click-slideshow img {max-height:235px;}
@@ -334,7 +332,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .section img.right 	{margin:0 10px 10px;}
 .section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 2px 4px #aaa; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
-.callout h3					{padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
+.callout h3, .section .close .callout h3	{padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
 .contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none;}
 .section .close			{box-shadow:0 2px 4px #bbb; border:1px solid #ccc; @include gradient(#eeeeef, #ddddde);}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
@@ -385,7 +383,7 @@ a[href $='.ppt'] {@extend .icon-file-powerpoint;}
 a[href $='.xls'] {@extend .icon-file-excel;}
 a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
-#col1 a[href^='http:'], #col2 :not(.slider) a[href^='http:www.'], #col3 a[href^='http:'], #Article a[href^='http:'], #Sidebar a[href^='http:'] {@extend .icon-new-tab;}
+#col1 a[href^='http://www.'], #col2 :not(.slider) a:not(.imglink)[href^='http://www.'], #col3 a[href^='http://www.'] {@extend .icon-new-tab;}
 
 .icon-mail:after {content: "\21"; font-size:0.9em; margin-left:0.25em;}
 .icon-location:before {content: "\22"; font-size:2em; vertical-align:middle; padding-right:5px;}
@@ -435,10 +433,12 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid $green;}
-.section.confirm .close, .confirm h3 {background:$green; border:0;}
-.warning {border:2px solid #eed45d;}
-.section.warning .close, .warning h3 {background:#eed45d; border:0;}
-.error	 {border:2px solid #C5312A;}
-.section.error .close, .error h3 {background:#C5312A; border:0;}
+.section.confirm .close, .confirm h3 {background:$green; border:0; font-weight:normal;}
+.warning {border:2px solid #ffe88c;}
+.section.warning .close, .warning h3 {background:#ffe88c; border:0; font-weight:normal; color:#333; text-shadow:1px 1px 1px #ccc;}
+.error	 {border:2px solid #b74742;}
+.section.error .close, .error h3 {background:#b74742; border:0; font-weight:normal;}
 .section.confirm .arrow, .section.warning .arrow, .section.error .arrow	{border-top:12px solid #fff; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent;}
 .section.confirm .close .arrow, .section.warning .close .arrow, .section.error .close .arrow {border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid #fff;}
+.section.warning .arrow {border-top:12px solid #333;}
+.section.warning .close .arrow {border-left:12px solid #333;}

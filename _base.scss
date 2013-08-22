@@ -18,10 +18,10 @@ html, body, #Main, #Article, #sidebar, #Sidebar, #screenWrapper, .wrapper, #navi
 /* Text elements.
 -------------------------------------------------------------- */
 /*Link*/
-a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-out);
+a			{color:$link; text-decoration:none; @include transition(color, .25s, ease-in-out);
 	&:visited		{color:lighten($link, 10%);}
 	&:hover,
-	&:focus 		{color:$green; text-decoration:underline; @include transition(color, .5s, ease-in-out);}
+	&:focus 		{color:$green; text-decoration:underline; @include transition(color, .25s, ease-in-out);}
 	&:active 		{position:relative; top:1px;
 	/*-webkit-transform: translate(2px);
 			-ms-transform: translate(2px);
@@ -66,7 +66,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 
 /* Main navigation elements.
 -------------------------------------------------------------- */
-#Nav 								{float:left; width:100%; border-top:1px solid #666; position:relative; z-index:100; box-shadow:0 2px 3px #999; @include gradient(#515f55, #1f311a);}
+#Nav 								{float:left; width:100%; border-top:1px solid #333; position:relative; z-index:100; box-shadow:0 2px 3px #999; @include gradient(#555554, #111112);}
 #Nav ul 						{@extend .fixedwidth; @include transition(all, .15s, ease-in-out);}
 #Nav ul.visible			{display:block;}
 #Nav li 						{float:left; /*width:12%;*/ height:45px; text-align:center; border-left:1px solid #515f55; @include transition(background, .2s, ease-in-out);}
@@ -114,13 +114,13 @@ a			{color:$link; text-decoration:none; @include transition(color, .5s, ease-in-
 /*Accolades*/
 .box.accolades, #accolade 		{margin:0; padding:1%; font-size:0.9em; border-bottom:1px solid lighten(#80aeb5, 20%); border-top:1px solid lighten(#80aeb5, 20%); text-align:center; position:relative; box-shadow:0 2px 3px #999; @include gradient(darken(#80aeb5, 5%), darken(#80aeb5, 15%));}
 .accolades h3, #accldePre     {color:lighten($teal, 25%); text-shadow:1px 1px 1px #333; margin:0;}
-.accolades h2, #accolade h2 	{font-size:2em; position:relative; color:#fff; text-shadow:1px 1px 3px #111; display:inline;}
+.accolades h2, #accolade h2 	{font-size:2em; position:relative; color:#fff; text-shadow:1px 1px 3px #111;}
 .source, #accldeSource 				{font-style:italic; display:block; margin-bottom:1em;}
-.accolades a.more, #accldeMore a	{text-decoration:none; @extend .action;}
-.wrapper .accolades a.more {margin:0; font-size:0.8em; float:none;}
+.accolades a, #accldeMore a	{text-decoration:none; @extend .action;}
+.wrapper .accolades a {margin:0; font-size:0.8em; float:none;}
 
 /*Footer*/
-#Footer, #footer 	{margin:0 auto; padding:1%; text-align:center; background:#384837; font-size:0.85em; color:#fff; position:relative;}
+#Footer, #footer 	{margin:0 auto; padding:1%; text-align:center; font-size:0.85em; color:#fff; position:relative; @include gradient(#222223, #555556);}
 #Footer .logo, #footer .logo {margin-left:40%;}
 #Footer h3, #footer h3 {color:#ccc; text-shadow:1px 1px 1px #333;}
 #Footer a, #footer a, .copyright a {color:#fff;}
