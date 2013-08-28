@@ -84,7 +84,9 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .related .dropdown a {font-size:1em;}
 .dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5p #666;}
 .dropdown ul:after {content:''; display:inline-block; border-left:9px solid transparent; border-right:9px solid transparent; border-bottom:9px solid #fff; position:absolute; top:39px; left:105px;}
-.dropdown li a, .dropdown li a:hover {padding:0 0 0 5px; font-size:1em; background:#fff;}
+.dropdown li a, .dropdown li a:hover {padding:0 0 0 5px; font-size:1em; background:#fff; text-shadow:none;}
+
+.dropdown .fixed {position:relative;}
 
 /*Left Nav*/
 .leftnav 							{padding:10px;}
@@ -157,9 +159,9 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 /*News & Events
 ================*/
 /*News List*/
-.mainarticlelinks {float:left; margin:1%; padding:0; width:54%; position:relative;}
-#col2 .mainarticlelinks > h2/*, .maineventslinks > h2*/ {padding:0.2em 0.2em 0.1em; line-height:1;}
-.mainRss {position:absolute; top:0; right:3%;}
+.mainarticlelinks {float:left; margin:2% 0 4% 1%; padding:0 1% 2%; width:55%; position:relative; overflow:hidden;}
+#col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.3em 0.2em 0.1em; line-height:1;}
+.mainRss {position:absolute; top:0; right:5%;}
 .mainRss a  {@extend .icon-feed; /*color:$orange; padding:0 5px; font-size:0.3em; text-shadow:1px 1px 1px #ccc;*/} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
 .newsList li {clear:both; padding:7px 5px; list-style:none; @extend .dotted;}
@@ -168,7 +170,7 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 
 /*Events List*/
-.maineventslinks {@extend .mainarticlelinks; width:41%;}
+.maineventslinks {@extend .mainarticlelinks; width:42%;}
 .eventsList li {clear:both; padding:5px; list-style:none;}
 .eventsList li:first-child {padding-top:1em;}
 .message 		{font-style:italic;}
@@ -218,10 +220,9 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 
 /*Home Page Feature*/
 .landing 		{margin:1% 2%; text-align:center; @extend .pagetitle;}
-.videos, .council {float:left; width:52%; margin:1%;}
-.open 			{float:right; width:40%; margin:1%;}
-.open p {padding-top:2%;}
-.boxcouncil 	{background:#fff;}
+.videos, .council, .open {float:left; width:48.5%; margin-left:1%;}
+.open p 		{padding-top:2%;}
+.boxcouncil {background:#fff;}
 label 			{display:block; @extend .quiet;}
 iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
 
@@ -250,20 +251,20 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 .job .icon-location {font-size:0.7em;}
 
 /*Employment list*/
-#top h1								{@extend .pagetitle;}
+#top h1								{@extend .pagetitle; margin:1% 2% 0; width:95%;}
 #top img							{margin-bottom:-5px; display:none;}
+.employmentType 			{width:99%; padding:0 2%;}
 .employmentType div[style] {display:none;}
+.employmentType div 	{margin-left:0.5em;}
 .empJump li a 				{float:left; margin:0 15px 20px 0; text-decoration:underline;}
-.employmentType h3 		{clear:both; margin:15px 0 5px; padding:3px 5px; border-radius:5px; cursor:pointer; box-shadow:0 1px 4px #999; @include gradient(#ddddde, #cccccd);}
-.empTitle 						{clear:both; margin:0 10px 3px 0; float:left; display:inline; font-size:1.167em; font-weight:700;}
-.empClose,
-.empDept,
-.empNo,
-.empSalary 						{float:left; margin:0 0 15px 10px;}
-.empSalary						{clear:both; margin-left:0;}
-.empClose							{@extend .quiet; margin:3px 0 0 0;}
+.employmentType h3 		{clear:both; margin:1em 0 0.5em; @extend .sectiontitle;}
+.empTitle 						{clear:both; margin:0 0.5em 0 0; font-size:1.1em; font-weight:700;}
+.empClose, .empSalary {float:left; margin:0 0 0.25em; font-size:0.9em;}
+.empDept, .empNo 			{float:left; margin:0 0 0.5em 0; font-size:0.9em;}
+.empDept							{clear:both;}
+.empNone							{@extend .quiet; font-style:italic;}
 .empNone:last-child		{display:none;}
-#top:hover, #top:active, .employmentType > a:hover, .employmentType > a:active {text-decoration:none;}
+#top:hover, #top:active, .employmentType > a:hover, .employmentType > a:active {text-decoration:none; cursor:default;}
 
 /*Job page*/
 .content .job li {list-style:none; margin-left:0; padding:5px;}
