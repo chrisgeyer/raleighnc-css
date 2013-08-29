@@ -140,11 +140,11 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .calTopicFullScreen 	{display:none;}
 
 /*Contact Directory - may 2013*/
-#contactForm	{margin:20px auto; padding:1%; width:75%; background:#eee; overflow:hidden; border:2px solid #ddd; border-radius:5px; box-shadow:0 2px 3px #999; /*extend outline instead?*/}
-#contactSearchForm li {padding:2px;}
-#contactSearchForm label {width:20%; display:inline-block;}
-#contactSearchForm select {width:120px;}
-#contactSearchForm .action {float:right; margin:0 1%;}
+#contactForm	{margin:2% 5%; padding:1%; background:#eee; overflow:hidden; border:2px solid #ddd; border-radius:5px; box-shadow:0 2px 3px #999;}
+#contactSearchForm li {padding:0.5%;}
+#contactSearchForm label {width:28%; display:inline-block;}
+#contactSearchForm select, #contactSearchForm input[type="text"] {width:50%;}
+#contactSearchForm .action {float:right; margin:0 2%;}
 .resultArea p   {display:none;}
 #viewBy 				{float:left;}
 .numberResults 	{float:right;}
@@ -366,7 +366,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 	font-weight: normal; font-style: normal;}
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before/*, #Nav a[title=Home]:before*/, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before/*, #Nav a[title=Home]:before*/, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before, .content a[href$="FormsDirectory.html"]:before, .content a[href^="http://onlinedevcenter"]:before, .content a[href$="CurrentDevelopmentActivity.html"]:before, .content a[href$="Face2FaceServices.html"]:before, .content a[href$="DrawingsStandardDetailsIndex.html"]:before, .content a[href$="ZoningPermitsBusiness.html"]:before {
 	/*font-size:1.5em;*/
 	font-family: 'icomoon';
 	speak: none;
@@ -385,6 +385,13 @@ a[href $='.xls'] {@extend .icon-file-excel;}
 a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
 #col1 a[href^='http://www.'], #col2 :not(.slider) a:not(.imglink)[href^='http://www.'], #col3 a[href^='http://www.'] {@extend .icon-new-tab;}
+
+.content a[href$="FormsDirectory.html"] {@extend .icon-DSFormDirectory}
+.content a[href^="http://onlinedevcenter"] {@extend .icon-DSOnlineDevelopment;}
+.content a[href$="CurrentDevelopmentActivity.html"] {@extend .icon-DSCurrentDevelopment;}
+.content a[href$="Face2FaceServices.html"] {@extend .icon-DSFaceToFace;}
+.content a[href$="DrawingsStandardDetailsIndex.html"] {@extend .icon-DSStandardDrawing;}
+.content a[href$="ZoningPermitsBusiness.html"] {@extend .icon-DSZonning;}
 
 .icon-mail:after {content: "\21"; font-size:0.9em; margin-left:0.25em;}
 .icon-location:before {content: "\22"; font-size:2em; vertical-align:middle; padding-right:5px;}
