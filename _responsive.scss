@@ -8,12 +8,13 @@
 	#Nav a 	{padding:0 10px;}
 	#Lines, .logo, .icons, .depts h3 {display:none;}
 	.utility, .dropdown {display:block;}
-	.box.depts {position:absolute; top:96px; z-index:150; margin-left:-15px;}
+	.box.depts {position:absolute; top:96px; z-index:150; margin-left:-28px;}
 	.dropdown a, .dropdown a:hover {background:transparent; color:#fff; font-size:1.2em; text-shadow:1px 1px 3px #111; margin:0; padding:8%; width:140px;}
 	.dropdown a:hover {@include gradient($link, lighten($link, 10%));}
 	.dropdown .arrow, .dropdown a:hover .arrow {border-top:12px solid #fff;}
 	.dropdown li a, .dropdown li a:hover {color:$link; text-shadow:none; margin-bottom:0.25em;}
 	.dropdown li a:hover {color:$green;}
+	.dropdown.fixed {left:10%;}
 	.slider, .newslider-horizontal .sliderkit-panels {padding-bottom:60%;}
 	.largeimage .photoslider-1click-slideshow img {height:482px;}
 	.newslider-horizontal .sliderkit-nav-clip li a {width:15px; height:15px;}
@@ -62,7 +63,7 @@
 	#Nav a {line-height:45px;}
 	#col1 {width:20%; top:80px; margin-left:-20%;}
 	#col1.docked {top:0;}
-	#col1.land ~ #col3 #right > div {float:none; width:100%%;}
+	#col1.land ~ #col3 #right > div {float:none; width:100%;}
 	#col1.land ~ #col2 {width:70%;}
 	#col3 {padding-right:1%;}
 	.icons {font-size:0.9em;}
@@ -111,7 +112,7 @@
 	.depts select {display:block; width:100%;}
 	#col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {width:100%; margin:0;}
 	#col2, #col1.land ~ #col2 {width:99%;}
-	#contentArea #col1.menu, #contentArea #col1.docked {position:absolute !important; bottom:auto; top:155px; z-index:200;}
+	#contentArea #col1.menu, #contentArea #col1.docked, #contentArea #col1.land.menu, #contentArea #col1.land.menu {margin:0; position:absolute !important; bottom:auto; top:155px; z-index:200;}
 	#col1.land.menu {margin-left:0;}
 	#col1.land ~ #col3 {margin-right:3%; width:97%;}
 	#col1.land ~ #col3 #right > div {float:none; width:100%%;}

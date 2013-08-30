@@ -344,7 +344,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .section hr:first-child {display:none;}
 
 /*DevServ*/
-#Developer, #Homeowner, #Tools {display:none;}
+#Developer, #Homeowner, #Tools, #CodeRef {display:none;}
 #Developer h3, #Homeowner h3 {background:$teal;}
 #Developer ul, #Homeowner ul {background:$teal;}
 #Tools li {@extend .dotted;}
@@ -366,7 +366,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 	font-weight: normal; font-style: normal;}
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before/*, #Nav a[title=Home]:before*/, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before, .content a[href$="FormsDirectory.html"]:before, .content a[href^="http://onlinedevcenter"]:before, .content a[href$="CurrentDevelopmentActivity.html"]:before, .content a[href$="Face2FaceServices.html"]:before, .content a[href$="DrawingsStandardDetailsIndex.html"]:before, .content a[href$="ZoningPermitsBusiness.html"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before/*, #Nav a[title=Home]:before*/, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before, .content a[href$="FormsDirectory.html"]:before, .content a[href^="http://onlinedevcenter"]:before, .content a[href$="CurrentDevelopmentActivity.html"]:before, .content a[href$="Face2FaceServices.html"]:before, .content a[href$="DrawingsStandardDetailsIndex.html"]:before, .content a[href$="ZoningPermitsBusiness.html"]:before, .content a[href*="DevelopmentFeeSchedule"]:before {
 	/*font-size:1.5em;*/
 	font-family: 'icomoon';
 	speak: none;
@@ -386,7 +386,8 @@ a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
 #col1 a[href^='http://www.'], #col2 :not(.slider) a:not(.imglink)[href^='http://www.'], #col3 a[href^='http://www.'] {@extend .icon-new-tab;}
 
-.content a[href$="FormsDirectory.html"] {@extend .icon-DSFormDirectory}
+.content a[href$="FormsDirectory.html"] {@extend .icon-DSFormDirectory;}
+.content a[href*="DevelopmentFeeSchedule"] {@extend .icon-DSFeeSchedule;}
 .content a[href^="http://onlinedevcenter"] {@extend .icon-DSOnlineDevelopment;}
 .content a[href$="CurrentDevelopmentActivity.html"] {@extend .icon-DSCurrentDevelopment;}
 .content a[href$="Face2FaceServices.html"] {@extend .icon-DSFaceToFace;}
@@ -425,19 +426,21 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-feed-2:before {content: "\31";}
 .icon-flickr-2:before {content: "\32";}
 .icon-copy:before {content: "\33";}
-.icon-DSFormDirectory:before {content: "\38"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
-.icon-DSFeeSchedule:before {content: "\3f"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
-.icon-DSFaceToFace:before {content: "\40"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
+.icon-DSFormDirectory:before {content: "\38"; @extend .icon-DS;}
+.icon-DSFeeSchedule:before {content: "\3f"; @extend .icon-DS;}
+.icon-DSFaceToFace:before {content: "\40"; @extend .icon-DS;}
 .icon-clipboard:before {content: "\41";}
-.icon-DSOnlineDevelopment:before {content: "\42"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
+.icon-DSOnlineDevelopment:before {content: "\42"; @extend .icon-DS;}
 .icon-screen:before {content: "\46";}
 .icon-monitor:before {content: "\47";}
-.icon-DSStandardDrawing:before {content: "\48"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
+.icon-DSStandardDrawing:before {content: "\48"; @extend .icon-DS;}
 .icon-pencil:before {content: "\49";}
 .icon-pencil-2:before {content: "\4a";}
-.icon-DSZonning:before {content: "\4b"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
-.icon-mail-2:before {content: "\4c"; font-size:2em; vertical-align:middle; padding-right:5px;}
-.icon-DSCurrentDevelopment:before {content: "\4d"; color:#444; font-size:1.8em; vertical-align:middle; padding-right:5px;}
+.icon-DSZonning:before {content: "\4b"; @extend .icon-DS;}
+.icon-mail-2:before {content: "\4c"; font-size:2em; padding-right:5px;}
+.icon-DSCurrentDevelopment:before {content: "\4d"; @extend .icon-DS;}
+
+.icon-DS {color:#444; font-size:1.8em; padding-right:5px;}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid $green;}
