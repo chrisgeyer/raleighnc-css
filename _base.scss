@@ -66,7 +66,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .25s, ease-in
 
 /* Main navigation elements.
 -------------------------------------------------------------- */
-#Nav 								{float:left; width:100%; border-top:1px solid #333; position:relative; z-index:100; box-shadow:0 2px 3px #999; @include gradient(#555554, #111112);}
+#Nav 								{float:left; width:100%; border-top:1px solid #333; z-index:100; box-shadow:0 2px 3px #999; @include gradient(#555554, #111112);}
 #Nav ul 						{@extend .fixedwidth; @include transition(all, .15s, ease-in-out);}
 #Nav ul.visible			{display:block;}
 #Nav li 						{float:left; /*width:12%;*/ height:45px; text-align:center; border-left:1px solid #515f55; @include transition(background, .2s, ease-in-out);}
@@ -88,18 +88,17 @@ a			{color:$link; text-decoration:none; @include transition(color, .25s, ease-in
 #navigation .navtext:active	{position:absolute; top:3px;}
 // #Nav a:active:before {position:absolute;} /*messing up on mobile*/
 
-#Nav #Lines, #Nav #Lines:active	{position:absolute; /*left:50px; top:-10px;*/ margin:0.5%; line-height:30px; font-size:1.1em; padding:0 1%; font-weight:normal; /*@extend .icon-lines;*/}
-/*#Lines,*/ #Home				{display:none; font-weight:700;}
+#Nav #Lines, #Nav #Lines:active	{float:left; margin:0.5%; line-height:30px; font-size:1.1em; padding:0 1%; font-weight:normal; /*@extend .icon-lines;*/}
+#Home	{display:none; font-weight:700;}
 #Lines.display {display:none;}
 
 /* Main content areas.
 -------------------------------------------------------------- */
 #contentArea, #Main, #Search/*, #col1Large*/ {padding:2% 1%; overflow:hidden; @extend .fixedwidth; background:#fff; box-shadow:0 2px 3px #aaa;}
-#col1 						{width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; transition:width 0.3s ease; z-index:50; background:#fff; border-radius:2px; box-shadow:0 2px 3px #999; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
+#col1 						{width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; transition:width 0.3s ease; z-index:50; background:$offwhite; border-radius:2px; box-shadow:0 2px 3px #999; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
 #col1.menu				{margin:0;}
 #col1.docked 			{top:35px;}
-#col1.land				{margin:0 1.5%; width:19%; float:left; position:static; background:$offwhite;}
-// #col1:target			{width:150px;}
+#col1.land				{margin:0 1.5%; width:19%; float:left; position:static;}
 #col2 						{float:left; position:relative; margin:0; width:70%;}
 // #col2 ~ #col3 #right:empty {width:100%;}
 #col3 						{float:right; width:30%; padding:0;}

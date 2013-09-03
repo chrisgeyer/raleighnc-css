@@ -20,7 +20,7 @@
 .align-left			{text-align:left;}
 .align-center		{text-align:center;}
 .align-right		{text-align:right;}
-.fixed					{position:fixed !important; top:0; left:0;}
+.fixed					{position:fixed; top:0; left:0;}
 .notfixed				{position:relative;}
 .line, hr 			{clear:both; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd; border:0;}
 .formbox				{padding:0 2%; font-size:1.1em;}
@@ -437,7 +437,7 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .icon-pencil:before {content: "\49";}
 .icon-pencil-2:before {content: "\4a";}
 .icon-DSZonning:before {content: "\4b"; @extend .icon-DS;}
-.icon-mail-2:before {content: "\4c"; font-size:2em; padding-right:5px;}
+.icon-mail-2:before {content: "\4c"; font-size:2em; padding-right:5px; vertical-align:middle;}
 .icon-DSCurrentDevelopment:before {content: "\4d"; @extend .icon-DS;}
 
 .icon-DS {color:#444; font-size:1.8em; padding-right:5px;}
