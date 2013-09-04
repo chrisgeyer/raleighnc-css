@@ -4,7 +4,7 @@
 @media print {
   * {background:transparent !important; color:black !important; text-shadow:none !important; box-shadow:none !important; border:none !important; -ms-filter:none;} /*Black prints faster: h5bp.com/s*/
   a, a:visited {text-decoration:underline; color:#781351;}
-  a[href]:after {content:" (" attr(href) ")"; font-size:80%; font-style:italic; font-family:Georgia, Times New Roman, serif;}
+  a[href]:after, a[href$='.pdf'] {content:" (" attr(href) ")"; font-size:80%; font-style:italic; font-family:Georgia, Times New Roman, serif; color:black;}
   abbr[title]:after {content:" (" attr(title) ")";}
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {content:"";}  /*Don't show links for images, or javascript/internal links*/
   thead {display:table-header-group;} /*h5bp.com/t*/

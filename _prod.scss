@@ -334,7 +334,7 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 .section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 2px 4px #aaa; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
 .callout h3, .section .close .callout h3	{padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
-.contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none;}
+.contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none; border:0;}
 .section .close			{box-shadow:0 2px 4px #bbb; border:1px solid #ccc; @include gradient(#eeeeef, #ddddde);}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
 .close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $link;}
