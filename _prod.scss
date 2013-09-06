@@ -2,6 +2,7 @@
 ============*/
 /*Generic classes*/
 .cf							{overflow:hidden;}
+.clear 					{clear:both;}
 .hidden 				{display:none;}
 .left 					{float:left;}
 .right 					{float:right;}
@@ -294,16 +295,16 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 /*Project*/
 // .map {background:#aaa; height:175px; text-align:center;}
 ul.progress {padding-left:2%;}
-ul.progress li {float:left; text-align:center; position:relative; background:#666; color:#fff; display:inline; margin:2%; width:21%; text-shadow:1px 3px 5px #333;}
-ul.progress li:before, ul.progress li:after {content:' '; height:0; position:absolute; width:0; border:12px solid transparent; border-left-width:8px; border-right-width:8px; top:0;}
-ul.progress li:before {border-top-color:#666; border-bottom-color:#666; border-right-color:#666; right:100%;}
-ul.progress li:after {border-left-color:#666; left:100%;}
+ul.progress li {float:left; text-align:center; position:relative; background:#d2dde4; display:inline; margin:2%; padding:1%; width:21%;}
+ul.progress li:before, ul.progress li:after {content:' '; height:0; position:absolute; width:0; border:18px solid transparent; border-left-width:8px; border-right-width:8px; top:0;}
+ul.progress li:before {border-top-color:#d2dde4; border-bottom-color:#d2dde4; border-right-color:#d2dde4; right:100%;}
+ul.progress li:after {border-left-color:#d2dde4; left:100%;}
 ul.progress li.first {width:12%;}
 ul.progress li.first:before {display:none;}
 ul.progress li.last:after {border:none !important;}
-ul.progress li.current {background:$link;}
-ul.progress li.current:before {border-top-color:$link; border-bottom-color:$link; border-right-color:$link; right:100%;}
-ul.progress li.current:after {border-left-color:$link; left:100%;}
+ul.progress li.current {background:$teal; color:#fff; text-shadow:1px 3px 5px #333; font-weight:700;}
+ul.progress li.current:before {border-top-color:$teal; border-bottom-color:$teal; border-right-color:$teal; right:100%;}
+ul.progress li.current:after {border-left-color:$teal; left:100%;}
 
 /*Shares*/
 .sharing {position:absolute; top:-2px; right:0;}
@@ -358,8 +359,12 @@ ul.progress li.current:after {border-left-color:$link; left:100%;}
 /*Icons*/
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot'),
-			url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+	src:url('fonts/icomoon.eot');
+	font-weight: normal; font-style: normal;} /* first is for ie8 fix*/
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
 			url('fonts/icomoon.woff') format('woff'),
 			url('fonts/icomoon.ttf') format('truetype'),
 			url('fonts/icomoon.svg#icomoon') format('svg');
