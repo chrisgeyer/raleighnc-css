@@ -119,6 +119,8 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 
 .content .related a {text-decoration:none;}
 
+.primary h3, .primary ul {background:$teal;}
+
 #col2Large #popularPages {float:left; margin:0 1%; padding:0; width:54%;}
 
 .govdelivery h3 		{/*font-size:1.1em;*/ background:$green;}
@@ -295,7 +297,7 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 /*Project*/
 // .map {background:#aaa; height:175px; text-align:center;}
 ul.progress {padding-left:2%;}
-ul.progress li {float:left; text-align:center; position:relative; background:#d2dde4; display:inline; margin:2%; padding:1%; width:21%;}
+ul.progress li {float:left; text-align:center; position:relative; background:#d2dde4; display:inline; margin:2%; padding:6px; width:21%;}
 ul.progress li:before, ul.progress li:after {content:' '; height:0; position:absolute; width:0; border:18px solid transparent; border-left-width:8px; border-right-width:8px; top:0;}
 ul.progress li:before {border-top-color:#d2dde4; border-bottom-color:#d2dde4; border-right-color:#d2dde4; right:100%;}
 ul.progress li:after {border-left-color:#d2dde4; left:100%;}
@@ -371,7 +373,7 @@ ul.progress li.current:after {border-left-color:$teal; left:100%;}
 	font-weight: normal; font-style: normal;}
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before/*, #Nav a[title=Home]:before*/, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before, .content a[href$="FormsDirectory.html"]:before, .content a[href^="http://onlinedevcenter"]:before, .content a[href$="CurrentDevelopmentActivity.html"]:before, .content a[href$="Face2FaceServices.html"]:before, .content a[href$="DrawingsStandardDetailsIndex.html"]:before, .content a[href$="ZoningPermitsBusiness.html"]:before, .content a[href*="DevelopmentFeeSchedule"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before/*, #Nav a[title=Home]:before*/, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before, .content a[href$="FormsDirectory.html"]:before, .content a[href^="http://onlinedevcenter"]:before, .content a[href$="CurrentDevelopmentActivity.html"]:before, .content a[href$="Face2FaceServices.html"]:before, .content a[href$="DrawingsStandardDetailsIndex.html"]:before, .content a[href$="ZoningPermitsBusiness.html"]:before, .content a[href*="DevelopmentFeeSchedule"]:before, a[href*="/extra/Books/"]:after {
 	/*font-size:1.5em;*/
 	font-family: 'icomoon';
 	speak: none;
@@ -391,59 +393,56 @@ a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
 #col1 a[href^='http://www.'], #col2 :not(.slider) a:not(.imglink)[href^='http://www.'], #col3 a[href^='http://www.'] {@extend .icon-new-tab;}
 
-.content a[href$="FormsDirectory.html"] {@extend .icon-DSFormDirectory;}
-.content a[href*="DevelopmentFeeSchedule"] {@extend .icon-DSFeeSchedule;}
-.content a[href^="http://onlinedevcenter"] {@extend .icon-DSOnlineDevelopment;}
-.content a[href$="CurrentDevelopmentActivity.html"] {@extend .icon-DSCurrentDevelopment;}
-.content a[href$="Face2FaceServices.html"] {@extend .icon-DSFaceToFace;}
-.content a[href$="DrawingsStandardDetailsIndex.html"] {@extend .icon-DSStandardDrawing;}
-.content a[href$="ZoningPermitsBusiness.html"] {@extend .icon-DSZonning;}
+.content a[href$="FormsDirectory.html"] {@extend .icon-DSFormDirectory; font-size:1em;}
+.content a[href*="DevelopmentFeeSchedule"] {@extend .icon-DSFeeSchedule; font-size:1em;}
+.content a[href^="http://onlinedevcenter"] {@extend .icon-DSOnlineDevelopment; font-size:1em;}
+.content a[href$="CurrentDevelopmentActivity.html"] {@extend .icon-DSCurrentDevelopment; font-size:1em;}
+.content a[href$="Face2FaceServices.html"] {@extend .icon-DSFaceToFace; font-size:1em;}
+.content a[href$="DrawingsStandardDetailsIndex.html"] {@extend .icon-DSStandardDrawing; font-size:1em;}
+.content a[href$="ZoningPermitsBusiness.html"] {@extend .icon-DSZonning; font-size:1em;}
+a[href*="/extra/Books/"] {@extend .icon-book;}
 
 .icon-mail:after {content: "\21"; font-size:0.9em; margin-left:0.25em;}
 .icon-location:before {content: "\22"; font-size:2em; vertical-align:middle; padding-right:5px;}
 .icon-calendar:before {content: "\23"; font-size:2em; vertical-align:middle; padding-right:5px;}
-.icon-calendar-2:before {content: "\25";}
-.icon-facebook:before {content: "\24"; color:#3B5999;}
-.icon-twitter:before {content: "\27"; color:#4099FF;}
-.icon-feed:before {content: "\28"; color:$orange; background:#fff; font-size:0.6em; border-radius:10px; text-shadow:1px 1px 1px #ccc;}
-.icon-flickr:before {content: "\29";}
-.icon-file-word:after {content: "\2a"; margin-left:0.25em; font-size:1em; color:#00178f; background:#fff; border-radius:10px;}
-.icon-file-pdf:after, a:not(.imglink)[href $='.pdf']:after {content: "\2b"; margin-left:0.25em; font-size:1em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
-.icon-file-excel:after {content: "\2c"; margin-left:0.25em; font-size:1em; color:#007133;}
-.icon-user:before {content: "\2e"; font-size:2em; vertical-align:middle; padding-right:5px;}
-.icon-play:before {content: "\2f";}
-.icon-lines:after, #Nav #Lines:after {content: "\34"; vertical-align:middle; font-size:1.5em;}
-.icon-new-tab:after {content: "\35"; margin-left:0.25em; font-size:0.9em;}
-.icon-new-tab-2:before {content: "\36";}
-.icon-warning:before {content: "\37";}
-.icon-play-alt:before {content: "\39";}
-.icon-play-2:before {content: "\3a";}
-.icon-camera:before {content: "\3b";}
-.icon-file-powerpoint:after {content: "\3c"; margin-left:0.25em; font-size:1em; color:#dd5800;}
-.icon-file-zip:after {content: "\3d"; margin-left:0.25em; font-size:1em; color:#666;}
-.icon-home:before/*, #Nav li:first-child > a:before*/ {content: "\3e"; line-height:42px; font-size:1.5em;}
-.icon-document-alt-fill:before {content:"\43";}
-.icon-folder:before {content: "\44";}
-.icon-folder-2:before {content: "\45";}
-.icon-phone:before {content: "\26";}
-.icon-share:before {content: "\30";}
-.icon-search:before {content: "\2d";}
-.icon-feed-2:before {content: "\31";}
-.icon-flickr-2:before {content: "\32";}
-.icon-copy:before {content: "\33";}
-.icon-DSFormDirectory:before {content: "\38"; @extend .icon-DS;}
-.icon-DSFeeSchedule:before {content: "\3f"; @extend .icon-DS;}
-.icon-DSFaceToFace:before {content: "\40"; @extend .icon-DS;}
-.icon-clipboard:before {content: "\41";}
-.icon-DSOnlineDevelopment:before {content: "\42"; @extend .icon-DS;}
-.icon-screen:before {content: "\46";}
-.icon-monitor:before {content: "\47";}
-.icon-DSStandardDrawing:before {content: "\48"; @extend .icon-DS;}
-.icon-pencil:before {content: "\49";}
-.icon-pencil-2:before {content: "\4a";}
-.icon-DSZonning:before {content: "\4b"; @extend .icon-DS;}
-.icon-mail-2:before {content: "\4c"; font-size:2em; padding-right:5px; vertical-align:middle;}
-.icon-DSCurrentDevelopment:before {content: "\4d"; @extend .icon-DS;}
+.icon-calendar-2:before {content: "\24";}
+.icon-file-word:after {content: "\25"; margin-left:0.25em; font-size:1em; color:#00178f; background:#fff; border-radius:10px;}
+.icon-file-pdf:after, a:not(.imglink)[href $='.pdf']:after {content: "\26"; margin-left:0.25em; font-size:1em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
+.icon-file-excel:after {content: "\27"; margin-left:0.25em; font-size:1em; color:#007133;}
+.icon-user:before {content: "\28"; font-size:2em; vertical-align:middle; padding-right:5px;}
+.icon-play:before {content: "\29";}
+.icon-lines:after, #Nav #Lines:after {content: "\2a"; vertical-align:middle; font-size:1.5em;}
+.icon-new-tab:after {content: "\2b"; margin-left:0.25em; font-size:0.9em;}
+.icon-warning:before {content: "\2c";}
+.icon-play-alt:before {content: "\2d";}
+.icon-play-2:before {content: "\2e";}
+.icon-camera:before {content: "\2f";}
+.icon-home:before/*, #Nav li:first-child > a:before*/ {content: "\30"; line-height:42px; font-size:1.5em;}
+.icon-document-alt-fill:before {content:"\31";}
+.icon-folder:before {content: "\32";}
+.icon-folder-2:before {content: "\33";}
+.icon-file-powerpoint:after {content: "\34"; margin-left:0.25em; font-size:1em; color:#dd5800;}
+.icon-file-zip:after {content: "\35"; margin-left:0.25em; font-size:1em; color:#666;}
+.icon-phone:before {content: "\36";}
+.icon-share:before {content: "\37";}
+.icon-search:before {content: "\38";}
+.icon-DSFormDirectory:before {content: "\39"; @extend .icon-DS;}
+.icon-DSFeeSchedule:before {content: "\3a"; @extend .icon-DS;}
+.icon-DSFaceToFace:before {content: "\3b"; @extend .icon-DS;}
+.icon-DSOnlineDevelopment:before {content: "\3c"; @extend .icon-DS;}
+.icon-DSStandardDrawing:before {content: "\3d"; @extend .icon-DS;}
+.icon-DSZonning:before {content: "\3e"; @extend .icon-DS;}
+.icon-mail-2:before {content: "\3f"; font-size:2em; padding-right:5px; vertical-align:middle;}
+.icon-DSCurrentDevelopment:before {content: "\40"; @extend .icon-DS;}
+.icon-book:after {content: "\41"; margin-left:0.25em; font-size:1em; color:$teal;}
+.icon-facebook:before {content: "\42"; color:#3B5999; font-size:2.25em; background:#fff; border-radius:15px;}
+.icon-twitter:before {content: "\43"; font-size:2.25em; background:#4099FF; border-radius:15px;}
+.icon-youtube:before {content: "\44"; font-size:2.5em; background:#fff; color:#CD332D; display:inline-block; width:34px; height:30px; border-radius:15px;}
+.icon-flickr:before {content: "\45"; font-size:2.25em; color:#000; background:#e9e9e9; border-radius:15px;}
+.icon-feed:before {content: "\46";}
+.icon-gplus:before {content: "\47";}
+.icon-linkedin:before {content: "\48";}
+.icon-pinterest:before {content: "\49"; color:$orange; background:#fff; font-size:0.6em; border-radius:10px; text-shadow:1px 1px 1px #ccc;}
 
 .icon-DS {color:#444; font-size:1.8em; padding-right:5px;}
 
