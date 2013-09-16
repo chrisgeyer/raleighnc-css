@@ -2,7 +2,7 @@
 ============*/
 /*Generic classes*/
 .cf							{overflow:hidden;}
-.clear 					{clear:both;}
+.clear 					{clear:both; margin:0;}
 .hidden 				{display:none;}
 .left 					{float:left;}
 .right 					{float:right;}
@@ -297,9 +297,9 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 
 /*Project*/
 // .map {background:#aaa; height:175px; text-align:center;}
-ul.progress {padding-left:2%;}
-ul.progress li {float:left; text-align:center; position:relative; background:#d2dde4; display:inline; margin:2%; padding:6px; width:21%;}
-ul.progress li:before, ul.progress li:after {content:' '; height:0; position:absolute; width:0; border:18px solid transparent; border-left-width:8px; border-right-width:8px; top:0;}
+ul.progress {padding-left:1%;}
+ul.progress li {float:left; text-align:center; position:relative; background:#d2dde4; display:inline; margin:1.75%; padding:6px; width:21.5%; @include transition(all, .5s, ease-in);}
+ul.progress li:before, ul.progress li:after {content:' '; height:0; position:absolute; width:0; border:18px solid transparent; border-left-width:8px; border-right-width:8px; top:0; @include transition(all, .5s, ease-in);}
 ul.progress li:before {border-top-color:#d2dde4; border-bottom-color:#d2dde4; border-right-color:#d2dde4; right:100%;}
 ul.progress li:after {border-left-color:#d2dde4; left:100%;}
 ul.progress li.first {width:12%;}
@@ -319,15 +319,17 @@ ul.progress li.current:after {border-left-color:$teal; left:100%;}
 /*New 1col - april 2012*/
 .outline 						{padding:1% 1% 2%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999; position:relative;}
 .outline a:active		{position:absolute;}
+.section .outline		{padding:0.5% 0.5% 1%;}
 .largeimage					{margin-bottom:1em; width:100%;}
 .largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:80%; padding-bottom:75%;}
 .largeimage .photoslider-1click-slideshow img {height:460px;}
 .smallimage					{float:left; margin:0 2% 1em 0; width:50%;}
-.section .smallimage {float:right;}
+.section .smallimage {float:right; width:47.5%;}
 .smallimage .photoslider-1click-slideshow img {max-height:235px;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
-#col2 .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .smallimage .sliderkit-panel .sliderkit-panel-overlay		{padding-bottom:20%;}
+#col2 .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .smallimage .sliderkit-panel .sliderkit-panel-overlay	{padding-bottom:20%;}
+#col2 .section .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .section .smallimage .sliderkit-panel .sliderkit-panel-overlay	{padding-bottom:15%;}
 .section						{clear:both; margin:1.5em 0;}
 .callout						{margin:1.5em 0.5em; background:$offwhite; border:2px solid $orange; border-radius:5px; box-shadow:0 3px 5px #999; overflow:hidden;}
 .closed							{@extend .ally;}
@@ -338,7 +340,7 @@ ul.progress li.current:after {border-left-color:$teal; left:100%;}
 .section h3 img 		{float:right; margin:0 1%; padding:0; width:30px; background:transparent; border:0; box-shadow:none; vertical-align:middle;}
 .section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 2px 4px #aaa; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
-.callout h3, .section .close .callout h3	{padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
+.callout h3, .callout h3.close, .section .close .callout h3	{padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
 .contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none; border:0;}
 .section .close			{box-shadow:0 2px 4px #bbb; border:1px solid #ccc; @include gradient(#eeeeef, #ddddde);}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
@@ -375,7 +377,7 @@ ul.progress li.current:after {border-left-color:$teal; left:100%;}
 	font-weight: normal; font-style: normal;}
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before/*, #Nav a[title=Home]:before*/, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before, .content a[href$="FormsDirectory.html"]:before, .content a[href^="http://onlinedevcenter"]:before, .content a[href$="CurrentDevelopmentActivity.html"]:before, .content a[href$="Face2FaceServices.html"]:before, .content a[href$="DrawingsStandardDetailsIndex.html"]:before, .content a[href$="ZoningPermitsBusiness.html"]:before, .content a[href*="DevelopmentFeeSchedule"]:before, a[href*="/extra/Books/"]:after {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before, #SearchBox .action, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before, .content a:not(.imglink)[href$='FormsDirectory.html']:before, .content a:not(.imglink)[href^='http://onlinedevcenter']:before, .content a:not(.imglink)[href$='CurrentDevelopmentActivity.html']:before, .content a:not(.imglink)[href$='Face2FaceServices.html']:before, .content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html']:before, .content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:before, .content a:not(.imglink)[href*='DevelopmentFeeSchedule']:before, a:not(.imglink)[href*='/extra/Books/']:after {
 	/*font-size:1.5em;*/
 	font-family: 'icomoon';
 	speak: none;
@@ -395,14 +397,14 @@ a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
 #col1 a[href^='http://www.'], #col2 :not(.slider) a:not(.imglink)[href^='http://www.'], #col3 a[href^='http://www.'] {@extend .icon-new-tab;}
 
-.content a:not(.imglink)[href$="FormsDirectory.html"] {@extend .icon-DSFormDirectory; font-size:1em;}
-.content a:not(.imglink)[href*="DevelopmentFeeSchedule"] {@extend .icon-DSFeeSchedule; font-size:1em;}
-.content a:not(.imglink)[href^="http://onlinedevcenter"] {@extend .icon-DSOnlineDevelopment; font-size:1em;}
-.content a:not(.imglink)[href$="CurrentDevelopmentActivity.html"] {@extend .icon-DSCurrentDevelopment; font-size:1em;}
-.content a:not(.imglink)[href$="Face2FaceServices.html"] {@extend .icon-DSFaceToFace; font-size:1em;}
-.content a:not(.imglink)[href$="DrawingsStandardDetailsIndex.html"] {@extend .icon-DSStandardDrawing; font-size:1em;}
-.content a:not(.imglink)[href$="ZoningPermitsBusiness.html"] {@extend .icon-DSZonning; font-size:1em;}
-a:not(.imglink)[href*="/extra/Books/"] {@extend .icon-book;}
+.content a:not(.imglink)[href$='FormsDirectory.html'] {@extend .icon-DSFormDirectory; font-size:1em;}
+.content a:not(.imglink)[href*='DevelopmentFeeSchedule'] {@extend .icon-DSFeeSchedule; font-size:1em;}
+.content a:not(.imglink)[href^='http://onlinedevcenter'] {@extend .icon-DSOnlineDevelopment; font-size:1em;}
+.content a:not(.imglink)[href$='CurrentDevelopmentActivity.html'] {@extend .icon-DSCurrentDevelopment; font-size:1em;}
+.content a:not(.imglink)[href$='Face2FaceServices.html'] {@extend .icon-DSFaceToFace; font-size:1em;}
+.content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html'] {@extend .icon-DSStandardDrawing; font-size:1em;}
+.content a:not(.imglink)[href$='ZoningPermitsBusiness.html'] {@extend .icon-DSZonning; font-size:1em;}
+a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 
 .icon-mail:after {content: "\21"; font-size:0.9em; margin-left:0.25em;}
 .icon-location:before {content: "\22"; font-size:2em; vertical-align:middle; padding-right:5px;}
@@ -441,7 +443,7 @@ a:not(.imglink)[href*="/extra/Books/"] {@extend .icon-book;}
 .icon-twitter:before {content: "\43"; font-size:2.25em; background:#4099FF; border-radius:15px;}
 .icon-youtube:before {content: "\44"; font-size:2.5em; background:#fff; color:#CD332D; display:inline-block; width:34px; height:30px; border-radius:15px;}
 .icon-flickr:before {content: "\45"; font-size:2.25em; color:#000; background:#e9e9e9; border-radius:15px;}
-.icon-feed:before {content: "\46"; color:$orange; padding:0 5px; font-size:0.3em; text-shadow:1px 1px 1px #ccc;}
+.icon-feed:before {content: "\46"; color:$orange; padding:0 5px; font-size:0.9em; text-shadow:1px 1px 1px #ccc;}
 .icon-gplus:before {content: "\47";}
 .icon-linkedin:before {content: "\48";}
 .icon-pinterest:before {content: "\49"; color:$orange; background:#fff; font-size:0.6em; border-radius:10px; text-shadow:1px 1px 1px #ccc;}
