@@ -188,7 +188,8 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 /*News Article*/
 .newsAlert 		{margin-right:5px; color:#b74742; font-weight:700; display:inline;}
 .images {float:right; margin:0 0 10px 10px; @extend.outline;}
-.images, .images .photoslider-1click-slideshow, .images .photoslider-1click-slideshow img {width:352px; height:264px;}
+.images {width:56%;}
+.images .photoslider-1click-slideshow {padding-bottom:75%;}
 .eventdates {clear:both; float:left; width:24%;}
 .newseventmap {float:left; margin:0 0 0 10px; width:74%; overflow:hidden;}
 .content .newseventmap li {margin:0; list-style:none;}
@@ -220,7 +221,7 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {float:none; font-size:1.4em;}
 #col3 .mainRss {display:none;}
 
-#col1Large .mainarticlelinks, #col1Large .maineventslinks {background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;}
+// #col1Large .mainarticlelinks, #col1Large .maineventslinks {background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;}
 
 /*Home Page Feature*/
 .landing 		{margin:1% 2%; text-align:center; @extend .pagetitle;}
@@ -296,16 +297,19 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 .park {width:100%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
 
 /*Project*/
-// .map {background:#aaa; height:175px; text-align:center;}
 ul.progress {padding-left:1%;}
-ul.progress li {float:left; text-align:center; position:relative; background:#d2dde4; display:inline; margin:1.75%; padding:6px; width:21.5%; @include transition(all, .5s, ease-in);}
+ul.progress li {float:left; text-align:center; position:relative; background:#d2dde4; display:inline; margin:0; padding:6px; width:23%; @include transition(all, .5s, linear);}
+
 ul.progress li:before, ul.progress li:after {content:' '; height:0; position:absolute; width:0; border:18px solid transparent; border-left-width:8px; border-right-width:8px; top:0; @include transition(all, .5s, ease-in);}
-ul.progress li:before {border-top-color:#d2dde4; border-bottom-color:#d2dde4; border-right-color:#d2dde4; right:100%;}
-ul.progress li:after {border-left-color:#d2dde4; left:100%;}
-ul.progress li.first {width:12%;}
-ul.progress li.first:before {display:none;}
-ul.progress li.last:after {border:none !important;}
-ul.progress li.current {background:$teal; color:#fff; text-shadow:1px 3px 5px #333; font-weight:700;}
+ul.progress li:first-child:before {border-top-color:$teal; border-bottom-color:$teal; border-right-color:$teal; right:100%;}
+ul.progress li.active ~ li:before {border-top-color:#d2dde4; border-bottom-color:#d2dde4; border-right-color:#d2dde4; right:100%;}
+ul.progress li.active:after {border-left-color:$teal; left:100%;}
+ul.progress li:not(.completed):after {border-left-color:#d2dde4; left:100%;}
+
+ul.progress li:first-child {margin-left:2%;}
+ul.progress li.completed {background:$teal; color:#666;}
+ul.progress li.completed.active {margin-right:4%; color:#fff; text-shadow:1px 3px 5px #333; font-weight:700;}
+
 ul.progress li.current:before {border-top-color:$teal; border-bottom-color:$teal; border-right-color:$teal; right:100%;}
 ul.progress li.current:after {border-left-color:$teal; left:100%;}
 
@@ -355,7 +359,7 @@ ul.progress li.current:after {border-left-color:$teal; left:100%;}
 #Developer h3, #Homeowner h3 {background:$teal;}
 #Developer ul, #Homeowner ul {background:$teal;}
 #Tools li {@extend .dotted;}
-.content .map {float:right; width:20em; height:200px; @extend iframe;}
+.content .map {float:right; width:50%; height:200px; @extend iframe;}
 .related .map {float:none; width:100%; height:200px; border:1px solid #fff;}
 
 /*Ally*/
@@ -397,13 +401,15 @@ a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
 #col1 a[href^='http://www.'], #col2 :not(.slider) a:not(.imglink)[href^='http://www.'], #col3 a[href^='http://www.'] {@extend .icon-new-tab;}
 
-.content a:not(.imglink)[href$='FormsDirectory.html'] {@extend .icon-DSFormDirectory; font-size:1em;}
-.content a:not(.imglink)[href*='DevelopmentFeeSchedule'] {@extend .icon-DSFeeSchedule; font-size:1em;}
-.content a:not(.imglink)[href^='http://onlinedevcenter'] {@extend .icon-DSOnlineDevelopment; font-size:1em;}
-.content a:not(.imglink)[href$='CurrentDevelopmentActivity.html'] {@extend .icon-DSCurrentDevelopment; font-size:1em;}
-.content a:not(.imglink)[href$='Face2FaceServices.html'] {@extend .icon-DSFaceToFace; font-size:1em;}
-.content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html'] {@extend .icon-DSStandardDrawing; font-size:1em;}
-.content a:not(.imglink)[href$='ZoningPermitsBusiness.html'] {@extend .icon-DSZonning; font-size:1em;}
+.content a:not(.imglink)[href$='FormsDirectory.html']:before {@extend .icon-DSFormDirectory:before;}
+.content a:not(.imglink)[href*='DevelopmentFeeSchedule']:before {@extend .icon-DSFeeSchedule:before;}
+.content a:not(.imglink)[href^='http://onlinedevcenter']:before {@extend .icon-DSOnlineDevelopment:before;}
+.content a:not(.imglink)[href$='CurrentDevelopmentActivity.html']:before {@extend .icon-DSCurrentDevelopment:before;}
+.content a:not(.imglink)[href$='Face2FaceServices.html']:before {@extend .icon-DSFaceToFace:before;}
+.content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html']:before {@extend .icon-DSStandardDrawing:before;}
+.content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:before {@extend .icon-DSZonning:before;}
+#col2 .content a[class*="icon-DS"]:before {font-size:1em;}
+
 a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 
 .icon-mail:after {content: "\21"; font-size:0.9em; margin-left:0.25em;}

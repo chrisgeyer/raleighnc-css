@@ -124,7 +124,7 @@
 	#col2 .updatedDate {position:relative; top:0; left:0;}
 	#storyContentWrapper {padding:0;}
 	.content ul, .content ol {clear:both;}
-	#right > div, .mainarticlelinks, .maineventslinks, #sidebar .mainarticlelinks, #sidebar .maineventslinks, .videos, .open, .council, #footer {clear:both; float:none; margin:0.5%; padding:2%; width:99%; display:block;}
+	#right > div, .mainarticlelinks, .maineventslinks, #sidebar .mainarticlelinks, #sidebar .maineventslinks, .videos, .open, .council, .half, .content .map, #footer {clear:both; float:none; margin:0.5%; padding:2%; width:99%; display:block;}
 	.callout, .content .callout, #col2 .contact {margin:1%; /*padding:1%; width:90%;*/}
 	.largeimage	, .smallimage {float:none; margin:10px auto; width:295px;}
 	.largeimage .photoslider-1click-slideshow img, .smallimage .photoslider-1click-slideshow img {height:240px;}
@@ -157,6 +157,12 @@
     tr+tr{margin-top:1em}
    }
    table {overflow:auto;}
+
+  ul.progress li {display:block; width:100%;}
+  ul.progress li:first-child {margin:0;}
+  ul.progress li:first-child:before {border:0;}
+  ul.progress li.completed.active {margin:0 0 18px 0;}
+  ul.progress li.active:after {border-left:30px solid transparent; border-right:30px solid transparent; border-top:15px solid #82a3ad; top:100%; left:40%;}
 
 	/*nav hide*/
 	#Nav ul	{display:none; clear:both; border-top:1px solid #999;  width:50%; float:right; @include transition(display, .15s, cubic-bezier(0,1.12,.39,.98));}
