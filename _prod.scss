@@ -297,21 +297,20 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 .park {width:100%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
 
 /*Project*/
+ul.nolist label {margin-right:5px; display:inline; font-style:italic;}
+
 ul.progress {padding-left:1%;}
 ul.progress li {float:left; text-align:center; position:relative; background:#d2dde4; display:inline; margin:0; padding:6px; width:23%; @include transition(all, .5s, linear);}
 
 ul.progress li:before, ul.progress li:after {content:' '; height:0; position:absolute; width:0; border:18px solid transparent; border-left-width:8px; border-right-width:8px; top:0; @include transition(all, .5s, ease-in);}
 ul.progress li:first-child:before {border-top-color:$teal; border-bottom-color:$teal; border-right-color:$teal; right:100%;}
 ul.progress li.active ~ li:before {border-top-color:#d2dde4; border-bottom-color:#d2dde4; border-right-color:#d2dde4; right:100%;}
-ul.progress li.active:after {border-left-color:$teal; left:100%;}
+ul.progress li.active.completed:after {border-left-color:$teal; left:100%;}
 ul.progress li:not(.completed):after {border-left-color:#d2dde4; left:100%;}
 
 ul.progress li:first-child {margin-left:2%;}
 ul.progress li.completed {background:$teal; color:#fff;}
 ul.progress li.completed.active {margin-right:4%; color:#fff; text-shadow:1px 3px 5px #333; font-weight:700;}
-
-ul.progress li.current:before {border-top-color:$teal; border-bottom-color:$teal; border-right-color:$teal; right:100%;}
-ul.progress li.current:after {border-left-color:$teal; left:100%;}
 
 /*Shares*/
 .sharing {position:absolute; top:-2px; right:0;}
