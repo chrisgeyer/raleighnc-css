@@ -6,6 +6,7 @@
 .hidden 				{display:none;}
 .left 					{float:left;}
 .right 					{float:right;}
+.middle 				{vertical-align:middle;}
 .first 					{margin-left:0; padding-left:0;}
 .last 					{margin-right:0; padding-right:0; border-right:none;}
 .fifth					{width:19%;}
@@ -299,7 +300,7 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 /*Project*/
 ul.nolist label {margin-right:5px; display:inline; font-style:italic;}
 
-ul.progress {padding-left:1%;}
+ul.progress {padding-left:1%; overflow:hidden;}
 ul.progress li {float:left; text-align:center; position:relative; background:#d2dde4; display:inline; margin:0; padding:6px; width:23%; @include transition(all, .5s, linear);}
 
 ul.progress li:before, ul.progress li:after {content:' '; height:0; position:absolute; width:0; border:18px solid transparent; border-left-width:8px; border-right-width:8px; top:0; @include transition(all, .5s, ease-in);}
@@ -340,7 +341,8 @@ ul.progress li.completed.active {margin-right:4%; color:#fff; text-shadow:1px 3p
 .section img/*, .section .map*/	{padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
 .section img.left,
 .section img.right 	{margin:0 10px 10px;}
-.section h3 img 		{float:right; margin:0 1%; padding:0; width:30px; background:transparent; border:0; box-shadow:none; vertical-align:middle;}
+.section h3 img, .parkicon 		{float:right; margin:0 1%; padding:0; width:30px; background:transparent; border:0; box-shadow:none; vertical-align:middle;}
+.related .parkicon {float:none;}
 .section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 2px 4px #aaa; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
 .callout h3, .callout h3.close, .section .close .callout h3	{padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
