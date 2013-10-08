@@ -300,19 +300,19 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 .park {width:100%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
 
 @-webkit-keyframes fill {
-	0% {background-color:#d2dde4;}
-	100% {background-color:$teal;}
+	0% {background-position:100% 0%;}
+	100% {background-position:0% 100%;}
 }
 @keyframes fill {
-	0% {background-color:#d2dde4;}
-	100% {background-color:$teal;}
+	0% {background-position:100% 0%;}
+	100% {background-position:0% 100%;}
 }
 
 /*Project*/
 ul.nolist label {margin-right:5px; display:inline-block; width:50px;}
 
 ul.progress {padding-left:1%; overflow:hidden;}
-ul.progress li {float:left; text-align:center; position:relative; background:linear-gradient(to right, #d2dde4 0%, #d2dde4 100%); background-size:200% 100%; background-position:right bottom; display:inline; margin:0; padding:6px; width:23%; @include transition(all, 1s, linear);}
+ul.progress li {float:left; text-align:center; position:relative; background-image:linear-gradient(to right, $teal 0%, $teal 50%, #d2dde4 50%, #d2dde4 100%); background-size:200% 100%; background-position:100% 0%; display:inline; margin:0; padding:6px; width:23%; @include transition(all, 1s, linear);}
 
 .chevron {content:' '; height:0; position:absolute; width:0; border:18px solid transparent; border-left-width:8px; border-right-width:8px; top:0; /*@include transition(all, .5s, ease-in);*/}
 ul.progress li:first-child:before {@extend .chevron; border-top-color:$teal; border-bottom-color:$teal; border-right-color:$teal; right:100%;}
@@ -321,9 +321,11 @@ ul.progress li.active.completed:after {@extend .chevron; border-left-color:$teal
 ul.progress li:last-child:after {@extend .chevron; border-left-color:#d2dde4; left:100%;}
 
 ul.progress li.completed:first-child {margin-left:2%;}
-ul.progress li.completed {/*background:linear-gradient(to right, $teal 0%, $teal 100%);*/ color:#fff; background-position:left bottom;
--webkit-animation:fill 4s linear;
-        animation:fill 4s linear;}
+ul.progress li.completed {background-position:0% 100%; color:#fff;}
+ul.progress li.completed.one {-webkit-animation:fill 3s; animation:fill 3s;}
+ul.progress li.completed.two {-webkit-animation:fill 3s linear 3s; animation:fill 3s linear 3s;}
+ul.progress li.completed.three {-webkit-animation:fill 3s linear 6s; animation:fill 3s linear 6s;}
+ul.progress li.completed.four {-webkit-animation:fill 3s linear 9s; animation:fill 3s linear 9s;}
 
 ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; font-weight:700;}
 
