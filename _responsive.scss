@@ -158,11 +158,21 @@
    }
    table {overflow:auto;}
 
-  ul.progress li {display:block; width:100%;}
-  ul.progress li:first-child {margin:0;}
-  ul.progress li:first-child:before {border:0;}
-  ul.progress li.completed.active {margin:0 0 18px 0;}
-  ul.progress li.active:after {border-left:30px solid transparent; border-right:30px solid transparent; border-top:15px solid #82a3ad; top:100%; left:40%;}
+  @-webkit-keyframes fill {
+		0% {background-position:0% 100%;}
+		100% {background-position:100% 0%;}
+	}
+	@keyframes fill {
+		0% {background-position:0% 100%;}
+		100% {background-position:100% 0%;}
+	}
+
+  ul.progress li {display:block; width:100%; background:#d2dde4; background-image:-webkit-linear-gradient(top, $teal 0%, $teal 50%, #d2dde4 50%, #d2dde4 100%); background-image:linear-gradient(top, $teal 0%, $teal 50%, #d2dde4 50%, #d2dde4 100%); background-size:100% 200%; background-position:0% 100%;}
+  ul.progress li.completed, ul.progress li.completed:first-child {margin-left:-2%;}
+  ul.progress li:first-child:before, ul.progress li.completed.active {border:0;}
+  ul.progress li.completed {width:102%; background-position:100% 0%;}
+  ul.progress li.completed.active {margin:0 0 18px -2%;}
+  ul.progress li.active.completed:after {border-left:30px solid transparent; border-right:30px solid transparent; border-top:15px solid #82a3ad; top:100%; left:40%;}
 
 	/*nav hide*/
 	#Nav ul	{display:none; clear:both; border-top:1px solid #999;  width:50%; float:right; @include transition(display, .15s, cubic-bezier(0,1.12,.39,.98));}
