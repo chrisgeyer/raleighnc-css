@@ -239,7 +239,7 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 /*Boards-Commissions*/
 .bcmeetinginfo	{@extend .callout;}
 #col2 .bcmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%); text-align:center; background:#f7f7f7;}
-.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {float:none; display:inline-block; width:32.89%; vertical-align:top; padding:0;}
+.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {float:none; display:inline-block; width:32.84%; vertical-align:top; padding:0;}
 .bcmeetinginfo h4 {background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
 .bcimage 				{margin:10px auto; width:100%;}
@@ -342,6 +342,7 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 .largeimage .photoslider-1click-slideshow img {height:460px;}
 .smallimage					{float:left; margin:0 2% 1em 0; width:50%;}
 .section .smallimage {float:right; width:47.5%;}
+.section .smallimage .sliderkit-nav {top:-16px;}
 .smallimage .photoslider-1click-slideshow img {max-height:235px;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}

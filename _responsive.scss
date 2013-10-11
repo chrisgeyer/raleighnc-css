@@ -15,6 +15,10 @@
 	.dropdown li a, .dropdown li a:hover {color:$link; text-shadow:none; margin-bottom:0.25em;}
 	.dropdown li a:hover {color:$green;}
 	.dropdown.fixed {left:10%; position:fixed;}
+	.related .dropdown {@extend .icons; display:block;}
+	.related .dropdown a, .related .dropdown a:hover {width:100%; color:$link; margin:2% 0; padding:3%; background:#ececec;  font-size:1em; text-shadow:none;}
+	.related .dropdown a:hover {color:$green;}
+	.related .dropdown .arrow, .related .dropdown a:hover .arrow {border-top:12px solid $link;}
 	.slider, .newslider-horizontal .sliderkit-panels {padding-bottom:60%;}
 	.largeimage .photoslider-1click-slideshow img {height:482px;}
 	.newslider-horizontal .sliderkit-nav-clip li a {width:15px; height:15px;}
