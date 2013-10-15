@@ -12,7 +12,7 @@
 .fifth					{width:19%;}
 .fourth					{width:24%;}
 .third 					{width:32%;}
-.half 					{width:48%;}
+.half 					{width:49.5%;}
 .twothirds			{width:64%;}
 .small 					{width:25%;}
 .medium					{width:50%;}
@@ -69,7 +69,7 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .box.icons 						{/*margin-right:0;*/ padding:0;}
 .icons ul 						{margin:0;}
 .icons a 							{margin:2% 0; padding:3%; text-shadow:1px 1px 1px #ccc; display:block; background:#ececec; border-radius:3px;}
-.icons a:hover 				{text-decoration:none; font-size:1.15em;}
+.box.icons a:hover 				{text-decoration:none; font-size:1.15em;}
 // .icon-location:hover  {color:#edb261;}
 .icons a:hover:before	{font-size:1.7em;}
 
@@ -164,22 +164,22 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 /*News & Events
 ================*/
 /*News List*/
-.mainarticlelinks {float:left; margin:2% 0 4% 1%; padding:0 1% 2%; width:55%; position:relative; overflow-y:scroll; height:60vh;}
+.mainarticlelinks {float:left; margin:2% 0 4% 1%; padding:0 1%; width:55%; height:60vh; position:relative; overflow-y:scroll;}
 #col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.3em 0.2em 0.1em; line-height:1;}
 .mainRss {position:absolute; top:0; right:5%;}
 .mainRss a  {@extend .icon-feed; /*color:$orange; padding:0 5px; font-size:0.3em; text-shadow:1px 1px 1px #ccc;*/} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
-.newsList ul {background:#aaa;}
-.newsList li {padding:0.5em 0.25em; background:$offwhite; /*@extend .dotted;*/}
-.newsList li:first-child {padding-top:1em;}
+.newsList ul {margin:0; background:#aaa; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
+.newsList li {padding:0.5em; background:$offwhite; /*@extend .dotted;*/}
+.newsList li:first-child {margin-top:0.1em;}
 .malDate {font-size:0.9em; color:#666;}
 a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 
 /*Events List*/
 .maineventslinks {@extend .mainarticlelinks; width:42%;}
-.eventsList ul {background:#aaa;}
+.eventsList {border:1px solid #ddd; border-radius:0 0 5px 5px; background:#ddd; /*@extend .newslist; margin:0; background:#aaa; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
 .eventsList li {padding:0.5em; background:$offwhite;}
-.eventsList li:first-child {padding-top:1em;}
+.eventsList li:first-child {padding-top:1em;}*/}
 .message 		{font-style:italic;}
 .eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:18%; background:$offwhite; /*border:2px solid #ddd;*/ text-align:center; font-weight:700; /*letter-spacing:0.2em;*/ border-radius:2px; box-shadow:0 2px 3px #999;}
 .eventMonth	{background:#ddd;}
@@ -297,6 +297,10 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 .facility_hours td 	{@extend .align-center;}
 .parkmap						{width:100%;}
 
+.parkfacts {display:inline-block; width:34%; vertical-align:top;}
+.content .parkfacts li {list-style:none; margin:0;}
+.parkbullets {display:inline-block; width:65%; vertical-align:top;}
+
 .park {width:100%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
 
 @-webkit-keyframes fill {
@@ -338,12 +342,11 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 .outline a:active		{position:absolute;}
 .section .outline		{padding:0.5% 0.5% 1%;}
 .largeimage					{margin-bottom:1em; width:100%;}
-.largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:80%; padding-bottom:75%;}
+.largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:75%;}
 .largeimage .photoslider-1click-slideshow img {height:460px;}
-.smallimage					{float:left; margin:0 2% 1em 0; width:50%;}
-.section .smallimage {float:right; width:47.5%;}
-.section .smallimage .sliderkit-nav {top:-16px;}
+.smallimage					{float:left; margin:0 2% 1em 0; width:49.5%;}
 .smallimage .photoslider-1click-slideshow img {max-height:235px;}
+.section .smallimage {float:right;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 #col2 .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .smallimage .sliderkit-panel .sliderkit-panel-overlay	{padding-bottom:20%;}

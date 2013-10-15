@@ -34,6 +34,7 @@
 // .photoslider-1click-slideshow{width:100%;}
 .photoslider-1click-slideshow	{
 	.sliderkit-nav{top:0;left:0;}
+	.sliderkit-nav-clip ul{overflow:hidden;}
 	.sliderkit-nav-clip li{list-style:none;}
 	.sliderkit-nav-clip li a{display:block;padding:2px 6px;color:#fff;background:#444;font-size:0.8em;text-decoration:none;}
 	.sliderkit-nav-clip li.sliderkit-selected a{color:#111;background:#fff;}
