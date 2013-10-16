@@ -164,12 +164,12 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 /*News & Events
 ================*/
 /*News List*/
-.mainarticlelinks {float:left; margin:2% 0 4% 1%; padding:0 1%; width:55%; height:60vh; position:relative; overflow-y:scroll;}
+.mainarticlelinks {float:left; margin:2% 0 4% 1%; padding:0 1%; width:55%; position:relative;}
 #col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.3em 0.2em 0.1em; line-height:1;}
 .mainRss {position:absolute; top:0; right:5%;}
 .mainRss a  {@extend .icon-feed; /*color:$orange; padding:0 5px; font-size:0.3em; text-shadow:1px 1px 1px #ccc;*/} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
-.newsList ul {margin:0; background:#aaa; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
+.newsList ul {margin:0; background:#aaa; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999; height:60vh; overflow-y:scroll;}
 .newsList li {padding:0.5em; background:$offwhite; /*@extend .dotted;*/}
 .newsList li:first-child {margin-top:0.1em;}
 .malDate {font-size:0.9em; color:#666;}
