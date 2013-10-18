@@ -48,7 +48,7 @@ img 						{border:0; max-width:100%;}
 #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
 span.updatedDate {}
-div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd; position:relative;}
+div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd; position:relative;}
 #addThisButtons	{position:absolute; right:10px; top:110px; display:none;}
 
 #col1Large {position:relative;}
@@ -115,9 +115,9 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:4% 4% 2%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:0 3px 5px #999; line-height:1;}
 .related h3 {box-shadow:none;}
 #popularPages h2, #popularSearch h2 {@extend .h3;}
-.related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
+.related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul, .open ul, .council ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
 .related ul {box-shadow:none; border-left:1px solid #ddd; border-right:1px solid #ddd;}
-.related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li {margin:0; padding:2% 4%; background:$offwhite;}
+.related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li, .open li, .council li {margin:0; padding:2% 4%; background:$offwhite;}
 
 .content .related a {text-decoration:none;}
 
@@ -165,23 +165,36 @@ div.updatedDate {color:#aaa; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 ================*/
 /*News List*/
 .mainarticlelinks {float:left; margin:2% 0 4% 1%; padding:0 1%; width:55%; position:relative;}
-#col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.3em 0.2em 0.1em; line-height:1;}
+#col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.3em 0.2em 0.1em; line-height:1; border-radius:5px 5px 0 0;}
 .mainRss {position:absolute; top:0; right:5%;}
 .mainRss a  {@extend .icon-feed; /*color:$orange; padding:0 5px; font-size:0.3em; text-shadow:1px 1px 1px #ccc;*/} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
-.newsList ul {margin:0; background:#aaa; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999; height:60vh; overflow-y:scroll;}
-.newsList li {padding:0.5em; background:$offwhite; /*@extend .dotted;*/}
-.newsList li:first-child {margin-top:0.1em;}
+.scroll {margin:0; background:#aaa; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999; height:400px; overflow-y:scroll;}
+.newsList ul {@extend .scroll;}
+.newsList li {padding:0.5em; background:$offwhite; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
 a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 
+.scroll ::-webkit-scrollbar{width:9px;height:9px;}
+.scroll ::-webkit-scrollbar-button:start:decrement,.newsList ul ::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+.scroll ::-webkit-scrollbar-track-piece{background-color:#FAFAFA;-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
+.scroll ::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#999;-webkit-border-radius:8px;}
+.scroll ::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#999;-webkit-border-radius:8px;}
+
+/*.newsList ul {scrollbar-face-color:#999998;
+// scrollbar-shadow-color: #2D2C4D;
+// scrollbar-highlight-color:#7D7E94;
+// scrollbar-3dlight-color: #7D7E94;
+// scrollbar-darkshadow-color: #2D2C4D;
+scrollbar-track-color: $offwhite;
+scrollbar-arrow-color: #efefef;}*/
+
 /*Events List*/
 .maineventslinks {@extend .mainarticlelinks; width:42%;}
-.eventsList {border:1px solid #ddd; border-radius:0 0 5px 5px; background:#ddd; /*@extend .newslist; margin:0; background:#aaa; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
+.eventsList ul {@extend .scroll;}
 .eventsList li {padding:0.5em; background:$offwhite;}
-.eventsList li:first-child {padding-top:1em;}*/}
 .message 		{font-style:italic;}
-.eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:18%; background:$offwhite; /*border:2px solid #ddd;*/ text-align:center; font-weight:700; /*letter-spacing:0.2em;*/ border-radius:2px; box-shadow:0 2px 3px #999;}
+.eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:18%; background:#fff; text-align:center; font-weight:700; border-radius:2px; box-shadow:0 2px 3px #999;}
 .eventMonth	{background:#ddd;}
 .eventDay 	{font-size:1.3em;}
 .eventTitle {display:inline;}
@@ -205,7 +218,7 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 .rsssharing a {text-decoration:none;}
 .rsssharing .icon-feed:before {font-size:1em;}
 
-/*News sidebar*/
+/*News sidebar
 #Sidebar .mainarticlelinks,
 #Sidebar .maineventslinks, #sidebar .mainarticlelinks,
 #Sidebar .maineventslinks, #sidebar .maineventslinks {clear:both; float:none; margin:0; width:100%;}
@@ -215,28 +228,32 @@ a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
 #Sidebar .mainRss, #sidebar .mainRss {display:none;}
 #Sidebar .mainarticlelinks ul,
 #Sidebar .maineventslinks ul , #sidebar .mainarticlelinks ul,
-#Sidebar .maineventslinks ul, #sidebar .maineventslinks ul {margin:0;}
+#Sidebar .maineventslinks ul, #sidebar .maineventslinks ul {margin:0; height:300px;}
 // #Sidebar .mainarticlelinks li, #Sidebar .maineventslinks li , #sidebar .mainarticlelinks li, #Sidebar .maineventslinks li , #sidebar .maineventslinks li {padding:6px 0;}
 #Sidebar .malDate, #sidebar .malDate {display:block;}
-// #Sidebar .more, #sidebar .more {margin-right:10px;}
+// #Sidebar .more, #sidebar .more {margin-right:10px;}*/
 
 #col3 .mainarticlelinks, #col3 .maineventslinks {float:none; width:100%; font-size:1.05em;}
 #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {float:none; font-size:1.4em;}
 #col3 .mainRss {display:none;}
 
-// #col1Large .mainarticlelinks, #col1Large .maineventslinks {background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;}
+#col3 .mainarticlelinks ul, #col3 .maineventslinks ul {height:300px;}
 
 /*Home Page Feature*/
 .landing 		{margin:1% 2%; text-align:center; @extend .pagetitle;}
 .videos, .council, .open {float:left; width:48.5%; margin-left:1%;}
+.open ul, .council ul {@extend .scroll; height:auto;}
 .open p 		{padding-top:2%;}
-.boxcouncil {background:#fff;}
+.boxcouncil {background:$offwhite;}
 label 			{display:block; @extend .quiet;}
 iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
+.youtube 		{float:right; width:60%; height:0; padding-bottom:33.75%; position:relative;}
+.youtube iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
 
 /*Templates
 ====================*/
 /*Boards-Commissions*/
+.bclogo					{float:right;}
 .bcmeetinginfo	{@extend .callout;}
 #col2 .bcmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%); text-align:center; background:#f7f7f7;}
 .bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {float:none; display:inline-block; width:32.84%; vertical-align:top; padding:0;}
@@ -316,16 +333,16 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 ul.nolist label {margin-right:5px; display:inline-block; width:50px;}
 
 ul.progress {padding-left:1%; overflow:hidden;}
-ul.progress li {float:left; text-align:center; position:relative; background:#d2dde4; background-image:-webkit-linear-gradient(right, #d2dde4 0%, #d2dde4 50%, $teal 50%, $teal 100%); background-image:linear-gradient(to right, $teal 0%, $teal 50%, #d2dde4 50%, #d2dde4 100%); background-size:200% 100%; background-position:100% 0%; display:inline; margin:0; padding:6px; width:23%; @include transition(all, 1s, ease-in);}
+ul.progress li {float:left; text-align:center; position:relative; background:#d2dde4; background-image:-webkit-linear-gradient(right, #d2dde4 0%, #d2dde4 50%, $teal 50%, $teal 100%); background-image:linear-gradient(to right, $teal 0%, $teal 50%, #d2dde4 50%, #d2dde4 100%); background-size:200% 100%; background-position-x:100%; background-position-y:0%; background-position:100% 0%; display:inline; margin:0; padding:6px; width:23%; @include transition(all, 1s, ease-in);}
 
-.chevron {content:' '; position:absolute; height:0; width:0; border:18px solid transparent; border-left-width:8px; border-right-width:8px; top:0; @include transition(all, 1s, ease-in);}
-ul.progress li:first-child:before {@extend .chevron; border-top-color:$teal; border-bottom-color:$teal; border-right-color:$teal; right:100%;}
-ul.progress li.active ~ li:before {@extend .chevron; border-top-color:#d2dde4; border-bottom-color:#d2dde4; border-right-color:#d2dde4; right:100%;}
-ul.progress li.active.completed:after {@extend .chevron; border-left-color:$teal; left:100%;}
-ul.progress li:last-child:after {@extend .chevron; border-left-color:#d2dde4; left:100%;}
+ul.progress li:first-child:before, ul.progress li.active ~ li:before {content:' '; position:absolute; top:0; right:100%; height:0; width:0; border:18px solid transparent; border-top-color:$teal; border-right:8px solid $teal; border-bottom-color:$teal; border-left-width:8px; @include transition(all, 1s, ease-in);}
+ul.progress li.active ~ li:before {border-top-color:#d2dde4; border-right:8px solid #d2dde4; border-bottom-color:#d2dde4;}
+// ul.progress li.completed.active:after {content:' '; position:absolute; top:0; left:100%; height:0; width:0; border:18px solid transparent; border-right-width:8px; border-left:8px solid $teal; @include transition(all, 1s, ease-in);}
+ul.progress li:last-child:after, ul.progress li.completed:after {content:' '; position:absolute; top:0; left:100%; height:0; width:0; border:18px solid transparent; border-right-width:8px; border-left:8px solid #d2dde4; @include transition(all, 1s, ease-in);}
+ul.progress li.completed:after {border-left:8px solid $teal;}
 
 ul.progress li.completed:first-child {margin-left:2%;}
-ul.progress li.completed {background-position:0% 100%; color:#fff;}
+ul.progress li.completed {background-position-x:0%%; background-position-y:100%; background-position:0% 100%; background:$teal; color:#fff;}
 ul.progress li.completed {-webkit-animation:fill 1s linear; animation:fill 1s linear;}
 
 ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; font-weight:700;}
@@ -379,6 +396,7 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 #Tools li {@extend .dotted;}
 .content .map {float:right; margin-bottom:1em; width:50%; height:200px; @extend iframe;}
 .related .map {float:none; width:100%; height:200px; border:1px solid #fff;}
+.map img {width:100%;}
 
 /*Ally*/
 .ally, .homeicon		{position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
