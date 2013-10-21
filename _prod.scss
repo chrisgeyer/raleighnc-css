@@ -84,7 +84,7 @@ div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .dropdown a, .dropdown a:hover {font-size:1.3em; cursor:pointer;}
 .dropdown a:hover .arrow {border-top:12px solid $green;}
 .related .dropdown a {font-size:1em;}
-.dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5p #666;}
+.dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5p #666; overflow:hidden;}
 .dropdown ul:after {content:''; display:inline-block; border-left:9px solid transparent; border-right:9px solid transparent; border-bottom:9px solid #fff; position:absolute; top:39px; left:105px;}
 #col3 .dropdown ul:after {border-bottom:none;}
 .dropdown li a, .dropdown li a:hover {padding:0 0 0 5px; font-size:1em; background:#fff; text-shadow:none;}
@@ -173,7 +173,8 @@ div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .newsList ul {@extend .scroll;}
 .newsList li {padding:0.5em; background:$offwhite; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
-a.more {float:right; /*margin:5px 10px;*/ margin:0; text-decoration:underline;}
+a.more {margin-top:1px; padding:1%; background:#ddd; text-align:center; border-radius:0 0 5px 5px;}
+.newsList a.more, .eventsList a.more {display:none;}
 
 .scroll ::-webkit-scrollbar{width:9px;height:9px;}
 .scroll ::-webkit-scrollbar-button:start:decrement,.newsList ul ::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
@@ -241,13 +242,14 @@ scrollbar-arrow-color: #efefef;}*/
 
 /*Home Page Feature*/
 .landing 		{margin:1% 2%; text-align:center; @extend .pagetitle;}
-.videos, .council, .open {float:left; width:48.5%; margin-left:1%;}
-.open ul, .council ul {@extend .scroll; height:auto;}
+.open, .council {float:left; width:55%; margin-left:1%;}
+.council {width:42%;}
+.open ul, .council ul {@extend .scroll; height:auto; overflow:hidden;}
 .open p 		{padding-top:2%;}
 .boxcouncil {background:$offwhite;}
 label 			{display:block; @extend .quiet;}
 iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
-.youtube 		{float:right; width:60%; height:0; padding-bottom:33.75%; position:relative;}
+.youtube 		{float:right; margin:0 0 1% 1%; width:60%; height:0; padding-bottom:33.75%; position:relative;}
 .youtube iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
 
 /*Templates

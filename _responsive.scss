@@ -29,8 +29,12 @@
 	#col3 {width:25%;}
 	.content {max-width:52em;}
 	#col1.land ~ #col3 {width:25%;}
-	#col1.land ~ #col3 #right > div {float:none; width:98%;}
+	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:98%;}
 	#Footer .logo, #footer .logo {display:block;}
+}
+
+@media only screen and (min-width:60em) and (max-width:95em) {
+	#col1.land ~ #col3 #right > div:nth-child(1) {width:55%;}
 }
 
 @media only screen and (min-width:60em) and (max-width:74em) {
@@ -88,7 +92,7 @@
 	#col1.land {float:none; margin-left:-20%; position:fixed;}
 	#col1.land.menu {margin-left:0;}
 	#col1.land ~ #col3 {margin-right:0%; width:29%;}
-	#col1.land ~ #col3 #right > div {float:none; width:100%%;}
+	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%%;}
 	#Lines.display {display:block;}
 	.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {display:block; width:100%;}
 }
@@ -128,7 +132,7 @@
 	#col1.docked {top:150px;}
 
 	#col1.land ~ #col3 {margin-right:3%; width:97%;}
-	#col1.land ~ #col3 #right > div {float:none; width:100%;}
+	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%;}
 	#col2 .updatedDate {position:relative; top:0; left:0;}
 	#storyContentWrapper {padding:0;}
 	.content ul, .content ol {clear:both;}
@@ -159,7 +163,9 @@
 	.wrapper .accolades a {margin-bottom:5px;}
 	#Footer ul, #footer ul {clear:both; width:100%; text-align:center;}
 	.bow {top:5px; left:5px; width:65px;}
-	.council li {display:inline;}
+	.mainRss {top:12px;}
+	.scroll {overflow:hidden;}
+	.newsList a.more, .eventsList a.more {display:block;}
 	.parkfacts, .parkbullets {display:block; width:100%;}
 	.facility_hours {
 		table,thead,tbody,tfoot,th,td,tr{display:block}
