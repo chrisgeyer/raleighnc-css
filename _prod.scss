@@ -169,7 +169,7 @@ div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .mainRss {position:absolute; top:0; right:5%;}
 .mainRss a  {@extend .icon-feed; /*color:$orange; padding:0 5px; font-size:0.3em; text-shadow:1px 1px 1px #ccc;*/} /* remember rss for news */
 .mainRss a:hover {text-decoration:none;}
-.scroll {margin:0; background:#aaa; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999; height:400px; overflow-y:scroll;}
+.scroll {margin:0; background:#ddd; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999; height:350px; overflow-y:auto;}
 .newsList ul {@extend .scroll;}
 .newsList li {padding:0.5em; background:$offwhite; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
@@ -189,6 +189,8 @@ a.more {margin-top:1px; padding:1%; background:#ddd; text-align:center; border-r
 // scrollbar-darkshadow-color: #2D2C4D;
 scrollbar-track-color: $offwhite;
 scrollbar-arrow-color: #efefef;}*/
+
+#col1Large .newsList ul, #col1Large .eventsList ul {height:auto;}
 
 /*Events List*/
 .maineventslinks {@extend .mainarticlelinks; width:42%;}
@@ -258,7 +260,8 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 .bclogo					{float:right;}
 .bcmeetinginfo	{@extend .callout;}
 #col2 .bcmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%); text-align:center; background:#f7f7f7;}
-.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {float:none; display:inline-block; width:32.84%; vertical-align:top; padding:0;}
+.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {float:none; display:inline-block; width:33.2%; vertical-align:top; padding:0; margin-right:-4px;}
+.bcmeetinginfo > div.third:nth-child(1) {margin:0;}
 .bcmeetinginfo h4 {background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
 .bcimage 				{margin:10px auto; width:100%;}
