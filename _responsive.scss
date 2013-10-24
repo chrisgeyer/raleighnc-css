@@ -92,7 +92,7 @@
 	#col1.land {float:none; margin-left:-20%; position:fixed;}
 	#col1.land.menu {margin-left:0;}
 	#col1.land ~ #col3 {margin-right:0%; width:29%;}
-	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%%;}
+	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%;}
 	#Lines.display {display:block;}
 	.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {display:block; width:100%;}
 }
@@ -167,20 +167,18 @@
 	.scroll {overflow:hidden;}
 	.newsList a.more, .eventsList a.more {display:block;}
 	.parkfacts, .parkbullets {display:block; width:100%;}
-	.facility_hours {
-		table,thead,tbody,tfoot,th,td,tr{display:block}
-    tr+tr{margin-top:1em}
-   }
+	.facility_hours table, .facility_hours thead, .facility_hours tbody, .facility_hours tfoot, .facility_hours th, .facility_hours td, .facility_hours tr{display:block}
+  .facility_hours tr+tr{margin-top:1em}
    table {overflow:auto;}
 
-  @-webkit-keyframes fill {
+  /*@-webkit-keyframes fill {
 		0% {background-position:0% 100%;}
 		100% {background-position:100% 0%;}
 	}
 	@keyframes fill {
 		0% {background-position:0% 100%;}
 		100% {background-position:100% 0%;}
-	}
+	}*/
 
   ul.progress li {display:block; width:100%; background:#d2dde4; background-image:-webkit-linear-gradient(top, $teal 0%, $teal 50%, #d2dde4 50%, #d2dde4 100%); background-image:linear-gradient(top, $teal 0%, $teal 50%, #d2dde4 50%, #d2dde4 100%); background-size:100% 200%; background-position:0% 100%;}
   ul.progress li.completed, ul.progress li.completed:first-child {margin-left:-2%;}
