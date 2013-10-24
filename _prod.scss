@@ -84,7 +84,7 @@ div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .dropdown a, .dropdown a:hover {font-size:1.3em; cursor:pointer;}
 .dropdown a:hover .arrow {border-top:12px solid $green;}
 .related .dropdown a {font-size:1em;}
-.dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5p #666; overflow:hidden;}
+.dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5px #666; overflow:hidden;}
 .dropdown ul:after {content:''; display:inline-block; border-left:9px solid transparent; border-right:9px solid transparent; border-bottom:9px solid #fff; position:absolute; top:39px; left:105px;}
 #col3 .dropdown ul:after {border-bottom:none;}
 .dropdown li a, .dropdown li a:hover {padding:0 0 0 5px; font-size:1em; background:#fff; text-shadow:none;}
@@ -206,13 +206,13 @@ scrollbar-arrow-color: #efefef;}*/
 
 /*News Article*/
 .newsAlert 		{margin-right:5px; color:#b74742; font-weight:700; display:inline;}
-.images {float:right; margin:0 0 10px 10px; @extend.outline;}
+.images {float:right; margin:0 0 10px 10px; @extend .outline;}
 .images {width:56%;}
 .images .photoslider-1click-slideshow {padding-bottom:75%;}
 .eventdates {clear:both; float:left; width:24%;}
 .newseventmap {float:left; margin:0 0 0 10px; width:74%; overflow:hidden;}
 .content .newseventmap li {margin:0; list-style:none;}
-.newseventlocation {float:left; width:40%}
+.newseventlocation {float:left; width:40%;}
 .gismap {float:left; margin:0 0 10px 10px; width:46%; height:182px; overflow:hidden;}
 .addfiles, .newscontacts, .relatedlinks {float:left; width:25%; margin:20px 10px;}
 .newscontacts {width:35%;}
@@ -248,7 +248,7 @@ scrollbar-arrow-color: #efefef;}*/
 .council {width:42%;}
 .open ul, .council ul {@extend .scroll; height:auto; overflow:hidden;}
 .open p 		{padding-top:2%;}
-.boxcouncil {background:$offwhite;}
+.boxcouncil {background:$offwhite; padding-bottom:6px;}
 label 			{display:block; @extend .quiet;}
 iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
 .youtube 		{float:right; margin:0 0 1% 1%; width:60%; height:0; padding-bottom:33.75%; position:relative;}
@@ -347,7 +347,7 @@ ul.progress li:last-child:after, ul.progress li.completed:after {content:' '; po
 ul.progress li.completed:after {border-left:8px solid $teal;}
 
 ul.progress li.completed:first-child {margin-left:2%;}
-ul.progress li.completed {background-position-x:0%%; background-position-y:100%; background-position:0% 100%; background:$teal; color:#fff;}
+ul.progress li.completed {background-position-x:0%; background-position-y:100%; background-position:0% 100%; background:$teal; color:#fff;}
 ul.progress li.completed {-webkit-animation:fill 1s linear; animation:fill 1s linear;}
 
 ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; font-weight:700;}
@@ -421,10 +421,20 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 			url('fonts/icomoon.svg#icomoon') format('svg');
 	font-weight: normal; font-style: normal;}
 
-/* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before, /*#SearchBox .action,*/ #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before, .content a:not(.imglink)[href$='FormsDirectory.html']:before, .content a:not(.imglink)[href^='http://onlinedevcenter']:before, .content a:not(.imglink)[href$='CurrentDevelopmentActivity.html']:before, .content a:not(.imglink)[href$='Face2FaceServices.html']:before, .content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html']:before, .content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:before, .content a:not(.imglink)[href*='DevelopmentFeeSchedule']:before, a:not(.imglink)[href*='/extra/Books/']:after {
-	/*font-size:1.5em;*/
-	font-family: 'icomoon';
+/* Use the following CSS code if you want to have a class per icon*/
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before, .content a:not(.imglink)[href$='FormsDirectory.html']:before, .content a:not(.imglink)[href^='http://onlinedevcenter']:before, .content a:not(.imglink)[href$='CurrentDevelopmentActivity.html']:before, .content a:not(.imglink)[href$='Face2FaceServices.html']:before, .content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html']:before, .content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:before, .content a:not(.imglink)[href*='DevelopmentFeeSchedule']:before, a:not(.imglink)[href*='/extra/Books/']:after {
+/*.icon-mail, .icon-location, .icon-calendar, .icon-calendar-2, .icon-file-word, .icon-file-pdf, .icon-file-excel, .icon-user, .icon-play, .icon-lines, .icon-new-tab, .icon-warning, .icon-play-alt, .icon-play-2, .icon-camera, .icon-home, .icon-document-alt-fill, .icon-folder, .icon-folder-2, .icon-file-powerpoint, .icon-file-zip, .icon-phone, .icon-share, .icon-search, .icon-DSFormDirectory, .icon-DSFeeSchedule, .icon-DSFaceToFace, .icon-DSOnlineDevelopment, .icon-DSStandardDrawing, .icon-DSZonning, .icon-mail-2, .icon-DSCurrentDevelopment, .icon-facebook, .icon-twitter, .icon-youtube, .icon-flickr, .icon-feed, .icon-gplus, .icon-linkedin, .icon-pinterest, .icon-book {*/
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;}
+
+	.icon {
+	font-family: 'icomoon' !important;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -453,49 +463,49 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 
 a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 
-.icon-mail:after {content: "\21"; font-size:0.9em; margin-left:0.25em;}
-.icon-location:before {content: "\22"; font-size:2em; vertical-align:middle; padding-right:5px;}
-.icon-calendar:before {content: "\23"; font-size:2em; vertical-align:middle; padding-right:5px;}
-.icon-calendar-2:before {content: "\24";}
-.icon-file-word:after {content: "\25"; margin-left:0.25em; font-size:1em; color:#00178f; background:#fff; border-radius:10px;}
-.icon-file-pdf:after, a:not(.imglink)[href $='.pdf']:after {content: "\26"; margin-left:0.25em; font-size:1em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
-.icon-file-excel:after {content: "\27"; margin-left:0.25em; font-size:1em; color:#007133;}
-.icon-user:before {content: "\28"; font-size:2em; vertical-align:middle; padding-right:5px;}
-.icon-play:before {content: "\29";}
-.icon-lines:after, #Nav #Lines:after {content: "\2a"; vertical-align:middle; font-size:1.5em;}
-.icon-new-tab:after {content: "\2b"; margin-left:0.25em; font-size:0.9em;}
-.icon-warning:before {content: "\2c";}
-.icon-play-alt:before {content: "\2d";}
-.icon-play-2:before {content: "\2e";}
-.icon-camera:before {content: "\2f";}
-.icon-home:before/*, #Nav li:first-child > a:before*/ {content: "\30"; line-height:42px; font-size:1.5em;}
-.icon-document-alt-fill:before {content:"\31";}
-.icon-folder:before {content: "\32";}
-.icon-folder-2:before {content: "\33";}
-.icon-file-powerpoint:after {content: "\34"; margin-left:0.25em; font-size:1em; color:#dd5800;}
-.icon-file-zip:after {content: "\35"; margin-left:0.25em; font-size:1em; color:#666;}
-.icon-phone:before {content: "\36";}
-.icon-share:before {content: "\37";}
-.icon-search:before {content: "\38";}
+.icon-mail:after {content: "\21"; font-size:0.9em; margin-left:0.25em; @extend .icon;}
+.icon-location:before {content: "\22"; font-size:2em; vertical-align:middle; padding-right:5px; @extend .icon;}
+.icon-calendar:before {content: "\23"; font-size:2em; vertical-align:middle; padding-right:5px; @extend .icon;}
+.icon-calendar-2:before {content: "\24"; @extend .icon;}
+.icon-file-word:after {content: "\25"; margin-left:0.25em; font-size:1em; color:#00178f; background:#fff; border-radius:10px; @extend .icon;}
+.icon-file-pdf:after, a:not(.imglink)[href $='.pdf']:after {content: "\26"; margin-left:0.25em; font-size:1em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px; @extend .icon;}
+.icon-file-excel:after {content: "\27"; margin-left:0.25em; font-size:1em; color:#007133; @extend .icon;}
+.icon-user:before {content: "\28"; font-size:2em; vertical-align:middle; padding-right:5px; @extend .icon;}
+.icon-play:before {content: "\29"; @extend .icon;}
+.icon-lines:after, #Nav #Lines:after {content: "\2a"; vertical-align:middle; font-size:1.5em; @extend .icon;}
+.icon-new-tab:after {content: "\2b"; margin-left:0.25em; font-size:0.9em; @extend .icon;}
+.icon-warning:before {content: "\2c"; @extend .icon;}
+.icon-play-alt:before {content: "\2d"; @extend .icon;}
+.icon-play-2:before {content: "\2e"; @extend .icon;}
+.icon-camera:before {content: "\2f"; @extend .icon;}
+.icon-home:before/*, #Nav li:first-child > a:before*/ {content: "\30"; line-height:42px; font-size:1.5em; @extend .icon;}
+.icon-document-alt-fill:before {content:"\31"; @extend .icon;}
+.icon-folder:before {content: "\32"; @extend .icon;}
+.icon-folder-2:before {content: "\33"; @extend .icon;}
+.icon-file-powerpoint:after {content: "\34"; margin-left:0.25em; font-size:1em; color:#dd5800; @extend .icon;}
+.icon-file-zip:after {content: "\35"; margin-left:0.25em; font-size:1em; color:#666; @extend .icon;}
+.icon-phone:before {content: "\36"; @extend .icon;}
+.icon-share:before {content: "\37"; @extend .icon;}
+.icon-search:before {content: "\38"; @extend .icon;}
 .icon-DSFormDirectory:before {content: "\39"; @extend .icon-DS;}
 .icon-DSFeeSchedule:before {content: "\3a"; @extend .icon-DS;}
 .icon-DSFaceToFace:before {content: "\3b"; @extend .icon-DS;}
 .icon-DSOnlineDevelopment:before {content: "\3c"; @extend .icon-DS;}
 .icon-DSStandardDrawing:before {content: "\3d"; @extend .icon-DS;}
 .icon-DSZonning:before {content: "\3e"; @extend .icon-DS;}
-.icon-mail-2:before {content: "\3f"; font-size:2em; padding-right:5px; vertical-align:middle;}
-.icon-DSCurrentDevelopment:before {content: "\40"; @extend .icon-DS;}
-.icon-book:after {content: "\41"; margin-left:0.25em; font-size:1em; color:$teal;}
-.icon-facebook:before {content: "\42"; color:#3B5999; font-size:2.25em; background:#fff; border-radius:15px;}
-.icon-twitter:before {content: "\43"; font-size:2.25em; background:#4099FF; border-radius:15px;}
-.icon-youtube:before {content: "\44"; font-size:2.5em; background:#fff; color:#CD332D; display:inline-block; width:34px; height:30px; border-radius:15px;}
-.icon-flickr:before {content: "\45"; font-size:2.25em; color:#000; background:#e9e9e9; border-radius:15px;}
-.icon-feed:before {content: "\46"; color:$orange; padding:0 5px; font-size:0.9em; text-shadow:1px 1px 1px #ccc;}
-.icon-gplus:before {content: "\47";}
-.icon-linkedin:before {content: "\48";}
-.icon-pinterest:before {content: "\49"; color:$orange; background:#fff; font-size:0.6em; border-radius:10px; text-shadow:1px 1px 1px #ccc;}
+.icon-mail-2:before {content: "\3f"; font-size:2em; padding-right:5px; vertical-align:middle; @extend .icon;}
+.icon-DSCurrentDevelopment:before {content: "\40"; @extend .icon-DS; @extend .icon;}
+.icon-book:after {content: "\41"; margin-left:0.25em; font-size:1em; color:$teal; @extend .icon;}
+.icon-facebook:before {content: "\42"; color:#3B5999; font-size:2.25em; background:#fff; border-radius:15px; @extend .icon;}
+.icon-twitter:before {content: "\43"; font-size:2.25em; background:#4099FF; border-radius:15px; @extend .icon;}
+.icon-youtube:before {content: "\44"; font-size:2.5em; background:#fff; color:#CD332D; display:inline-block; width:34px; height:30px; border-radius:15px; @extend .icon;}
+.icon-flickr:before {content: "\45"; font-size:2.25em; color:#000; background:#e9e9e9; border-radius:15px; @extend .icon;}
+.icon-feed:before {content: "\46"; color:$orange; padding:0 5px; font-size:0.9em; text-shadow:1px 1px 1px #ccc; @extend .icon;}
+.icon-gplus:before {content: "\47"; @extend .icon;}
+.icon-linkedin:before {content: "\48"; @extend .icon;}
+.icon-pinterest:before {content: "\49"; color:$orange; background:#fff; font-size:0.6em; border-radius:10px; text-shadow:1px 1px 1px #ccc; @extend .icon;}
 
-.icon-DS {color:#444; font-size:1.8em; padding-right:5px;}
+.icon-DS {color:#444; font-size:1.8em; padding-right:5px; @extend .icon;}
 
 /*Status - oct 2012*/
 .confirm {border:2px solid $green;}
