@@ -325,14 +325,14 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 
 .park {width:100%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
 
-/*@-webkit-keyframes fill {
+@-webkit-keyframes fill {
 	0% {background-position:100% 0%;}
 	100% {background-position:0% 100%;}
 }
 @keyframes fill {
 	0% {background-position:100% 0%;}
 	100% {background-position:0% 100%;}
-}*/
+}
 
 /*Project*/
 ul.nolist label {margin-right:5px; display:inline-block; width:50px;}
@@ -405,7 +405,6 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 
 /*Ally*/
 .ally, .homeicon		{position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
-.homeicon						{*position:relative; *height:auto; *width:auto;} /*IE7*/
 
 /*Icons*/
 @font-face {
@@ -445,12 +444,13 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 
 .action:hover .icon-mail {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
 a[href $='.doc'] {@extend .icon-file-word;}
-// /*a[href $='.pdf'],*/ a:not(.imglink)[href $='.pdf'] {@extend .icon-file-pdf;}
+// a:not(.imglink)[href $='.pdf'] {@extend .icon-file-pdf;}
 a[href $='.ppt'] {@extend .icon-file-powerpoint;}
 a[href $='.xls'] {@extend .icon-file-excel;}
 a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-mail;}
 #col1 a[href^='http://www.'], #col2 :not(.slider) a:not(.imglink)[href^='http://www.'], #col3 a[href^='http://www.'] {@extend .icon-new-tab;}
+a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 
 .content a:not(.imglink)[href$='FormsDirectory.html']:before {@extend .icon-DSFormDirectory:before;}
 .content a:not(.imglink)[href*='DevelopmentFeeSchedule']:before {@extend .icon-DSFeeSchedule:before;}
@@ -460,8 +460,6 @@ a[href ^="mailto:"] {@extend .icon-mail;}
 .content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html']:before {@extend .icon-DSStandardDrawing:before;}
 .content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:before {@extend .icon-DSZonning:before;}
 #col2 .content a[class*="icon-DS"]:before {font-size:1em;}
-
-a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 
 .icon-mail:after {content: "\21"; font-size:0.9em; margin-left:0.25em; @extend .icon;}
 .icon-location:before {content: "\22"; font-size:2em; vertical-align:middle; padding-right:5px; @extend .icon;}
@@ -478,7 +476,7 @@ a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 .icon-play-alt:before {content: "\2d"; @extend .icon;}
 .icon-play-2:before {content: "\2e"; @extend .icon;}
 .icon-camera:before {content: "\2f"; @extend .icon;}
-.icon-home:before/*, #Nav li:first-child > a:before*/ {content: "\30"; line-height:42px; font-size:1.5em; @extend .icon;}
+.icon-home:before {content: "\30"; line-height:42px; font-size:1.5em; vertical-align:sub; @extend .icon;}
 .icon-document-alt-fill:before {content:"\31"; @extend .icon;}
 .icon-folder:before {content: "\32"; @extend .icon;}
 .icon-folder-2:before {content: "\33"; @extend .icon;}

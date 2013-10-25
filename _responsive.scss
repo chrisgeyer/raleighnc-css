@@ -171,14 +171,14 @@
   .facility_hours tr+tr{margin-top:1em}
    table {overflow:auto;}
 
-  /*@-webkit-keyframes fill {
+  @-webkit-keyframes fill {
 		0% {background-position:0% 100%;}
 		100% {background-position:100% 0%;}
 	}
 	@keyframes fill {
 		0% {background-position:0% 100%;}
 		100% {background-position:100% 0%;}
-	}*/
+	}
 
   ul.progress li {display:block; width:100%; background:#d2dde4; background-image:-webkit-linear-gradient(top, $teal 0%, $teal 50%, #d2dde4 50%, #d2dde4 100%); background-image:linear-gradient(top, $teal 0%, $teal 50%, #d2dde4 50%, #d2dde4 100%); background-size:100% 200%; background-position:0% 100%;}
   ul.progress li.completed, ul.progress li.completed:first-child {margin-left:-2%;}
