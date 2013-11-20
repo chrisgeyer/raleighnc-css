@@ -451,7 +451,7 @@ a[href $='.doc'] {@extend .icon-file-word;}
 a[href $='.ppt'] {@extend .icon-file-powerpoint;}
 a[href $='.xls'] {@extend .icon-file-excel;}
 a[href $='.zip'] {@extend .icon-file-zip;}
-a[href ^="mailto:"] {@extend .icon-mail2;}
+a[href ^="mailto:"] {@extend .icon-envelope;}
 #col1 a[href^='http://www.'], #col2 :not(.slider) a:not(.imglink)[href^='http://www.'], #col3 a[href^='http://www.'] {@extend .icon-new-tab;}
 a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 
