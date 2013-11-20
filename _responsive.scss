@@ -15,7 +15,7 @@
 	.dropdown li a, .dropdown li a:hover {color:$link; text-shadow:none; margin-bottom:0.25em;}
 	.dropdown li a:hover {color:$green;}
 	.dropdown.fixed {left:10%; position:fixed;}
-	.related .dropdown {@extend .icons; display:block;}
+	.related .dropdown {/*@extend .icons;*/ display:block;}
 	.related .dropdown a, .related .dropdown a:hover {width:100%; color:$link; margin:2% 0; padding:3%; background:#ececec;  font-size:1em; text-shadow:none;}
 	.related .dropdown a:hover {color:$green;}
 	.related .dropdown .arrow, .related .dropdown a:hover .arrow {border-top:12px solid $link;}
@@ -191,7 +191,7 @@
 	#Nav ul	{display:none; clear:both; border-top:1px solid #999;  width:50%; float:right; @include transition(display, .15s, cubic-bezier(0,1.12,.39,.98));}
 	#Nav #Lines, #Nav #Lines:active	{line-height:20px; padding:5px; margin:8px;}
 	#Lines img {display:inline; float:left; vertical-align:middle; display:none;}
-	#Nav #Home, #Nav #Home:active	{display:block; line-height:20px; padding:5px; float:right; margin:2%; @extend .icon-home;}
+	#Nav #Home, #Nav #Home:active	{display:block; line-height:20px; padding:5px; float:right; margin:2%; /*@extend .icon-home;*/}
 	.icon-home:before {line-height:20px; margin-right:5%; vertical-align:middle;}
 	.fixed {position:relative;}
 	#Lines.display {display:block;}
