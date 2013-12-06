@@ -40,7 +40,9 @@ img 						{border:0; max-width:100%;}
 .underline			{border-bottom:1px solid #ddd;}
 
 /*Links*/
-.content a:link, .content a:visited, table a:link 	{text-decoration:underline; text-shadow:none;}
+.content a:link, .content a:visited, table a:link 	{border-bottom:1px solid $link; text-shadow:none;}
+.content a:visited {border-bottom:1px solid lighten($link, 10%);}
+.content a:after {border:0;}
 .section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
 
 /*Pages*/
@@ -431,7 +433,7 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 
 @media only screen and (min-width:1em) {
 /* Use the following CSS code if you want to have a class per icon*/
-[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, .utility a:before, .content a:not(.imglink)[href$='FormsDirectory.html']:before, .content a:not(.imglink)[href^='http://onlinedevcenter']:before, .content a:not(.imglink)[href$='CurrentDevelopmentActivity.html']:before, .content a:not(.imglink)[href$='Face2FaceServices.html']:before, .content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html']:before, .content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:before, .content a:not(.imglink)[href*='DevelopmentFeeSchedule']:before, a:not(.imglink)[href*='/extra/Books/']:after {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mainRss a:before, #Nav li:first-child > a:before, #Home, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http:']:after, a[href *='/Contacts/']:after, .utility a:before, .content a:not(.imglink)[href$='FormsDirectory.html']:before, .content a:not(.imglink)[href^='http://onlinedevcenter']:before, .content a:not(.imglink)[href$='CurrentDevelopmentActivity.html']:before, .content a:not(.imglink)[href$='Face2FaceServices.html']:before, .content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html']:before, .content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:before, .content a:not(.imglink)[href*='DevelopmentFeeSchedule']:before, a:not(.imglink)[href*='/extra/Books/']:after {
 /*.icon-mail, .icon-location, .icon-calendar, .icon-calendar-2, .icon-file-word, .icon-file-pdf, .icon-file-excel, .icon-user, .icon-play, .icon-lines, .icon-new-tab, .icon-warning, .icon-play-alt, .icon-play-2, .icon-camera, .icon-home, .icon-document-alt-fill, .icon-folder, .icon-folder-2, .icon-file-powerpoint, .icon-file-zip, .icon-phone, .icon-share, .icon-search, .icon-DSFormDirectory, .icon-DSFeeSchedule, .icon-DSFaceToFace, .icon-DSOnlineDevelopment, .icon-DSStandardDrawing, .icon-DSZonning, .icon-mail-2, .icon-DSCurrentDevelopment, .icon-facebook, .icon-twitter, .icon-youtube, .icon-flickr, .icon-feed, .icon-gplus, .icon-linkedin, .icon-pinterest, .icon-book {*/
 	font-family: 'icomoon';
 	speak: none;
@@ -452,6 +454,7 @@ a[href $='.ppt'] {@extend .icon-file-powerpoint;}
 a[href $='.xls'] {@extend .icon-file-excel;}
 a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-envelope;}
+a[href *='/Contacts/'] {@extend .icon-user2;}
 #col1 a[href^='http://www.'], #col2 :not(.slider) a:not(.imglink)[href^='http://www.'], #col3 a[href^='http://www.'] {@extend .icon-new-tab;}
 a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 
@@ -475,7 +478,7 @@ a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 .icon-envelope:after {content: "\e60c"; font-size:0.9em; margin-left:0.25em;}
 .icon-mail2:after {content: "\e605"; font-size:0.9em; margin-left:0.25em;}
 .icon-user:before {content: "\e60d"; font-size:2em; vertical-align:middle; padding-right:5px;}
-.icon-user2:before {content: "\e60e";}
+.icon-user2:after {content: "\e60e"; margin-left:0.25em; font-size:1em;}
 .icon-play:before {content: "\e60a";}
 .icon-new-tab:after {content: "\e60f"; margin-left:0.25em; font-size:0.9em;}
 .icon-home:before, #Nav li:first-child > a:before {content: "\e608"; line-height:42px; font-size:1.5em; vertical-align:sub;}
