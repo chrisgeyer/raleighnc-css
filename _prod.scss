@@ -43,6 +43,7 @@ img 						{border:0; max-width:100%;}
 .content a:link, .content a:visited, table a:link 	{border-bottom:1px solid $link; text-shadow:none;}
 .content a:visited {border-bottom:1px solid lighten($link, 10%);}
 .content a:after {border:0;}
+#contentArea a:hover {border-bottom:1px solid $green;}
 .section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
 
 /*Pages*/

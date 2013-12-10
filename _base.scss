@@ -18,10 +18,10 @@ html, body, #Main, #Article, #sidebar, #Sidebar, #screenWrapper, .wrapper, #navi
 /* Text elements.
 -------------------------------------------------------------- */
 /*Link*/
-a			{color:$link; text-decoration:none; @include transition(color, .25s, ease-in-out);
+a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-out);
 	&:visited		{color:lighten($link, 10%);}
 	&:hover,
-	&:focus 		{color:$green; text-decoration:underline; @include transition(color, .25s, ease-in-out);}
+	&:focus 		{color:$green; @include transition(all, .25s, ease-in-out);}
 	&:active 		{position:relative; top:1px;
 	/*-webkit-transform: translate(2px);
 			-ms-transform: translate(2px);
@@ -34,6 +34,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .25s, ease-in
 #navigation					{font-size:0.9em; background:#537ac1; @include gradient(#5c8fea, #537ac1);}
 #Header 						{height:95px; overflow:hidden; position:relative; color:#fff; background:url(images/Skyline1.png) top left no-repeat; background-position:30% 50%; @extend .fixedwidth;}
 #Header a						{color:#fff; line-height:20px;}
+#Header a:hover			{border:0;}
 
 #CitySeal						{width:45%; cursor:pointer;}
 .logo 							{float:left; margin:5px; width:85px; -webkit-filter:drop-shadow(1px 1px 5px #333); filter:drop-shadow(1px 1px 5px #333);}
@@ -74,6 +75,7 @@ a			{color:$link; text-decoration:none; @include transition(color, .25s, ease-in
 // #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
 .current 						{@include gradient($link, lighten($link, 10%));}
 #Nav a 							{padding:0 14px; color:#fff; /*font-size:1.1em;*/ line-height:45px; text-shadow:1px 1px 3px #111; text-decoration:none;}
+#Nav a:hover				{border:0;}
 #Nav li:hover				{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
 .current a:hover, .current:hover a {color:#fff;}
 #Nav li:first-child {border-left:none;}
