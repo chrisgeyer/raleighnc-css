@@ -53,6 +53,8 @@ img 						{border:0; max-width:100%;}
 span.updatedDate {}
 div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd; position:relative;}
 #addThisButtons	{position:absolute; right:10px; top:110px; display:none;}
+.ratings {margin:2%; padding:1%; background:#ecf0f1; border-radius:10px;}
+.ratings li {display:inline-block;}
 
 #col1Large {position:relative;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
@@ -71,10 +73,10 @@ div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 /*Global*/
 .box.icons 						{/*margin-right:0;*/ padding:0;}
 .icons ul 						{margin:0;}
-.icons a 							{margin:2% 0; padding:3%; text-shadow:1px 1px 1px #ccc; display:block; background:#ececec; border-radius:3px;}
+.icons a 							{margin:2% 0; padding:3%; text-shadow:1px 1px 1px #ccc; display:block; background:#ececec; border-bottom:1px solid #ececec; border-radius:3px;}
 .box.icons a:hover 				{text-decoration:none; font-size:1.15em;}
 // .icon-location:hover  {color:#edb261;}
-.icons a:hover:before	{font-size:1.7em;}
+// .icons a:hover:before	{font-size:1.5em;}
 
 /*Department dropdown*/
 .deptDropdown, .box.depts {margin:0; padding:0; overflow:visible;}
@@ -479,7 +481,7 @@ a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 .icon-envelope:after {content: "\e60c"; font-size:0.9em; margin-left:0.25em;}
 .icon-mail2:after {content: "\e605"; font-size:0.9em; margin-left:0.25em;}
 .icon-user:before {content: "\e60d"; font-size:2em; vertical-align:middle; padding-right:5px;}
-.icon-user2:after {content: "\e60e"; margin-left:0.25em; font-size:1em;}
+.icon-user2:after {content: "\e60d"; margin-left:0.25em; font-size:1em;}
 .icon-play:before {content: "\e60a";}
 .icon-new-tab:after {content: "\e60f"; margin-left:0.25em; font-size:0.9em;}
 .icon-home:before, #Nav li:first-child > a:before {content: "\e608"; line-height:42px; font-size:1.5em; vertical-align:sub;}
@@ -506,7 +508,7 @@ a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 .icon-notification:before {content: "\e61c";}
 .icon-search:before {content: "\e61d";}
 
-.icon-DS {color:#444; font-size:1.8em; padding-right:5px;}
+.icon-DS {color:#444; font-size:1.6em; padding-right:5px;}
 #col2 .icon-DS {font-size:1em;}
 }
 
