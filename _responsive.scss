@@ -45,17 +45,15 @@
 	#Nav a {padding:0 12px;}
 }
 
-@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
+/*@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
 	body {background:#eee;}
 	#screenWrapper, .wrapper {border:0; box-shadow:none; width:100%;}
 	.fixedwidth {width:100%;}
-	.sizer {display:none;}
 	#Nav li:first-child {width:8%;}
 	#Nav li {width:11%;}
 	#Nav li:nth-child(5) {width:17%;}
 	#Nav a {font-size:1em;}
-	#contentArea {border:0;}
-}
+}*/
 
 @media only screen and (min-width:40em) and (max-width:60em) {
 	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}

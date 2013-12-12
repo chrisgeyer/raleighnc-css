@@ -93,7 +93,7 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 // #Nav a:active:before {position:absolute;} /*messing up on mobile*/
 
 #Nav #Lines, #Nav #Lines:active	{float:left; margin:0.5%; line-height:30px; font-size:1.1em; padding:0 1%; font-weight:normal;}
-#Home	{display:none; font-weight:700;}
+#Home	{@extend .icon-home; display:none; font-weight:700;}
 #Lines.display {display:none;}
 
 /* Main content areas.
