@@ -67,7 +67,7 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 
 /* Main navigation elements.
 -------------------------------------------------------------- */
-#Nav 								{float:left; width:100%; border-top:1px solid #333; z-index:100; box-shadow:0 2px 3px #999; @include transition(all, .5s, linear); @include gradient(#555554, #111112);}
+#Nav 								{float:left; width:100%; border-top:1px solid #333; z-index:100; box-shadow:0 1px 2px #777; @include transition(all, .5s, linear); @include gradient(#555554, #111112);}
 #Nav ul 						{@extend .fixedwidth; @include transition(all, .15s, ease-in-out);}
 #Nav ul.visible			{display:block;}
 #Nav li 						{float:left; /*width:12%;*/ height:45px; text-align:center; border-left:1px solid #666; @include transition(background, .2s, ease-in-out);}

@@ -55,6 +55,7 @@ div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 #addThisButtons	{position:absolute; right:10px; top:110px; display:none;}
 .ratings {margin:2%; padding:1%; background:#ecf0f1; border-radius:10px;}
 .ratings li {display:inline-block;}
+.comments textarea {width:50%;}
 
 #col1Large {position:relative;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
@@ -285,6 +286,11 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 .bio							{clear:both;}
 .job .icon-location {font-size:0.7em;}
 
+.content .orgchart li, .ratings, .comments {margin:0 0 2% 0; padding:2%; list-style:none; background:#ede8B0; border:1px solid #ddd; border-radius:3px; box-shadow:0 1px 2px #777;}
+.orgchart ul {margin-left:1em;}
+.content .orgchart ul li {background:#eee;}
+.content .orgchart ul li ul li {background:#fff;}
+
 /*Employment list*/
 #top h1								{@extend .pagetitle; margin:1% 2% 0; width:95%;}
 #top img							{margin-bottom:-5px; display:none;}
@@ -387,7 +393,7 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 .section img.right 	{margin:0 10px 10px;}
 .section h3 img, .parkicon 		{float:right; margin:0 1%; padding:0; width:30px; background:transparent; border:0; box-shadow:none; vertical-align:middle;}
 .related .parkicon {float:none;}
-.section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 2px 4px #aaa; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
+.section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 1px 2px #777; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
 .expand							{cursor:pointer;}
 .callout h3, .callout h3.close, .section .close .callout h3	{padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
 .contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none; border:0;}
@@ -458,7 +464,7 @@ a[href $='.xls'] {@extend .icon-file-excel;}
 a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-envelope;}
 a[href *='/Contacts/'] {@extend .icon-user2;}
-#col1 a[href^='http://www.'], #col2 :not(.slider) a:not(.imglink)[href^='http://www.'], #col3 a[href^='http://www.'] {@extend .icon-new-tab;}
+#col1 a[href^='http'], #col2 :not(.slider) a:not(.imglink)[href^='http'], #col3 a[href^='http'] {@extend .icon-new-tab;}
 a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 
 .content a:not(.imglink)[href$='FormsDirectory.html']:before {@extend .icon-DSFormDirectory:before;}
