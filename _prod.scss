@@ -53,9 +53,10 @@ img 						{border:0; max-width:100%;}
 span.updatedDate {}
 div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd; position:relative;}
 #addThisButtons	{position:absolute; right:10px; top:110px; display:none;}
-.ratings {margin:2%; padding:1%; background:#ecf0f1; border-radius:10px;}
+// .ratings {margin:2%; padding:1%; background:#ecf0f1; border-radius:10px;}
 .ratings li {display:inline-block;}
 .comments textarea {width:50%;}
+.ratings input, .comments input {width:8em; height:4em;}
 
 #col1Large {position:relative;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
@@ -263,7 +264,7 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 /*Templates
 ====================*/
 /*Boards-Commissions*/
-.bclogo					{float:right;}
+.bclogo					{float:right; border-radius:3px; border:1px solid #ddd; position:relative; right:-2px;}
 .bcmeetinginfo	{@extend .callout;}
 #col2 .bcmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%); text-align:center; background:#f7f7f7;}
 .bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {float:none; display:inline-block; width:33.2%; vertical-align:top; padding:0; margin-right:-4px;}
@@ -286,7 +287,7 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 .bio							{clear:both;}
 .job .icon-location {font-size:0.7em;}
 
-.content .orgchart li, .ratings, .comments {margin:0 0 2% 0; padding:2%; list-style:none; background:#ede8B0; border:1px solid #ddd; border-radius:3px; box-shadow:0 1px 2px #777;}
+.content .orgchart li {margin:0 0 2% 0; padding:2%; list-style:none; background:#ede8B0; border:1px solid #ddd; border-radius:3px; box-shadow:0 1px 2px #777;}
 .orgchart ul {margin-left:1em;}
 .content .orgchart ul li {background:#eee;}
 .content .orgchart ul li ul li {background:#fff;}
