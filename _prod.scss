@@ -56,7 +56,7 @@ div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 // .ratings {margin:2%; padding:1%; background:#ecf0f1; border-radius:10px;}
 .ratings li {display:inline-block;}
 .comments textarea {width:50%;}
-.ratings input, .comments input {width:8em; height:4em;}
+.ratings input, .comments input {width:7em; height:3em;}
 
 #col1Large {position:relative;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
@@ -378,7 +378,7 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 .largeimage					{margin-bottom:1em; width:100%;}
 .largeimage .slideshow, .largeimage .photoslider-1click-slideshow, .smallimage .slideshow, .smallimage .photoslider-1click-slideshow  {height:0; padding-bottom:75%;}
 .largeimage .photoslider-1click-slideshow img {height:460px;}
-.smallimage					{float:right; margin:0 2% 1em 0; width:49.5%;}
+.smallimage					{float:right; margin:0 0 1em 1em; width:49.5%;}
 .smallimage .photoslider-1click-slideshow img {max-height:235px;}
 .section .smallimage {float:right;}
 .largeimage img, .smallimage img	{width:100%;}
