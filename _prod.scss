@@ -380,7 +380,7 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 .largeimage .photoslider-1click-slideshow img {height:460px;}
 .smallimage					{float:right; margin:0 0 1em 1em; width:49.5%;}
 .smallimage .photoslider-1click-slideshow img {max-height:235px;}
-.section .smallimage {float:right;}
+.section .smallimage {float:right; margin-right:0.5em;}
 .largeimage img, .smallimage img	{width:100%;}
 .lightbox						{position:absolute; top:0; right:0; background:#fff; padding:3px; font-size:0.8em; z-index:10; margin:5px;}
 #col2 .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .smallimage .sliderkit-panel .sliderkit-panel-overlay	{padding-bottom:20%;}
