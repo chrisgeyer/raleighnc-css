@@ -53,7 +53,7 @@ img 						{border:0; max-width:100%;}
 span.updatedDate {}
 div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd; position:relative;}
 #addThisButtons	{position:absolute; right:10px; top:110px; display:none;}
-// .ratings {margin:2%; padding:1%; background:#ecf0f1; border-radius:10px;}
+.box.ratings {clear:both;}
 .ratings li {display:inline-block;}
 .comments textarea {width:50%;}
 .ratings input, .comments input {width:7em; height:3em;}
@@ -478,6 +478,7 @@ a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 
 .icon-mail:before {content: "\e600";  font-size:2em; padding-right:5px; vertical-align:middle;}
 .icon-location:before {content: "\e601"; font-size:2em; vertical-align:middle; padding-right:5px;}
+.icon-location2:after {content: "\e601"; margin-left:0.25em; font-size:1em;}
 .icon-export:before {content: "\e602";} /*share*/
 .icon-list:before, #Nav #Lines:after {content: "\e604"; vertical-align:middle; font-size:1.5em;}
 .icon-video:before {content: "\e606";}
@@ -514,6 +515,8 @@ a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 .icon-warning:before {content: "\e61b";}
 .icon-notification:before {content: "\e61c";}
 .icon-search:before {content: "\e61d";}
+.icon-clock:after {content: "\e628"; margin-left:0.25em; font-size:1em;}
+.icon-clock2:after {content: "\e629"; margin-left:0.25em; font-size:1em;}
 
 .icon-DS {color:#444; font-size:1.6em; padding-right:5px;}
 #col2 .icon-DS {font-size:1em;}
