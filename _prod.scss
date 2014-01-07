@@ -90,7 +90,7 @@ div.updatedDate {color:#777; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .dropdown .arrow {float:right; margin:6px;}
 .dropdown a, .dropdown a:hover {font-size:1.3em; cursor:pointer;}
 .dropdown a:hover .arrow {border-top:12px solid $green;}
-.related .dropdown a {font-size:1em; background:#ede8B0;}
+.related .dropdown a {font-size:1em; /*background:#ede8B0;*/}
 .dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5px #666; overflow:hidden;}
 .dropdown ul:after {content:''; display:inline-block; border-left:9px solid transparent; border-right:9px solid transparent; border-bottom:9px solid #fff; position:absolute; top:39px; left:105px;}
 #col3 .dropdown ul:after {border-bottom:none;}
