@@ -17,7 +17,7 @@
 .small 					{width:25%;}
 .medium					{width:50%;}
 .large					{width:78%;}
-.full						{width:96%;}
+.full						{width:99%;}
 .align-justify	{text-align:justify;}
 .align-left			{text-align:left;}
 .align-center		{text-align:center;}
@@ -31,13 +31,14 @@ img 						{border:0; max-width:100%;}
 .action:hover 	{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(#666665, #B2B2B2);}
 .action:active 	{box-shadow:inset 0 1px 2px rgba(0,0,0,0.3)}
 .action img			{display:none;}
-.toggle 				{display:inline-block; vertical-align:top; cursor:pointer; opacity:0.5; -webkit-filter:#{'grayscale(100%)'};}
+.toggle 				{@extend .inlineblock; cursor:pointer; opacity:0.5; -webkit-filter:#{'grayscale(100%)'};}
 .toggle:hover		{@extend .active;}
 .active 				{opacity:1; -webkit-filter:#{'grayscale(0%)'};}
 
 /*OOCSS - start using % for placeholders not needed in compiled css*/
 .dotted					{border-bottom:1px dotted #ddd;}
 .underline			{border-bottom:1px solid #ddd;}
+.inlineblock 		{display:inline-block; vertical-align:top;}
 
 /*Links*/
 .content a:link, .content a:visited, table a:link 	{border-bottom:1px solid $link; text-shadow:none;}
@@ -212,18 +213,16 @@ scrollbar-arrow-color: #efefef;}*/
 .eventTimes {color:#666; margin:0 0 10px 45px;}
 
 /*News Article*/
-.newsAlert 		{margin-right:5px; color:#b74742; font-weight:700; display:inline;}
+.newsAlert {margin-right:5px; color:#b74742; font-weight:700; display:inline;}
 .images {float:right; margin:0 0 10px 10px; @extend .outline;}
 .images {width:56%;}
 .images .photoslider-1click-slideshow {padding-bottom:75%;}
-.eventdates {clear:both; float:left; width:24%;}
-.newseventmap {float:left; margin:0 0 0 10px; width:74%; overflow:hidden;}
-.content .newseventmap li {margin:0; list-style:none;}
+.eventdates {clear:both; width:24%; @extend .inlineblock;}
+.newseventmap {margin:0 0 0 1%; width:74%; overflow:hidden; @extend .inlineblock;}
 .newseventlocation {float:left; width:40%;}
-.gismap {float:left; margin:0 0 10px 10px; width:46%; height:182px; overflow:hidden;}
-.addfiles, .newscontacts, .relatedlinks {float:left; width:25%; margin:20px 10px;}
-.newscontacts {width:35%;}
-.relatedlinks {width:30%;}
+.gismap {float:left; margin:0 0 10px 10px; width:46%; height:182px; overflow:hidden;} /*remove later*/
+.addfiles, .newscontacts, .relatedlinks {margin-right:1%; width:28%; @extend .inlineblock;}
+.newscontacts {width:38%;}
 .rsssharing {clear:both; margin-top:20px;}
 .rsssharing a {text-decoration:none;}
 .rsssharing .icon-feed:before {font-size:1em;}
@@ -250,15 +249,17 @@ scrollbar-arrow-color: #efefef;}*/
 #col3 .mainarticlelinks ul, #col3 .maineventslinks ul {height:300px;}
 
 /*Home Page Feature*/
-.landing 		{margin:1% 2%; text-align:center; @extend .pagetitle;}
+.landing {margin:1% 2%; text-align:center; @extend .pagetitle;}
 .open, .council {float:left; width:55%; margin-left:1%;}
 .council {width:42%;}
 .open ul, .council ul {@extend .scroll; height:auto; overflow:hidden;}
-.open p 		{padding-top:2%;}
+.open p {padding-top:2%;}
 .boxcouncil {background:$offwhite; padding-bottom:6px;}
-label 			{display:block; @extend .quiet;}
-iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
-.youtube 		{float:right; margin:0 0 1% 1%; width:60%; height:0; padding-bottom:33.75%; position:relative;}
+label {display:block; @extend .quiet;}
+iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
+.youtube {margin:1%; height:0; position:relative; padding-bottom:56.25%;}
+.half.youtube {padding-bottom:33%;}
+.third.youtube {padding-bottom:25%;}
 .youtube iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
 
 /*Templates
@@ -267,7 +268,7 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 .bclogo					{float:right; border-radius:3px; border:1px solid #ddd; position:relative; right:-2px;}
 .bcmeetinginfo	{@extend .callout;}
 #col2 .bcmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%); text-align:center; background:#f7f7f7;}
-.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {float:none; display:inline-block; width:33.2%; vertical-align:top; padding:0; margin-right:-4px;}
+.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {float:none; margin-right:-4px; padding:0; width:33.2%; @extend .inlineblock;}
 .bcmeetinginfo > div.third:nth-child(1) {margin:0;}
 .bcmeetinginfo h4 {background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
@@ -331,9 +332,9 @@ iframe 			{padding:1%; background:$offwhite; border:1px solid #ccc; border-radiu
 .facility_hours td 	{@extend .align-center;}
 .parkmap						{width:100%;}
 
-.parkfacts {display:inline-block; width:34%; vertical-align:top;}
+.parkfacts {@extend .third; @extend .inlineblock;}
 .content .parkfacts li {list-style:none; margin:0;}
-.parkbullets {display:inline-block; width:65%; vertical-align:top;}
+.parkbullets {@extend .twothirds; @extend .inlineblock;}
 
 .park {width:100%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
 
@@ -411,8 +412,9 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 #Developer h3, #Homeowner h3 {background:$teal;}
 #Developer ul, #Homeowner ul {background:$teal;}
 #Tools li {@extend .dotted;}
-.content .map {float:right; margin:1em; width:50%; height:200px; @extend iframe;}
-.related .map {float:none; width:100%; height:200px; border:1px solid #fff;}
+.content .map {margin:1%; height:200px; @extend iframe;}
+.content .thrid.map {height:125px;}
+.related .map {float:none; @extend .full; border:1px solid #fff;}
 .layerTile {max-width: none;}
 
 /*Ally*/
