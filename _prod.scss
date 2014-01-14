@@ -387,7 +387,7 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 #col2 .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .smallimage .sliderkit-panel .sliderkit-panel-overlay	{padding-bottom:20%;}
 #col2 .section .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .section .smallimage .sliderkit-panel .sliderkit-panel-overlay	{padding-bottom:15%;}
 .section						{clear:both; margin:1.5em 0;}
-.callout						{margin:1.5em 0.5em; background:$offwhite; border:2px solid $orange; border-radius:5px; box-shadow:0 3px 5px #999; overflow:hidden;}
+.callout						{clear:both; margin:1.5em 0.5em; background:$offwhite; border:2px solid $orange; border-radius:5px; box-shadow:0 3px 5px #999; overflow:hidden;}
 .closed							{@extend .ally;}
 .callout img				{max-width:98%;}
 .section img/*, .section .map*/	{padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
@@ -400,6 +400,7 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 .callout h3, .callout h3.close, .section .close .callout h3	{padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
 .contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none; border:0;}
 .section .close			{box-shadow:0 2px 4px #bbb; border:1px solid #ccc; @include gradient(#eeeeef, #ddddde);}
+.section h3:hover   {box-shadow:0 1px 2px #777; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
 .close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $link;}
 .collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:2%; overflow:hidden;}
@@ -413,8 +414,8 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 #Developer ul, #Homeowner ul {background:$teal;}
 #Tools li {@extend .dotted;}
 .content .map {margin:1%; height:200px; @extend iframe;}
-.content .thrid.map {height:125px;}
-.related .map {float:none; @extend .full; border:1px solid #fff;}
+.content .third.map {height:125px;}
+.related .map {float:none; @extend .full; height:200px; border:1px solid #fff;}
 .layerTile {max-width: none;}
 
 /*Ally*/
