@@ -257,10 +257,12 @@ scrollbar-arrow-color: #efefef;}*/
 .boxcouncil {background:$offwhite; padding-bottom:6px;}
 label {display:block; @extend .quiet;}
 iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:3px; box-shadow:0 2px 3px #999;}
-.youtube {margin:1%; height:0; position:relative; padding-bottom:56.25%;}
+.youtube, .frame {margin:1%; height:0; position:relative; padding-bottom:56.25%;}
 .half.youtube {padding-bottom:33%;}
 .third.youtube {padding-bottom:25%;}
-.youtube iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
+.youtube iframe, .frame iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
+.frame {padding-bottom:75%;}
+
 
 /*Templates
 ====================*/
