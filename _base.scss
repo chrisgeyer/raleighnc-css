@@ -32,6 +32,7 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 -------------------------------------------------------------- */
 // #navigation					{background:$link url(images/logo.png) top left no-repeat; background-position:50% 100%; background-size:cover;}
 #navigation					{font-size:0.9em; background:#537ac1; @include gradient(#5c8fea, #537ac1);}
+.ie9 #navigation 		{font-size:0.85em;}
 #Header 						{height:95px; overflow:hidden; position:relative; color:#fff; background:url(images/Skyline1.png) top left no-repeat; background-position:30% 50%; @extend .fixedwidth;}
 #Header a						{color:#fff; line-height:20px;}
 #Header a:hover			{border:0;}

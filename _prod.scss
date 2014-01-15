@@ -404,7 +404,9 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 .section .close			{box-shadow:0 2px 4px #bbb; border:1px solid #ccc; @include gradient(#eeeeef, #ddddde);}
 .section h3:hover   {box-shadow:0 1px 2px #777; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
 .arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
+.ie9 .arrow 				{border-right:8px solid transparent;}
 .close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $link;}
+.ie9 .close .arrow 	{border-top:8px solid transparent;}
 .collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:2%; overflow:hidden;}
 .callout div 				{padding:2%; background:$offwhite;}
 .block 							{clear:both;}
@@ -422,6 +424,7 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 
 /*Ally*/
 .ally, .homeicon {position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
+.ie8 .homeicon {position:relative;}
 
 /*Icons*/
 @font-face {
@@ -469,7 +472,7 @@ a[href $='.ppt'] {@extend .icon-file-powerpoint;}
 a[href $='.xls'] {@extend .icon-file-excel;}
 a[href $='.zip'] {@extend .icon-file-zip;}
 a[href ^="mailto:"] {@extend .icon-envelope;}
-a[href *='/Contacts/'] {@extend .icon-user2;}
+a:not(.imglink)[href *='/Contacts/'] {@extend .icon-user2;}
 #col1 a[href^='http'], #col2 :not(.slider) a:not(.imglink)[href^='http'], #col3 a[href^='http'] {@extend .icon-new-tab;}
 a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 
