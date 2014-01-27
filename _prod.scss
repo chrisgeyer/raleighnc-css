@@ -301,7 +301,7 @@ iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:
 .employmentType 			{width:99%; padding:0 2%;}
 .employmentType div[style] {display:none;}
 .employmentType div 	{margin-left:0.5em;}
-.empJump li a 				{float:left; margin:0 15px 20px 0; text-decoration:underline;}
+.empJump li a 				{float:left; margin:0 15px 20px 0; border-bottom:1px solid #fff;}
 .employmentType h3 		{clear:both; margin:1em 0 0.5em; @extend .sectiontitle;}
 .empTitle 						{clear:both; margin:0 0.5em 0 0; font-size:1.1em; font-weight:700;}
 .empClose, .empSalary {float:left; margin:0 0 0.25em; font-size:0.9em;}
