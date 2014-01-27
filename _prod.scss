@@ -476,6 +476,8 @@ a:not(.imglink)[href *='/Contacts/'] {@extend .icon-user2;}
 #col1 a[href^='http'], #col2 :not(.slider) a:not(.imglink)[href^='http'], #col3 a[href^='http'] {@extend .icon-new-tab;}
 a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 
+.imglink:before, .imglink:after {display:none;}
+
 .content a:not(.imglink)[href$='FormsDirectory.html']:before {@extend .icon-DSFormDirectory:before;}
 .content a:not(.imglink)[href*='DevelopmentFeeSchedule']:before {@extend .icon-DSFeeSchedule:before;}
 .content a:not(.imglink)[href^='http://onlinedevcenter']:before {@extend .icon-DSOnlineDevelopment:before;}
