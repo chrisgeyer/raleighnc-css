@@ -63,7 +63,7 @@ ul li 	{margin:0; padding:0; list-style:none; line-height:1.3;}
 // caption 					{background:transparent; font-size:1.25em; font-weight:700;}
 table 						{margin:1.25em 0 1.5em 0; width:100%; border-collapse:collapse; border:1px solid #fff;}
 table th, table thead tr td, table.bids tr:nth-child(5n+1) td {padding:1% 2%; background:$teal; color:#fff; text-shadow:1px 1px 1px #333; font-weight:700;}
-table[border="0"], table[border="0"] td {border:0;}
+table[border="0"], table[border="0"] td, table.no-border, table.no-border td {border:0;}
 table td					{background:#d2dde4; border:1px solid #fff; padding:1%;}
 table td p 				{margin:0;}
 table.stripe tr:nth-child(even) td {background:$offwhite;}
