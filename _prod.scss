@@ -403,10 +403,10 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 .contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none; border:0;}
 .section .close			{box-shadow:0 2px 4px #bbb; border:1px solid #ccc; @include gradient(#eeeeef, #ddddde);}
 .section h3:hover   {box-shadow:0 1px 2px #777; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
-.arrow							{margin-right:5px; width:0; height:0; border-top:12px solid $link; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent; display:inline-block; vertical-align:middle;}
-.ie9 .arrow 				{border-right:8px solid transparent;}
-.close .arrow				{border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid $link;}
-.ie9 .close .arrow 	{border-top:8px solid transparent;}
+.arrow							{margin-right:5px; width:0; height:0; border-color:$link transparent transparent transparent; border-style:solid; border-width:12px 10px 0; display:inline-block; transition:all 0.25s ease;}
+// .ie9 .arrow 				{border-right:8px solid transparent;}
+.close .arrow				{transform:rotate(-90deg); -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg);}
+// .ie9 .close .arrow 	{border-top:8px solid transparent;}
 .collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:2%; overflow:hidden;}
 .callout div 				{padding:2%; background:$offwhite;}
 .block 							{clear:both;}
@@ -533,13 +533,13 @@ a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 }
 
 /*Status - oct 2012*/
-.confirm {border:2px solid $green;}
-.section.confirm .close, .confirm h3 {background:$green; border:0; font-weight:normal;}
-.warning {border:2px solid #ffe88c;}
-.section.warning .close, .warning h3 {background:#ffe88c; border:0; font-weight:normal; color:#333; text-shadow:1px 1px 1px #ccc;}
-.error	 {border:2px solid #b74742;}
-.section.error .close, .error h3 {background:#b74742; border:0; font-weight:normal;}
-.section.confirm .arrow, .section.warning .arrow, .section.error .arrow	{border-top:12px solid #fff; border-right:8px dotted transparent; border-bottom:none; border-left:8px solid transparent;}
-.section.confirm .close .arrow, .section.warning .close .arrow, .section.error .close .arrow {border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid #fff;}
-.section.warning .arrow {border-top:12px solid #333;}
-.section.warning .close .arrow {border-left:12px solid #333;}
+.confirm {@extend .callout; border:2px solid $green;}
+.section.confirm .close, .confirm h3, .section.confirm:hover h3 {background:$green; border:0; font-weight:normal;}
+.warning {@extend .callout; border:2px solid #ffe88c;}
+.section.warning .close, .warning h3, .section.warning:hover h3 {background:#ffe88c; border:0; font-weight:normal; color:#333; text-shadow:1px 1px 1px #ccc;}
+.error	 {@extend .callout; border:2px solid #b74742;}
+.section.error .close, .error h3, .section.error:hover h3 {background:#b74742; border:0; font-weight:normal;}
+.section.confirm .arrow, .section.warning .arrow, .section.error .arrow	{border-color:#fff transparent transparent transparent;}
+// .section.confirm .close .arrow, .section.warning .close .arrow, .section.error .close .arrow {border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid #fff;}
+.section.warning .arrow {border-color:#333 transparent transparent transparent;}
+// .section.warning .close .arrow {border-left:12px solid #333;}
