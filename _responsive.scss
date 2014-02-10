@@ -9,16 +9,16 @@
 	#Lines, .logo, .icons, .depts h3 {display:none;}
 	.utility, .dropdown {display:block;}
 	.box.depts {position:absolute; top:96px; z-index:150; margin-left:-28px;}
-	.dropdown a, .dropdown a:hover {background:transparent; color:#fff; font-size:1.2em; text-shadow:1px 1px 3px #111; margin:0; padding:8%; width:140px; display:inline-block;}
+	.dropdown a, .dropdown a:hover {background:transparent; color:#fff; font-size:1.2em; text-shadow:1px 1px 3px #111; margin:0; padding:7%; width:140px; display:inline-block; border:0;}
 	.dropdown a:hover {@include gradient($link, lighten($link, 10%));}
-	.dropdown .arrow, .dropdown a:hover .arrow {border-top:12px solid #fff;}
+	.dropdown .arrow, .dropdown a:hover .arrow {margin:5%; border-color:#fff transparent transparent transparent;}
 	.dropdown li a, .dropdown li a:hover {color:$link; text-shadow:none; margin-bottom:0.25em;}
 	.dropdown li a:hover {color:$green;}
 	.dropdown.fixed {left:10%; position:fixed;}
 	.related .dropdown {/*@extend .icons;*/ display:block;}
-	.related .dropdown a, .related .dropdown a:hover {width:100%; color:$link; margin:2% 0; padding:3%; background:#ececec;  font-size:1em; text-shadow:none;}
+	.related .dropdown a, .related .dropdown a:hover {width:100%; color:$link; margin:2% 0; padding:3%; background:#ececec; font-size:1em; text-shadow:none;}
 	.related .dropdown a:hover {color:$green;}
-	.related .dropdown .arrow, .related .dropdown a:hover .arrow {border-top:12px solid $link;}
+	.related .dropdown a:hover .arrow {margin:1%;}
 	.slider, .newslider-horizontal .sliderkit-panels {padding-bottom:60%;}
 	.largeimage .photoslider-1click-slideshow img {height:482px;}
 	.newslider-horizontal .sliderkit-nav-clip li a {width:15px; height:15px;}
