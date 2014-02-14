@@ -268,24 +268,12 @@ iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:
 
 /*Templates
 ====================*/
-/*Boards-Commissions*/
+/*BC-CAC*/
 .bclogo					{float:right; border-radius:3px; border:1px solid #ddd; position:relative; right:-2px;}
-.bcmeetinginfo	{@extend .callout;}
-#col2 .bcmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%); text-align:center; background:#f7f7f7;}
-.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {float:none; margin-right:-4px; padding:0; width:33.2%; @extend .inlineblock;}
-.bcmeetinginfo > div.third:nth-child(1) {margin:0;}
-.bcmeetinginfo h4 {background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
-.comm 					{padding-left:15px; background:transparent url(images/sqbullet.png) no-repeat; background-position:-1px 5px;}
-.bcimage 				{margin:10px auto; width:100%;}
-.bcimage img		{width:100%;}
-.members				{overflow:hidden; margin-bottom:1.5em;}
-
-/*CAC*/
-.cacmeetinginfo 	{@extend .bcmeetinginfo;}
-#col2 .cacmeetinginfo {@extend .confirm; border-bottom:10px solid lighten($green, 15%); text-align:center;}
-.cacmeetinginfo h4 {background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
-.cacactivity 			{@extend .outline; @extend .bcimage;}
-.cacactivity .photoslider-1click-slideshow {height:0; padding-bottom:60%;}
+.org 						{@extend .confirm;}
+.org ul, .content ul.individual	{text-align:center; float:none; margin-right:-4px; margin-bottom:1em; padding:0; width:33.2%; @extend .inlineblock;}
+.org ul:nth-child(1) li:first-child {padding:0;}
+.org h4					{background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .cacgismap 				{margin:0 0 0 2%; width:62%; height:256px; overflow:hidden;}
 
 /*Contact - Nov 2012*/

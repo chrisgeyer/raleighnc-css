@@ -92,7 +92,8 @@
 	#col1.land ~ #col3 {margin-right:0%; width:29%;}
 	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%;}
 	#Lines.display {display:block;}
-	.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {display:block; width:100%;}
+	.org ul {display:block; width:100%;}
+	.content ul.individual {display:inline-block; width:48%;}
 }
 
 @media only screen and (max-width:54em) {
@@ -155,9 +156,7 @@
 	.accolades h2, .accolades h2:hover, #accolade h2, #accolade h2:hover {font-size:2em;}
 	.landing {font-size:1.2em;}
 	#monthDetail, #calFrame {clear:both; width:100%;}
-	.bcmeetinginfo > div.third, .cacmeetinginfo > div.third, .cacmeetinginfo > div.third, .content ul.individual {display:block; width:100%;}
-	.content ul.individual {width:48%;}
-	.content ul.individual li, .bcmeetinginfo li, .cacmeetinginfo li {margin:0; padding:0;}
+	.org ul, .content ul.individual {display:block; width:100%;}
 	.wrapper .accolades a {margin-bottom:5px;}
 	#Footer ul, #footer ul {clear:both; width:100%; text-align:center;}
 	.bow {top:5px; left:5px; width:65px;}
