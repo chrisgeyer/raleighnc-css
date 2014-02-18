@@ -383,8 +383,8 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 .closed							{@extend .ally;}
 // .callout img				{max-width:98%;}
 .section img, .callout img {padding:0.5% 0.5% 1%; background:#fff; border:1px solid #ddd; border-radius:3px; box-shadow:0 2px 3px #999;}
-.section img.left,
-.section img.right 	{margin:0 10px 10px;}
+.section img.left, .section img.right,
+.callout img.left, .callout img.right {margin:0 10px 10px;}
 .section h3 img, .parkicon 		{float:right; margin:0 1%; padding:0; width:30px; background:transparent; border:0; box-shadow:none; vertical-align:middle;}
 .related .parkicon {float:none;}
 .section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 1px 2px #777; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
