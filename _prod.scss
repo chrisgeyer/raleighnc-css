@@ -274,7 +274,7 @@ iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:
 .org ul, .content ul.individual	{text-align:center; float:none; margin-right:-4px; margin-bottom:1em; padding:0; width:33.2%; @extend .inlineblock;}
 .org ul:nth-child(1) li:first-child {padding:0;}
 .org h4					{background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
-.cacgismap 				{margin:0 0 0 2%; width:62%; height:256px; overflow:hidden;}
+.cacgismap, .gismap_iframe {float:left; margin:0 0 0 2%; width:62%; height:256px; overflow:hidden;}
 
 /*Contact - Nov 2012*/
 .bio							{clear:both;}
@@ -317,12 +317,11 @@ iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:
 #col3 a[title=Volunteer] {display:none;}
 
 /*Facility*/
-.gismap_iframe 			{float:left; @extend .cacgismap;}
 .location 					{float:right; width:31%;}
 .facility_hours 		{margin-top:0;}
 .facility_hours th 	{background:$teal;}
 .facility_hours td 	{@extend .align-center;}
-.parkmap						{width:100%;}
+// .parkmap						{width:100%;}
 
 .parkfacts {@extend .third; @extend .inlineblock;}
 .content .parkfacts li {list-style:none; margin:0;}
