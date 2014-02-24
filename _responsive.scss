@@ -107,7 +107,7 @@
 	// #Header {@include gradient(#5c8fea, #2e5baf);}
 	#CitySeal img, .sizer, #Weather, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump, .lightbox, .box.depts .dropdown, .sharing {display:none;}
 	#CitySeal {margin-top:-10px;}
-	#SearchBox, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation {width:100%;}
+	#SearchBox, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation, .calendar {width:100%;}
 	.newseventlocation li {display:inline;}
 	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
 	#SearchInput {width:75%;}
@@ -155,7 +155,6 @@
 	.accolades h3, #accldePre {text-align:center;}
 	.accolades h2, .accolades h2:hover, #accolade h2, #accolade h2:hover {font-size:2em;}
 	.landing {font-size:1.2em;}
-	#monthDetail, #calFrame {clear:both; width:100%;}
 	.org ul, .content ul.individual {display:block; width:100%;}
 	.wrapper .accolades a {margin-bottom:5px;}
 	#Footer ul, #footer ul {clear:both; width:100%; text-align:center;}

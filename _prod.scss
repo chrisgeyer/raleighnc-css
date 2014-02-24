@@ -144,15 +144,11 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 /*Static pages
 ====================*/
 /*Calendar*/
-.calendar					{margin:0 1%; font-size:1.1em;}
-#monthDetail 			{@extend #sidebar;}
-.calTopic01,
-.calTopic02,
-.calTopic04 			{padding:0; background:#29527a; border-right:2px solid #f1f1f1; color:#fff;}
-.calTopic02 			{background:#A32929;}
-.calTopic04 			{background:#0D7813;}
-#calFrame					{margin-left:-1%; width:69%; height:500px;}
-.calTopicFullScreen 	{display:none;}
+#col2Large .content {max-width:60em;}
+.calendar1, .calendar2, .calendar3 {background:#29527a; color:#fff;}
+.calendar2 {background:#A32929;}
+.calendar3 {background:#0D7813;}
+.calendar	 {margin-left:-1%; width:69%; height:500px;}
 
 /*Contact Directory - may 2013*/
 #contactForm	{margin:2% 5%; padding:1%; background:#eee; overflow:hidden; border:2px solid #ddd; border-radius:5px; box-shadow:0 2px 3px #999;}
