@@ -104,7 +104,7 @@
 	html {-webkit-text-size-adjust:none;}
 	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
 	.fixedwidth {width:100%;}
-	// #Header {@include gradient(#5c8fea, #2e5baf);}
+	#Header {background-position:50% 50%;}
 	#CitySeal img, .sizer, #Weather, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump, .lightbox, .box.depts .dropdown, .sharing {display:none;}
 	#CitySeal {margin-top:-10px;}
 	#SearchBox, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation, .calendar {width:100%;}
@@ -112,8 +112,8 @@
 	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
 	#SearchInput {width:75%;}
 	.logo {display:block; position:absolute; right:3%; margin:0; padding:0; width:60px;}
-	.raleigh {margin-top:10px; font-size:2.5em;}
-	.raleigh:hover{font-size:2.8em;}
+	.raleigh {font-size:3em;}
+	.raleigh:hover{font-size:3.2em;}
 	.utility {display:none;}
 	#Nav li {width:100%; border-left:1px solid #999; border-bottom:1px solid #999;}
 	#Nav li:first-child {display:none;}
@@ -186,10 +186,11 @@
   ul.progress li.active.completed:after {border-left:30px solid transparent; border-right:30px solid transparent; border-top:15px solid #82a3ad; top:100%; left:40%;}
 
 	/*nav hide*/
+	#SearchBox {display:none;}
 	#Nav ul	{display:none; clear:both; border-top:1px solid #999;  width:50%; float:right; @include transition(display, .15s, cubic-bezier(0,1.12,.39,.98));}
 	#Nav #Lines, #Nav #Lines:active	{line-height:20px; padding:5px; margin:8px;}
 	#Lines img {display:inline; float:left; vertical-align:middle; display:none;}
-	#Nav #Home, #Nav #Home:active	{display:block; line-height:20px; padding:5px; float:right; margin:2%; /*@extend .icon-home;*/}
+	#Nav #Home, #Nav #Home:active, #Glass	{display:block; line-height:20px; padding:5px; float:right; margin:2%;}
 	.icon-home:before {line-height:20px; margin-right:5%; vertical-align:middle;}
 	.fixed {position:relative;}
 	#Lines.display {display:block;}
