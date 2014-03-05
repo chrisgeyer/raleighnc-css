@@ -110,7 +110,7 @@
 	#SearchBox, .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation, .calendar {width:100%;}
 	.newseventlocation li {display:inline;}
 	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
-	#SearchInput {width:75%;}
+	#SearchInput {font-size:1.2em}
 	.logo {display:block; position:absolute; right:3%; margin:0; padding:0; width:60px;}
 	.raleigh {font-size:3em;}
 	.raleigh:hover{font-size:3.2em;}
@@ -186,12 +186,15 @@
   ul.progress li.active.completed:after {border-left:30px solid transparent; border-right:30px solid transparent; border-top:15px solid #82a3ad; top:100%; left:40%;}
 
 	/*nav hide*/
-	#SearchBox {display:none;}
+	#SearchBox {display:none; position:fixed; top:110px; right:9%; width:60%;}
+	#SearchBox.visible {display:block;}
 	#Nav ul	{display:none; clear:both; border-top:1px solid #999;  width:50%; float:right; @include transition(display, .15s, cubic-bezier(0,1.12,.39,.98));}
-	#Nav #Lines, #Nav #Lines:active	{line-height:20px; padding:5px; margin:8px;}
+	#Nav #Lines, #Nav #Lines:active	{line-height:20px; padding:5px; margin:11px;}
 	#Lines img {display:inline; float:left; vertical-align:middle; display:none;}
-	#Nav #Home, #Nav #Home:active, #Glass	{display:block; line-height:20px; padding:5px; float:right; margin:2%;}
+	#Nav #Home, #Nav #Home:active, #Glass	{display:block; line-height:20px; padding:5px; float:right; margin:10px 8px;}
 	.icon-home:before {line-height:20px; margin-right:5%; vertical-align:middle;}
+	#Glass {vertical-align:baseline; margin:1.4% 0 1.4%; font-size:1em; cursor:pointer;}
+	#Glass.hidden {display:none;}
 	.fixed {position:relative;}
 	#Lines.display {display:block;}
 

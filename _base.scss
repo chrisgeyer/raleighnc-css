@@ -60,8 +60,8 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 
 #SearchBox 					{bottom:15%; right:0; width:35%;}
 #SearchBox label    {@extend .ally;}
-#SearchInput 				{float:left; margin:0 0 0 1%; padding:5px; width:70%; /*background:#fff url(images/sprites.png) left no-repeat; background-position:0 0;*/ border:1px solid #ddd; border-bottom:1px solid #aaa; border-radius:2px 0 0 2px; font-size:1.2em; @include transition(box-shadow, .3s, ease-in-out);}
-#SearchInput:focus	{box-shadow:0 0 5px rgba(81, 203, 238, 1); font:bold 'lucida sans', 'trebuchet MS', 'Tahoma';}
+#SearchInput 				{float:left; margin:0 0 0 1%; padding:5px; width:70%; /*background:#fff url(images/sprites.png) left no-repeat; background-position:0 0;*/ border:1px solid #ddd; border-bottom:1px solid #aaa; border-radius:2px 0 0 2px; font:bold 1.2em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
+#SearchInput:focus	{box-shadow:0 0 5px rgba(81, 203, 238, 1);}
 #SearchBox .action 	{float:left; margin:-1px 0; padding:7px; width:20%; font-size:1em; font-weight:300; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; /*@extend .icon-search;*/}
 #Search .action			{@include gradient(#DD4B39, darken(#DD4B39, 15%));}
 
@@ -93,7 +93,8 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 // #Nav a:active:before {position:absolute;} /*messing up on mobile*/
 
 #Nav #Lines, #Nav #Lines:active	{float:left; margin:0.5%; line-height:30px; font-size:1.1em; padding:0 1%; font-weight:normal;}
-#Home	{@extend .icon-home; display:none; font-weight:700;}
+#Nav #Lines:hover {border:1px solid #666;}
+#Home, #Glass	{@extend .icon-home; display:none; font-weight:700;}
 #Glass {@extend .icon-search;}
 #Lines.display {display:none;}
 
