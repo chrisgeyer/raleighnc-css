@@ -1,4 +1,5 @@
 @media only screen and (min-width:95em) {
+	.content {font-size:1.1em;}
 	.fixedwidth {width:80%; max-width:1220px;}
 	#Nav ul {padding-left:150px;}
 	#Nav li {width:11%;}
@@ -22,8 +23,9 @@
 	.slider, .newslider-horizontal .sliderkit-panels {padding-bottom:60%;}
 	.largeimage .photoslider-1click-slideshow img {height:482px;}
 	.newslider-horizontal .sliderkit-nav-clip li a {width:15px; height:15px;}
-	#col1 {margin:0.5%; padding-top:1.5%; float:left; position:static; width:14%; background:$offwhite; box-shadow:none; border-radius:3px; border:1px solid #ddd;}
+	#col1 {margin:0.5%; padding-top:1.5%; float:left; position:static; width:14%; background:$offwhite; box-shadow:none; border-radius:3px; border:1px solid #ddd; font-size:0.85em;}
 	#col1.land {margin:0.5%; width:14%;}
+	#col1, #col2 {font-size:1.1em;}
 	#col2, #col1.land ~ #col2  {width:60%;}
 	#col2Large {width:83%;}
 	#col3 {width:25%;}
@@ -56,6 +58,7 @@
 }*/
 
 @media only screen and (min-width:40em) and (max-width:60em) {
+	body {line-height:1.5;}
 	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
 	.fixedwidth {width:100%;}
 	#addThisButtons {display:none;}
@@ -102,6 +105,7 @@
 
 @media only screen and (max-width:40em) {
 	html {-webkit-text-size-adjust:none;}
+	body {line-height:1.4;}
 	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
 	.fixedwidth {width:100%;}
 	#Header {background-position:50% 50%;}

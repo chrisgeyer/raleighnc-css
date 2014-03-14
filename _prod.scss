@@ -169,6 +169,27 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 
 /*News & Events
 ================*/
+/*Featured News Grid - Mar 2014*/
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {margin:1% 2%; padding-bottom:1%; overflow:hidden;}
+.grid-1 a:hover img {border:0;}
+.grid-1 li {font-size:1.25em;}
+.grid-1 img {width:100%;}
+
+.grid-2 li, .grid-4 li {float:left; width:49%; margin-bottom:1%;}
+.grid-2 li:first-child, .grid-4 li:nth-child(odd) {margin-right:2%;}
+
+.grid-3 li:first-child, .grid-5 li:first-child {float:left; margin:0 2% 2% 0; width:65%;}
+.grid-3 li:first-child img {height:415px;}
+.grid-3 li:nth-child(n+2) {float:left; width:33%; margin-bottom:2%;}
+.grid-3 li:nth-child(n+2) img {height:160px;}
+
+.grid-5 li {float:left; width:28%;}
+.grid-5 li:first-child {width:70%;}
+.grid-5 li:nth-child(2) {margin-bottom:2%;}
+.grid-5 li:nth-child(4) {margin-right:2%;}
+.grid-5 li:nth-child(n+4) {float:left; width:49%; margin-top:2%;}
+
+
 /*News List*/
 .mainarticlelinks {float:left; margin:2% 0 4% 1%; padding:0 1%; width:55%; position:relative;}
 #col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.3em 0.2em 0.1em; line-height:1; border-radius:5px 5px 0 0;}
@@ -201,7 +222,7 @@ scrollbar-arrow-color: #efefef;}*/
 /*Events List*/
 .maineventslinks {@extend .mainarticlelinks; width:42%;}
 .eventsList ul {@extend .scroll;}
-.eventsList li {padding:0.5em; background:$offwhite;}
+.eventsList li {padding:0.5em; background:$offwhite; clear:both;}
 .message 		{font-style:italic;}
 .eventDate 	{float:left; margin:0 10px 0 0; padding:0; width:18%; background:#fff; text-align:center; font-weight:700; border-radius:2px; box-shadow:0 2px 3px #999;}
 .eventMonth	{background:#ddd;}
