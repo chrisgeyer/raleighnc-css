@@ -25,7 +25,6 @@
 	.newslider-horizontal .sliderkit-nav-clip li a {width:15px; height:15px;}
 	#col1 {margin:0.5%; padding-top:1.5%; float:left; position:static; width:14%; background:$offwhite; box-shadow:none; border-radius:3px; border:1px solid #ddd; font-size:0.85em;}
 	#col1.land {margin:0.5%; width:14%;}
-	#col1, #col2 {font-size:1.1em;}
 	#col2, #col1.land ~ #col2  {width:60%;}
 	#col2Large {width:83%;}
 	#col3 {width:25%;}
@@ -36,7 +35,7 @@
 }
 
 @media only screen and (min-width:60em) and (max-width:95em) {
-	#col1.land ~ #col3 #right > div:nth-child(1) {width:55%;}
+	#col1.land ~ #col3 #right > div:nth-child(1) {width:58%;}
 }
 
 @media only screen and (min-width:60em) and (max-width:74em) {
@@ -56,6 +55,10 @@
 	#Nav li:nth-child(5) {width:17%;}
 	#Nav a {font-size:1em;}
 }*/
+@media only screen and (max-width:60em) {
+	#Grid li {float:none; width:100%; text-align:center; overflow:hidden;}
+	.grid-5 li img, .grid-4 li img, .grid-3 li img, .grid-2 li img, .grid-1 li img {float:right; width:50%;}
+}
 
 @media only screen and (min-width:40em) and (max-width:60em) {
 	body {line-height:1.5;}
@@ -167,9 +170,9 @@
 	.scroll {overflow:hidden;}
 	.newsList a.more, .eventsList a.more {display:block;}
 	.parkfacts, .parkbullets {display:block; width:100%;}
-	.facility_hours table, .facility_hours thead, .facility_hours tbody, .facility_hours tfoot, .facility_hours th, .facility_hours td, .facility_hours tr{display:block}
-  .facility_hours tr+tr{margin-top:1em}
-  table {overflow:auto;}
+	thead {position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
+	tr, td {display:block; text-align:right; border:0;}
+	td[data-title]:before {content: attr(data-title); float:left; font-size:0.9em; font-style:italic;}
   .third, .half {width:99%;}
   .youtube, .half.youtube, .third.youtube {padding-bottom:56.25%;}
 

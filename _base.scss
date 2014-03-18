@@ -111,7 +111,7 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 // #col2 ~ #col3 #right:empty {width:100%;}
 #col3 						{float:right; width:30%; padding:0;}
 #col1.land ~ #col2, #col1.land ~ #col3 {width:78%;}
-#col1.land ~ #col3 #right > div {float:left; width:42%; margin-left:1%;}
+#col1.land ~ #col3 #right > div {float:left; width:39%; margin-left:1%;}
 #col2Large 				{float:right; width:98%; margin:0 1%; padding:1%;}
 #Article 					{float:left; margin:0 0 0 1%; padding:1%; width:70%; min-height:540px; position:relative;}
 #Sidebar, #sidebar 	{float:left; width:29%; padding:0.5% 0 0 1%;}
