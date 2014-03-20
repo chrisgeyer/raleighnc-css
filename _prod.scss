@@ -275,7 +275,8 @@ iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:
 .youtube, .frame {margin:1%; height:0; position:relative; padding-bottom:56.25%;}
 .half.youtube {padding-bottom:33%;}
 .third.youtube {padding-bottom:25%;}
-.youtube iframe, .frame iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
+.youtube iframe, .frame iframe, .youtube img {position:absolute; top:0; left:0; width:100%; height:100%;}
+.youtube img {@extend .outline;}
 .frame {padding-bottom:75%;}
 
 
@@ -294,7 +295,6 @@ iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:
 .job .icon-location {font-size:0.7em;}
 
 .content .orgchart li {margin:0 0 2% 0; padding:2%; list-style:none; background:#ede8B0; border:1px solid #ddd; border-radius:3px; box-shadow:0 1px 2px #777;}
-// .orgchart ul {margin-left:1em;}
 .content .orgchart ul li {background:#eee;}
 .content .orgchart ul li ul li {background:#fff;}
 
@@ -320,7 +320,7 @@ iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:
 .employmentDuties li 	{margin-left:20px;list-style-type:disc;}
 .employmentDisclaimer {margin-top:20px; color:#666;}
 
-/*Job sidebar - october 2012*/
+/*Job sidebar - Oct 2012*/
 #Sidebar .employmentType, #sidebar .employmentType, #col3 .employmentType {padding:0;}
 #Sidebar h1 img, #Sidebar .empJump, #Sidebar .empNo, #Sidebar .empSalary, #Sidebar .empDept, #Sidebar .empClose, #Sidebar .employmentType div[style], #sidebar h1 img, #sidebar .empJump, #sidebar .empNo, #sidebar .empSalary, #sidebar .empDept, #sidebar .empClose, #sidebar div[style], #col3 h1 img, #col3 .empJump, #col3 .empNo, #col3 .empSalary, #col3 .empDept, #col3 .empClose, #col3 .employmentType div[style] {display:none;}
 #Sidebar #top h1, #sidebar #top h1, #col3 #top h1 {margin-top:2%; width:99%; padding:3% 1%; color:#333; font-size:1.4em; text-shadow:none; @extend .sectiontitle; position:relative;}
@@ -329,17 +329,10 @@ iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:
 #Sidebar .empTitle, #sidebar .empTitle, #col3 .empTitle {font-weight:normal; font-size:1em; border-bottom:1px dotted #ccc; width:98%; margin:0 0 6px 0;}
 #col3 a[title=Volunteer] {display:none;}
 
-/*Facility*/
-.location 					{float:right; width:31%;}
-.facility_hours 		{margin-top:0;}
-.facility_hours th 	{background:$teal;}
-.facility_hours td 	{@extend .align-center;}
-// .parkmap						{width:100%;}
-
+/*Park - Oct 2013*/
 .parkfacts {@extend .third; @extend .inlineblock;}
 .content .parkfacts li {list-style:none; margin:0;}
 .parkbullets {@extend .twothirds; @extend .inlineblock;}
-
 .park {width:100%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
 
 @-webkit-keyframes fill {
@@ -502,7 +495,7 @@ a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 .icon-mail2:after {content: "\e605"; font-size:0.9em; margin-left:0.25em;}
 .icon-user:before {content: "\e60d"; font-size:2em; vertical-align:middle; padding-right:5px;}
 .icon-user2:after {content: "\e60d"; margin-left:0.25em; font-size:1em;}
-.icon-play:before {content: "\e60a";}
+.icon-play:before {content: "\e60a"; position:absolute; z-index:100; color:#e52d27; font-size:2.5em; top:40%; left:45%; width:10%;}
 .icon-new-tab:after {content: "\e60f"; margin-left:0.25em; font-size:0.9em;}
 .icon-home:before, #Nav li:first-child > a:before {content: "\e608"; line-height:42px; font-size:1.5em; vertical-align:sub;}
 .icon-file-powerpoint:after {content: "\e619"; margin-left:0.25em; font-size:1em; color:#dd5800;}
