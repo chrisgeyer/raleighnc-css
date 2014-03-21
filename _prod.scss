@@ -232,9 +232,9 @@ scrollbar-arrow-color: #efefef;}*/
 .images {float:right; margin:0 0 10px 10px; @extend .outline;}
 .images {width:56%;}
 .images .photoslider-1click-slideshow {padding-bottom:75%;}
-.eventdates {clear:both; width:24%; @extend .inlineblock;}
-.newseventmap {margin:0 0 0 1%; width:74%; overflow:hidden; @extend .inlineblock;}
-.newseventlocation {float:left; width:40%;}
+.eventdates {clear:both; width:30%; @extend .inlineblock;}
+.newseventmap {width:69%; overflow:hidden; @extend .inlineblock;}
+.newseventlocation {float:left; width:40%; margin-right:2%;}
 .gismap {float:left; margin:0 0 10px 10px; width:46%; height:182px; overflow:hidden;} /*remove later*/
 .addfiles, .newscontacts, .relatedlinks {margin-right:1%; width:28%; @extend .inlineblock;}
 .newscontacts {width:38%;}
@@ -242,11 +242,13 @@ scrollbar-arrow-color: #efefef;}*/
 .rsssharing a {text-decoration:none;}
 .rsssharing .icon-feed:before {font-size:1em;}
 
-.addevent {display:inline-block; position:relative; background:#f4f4f4; border:1px solid #d9d9d9; color:#aaa; font-weight:700; padding:1%; border-radius:2px;}
-.addevent label {@extend .icon-addcalendar;}
-.addevent input {@extend .ally;}
+.addevent {display:inline-block; position:relative; background:#f4f4f4; border:1px solid #d9d9d9; font-family:sans-serif; padding:1%; border-radius:2px; font-size:0.9em;}
+.addevent label {cursor:pointer; @extend .icon-addcalendar;}
+.addevent input[type="checkbox"] {@extend .ally;}
+#col2 .addevent a {border:0; text-align:right;}
 .addevent a {display:none;}
-.add-to-calendar-checkbox:checked a {display:block; width:150px; margin-left:20px;}
+.addevent a:after {content:'';}
+.addevent input[type="checkbox"]:checked ~ a {display:block;}
 
 /*News sidebar
 #Sidebar .mainarticlelinks,
