@@ -242,6 +242,12 @@ scrollbar-arrow-color: #efefef;}*/
 .rsssharing a {text-decoration:none;}
 .rsssharing .icon-feed:before {font-size:1em;}
 
+.addevent {display:inline-block; position:relative; background:#f4f4f4; border:1px solid #d9d9d9; color:#aaa; font-weight:700; padding:1%; border-radius:2px;}
+.addevent label {@extend .icon-addcalendar;}
+.addevent input {@extend .ally;}
+.addevent a {display:none;}
+.add-to-calendar-checkbox:checked a {display:block; width:150px; margin-left:20px;}
+
 /*News sidebar
 #Sidebar .mainarticlelinks,
 #Sidebar .maineventslinks, #sidebar .mainarticlelinks,
@@ -446,7 +452,7 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 
 @media only screen and (min-width:1em) {
 /* Use the following CSS code if you want to have a class per icon*/
-[class^="icon-"]:before, [class*=" icon-"]:before, [class^="icon-"]:after, [class*=" icon-"]:after, .mainRss a:before, #Nav li:first-child > a:before, #Home:before, #Glass:before, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http']:after, a[href *='/Contacts/']:after, .utility a:before, .content a:not(.imglink)[href$='FormsDirectory.html']:before, .content a:not(.imglink)[href^='http://onlinedevcenter']:before, .content a:not(.imglink)[href$='CurrentDevelopmentActivity.html']:before, .content a:not(.imglink)[href$='Face2FaceServices.html']:before, .content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html']:before, .content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:before, .content a:not(.imglink)[href*='DevelopmentFeeSchedule']:before, a:not(.imglink)[href*='/extra/Books/']:after {
+[class^="icon-"]:before, [class*=" icon-"]:before, [class^="icon-"]:after, [class*=" icon-"]:after, .mainRss a:before, #Nav li:first-child > a:before, #Home:before, #Glass:before, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.ppt']:after, a[href $='.xls']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http']:after, a[href *='/Contacts/']:after, .utility a:before, .content a:not(.imglink)[href$='FormsDirectory.html']:before, .content a:not(.imglink)[href^='http://onlinedevcenter']:before, .content a:not(.imglink)[href$='CurrentDevelopmentActivity.html']:before, .content a:not(.imglink)[href$='Face2FaceServices.html']:before, .content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html']:before, .content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:before, .content a:not(.imglink)[href*='DevelopmentFeeSchedule']:before, a:not(.imglink)[href*='/extra/Books/']:after, .addevent label:after {
 /*.icon-mail, .icon-location, .icon-calendar, .icon-calendar-2, .icon-file-word, .icon-file-pdf, .icon-file-excel, .icon-user, .icon-play, .icon-lines, .icon-new-tab, .icon-warning, .icon-play-alt, .icon-play-2, .icon-camera, .icon-home, .icon-document-alt-fill, .icon-folder, .icon-folder-2, .icon-file-powerpoint, .icon-file-zip, .icon-phone, .icon-share, .icon-search, .icon-DSFormDirectory, .icon-DSFeeSchedule, .icon-DSFaceToFace, .icon-DSOnlineDevelopment, .icon-DSStandardDrawing, .icon-DSZonning, .icon-mail-2, .icon-DSCurrentDevelopment, .icon-facebook, .icon-twitter, .icon-youtube, .icon-flickr, .icon-feed, .icon-gplus, .icon-linkedin, .icon-pinterest, .icon-book {*/
 	font-family: 'icomoon';
 	speak: none;
@@ -488,6 +494,7 @@ a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 .icon-list:before, #Nav #Lines:after {content: "\e604"; vertical-align:middle; font-size:1.5em;}
 .icon-video:before {content: "\e606";}
 .icon-calendar:before {content: "\e607"; font-size:2em; vertical-align:middle; padding-right:5px;}
+.icon-addcalendar:after {content: "\e607"; font-size:1em; padding-left:5px;}
 .icon-file-word:after {content: "\e617"; margin-left:0.25em; font-size:1em; color:#00178f; background:#fff; border-radius:10px;}
 .icon-file-pdf:after, a:not(.imglink)[href $='.pdf']:after {content: "\e616"; margin-left:0.25em; font-size:1em; color:#e62828; text-decoration:none; background:#fff; border-radius:10px;}
 .icon-file-excel:after {content: "\e618"; margin-left:0.25em; font-size:1em; color:#007133;}
