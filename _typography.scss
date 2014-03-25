@@ -68,7 +68,9 @@ table td					{background:#d2dde4; border:1px solid #fff; padding:1%;}
 table td p 				{margin:0;}
 table.stripe tr:nth-child(even) td {background:$offwhite;}
 table.devserv tr:nth-child(even) td {background:#d6e4ec;}
-// table.bids tr:nth-child(5n+1) td {padding:1%;}
+/*MWBE Vendor Directory*/
+table.paragraph {margin:0;}
+table.paragraph td {padding:0;}
 
 /* Messaging
 --------------------------------------------------------------
