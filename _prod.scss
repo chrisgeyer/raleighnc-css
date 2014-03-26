@@ -263,6 +263,7 @@ scrollbar-arrow-color: #efefef;}*/
 .landing {margin:1% 2%; text-align:center; @extend .pagetitle;}
 .open, .council {float:left; width:58%; margin-left:1%;}
 .council {width:39%;}
+.councilframe {border:0; box-shadow:none; margin:0; width:99.9%; height:140px; border-radius:0; padding:0; margin:2% 0;}
 .open ul, .council ul {@extend .scroll; height:auto; overflow:hidden;}
 .open p {padding-top:2%;}
 .boxcouncil {background:$offwhite; padding-bottom:6px;}
