@@ -159,20 +159,20 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 /*Featured News Grid - Mar 2014*/
 .grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {margin:1% 2%; padding-bottom:1%; overflow:hidden;}
 .grid-1 .outline a:active, .grid-2 .outline a:active, .grid-3 .outline a:active, .grid-4 .outline a:active, .grid-5 .outline a:active {position:relative;}
-#contentArea .grid-1 a:hover img, #contentArea .grid-2 a:hover img, #contentArea .grid-3 a:hover img, #contentArea .grid-4 a:hover img, #contentArea .grid-5 a:hover img {border:0;}
-.grid-1 li {font-size:1.25em;}
+#contentArea .grid-1 a:hover, #contentArea .grid-2 a:hover, #contentArea .grid-3 a:hover, #contentArea .grid-4 a:hover, #contentArea .grid-5 a:hover {border:0;}
+.grid-1 li:hover, .grid-2 li:hover, .grid-3 li:hover, .grid-4 li:hover, .grid-5 li:hover {background:#ececec;}
+.grid-1 li {font-size:1.25em; text-align:center;}
 .grid-1 img {width:100%;}
 
-.grid-2 li, .grid-4 li {float:left; width:49%; margin-bottom:1%;}
-.grid-2 li:first-child, .grid-4 li:nth-child(odd) {margin-right:2%;}
+.grid-2 li, .grid-4 li, .grid-5 li:first-child, .grid-5 li:nth-child(2), .ie8 .grid-5 li {float:left; width:48%; margin:1%;}
+.grid-4 li:nth-child(3) {clear:both;}
 
 .grid-3 li:first-child {float:left; margin:0 2% 2% 0; width:65%;}
-.grid-3 li:first-child img {height:415px;}
+.grid-3 li:first-child img {height:400px;}
 .grid-3 li:nth-child(n+2) {float:left; width:33%; margin-bottom:2%;}
-.grid-3 li:nth-child(n+2) img {height:160px;}
 
-.grid-5 li {float:right; width:39%; margin-bottom:2%}
-.grid-5 li:first-child, .grid-5 li:nth-child(4) {float:left; width:59%;}
+.grid-5 li {float:left; width:32%; margin:0 1% 2% 0;}
+.grid-5 li:nth-child(3) {clear:both; margin-left:1%;}
 
 /*News List*/
 .mainarticlelinks {display:inline-block; margin:2% 0 4% 1%; padding:0 1%; width:58%; position:relative; vertical-align:top;}
@@ -272,8 +272,8 @@ iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:
 .youtube, .frame {margin:1%; height:0; position:relative; padding-bottom:56.25%;}
 .half.youtube {padding-bottom:33%;}
 .third.youtube {padding-bottom:25%;}
+.youtube img {@extend .outline; position:absolute !important;}
 .youtube iframe, .frame iframe, .youtube img {position:absolute; top:0; left:0; width:100%; height:100%;}
-.youtube img {@extend .outline;}
 .frame {padding-bottom:75%;}
 
 
