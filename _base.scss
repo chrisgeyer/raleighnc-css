@@ -32,6 +32,8 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 -------------------------------------------------------------- */
 #navigation					{font-size:0.9em; background:#537ac1; @include gradient(#5c8fea, #537ac1);}
 .ie9 #navigation 		{font-size:0.85em;}
+/* need to update for new portal -  no container here now */
+
 #Header 						{height:95px; overflow:hidden; position:relative; color:#fff; background:url(images/Skyline1.png) top left no-repeat; background-position:30% 50%; @extend .fixedwidth;}
 #Header a						{color:#fff; line-height:20px;}
 #Header a:hover			{border:0;}
@@ -103,6 +105,8 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 /* Main content areas.
 -------------------------------------------------------------- */
 #contentArea, #Main, #Search/*, #col1Large*/ {padding:2% 1%; overflow:hidden; @extend .fixedwidth; background:#fff; box-shadow:0 2px 3px #aaa;}
+/* need to rename to class for portal upgrade */
+
 #col1 						{width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; transition:width 0.3s ease; z-index:50; background:$offwhite; border-radius:2px; box-shadow:0 2px 3px #999; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
 #col1.menu				{margin:0;}
 #col1.docked 			{top:35px;}
