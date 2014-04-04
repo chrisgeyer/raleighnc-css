@@ -59,6 +59,7 @@
 	#Grid li {float:none; width:100%; text-align:right; overflow:hidden; background:$offwhite; font-size:1.3em;}
 	.grid-5 li img, .grid-4 li img, .grid-3 li img, .grid-2 li img, .grid-1 li img {float:right; width:50%; margin-left:2%;}
 	.grid-3 li:first-child img {height:auto;}
+	#navigation {height:auto;}
 }
 
 @media only screen and (min-width:40em) and (max-width:60em) {

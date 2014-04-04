@@ -30,7 +30,7 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 
 /* Header elements.
 -------------------------------------------------------------- */
-#navigation					{font-size:0.9em; background:#537ac1; @include gradient(#5c8fea, #537ac1);}
+#navigation					{font-size:0.9em; background:#537ac1; @include gradient(#5c8fea, #537ac1); height:141px; /*for smooth fixed nav */}
 .ie9 #navigation 		{font-size:0.85em;}
 /* need to update for new portal -  no container here now */
 
