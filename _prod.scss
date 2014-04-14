@@ -493,7 +493,7 @@ a:not(.imglink)[href*='/extra/Books/'] {@extend .icon-book;}
 .icon-mail2:after {content: "\e605"; font-size:0.9em; margin-left:0.25em;}
 .icon-user:before {content: "\e60d"; font-size:2em; vertical-align:middle; padding-right:5px;}
 .icon-user2:after {content: "\e60d"; margin-left:0.25em; font-size:1em;}
-.icon-play:before {content: "\e60a"; position:absolute; z-index:100; color:#e52d27; font-size:2.5em; top:40%; left:45%; width:10%;}
+.icon-play:before {content: "\e60a"; position:absolute; z-index:100; color:#e52d27; font-size:2.5em; top:40%; left:45%; width:10%; cursor:pointer;}
 .icon-new-tab:after {content: "\e60f"; margin-left:0.25em; font-size:0.9em;}
 .icon-home:before, #Nav li:first-child > a:before {content: "\e608"; line-height:42px; font-size:1.5em; vertical-align:sub;}
 .icon-file-powerpoint:after {content: "\e619"; margin-left:0.25em; font-size:1em; color:#dd5800;}
