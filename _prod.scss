@@ -272,7 +272,7 @@ iframe 	{padding:1%; background:$offwhite; border:1px solid #ccc; border-radius:
 .youtube, .frame {margin:1%; height:0; position:relative; padding-bottom:56.25%;}
 .half.youtube {padding-bottom:33%;}
 .third.youtube {padding-bottom:25%;}
-.youtube img {@extend .outline; position:absolute !important;}
+.youtube img {@extend .outline; cursor:pointer; position:absolute !important;}
 .youtube iframe, .frame iframe, .youtube img {position:absolute; top:0; left:0; width:100%; height:100%;}
 .frame {padding-bottom:75%;}
 

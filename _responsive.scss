@@ -10,6 +10,7 @@
 	#Lines, .logo, .icons, .depts h3 {display:none;}
 	.utility, .dropdown {display:block;}
 	.box.depts {position:absolute; top:96px; z-index:150; margin-left:-28px;}
+	#col1 .dropdown {font-size:1em;}
 	.dropdown a, .dropdown a:hover {background:transparent; color:#fff; font-size:1.2em; text-shadow:1px 1px 3px #111; margin:0; padding:7%; width:140px; display:inline-block; border:0;}
 	.dropdown a:hover {@include gradient($link, lighten($link, 10%));}
 	.dropdown .arrow, .dropdown a:hover .arrow {margin:5%; border-color:#fff transparent transparent transparent;}
