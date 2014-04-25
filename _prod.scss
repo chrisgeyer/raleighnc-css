@@ -142,17 +142,21 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 #contactSearchForm li {padding:0.5%;}
 #contactSearchForm label {width:28%; display:inline-block;}
 #contactSearchForm select, #contactSearchForm input[type="text"] {width:50%;}
+#contactSearchForm select {margin-left:-1%;}
 #contactSearchForm .action {float:right; margin:0 2%;}
+.resultArea			{padding:1% 2%;}
 .resultArea p   {display:none;}
-#viewBy 				{float:left;}
-.numberResults 	{float:right;}
-.paging 				{clear:both; float:right;}
-#peopleResults 	{clear:both; width:100%;}
-.departmentRow 	{clear:both; background:$link; font-weight:700; font-size:1.2em; color:#fff; padding:0 5px;}
-.contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {float:left; margin:5px 0 0 0; padding:2px 6px;}
+#viewBy 				{float:left; display:none;}
+#viewBy ~ .resultPaging {display:none;}
+#peopleResults ~ .resultPaging {display:block;}
+.numberResults 	{float:left;}
+.paging 				{float:right;}
+#peopleResults 	{clear:both; width:100%; overflow:hidden;}
+.departmentRow 	{clear:both; background:$link; font-weight:700; font-size:1.2em; color:#fff; padding:0 5px; display:none;}
+.contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {float:left; margin:1% 0 0 0; padding:0 1%;}
 .contactResultsName, .contactResultsPhoneNumber {clear:both;}
-.contactResultsPhoneNumber {margin:0 0 10px 0; padding:0 6px; width:98%; border-bottom:1px dotted #ddd;}
-// #peopleResults a[href^="mailto:"] {padding:1px 20px 1px 0; background:transparent url(../images/icon-email.png) center right no-repeat;}
+.contactResultsPhoneNumber {margin:0; padding:0 6px; width:98%; border-bottom:1px dotted #ddd;}
+// .contactResultsName:nth-child(odd), .contactResultsTitle:nth-child(odd), .contactResultsDiv:nth-child(odd), .contactResultsPhoneNumber:nth-child(odd) {background:#ddd;}
 
 /*News & Events
 ================*/
