@@ -177,6 +177,7 @@
 	td[data-title]:before {content: attr(data-title); float:left; font-size:0.9em; font-style:italic;}
   .third, .half {width:99%;}
   .youtube, .half.youtube, .third.youtube {padding-bottom:56.25%;}
+  .contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {clear:both; width:100%;}
 
   @-webkit-keyframes fill {
 		0% {background-position:0% 100%;}

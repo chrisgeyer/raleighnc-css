@@ -73,7 +73,7 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 -------------------------------------------------------------- */
 #Nav 								{float:left; width:100%; border-top:1px solid #333; z-index:100; box-shadow:0 1px 2px #777; @include transition(all, .5s, linear); @include gradient(#555554, #111112);}
 #Nav ul 						{@extend .fixedwidth; @include transition(all, .15s, ease-in-out);}
-#Nav ul.visible			{display:block;}
+#Nav ul.visible			{display:block; @include transition(all, .15s, ease-in-out);}
 #Nav li 						{float:left; /*width:12%;*/ height:45px; text-align:center; border-left:1px solid #666; @include transition(background, .2s, ease-in-out);}
 // #Nav li:first-child {width:5%;}
 // #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
@@ -107,13 +107,14 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 #contentArea, #Main, #Search/*, #col1Large*/ {padding:2% 1%; overflow:hidden; @extend .fixedwidth; background:#fff; box-shadow:0 2px 3px #aaa;}
 /* need to rename to class for portal upgrade */
 
-#col1 						{width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; transition:width 0.3s ease; z-index:50; background:$offwhite; border-radius:2px; box-shadow:0 2px 3px #999; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
-#col1.menu				{margin:0;}
+#col1 						{width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; z-index:50; background:$offwhite; border-radius:2px; box-shadow:0 2px 3px #999; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
+#col1.menu				{margin:0; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
 #col1.docked 			{top:35px;}
 #col1.land				{margin:0 1.5%; width:19%; float:left; position:static;}
 #col2 						{float:left; position:relative; margin:0; width:70%;}
 // #col2 ~ #col3 #right:empty {width:100%;}
-#col3 						{float:right; width:30%; padding:0;}
+#col3 						{float:right; width:30%; padding:0; margin-right:-33%; @include transition(margin, 0.5s, ease-in);}
+.loaded #col3 		{margin:0;}
 #col1.land ~ #col2, #col1.land ~ #col3 {width:78%;}
 #col1.land ~ #col3 #right > div {float:left; width:39%; margin-left:1%;}
 #col2Large 				{float:right; width:98%; margin:0 1%; padding:1%;}

@@ -48,7 +48,8 @@ img 						{border:0; max-width:100%;}
 .section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
 
 /*Pages*/
-.content {margin:0 auto; min-width:10em; max-width:50em; padding:1% 2%; /*background:#fff; border-radius:2px; box-shadow:0 2px 3px #aaa; overflow:hidden;*/}
+.content {margin:0 auto; min-width:10em; max-width:50em; padding:1% 2%; opacity:0; @include transition(opacity, 0.5s, ease-in);}
+.loaded .content {opacity:1;}
 #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
 span.updatedDate {}
@@ -153,9 +154,10 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .paging 				{float:right;}
 #peopleResults 	{clear:both; width:100%; overflow:hidden;}
 .departmentRow 	{clear:both; background:$link; font-weight:700; font-size:1.2em; color:#fff; padding:0 5px; display:none;}
-.contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {float:left; margin:1% 0 0 0; padding:0 1%;}
+.contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {float:left; margin:1% 0 0 0; padding:0 1%; width:30%;}
 .contactResultsName, .contactResultsPhoneNumber {clear:both;}
-.contactResultsPhoneNumber {margin:0; padding:0 6px; width:98%; border-bottom:1px dotted #ddd;}
+.contactResultsTitle {width:40%;}
+.contactResultsPhoneNumber {margin:0; padding:1%; width:98%; border-bottom:1px dotted #ddd;}
 // .contactResultsName:nth-child(odd), .contactResultsTitle:nth-child(odd), .contactResultsDiv:nth-child(odd), .contactResultsPhoneNumber:nth-child(odd) {background:#ddd;}
 
 /*News & Events
