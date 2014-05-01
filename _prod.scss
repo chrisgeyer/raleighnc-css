@@ -170,12 +170,15 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .grid-1 li {font-size:1.25em; text-align:center;}
 .grid-1 img {width:100%;}
 
-.grid-2 li, .grid-4 li, .grid-5 li:first-child, .grid-5 li:nth-child(2), .ie8 .grid-5 li {float:left; width:48%; margin:1%;}
+.grid-2 li, .grid-4 li, .ie8 .grid-5 li {float:left; width:48%; margin:1%;}
+.grid-5 li:first-child, .grid-5 li:nth-child(2) {float:left; width:48%; margin:1%;}
 .grid-4 li:nth-child(3) {clear:both;}
 
 .grid-3 li:first-child {float:left; margin:0 2% 2% 0; width:65%;}
 .grid-3 li:first-child img {height:400px;}
+.ie8 .grid-3 li:first-child img {height:auto;}
 .grid-3 li:nth-child(n+2) {float:left; width:33%; margin-bottom:2%;}
+.ie8 .grid-3 li, .ie8 .grid-3 li:first-child {float:left; width:30%; margin:1%;}
 
 .grid-5 li {float:left; width:32%; margin:0 1% 2% 0;}
 .grid-5 li:nth-child(3) {clear:both; margin-left:1%;}
