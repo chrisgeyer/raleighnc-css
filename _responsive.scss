@@ -199,7 +199,16 @@
 	/*nav hide*/
 	#SearchBox {display:none; position:fixed; top:110px; right:9%; width:60%;}
 	#SearchBox.visible {display:block;}
-	#Nav ul	{display:none; clear:both; border-top:1px solid #999;  width:50%; float:right; @include transition(display, .15s, cubic-bezier(0,1.12,.39,.98));}
+	.wrapper.push {@include transition(all, 1s, ease);
+		-webkit-transform:translateX(50%);
+				-ms-transform:translateX(50%);
+						transform:translateX(50%);
+	}
+	#Nav ul	{display:none; clear:both; border-top:1px solid #999; width:50%; float:right; @include transition(display, .15s, cubic-bezier(0,1.12,.39,.98));}
+	#Nav ul.visible {position:fixed; top:0;  left:-50%; background:#555; /*z-index:1000;*/ height:100%;}
+	#Nav li {border:0; border-bottom:1px solid #ddd; text-align:left;}
+	#Nav a {padding:5%;}
+
 	#Nav #Lines, #Nav #Lines:active	{line-height:20px; padding:5px; margin:11px;}
 	#Lines img {display:inline; float:left; vertical-align:middle; display:none;}
 	#Nav #Home, #Nav #Home:active, #Glass	{display:block; line-height:20px; padding:5px; float:right; margin:10px 8px;}
