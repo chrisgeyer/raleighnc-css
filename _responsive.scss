@@ -197,8 +197,8 @@
   ul.progress li.active.completed:after {border-left:30px solid transparent; border-right:30px solid transparent; border-top:15px solid #82a3ad; top:100%; left:40%;}
 
 	/*nav hide*/
-	#SearchBox {display:none; position:fixed; top:110px; right:9%; width:60%;}
-	#SearchBox.visible {display:block;}
+	#SearchBox {visibility:hidden; position:fixed; top:110px; right:9%; width:60%; @include transition(all, .4s, ease-in-out);}
+	#SearchBox.visible {visibility:visible; -webkit-transform:translateX(-5%);}
 	.wrapper.push {@include transition(all, 1s, ease);
 		-webkit-transform:translateX(50%);
 				-ms-transform:translateX(50%);

@@ -44,7 +44,7 @@ img 						{border:0; max-width:100%;}
 .content a:link, .content a:visited, table a:link 	{border-bottom:1px solid $link; text-shadow:none;}
 .content a:visited {border-bottom:1px solid lighten($link, 10%);}
 .content a:after {border:0;}
-#contentArea a:hover {border-bottom:1px solid $green;}
+// #contentArea a:hover {border-bottom:1px solid $green;}
 .section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
 
 /*Pages*/
@@ -80,7 +80,7 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .box.icons 						{/*margin-right:0;*/ padding:0;}
 .icons ul 						{margin:0;}
 .icons a 							{margin:2% 0; padding:3%; text-shadow:1px 1px 1px #ccc; display:block; background:#ececec; border-bottom:1px solid #ececec; border-radius:3px;}
-.box.icons a:hover 				{text-decoration:none; font-size:1.15em;}
+.box.icons a:hover 		{-webkit-transform:scale(1.15) translateX(1em);}
 // .icon-location:hover  {color:#edb261;}
 // .icons a:hover:before	{font-size:1.5em;}
 

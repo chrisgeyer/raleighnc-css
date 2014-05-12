@@ -18,21 +18,27 @@ html, body, #Main, #Article, #sidebar, #Sidebar, #screenWrapper, .wrapper, #navi
 /* Text elements.
 -------------------------------------------------------------- */
 /*Link*/
-a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-out);
+a			{color:$link; text-decoration:none; position:relative; @include transition(all, .25s, ease-in-out);
 	&:visited		{color:lighten($link, 10%);}
 	&:hover,
 	&:focus 		{color:$green; @include transition(all, .25s, ease-in-out);}
-	&:active 		{position:relative; top:1px;
-	/*-webkit-transform: translate(2px);
-			-ms-transform: translate(2px);
-			 		transform: translate(2px);*/}
+	&:active 		{top:1px;/*
+	-webkit-transform: translateX(2px);
+			-ms-transform: translateX(2px);
+			 		transform: translateX(2px);*/}
 }
+#contentArea a:before {content:''; position:absolute; width:100%; height:1px; bottom:-1px; left:0; background:$green; visibility:hidden;
+  -webkit-transform: scaleX(0);
+  				transform: scaleX(0);
+  @include transition(all, .3s, ease-in-out);}
+#contentArea a:hover:before {visibility:visible;
+  -webkit-transform: scaleX(1);
+  				transform: scaleX(1);}
 
 /* Header elements.
 -------------------------------------------------------------- */
 #navigation					{font-size:0.9em; background:#537ac1; @include gradient(#5c8fea, #537ac1); height:141px; /*for smooth fixed nav */}
 .ie9 #navigation 		{font-size:0.85em;}
-/* need to update for new portal -  no container here now */
 
 #Header 						{height:95px; overflow:hidden; position:relative; color:#fff; background:url(images/Skyline1.png) top left no-repeat; background-position:30% 50%; @extend .fixedwidth;}
 #Header a						{color:#fff; line-height:20px;}
@@ -40,8 +46,10 @@ a			{color:$link; text-decoration:none; @include transition(all, .25s, ease-in-o
 
 #CitySeal						{width:45%; cursor:pointer;}
 .logo 							{float:left; margin:5px; width:85px; -webkit-filter:drop-shadow(1px 1px 5px #333); filter:drop-shadow(1px 1px 5px #333);}
-.raleigh 						{margin:0.6em 0 0 0.2em; font-size:2.2em; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 3px #111; color:#fff; @include transition(font-size, .4s, ease-in-out);}
-.raleigh:hover			{cursor:pointer; font-size:2.5em; @include transition(font-size, .4s, ease-in-out);}
+.raleigh 						{margin:0.6em 0 0 0.2em; font-size:2.2em; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 3px #111; color:#fff; @include transition(all, .5s, ease-in-out);}
+.raleigh:hover			{cursor:pointer;
+	-webkit-transform: scale(1.25) translate(0.5em);
+  				transform: scale(1.25) translate(0.5em);}
 
 .utility, .sizer, #Weather, #SearchBox {position:absolute; right:2%;}
 
