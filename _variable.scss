@@ -3,13 +3,12 @@ $link:#3c61a5;
 $green:#657838;
 $orange:#e88b2c;
 $offwhite:#f7f7f7;
-$teal:#82a3ad /*#80aeb5*/;
+$teal:#82a3ad;
 
 @mixin gradient ($start:#ffffff, $stop:#ffffff) {
 	background-color:mix($start, $stop);
 	background-image:-webkit-linear-gradient($start, $stop);
 	background-image:        linear-gradient(to bottom, $start, $stop);
-	//-ms-filter:"progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorStr=#{$start}, EndColorStr=#{$stop})";
 }
 
 @mixin transition ($property, $time, $method) {

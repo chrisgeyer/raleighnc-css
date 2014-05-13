@@ -7,7 +7,7 @@ LastModified:	2.22.2012 (cwg)
 ---------------------------------------------------- */
 
 body	{color:#444; font:100%/1.618 sans-serif;}
-.content {font-family:Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; /*font-family: "Calisto MT", "Bookman Old Style", "Hoefler Text", "Bitstream Charter", Georgia, Garamond, serif;*/}
+.content {font-family:Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;}
 
 
 /* Headings
@@ -34,15 +34,7 @@ em 						{font-style:italic;}
 
 
 /* Lists
---------------------------------------------------------------
-li ul, li ol 		{margin:0 1.5em; line-height:.875em}
-li ul li 				{line-height:1.125em;}
-ul							{list-style-type:none;}
-ul.list 				{list-style-type:disc;}
-ul.simple li		{margin:0;padding:0;display:inline;}
-ol 							{list-style-type:decimal;}*/
-
-
+--------------------------------------------------------------*/
 ul, ol 	{margin:0 0 1em 0; padding:0;}
 ul li 	{margin:0; padding:0; list-style:none; line-height:1.3;}
 .content {

@@ -46,15 +46,6 @@
 	#Nav a {padding:0 12px;}
 }
 
-/*@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
-	body {background:#eee;}
-	#screenWrapper, .wrapper {border:0; box-shadow:none; width:100%;}
-	.fixedwidth {width:100%;}
-	#Nav li:first-child {width:8%;}
-	#Nav li {width:11%;}
-	#Nav li:nth-child(5) {width:17%;}
-	#Nav a {font-size:1em;}
-}*/
 @media only screen and (max-width:60em) {
 	.grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {padding-right:1%;}
 	#Grid li {float:none; width:100%; text-align:right; overflow:hidden; background:$offwhite; font-size:1.3em;}
