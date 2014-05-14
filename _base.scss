@@ -103,7 +103,7 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 -------------------------------------------------------------- */
 #contentArea, #Main, #Search {padding:2% 1%; overflow:hidden; @extend .fixedwidth; background:#fff; box-shadow:0 2px 3px #aaa;}
 
-#col1 						{width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; z-index:50; background:$offwhite; border-radius:2px; box-shadow:0 2px 3px #999; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
+#col1 						{width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; z-index:50; background:$offwhite; border-radius:3px; border:1px solid #ddd; /*box-shadow:0 2px 3px #999;*/ @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
 #col1.menu				{margin:0; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
 #col1.docked 			{top:35px;}
 #col1.land				{margin:0 1.5%; width:19%; float:left; position:static;}
