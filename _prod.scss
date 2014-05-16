@@ -110,15 +110,12 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 ============*/
 /*New related - july 2013*/
 .box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {margin:2% 0 4%; padding:0 1% 2%; position:relative; overflow:hidden;}
-.related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:4% 4% 2%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:0 3px 5px #999; line-height:1;}
-.related h3 {box-shadow:none;}
+.related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:4% 4% 2%; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:none; line-height:1;}
 #popularPages h2, #popularSearch h2 {@extend .h3;}
-.related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul, .open ul, .council ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999;}
-.related ul {box-shadow:none; border-left:1px solid #ddd; border-right:1px solid #ddd;}
+.related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul, .open ul, .council ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; border-left:1px solid #ddd; border-right:1px solid #ddd; /*box-shadow:0 3px 5px #999;*/}
 .related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li, .open li, .council li {margin:0; padding:2% 4%; background:$offwhite;}
-
+#col3 .mainarticlelinks li, #col3 .maineventslinks li {min-height:4em;}
 .content .related a {text-decoration:none;}
-
 .primary h3, .primary ul {background:$teal;}
 
 #col2Large #popularPages {float:left; margin:0 1%; padding:0; width:54%;}
@@ -131,12 +128,12 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 
 /*Static pages
 ====================*/
-/*Calendar*/
+/*Calendar
 #col2Large .content {max-width:60em;}
 .calendar1, .calendar2, .calendar3 {background:#29527a; color:#fff;}
 .calendar2 {background:#A32929;}
 .calendar3 {background:#0D7813;}
-.calendar	 {margin-left:-1%; width:69%; height:500px;}
+.calendar	 {margin-left:-1%; width:69%; height:500px;}*/
 
 /*Contact Directory - may 2013*/
 #contactForm	{margin:2% 5%; padding:1%; background:#eee; overflow:hidden; border:2px solid #ddd; border-radius:5px; box-shadow:0 2px 3px #999;}
@@ -193,7 +190,7 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .mainRss {position:absolute; top:0; right:5%;}
 .mainRss a  {@extend .icon-feed;}
 .mainRss a:hover {text-decoration:none;}
-.scroll {margin:0; background:#ddd; padding-bottom:2%; border-top:1px solid #aaa; border-radius:0 0 3px 3px; box-shadow:0 3px 5px #999; height:350px; overflow-y:auto;}
+.scroll {margin:0; background:#ddd; padding-bottom:2%; border:1px solid #ddd; border-radius:0 0 3px 3px; /*box-shadow:0 3px 5px #999;*/ height:350px; overflow-y:auto;}
 .newsList ul {@extend .scroll;}
 .newsList li {padding:0.5em; background:$offwhite; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
