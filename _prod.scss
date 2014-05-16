@@ -163,7 +163,7 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {margin:1% 2%; padding-bottom:1%; /*overflow:hidden;*/}
 .grid-1 .outline a:active, .grid-2 .outline a:active, .grid-3 .outline a:active, .grid-4 .outline a:active, .grid-5 .outline a:active {position:relative;}
 #contentArea .grid-1 a:hover, #contentArea .grid-2 a:hover, #contentArea .grid-3 a:hover, #contentArea .grid-4 a:hover, #contentArea .grid-5 a:hover {border:0;}
-.grid-1 li:hover, .grid-2 li:hover, .grid-3 li:hover, .grid-4 li:hover, .grid-5 li:hover {-webkit-transform:scale(1.05) rotate(-4deg); -ms-transform:scale(1.05) rotate(-4deg); transform:scale(1.05) rotate(-4deg); @include transition(all, 0.5s, ease);}
+// .grid-1 li:hover, .grid-2 li:hover, .grid-3 li:hover, .grid-4 li:hover, .grid-5 li:hover {-webkit-transform:scale(1.05) rotate(-4deg); -ms-transform:scale(1.05) rotate(-4deg); transform:scale(1.05) rotate(-4deg); @include transition(all, 0.5s, ease);}
 .grid-1 li {font-size:1.4em; text-align:center;}
 .grid-1 img {width:100%;}
 
@@ -186,7 +186,7 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 
 /*News List*/
 .mainarticlelinks {display:inline-block; margin:2% 0 4% 1%; padding:0 1%; width:58%; position:relative; vertical-align:top;}
-#col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.3em 0.2em 0.1em; line-height:1; border-radius:5px 5px 0 0;}
+#col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.3em 0.2em 0.1em; line-height:1; border-radius:5px 5px 0 0; box-shadow:none;}
 .mainRss {position:absolute; top:0; right:5%;}
 .mainRss a  {@extend .icon-feed;}
 .mainRss a:hover {text-decoration:none;}
@@ -218,8 +218,8 @@ scrollbar-arrow-color: #efefef;}*/
 .eventsList ul {@extend .scroll;}
 .eventsList li {padding:0.5em; background:$offwhite; clear:both;}
 .message 		{font-style:italic; margin-left:25%;}
-.eventDate 	{float:left; margin:0 5% 0 0; padding:0; width:20%; background:#fff; text-align:center; font-weight:700; border-radius:2px; box-shadow:0 2px 3px #999;}
-.eventMonth	{background:#ddd;}
+.eventDate 	{float:left; margin:0 5% 0 0; padding:0; width:20%; text-align:center; font-weight:700; border-radius:3px; background:lighten($link, 10%);; text-shadow:0 1px 2px #333; /*background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;*/}
+// .eventMonth	{background:#ddd;}
 .eventDay 	{font-size:1.3em;}
 .eventTitle {display:inline;}
 .eventTitle a {margin:0;}
