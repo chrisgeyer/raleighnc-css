@@ -8,14 +8,16 @@
 	#Nav li:first-child {border-left:1px solid #515f55;}
 	#Nav a 	{padding:0 10px;}
 	#Lines, .logo, .icons, .depts h3 {display:none;}
-	.utility, .dropdown {display:block;}
-	.box.depts {position:absolute; top:96px; z-index:150; margin-left:-28px;}
-	.dropdown a, .dropdown a:hover {background:transparent; color:#fff; font-size:1.1em; text-shadow:1px 1px 3px #111; margin:0; padding:7%; width:140px; display:inline-block; border:0;}
+	.utility, .dropdown, #Footer .logo {display:block;}
+	.box.depts {position:absolute; top:96px; z-index:150; margin-left:-36px;}
+	.dropdown > a, .dropdown > a:hover {border:0; border-radius:0;}
+	.dropdown a, .dropdown a:hover {background:transparent; color:#fff; font-size:1.1em; text-shadow:1px 1px 3px #111; margin:0; padding:6.5%; width:151px; display:inline-block;}
 	.dropdown a:hover {@include gradient($link, lighten($link, 10%));}
 	.dropdown .arrow, .dropdown a:hover .arrow {margin:5%; border-color:#fff transparent transparent transparent;}
+	.dropdown ul:after {left:117px;}
 	.dropdown li a, .dropdown li a:hover {color:$link; text-shadow:none; margin-bottom:0.25em;}
 	.dropdown li a:hover {color:$green;}
-	.dropdown.fixed {left:10%; position:fixed;}
+	.depts.fixed {position:fixed; top:0; left:inherit;}
 	.related .dropdown {/*@extend .icons;*/ display:block;}
 	.related .dropdown a, .related .dropdown a:hover {width:100%; color:$link; margin:2% 0; padding:3%; background:#ececec; font-size:1em; text-shadow:none;}
 	.related .dropdown a:hover {color:$green;}
@@ -31,7 +33,6 @@
 	.content {max-width:52em;}
 	#col1.land ~ #col3 {width:25%;}
 	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:98%;}
-	#Footer .logo, #footer .logo {display:block;}
 }
 
 @media only screen and (min-width:60em) and (max-width:95em) {

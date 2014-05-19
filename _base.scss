@@ -68,7 +68,7 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 
 #SearchBox 					{bottom:15%; right:0; width:35%;}
 #SearchBox label    {@extend .ally;}
-#SearchInput 				{float:left; margin:0 0 0 1%; padding:5px; width:70%; /*background:#fff url(images/sprites.png) left no-repeat; background-position:0 0;*/ border:1px solid #ddd; border-bottom:1px solid #aaa; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
+#SearchInput 				{float:left; margin:0 0 0 1%; padding:5px; width:70%; border:1px solid #ddd; border-bottom:1px solid #aaa; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
 #SearchInput:focus	{box-shadow:0 0 5px rgba(81, 203, 238, 1);}
 #SearchInput::-webkit-input-placeholder, #SearchInput::-moz-placeholder, #SearchInput:-ms-input-placeholder {font-weight:normal;}
 #SearchBox .action 	{float:left; margin:-1px 0; padding:7px; width:20%; font-size:1em; font-weight:300; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; /*@extend .icon-search;*/}
@@ -108,8 +108,8 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 #col1.docked 			{top:35px;}
 #col1.land				{margin:0 1.5%; width:19%; float:left; position:static;}
 #col2 						{float:left; position:relative; margin:0; width:70%;}
-#col3 						{float:right; width:30%; padding:0; margin-right:-33%; @include transition(margin, 0.5s, ease-in);}
-.loaded #col3 		{margin:0;}
+#col3 						{float:right; width:30%; padding:0; /*margin-right:-33%; @include transition(margin, 0.5s, ease-in);}
+.loaded #col3 		{margin:0;*/}
 #col1.land ~ #col2, #col1.land ~ #col3 {width:78%;}
 #col1.land ~ #col3 #right > div {float:left; width:39%; margin-left:1%;}
 #Article 					{float:left; margin:0 0 0 1%; padding:1%; width:70%; min-height:540px; position:relative;}
