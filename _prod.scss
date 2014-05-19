@@ -160,27 +160,19 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 /*Featured News Grid - Mar 2014*/
 .grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {margin:1% 2%; padding-bottom:1%; overflow:hidden;}
 .grid-1 .outline a:active, .grid-2 .outline a:active, .grid-3 .outline a:active, .grid-4 .outline a:active, .grid-5 .outline a:active {position:relative;}
-#contentArea .grid-1 a:hover, #contentArea .grid-2 a:hover, #contentArea .grid-3 a:hover, #contentArea .grid-4 a:hover, #contentArea .grid-5 a:hover {border:0;}
-.grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li {@extend .outline; padding:0 !important;}
-.grid-1 div, .grid-2 div, .grid-3 div, .grid-4 div, .grid-5 div {padding:2%;}
+// #contentArea .grid-1 a:hover, #contentArea .grid-2 a:hover, #contentArea .grid-3 a:hover, #contentArea .grid-4 a:hover, #contentArea .grid-5 a:hover {border:0;}
+.grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li {@extend .outline; font-size:1.1em; margin-bottom:2%; padding:0 !important; text-align:center;}
+.grid-1 span, .grid-2 span, .grid-3 span, .grid-4 span, .grid-5 span {padding:2%; display:block;}
 // .grid-1 li:hover, .grid-2 li:hover, .grid-3 li:hover, .grid-4 li:hover, .grid-5 li:hover {-webkit-transform:scale(1.05) rotate(-4deg); -ms-transform:scale(1.05) rotate(-4deg); transform:scale(1.05) rotate(-4deg); @include transition(all, 0.5s, ease);}
-.grid-1 li {font-size:1.4em; text-align:center; width:50%; margin:0 auto;}
-.grid-1 img {width:100%;}
 
 // #columns:hover .pin:not(:hover) {opacity: 0.4;}
 
-.grid-2 li, .grid-4 li, .ie8 .grid-5 li {float:left; width:48%; margin:1%;}
-.grid-5 li:first-child, .grid-5 li:nth-child(2) {float:left; width:48%; margin:1%;}
-.grid-4 li:nth-child(3) {clear:both;}
-
-/*.grid-3 li:first-child {float:left; margin:0 2% 2% 0; width:65%;}
-.grid-3 li:first-child img {height:400px;}
-.ie8 .grid-3 li:first-child img {height:auto;}
-.grid-3 li:nth-child(n+2) {float:left; width:33%; margin-bottom:2%;}
-.ie8 .grid-3 li, .ie8 .grid-3 li:first-child {float:left; width:30%; margin:1%;}*/
-.grid-3 li, .grid-5 li {float:left; width:32%; margin:0 1% 2% 0;}
-.grid-3 li:first-child, .grid-5 li:nth-child(3) {margin-left:1%;}
-.grid-5 li:nth-child(3) {clear:both;}
+.grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li:first-child, .grid-5 li:nth-child(2), .ie8 .grid-5 li {float:left; width:49%;}
+.grid-2 li:nth-child(odd), .grid-3 li:nth-child(odd), .grid-4 li:nth-child(odd), .grid-5 li:nth-child(odd), .grid-5 li:nth-child(4) {margin-right:2%;}
+.grid-3 li:nth-child(3), .grid-4 li:nth-child(3), .grid-5 li:nth-child(3) {clear:both;}
+.grid-1 li, .grid-3 li:nth-child(3) {width:49%; margin:0 auto; float:none;}
+.grid-5 li {float:left; width:32%;}
+.grid-5 li:nth-child(5) {margin-right:0;}
 
 /*News List*/
 .mainarticlelinks {display:inline-block; margin:2% 0 4% 1%; padding:0 1%; width:58%; position:relative; vertical-align:top;}
