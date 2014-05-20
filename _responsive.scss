@@ -104,7 +104,6 @@
 @media only screen and (max-width:40em) {
 	html {-webkit-text-size-adjust:none;}
 	body {line-height:1.4;}
-	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
 	.fixedwidth {width:100%;}
 	#Header {background-position:50% 50%;}
 	#CitySeal img, .sizer, #Weather, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump, .lightbox, .box.depts .dropdown, .sharing {display:none;}
@@ -190,17 +189,17 @@
 	/*nav hide*/
 	#SearchBox {visibility:hidden; position:fixed; top:110px; right:9%; width:60%; @include transition(all, .4s, ease-in-out);}
 	#SearchBox.visible {visibility:visible; -webkit-transform:translateX(-5%);}
-	.wrapper.push {@include transition(all, 1s, ease);
+	/*.wrapper.push {@include transition(all, 1s, ease);
 		-webkit-transform:translateX(50%);
 				-ms-transform:translateX(50%);
 						transform:translateX(50%);
-	}
+	}*/
 	#Nav ul	{display:none; clear:both; border-top:1px solid #999; width:50%; float:right; @include transition(display, .15s, cubic-bezier(0,1.12,.39,.98));}
-	#Nav ul.visible {position:fixed; top:0;  left:-50%; background:#555; z-index:100; height:100%;}
+	/*#Nav ul.visible {position:fixed; top:0;  left:-50%; background:#555; z-index:100; height:100%;}
 	#Nav li {border:0; border-bottom:1px solid #ddd; text-align:left;}
 	#Nav li a {padding:5%;}
 
-	/*#col1, #col1.land {position:static; width:auto; margin:0; padding:0; float:none;}
+	#col1, #col1.land {position:static; width:auto; margin:0; padding:0; float:none;}
 
 	.depts {position:absolute; width:45%; left:-50%; top:550px; margin-left:2.5%}
 	.depts h3 {display:none;}
