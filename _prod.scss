@@ -148,7 +148,7 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .numberResults 	{float:left;}
 .paging 				{float:right;}
 #peopleResults 	{clear:both; width:100%; overflow:hidden;}
-.departmentRow 	{clear:both; background:$link; font-weight:700; font-size:1.2em; color:#fff; padding:0 5px; display:none;}
+.departmentRow 	{clear:both; background:#ddd; font-weight:700; text-align:center; padding:0 1%; font-size:1.1em;}
 .contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {float:left; margin:1% 0 0 0; padding:0 1%; width:30%;}
 .contactResultsName, .contactResultsPhoneNumber {clear:both;}
 .contactResultsTitle {width:40%;}
@@ -162,6 +162,7 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .grid-1 .outline a:active, .grid-2 .outline a:active, .grid-3 .outline a:active, .grid-4 .outline a:active, .grid-5 .outline a:active {position:relative;}
 // #contentArea .grid-1 a:hover, #contentArea .grid-2 a:hover, #contentArea .grid-3 a:hover, #contentArea .grid-4 a:hover, #contentArea .grid-5 a:hover {border:0;}
 .grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li {@extend .outline; font-size:1.1em; margin-bottom:2%; padding:0 !important; text-align:center;}
+#Grid a:after {display:none;}
 .grid-1 span, .grid-2 span, .grid-3 span, .grid-4 span, .grid-5 span {padding:2%; display:block;}
 // .grid-1 li:hover, .grid-2 li:hover, .grid-3 li:hover, .grid-4 li:hover, .grid-5 li:hover {-webkit-transform:scale(1.05) rotate(-4deg); -ms-transform:scale(1.05) rotate(-4deg); transform:scale(1.05) rotate(-4deg); @include transition(all, 0.5s, ease);}
 
