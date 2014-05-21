@@ -167,10 +167,12 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 
 // #columns:hover .pin:not(:hover) {opacity: 0.4;}
 
-.grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li:first-child, .grid-5 li:nth-child(2), .ie8 .grid-5 li {float:left; width:49%;}
+.grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li:first-child, .ie8 .grid-5 li {float:left; width:49%;}
+.grid-5 li:nth-child(2) {float:left; width:49%;} /* seperate bc ie8 doesnt support nth child*/
 .grid-2 li:nth-child(odd), .grid-3 li:nth-child(odd), .grid-4 li:nth-child(odd), .grid-5 li:nth-child(odd), .grid-5 li:nth-child(4) {margin-right:2%;}
 .grid-3 li:nth-child(3), .grid-4 li:nth-child(3), .grid-5 li:nth-child(3) {clear:both;}
-.grid-1 li, .grid-3 li:nth-child(3) {width:49%; margin:0 auto; float:none;}
+.grid-1 li {width:49%; margin:0 auto; float:none;}
+.grid-3 li:nth-child(3) {width:49%; margin:0 auto; float:none;} /* seperate bc ie8 doesnt support nth child*/
 .grid-5 li {float:left; width:32%;}
 .grid-5 li:nth-child(5) {margin-right:0;}
 
