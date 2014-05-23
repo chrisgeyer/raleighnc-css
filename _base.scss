@@ -99,6 +99,16 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 #Glass {@extend .icon-search;}
 #Lines.display {display:none;}
 
+
+@-webkit-keyframes slidein {
+	0% {-webkit-transform:translateX(110%); transform:translateX(110%);}
+	100% {-webkit-transform:translateX(0%); transform:translateX(0%);}
+}
+@keyframes slidein {
+	0% {-webkit-transform:translateX(110%); transform:translateX(110%);}
+	100% {-webkit-transform:translateX(0%); transform:translateX(0%);}
+}
+
 /* Main content areas.
 -------------------------------------------------------------- */
 #contentArea, #Main, #Search {padding:2% 1%; overflow:hidden; @extend .fixedwidth; background:#fff; box-shadow:0 2px 3px #aaa;}
@@ -108,8 +118,7 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 #col1.docked 			{top:35px;}
 #col1.land				{margin:0 1.5%; width:19%; float:left; position:static;}
 #col2 						{float:left; position:relative; margin:0; width:70%;}
-#col3 						{float:right; width:30%; padding:0; /*margin-right:-33%; @include transition(margin, 0.5s, ease-in);}
-.loaded #col3 		{margin:0;*/}
+#col3 						{float:right; width:30%; padding:0; -webkit-animation:slidein 0.5s ease; animation:slidein 0.5s ease;}
 #col1.land ~ #col2, #col1.land ~ #col3 {width:78%;}
 #col1.land ~ #col3 #right > div {float:left; width:39%; margin-left:1%;}
 #Article 					{float:left; margin:0 0 0 1%; padding:1%; width:70%; min-height:540px; position:relative;}

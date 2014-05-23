@@ -47,9 +47,17 @@ img 						{border:0; max-width:100%;}
 // #contentArea a:hover {border-bottom:1px solid $green;}
 .section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
 
+@-webkit-keyframes fadein {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+@keyframes fadein {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
 /*Pages*/
-.content {margin:0 auto; min-width:10em; max-width:50em; padding:1% 2%; /*opacity:0; @include transition(opacity, 0.5s, ease-in);}
-.loaded .content {opacity:1;*/}
+.content {margin:0 auto; min-width:10em; max-width:50em; padding:1% 2%; -webkit-animation:fadein 1s linear; animation:fadein 1s linear;}
 #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
 span.updatedDate {}
@@ -59,17 +67,13 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .ratings li {display:inline-block;}
 .comments textarea {width:50%;}
 .ratings input, .comments input {width:7em; height:3em;}
-
 #col1Large {position:relative;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
-
 .pagetitle {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:2% 2% 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 .sectiontitle {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 2px 4px #aaa; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
-
 .content h1 {@extend .pagetitle;}
 // h1 {position:absolute; top:0; left:0; width:141%; padding-top:1%; @extend .pagetitle;}
 .findmyservice, .calendar h1 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
-
 .shortdesc, .content h1 + h3 {font-style:italic; color:#666;}
 
 /*Left Col
