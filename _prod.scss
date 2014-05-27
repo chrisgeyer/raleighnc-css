@@ -57,7 +57,7 @@ img 						{border:0; max-width:100%;}
 }
 
 /*Pages*/
-.content {margin:0 auto; min-width:10em; max-width:50em; padding:1% 2%; -webkit-animation:fadein 1s linear; animation:fadein 1s linear;}
+.content {margin:0 auto; min-width:10em; max-width:50em; padding:1% 2%; /*-webkit-animation:fadein 1s linear; animation:fadein 1s linear;*/}
 #Article .content {padding:0;}
 #storyContentWrapper {padding:0 20px;}
 span.updatedDate {}

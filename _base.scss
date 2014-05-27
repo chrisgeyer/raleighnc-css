@@ -118,7 +118,7 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 #col1.docked 			{top:35px;}
 #col1.land				{margin:0 1.5%; width:19%; float:left; position:static;}
 #col2 						{float:left; position:relative; margin:0; width:70%;}
-#col3 						{float:right; width:30%; padding:0; -webkit-animation:slidein 0.5s ease; animation:slidein 0.5s ease;}
+#col3 						{float:right; width:30%; padding:0; /*-webkit-animation:slidein 0.5s ease; animation:slidein 0.5s ease;*/}
 #col1.land ~ #col2, #col1.land ~ #col3 {width:78%;}
 #col1.land ~ #col3 #right > div {float:left; width:39%; margin-left:1%;}
 #Article 					{float:left; margin:0 0 0 1%; padding:1%; width:70%; min-height:540px; position:relative;}
