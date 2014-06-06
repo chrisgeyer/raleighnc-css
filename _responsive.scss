@@ -29,6 +29,7 @@
 	#col1.land {margin:0.5%; width:14%;}
 	#col2, #col1.land ~ #col2  {width:60%;}
 	#col2Large {float:left; width:83%;}
+	#col2Large #col2 {width:75%;}
 	#col3 {width:25%;}
 	.content {max-width:52em;}
 	#col1.land ~ #col3 {width:25%;}
@@ -104,6 +105,7 @@
 @media only screen and (max-width:40em) {
 	html {-webkit-text-size-adjust:none;}
 	body {line-height:1.4;}
+	#contentArea {-webkit-hyphens:auto; -moz-hyphen:auto; -ms-hyphens:auto; hyphens:auto;}
 	.fixedwidth {width:100%;}
 	#Header {background-position:50% 50%;}
 	#CitySeal img, .sizer, #Weather, #addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #top img, #col3:before, .empJump, .lightbox, .box.depts .dropdown, .sharing {display:none;}
