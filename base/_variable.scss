@@ -7,11 +7,9 @@ $teal:#82a3ad;
 
 @mixin gradient ($start:#ffffff, $stop:#ffffff) {
 	background-color:mix($start, $stop);
-	background-image:-webkit-linear-gradient($start, $stop);
-	background-image:        linear-gradient(to bottom, $start, $stop);
+	background-image:linear-gradient(to bottom, $start, $stop);
 }
 
 @mixin transition ($property, $time, $method) {
-	-webkit-transition:$property $time $method;
-	        transition:$property $time $method;
+	transition:$property $time $method;
 }

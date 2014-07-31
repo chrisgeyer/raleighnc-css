@@ -31,14 +31,14 @@ img 						{border:0; max-width:100%;}
 .action:hover 	{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(#666665, #B2B2B2);}
 .action:active 	{box-shadow:inset 0 1px 2px rgba(0,0,0,0.3)}
 .action img			{display:none;}
-.toggle 				{@extend .inlineblock; cursor:pointer; opacity:0.5; -webkit-filter:#{'grayscale(100%)'};}
+.toggle 				{@extend %inlineblock; cursor:pointer; opacity:0.5; -webkit-filter:#{'grayscale(100%)'};}
 .toggle:hover		{@extend .active;}
 .active 				{opacity:1; -webkit-filter:#{'grayscale(0%)'};}
 
 /*OOCSS - start using % for placeholders not needed in compiled css*/
 .dotted					{border-bottom:1px dotted #ddd;}
 .underline			{border-bottom:1px solid #ddd;}
-.inlineblock 		{display:inline-block; vertical-align:top;}
+%inlineblock 		{display:inline-block; vertical-align:top;}
 
 /*Links*/
 .content a:link, .content a:visited, table a:link 	{border-bottom:1px solid $link; text-shadow:none;}
@@ -59,7 +59,6 @@ img 						{border:0; max-width:100%;}
 /*Pages*/
 .content {margin:0 auto; min-width:10em; max-width:50em; padding:1% 2%; /*-webkit-animation:fadein 1s linear; animation:fadein 1s linear;*/}
 #Article .content {padding:0;}
-#storyContentWrapper {padding:0 20px;}
 span.updatedDate {}
 div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd; position:relative;}
 #addThisButtons	{position:absolute; right:10px; top:110px; display:none;}
@@ -130,13 +129,6 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 
 /*Static pages
 ====================*/
-/*Calendar
-#col2Large .content {max-width:60em;}
-.calendar1, .calendar2, .calendar3 {background:#29527a; color:#fff;}
-.calendar2 {background:#A32929;}
-.calendar3 {background:#0D7813;}
-.calendar	 {margin-left:-1%; width:69%; height:500px;}*/
-
 /*Contact Directory - may 2013*/
 #contactForm	{margin:2% 5%; padding:1%; background:#eee; overflow:hidden; border:2px solid #ddd; border-radius:5px; box-shadow:0 2px 3px #999;}
 #contactSearchForm li {padding:0.5%;}
@@ -227,11 +219,11 @@ scrollbar-arrow-color: #efefef;}*/
 .images {float:right; margin:0 0 10px 10px; @extend .outline;}
 .images {width:56%;}
 .images .photoslider-1click-slideshow {padding-bottom:75%;}
-.eventdates {clear:both; width:30%; @extend .inlineblock;}
-.newseventmap {width:69%; overflow:hidden; @extend .inlineblock;}
+.eventdates {clear:both; width:30%; @extend %inlineblock;}
+.newseventmap {width:69%; overflow:hidden; @extend %inlineblock;}
 .newseventlocation {float:left; width:40%; margin-right:2%;}
 .gismap {float:left; margin:0 0 10px 10px; width:46%; height:182px; overflow:hidden;} /*remove later*/
-.addfiles, .newscontacts, .relatedlinks {margin-right:1%; width:28%; @extend .inlineblock;}
+.addfiles, .newscontacts, .relatedlinks {margin-right:1%; width:28%; @extend %inlineblock;}
 .newscontacts {width:38%;}
 .rsssharing {clear:both; margin-top:20px;}
 .rsssharing a {text-decoration:none;}
@@ -274,7 +266,7 @@ iframe 	{@extend .outline; background:$offwhite;}
 /*BC-CAC*/
 .bclogo					{float:right; border-radius:3px; border:1px solid #ddd; position:relative; right:-2px;}
 .org 						{@extend .confirm;}
-.org ul, .content ul.individual	{text-align:center; float:none; margin-right:-4px; margin-bottom:1em; padding:0; width:33.2%; @extend .inlineblock;}
+.org ul, .content ul.individual	{text-align:center; float:none; margin-right:-4px; margin-bottom:1em; padding:0; width:33.2%; @extend %inlineblock;}
 .org ul:nth-child(1) li:first-child {padding:0;}
 .org h4					{background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
 .cacgismap, .gismap_iframe {float:left; margin:0 0 0 2%; width:62%; height:256px; overflow:hidden;}
@@ -318,10 +310,7 @@ iframe 	{@extend .outline; background:$offwhite;}
 #col3 a[title=Volunteer] {display:none;}
 
 /*Park - Oct 2013*/
-.parkfacts {@extend .third; @extend .inlineblock;}
-.content .parkfacts li {list-style:none; margin:0;}
-.parkbullets {@extend .twothirds; @extend .inlineblock;}
-.park {width:100%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
+.park {border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
 
 @-webkit-keyframes fill {
 	0% {background-position:100% 0%;}
@@ -389,7 +378,7 @@ ul.progress li.completed.active {margin-right:4%; text-shadow:1px 3px 5px #333; 
 .arrow							{margin-right:5px; width:0; height:0; border-color:$link transparent transparent transparent; border-style:solid; border-width:12px 10px 0; display:inline-block; transition:all 0.25s ease;}
 // .ie9 .arrow 				{border-right:8px solid transparent;}
 .close .arrow				{-webkit-transform: rotate(-90deg);
-												 -ms-transform: rotate(-90deg);
+												 -ms-transform: rotate(-90deg); /* possibly remove due to low ie9% */
 												 	   transform: rotate(-90deg);}
 // .ie9 .close .arrow 	{border-top:8px solid transparent;}
 .collapse 					{border:1px solid #ddd; border-radius:0 0 5px 5px; border-top:none; padding:2%; overflow:hidden;}

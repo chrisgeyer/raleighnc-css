@@ -49,7 +49,7 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 	-webkit-transform: scale(1.25) translate(0.5em);
   				transform: scale(1.25) translate(0.5em);}
 
-.utility, .sizer, #Weather, #SearchBox {position:absolute; right:2%;}
+.utility, #SearchBox {position:absolute; right:2%;}
 
 .utility 						{top:10%; font-size:0.8em; display:none;}
 .utility li 				{float:left; padding-right:2em;}
@@ -58,13 +58,6 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 .utility li:nth-child(2) a {@extend .icon-user;}
 .utility li:nth-child(3) a {@extend .icon-calendar;}
 .utility li:last-child a {@extend .icon-mail;}
-
-#Weather 						{top:5%; right:14%; display:none;}
-#Weather img 				{float:left; margin:-1% -10% 0 0; width:40%;}
-.temp								{font-size:1.5em;}
-
-.sizer 							{top:5%; display:none;}
-.sizer span					{cursor:pointer;}
 
 #SearchBox 					{bottom:15%; right:0; width:35%;}
 #SearchBox label    {@extend .ally;}
@@ -98,7 +91,6 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 #Home, #Glass	{@extend .icon-home; display:none; font-weight:700;}
 #Glass {@extend .icon-search;}
 #Lines.display {display:none;}
-
 
 @-webkit-keyframes slidein {
 	0% {-webkit-transform:translateX(110%); transform:translateX(110%);}

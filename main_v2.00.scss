@@ -6,14 +6,15 @@ LastModified:	3.2.2012 (cwg)
 
 ---------------------------------------- */
 
-@import "variable";
-@import "base";
-@import "typography";
+@import "base/reset";
+@import "base/variable";
+@import "base/base";
+@import "base/typography";
 @import "prod";
 /*------------------------------------
 	 Do not edit above this line
 	 Add other css files after this line
 --------------------------------------*/
 @import "responsive";
-@import "sliderkit";
+@import "vendor/sliderkit";
 @import "print";
