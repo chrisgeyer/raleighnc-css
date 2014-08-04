@@ -1,14 +1,8 @@
-/* ----------------------------------------------------
-
-Description:	Global reset all elements for browsers
-Created:			2.3.2012
-LastModified:	6.19.2012 (cwg)
-
+/* Global reset all elements for browsers
 ---------------------------------------------------- */
-
-html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, em, img, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, em, img, ol, ul, li, form, label, table, tbody, tfoot, thead, tr, th, td
 	{margin:0; padding:0; border:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit; vertical-align:baseline;}
-table						{border-collapse:separate; border-spacing:0;}
-caption, th, td	{text-align:left; font-weight:normal;}
-table, td, th 	{vertical-align:middle;}
-a img			{border:0;}
+table		{border-collapse:separate; border-spacing:0;}
+th, td	{text-align:left; font-weight:normal;}
+table, td, th {vertical-align:middle;}
+a img		{border:0;}

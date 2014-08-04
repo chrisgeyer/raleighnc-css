@@ -1,0 +1,93 @@
+/*Static pages
+====================*/
+/*Contact Directory - may 2013*/
+#contactForm	{margin:2% 5%; padding:1%; background:#eee; overflow:hidden; border:2px solid #ddd; border-radius:5px; box-shadow:0 2px 3px #999;}
+#contactSearchForm li {padding:0.5%;}
+#contactSearchForm label {width:28%; display:inline-block;}
+#contactSearchForm select, #contactSearchForm input[type="text"] {width:50%;}
+#contactSearchForm select {margin-left:-1%;}
+#contactSearchForm .action {float:right; margin:0 2%;}
+.resultArea			{padding:1% 2%;}
+.resultArea p   {display:none;}
+#viewBy 				{float:left; display:none;}
+#viewBy ~ .resultPaging {display:none;}
+#peopleResults ~ .resultPaging {display:block;}
+.numberResults 	{float:left;}
+.paging 				{float:right;}
+#peopleResults 	{clear:both; width:100%; overflow:hidden;}
+.departmentRow 	{clear:both; background:#ddd; font-weight:700; text-align:center; padding:0 1%; font-size:1.1em;}
+.contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {float:left; margin:1% 0 0 0; padding:0 1%; width:30%;}
+.contactResultsName, .contactResultsPhoneNumber {clear:both;}
+.contactResultsTitle {width:40%;}
+.contactResultsPhoneNumber {margin:0; padding:1%; width:98%; border-bottom:1px dotted #ddd;}
+// .contactResultsName:nth-child(odd), .contactResultsTitle:nth-child(odd), .contactResultsDiv:nth-child(odd), .contactResultsPhoneNumber:nth-child(odd) {background:#ddd;}
+
+/*Templates
+====================*/
+/*BC-CAC*/
+.bclogo					{float:right; border-radius:3px; border:1px solid #ddd; position:relative; right:-2px;}
+.org 						{@extend .confirm;}
+.org ul, .content ul.individual	{text-align:center; float:none; margin-right:-4px; margin-bottom:1em; padding:0; width:33.2%; @extend %inlineblock;}
+.org ul:nth-child(1) li:first-child {padding:0;}
+.org h4					{background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
+.cacgismap, .gismap_iframe {float:left; margin:0 0 0 2%; width:62%; height:256px; overflow:hidden;}
+
+/*Contact - Nov 2012*/
+.bio							{clear:both;}
+.job .icon-location {font-size:0.7em;}
+
+.content .orgchart li {margin:0 0 2% 0; padding:2%; list-style:none; background:#ede8B0; border:1px solid #ddd; border-radius:3px; box-shadow:0 1px 2px #777;}
+.content .orgchart ul li {background:#eee;}
+.content .orgchart ul li ul li {background:#fff;}
+
+.neogov {margin:0; padding:0; width:100%; height:1200px;}
+
+/*Employment
+#top h1								{@extend .pagetitle; margin:1% 2% 0; width:95%;}
+#top img							{margin-bottom:-5px; display:none;}
+.employmentType 			{width:99%; padding:0 2%;}
+.employmentType div[style] {display:none;}
+.employmentType div 	{margin-left:0.5em;}
+.empJump li a 				{float:left; margin:0 15px 20px 0; border-bottom:1px solid #fff;}
+.employmentType h3 		{clear:both; margin:1em 0 0.5em; @extend .sectiontitle;}
+.empTitle 						{clear:both; margin:0 0.5em 0 0; font-size:1.1em; font-weight:700;}
+.empClose, .empSalary {float:left; margin:0 0 0.25em; font-size:0.9em;}
+.empDept, .empNo 			{float:left; margin:0 0 0.5em 0; font-size:0.9em;}
+.empDept							{clear:both;}
+.empNone							{@extend .quiet; font-style:italic;}
+.empNone:last-child		{display:none;}
+#top:hover, #top:active, .employmentType > a:hover, .employmentType > a:active {text-decoration:none; cursor:default;}
+
+.content .job li {list-style:none; margin-left:0; padding:5px;}
+.employmentRequirements li,
+.employmentDuties li 	{margin-left:20px;list-style-type:disc;}
+.employmentDisclaimer {margin-top:20px; color:#666;}
+
+#col3 .employmentType {padding:0;}
+#col3 h1 img, #col3 .empJump, #col3 .empNo, #col3 .empSalary, #col3 .empDept, #col3 .empClose, #col3 .employmentType div[style] {display:none;}
+#col3 #top h1 {margin-top:2%; width:99%; padding:3% 1%; color:#333; font-size:1.4em; text-shadow:none; @extend .sectiontitle; position:relative;}
+#col3 .employmentType h3 {border-radius:3px; font-size:1.4em; @extend .pagetitle;}
+#col3 .empTitle {font-weight:normal; font-size:1em; border-bottom:1px dotted #ccc; width:98%; margin:0 0 6px 0;}
+#col3 a[title=Volunteer] {display:none;}*/
+
+/*DevServ*/
+#Developer, #Homeowner, #Tools, #CodeRef, #Transit {display:none;}
+#Developer h3, #Homeowner h3 {background:$teal;}
+#Developer ul, #Homeowner ul {background:$teal;}
+#Tools li {@extend .dotted;}
+.content .map {margin:1%; height:200px; @extend iframe;}
+.content .third.map {height:125px;}
+.related .map {float:none; @extend .full; height:200px; border:1px solid #fff;}
+.layerTile {max-width:none;}
+
+/*Status - oct 2012*/
+.confirm {@extend .callout; border:2px solid $green;}
+.section.confirm .close, .confirm h3, .section.confirm:hover h3 {background:$green; border:0; font-weight:normal;}
+.warning {@extend .callout; border:2px solid #ffe88c;}
+.section.warning .close, .warning h3, .section.warning:hover h3 {background:#ffe88c; border:0; font-weight:normal; color:#333; text-shadow:1px 1px 1px #ccc;}
+.error	 {@extend .callout; border:2px solid #b74742;}
+.section.error .close, .error h3, .section.error:hover h3 {background:#b74742; border:0; font-weight:normal;}
+.section.confirm .arrow, .section.warning .arrow, .section.error .arrow	{border-color:#fff transparent transparent transparent;}
+// .section.confirm .close .arrow, .section.warning .close .arrow, .section.error .close .arrow {border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid #fff;}
+.section.warning .arrow {border-color:#333 transparent transparent transparent;}
+// .section.warning .close .arrow {border-left:12px solid #333;}

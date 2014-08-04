@@ -1,0 +1,96 @@
+/* Main navigation elements.
+-------------------------------------------------------------- */
+#Nav 								{float:left; width:100%; border-top:1px solid #333; z-index:100; box-shadow:0 1px 2px #777; @include transition(all, .5s, linear); @include gradient(#555554, #111112);}
+#Nav ul 						{@extend .fixedwidth; @include transition(all, .15s, ease-in-out);}
+#Nav ul.visible			{display:block; @include transition(all, .15s, ease-in-out);}
+#Nav li 						{float:left; /*width:12%;*/ height:45px; text-align:center; border-left:1px solid #666; @include transition(background, .2s, ease-in-out);}
+// #Nav li:first-child {width:5%;}
+// #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
+.current 						{@include gradient($link, lighten($link, 10%));}
+#Nav a 							{padding:0 14px; color:#fff; /*font-size:1.1em;*/ line-height:45px; text-shadow:1px 1px 3px #111; text-decoration:none;}
+#Nav a:hover				{border:0;}
+#Nav li:hover				{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
+.current a:hover, .current:hover a {color:#fff;}
+#Nav li:first-child {border-left:none;}
+@media only screen and (min-width:1em) {
+	#Nav li:first-child > a:before {content: "\e608"; line-height:42px; font-size:1.5em; vertical-align:sub;}
+}
+
+#Nav #Lines, #Nav #Lines:active	{float:left; margin:0.5%; line-height:30px; font-size:1.1em; padding:0 1%; font-weight:normal;}
+#Nav #Lines:hover {border:1px solid #666;}
+#Home, #Glass	{@extend .icon-home; display:none; font-weight:700;}
+#Glass {@extend .icon-search;}
+#Lines.display {display:none;}
+
+@-webkit-keyframes slidein {
+	0% {-webkit-transform:translateX(110%); transform:translateX(110%);}
+	100% {-webkit-transform:translateX(0%); transform:translateX(0%);}
+}
+@keyframes slidein {
+	0% {-webkit-transform:translateX(110%); transform:translateX(110%);}
+	100% {-webkit-transform:translateX(0%); transform:translateX(0%);}
+}
+
+@media only screen and (min-width:60em) and (max-width:74em) {
+	#Lines span {display:none;}
+}
+@media only screen and (min-width:60em) and (max-width:64em) {
+	#Nav a {padding:0 12px;}
+}
+@media only screen and (max-width:54em) {
+	#Nav li:nth-child(5) {font-size:0.65em;}
+}
+
+@media only screen and (min-width:95em) {
+	#Nav ul {padding-left:150px;}
+	#Nav li {width:11%;}
+	#Nav li:first-child {width:4.5%;}
+	#Nav li:nth-child(5) {width:17%;}
+	#Nav li:first-child {border-left:1px solid #515f55;}
+	#Nav a 	{padding:0 10px;}
+	#Lines, .logo, .icons, .depts h3 {display:none;}
+}
+
+@media only screen and (min-width:40em) and (max-width:60em) {
+	#Nav {position:fixed; left:0;}
+	#Nav ul {margin-left:15%; width:85%;}
+	#Nav li {width:25%; border-left:1px solid #999; text-align:center;}
+	#Nav li:first-child {display:none;}
+	#Nav li:nth-child(-n+5) {border-bottom:1px solid #999;}
+	#Nav li:nth-child(5) {border-right:none; font-size:0.9em;}
+	#Nav li:last-child {border-right:1px solid #999;}
+	#Nav a {line-height:45px;}
+	#Home {display:block; position:absolute; height:45px; width:15%; border-bottom:1px solid #999; text-align:center;}
+	#Nav #Lines, #Nav #Lines:active {margin-left:2%; margin-top:50px;}
+	#Lines.display {display:block;}
+}
+
+@media only screen and (max-width:40em) {
+	#Nav li {width:100%; border-left:1px solid #999; border-bottom:1px solid #999;}
+	#Nav li:first-child {display:none;}
+	#Nav li:nth-child(odd) {border-right:0;}
+	#Nav li:nth-child(5) {font-size:0.75em;}
+
+	#Nav #Lines, #Nav #Lines:active	{line-height:20px; padding:5px; margin:11px;}
+	#Lines img {display:inline; float:left; vertical-align:middle; display:none;}
+	#Nav #Home, #Nav #Home:active, #Glass	{display:block; line-height:20px; padding:5px; float:right; margin:10px 8px;}
+	.icon-home:before {line-height:20px; margin-right:5%; vertical-align:middle;}
+	#Glass {vertical-align:baseline; margin:1.4% 0 1.4%; font-size:1em; cursor:pointer;}
+	#Glass.hidden {display:none;}
+	.fixed {position:relative;}
+	#Lines.display {display:block;}
+
+		
+	#Nav ul	{display:none; clear:both; border-top:1px solid #999; width:50%; float:right; @include transition(display, .15s, cubic-bezier(0,1.12,.39,.98));}
+	/*#Nav ul.visible {position:fixed; top:0;  left:-50%; background:#555; z-index:100; height:100%;}
+	#Nav li {border:0; border-bottom:1px solid #ddd; text-align:left;}
+	#Nav li a {padding:5%;}
+
+	#col1, #col1.land {position:static; width:auto; margin:0; padding:0; float:none;}
+
+	.depts {position:absolute; width:45%; left:-50%; top:550px; margin-left:2.5%}
+	.depts h3 {display:none;}
+	.icons {font-size:1em; position:absolute; width:50%; left:-50%; top:355px;}
+	.icons a {background:transparent; border-radius:0; color:#fff; text-shadow:1px 1px 3px #333;}
+	.leftnav {position:fixed; left:-50%; top:50px; background:#fff; width:50%; height:100%; padding:1%; z-index:200;}*/
+}

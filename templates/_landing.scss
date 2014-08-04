@@ -1,0 +1,110 @@
+/*News & Events
+================*/
+/*Featured News Grid - Mar 2014*/
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {margin:1% 2%; padding-bottom:1%; overflow:hidden;}
+.grid-1 .outline a:active, .grid-2 .outline a:active, .grid-3 .outline a:active, .grid-4 .outline a:active, .grid-5 .outline a:active {position:relative;}
+// #contentArea .grid-1 a:hover, #contentArea .grid-2 a:hover, #contentArea .grid-3 a:hover, #contentArea .grid-4 a:hover, #contentArea .grid-5 a:hover {border:0;}
+.grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li {@extend .outline; font-size:1.1em; margin-bottom:2%; padding:0 !important; text-align:center;}
+#Grid a:after {display:none;}
+.grid-1 span, .grid-2 span, .grid-3 span, .grid-4 span, .grid-5 span {padding:2%; display:block;}
+// .grid-1 li:hover, .grid-2 li:hover, .grid-3 li:hover, .grid-4 li:hover, .grid-5 li:hover {-webkit-transform:scale(1.05) rotate(-4deg); -ms-transform:scale(1.05) rotate(-4deg); transform:scale(1.05) rotate(-4deg); @include transition(all, 0.5s, ease);}
+
+// #columns:hover .pin:not(:hover) {opacity: 0.4;}
+
+.grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li:first-child, .ie8 .grid-5 li {float:left; width:49%;}
+.grid-5 li:nth-child(2) {float:left; width:49%;} /* seperate bc ie8 doesnt support nth child*/
+.grid-2 li:nth-child(odd), .grid-3 li:nth-child(odd), .grid-4 li:nth-child(odd), .grid-5 li:nth-child(odd), .grid-5 li:nth-child(4) {margin-right:2%;}
+.grid-3 li:nth-child(3), .grid-4 li:nth-child(3), .grid-5 li:nth-child(3) {clear:both;}
+.grid-1 li {width:49%; margin:0 auto; float:none;}
+.grid-3 li:nth-child(3) {width:49%; margin:0 auto; float:none;} /* seperate bc ie8 doesnt support nth child*/
+.grid-5 li {float:left; width:32%;}
+.grid-5 li:nth-child(5) {margin-right:0;}
+
+@media only screen and (max-width:60em) {
+	.grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {padding-right:1%;}
+	#Grid li {float:none; width:100%; margin-bottom:0.5em; overflow:hidden; background:$offwhite; font-size:1.3em;}
+	.grid-5 li img, .grid-4 li img, .grid-3 li img, .grid-2 li img, .grid-1 li img {float:right; width:50%; margin-left:2%;}
+	.grid-3 li:first-child img {height:auto;}
+}
+@media only screen and (max-width:25em) {
+	#Grid li {font-size:1em;}
+}
+
+/*News List*/
+.mainarticlelinks {display:inline-block; margin:2% 0 4% 1%; padding:0 1%; width:58%; position:relative; vertical-align:top;}
+#col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.25em; line-height:1; border-radius:5px 5px 0 0; box-shadow:none;}
+.mainRss {position:absolute; top:0; right:5%;}
+.mainRss a  {@extend .icon-feed;}
+.mainRss a:hover {text-decoration:none;}
+.scroll {margin:0; background:#ddd; padding-bottom:2%; border:1px solid #ddd; border-radius:0 0 3px 3px; /*box-shadow:0 3px 5px #999;*/ height:350px; overflow-y:auto;}
+.newsList ul {@extend .scroll;}
+.newsList li {padding:0.5em; background:$offwhite; @extend .dotted;}
+.malDate {font-size:0.9em; color:#666;}
+a.more {margin-top:1px; padding:1%; background:#ddd; text-align:center; border-radius:0 0 5px 5px;}
+.newsList a.more, .eventsList a.more {display:none;}
+
+.scroll ::-webkit-scrollbar{width:9px;height:9px;}
+.scroll ::-webkit-scrollbar-button:start:decrement, .scroll ::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+.scroll ::-webkit-scrollbar-track-piece{background-color:#FAFAFA;border-radius:0;border-bottom-right-radius:8px;border-bottom-left-radius:8px;}
+.scroll ::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#999;border-radius:8px;}
+.scroll ::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#999;border-radius:8px;}
+
+/*.newsList ul {scrollbar-face-color:#999998;
+// scrollbar-shadow-color: #2D2C4D;
+// scrollbar-highlight-color:#7D7E94;
+// scrollbar-3dlight-color: #7D7E94;
+// scrollbar-darkshadow-color: #2D2C4D;
+scrollbar-track-color: $offwhite;
+scrollbar-arrow-color: #efefef;}*/
+
+#col2Large .newsList ul, #col2Large .eventsList ul {height:auto;}
+
+/*Events List*/
+.maineventslinks {@extend .mainarticlelinks; width:39%;}
+.eventsList ul {@extend .scroll;}
+.eventsList li {padding:0.5em; background:$offwhite; clear:both;}
+.message 		{font-style:italic; margin-left:25%;}
+.eventDate 	{float:left; margin:0 5% 0 0; padding:0; width:20%; text-align:center; color:#fff; border-radius:3px; background:lighten($link, 10%);; text-shadow:0 1px 2px #333; /*background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;*/}
+// .eventMonth	{background:#ddd;}
+.eventDay 	{font-size:1.3em;}
+.eventTitle {display:inline;}
+.eventTitle a {margin:0;}
+.eventTimes {color:#666; margin:0 0 1% 25%;}
+
+/*News Article*/
+.newsAlert {margin-right:5px; color:#b74742; font-weight:700; display:inline;}
+.images {float:right; margin:0 0 10px 10px; @extend .outline;}
+.images {width:56%;}
+.images .photoslider-1click-slideshow {padding-bottom:75%;}
+.eventdates {clear:both; width:30%; @extend %inlineblock;}
+.newseventmap {width:69%; overflow:hidden; @extend %inlineblock;}
+.newseventlocation {float:left; width:40%; margin-right:2%;}
+.gismap {float:left; margin:0 0 10px 10px; width:46%; height:182px; overflow:hidden;} /*remove later*/
+.addfiles, .newscontacts, .relatedlinks {margin-right:1%; width:28%; @extend %inlineblock;}
+.newscontacts {width:38%;}
+.rsssharing {clear:both; margin-top:20px;}
+.rsssharing a {text-decoration:none;}
+.rsssharing .icon-feed:after {font-size:1em;}
+
+.addevent {display:inline-block; position:relative; background:#f4f4f4; border:1px solid #d9d9d9; font-family:sans-serif; padding:1%; border-radius:2px; font-size:0.9em;}
+.addevent label {cursor:pointer; @extend .icon-addcalendar;}
+.addevent input[type="checkbox"] {@extend .ally;}
+#col2 .addevent a {border:0; text-align:right;}
+.addevent a {display:none;}
+.addevent a:after {content:'';}
+.addevent input[type="checkbox"]:checked ~ a {display:block;}
+
+#col3 .mainarticlelinks, #col3 .maineventslinks {float:none; width:100%; font-size:1.05em;}
+#col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {float:none; font-size:1.4em;}
+#col3 .mainRss {display:none;}
+
+#col3 .mainarticlelinks ul, #col3 .maineventslinks ul {height:300px;}
+
+/*Home Page Feature*/
+.landing {margin:1% 2%; text-align:center; @extend .pagetitle;}
+.open, .council {float:left; width:58%; margin-left:1%;}
+.council {width:39%;}
+.councilframe {border:0; box-shadow:none; margin:0; width:99.9%; height:140px; border-radius:0; padding:0; margin:2% 0;}
+.open ul, .council ul {@extend .scroll; height:auto; overflow:hidden;}
+.open p {padding-top:2%;}
+.boxcouncil {background:$offwhite; padding-bottom:6px;}

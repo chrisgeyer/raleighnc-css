@@ -1,0 +1,124 @@
+/* Main content areas.
+-------------------------------------------------------------- */
+#contentArea, #Main, #Search {padding:2% 1%; overflow:hidden; @extend .fixedwidth; background:#fff; box-shadow:0 2px 3px #aaa;}
+
+#col1 						{width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; z-index:50; background:$offwhite; border-radius:3px; border:1px solid #ddd; /*box-shadow:0 2px 3px #999;*/ @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
+#col1.menu				{margin:0; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
+#col1.docked 			{top:35px;}
+#col1.land				{margin:0 1.5%; width:19%; float:left; position:static;}
+#col2 						{float:left; position:relative; margin:0; width:70%;}
+#col3 						{float:right; width:30%; padding:0; /*-webkit-animation:slidein 0.5s ease; animation:slidein 0.5s ease;*/}
+#col1.land ~ #col2, #col1.land ~ #col3 {width:78%;}
+#col1.land ~ #col3 #right > div {float:left; width:39%; margin-left:1%;}
+#Article 					{float:left; margin:0 0 0 1%; padding:1%; width:70%; min-height:540px; position:relative;}
+#Sidebar, #sidebar 	{float:left; width:29%; padding:0.5% 0 0 1%;}
+
+@media only screen and (min-width:60em) and (max-width:95em) {
+	#col1.land ~ #col3 #right > div:nth-child(1) {width:58%;}
+}
+@media only screen and (min-width:95em) {
+	.utility, .dropdown, #Footer .logo {display:block;}
+	.box.depts {position:absolute; top:96px; z-index:150; margin-left:-36px;}
+	.dropdown > a, .dropdown > a:hover {border:0; border-radius:0;}
+	.dropdown a, .dropdown a:hover {background:transparent; color:#fff; font-size:1.1em; text-shadow:1px 1px 3px #111; margin:0; padding:6.5%; width:151px; display:inline-block;}
+	.dropdown a:hover {@include gradient($link, lighten($link, 10%));}
+	.dropdown .arrow, .dropdown a:hover .arrow {margin:5%; border-color:#fff transparent transparent transparent;}
+	.dropdown ul:after {left:117px;}
+	.dropdown li a, .dropdown li a:hover {color:$link; text-shadow:none; margin-bottom:0.25em;}
+	.dropdown li a:hover {color:$green;}
+	.depts.fixed {position:fixed; top:0; left:inherit;}
+	.related .dropdown {/*@extend .icons;*/ display:block;}
+	.related .dropdown a, .related .dropdown a:hover {width:100%; color:$link; margin:2% 0; padding:3%; background:#ececec; font-size:1em; text-shadow:none;}
+	.related .dropdown a:hover {color:$green;}
+	.related .dropdown a:hover .arrow {margin:1%;}
+	#col1 {margin:0.5%; padding-top:1.5%; float:left; position:static; width:14%; background:$offwhite; box-shadow:none; border-radius:3px; border:1px solid #ddd; font-size:0.85em;}
+	#col1.land {margin:0.5%; width:14%;}
+	#col2, #col1.land ~ #col2  {width:60%;}
+	#col2Large {float:left; width:83%;}
+	#col2Large #col2 {width:75%;}
+	#col3 {width:25%;}
+	#col1.land ~ #col3 {width:25%;}
+	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:98%;}
+}
+
+@media only screen and (min-width:40em) and (max-width:60em) {
+	#col1 {width:20%; top:80px; margin-left:-20%;}
+	#col1.docked {top:0;}
+	#col1.land ~ #col3 #right > div {float:none; width:100%;}
+	#col1.land ~ #col2 {width:70%;}
+	#col3 {padding-right:1%;}
+	#right > div {margin:1% 1% 0 0; padding:1%;}
+	#Sidebar .empClose {display:none;}
+	#col1.land {float:none; margin-left:-20%; position:fixed;}
+	#col1.land.menu {margin-left:0;}
+	#col1.land ~ #col3 {margin-right:0; width:29%;}
+	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%;}
+}
+
+@media only screen and (max-width:40em) {
+	#col1 .icons {font-size:0.9em;}
+	.depts select {display:block; width:100%;}
+	#col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {width:100%; margin:0;}
+	#col2, #col1.land ~ #col2 {width:99%;}
+
+	#col1, #col1.land {width:50%; margin-left:-55%; text-align:center; position:absolute; top:150px; bottom:auto; z-index:150;}
+	#col1.land {float:none;}
+	#col1.land.menu {margin:0;}
+	#col1.docked {top:150px;}
+
+	#col1.land ~ #col3 {margin-right:3%; width:97%;}
+	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%;}
+	#col2 .updatedDate {position:relative; top:0; left:0;}
+}
+
+/*Left Col
+===========*/
+#col1 h3 {font-size:1.25em; @extend .underline; line-height:1.3;}
+
+/*Global*/
+.box.icons 						{/*margin-right:0;*/ padding:0;}
+.icons ul 						{margin:0;}
+.icons a 							{margin:2% 0 4% 0; padding:3%; text-shadow:1px 1px 1px #ccc; display:block; background:#ececec; border-bottom:1px solid #ececec; border-radius:3px;}
+.box.icons a:hover 		{-webkit-transform:scale(1.1) translateX(0.5em); -ms-transform:scale(1.1) translateX(0.5em); transform:scale(1.1) translateX(0.5em);}
+
+/*Department dropdown*/
+.box.depts {margin:0; padding:0; overflow:visible;}
+#deptSelector select, .depts select {display:none;}
+
+/* General dropdown styles */
+.dropdown {@extend .icons; position:relative;}
+.dropdown .arrow {float:right; margin:5%; border-color:$link transparent transparent transparent; border-width:10px 8px 0;}
+.dropdown a, .dropdown a:hover {margin:2% 0; font-size:1.3em; cursor:pointer;}
+.dropdown a:hover .arrow {border-color:$green transparent transparent transparent;}
+.related .dropdown a {font-size:1em; /*background:#ede8B0;*/}
+.related .dropdown .arrow {margin:1%; border-color:$link transparent transparent transparent;}
+.related .dropdown a:hover .arrow {border-color:$green transparent transparent transparent;}
+.dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5px #666; overflow:hidden;}
+.dropdown ul:after {content:''; display:inline-block; border-left:9px solid transparent; border-right:9px solid transparent; border-bottom:9px solid #fff; position:absolute; top:39px; left:105px;}
+#col3 .dropdown ul:after {border-bottom:none;}
+.dropdown li a, .dropdown li a:hover {padding:0 0 0 5px; font-size:1em; background:#fff; text-shadow:none;}
+
+.dropdown .fixed {position:relative;}
+
+/*Left Nav*/
+.leftnav li 					{margin:0 0 0.5em 0;}
+
+/*Right Col
+============*/
+/*New related - july 2013*/
+.box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {margin:2% 0 4%; padding:0 1% 2%; position:relative; overflow:hidden;}
+.related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:0.5em 0.5em 0.25em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:none; line-height:1;}
+#popularPages h2, #popularSearch h2 {@extend .h3;}
+.related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul, .open ul, .council ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; border-left:1px solid #ddd; border-right:1px solid #ddd; /*box-shadow:0 3px 5px #999;*/}
+.related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li, .open li, .council li {margin:0; padding:2% 4%; background:$offwhite;}
+#col3 .mainarticlelinks li, #col3 .maineventslinks li {min-height:4em;}
+.content .related a {text-decoration:none;}
+.primary h3, .primary ul {background:$teal;}
+
+#col2Large #popularPages {float:left; margin:0 1%; padding:0; width:54%;}
+
+.govdelivery h3 		{/*font-size:1.1em;*/ background:$green;}
+.govdelivery ul	 		{background:#d9decf;}
+/*.govdelivery a 			{color:$green;
+	&:visited					{color:lighten($link, 10%);}
+}*/

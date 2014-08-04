@@ -1,21 +1,14 @@
-/* ----------------------------------------------------
-Description:		Global structural elements
-Created:				3.2.2012
-Last Modified:	4.8.2013 (cwg)
----------------------------------------------------- */
-
+/* Establish basic layout elements
+-------------------------------------------------------------- */
 * 		{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
 body 	{background:#efefef;}
 
-/* Establish basic layout elements.
--------------------------------------------------------------- */
-html, body, #Main, #Article, #sidebar, #Sidebar, #screenWrapper, .wrapper, #navigation, #Header, #Nav, #contentArea, #col1, #col2, #col3, #Footer
+html, body, #Main, #Article, #sidebar, #Sidebar, #navigation, #Header, #Nav, #contentArea, #col1, #col2, #col3, #Footer
 										{margin:0; padding:0;}
-.fixedwidth					{margin:0 auto; width:960px;}
+.fixedwidth					{margin:0 auto; width:960px;} // used in footer so can't change to % unless it is changed
 
-/* Text elements.
+/* Links
 -------------------------------------------------------------- */
-/*Link*/
 a			{color:$link; text-decoration:none; position:relative; @include transition(all, .25s, ease-in-out);
 	&:visited		{color:lighten($link, 10%);}
 	&:hover,
@@ -33,112 +26,151 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
   -webkit-transform: scaleX(1);
   				transform: scaleX(1);}
 
-/* Header elements.
--------------------------------------------------------------- */
-#navigation					{font-size:0.9em; background:#537ac1; @include gradient(#5c8fea, #537ac1); height:141px; /*for smooth fixed nav */}
-.ie9 #navigation 		{font-size:0.85em;}
+.content a:link, .content a:visited, table a:link 	{border-bottom:1px solid $link; text-shadow:none;}
+.content a:visited {border-bottom:1px solid lighten($link, 10%);}
+.content a:after {border:0;}
+// #contentArea a:hover {border-bottom:1px solid $green;}
+.section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
 
-#Header 						{height:95px; overflow:hidden; position:relative; color:#fff; background:url(images/Skyline1.png) top left no-repeat; background-position:30% 50%; @extend .fixedwidth;}
-#Header a						{color:#fff; line-height:20px;}
-#Header a:hover			{border:0;}
-
-#CitySeal						{width:45%; cursor:pointer;}
-.logo 							{float:left; margin:5px; width:85px; -webkit-filter:drop-shadow(1px 1px 5px #333); filter:drop-shadow(1px 1px 5px #333);}
-.raleigh 						{margin:0.6em 0 0 0.2em; font-size:2.2em; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; display:inline; position:absolute; text-shadow:1px 1px 3px #111; color:#fff; @include transition(all, .5s, ease-in-out);}
-.raleigh:hover			{cursor:pointer;
-	-webkit-transform: scale(1.25) translate(0.5em);
-  				transform: scale(1.25) translate(0.5em);}
-
-.utility, #SearchBox {position:absolute; right:2%;}
-
-.utility 						{top:10%; font-size:0.8em; display:none;}
-.utility li 				{float:left; padding-right:2em;}
-.utility li:last-child {border-right:none;}
-.utility li:first-child a {@extend .icon-location;}
-.utility li:nth-child(2) a {@extend .icon-user;}
-.utility li:nth-child(3) a {@extend .icon-calendar;}
-.utility li:last-child a {@extend .icon-mail;}
-
-#SearchBox 					{bottom:15%; right:0; width:35%;}
-#SearchBox label    {@extend .ally;}
-#SearchInput 				{float:left; margin:0 0 0 1%; padding:5px; width:70%; border:1px solid #ddd; border-bottom:1px solid #aaa; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
-#SearchInput:focus	{box-shadow:0 0 5px rgba(81, 203, 238, 1);}
-#SearchInput::-webkit-input-placeholder, #SearchInput::-moz-placeholder, #SearchInput:-ms-input-placeholder {font-weight:normal;}
-#SearchBox .action 	{float:left; margin:-1px 0; padding:7px; width:20%; font-size:1em; font-weight:300; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; /*@extend .icon-search;*/}
-#Search .action			{@include gradient(#DD4B39, darken(#DD4B39, 15%));}
-.ie8 .icon-search:before {content:"Search";}
-
-/* Main navigation elements.
--------------------------------------------------------------- */
-#Nav 								{float:left; width:100%; border-top:1px solid #333; z-index:100; box-shadow:0 1px 2px #777; @include transition(all, .5s, linear); @include gradient(#555554, #111112);}
-#Nav ul 						{@extend .fixedwidth; @include transition(all, .15s, ease-in-out);}
-#Nav ul.visible			{display:block; @include transition(all, .15s, ease-in-out);}
-#Nav li 						{float:left; /*width:12%;*/ height:45px; text-align:center; border-left:1px solid #666; @include transition(background, .2s, ease-in-out);}
-// #Nav li:first-child {width:5%;}
-// #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
-.current 						{@include gradient($link, lighten($link, 10%));}
-#Nav a 							{padding:0 14px; color:#fff; /*font-size:1.1em;*/ line-height:45px; text-shadow:1px 1px 3px #111; text-decoration:none;}
-#Nav a:hover				{border:0;}
-#Nav li:hover				{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
-.current a:hover, .current:hover a {color:#fff;}
-#Nav li:first-child {border-left:none;}
-@media only screen and (min-width:1em) {
-	#Nav li:first-child > a:before {content: "\e608"; line-height:42px; font-size:1.5em; vertical-align:sub;}
+@-webkit-keyframes fadein {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+@keyframes fadein {
+	0% {opacity:0;}
+	100% {opacity:1;}
 }
 
-#Nav #Lines, #Nav #Lines:active	{float:left; margin:0.5%; line-height:30px; font-size:1.1em; padding:0 1%; font-weight:normal;}
-#Nav #Lines:hover {border:1px solid #666;}
-#Home, #Glass	{@extend .icon-home; display:none; font-weight:700;}
-#Glass {@extend .icon-search;}
-#Lines.display {display:none;}
+/*Pages*/
+.content {margin:0 auto; min-width:10em; max-width:50em; padding:1% 2%; /*-webkit-animation:fadein 1s linear; animation:fadein 1s linear;*/}
+#Article .content {padding:0;}
+span.updatedDate {}
+div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd; position:relative;}
+#addThisButtons	{position:absolute; right:10px; top:110px; display:none;}
+.box.ratings {clear:both;}
+.ratings li {display:inline-block;}
+.comments textarea {width:50%;}
+.ratings input, .comments input {width:7em; height:3em;}
+#col1Large {position:relative;}
+.updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
+.pagetitle {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:2% 2% 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.sectiontitle {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 2px 4px #aaa; border:1px solid #ddd; @include gradient(#ddddde, #cccccd);}
+.content h1 {@extend .pagetitle;}
+// h1 {position:absolute; top:0; left:0; width:141%; padding-top:1%; @extend .pagetitle;}
+.findmyservice, .calendar h1 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.shortdesc, .content h1 + h3 {font-style:italic; color:#666;}
+.park {border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
+label {display:block; @extend .quiet;}
+iframe 	{@extend .outline; background:$offwhite;}
+.youtube, .frame {margin:1%; height:0; position:relative; padding-bottom:56.25%;}
+.half.youtube {padding-bottom:33%;}
+.third.youtube {padding-bottom:25%;}
+.youtube img {@extend .outline; cursor:pointer; position:absolute !important;}
+.youtube iframe, .frame iframe, .youtube img {position:absolute; top:0; left:0; width:100%; height:100%;}
+.frame {padding-bottom:75%;}
 
-@-webkit-keyframes slidein {
-	0% {-webkit-transform:translateX(110%); transform:translateX(110%);}
-	100% {-webkit-transform:translateX(0%); transform:translateX(0%);}
+@media only screen and (min-width:95em) {
+	.content {font-size:1.1em; max-width:52em;}
+	.fixedwidth {width:80%; max-width:1220px;}
+	.slider, .newslider-horizontal .sliderkit-panels {padding-bottom:60%;}
+	.largeimage .photoslider-1click-slideshow img {height:482px;}
+	.newslider-horizontal .sliderkit-nav-clip li a {width:15px; height:15px;}
 }
-@keyframes slidein {
-	0% {-webkit-transform:translateX(110%); transform:translateX(110%);}
-	100% {-webkit-transform:translateX(0%); transform:translateX(0%);}
+
+@media only screen and (min-width:40em) and (max-width:60em) {
+	body {line-height:1.5;}
+	#screenWrapper, .wrapper{width:auto; overflow:hidden; border:0;}
+	.fixedwidth {width:100%;}
+	#addThisButtons {display:none;}
+	.icons {font-size:0.9em;}
+	.videos {width:51%;}
+	.slider .newslider-horizontal .sliderkit-nav-clip li a {width:1em;height:1em;}
+	.fixed, #Nav {bottom:0; top:auto;}
+	.org ul {display:block; width:100%;}
+	.content ul.individual {display:inline-block; width:48%;}
 }
 
-/* Main content areas.
+@media only screen and (max-width:40em) {
+	html {-webkit-text-size-adjust:none;}
+	body {line-height:1.4;}
+	#contentArea {-webkit-hyphens:auto; -moz-hyphen:auto; -ms-hyphens:auto; hyphens:auto;}
+	.fixedwidth {width:100%;}	
+	#storyContentWrapper {padding:0;}
+	.content ul, .content ol {clear:both;}
+	#right > div, .mainarticlelinks, .maineventslinks, #sidebar .mainarticlelinks, #sidebar .maineventslinks, .videos, .open, .council, .half, .content .map, #footer {clear:both; float:none; margin:0.5%; padding:2%; width:99%; display:block;}
+	.callout, .content .callout, #col2 .contact {margin:1%; /*padding:1%; width:90%;*/}
+	.smallimage, .section .smallimage {float:none; width:100%;}
+	.largeimage .photoslider-1click-slideshow img, .smallimage .photoslider-1click-slideshow img {max-height:500px;}
+	.content {max-width:40em;}
+	.slider .newslider-horizontal .sliderkit-nav-clip li a {width:1em;height:1em;}
+	.slider .newslider-horizontal .sliderkit-panels{margin-bottom:6%;}
+	.slider .newslider-horizontal .sliderkit-panel-textbox, .slider .newslider-horizontal .sliderkit-panel-overlay {padding-bottom:25%;}
+	.slider {margin-bottom:20px;}
+	#col2 .sliderkit-news-readmore, #col2 .sliderkit-panel-text {font-size:1em;}
+	.slideshow .photoslider-1click-slideshow .sliderkit-panel .sliderkit-panel-textbox {font-size:0.8em;}
+	.section img, .images, .bcimage {width:98%;}
+	.section img.left, .section img.right {margin:10px 0;}
+	.contact img.left {float:right;}
+	.section h3 img {width:auto;}
+	.landing {font-size:1.2em;}
+	.org ul, .content ul.individual {display:block; width:100%;}
+	.mainRss {top:12px;}
+	.scroll {overflow:hidden;}
+	.newsList a.more, .eventsList a.more {display:block;}
+	thead {position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
+	tr, td {display:block; text-align:right; border:0;}
+	td[data-title]:before {content: attr(data-title); float:left; font-size:0.9em; font-style:italic;}
+  .third, .half {width:99%;}
+  .youtube, .half.youtube, .third.youtube {padding-bottom:56.25%;}
+  .contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {clear:both; width:100%;}
+	@-ms-viewport {width:device-width;}
+}
+
+/*Shares*/
+.sharing {position:absolute; top:-2px; right:0;}
+.content a.tweets {background:#00acee; color:#fff; text-decoration:none; padding:1%; border-radius:3px;}
+.content a.shares {background:#3b5998; color:#fff; text-decoration:none; padding:1%; border-radius:3px;}
+.sharing .count {background:#fff; border:1px solid #aaa; color:#aaa; padding:0 3%;}
+.sharing iframe {padding:0; background:transparent; box-shadow:none; border:none;}
+
+
+/*Generic classes
 -------------------------------------------------------------- */
-#contentArea, #Main, #Search {padding:2% 1%; overflow:hidden; @extend .fixedwidth; background:#fff; box-shadow:0 2px 3px #aaa;}
+.cf							{overflow:hidden;}
+.clear 					{clear:both; margin:0;}
+.hidden 				{display:none;}
+.left 					{float:left;}
+.right 					{float:right;}
+.middle 				{vertical-align:middle;}
+.first 					{margin-left:0; padding-left:0;}
+.last 					{margin-right:0; padding-right:0; border-right:none;}
+.fifth					{width:19%;}
+.fourth					{width:24%;}
+.third 					{width:32%;}
+.half 					{width:49.5%;}
+.twothirds			{width:64%;}
+.small 					{width:25%;}
+.medium					{width:50%;}
+.large					{width:78%;}
+.full						{width:99%;}
+.align-justify	{text-align:justify;}
+.align-left			{text-align:left;}
+.align-center		{text-align:center;}
+.align-right		{text-align:right;}
+.fixed					{position:fixed; top:0; left:0;}
+.notfixed				{position:relative;}
+.line, hr 			{clear:both; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd; border:0;}
+.formbox				{padding:0 2%; font-size:1.1em;}
+img 						{border:0; max-width:100%;}
+.action, .action:visited 	{margin:5%; padding:6px 18px; border:1px solid #666; border-radius:2px; text-shadow:0 1px rgba(0, 0, 0, 0.1); color:#fff; font-size:1.1em; font-weight:700; @include gradient(#B2B2B2, #666665);}
+.action:hover 	{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(#666665, #B2B2B2);}
+.action:active 	{box-shadow:inset 0 1px 2px rgba(0,0,0,0.3)}
+.action img			{display:none;}
+.toggle 				{@extend %inlineblock; cursor:pointer; opacity:0.5; -webkit-filter:#{'grayscale(100%)'};}
+.toggle:hover		{@extend .active;}
+.active 				{opacity:1; -webkit-filter:#{'grayscale(0%)'};}
 
-#col1 						{width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; z-index:50; background:$offwhite; border-radius:3px; border:1px solid #ddd; /*box-shadow:0 2px 3px #999;*/ @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
-#col1.menu				{margin:0; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
-#col1.docked 			{top:35px;}
-#col1.land				{margin:0 1.5%; width:19%; float:left; position:static;}
-#col2 						{float:left; position:relative; margin:0; width:70%;}
-#col3 						{float:right; width:30%; padding:0; /*-webkit-animation:slidein 0.5s ease; animation:slidein 0.5s ease;*/}
-#col1.land ~ #col2, #col1.land ~ #col3 {width:78%;}
-#col1.land ~ #col3 #right > div {float:left; width:39%; margin-left:1%;}
-#Article 					{float:left; margin:0 0 0 1%; padding:1%; width:70%; min-height:540px; position:relative;}
-#Sidebar, #sidebar 	{float:left; width:29%; padding:0.5% 0 0 1%;}
-
-/* Footer elements.
--------------------------------------------------------------- */
-/*Accolades*/
-.box.accolades 		{margin:0; padding:1%; font-size:0.9em; border-bottom:1px solid lighten(#80aeb5, 20%); border-top:1px solid lighten(#80aeb5, 20%); text-align:center; position:relative; box-shadow:0 2px 3px #999; @include gradient(darken(#80aeb5, 5%), darken(#80aeb5, 15%));}
-.accolades h3     {color:#ddd; text-shadow:1px 1px 1px #333; margin:0;}
-.accolades h2		 	{font-size:2em; position:relative; color:#fff; text-shadow:1px 1px 3px #111;}
-.accolades a			{text-decoration:none; @extend .action;}
-.wrapper .accolades a {margin:0; font-size:0.9em; float:none;}
-
-/*Footer*/
-#Footer 					{margin:0 auto; padding:1%; text-align:center; font-size:0.85em; color:#fff; position:relative; @include gradient(#222223, #555556);}
-#Footer .logo 		{margin-left:40%;}
-#Footer h3			 	{color:#ccc; text-shadow:1px 1px 1px #333;}
-#Footer a, .copyright a {color:#fff;}
-#Footer .icon-mail-2 {background:$green; border-radius:10px; padding:8px 6px 10px 11px; font-size:0.8em;}
-#Footer .action {padding-top:3px; color:#fff; border:1px solid $green; box-shadow:0 4px 0 darken($green, 10%); @include gradient(lighten($green, 15%), $green);}
-.socialmedia 			{width:185px; margin:0 auto;}
-#Footer .socialmedia a:hover {text-decoration:none;}
-.socialmedia img 	{float:left; margin-right:5px; border-radius:20px; box-shadow:0px 1px 2px #666;}
-.bow 							{border-radius:3px; box-shadow:0px 1px 2px #666; width:110px; opacity:0.9; vertical-align:middle;}
-.legal						{clear:both; margin-bottom:0; /*padding-bottom:20px;*/}
-.legal li 				{display:inline; margin:0 10px;}
-#google_translate_element {margin-top:15px; /*position:absolute; right:1%; top:0;*/}
-#Footer .goog-te-gadget 	{font-size:0;}
-.goog-te-gadget span {display:none;}
-.copyright 				{background:#333; color:#fff; text-align:center; font-size:0.8em; margin-bottom:0; padding-bottom:10px;}
+/*OOCSS - start using % for placeholders not needed in compiled css*/
+.dotted					{border-bottom:1px dotted #ddd;}
+.underline			{border-bottom:1px solid #ddd;}
+%inlineblock 		{display:inline-block; vertical-align:top;}

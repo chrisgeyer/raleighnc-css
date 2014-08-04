@@ -6,10 +6,26 @@ $offwhite:#f7f7f7;
 $teal:#82a3ad;
 
 @mixin gradient ($start:#ffffff, $stop:#ffffff) {
-	background-color:mix($start, $stop);
-	background-image:linear-gradient(to bottom, $start, $stop);
+	background:mix($start, $stop);
+	background:linear-gradient(to bottom, $start, $stop);
 }
 
 @mixin transition ($property, $time, $method) {
 	transition:$property $time $method;
+}
+
+// desktop first default, need to switch to mobile first and add desktop bp
+@mixin bp($point) {
+  @if $point == wide {
+    @media only screen and (min-width: 95em) { @content; }
+  }
+  @if $point == desktop {
+    @media only screen and (min-width: 60em) { @content; }
+  }
+  @else if $point == tablet {
+    @media only screen and (min-width:40em) { @content; }
+  }
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
 }
