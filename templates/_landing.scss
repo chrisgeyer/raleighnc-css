@@ -30,6 +30,12 @@
 	#Grid li {font-size:1em;}
 }
 
+@media only screen and (max-width:40em) {
+	.eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation, .calendar {width:100%;}
+	.newseventlocation li {display:inline;}
+	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
+}
+
 /*News List*/
 .mainarticlelinks {display:inline-block; margin:2% 0 4% 1%; padding:0 1%; width:58%; position:relative; vertical-align:top;}
 #col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.25em; line-height:1; border-radius:5px 5px 0 0; box-shadow:none;}

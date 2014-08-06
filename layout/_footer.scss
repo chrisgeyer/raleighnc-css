@@ -1,9 +1,10 @@
 /* Footer elements.
 -------------------------------------------------------------- */
 /*Accolades*/
-.box.accolades 		{margin:0; padding:1%; font-size:0.9em; border-bottom:1px solid lighten(#80aeb5, 20%); border-top:1px solid lighten(#80aeb5, 20%); text-align:center; position:relative; box-shadow:0 2px 3px #999; @include gradient(darken(#80aeb5, 5%), darken(#80aeb5, 15%));}
-.accolades h3     {color:#ddd; text-shadow:1px 1px 1px #333; margin:0;}
-.accolades h2		 	{font-size:2em; position:relative; color:#fff; text-shadow:1px 1px 3px #111;}
+.box.accolades 		{margin:0; font-size:0.9em; border-bottom:1px solid lighten(#80aeb5, 20%); border-top:1px solid lighten(#80aeb5, 20%); text-align:center; position:relative; box-shadow:0 2px 3px #999; @include gradient(darken(#80aeb5, 5%), darken(#80aeb5, 15%));
+	@include bp(tablet) {padding:1%;} }
+.accolades h3     {color:#ddd; text-shadow:1px 1px 1px #333;}
+.accolades h2		 	{position:relative; color:#fff; text-shadow:1px 1px 3px #111;}
 .accolades a			{text-decoration:none; @extend .action;}
 .wrapper .accolades a {margin:0; font-size:0.9em; float:none;}
 
@@ -21,21 +22,21 @@
 #google_translate_element {margin-top:15px; /*position:absolute; right:1%; top:0;*/}
 #Footer .goog-te-gadget 	{font-size:0;}
 .goog-te-gadget span {display:none;}
-.copyright 				{background:#333; color:#fff; text-align:center; font-size:0.8em; margin-bottom:0; padding-bottom:10px;}
+.copyright 				{background:#333; color:#fff; text-align:center; font-size:0.8em; margin-bottom:0; padding-bottom:1em;}
 
 @media only screen and (min-width:95em) {
-	.utility, .dropdown, #Footer .logo {display:block;}
+	.dropdown, #Footer .logo {display:block;}
 }
 
 @media only screen and (min-width:40em) and (max-width:60em) {
-	.accolades, #accolade {padding-bottom:3%;}
 	.copyright {padding-bottom:100px;}
 }
 
 @media only screen and (max-width:40em) {
-	.accolades h3, #accldePre {text-align:center;}
-	.accolades h2, .accolades h2:hover, #accolade h2, #accolade h2:hover {font-size:2em;}
-	.wrapper .accolades a {margin-bottom:5px;}
-	#Footer ul, #footer ul {clear:both; width:100%; text-align:center;}
+	// .accolades h3, #accldePre {text-align:center;}
+	// .accolades h2, .accolades h2:hover, #accolade h2, #accolade h2:hover {font-size:2em;}
+	// .wrapper .accolades a {margin-bottom:5px;}
+	#Footer ul {clear:both; width:100%; text-align:center;}
 	.bow {top:5px; left:5px; width:65px;}
+	#google_translate_element, .rsssharing, #col3:before, .box.depts .dropdown, .sharing {display:none;}
 }

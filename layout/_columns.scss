@@ -17,7 +17,7 @@
 	#col1.land ~ #col3 #right > div:nth-child(1) {width:58%;}
 }
 @media only screen and (min-width:95em) {
-	.utility, .dropdown, #Footer .logo {display:block;}
+	.dropdown, #Footer .logo {display:block;}
 	.box.depts {position:absolute; top:96px; z-index:150; margin-left:-36px;}
 	.dropdown > a, .dropdown > a:hover {border:0; border-radius:0;}
 	.dropdown a, .dropdown a:hover {background:transparent; color:#fff; font-size:1.1em; text-shadow:1px 1px 3px #111; margin:0; padding:6.5%; width:151px; display:inline-block;}

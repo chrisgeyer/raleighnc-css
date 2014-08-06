@@ -6,8 +6,8 @@
 
 #Header 						{overflow:hidden; position:relative; background:url(images/Skyline1.png); background-position:50%; @extend .fixedwidth;
 	@include bp(tablet) {height:80px; background-position:0 40%; box-shadow:0 3px 5px #aaa;}
-	@include bp(desktop) {height:95px;}
-	@include bp(wide){background-repeat:no-repeat;} }
+	@include bp(desktop) {height:95px; box-shadow:none;}
+	@include bp(wide){background-repeat:no-repeat; box-shadow:none;} }
 
 // #Header a:hover			{border:0;}
 
@@ -15,20 +15,23 @@
 .logo 							{vertical-align:middle; cursor:pointer; -webkit-filter:drop-shadow(1px 1px 5px #333); filter:drop-shadow(1px 1px 5px #333);
 	@include bp(tablet) {width:70px;}
 	@include bp(desktop) {width:85px;} }
-#Header .logo				{display:none;
-	@include bp(desktop) {display:inline;} }
+#Header .logo				{display:none; position:absolute; right:3%; margin:0; padding:0; width:60px;
+	@include bp(desktop) {display:inline;}
+	@include bp(wide) {display:none;} }
 #Footer .logo				{display:block;}
 .raleigh 						{font-size:3em; padding-left:0.25em; color:#fff; display:inline; vertical-align:middle; text-shadow:1px 1px 3px #111; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", serif; transition:all, .5s, ease-in-out;
-	@include bp(desktop) {font-size:2.2em;} }
+	@include bp(desktop) {font-size:2.2em;}
+	@include bp(wide) {display:block; padding-top:0.5em;} }
 .raleigh:hover			{cursor:pointer;
 	-webkit-transform: scale(1.25) translate(0.5em);
 			-ms-transform: scale(1.25) translate(0.5em);
   				transform: scale(1.25) translate(0.5em);}
   				// check to see if this can keep state after 1s on hover rather than revert
 
-#SearchBox 					{position:absolute; bottom:15%; right:0; width:100%;
-	@include bp(tablet) {bottom:25px; width:44%;}
+#SearchBox 					{visibility:hidden; position:fixed; top:85px; right:9%; width:60%; transition:all, .4s, ease-in-out;
+	@include bp(tablet) {position:absolute; top:auto; right:0; bottom:25px; width:44%; visibility:visible;}
 	@include bp(desktop) {width:35%;} }
+#SearchBox.visible {visibility:visible; -webkit-transform:translateX(-5%);}
 #SearchBox label    {@extend .ally;}
 #SearchInput 				{float:left; margin:0 0 0 1%; padding:5px; width:70%; border:1px solid #ddd; border-bottom:1px solid #aaa; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
 #SearchInput:focus	{box-shadow:0 0 5px rgba(81, 203, 238, 1);}
@@ -40,15 +43,6 @@
 .utility {display:none;}
 
 @media only screen and (max-width:40em) {
-	#addThisButtons, #accldeMore, #google_translate_element, .rsssharing, #col3:before, .box.depts .dropdown, .sharing {display:none;}
-	.eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation, .calendar {width:100%;}
-	.newseventlocation li {display:inline;}
-	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
-	#SearchInput {font-size:1.2em}
-	.logo {display:block; position:absolute; right:3%; margin:0; padding:0; width:60px;}
-
-	#SearchBox {visibility:hidden; position:fixed; top:110px; right:9%; width:60%; @include transition(all, .4s, ease-in-out);}
-	#SearchBox.visible {visibility:visible; -webkit-transform:translateX(-5%);}
 	/*.wrapper.push {@include transition(all, 1s, ease);
 		-webkit-transform:translateX(50%);
 				-ms-transform:translateX(50%);
