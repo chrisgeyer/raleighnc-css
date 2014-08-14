@@ -4,7 +4,7 @@
 	@include bp(desktop){height:141px;} }
 .ie9 #navigation 		{font-size:0.85em;} //for large ie9 home icon
 
-#Header 						{overflow:hidden; position:relative; background:url(images/Skyline1.png); background-position:50%; @extend .fixedwidth;
+#Header 						{overflow:hidden; position:relative; background:url(images/Skyline1.png) no-repeat; background-position:50%; @extend .fixedwidth;
 	@include bp(tablet) {height:80px; background-position:0 40%; box-shadow:0 3px 5px #aaa;}
 	@include bp(desktop) {height:95px; box-shadow:none;}
 	@include bp(wide){background-repeat:no-repeat; box-shadow:none;} }
@@ -13,10 +13,9 @@
 
 // #CitySeal						{width:45%; cursor:pointer;}
 .logo 							{vertical-align:middle; cursor:pointer; -webkit-filter:drop-shadow(1px 1px 5px #333); filter:drop-shadow(1px 1px 5px #333);
-	@include bp(tablet) {width:70px;}
-	@include bp(desktop) {width:85px;} }
+	@include bp(tablet) {width:70px;} }
 #Header .logo				{display:none; position:absolute; right:3%; margin:0; padding:0; width:60px;
-	@include bp(desktop) {display:inline;}
+	@include bp(desktop) {display:inline; position:static; width:85px;}
 	@include bp(wide) {display:none;} }
 #Footer .logo				{display:block;}
 .raleigh 						{font-size:3em; padding-left:0.25em; color:#fff; display:inline; vertical-align:middle; text-shadow:1px 1px 3px #111; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", serif; transition:all, .5s, ease-in-out;
@@ -25,12 +24,16 @@
 .raleigh:hover			{cursor:pointer;
 	-webkit-transform: scale(1.25) translate(0.5em);
 			-ms-transform: scale(1.25) translate(0.5em);
-  				transform: scale(1.25) translate(0.5em);}
+  				transform: scale(1.25) translate(0.5em);
+  @include bp(wide) {-webkit-transform: scale(1.25) translate(3.75em);
+			-ms-transform: scale(1.25) translate(3.75em);
+  				transform: scale(1.25) translate(3.75em);} }
   				// check to see if this can keep state after 1s on hover rather than revert
 
-#SearchBox/*, #Glass*/ 		{/*visibility:hidden;*/ position:fixed; overflow:hidden; /*top:85px; right:9%;*/ width:0; -webkit-transform: translate(8em, 1em); transition:all, .4s, ease-in-out; 
-	@include bp(tablet) {position:absolute; top:auto; right:0; bottom:25px; width:44%; visibility:visible;}
-	@include bp(desktop) {width:35%;} }
+#SearchBox/*, #Glass*/ 		{/*visibility:hidden;*/ position:fixed; overflow:hidden; /*top:85px; right:9%;*/ width:0; -webkit-transform:translate(8em, 1em); -ms-transform:translate(8em, 1em); transform:translate(8em, 1em); transition:all, .4s, ease-in-out; 
+	@include bp(tablet) {position:static; width:44%; -webkit-transform:translate(36.5em, -3.5em); -ms-transform:translate(36.5em, -3.5em); transform:translate(36.5em, -3.5em);}
+	@include bp(desktop) {width:30%; -webkit-transform:translate(40em, -3.75em); -ms-transform:translate(40em, -3.75em); transform:translate(40em, -3.75em);}
+	@include bp(wide) {width:25%; -webkit-transform:translate(55em, -1.5em); -ms-transform:translate(55em, -1.5em); transform:translate(55em, -1.5em);} }
 #SearchBox.visible {width:70%;}
 #SearchBox label    {@extend .ally;}
 #SearchInput 				{/*float:left;*/ margin:0; padding:0.3em; width:75%; vertical-align:middle; border:1px solid #ddd; border-bottom:1px solid #aaa; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}

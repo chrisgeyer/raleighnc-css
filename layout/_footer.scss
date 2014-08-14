@@ -10,6 +10,7 @@
 
 /*Footer*/
 #Footer 					{margin:0 auto; padding:1%; text-align:center; font-size:0.85em; color:#fff; position:relative; @include gradient(#222223, #555556);}
+#Footer > div 		{@extend .fixedwidth;}
 #Footer .logo 		{margin-left:40%;}
 #Footer h3			 	{color:#ccc; text-shadow:1px 1px 1px #333;}
 #Footer a, .copyright a {color:#fff;}
