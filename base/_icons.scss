@@ -81,11 +81,11 @@
 	.icon-DSFaceToFace:before {content: "\e626"; @extend .icon-DS;}
 	.icon-DSCurrentDevelopment:before {content: "\e627"; @extend .icon-DS;}
 	.icon-book:after {content: "\e620"; margin-left:0.25em; font-size:1em; color:$teal;}
-	.icon-facebook:before {content: "\e611"; color:#3B5999; font-size:2.25em; border-radius:15px;}
-	.icon-twitter:before {content: "\e612"; font-size:2.25em; background:#4099FF; border-radius:15px;}
-	.icon-youtube:before {content: "\e609"; font-size:2.5em; color:#CD332D; display:inline-block; width:34px; height:30px; border-radius:15px;}
-	.icon-flickr:before {content: "\e614"; font-size:2.25em; border-radius:15px; color:#fff; background-image: linear-gradient(to right, #0062da 50%, #ff0084 50%);                      
-	        background-size: 80% 80%; background-position:center; background-repeat: no-repeat;}
+	.icon-facebook:before {content: "\e611"; /*color:#3B5999;*/ font-size:2.25em; border-radius:15px;}
+	.icon-twitter:before {content: "\e612"; font-size:2.25em; /*background:#4099FF;*/ border-radius:15px;}
+	.icon-youtube:before {content: "\e609"; font-size:2.5em; /*color:#CD332D;*/ display:inline-block; width:34px; height:30px; border-radius:15px;}
+	.icon-flickr:before {content: "\e614"; font-size:2.25em; border-radius:15px; color:#fff; /*background-image: linear-gradient(to right, #0062da 50%, #ff0084 50%);                      
+	        background-size: 80% 80%; background-position:center; background-repeat: no-repeat;*/}
 	.icon-feed:after {content: "\e613"; color:$orange; padding:0 5px; font-size:0.9em; text-shadow:1px 1px 1px #ccc;}
 	.icon-google-plus:before {content: "\e610";}
 	.icon-linkedin:before {content: "\e603";}
