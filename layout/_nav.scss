@@ -1,23 +1,26 @@
 /* Main navigation elements.
 -------------------------------------------------------------- */
-#Nav 						{float:left; width:100%; z-index:100; box-shadow:0 1px 2px #777; @include transition(all, .5s, linear); @include gradient(#555554, #111112);
-	@include bp(tablet) {position:fixed; left:0;} }
+#Nav 						{float:left; width:100%; z-index:100; box-shadow:0 1px 2px #777; @include transition(all, .5s, linear); background:#333;
+	@include bp(tablet) {@include gradient(#555554, #111112); position:fixed; left:0;} }
 #Nav ul					{display:none; margin:0; clear:both; border-top:1px solid #999; width:50%; float:right; transition:display, .15s, cubic-bezier(0,1.12,.39,.98); @extend .fixedwidth;
 	@include bp(tablet) {display:block; margin-left:15%; width:85%;}
 	@include bp(desktop) {display:block; border:0; float:none; margin:0 auto; width:80%;} 
 	@include bp(wide) {display:block; border:0; float:none; padding-left:75px;} }
 #Nav ul.visible	{display:block;}
-#Nav li 				{width:100%; border-left:1px solid #999; border-bottom:1px solid #999; text-align:center;
+#Nav li 				{border-left:1px solid #999; border-bottom:1px solid #999; text-align:center;
 	@include bp(tablet) {float:left; width:25%;}
-	@include bp(desktop) {width:11%; height:45px; border:0; @include transition(background, .2s, ease-in-out);} }
+	@include bp(desktop) {width:auto; border:0; @include transition(background, .2s, ease-in-out);} }
 #Nav li:first-child {display:none;
-	@include bp(desktop) {display:block; width:4.5%;} }
+	@include bp(desktop) {display:inline-block;} }
+#Nav li:first-child a {
+	@include bp(desktop) {padding:0.25em;} }
 #Nav li:nth-child(5) {font-size:0.75em;
-	@include bp(tablet) {border-right:none; font-size:0.9em;}
-	@include bp(desktop) {width:17%;} }
+	@include bp(tablet) {border-right:none; font-size:1em;}
+	@include bp(desktop) {/*width:17%;*/} }
 // #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
 .current 				{@include gradient($link, lighten($link, 10%));}
-#Nav a 					{padding:0 14px; color:#fff; /*font-size:1.1em;*/ line-height:45px; text-shadow:1px 1px 3px #111; text-decoration:none;}
+#Nav a 					{color:#fff; text-shadow:1px 1px 3px #111; text-decoration:none;}
+#Nav li a 			{padding:1.1em 0.75em; display:inline-block;}
 #Nav a:hover		{border:0;}
 #Nav li:hover		{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
 .current a:hover, .current:hover a {color:#fff;}
