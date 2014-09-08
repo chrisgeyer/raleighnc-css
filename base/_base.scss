@@ -15,9 +15,9 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 	&:hover,
 	&:focus 		{color:$green; @include transition(all, .25s, ease-in-out);}
 	&:active 		{top:1px;/*
-	-webkit-transform: translateX(2px);
-			-ms-transform: translateX(2px);
-			 		transform: translateX(2px);*/}
+	-webkit-transform: translate(2px);
+			-ms-transform: translate(2px);
+			 		transform: translate(2px);*/}
 }
 #contentArea a:before {content:''; position:absolute; width:100%; height:1px; bottom:-1px; left:0; background:$green; visibility:hidden;
   -webkit-transform: scaleX(0);
@@ -99,7 +99,7 @@ iframe 	{@extend .outline; background:$offwhite;}
 	.fixedwidth {width:100%;}	
 	#storyContentWrapper {padding:0;}
 	.content ul, .content ol {clear:both;}
-	#right > div, .mainarticlelinks, .maineventslinks, #sidebar .mainarticlelinks, #sidebar .maineventslinks, .videos, .open, .council, .half, .content .map, #footer {clear:both; float:none; margin:0.5%; padding:2%; width:99%; display:block;}
+	#right > div, .council, .half, .content .map, #footer {clear:both; float:none; display:block;}
 	.callout, .content .callout, #col2 .contact {margin:1%; /*padding:1%; width:90%;*/}
 	.smallimage, .section .smallimage {float:none; width:100%;}
 	.largeimage .photoslider-1click-slideshow img, .smallimage .photoslider-1click-slideshow img {max-height:500px;}
@@ -117,8 +117,6 @@ iframe 	{@extend .outline; background:$offwhite;}
 	.landing {font-size:1.2em;}
 	.org ul, .content ul.individual {display:block; width:100%;}
 	.mainRss {top:12px;}
-	.scroll {overflow:hidden;}
-	.newsList a.more, .eventsList a.more {display:block;}
 	thead {position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
 	tr, td {display:block; text-align:right; border:0;}
 	td[data-title]:before {content: attr(data-title); float:left; font-size:0.9em; font-style:italic;}

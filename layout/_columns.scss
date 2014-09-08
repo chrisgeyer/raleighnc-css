@@ -1,6 +1,6 @@
 /* Main content areas.
 -------------------------------------------------------------- */
-#contentArea, #Main, #Search {padding:2% 1%; overflow:hidden; @extend .fixedwidth; background:#fff; box-shadow:0 2px 3px #aaa;}
+#contentArea, #Main, #Search {padding:1em; overflow:hidden; @extend .fixedwidth; background:#fff; box-shadow:0 2px 3px #aaa;}
 
 #col1 						{width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; z-index:50; background:$offwhite; border-radius:3px; border:1px solid #ddd; /*box-shadow:0 2px 3px #999;*/ @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
 #col1.menu				{margin:0; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
@@ -9,7 +9,7 @@
 #col2 						{float:left; position:relative; margin:0; width:70%;}
 #col3 						{float:right; width:30%; padding:0; /*-webkit-animation:slidein 0.5s ease; animation:slidein 0.5s ease;*/}
 #col1.land ~ #col2, #col1.land ~ #col3 {width:78%;}
-#col1.land ~ #col3 #right > div {float:left; width:39%; margin-left:1%;}
+#col1.land ~ #col3 #right > div {float:left; width:39%;}
 #Article 					{float:left; margin:0 0 0 1%; padding:1%; width:70%; min-height:540px; position:relative;}
 #Sidebar, #sidebar 	{float:left; width:29%; padding:0.5% 0 0 1%;}
 
@@ -47,12 +47,15 @@
 	#col1.land ~ #col3 #right > div {float:none; width:100%;}
 	#col1.land ~ #col2 {width:70%;}
 	#col3 {padding-right:1%;}
-	#right > div {margin:1% 1% 0 0; padding:1%;}
+	// #right > div {margin:1% 1% 0 0; padding:1%;}
 	#Sidebar .empClose {display:none;}
 	#col1.land {float:none; margin-left:-20%; position:fixed;}
 	#col1.land.menu {margin-left:0;}
-	#col1.land ~ #col3 {margin-right:0; width:29%;}
-	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%;}
+	#col1.land ~ #col3 {margin-right:1%; width:99%;}
+	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {display:inline-block; width:49%; vertical-align:top}
+
+	#col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {width:100%; margin:0;}
+	#col2, #col1.land ~ #col2 {width:99%;}
 }
 
 @media only screen and (max-width:40em) {
@@ -66,7 +69,7 @@
 	#col1.land.menu {margin:0;}
 	#col1.docked {top:150px;}
 
-	#col1.land ~ #col3 {margin-right:3%; width:97%;}
+	#col1.land ~ #col3 {margin-right:1%; width:99%;}
 	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%;}
 	#col2 .updatedDate {position:relative; top:0; left:0;}
 }
@@ -106,7 +109,7 @@
 /*Right Col
 ============*/
 /*New related - july 2013*/
-.box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {margin:2% 0 4%; padding:0 1% 2%; position:relative; overflow:hidden;}
+.box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {/*margin:2% 0 4%; padding:0 1% 2%;*/ position:relative; overflow:hidden;}
 .related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:0.5em 0.5em 0.25em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:none; line-height:1;}
 #popularPages h2, #popularSearch h2 {@extend .h3;}
 .related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul, .open ul, .council ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; border-left:1px solid #ddd; border-right:1px solid #ddd; /*box-shadow:0 3px 5px #999;*/}
