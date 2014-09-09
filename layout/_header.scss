@@ -6,7 +6,7 @@
 .ie9 #navigation 		{font-size:0.85em;} //for large ie9 home icon
 
 #Header 						{overflow:hidden; position:relative; text-align:center; @extend .fixedwidth;
-	@include bp(tablet) {height:80px; background:url(images/Skyline1.png) no-repeat; background-position:0 40%; box-shadow:0 3px 5px #aaa;}
+	@include bp(tablet) {height:80px; background:url(images/Skyline1.png) no-repeat; background-position:0 40%; box-shadow:0 3px 5px #aaa; text-align:left;}
 	@include bp(desktop) {height:95px; box-shadow:none;}
 	@include bp(wide){background-repeat:no-repeat; box-shadow:none;} }
 
@@ -31,11 +31,11 @@
   				transform: scale(1.25) translate(3.75em);} }
   				// check to see if this can keep state after 1s on hover rather than revert
 
-#SearchBox/*, #Glass*/ 		{/*visibility:hidden;*/ position:fixed; overflow:hidden; /*top:85px; right:9%;*/ width:0; -webkit-transform:translate(8em, 1em); -ms-transform:translate(8em, 1em); transform:translate(8em, 1em); transition:all, .4s, ease-in-out; 
+#SearchBox/*, #Glass*/ 		{/*visibility:hidden;*/ position:fixed; overflow:hidden; /*top:85px; right:9%;*/ width:0; -webkit-transform:translate(0.75em, 0.75em); -ms-transform:translate(0.75em, 0.75em); transform:translate(0.75em, 0.75em); transition:all, .4s, ease-in-out; 
 	@include bp(tablet) {position:static; width:44%; -webkit-transform:translate(36.5em, -3.5em); -ms-transform:translate(36.5em, -3.5em); transform:translate(36.5em, -3.5em);}
 	@include bp(desktop) {width:30%; -webkit-transform:translate(40em, -3.75em); -ms-transform:translate(40em, -3.75em); transform:translate(40em, -3.75em);}
 	@include bp(wide) {width:25%; -webkit-transform:translate(55em, -1.5em); -ms-transform:translate(55em, -1.5em); transform:translate(55em, -1.5em);} }
-#SearchBox.visible {width:70%;}
+#SearchBox.visible {width:95%; z-index:200;}
 #SearchBox label    {@extend .ally;}
 #SearchInput 				{/*float:left;*/ margin:0; padding:0.25em; width:75%; vertical-align:middle; border:1px solid #ddd; border-bottom:1px solid #aaa; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
 #SearchInput:focus	{box-shadow:0 0 5px rgba(81, 203, 238, 1);}
@@ -47,11 +47,11 @@
 .utility {display:none;}
 
 @media only screen and (max-width:40em) {
-	/*.wrapper.push {@include transition(all, 1s, ease);
+	.wrapper.push {@include transition(all, 1s, ease);
 		-webkit-transform:translateX(50%);
 				-ms-transform:translateX(50%);
 						transform:translateX(50%);
-	}*/
+	}
 	
 	/*GSA Search - check why this is here?*/
 	#screenWrapper #Search h2, .wrapper #Search h2 {float:none;}
