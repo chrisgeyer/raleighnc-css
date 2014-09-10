@@ -116,7 +116,6 @@ iframe 	{@extend .outline; background:$offwhite;}
 	.section h3 img {width:auto;}
 	.landing {font-size:1.2em;}
 	.org ul, .content ul.individual {display:block; width:100%;}
-	.mainRss {top:12px;}
 	thead {position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
 	tr, td {display:block; text-align:right; border:0;}
 	td[data-title]:before {content: attr(data-title); float:left; font-size:0.9em; font-style:italic;}

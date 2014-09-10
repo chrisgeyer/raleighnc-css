@@ -20,10 +20,11 @@
 .grid-5 li {float:left; width:32%;}
 .grid-5 li:nth-child(5) {margin-right:0;}
 
-@media only screen and (max-width:50em) {
+@media only screen and (max-width:40em) {
 	// .grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {padding-right:1%;}
 	#Grid li {float:none; width:100%; margin-bottom:0.5em; overflow:hidden; background:$offwhite; font-size:1.3em;}
 	.grid-5 li img, .grid-4 li img, .grid-3 li img, .grid-2 li img, .grid-1 li img {float:right; width:50%; margin-left:2%;}
+	.grid-5 li:first-child img, .grid-4 li:first-child img, .grid-3 li:first-child img, .grid-2 li:first-child img, .grid-1 li img {float:none; width:100%; margin:0;}
 	.grid-3 li:first-child img {height:auto;}
 }
 @media only screen and (max-width:25em) {
@@ -37,14 +38,16 @@
 }
 
 /*News List*/
-.mainarticlelinks {display:inline-block; /*margin:1%; padding:0 1%;*/ margin-bottom:1em; position:relative; vertical-align:top;
+.mainarticlelinks {float:left; margin-bottom:1em; position:relative;
 	@include bp(tablet) {width:49%;}
-	@include bp(desktop) {width:58%;} }
-#col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.25em; line-height:1; border-radius:5px 5px 0 0; box-shadow:none;}
-.mainRss {position:absolute; top:0; right:5%;}
+	@include bp(desktop) {width:59%;} }
+#col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.25em; line-height:1; border-radius:3px 3px 0 0; box-shadow:none;}
+.mainRss {display:none;
+	@include bp(desktop) {display:block; position:absolute; top:0; right:5%;} }
 .mainRss a  {@extend .icon-feed;}
 .mainRss a:hover {text-decoration:none;}
-.scroll {margin:0; background:#ddd; padding-bottom:2%; border:1px solid #ddd; border-radius:0 0 3px 3px; /*box-shadow:0 3px 5px #999;*/ height:350px; overflow-y:auto; overflow:hidden;}
+.scroll {margin:0; background:#ddd; padding-bottom:2%; border-radius:0 0 3px 3px; /*box-shadow:0 3px 5px #999;*/ height:350px; overflow-y:auto; overflow:hidden;
+	@include bp(tablet) {overflow:auto;} }
 .newsList ul {@extend .scroll;}
 .newsList li {padding:0.5em; background:$offwhite; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
@@ -69,14 +72,13 @@ scrollbar-arrow-color: #efefef;}*/
 #col2Large .newsList ul, #col2Large .eventsList ul {height:auto;}
 
 /*Events List*/
-.maineventslinks {@extend .mainarticlelinks; 
-	@include bp(desktop) {width:49%;}
+.maineventslinks {@extend .mainarticlelinks;
+	@include bp(tablet) {margin-left:2%;}
 	@include bp(desktop) {width:39%;} }
 .eventsList ul {@extend .scroll;}
 .eventsList li {padding:0.5em; background:$offwhite; clear:both;}
 .message 		{font-style:italic; margin-left:25%;}
 .eventDate 	{float:left; margin:0 5% 0 0; padding:0; width:20%; text-align:center; color:#fff; border-radius:3px; background:lighten($link, 10%);; text-shadow:0 1px 2px #333; /*background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;*/}
-// .eventMonth	{background:#ddd;}
 .eventDay 	{font-size:1.3em;}
 .eventTitle {display:inline;}
 .eventTitle a {margin:0;}
@@ -114,7 +116,7 @@ scrollbar-arrow-color: #efefef;}*/
 /*Home Page Feature*/
 .landing {margin:1% 2%; text-align:center; @extend .pagetitle;}
 .council {float:left; width:58%; margin-left:1%;}
-.council {width:39%;}
+.council {@extend .maineventslinks;}
 .councilframe {border:0; box-shadow:none; margin:0; width:99.9%; height:140px; border-radius:0; padding:0; margin:2% 0;}
 .council ul {@extend .scroll; height:auto; overflow:hidden;}
 .boxcouncil {background:$offwhite; padding-bottom:6px;}

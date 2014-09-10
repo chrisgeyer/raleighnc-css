@@ -1,43 +1,27 @@
 /* Footer elements.
 -------------------------------------------------------------- */
 /*Accolades*/
-.box.accolades 		{margin:0; font-size:0.9em; border-bottom:1px solid lighten(#80aeb5, 20%); border-top:1px solid lighten(#80aeb5, 20%); text-align:center; position:relative; box-shadow:0 2px 3px #999; @include gradient(darken(#80aeb5, 5%), darken(#80aeb5, 15%));
-	@include bp(tablet) {padding:1%;} }
-.accolades h3     {color:#ddd; text-shadow:1px 1px 1px #333;}
-.accolades h2		 	{position:relative; color:#fff; text-shadow:1px 1px 3px #111;}
-.accolades a			{text-decoration:none; @extend .action;}
-.wrapper .accolades a {margin:0; font-size:0.9em; float:none;}
+.box.accolades 		{padding:1em; font-size:0.9em; text-align:center; background:$teal;}
+.accolades h3, #Footer h3 {color:#ddd; text-shadow:1px 1px 1px #333;}
+.accolades h2		 	{color:#fff; text-shadow:1px 1px 3px #111;}
+.accolades a			{margin:0; font-size:0.9em; @extend .action;}
 
 /*Footer*/
-#Footer 					{margin:0 auto; padding:1%; text-align:center; font-size:0.85em; color:#fff; position:relative; @include gradient(#222223, #555556);}
+#Footer 					{margin:0 auto; padding:1em; text-align:center; font-size:0.85em; color:#fff; background:#444;}
 #Footer > div 		{@extend .fixedwidth;}
-#Footer .logo 		{margin-left:40%;}
-#Footer h3			 	{color:#ccc; text-shadow:1px 1px 1px #333;}
+#Footer ul 				{width:100%;
+	@include bp(tablet) {width:24%;} }
+#Footer .logo 		{margin:0 auto;}
 #Footer a, .copyright a {color:#fff;}
-.socialmedia 			{width:185px; margin:0 auto;}
-#Footer .socialmedia a:hover {text-decoration:none;}
-// .socialmedia img 	{float:left; margin-right:5px; border-radius:20px; box-shadow:0 1px 2px #666;}
-.bow 							{border-radius:3px; box-shadow:0 1px 2px #666; width:110px; opacity:0.9; vertical-align:middle;}
-.legal						{clear:both; margin-bottom:0; /*padding-bottom:20px;*/}
-.legal li 				{display:inline; margin:0 10px;}
-#google_translate_element {margin-top:15px; /*position:absolute; right:1%; top:0;*/}
-#Footer .goog-te-gadget 	{font-size:0;}
-.goog-te-gadget span {display:none;}
-.copyright 				{background:#333; color:#fff; text-align:center; font-size:0.8em; margin-bottom:0; padding-bottom:1em;}
-
-@media only screen and (min-width:95em) {
-	.dropdown, #Footer .logo {display:block;}
-}
-
-@media only screen and (min-width:40em) and (max-width:60em) {
-	.copyright {padding-bottom:100px;}
-}
-
-@media only screen and (max-width:40em) {
-	// .accolades h3, #accldePre {text-align:center;}
-	// .accolades h2, .accolades h2:hover, #accolade h2, #accolade h2:hover {font-size:2em;}
-	// .wrapper .accolades a {margin-bottom:5px;}
-	#Footer ul {clear:both; width:100%; text-align:center;}
-	.bow {top:5px; left:5px; width:65px;}
-	#google_translate_element, .rsssharing, #col3:before, .box.depts .dropdown, .sharing {display:none;}
-}
+#Footer ul.legal	{clear:both; width:auto;}
+.legal li 				{margin:1em;
+	@include bp(tablet) {display:inline;} }
+#google_translate_element {margin:1em 0;}
+#google_translate_element a {color:#333;}
+.bow 							{border-radius:3px; box-shadow:0 1px 2px #666; opacity:0.9; vertical-align:middle; width:65px;
+	@include bp(tablet) {width:110px;} }
+.copyright 				{background:#333; color:#fff; text-align:center; font-size:0.75em; margin-bottom:0; padding-bottom:1em;
+	@include bp(tablet) {padding-bottom:100px;}
+	@include bp(desktop) {padding-bottom:1em;} }
+.copyright a 			{display:none;
+	@include bp(tablet) {display:inline;} }

@@ -1,13 +1,12 @@
 /* Header elements.
 -------------------------------------------------------------- */
-#navigation					{font-size:0.9em; background:#537ac1; /*check color for active tabs*/
-	@include bp(tablet) {@include gradient(#5c8fea, #537ac1); height:auto; /*for smooth fixed nav */}
+#navigation					{font-size:0.9em; background:#5784d5; /*check color for active tabs*/
+	@include bp(tablet) {/*@include gradient(#5c8fea, #537ac1); height:auto; for smooth fixed nav */}
 	@include bp(desktop){height:141px;} }
 .ie9 #navigation 		{font-size:0.85em;} //for large ie9 home icon
 
 #Header 						{overflow:hidden; position:relative; text-align:center; @extend .fixedwidth;
-	@include bp(tablet) {height:80px; background:url(images/Skyline1.png) no-repeat; background-position:0 40%; box-shadow:0 3px 5px #aaa; text-align:left;}
-	@include bp(desktop) {height:95px; box-shadow:none;}
+	@include bp(tablet) {height:95px; background:url(images/Skyline1.png) no-repeat; background-position:0 40%; /*background-size:100%;*/ text-align:left;}
 	@include bp(wide){background-repeat:no-repeat; box-shadow:none;} }
 
 // #Header a:hover			{border:0;}
@@ -16,9 +15,9 @@
 .logo 							{vertical-align:middle; cursor:pointer; -webkit-filter:drop-shadow(1px 1px 5px #333); filter:drop-shadow(1px 1px 5px #333);
 	@include bp(tablet) {width:70px;} }
 #Header .logo				{display:none; position:absolute; right:3%; margin:0; padding:0; width:60px;
-	@include bp(desktop) {display:inline; position:static; width:85px;}
-	@include bp(wide) {display:none;} }
-#Footer .logo				{display:block;}
+	@include bp(tablet) {display:inline; position:static; width:85px; margin:0.25em 0 0 1em;}
+	@include bp(desktop) {margin:0;}
+	@include bp(wide) {display:none;} } // relook at why there are absolute defaults here
 .raleigh 						{font-size:2em; padding-left:0.25em; color:#fff; display:inline; vertical-align:middle; text-shadow:1px 1px 3px #111; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", serif; transition:all, .5s, ease-in-out;
 	@include bp(desktop) {font-size:2.2em;}
 	@include bp(wide) {display:block; padding-top:0.5em;} }
@@ -32,9 +31,9 @@
   				// check to see if this can keep state after 1s on hover rather than revert
 
 #SearchBox/*, #Glass*/ 		{/*visibility:hidden;*/ position:fixed; overflow:hidden; /*top:85px; right:9%;*/ width:0; -webkit-transform:translate(0.75em, 0.75em); -ms-transform:translate(0.75em, 0.75em); transform:translate(0.75em, 0.75em); transition:all, .4s, ease-in-out; 
-	@include bp(tablet) {position:static; width:44%; -webkit-transform:translate(36.5em, -3.5em); -ms-transform:translate(36.5em, -3.5em); transform:translate(36.5em, -3.5em);}
-	@include bp(desktop) {width:30%; -webkit-transform:translate(40em, -3.75em); -ms-transform:translate(40em, -3.75em); transform:translate(40em, -3.75em);}
-	@include bp(wide) {width:25%; -webkit-transform:translate(55em, -1.5em); -ms-transform:translate(55em, -1.5em); transform:translate(55em, -1.5em);} }
+	@include bp(tablet) {position:static; width:40%; -webkit-transform:translate(145%, -4em); -ms-transform:translate(145%, -4em); transform:translate(145%, -4em);}
+	@include bp(desktop) {width:30%; /*-webkit-transform:translate(40em, -3.75em); -ms-transform:translate(40em, -3.75em); transform:translate(40em, -3.75em);*/}
+	@include bp(wide) {width:25%; /*-webkit-transform:translate(55em, -1.5em); -ms-transform:translate(55em, -1.5em); transform:translate(55em, -1.5em);*/} }
 #SearchBox.visible {width:95%; z-index:200;}
 #SearchBox label    {@extend .ally;}
 #SearchInput 				{/*float:left;*/ margin:0; padding:0.25em; width:75%; vertical-align:middle; border:1px solid #ddd; border-bottom:1px solid #aaa; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
@@ -45,18 +44,3 @@
 .ie8 .icon-search:before {content:"Search";}
 
 .utility {display:none;}
-
-@media only screen and (max-width:40em) {
-	.wrapper.push {@include transition(all, 1s, ease);
-		-webkit-transform:translateX(50%);
-				-ms-transform:translateX(50%);
-						transform:translateX(50%);
-	}
-	
-	/*GSA Search - check why this is here?*/
-	#screenWrapper #Search h2, .wrapper #Search h2 {float:none;}
-	#Search #search_stats {margin:10px;}
-	#Search #sidebar, #Search #Sidebar {display:none;}
-	#Search #Article, #Search .main-results {clear:both; float:none; margin:1%; padding:1%; width:96%; display:block;} // add article to gsa template?
-	.url {word-wrap:break-word;}
-}
