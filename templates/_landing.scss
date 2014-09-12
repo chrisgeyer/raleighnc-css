@@ -114,9 +114,11 @@ scrollbar-arrow-color: #efefef;}*/
 #col3 .mainarticlelinks ul, #col3 .maineventslinks ul {height:300px;}
 
 /*Home Page Feature*/
-.landing {margin:1% 2%; text-align:center; @extend .pagetitle;}
-.council {float:left; width:58%; margin-left:1%;}
+.landing {display:none; margin-bottom:0.25em; text-align:center; @extend .pagetitle;
+	@include bp(tablet) {display:block;} }
+.council {float:left; width:58%;}
 .council {@extend .maineventslinks;}
 .councilframe {border:0; box-shadow:none; margin:0; width:99.9%; height:140px; border-radius:0; padding:0; margin:2% 0;}
 .council ul {@extend .scroll; height:auto; overflow:hidden;}
+#Meetings {height:auto;}
 .boxcouncil {background:$offwhite; padding-bottom:6px;}

@@ -1,7 +1,7 @@
 /* Footer elements.
 -------------------------------------------------------------- */
 /*Accolades*/
-.box.accolades 		{padding:1em; font-size:0.9em; text-align:center; background:$teal;}
+.box.accolades 		{margin:0; padding:1em; font-size:0.9em; text-align:center; background:$teal;}
 .accolades h3, #Footer h3 {color:#ddd; text-shadow:1px 1px 1px #333;}
 .accolades h2		 	{color:#fff; text-shadow:1px 1px 3px #111;}
 .accolades a			{margin:0; font-size:0.9em; @extend .action;}

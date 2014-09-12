@@ -119,7 +119,7 @@
 /*Right Col
 ============*/
 /*New related - july 2013*/
-.box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {/*margin:2% 0 4%; padding:0 1% 2%;*/ position:relative; overflow:hidden;}
+.box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {margin-bottom:1em; /*padding:0 1% 2%; position:relative; overflow:hidden;*/}
 .related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:0.5em 0.5em 0.25em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:none; line-height:1;}
 #popularPages h2, #popularSearch h2 {@extend .h3;}
 .related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul, .open ul, .council ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; border-left:1px solid #ddd; border-right:1px solid #ddd; /*box-shadow:0 3px 5px #999;*/}
@@ -128,7 +128,7 @@
 .content .related a {text-decoration:none;}
 .primary h3, .primary ul {background:$teal;}
 
-#col2Large #popularPages {float:left; margin:0 1%; padding:0; width:54%;}
+// #col2Large #popularPages {float:left; margin:0 1%; padding:0; width:54%;}
 
 .govdelivery h3 		{/*font-size:1.1em;*/ background:$green;}
 .govdelivery ul	 		{background:#d9decf;}
