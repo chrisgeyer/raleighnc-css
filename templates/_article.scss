@@ -11,7 +11,7 @@
 #col2 .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .smallimage .sliderkit-panel .sliderkit-panel-overlay	{padding-bottom:20%;}
 #col2 .section .smallimage .sliderkit-panel .sliderkit-panel-textbox, #col2 .section .smallimage .sliderkit-panel .sliderkit-panel-overlay	{padding-bottom:15%;}
 .section						{clear:both; margin:1.5em 0;}
-.callout						{clear:both; margin:1.5em 0.5em; background:$offwhite; border:2px solid $orange; border-radius:3px; box-shadow:0 1px 1px #999; overflow:hidden;}
+.callout						{clear:both; background:$offwhite; border:1px solid $orange; border-radius:3px; box-shadow:0 1px 1px #999; overflow:hidden;}
 .closed							{@extend .ally;}
 // .callout img				{max-width:98%;}
 .section img, .callout img {@extend .outline;}
@@ -23,7 +23,7 @@
 .related .parkicon {float:none; height:2em;}
 .section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:3px; box-shadow:0 1px 2px #777; border:1px solid #ddd; background:#d4d4d5; /*@include gradient(#ddddde, #cccccd);*/}
 .expand							{cursor:pointer;}
-.callout h3, .callout h3.close, .section .close .callout h3	{padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
+.callout h3, .callout h3.close, .section .close .callout h3	{margin:0; padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
 .contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none; border:0;}
 .section .close			{box-shadow:0 1px 2px #bbb; border:1px solid #ccc; background:#e5e5e6; /*@include gradient(#eeeeef, #ddddde);*/}
 .section h3:hover   {box-shadow:0 1px 2px #777; border:1px solid #ddd; background:#d4d4d5; /*@include gradient(#ddddde, #cccccd);*/}
