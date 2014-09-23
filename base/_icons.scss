@@ -55,7 +55,6 @@
 	.icon-mail:before {content: "\e600";  font-size:2em; padding-right:5px; vertical-align:middle;}
 	.icon-location:before {content: "\e601"; font-size:2em; vertical-align:middle; padding-right:5px;}
 	.icon-location2:after {content: "\e601"; font-size:1em;}
-	.icon-export:before {content: "\e602";} /*share*/
 	.icon-list:before, #Nav #Lines:after {content: "\e604"; vertical-align:middle; font-size:1.5em;}
 	.icon-video:before {content: "\e606";}
 	.icon-calendar:before {content: "\e607"; font-size:2em; vertical-align:middle; padding-right:5px;}
@@ -88,13 +87,11 @@
 	        background-size: 80% 80%; background-position:center; background-repeat: no-repeat;*/}
 	.icon-feed:after {content: "\e613"; color:$orange; padding:0 5px; font-size:0.9em; text-shadow:1px 1px 1px #ccc;}
 	.icon-google-plus:before {content: "\e610";}
-	.icon-linkedin:before {content: "\e603";}
 	.icon-pinterest:before {content: "\e615"; color:$orange; background:#fff; font-size:0.6em; border-radius:10px; text-shadow:1px 1px 1px #ccc;}
 	.icon-warning:before {content: "\e61b";}
 	.icon-notification:before {content: "\e61c";}
 	.icon-search:before {content: "\e61d";}
 	.icon-clock:after {content: "\e628"; font-size:1em;}
-	.icon-clock2:after {content: "\e629"; font-size:1em;}
 
 	.icon-DS {color:#444; font-size:1.6em; padding-right:5px;}
 	#col2 .icon-DS {font-size:1em;}
