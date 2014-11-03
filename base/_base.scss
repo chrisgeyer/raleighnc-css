@@ -43,7 +43,7 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 }
 
 /*Pages*/
-.content {margin:0 auto; min-width:10em; max-width:50em; 
+.content {margin:0 auto; min-width:10em; max-width:50em; background:#fff;
 	@include bp(tablet) {padding:1% 2%; /*-webkit-animation:fadein 1s linear; animation:fadein 1s linear;*/} }
 #Article .content {padding:0;}
 span.updatedDate {}
@@ -55,13 +55,13 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .ratings input, .comments input {width:7em; height:3em;}
 #col1Large {position:relative;}
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
-.pagetitle {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:2% 2% 1%; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
+.pagetitle {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:2% 2% 1%; border-radius:3px;}
 .sectiontitle {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 2px 4px #aaa; border:1px solid #ddd; background:#d4d4d4; /*@include gradient(#ddddde, #cccccd);*/}
 .content h1 {@extend .pagetitle;}
 // h1 {position:absolute; top:0; left:0; width:141%; padding-top:1%; @extend .pagetitle;}
 .findmyservice, .calendar h1 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 .shortdesc, .content h1 + h3 {font-style:italic; color:#666;}
-.park {border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.2);}
+.park {border-radius:3px;}
 label {display:block; @extend .quiet;}
 iframe 	{@extend .outline; background:$offwhite;}
 .youtube, .frame {margin:1%; height:0; position:relative; padding-bottom:56.25%;}

@@ -1,6 +1,7 @@
 /* Main content areas.
 -------------------------------------------------------------- */
-#contentArea, #Main {padding:0.5em; overflow:hidden; @extend .fixedwidth; background:#fff; box-shadow:0 2px 3px #aaa;}
+#contentArea, #Main {padding:0.5em; overflow:hidden; @extend .fixedwidth; background:#fff;
+	@include bp(desktop) {padding:0.5em 0; background:none;} }
 
 #col1 						{width:50%; margin:0; position:fixed; top:0; left:-50%; bottom:0; z-index:150; background:#555; border:0;
 	@include bp(tablet) {width:25%; left:-25%;}
@@ -106,7 +107,7 @@
 .related .dropdown a {font-size:1em; /*background:#ede8B0;*/}
 .related .dropdown .arrow {margin:1%; border-color:$link transparent transparent transparent;}
 .related .dropdown a:hover .arrow {border-color:$green transparent transparent transparent;}
-.dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5px #666; overflow:hidden;}
+.js .dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5px #666; overflow:hidden;}
 .dropdown ul:after {content:''; display:inline-block; border-left:9px solid transparent; border-right:9px solid transparent; border-bottom:9px solid #fff; position:absolute; top:39px; left:105px;}
 #col3 .dropdown ul:after {border-bottom:none;}
 .dropdown li a, .dropdown li a:hover {padding:0 0 0 5px; font-size:1em; background:#fff; text-shadow:none;}
@@ -122,7 +123,7 @@
 .box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {margin-bottom:1em; /*padding:0 1% 2%; position:relative; overflow:hidden;*/}
 .related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:0.5em 0.5em 0.25em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:none; line-height:1;}
 #popularPages h2, #popularSearch h2 {@extend .h3;}
-.related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul, .open ul, .council ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px; border-left:1px solid #ddd; border-right:1px solid #ddd; /*box-shadow:0 3px 5px #999;*/}
+.related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul, .open ul, .council ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px;}
 .related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li, .open li, .council li {margin:0; padding:2% 4%; background:$offwhite;}
 #col3 .mainarticlelinks li, #col3 .maineventslinks li {min-height:4em;}
 .content .related a {text-decoration:none;}
