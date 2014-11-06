@@ -1,32 +1,55 @@
 /* Main content areas.
 -------------------------------------------------------------- */
 #contentArea, #Main {padding:0.5em; overflow:hidden; @extend .fixedwidth; background:#fff;
-	@include bp(desktop) {padding:0.5em 0; background:none;} }
+	@include bp(desktop) {padding:1.5em 0; background:none;} }
 
 #col1 						{width:50%; margin:0; position:fixed; top:0; left:-50%; bottom:0; z-index:150; background:#555; border:0;
 	@include bp(tablet) {width:25%; left:-25%;}
-	@include bp(desktop) {width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; z-index:50; background:$offwhite; border-radius:3px; border:1px solid #ddd; /*box-shadow:0 2px 3px #999;*/ @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));} }
+	@include bp(desktop) {width:190px; margin-left:-200px; padding:1%; font-size:0.8em; overflow-y:auto; position:fixed; top:140px; right:0; bottom:0; left:0; z-index:50; background:$offwhite; border-radius:3px; border:1px solid #ddd; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));} 
+	@include bp(wide) {margin:0 1% 0 0; padding-top:1.5%; float:left; position:static; width:14%; background:$offwhite; box-shadow:none; border:0; border-radius:3px; font-size:0.85em;} }
 
 #col1.menu				{margin:0; @include transition(margin-left, .15s, cubic-bezier(0,1.12,.39,.98));}
 #col1.docked 			{top:35px;}
 
 #col1.land				{width:50%; margin:0; position:fixed; top:0; left:-50%; bottom:0; z-index:150; background:#555; border:0;
 	@include bp(tablet) {width:25%; left:-25%;}
-	@include bp(desktop) {margin:0 1.5%; width:19%; float:left; position:static; background:$offwhite;} }
+	@include bp(desktop) {margin:0 1.5%; width:19%; float:left; position:static; background:$offwhite;} 
+	@include bp(wide) {margin:0.5%; width:14%;} }
 
 #col1 a, #col1.land a {color:#ddd;
 	@include bp(desktop) {color:$link;} }
 
-#col2 						{float:left; position:relative; margin:0; width:70%;}
-#col3 						{float:right; width:30%; padding:0; /*-webkit-animation:slidein 0.5s ease; animation:slidein 0.5s ease;*/}
-#col1.land ~ #col2, #col1.land ~ #col3 {width:78%;}
-#col1.land ~ #col3 #right > div {float:left; width:39%;}
-#Article 					{float:left; margin:0 0 0 1%; padding:1%; width:70%; min-height:540px; position:relative;}
-#Sidebar, #sidebar 	{float:left; width:29%; padding:0.5% 0 0 1%;}
+#col2 		{width:99%; margin:0;
+	@include bp(tablet) {}
+	@include bp(desktop) {float:left; position:relative; margin:0; width:70%;}
+	@include bp(wide) {width:60%;} }
+#col3 		{width:100%; margin:0;
+	@include bp(tablet) {padding:0 1% 0 0;}
+	@include bp(desktop) {float:right; width:30%; padding:0 0 0 1%; -webkit-animation:slidein 0.5s ease; animation:slidein 0.5s ease;} 
+	@include bp(wide) {width:25%;} }
 
-@media only screen and (min-width:60em) and (max-width:95em) {
+#col1.land ~ #col2 {width:99%;
+	@include bp(desktop) {width:78%;} 
+	@include bp(wide) {width:60%;} }
+#col1.land ~ #col3 {
+	@include bp(desktop) {width:78%;} 
+	@include bp(wide) {width:25%;} }
+#col1.land ~ #col3 #right > div {width:100%;
+	@include bp(tablet) {display:inline-block; width:48.25%; vertical-align:top;}
+	@include bp(wide) {display:block; width:98%;}
+	/*@include bp(desktop) {float:left; width:39%;} }
+#col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%;
+	@include bp(tablet) {display:inline-block; width:49%; vertical-align:top;}*/ }
+
+
+#Article 	{width:100%; margin:0;
+	@include bp(desktop) {float:left; margin:0 0 0 1%; padding:1%; width:70%; min-height:540px; position:relative;} }
+#Sidebar 	{width:100%; margin:0;
+	@include bp(desktop) {float:left; width:29%; padding:0.5% 0 0 1%;} }
+
+/*@media only screen and (min-width:60em) and (max-width:95em) {
 	#col1.land ~ #col3 #right > div:nth-child(1) {width:58%;}
-}
+}*/
 @media only screen and (min-width:95em) {
 	.dropdown, #Footer .logo {display:block;}
 	.box.depts {position:absolute; top:96px; z-index:150; margin-left:-36px;}
@@ -42,43 +65,23 @@
 	.related .dropdown a, .related .dropdown a:hover {width:100%; color:$link; margin:2% 0; padding:3%; background:#ececec; font-size:1em; text-shadow:none;}
 	.related .dropdown a:hover {color:$green;}
 	.related .dropdown a:hover .arrow {margin:1%;}
-	#col1 {margin:0.5%; padding-top:1.5%; float:left; position:static; width:14%; background:$offwhite; box-shadow:none; border-radius:3px; border:1px solid #ddd; font-size:0.85em;}
-	#col1.land {margin:0.5%; width:14%;}
-	#col2, #col1.land ~ #col2  {width:60%;}
 	#col2Large {float:left; width:83%;}
 	#col2Large #col2 {width:75%;}
-	#col3 {width:25%;}
-	#col1.land ~ #col3 {width:25%;}
-	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:98%;}
 }
 
 @media only screen and (min-width:40em) and (max-width:60em) {
 	#col1.docked {top:0;}
-	#col1.land ~ #col3 #right > div {float:none; width:100%;}
-	#col1.land ~ #col2 {width:70%;}
-	#col3 {padding-right:1%;}
 	// #right > div {margin:1% 1% 0 0; padding:1%;}
-	#Sidebar .empClose {display:none;}
 	// #col1.land.menu {margin-left:0;}
-	#col1.land ~ #col3 {margin-right:1%; width:99%;}
-	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {display:inline-block; width:49%; vertical-align:top}
-
-	#col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {width:100%; margin:0;}
-	#col2, #col1.land ~ #col2 {width:99%;}
+	#col2Large, .newseventmap {width:100%; margin:0;}
 }
 
 @media only screen and (max-width:40em) {
 	#col1 .icons {font-size:0.9em;}
-	#col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {width:100%; margin:0;}
-	#col2, #col1.land ~ #col2 {width:99%;}
-
-	
+	#col2Large, .newseventmap {width:100%; margin:0;}
 	#col1.land {float:none;}
 	#col1.land.menu {margin:0;}
 	#col1.docked {top:150px;}
-
-	#col1.land ~ #col3 {margin-right:1%; width:99%;}
-	#col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%;}
 	#col2 .updatedDate {position:relative; top:0; left:0;}
 }
 

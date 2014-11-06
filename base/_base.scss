@@ -49,7 +49,10 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 span.updatedDate {}
 div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd; position:relative;}
 #addThisButtons	{position:absolute; right:10px; top:110px; display:none;}
-.box.ratings {clear:both; text-align:center;}
+.box.ratings {clear:both; text-align:center; 
+	@include bp(desktop) {background:#89a1cb; /*lightblue?*/ border-radius:0 0 5px 5px;} }
+.ratings h4 {
+	@include bp(desktop) {color:#fff; text-shadow:1px 3px 3px #666;} }
 .ratings li {display:inline-block;}
 .comments textarea {width:50%;}
 .ratings input, .comments input {width:7em; height:3em;}
@@ -57,7 +60,8 @@ div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:
 .updated {position:absolute; padding-left:72%; /*right:11%;*/ color:#666;}
 .pagetitle {background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:2% 2% 1%; border-radius:3px;}
 .sectiontitle {margin:0; padding:0.5% 1%; border-radius:5px; box-shadow:0 2px 4px #aaa; border:1px solid #ddd; background:#d4d4d4; /*@include gradient(#ddddde, #cccccd);*/}
-.content h1 {@extend .pagetitle;}
+.content h1 {@extend .pagetitle;
+	@include bp(desktop) {width:104%; margin:-1% 0 0 -2%; border-radius:3px 3px 0 0;} }
 // h1 {position:absolute; top:0; left:0; width:141%; padding-top:1%; @extend .pagetitle;}
 .findmyservice, .calendar h1 {margin-left:-4%; padding:1% 4%; background:$link; color:#fff; font-size:1.5em; text-shadow:0 -1px $link, 0 1px $link; border-radius:3px; box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 .shortdesc, .content h1 + h3 {font-style:italic; color:#666;}

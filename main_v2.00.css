@@ -188,6 +188,28 @@ div.updatedDate {
 .box.ratings {
   clear: both;
   text-align: center;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 60em) {
+  .box.ratings {
+    background: #89a1cb;
+    /*lightblue?*/
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+.ratings h4 {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 60em) {
+  .ratings h4 {
+    color: #fff;
+    text-shadow: 1px 3px 3px #666;
+  }
 }
 
 .ratings li {
@@ -230,6 +252,19 @@ div.updatedDate {
   border: 1px solid #ddd;
   background: #d4d4d4;
   /*@include gradient(#ddddde, #cccccd);*/
+}
+
+.content h1 {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 60em) {
+  .content h1 {
+    width: 104%;
+    margin: -1% 0 0 -2%;
+    border-radius: 3px 3px 0 0;
+  }
 }
 
 .findmyservice, .calendar h1 {
@@ -875,15 +910,6 @@ table.stripe tr:nth-child(even) td {
 
 table.devserv tr:nth-child(even) td {
   background: #d6e4ec;
-}
-
-/*MWBE Vendor Directory*/
-table.paragraph {
-  margin: 0;
-}
-
-table.paragraph td {
-  padding: 0;
 }
 
 /* Messaging
@@ -1890,7 +1916,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 }
 @media only screen and (min-width: 60em) {
   #contentArea, #Main {
-    padding: 0.5em 0;
+    padding: 1.5em 0;
     background: none;
   }
 }
@@ -1905,6 +1931,9 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   z-index: 150;
   background: #555;
   border: 0;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
   /*@else if $point == mobile {
     @media only screen and (max-width: 40em) { @content; }
   }*/
@@ -1934,8 +1963,21 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     background: #f7f7f7;
     border-radius: 3px;
     border: 1px solid #ddd;
-    /*box-shadow:0 2px 3px #999;*/
     transition: margin-left 0.15s cubic-bezier(0, 1.12, 0.39, 0.98);
+  }
+}
+@media only screen and (min-width: 95em) {
+  #col1 {
+    margin: 0 1% 0 0;
+    padding-top: 1.5%;
+    float: left;
+    position: static;
+    width: 14%;
+    background: #f7f7f7;
+    box-shadow: none;
+    border: 0;
+    border-radius: 3px;
+    font-size: 0.85em;
   }
 }
 
@@ -1964,6 +2006,9 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   /*@else if $point == mobile {
     @media only screen and (max-width: 40em) { @content; }
   }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
 }
 @media only screen and (min-width: 40em) {
   #col1.land {
@@ -1980,6 +2025,12 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     background: #f7f7f7;
   }
 }
+@media only screen and (min-width: 95em) {
+  #col1.land {
+    margin: 0.5%;
+    width: 14%;
+  }
+}
 
 #col1 a, #col1.land a {
   color: #ddd;
@@ -1994,48 +2045,166 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 }
 
 #col2 {
-  float: left;
-  position: relative;
+  width: 99%;
   margin: 0;
-  width: 70%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 60em) {
+  #col2 {
+    float: left;
+    position: relative;
+    margin: 0;
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 95em) {
+  #col2 {
+    width: 60%;
+  }
 }
 
 #col3 {
-  float: right;
-  width: 30%;
-  padding: 0;
-  /*-webkit-animation:slidein 0.5s ease; animation:slidein 0.5s ease;*/
+  width: 100%;
+  margin: 0;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #col3 {
+    padding: 0 1% 0 0;
+  }
+}
+@media only screen and (min-width: 60em) {
+  #col3 {
+    float: right;
+    width: 30%;
+    padding: 0 0 0 1%;
+    -webkit-animation: slidein 0.5s ease;
+    animation: slidein 0.5s ease;
+  }
+}
+@media only screen and (min-width: 95em) {
+  #col3 {
+    width: 25%;
+  }
 }
 
-#col1.land ~ #col2, #col1.land ~ #col3 {
-  width: 78%;
+#col1.land ~ #col2 {
+  width: 99%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 60em) {
+  #col1.land ~ #col2 {
+    width: 78%;
+  }
+}
+@media only screen and (min-width: 95em) {
+  #col1.land ~ #col2 {
+    width: 60%;
+  }
+}
+
+#col1.land ~ #col3 {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 60em) {
+  #col1.land ~ #col3 {
+    width: 78%;
+  }
+}
+@media only screen and (min-width: 95em) {
+  #col1.land ~ #col3 {
+    width: 25%;
+  }
 }
 
 #col1.land ~ #col3 #right > div {
-  float: left;
-  width: 39%;
+  width: 100%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  	/*@include bp(desktop) {float:left; width:39%;} }
+  #col1.land ~ #col3 #right > div:nth-child(1) {float:none; width:100%;
+  	@include bp(tablet) {display:inline-block; width:49%; vertical-align:top;}*/
+}
+@media only screen and (min-width: 40em) {
+  #col1.land ~ #col3 #right > div {
+    display: inline-block;
+    width: 48.25%;
+    vertical-align: top;
+  }
+}
+@media only screen and (min-width: 95em) {
+  #col1.land ~ #col3 #right > div {
+    display: block;
+    width: 98%;
+  }
 }
 
 #Article {
-  float: left;
-  margin: 0 0 0 1%;
-  padding: 1%;
-  width: 70%;
-  min-height: 540px;
-  position: relative;
+  width: 100%;
+  margin: 0;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
 }
-
-#Sidebar, #sidebar {
-  float: left;
-  width: 29%;
-  padding: 0.5% 0 0 1%;
-}
-
-@media only screen and (min-width: 60em) and (max-width: 95em) {
-  #col1.land ~ #col3 #right > div:nth-child(1) {
-    width: 58%;
+@media only screen and (min-width: 60em) {
+  #Article {
+    float: left;
+    margin: 0 0 0 1%;
+    padding: 1%;
+    width: 70%;
+    min-height: 540px;
+    position: relative;
   }
 }
+
+#Sidebar {
+  width: 100%;
+  margin: 0;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 60em) {
+  #Sidebar {
+    float: left;
+    width: 29%;
+    padding: 0.5% 0 0 1%;
+  }
+}
+
+/*@media only screen and (min-width:60em) and (max-width:95em) {
+	#col1.land ~ #col3 #right > div:nth-child(1) {width:58%;}
+}*/
 @media only screen and (min-width: 95em) {
   .dropdown, #Footer .logo {
     display: block;
@@ -2117,28 +2286,6 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     margin: 1%;
   }
 
-  #col1 {
-    margin: 0.5%;
-    padding-top: 1.5%;
-    float: left;
-    position: static;
-    width: 14%;
-    background: #f7f7f7;
-    box-shadow: none;
-    border-radius: 3px;
-    border: 1px solid #ddd;
-    font-size: 0.85em;
-  }
-
-  #col1.land {
-    margin: 0.5%;
-    width: 14%;
-  }
-
-  #col2, #col1.land ~ #col2 {
-    width: 60%;
-  }
-
   #col2Large {
     float: left;
     width: 83%;
@@ -2147,60 +2294,15 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   #col2Large #col2 {
     width: 75%;
   }
-
-  #col3 {
-    width: 25%;
-  }
-
-  #col1.land ~ #col3 {
-    width: 25%;
-  }
-
-  #col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {
-    float: none;
-    width: 98%;
-  }
 }
 @media only screen and (min-width: 40em) and (max-width: 60em) {
   #col1.docked {
     top: 0;
   }
 
-  #col1.land ~ #col3 #right > div {
-    float: none;
-    width: 100%;
-  }
-
-  #col1.land ~ #col2 {
-    width: 70%;
-  }
-
-  #col3 {
-    padding-right: 1%;
-  }
-
-  #Sidebar .empClose {
-    display: none;
-  }
-
-  #col1.land ~ #col3 {
-    margin-right: 1%;
-    width: 99%;
-  }
-
-  #col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {
-    display: inline-block;
-    width: 49%;
-    vertical-align: top;
-  }
-
-  #col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {
+  #col2Large, .newseventmap {
     width: 100%;
     margin: 0;
-  }
-
-  #col2, #col1.land ~ #col2 {
-    width: 99%;
   }
 }
 @media only screen and (max-width: 40em) {
@@ -2208,13 +2310,9 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     font-size: 0.9em;
   }
 
-  #col2, #col2Large, #col3, #Article, #sidebar, #Sidebar, .newseventmap {
+  #col2Large, .newseventmap {
     width: 100%;
     margin: 0;
-  }
-
-  #col2, #col1.land ~ #col2 {
-    width: 99%;
   }
 
   #col1.land {
@@ -2227,16 +2325,6 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 
   #col1.docked {
     top: 150px;
-  }
-
-  #col1.land ~ #col3 {
-    margin-right: 1%;
-    width: 99%;
-  }
-
-  #col1.land ~ #col3 #right > div, #col1.land ~ #col3 #right > div:nth-child(1) {
-    float: none;
-    width: 100%;
   }
 
   #col2 .updatedDate {
@@ -3063,9 +3151,7 @@ scrollbar-arrow-color: #efefef;}*/
 
 /*New 1col - april 2012*/
 .outline, iframe, .content .map, .youtube img, .grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li, .images, .section img, .callout img, .confirm img, .org img, .warning img, .error img {
-  padding: 0.85% 0.85% 1.5%;
-  background: #fff;
-  border: 1px solid #ddd;
+  /*padding:0.85% 0.85% 1.5%; background:#fff; border:1px solid #ddd;*/
   border-radius: 2px;
   box-shadow: 0 1px 1px #999;
   position: relative;
