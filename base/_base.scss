@@ -6,7 +6,8 @@ body 	{background:#efefef;}
 html, body, #Main, #Article, #sidebar, #Sidebar, #navigation, #Header, #Nav, #contentArea, #col1, #col2, #col3, #Footer
 										{margin:0; padding:0;}
 .fixedwidth					{width:100%;
-	@include bp(desktop) {margin:0 auto; width:80%;} }
+	@include bp(desktop) {margin:0 auto; width:85%;}
+	@include bp(wide) {width:80%;} }
 
 /* Links
 -------------------------------------------------------------- */

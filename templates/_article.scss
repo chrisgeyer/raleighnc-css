@@ -21,13 +21,14 @@
 .callout img.left.full, .callout img.right.full {float:none; margin:0;}
 .section h3 img, .parkicon 		{float:right; margin:0 1%; padding:0; height:1.4em; background:transparent; border:0; box-shadow:none; vertical-align:middle;}
 .related .parkicon {float:none; height:2em;}
-.section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:3px; box-shadow:0 1px 2px #777; border:1px solid #ddd; background:#d4d4d5; /*@include gradient(#ddddde, #cccccd);*/}
+.section h3, .council h2, .open h2, .mainarticlelinks > h2, .maineventslinks > h2 {margin:0; padding:0.5% 1%; border-radius:3px; box-shadow:0 1px 2px #777; border:1px solid #ddd; background:#d4d4d5; position:relative;}
 .expand							{cursor:pointer;}
 .callout h3, .callout h3.close, .section .close .callout h3	{margin:0; padding:0.5% 1%; color:#fff; font-weight:600; background:$orange; border-radius:0; text-shadow:1px 3px 5px #333; border:0;}
 .contact h3 				{background:#fff; box-shadow:none; color:#333; text-shadow:none; border:0;}
 .js .section .close			{box-shadow:0 1px 2px #bbb; border:1px solid #ccc; background:#e5e5e6; /*@include gradient(#eeeeef, #ddddde);*/}
 .section h3:hover   {box-shadow:0 1px 2px #777; border:1px solid #ddd; background:#d4d4d5; /*@include gradient(#ddddde, #cccccd);*/}
-.js .arrow							{margin-right:5px; width:0; height:0; border-color:$link transparent transparent transparent; border-style:solid; border-width:12px 10px 0; display:inline-block; transition:all 0.25s ease;}
+.js .arrow							{display:none; 
+	@include bp(desktop) {margin-right:5px; width:0; height:0; border-color:$link transparent transparent transparent; border-style:solid; border-width:12px 10px 0; display:inline-block; transition:all 0.25s ease;} }
 // .ie9 .arrow 				{border-right:8px solid transparent;}
 .js .close .arrow				{-webkit-transform: rotate(-90deg);
 												 -ms-transform: rotate(-90deg); /* possibly remove due to low ie9% */
@@ -37,3 +38,18 @@
 .callout div 				{padding:2%; background:$offwhite;}
 .block 							{clear:both;}
 .section hr:first-child {display:none;}
+
+h3.close:before {
+content: "";
+display: block;
+height: 0;
+width: 0;
+border-top: 20px solid #ddd;
+border-right: 40px solid transparent;
+border-left: 40px solid transparent;
+position: absolute;
+bottom: -48%;
+left: 50%;
+-webkit-filter: drop-shadow(0 2px 1px #bbb);
+	@include bp(desktop) {display:none;}
+}

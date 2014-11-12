@@ -58,10 +58,18 @@ html, body, #Main, #Article, #sidebar, #Sidebar, #navigation, #Header, #Nav, #co
   /*@else if $point == mobile {
     @media only screen and (max-width: 40em) { @content; }
   }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   .fixedwidth, #Header, #Nav ul, #contentArea, #Main, #Footer > div {
     margin: 0 auto;
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 90em) {
+  .fixedwidth, #Header, #Nav ul, #contentArea, #Main, #Footer > div {
     width: 80%;
   }
 }
@@ -192,7 +200,7 @@ div.updatedDate {
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   .box.ratings {
     background: #89a1cb;
     /*lightblue?*/
@@ -205,7 +213,7 @@ div.updatedDate {
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   .ratings h4 {
     color: #fff;
     text-shadow: 1px 3px 3px #666;
@@ -259,7 +267,7 @@ div.updatedDate {
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   .content h1 {
     width: 104%;
     margin: -1% 0 0 -2%;
@@ -1274,7 +1282,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     /*@include gradient(#5c8fea, #537ac1); height:auto; for smooth fixed nav */
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #navigation {
     height: 141px;
   }
@@ -1299,13 +1307,14 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   #Header {
     height: 95px;
     background: url(images/Skyline1.png) no-repeat;
-    background-position: 0 40%;
+    background-position: 20%;
     /*background-size:100%;*/
     text-align: left;
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   #Header {
+    background-position: 40%;
     background-repeat: no-repeat;
     box-shadow: none;
   }
@@ -1351,12 +1360,12 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     margin: 0.25em 0 0 1em;
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #Header .logo {
     margin: 0;
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   #Header .logo {
     display: none;
   }
@@ -1378,12 +1387,12 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   .raleigh {
     font-size: 2.2em;
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   .raleigh {
     display: block;
     padding-top: 0.5em;
@@ -1399,7 +1408,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   .raleigh:hover {
     -webkit-transform: scale(1.25) translate(3.75em);
     -ms-transform: scale(1.25) translate(3.75em);
@@ -1430,22 +1439,25 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 @media only screen and (min-width: 40em) {
   #SearchBox {
     position: static;
+    float: right;
     width: 40%;
-    -webkit-transform: translate(145%, -4em);
-    -ms-transform: translate(145%, -4em);
-    transform: translate(145%, -4em);
+    -webkit-transform: translate(0, -4em);
+    -ms-transform: translate(0, -4em);
+    transform: translate(0, -4em);
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #SearchBox {
-    width: 30%;
+    width: 29%;
     /*-webkit-transform:translate(40em, -3.75em); -ms-transform:translate(40em, -3.75em); transform:translate(40em, -3.75em);*/
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   #SearchBox {
-    width: 25%;
-    /*-webkit-transform:translate(55em, -1.5em); -ms-transform:translate(55em, -1.5em); transform:translate(55em, -1.5em);*/
+    width: 24%;
+    -webkit-transform: translate(0, -3em);
+    -ms-transform: translate(0, -3em);
+    transform: translate(0, -3em);
   }
 }
 
@@ -1455,10 +1467,9 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 }
 
 #SearchInput {
-  /*float:left;*/
   margin: 0;
   padding: 0.25em;
-  width: 75%;
+  width: 79%;
   vertical-align: middle;
   border: 1px solid #ddd;
   border-bottom: 1px solid #aaa;
@@ -1476,7 +1487,6 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 }
 
 #SearchBox .action, #SearchBox .accolades a, .accolades #SearchBox a {
-  /*float:left;*/
   margin: 0 0 0 -0.25em;
   padding: 0.5em;
   width: 20%;
@@ -1541,17 +1551,15 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     float: right;
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #Nav ul {
-    border: 0;
-    float: none;
-    margin: 0 auto;
-    width: 80%;
+    display: table-row;
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   #Nav ul {
-    padding-left: 75px;
+    padding-left: 1em;
+    width: 80%;
   }
 }
 
@@ -1559,132 +1567,15 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   display: block;
 }
 
-#Nav li {
-  border-top: 1px solid #999;
-  text-align: left;
-  /*@else if $point == mobile {
-    @media only screen and (max-width: 40em) { @content; }
-  }*/
-  /*@else if $point == mobile {
-    @media only screen and (max-width: 40em) { @content; }
-  }*/
-}
-@media only screen and (min-width: 40em) {
-  #Nav li {
-    float: left;
-    width: 25%;
-    border: 0;
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 60em) {
-  #Nav li {
-    width: auto;
-    transition: background 0.2s ease-in-out;
-  }
-}
-
-#Nav li:first-child {
-  display: none;
-  /*@else if $point == mobile {
-    @media only screen and (max-width: 40em) { @content; }
-  }*/
-}
-@media only screen and (min-width: 60em) {
-  #Nav li:first-child {
-    display: inline-block;
-  }
-}
-
-#Nav li:first-child a {
-  /*@else if $point == mobile {
-    @media only screen and (max-width: 40em) { @content; }
-  }*/
-}
-@media only screen and (min-width: 60em) {
-  #Nav li:first-child a {
-    padding: 0.25em;
-  }
-}
-
-#Nav li:nth-child(5) {
-  /*font-size:0.75em;*/
-  /*@else if $point == mobile {
-    @media only screen and (max-width: 40em) { @content; }
-  }*/
-  /*@else if $point == mobile {
-    @media only screen and (max-width: 40em) { @content; }
-  }*/
-}
-@media only screen and (min-width: 40em) {
-  #Nav li:nth-child(5) {
-    border-right: none;
-    font-size: 1em;
-  }
-}
-@media only screen and (min-width: 60em) {
-  #Nav li:nth-child(5) {
-    /*width:17%;*/
-  }
-}
-
-#Nav li:nth-child(-n+5) {
-  /*@else if $point == mobile {
-    @media only screen and (max-width: 40em) { @content; }
-  }*/
-  /*@else if $point == mobile {
-    @media only screen and (max-width: 40em) { @content; }
-  }*/
-}
-@media only screen and (min-width: 40em) {
-  #Nav li:nth-child(-n+5) {
-    border-bottom: 1px solid #999;
-  }
-}
-@media only screen and (min-width: 60em) {
-  #Nav li:nth-child(-n+5) {
-    border: 0;
-  }
-}
-
-.current {
-  background: #476db3;
-  background: linear-gradient(to bottom, #3c61a5, #537ac1);
-}
-
 #Nav a {
   color: #fff;
   text-shadow: 1px 1px 3px #111;
-}
-
-#Nav li a {
-  padding: 1.1em 0.75em;
-  display: inline-block;
 }
 
 #Nav a:hover {
   border: 0;
 }
 
-#Nav li:hover {
-  font-weight: normal;
-  color: #fff;
-  background: #476db3;
-  background: linear-gradient(to bottom, #3c61a5, #537ac1);
-}
-
-.current a:hover, .current:hover a {
-  color: #fff;
-}
-
-@media only screen and (min-width: 1em) {
-  #Nav li:first-child > a:before {
-    content: "\e608";
-    line-height: 42px;
-    font-size: 1.5em;
-    vertical-align: sub;
-  }
-}
 #Nav #Lines, #Nav #Lines:active {
   float: left;
   margin: 2%;
@@ -1692,8 +1583,8 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   font-size: 1.1em;
   padding: 0 1%;
   font-weight: normal;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: -3em;
   left: 0;
   /*@else if $point == mobile {
     @media only screen and (max-width: 40em) { @content; }
@@ -1704,11 +1595,10 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 }
 @media only screen and (min-width: 40em) {
   #Nav #Lines, #Nav #Lines:active {
-    position: absolute;
-    top: 40px;
+    top: 45%;
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #Nav #Lines, #Nav #Lines:active {
     top: 0;
     margin: 1%;
@@ -1724,7 +1614,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #Lines.display {
     display: none;
   }
@@ -1736,12 +1626,17 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #Lines span {
     display: inline;
   }
 }
 
+@media only screen and (min-width: 60em) and (max-width: 71em) {
+  #Lines span {
+    display: none;
+  }
+}
 #Home {
   font-weight: 700;
   display: block;
@@ -1764,7 +1659,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     margin: 0;
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #Home {
     display: none;
   }
@@ -1779,8 +1674,8 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   margin: 1.5%;
   font-size: 1.5em;
   cursor: pointer;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: -2.25em;
   right: 0;
   /*@else if $point == mobile {
     @media only screen and (max-width: 40em) { @content; }
@@ -1796,6 +1691,148 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   display: none;
 }
 
+#Nav li {
+  border-top: 1px solid #999;
+  text-align: left;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav li {
+    float: left;
+    width: 25%;
+    border: 0;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Nav li {
+    width: auto;
+    transition: background 0.2s ease-in-out;
+  }
+}
+
+#Nav li:hover {
+  font-weight: normal;
+  color: #fff;
+  background: #476db3;
+  background: linear-gradient(to bottom, #3c61a5, #537ac1);
+}
+
+#Nav li:first-child {
+  display: none;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  #Nav li:first-child {
+    display: inline-block;
+  }
+}
+
+#Nav li:nth-child(-n+5) {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav li:nth-child(-n+5) {
+    border-bottom: 1px solid #999;
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Nav li:nth-child(-n+5) {
+    border: 0;
+  }
+}
+
+#Nav li:nth-child(5) {
+  /*font-size:0.75em;*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav li:nth-child(5) {
+    border-right: none;
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Nav li:nth-child(5) {
+    /*width:17%;*/
+  }
+}
+
+@media only screen and (min-width: 40em) and (max-width: 51em) {
+  #Nav li:nth-child(5) {
+    height: 50px;
+    font-size: 0.85em;
+  }
+}
+.current {
+  background: #476db3;
+  background: linear-gradient(to bottom, #3c61a5, #537ac1);
+}
+
+.current a:hover, .current:hover a {
+  color: #fff;
+}
+
+#Nav li a {
+  padding: 1.1em;
+  display: inline-block;
+  width: 100%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav li a {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 90em) {
+  #Nav li a {
+    padding-right: 1.4em;
+    padding-left: 1.4em;
+  }
+}
+
+#Nav li:first-child a {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  #Nav li:first-child a {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+  }
+}
+
+@media only screen and (min-width: 1em) {
+  #Nav li:first-child > a:before {
+    content: "\e608";
+    line-height: 42px;
+    font-size: 1.5em;
+    vertical-align: sub;
+  }
+}
 @-webkit-keyframes slidein {
   0% {
     -webkit-transform: translateX(110%);
@@ -1851,7 +1888,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     transform: translateX(25%);
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   .wrapper.push {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -1914,7 +1951,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #contentArea, #Main {
     padding: 1.5em 0;
     background: none;
@@ -1947,7 +1984,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     left: -25%;
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #col1 {
     width: 190px;
     margin-left: -200px;
@@ -1966,14 +2003,14 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     transition: margin-left 0.15s cubic-bezier(0, 1.12, 0.39, 0.98);
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   #col1 {
     margin: 0 1% 0 0;
-    padding-top: 1.5%;
+    padding: 0;
     float: left;
     position: static;
     width: 14%;
-    background: #f7f7f7;
+    background: transparent;
     box-shadow: none;
     border: 0;
     border-radius: 3px;
@@ -2016,7 +2053,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     left: -25%;
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #col1.land {
     margin: 0 1.5%;
     width: 19%;
@@ -2025,10 +2062,11 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     background: #f7f7f7;
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   #col1.land {
     margin: 0.5%;
     width: 14%;
+    background: transparent;
   }
 }
 
@@ -2038,7 +2076,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #col1 a, #col1.land a {
     color: #3c61a5;
   }
@@ -2057,7 +2095,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #col2 {
     float: left;
     position: relative;
@@ -2065,7 +2103,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     width: 70%;
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   #col2 {
     width: 60%;
   }
@@ -2089,7 +2127,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     padding: 0 1% 0 0;
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #col3 {
     float: right;
     width: 30%;
@@ -2098,7 +2136,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     animation: slidein 0.5s ease;
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   #col3 {
     width: 25%;
   }
@@ -2113,12 +2151,12 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #col1.land ~ #col2 {
     width: 78%;
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   #col1.land ~ #col2 {
     width: 60%;
   }
@@ -2132,12 +2170,12 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #col1.land ~ #col3 {
     width: 78%;
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   #col1.land ~ #col3 {
     width: 25%;
   }
@@ -2162,7 +2200,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     vertical-align: top;
   }
 }
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   #col1.land ~ #col3 #right > div {
     display: block;
     width: 98%;
@@ -2176,7 +2214,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #Article {
     float: left;
     margin: 0 0 0 1%;
@@ -2194,7 +2232,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   #Sidebar {
     float: left;
     width: 29%;
@@ -2205,7 +2243,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 /*@media only screen and (min-width:60em) and (max-width:95em) {
 	#col1.land ~ #col3 #right > div:nth-child(1) {width:58%;}
 }*/
-@media only screen and (min-width: 95em) {
+@media only screen and (min-width: 90em) {
   .dropdown, #Footer .logo {
     display: block;
   }
@@ -2214,7 +2252,6 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     position: absolute;
     top: 96px;
     z-index: 150;
-    margin-left: -36px;
   }
 
   .dropdown > a, .dropdown > a:hover {
@@ -2300,6 +2337,10 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     top: 0;
   }
 
+  .depts.fixed {
+    position: static;
+  }
+
   #col2Large, .newseventmap {
     width: 100%;
     margin: 0;
@@ -2340,6 +2381,14 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   line-height: 1.3;
   background: #ddd;
   text-align: center;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  #col1 h3 {
+    border-radius: 3px 3px 0 0;
+  }
 }
 
 /*Global*/
@@ -2361,7 +2410,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   .icons a, .dropdown a {
     background: #ececec;
     border-bottom: 1px solid #ececec;
@@ -2475,8 +2524,29 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 }
 
 /*Left Nav*/
+.leftnav ul {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  .leftnav ul {
+    padding-bottom: 1em;
+    background: #ddd;
+    border-radius: 0 0 3px 3px;
+  }
+}
+
 .leftnav li {
   padding: 0.5em;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  .leftnav li {
+    background: #f7f7f7;
+  }
 }
 
 /*Right Col
@@ -2651,7 +2721,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     padding-bottom: 100px;
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   .copyright {
     padding-bottom: 1em;
   }
@@ -2686,6 +2756,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   margin-bottom: 2%;
   padding: 0 !important;
   text-align: center;
+  background: #fff;
 }
 
 #Grid a:after {
@@ -2801,7 +2872,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     width: 49%;
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   .mainarticlelinks, .maineventslinks, .council {
     width: 59%;
   }
@@ -2820,7 +2891,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     @media only screen and (max-width: 40em) { @content; }
   }*/
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   .mainRss {
     display: block;
     position: absolute;
@@ -2938,7 +3009,7 @@ scrollbar-arrow-color: #efefef;}*/
     margin-left: 2%;
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 65em) {
   .maineventslinks, .council {
     width: 39%;
   }
@@ -3263,7 +3334,7 @@ scrollbar-arrow-color: #efefef;}*/
   box-shadow: 0 1px 2px #777;
   border: 1px solid #ddd;
   background: #d4d4d5;
-  /*@include gradient(#ddddde, #cccccd);*/
+  position: relative;
 }
 
 .expand {
@@ -3304,14 +3375,22 @@ scrollbar-arrow-color: #efefef;}*/
 }
 
 .js .arrow {
-  margin-right: 5px;
-  width: 0;
-  height: 0;
-  border-color: #3c61a5 transparent transparent transparent;
-  border-style: solid;
-  border-width: 12px 10px 0;
-  display: inline-block;
-  transition: all 0.25s ease;
+  display: none;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  .js .arrow {
+    margin-right: 5px;
+    width: 0;
+    height: 0;
+    border-color: #3c61a5 transparent transparent transparent;
+    border-style: solid;
+    border-width: 12px 10px 0;
+    display: inline-block;
+    transition: all 0.25s ease;
+  }
 }
 
 .js .close .arrow {
@@ -3340,6 +3419,28 @@ scrollbar-arrow-color: #efefef;}*/
 
 .section hr:first-child {
   display: none;
+}
+
+h3.close:before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-top: 20px solid #ddd;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+  position: absolute;
+  bottom: -48%;
+  left: 50%;
+  -webkit-filter: drop-shadow(0 2px 1px #bbbbbb);
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  h3.close:before {
+    display: none;
+  }
 }
 
 @-webkit-keyframes fill {

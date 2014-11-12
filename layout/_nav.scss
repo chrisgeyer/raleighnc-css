@@ -3,47 +3,57 @@
 #Nav 						{float:left; width:100%; z-index:100; box-shadow:0 1px 2px #777; @include transition(all, .5s, linear); background:#333; text-align:center; position:relative;}
 #Nav ul					{/*display:none;*/ margin:0; clear:both; width:100%; transition:display, .15s, cubic-bezier(0,1.12,.39,.98); @extend .fixedwidth;
 	@include bp(tablet) {display:block; width:90%; float:right;}
-	@include bp(desktop) {border:0; float:none; margin:0 auto; width:80%;} 
-	@include bp(wide) {padding-left:75px;} }
+	@include bp(desktop) {display:table-row;} 
+	@include bp(wide) {padding-left:1em; width:80%;} }
 #Nav ul.visible	{display:block;}
-#Nav li 				{border-top:1px solid #999; text-align:left;
-	@include bp(tablet) {float:left; width:25%; border:0; text-align:center}
-	@include bp(desktop) {width:auto; @include transition(background, .2s, ease-in-out);} }
-#Nav li:first-child {display:none;
-	@include bp(desktop) {display:inline-block;} }
-#Nav li:first-child a {
-	@include bp(desktop) {padding:0.25em;} }
-#Nav li:nth-child(5) {/*font-size:0.75em;*/
-	@include bp(tablet) {border-right:none; font-size:1em;}
-	@include bp(desktop) {/*width:17%;*/} }
-#Nav li:nth-child(-n+5) {
-	@include bp(tablet) {border-bottom:1px solid #999;} 
-	@include bp(desktop) {border:0;} }
-// #Nav li:nth-child(2), #Nav li:nth-child(3), #Nav li:nth-child(8), #Nav li:nth-child(9) {width:10%;}
-.current 				{@include gradient($link, lighten($link, 10%));} // try sliding bottom border like twitter
-#Nav a 					{color:#fff; text-shadow:1px 1px 3px #111;}
-#Nav li a 			{padding:1.1em 0.75em; display:inline-block;}
-#Nav a:hover		{border:0;}
-#Nav li:hover		{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
-.current a:hover, .current:hover a {color:#fff;}
-@media only screen and (min-width:1em) {
-	#Nav li:first-child > a:before {content: "\e608"; line-height:42px; font-size:1.5em; vertical-align:sub;}
-}
 
-#Nav #Lines, #Nav #Lines:active	{float:left; margin:2%; line-height:30px; font-size:1.1em; padding:0 1%; font-weight:normal; position:fixed; top:0; left:0;
-	@include bp(tablet) {position:absolute; top:40px;}
+#Nav a 					{color:#fff; text-shadow:1px 1px 3px #111;}
+#Nav a:hover		{border:0;}
+
+#Nav #Lines, #Nav #Lines:active	{float:left; margin:2%; line-height:30px; font-size:1.1em; padding:0 1%; font-weight:normal; position:absolute; top:-3em; left:0;
+	@include bp(tablet) {top:45%;}
 	@include bp(desktop) {top:0; margin:1%} }
 #Nav #Lines:hover {border:1px solid #666;}
 #Lines.display {
 	@include bp(desktop) {display:none;} }
 #Lines span {display:none;
 	@include bp(desktop) {display:inline;} }
+@media only screen and (min-width:60em) and (max-width:71em) {
+	#Lines span {display:none;}
+}
 #Home	{@extend .icon-home; font-weight:700; display:block; margin:1em; //need to fix tablet hover
 	@include bp(tablet) {display:block; position:absolute; height:50px; width:10%; border-bottom:1px solid #999; text-align:center; margin:0;}
 	@include bp(desktop) {display:none;} }
-#Glass {@extend .icon-search; font-weight:700; line-height:20px; padding:5px; float:right; vertical-align:baseline; margin:1.5%; font-size:1.5em; cursor:pointer; position:fixed; top:0; right:0;
+#Glass {@extend .icon-search; font-weight:700; line-height:20px; padding:5px; float:right; vertical-align:baseline; margin:1.5%; font-size:1.5em; cursor:pointer; position:absolute; top:-2.25em; right:0;
 	@include bp(tablet) {display:none;} }
 #Glass.hidden {display:none;}
+
+#Nav li 				{border-top:1px solid #999; text-align:left;
+	@include bp(tablet) {float:left; width:25%; border:0; text-align:center}
+	@include bp(desktop) {width:auto; @include transition(background, .2s, ease-in-out);} }
+#Nav li:hover		{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
+#Nav li:first-child {display:none;
+	@include bp(desktop) {display:inline-block;} }
+#Nav li:nth-child(-n+5) {
+	@include bp(tablet) {border-bottom:1px solid #999;} 
+	@include bp(desktop) {border:0;} }
+#Nav li:nth-child(5) {/*font-size:0.75em;*/
+	@include bp(tablet) {border-right:none; font-size:1em;}
+	@include bp(desktop) {/*width:17%;*/} }
+@media only screen and (min-width:40em) and (max-width:51em) {
+	#Nav li:nth-child(5) {height:50px; font-size:0.85em;}
+}
+.current 				{@include gradient($link, lighten($link, 10%));} // try sliding bottom border like twitter
+.current a:hover, .current:hover a {color:#fff;}
+
+#Nav li a 			{padding:1.1em/* 0.75em*/; display:inline-block; width:100%;
+	@include bp(tablet) {width:auto;} 
+	@include bp(wide) {padding-right:1.4em; padding-left:1.4em;} }
+#Nav li:first-child a {
+	@include bp(desktop) {padding-top:0.25em; padding-bottom:0.25em;} }
+@media only screen and (min-width:1em) {
+	#Nav li:first-child > a:before {content: "\e608"; line-height:42px; font-size:1.5em; vertical-align:sub;}
+}
 
 
 @-webkit-keyframes slidein {

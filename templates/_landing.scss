@@ -4,7 +4,7 @@
 .grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {/*margin:1% 2%;*/ overflow:hidden;}
 .grid-1 .outline a:active, .grid-2 .outline a:active, .grid-3 .outline a:active, .grid-4 .outline a:active, .grid-5 .outline a:active {position:relative;}
 // #contentArea .grid-1 a:hover, #contentArea .grid-2 a:hover, #contentArea .grid-3 a:hover, #contentArea .grid-4 a:hover, #contentArea .grid-5 a:hover {border:0;}
-.grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li {@extend .outline; font-size:1.1em; margin-bottom:2%; padding:0 !important; text-align:center;}
+.grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li {@extend .outline; font-size:1.1em; margin-bottom:2%; padding:0 !important; text-align:center; background:#fff;}
 #Grid a:after {display:none;}
 .grid-1 span, .grid-2 span, .grid-3 span, .grid-4 span, .grid-5 span {padding:2%; display:block;}
 // .grid-1 li:hover, .grid-2 li:hover, .grid-3 li:hover, .grid-4 li:hover, .grid-5 li:hover {-webkit-transform:scale(1.05) rotate(-4deg); -ms-transform:scale(1.05) rotate(-4deg); transform:scale(1.05) rotate(-4deg); @include transition(all, 0.5s, ease);}
