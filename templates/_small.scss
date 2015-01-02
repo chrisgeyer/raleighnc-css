@@ -75,19 +75,20 @@
 #Developer h3, #Homeowner h3 {background:$teal;}
 #Developer ul, #Homeowner ul {background:$teal;}
 #Tools li {@extend .dotted;}
-.content .map {margin:1%; height:200px; @extend iframe;}
+.content .map {margin-bottom:1em; height:200px; @extend iframe;
+	@inlcude bp(tablet) {margin:1%;} }
 .content .third.map {height:125px;}
 .related .map {float:none; @extend .full; height:200px; border:1px solid #fff;}
 .layerTile {max-width:none;}
 
 /*Status - oct 2012*/
-.confirm {@extend .callout; border:2px solid $green;}
-.section.confirm .close, .confirm h3, .section.confirm:hover h3 {background:$green; border:0; font-weight:normal;}
-.warning {@extend .callout; border:2px solid #ffe88c;}
-.section.warning .close, .warning h3, .section.warning:hover h3 {background:#ffe88c; border:0; font-weight:normal; color:#333; text-shadow:1px 1px 1px #ccc;}
-.error	 {@extend .callout; border:2px solid #b74742;}
-.section.error .close, .error h3, .section.error:hover h3 {background:#b74742; border:0; font-weight:normal;}
+.confirm {@extend .callout; border:2px solid #42a35a;}
+.section.confirm .close, .confirm h3, .section.confirm:hover h3 {background:#42a35a; border:0; font-weight:normal;}
+.warning {@extend .callout; border:2px solid #f6b83f;}
+.section.warning .close, .warning h3, .section.warning:hover h3 {background:#f6b83f; border:0; font-weight:normal;}
+.error	 {@extend .callout; border:2px solid #c0392b;}
+.section.error .close, .error h3, .section.error:hover h3 {background:#c0392b; border:0; font-weight:normal;}
 .section.confirm .arrow, .section.warning .arrow, .section.error .arrow	{border-color:#fff transparent transparent transparent;}
 // .section.confirm .close .arrow, .section.warning .close .arrow, .section.error .close .arrow {border-top:8px dotted transparent; border-right:none; border-bottom:8px solid transparent; border-left:12px solid #fff;}
-.section.warning .arrow {border-color:#333 transparent transparent transparent;}
+// .section.warning .arrow {border-color:#333 transparent transparent transparent;}
 // .section.warning .close .arrow {border-left:12px solid #333;}

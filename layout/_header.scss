@@ -36,7 +36,7 @@
 	@include bp(wide) {width:24%; -webkit-transform:translate(0, -3em); -ms-transform:translate(0, -3em); transform:translate(0, -3em);} }
 #SearchBox.visible {width:95%; z-index:200;}
 #SearchBox label    {@extend .ally;}
-#SearchInput 				{margin:0; padding:0.25em; width:79%; vertical-align:middle; border:1px solid #ddd; border-bottom:1px solid #aaa; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
+#SearchInput 				{margin:0; padding:0.25em; width:79%; vertical-align:middle; border:1px solid #ddd; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
 #SearchInput:focus	{box-shadow:0 0 5px rgba(81, 203, 238, 1);}
 #SearchInput::-webkit-input-placeholder, #SearchInput::-moz-placeholder, #SearchInput:-ms-input-placeholder {font-weight:normal;}
 #SearchBox .action 	{margin:0 0 0 -0.25em; padding:0.5em; width:20%; vertical-align:middle; font-size:1em; font-weight:300; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; /*@extend .icon-search;*/}

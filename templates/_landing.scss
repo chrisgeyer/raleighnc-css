@@ -32,13 +32,13 @@
 }
 
 @media only screen and (max-width:40em) {
-	.eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation, .calendar {width:100%;}
-	.newseventlocation li {display:inline;}
+	.location, .caclocation > div, .calendar {width:100%;}
+	// .newseventlocation li {display:inline;}
 	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
 }
 
 /*News List*/
-.mainarticlelinks {float:left; margin-bottom:1em; position:relative;
+.mainarticlelinks {float:left; margin-bottom:1em; position:relative; width:100%;
 	@include bp(tablet) {width:49%;}
 	@include bp(desktop) {width:59%;} }
 #col2 .mainarticlelinks > h2, #col2 .council h2, #col2 .open h2 {padding:0.25em; line-height:1; border-radius:3px 3px 0 0; box-shadow:none;}
@@ -89,13 +89,24 @@ scrollbar-arrow-color: #efefef;}*/
 .images {float:right; margin:0 0 10px 10px; @extend .outline;}
 .images {width:56%;}
 .images .photoslider-1click-slideshow {padding-bottom:75%;}
-.eventdates {clear:both; width:30%; @extend %inlineblock;}
-.newseventmap {width:69%; overflow:hidden; @extend %inlineblock;}
-.newseventlocation {float:left; width:40%; margin-right:2%;}
-.gismap {float:left; margin:0 0 10px 10px; width:46%; height:182px; overflow:hidden;} /*remove later*/
-.addfiles, .newscontacts, .relatedlinks {margin-right:1%; width:28%; @extend %inlineblock;}
-.newscontacts {width:38%;}
-.rsssharing {clear:both; margin-top:20px;}
+.eventdates {@extend %inlineblock;
+		@include bp(tablet) {clear:both; width:30%;} }
+.content ul.eventdatetime {clear:none;}		
+.eventdatetime {float:left; width:50%;
+	@include bp(tablet) {float:none; width:auto;} }
+.newseventmap {@extend %inlineblock;
+	@include bp(tablet) {width:69%; overflow:hidden;} }
+.newseventlocation {
+	@include bp(tablet) {float:left; width:40%; margin-right:2%;} }
+.gismap {float:left; margin:0 0 1em 1em; width:46%; height:182px; overflow:hidden;} /*remove later*/
+.content .addfiles li, .content .newscontacts li, .content .relatedlinks li {margin-left:0;
+	@include bp(tablet) {margin-left:2.5em;} }
+.addfiles, .newscontacts, .relatedlinks {@extend %inlineblock;
+	@include bp(tablet) {margin-right:1%; width:28%;} }
+.newscontacts {
+	@include bp(tablet) {width:38%;} }
+.rsssharing {clear:both; 
+	@include bp(desktop) {padding:1em; background:#89a1cb; /*lightblue?*/ border-radius:0 0 5px 5px;} }
 .rsssharing a {text-decoration:none;}
 .rsssharing .icon-feed:after {font-size:1em;}
 
@@ -107,7 +118,9 @@ scrollbar-arrow-color: #efefef;}*/
 .addevent a:after {content:'';}
 .addevent input[type="checkbox"]:checked ~ a {display:block;}
 
-#col3 .mainarticlelinks, #col3 .maineventslinks {float:none; width:100%; font-size:1.05em;}
+#col3 .mainarticlelinks, #col3 .maineventslinks {font-size:1.05em; width:100%;
+	@include bp(tablet) {float:left; width:49%;}
+	@include bp(desktop) {float:none; width:100%; margin-left:0;} }
 #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {float:none; font-size:1.4em;}
 #col3 .mainRss {display:none;}
 
@@ -116,7 +129,7 @@ scrollbar-arrow-color: #efefef;}*/
 /*Home Page Feature*/
 .landing {display:none; margin-bottom:0.25em; text-align:center; @extend .pagetitle;
 	@include bp(tablet) {display:block;} }
-.council {float:left; width:58%;}
+// .council {float:left; width:58%;}
 .council {@extend .maineventslinks;}
 .councilframe {border:0; box-shadow:none; margin:0; width:99.9%; height:140px; border-radius:0; padding:0; margin:2% 0;}
 .council ul {@extend .scroll; height:auto; overflow:hidden;}

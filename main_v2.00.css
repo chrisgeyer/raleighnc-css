@@ -143,7 +143,6 @@ a:active {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -152,7 +151,6 @@ a:active {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -462,31 +460,6 @@ iframe, .content .map {
     max-width: 40em;
   }
 
-  .slider .newslider-horizontal .sliderkit-nav-clip li a {
-    width: 1em;
-    height: 1em;
-  }
-
-  .slider .newslider-horizontal .sliderkit-panels {
-    margin-bottom: 6%;
-  }
-
-  .slider .newslider-horizontal .sliderkit-panel-textbox, .slider .newslider-horizontal .sliderkit-panel-overlay {
-    padding-bottom: 25%;
-  }
-
-  .slider {
-    margin-bottom: 20px;
-  }
-
-  #col2 .sliderkit-news-readmore, #col2 .sliderkit-panel-text {
-    font-size: 1em;
-  }
-
-  .slideshow .photoslider-1click-slideshow .sliderkit-panel .sliderkit-panel-textbox {
-    font-size: 0.8em;
-  }
-
   .section img, .images, .bcimage {
     width: 98%;
   }
@@ -731,7 +704,7 @@ img {
   cursor: pointer;
   text-decoration: none;
   background: #8c8c8b;
-  background: linear-gradient(to bottom, #666665, #b2b2b2);
+  background: linear-gradient(to bottom, #666665, #B2B2B2);
 }
 
 .action:active, .accolades a:active {
@@ -1323,8 +1296,8 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 .logo {
   vertical-align: middle;
   cursor: pointer;
-  -webkit-filter: drop-shadow(1px 1px 5px #333333);
-  filter: drop-shadow(1px 1px 5px #333333);
+  -webkit-filter: drop-shadow(1px 1px 5px #333);
+  filter: drop-shadow(1px 1px 5px #333);
   /*@else if $point == mobile {
     @media only screen and (max-width: 40em) { @content; }
   }*/
@@ -1472,7 +1445,6 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   width: 79%;
   vertical-align: middle;
   border: 1px solid #ddd;
-  border-bottom: 1px solid #aaa;
   border-radius: 2px 0 0 2px;
   font: bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma';
   transition: box-shadow 0.3s ease-in-out;
@@ -1504,7 +1476,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 
 #Search .action, #Search .accolades a, .accolades #Search a {
   background: #c43c2b;
-  background: linear-gradient(to bottom, #dd4b39, #ac2d1e);
+  background: linear-gradient(to bottom, #DD4B39, #ac2d1e);
 }
 
 .ie8 .icon-search:before, .ie8 #Glass:before {
@@ -1574,6 +1546,28 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 
 #Nav a:hover {
   border: 0;
+}
+
+#Nav #Home:hover {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav #Home:hover {
+    border-bottom: 1px solid #999;
+    background: #476db3;
+    background: linear-gradient(to bottom, #3c61a5, #537ac1);
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Nav #Home:hover {
+    border: 0;
+    background: transparent;
+  }
 }
 
 #Nav #Lines, #Nav #Lines:active {
@@ -1838,7 +1832,6 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     -webkit-transform: translateX(110%);
     transform: translateX(110%);
   }
-
   100% {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
@@ -1849,7 +1842,6 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     -webkit-transform: translateX(110%);
     transform: translateX(110%);
   }
-
   100% {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
@@ -2059,14 +2051,13 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     width: 19%;
     float: left;
     position: static;
-    background: #f7f7f7;
+    background: transparent;
   }
 }
 @media only screen and (min-width: 90em) {
   #col1.land {
     margin: 0.5%;
     width: 14%;
-    background: transparent;
   }
 }
 
@@ -2112,6 +2103,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 #col3 {
   width: 100%;
   margin: 0;
+  clear: both;
   /*@else if $point == mobile {
     @media only screen and (max-width: 40em) { @content; }
   }*/
@@ -2124,11 +2116,12 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 }
 @media only screen and (min-width: 40em) {
   #col3 {
-    padding: 0 1% 0 0;
+    padding: 1em 1% 0 0;
   }
 }
 @media only screen and (min-width: 65em) {
   #col3 {
+    clear: none;
     float: right;
     width: 30%;
     padding: 0 0 0 1%;
@@ -2391,6 +2384,17 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   }
 }
 
+.icons, .dropdown, .depts {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  .icons, .dropdown, .depts {
+    background: #f7f7f7;
+  }
+}
+
 /*Global*/
 .box.icons, .box.dropdown {
   /*margin-right:0;*/
@@ -2399,6 +2403,16 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 
 .icons ul, .dropdown ul {
   margin: 0;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  .icons ul, .dropdown ul {
+    background: #ddd;
+    padding-bottom: 2%;
+    border-radius: 0 0 3px 3px;
+  }
 }
 
 .icons a, .dropdown a {
@@ -2554,7 +2568,8 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
 /*New related - july 2013*/
 .box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks, #col3 .council, #col3 .maineventslinks, #col3 .council {
   margin-bottom: 1em;
-  /*padding:0 1% 2%; position:relative; overflow:hidden;*/
+  position: relative;
+  /*overflow:hidden;*/
 }
 
 .related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2, #col3 .council h2, #col3 .maineventslinks h2, #col3 .council h2 {
@@ -2747,7 +2762,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   overflow: hidden;
 }
 
-.grid-1 .outline a:active, .grid-1 iframe a:active, .grid-1 .content .map a:active, .content .grid-1 .map a:active, .grid-1 .youtube img a:active, .youtube .grid-1 img a:active, .grid-1 li a:active, .grid-1 .images a:active, .grid-1 .section img a:active, .section .grid-1 img a:active, .grid-1 .callout img a:active, .callout .grid-1 img a:active, .grid-1 .confirm img a:active, .confirm .grid-1 img a:active, .grid-1 .org img a:active, .org .grid-1 img a:active, .grid-1 .warning img a:active, .warning .grid-1 img a:active, .grid-1 .error img a:active, .error .grid-1 img a:active, .grid-2 .outline a:active, .grid-2 iframe a:active, .grid-2 .content .map a:active, .content .grid-2 .map a:active, .grid-2 .youtube img a:active, .youtube .grid-2 img a:active, .grid-2 li a:active, .grid-2 .images a:active, .grid-2 .section img a:active, .section .grid-2 img a:active, .grid-2 .callout img a:active, .callout .grid-2 img a:active, .grid-2 .confirm img a:active, .confirm .grid-2 img a:active, .grid-2 .org img a:active, .org .grid-2 img a:active, .grid-2 .warning img a:active, .warning .grid-2 img a:active, .grid-2 .error img a:active, .error .grid-2 img a:active, .grid-3 .outline a:active, .grid-3 iframe a:active, .grid-3 .content .map a:active, .content .grid-3 .map a:active, .grid-3 .youtube img a:active, .youtube .grid-3 img a:active, .grid-3 li a:active, .grid-3 .images a:active, .grid-3 .section img a:active, .section .grid-3 img a:active, .grid-3 .callout img a:active, .callout .grid-3 img a:active, .grid-3 .confirm img a:active, .confirm .grid-3 img a:active, .grid-3 .org img a:active, .org .grid-3 img a:active, .grid-3 .warning img a:active, .warning .grid-3 img a:active, .grid-3 .error img a:active, .error .grid-3 img a:active, .grid-4 .outline a:active, .grid-4 iframe a:active, .grid-4 .content .map a:active, .content .grid-4 .map a:active, .grid-4 .youtube img a:active, .youtube .grid-4 img a:active, .grid-4 li a:active, .grid-4 .images a:active, .grid-4 .section img a:active, .section .grid-4 img a:active, .grid-4 .callout img a:active, .callout .grid-4 img a:active, .grid-4 .confirm img a:active, .confirm .grid-4 img a:active, .grid-4 .org img a:active, .org .grid-4 img a:active, .grid-4 .warning img a:active, .warning .grid-4 img a:active, .grid-4 .error img a:active, .error .grid-4 img a:active, .grid-5 .outline a:active, .grid-5 iframe a:active, .grid-5 .content .map a:active, .content .grid-5 .map a:active, .grid-5 .youtube img a:active, .youtube .grid-5 img a:active, .grid-5 li a:active, .grid-5 .images a:active, .grid-5 .section img a:active, .section .grid-5 img a:active, .grid-5 .callout img a:active, .callout .grid-5 img a:active, .grid-5 .confirm img a:active, .confirm .grid-5 img a:active, .grid-5 .org img a:active, .org .grid-5 img a:active, .grid-5 .warning img a:active, .warning .grid-5 img a:active, .grid-5 .error img a:active, .error .grid-5 img a:active {
+.grid-1 .outline a:active, .grid-1 iframe a:active, .grid-1 .content .map a:active, .content .grid-1 .map a:active, .grid-1 .youtube img a:active, .youtube .grid-1 img a:active, .grid-1 li a:active, .grid-1 .grid-2 li a:active, .grid-2 .grid-1 li a:active, .grid-1 .grid-3 li a:active, .grid-3 .grid-1 li a:active, .grid-1 .grid-4 li a:active, .grid-4 .grid-1 li a:active, .grid-1 .grid-5 li a:active, .grid-5 .grid-1 li a:active, .grid-1 .images a:active, .grid-1 .section img a:active, .section .grid-1 img a:active, .grid-1 .callout img a:active, .callout .grid-1 img a:active, .grid-1 .confirm img a:active, .confirm .grid-1 img a:active, .grid-1 .org img a:active, .org .grid-1 img a:active, .grid-1 .warning img a:active, .warning .grid-1 img a:active, .grid-1 .error img a:active, .error .grid-1 img a:active, .grid-2 .outline a:active, .grid-2 iframe a:active, .grid-2 .content .map a:active, .content .grid-2 .map a:active, .grid-2 .youtube img a:active, .youtube .grid-2 img a:active, .grid-2 .grid-1 li a:active, .grid-1 .grid-2 li a:active, .grid-2 li a:active, .grid-2 .grid-3 li a:active, .grid-3 .grid-2 li a:active, .grid-2 .grid-4 li a:active, .grid-4 .grid-2 li a:active, .grid-2 .grid-5 li a:active, .grid-5 .grid-2 li a:active, .grid-2 .images a:active, .grid-2 .section img a:active, .section .grid-2 img a:active, .grid-2 .callout img a:active, .callout .grid-2 img a:active, .grid-2 .confirm img a:active, .confirm .grid-2 img a:active, .grid-2 .org img a:active, .org .grid-2 img a:active, .grid-2 .warning img a:active, .warning .grid-2 img a:active, .grid-2 .error img a:active, .error .grid-2 img a:active, .grid-3 .outline a:active, .grid-3 iframe a:active, .grid-3 .content .map a:active, .content .grid-3 .map a:active, .grid-3 .youtube img a:active, .youtube .grid-3 img a:active, .grid-3 .grid-1 li a:active, .grid-1 .grid-3 li a:active, .grid-3 .grid-2 li a:active, .grid-2 .grid-3 li a:active, .grid-3 li a:active, .grid-3 .grid-4 li a:active, .grid-4 .grid-3 li a:active, .grid-3 .grid-5 li a:active, .grid-5 .grid-3 li a:active, .grid-3 .images a:active, .grid-3 .section img a:active, .section .grid-3 img a:active, .grid-3 .callout img a:active, .callout .grid-3 img a:active, .grid-3 .confirm img a:active, .confirm .grid-3 img a:active, .grid-3 .org img a:active, .org .grid-3 img a:active, .grid-3 .warning img a:active, .warning .grid-3 img a:active, .grid-3 .error img a:active, .error .grid-3 img a:active, .grid-4 .outline a:active, .grid-4 iframe a:active, .grid-4 .content .map a:active, .content .grid-4 .map a:active, .grid-4 .youtube img a:active, .youtube .grid-4 img a:active, .grid-4 .grid-1 li a:active, .grid-1 .grid-4 li a:active, .grid-4 .grid-2 li a:active, .grid-2 .grid-4 li a:active, .grid-4 .grid-3 li a:active, .grid-3 .grid-4 li a:active, .grid-4 li a:active, .grid-4 .grid-5 li a:active, .grid-5 .grid-4 li a:active, .grid-4 .images a:active, .grid-4 .section img a:active, .section .grid-4 img a:active, .grid-4 .callout img a:active, .callout .grid-4 img a:active, .grid-4 .confirm img a:active, .confirm .grid-4 img a:active, .grid-4 .org img a:active, .org .grid-4 img a:active, .grid-4 .warning img a:active, .warning .grid-4 img a:active, .grid-4 .error img a:active, .error .grid-4 img a:active, .grid-5 .outline a:active, .grid-5 iframe a:active, .grid-5 .content .map a:active, .content .grid-5 .map a:active, .grid-5 .youtube img a:active, .youtube .grid-5 img a:active, .grid-5 .grid-1 li a:active, .grid-1 .grid-5 li a:active, .grid-5 .grid-2 li a:active, .grid-2 .grid-5 li a:active, .grid-5 .grid-3 li a:active, .grid-3 .grid-5 li a:active, .grid-5 .grid-4 li a:active, .grid-4 .grid-5 li a:active, .grid-5 li a:active, .grid-5 .images a:active, .grid-5 .section img a:active, .section .grid-5 img a:active, .grid-5 .callout img a:active, .callout .grid-5 img a:active, .grid-5 .confirm img a:active, .confirm .grid-5 img a:active, .grid-5 .org img a:active, .org .grid-5 img a:active, .grid-5 .warning img a:active, .warning .grid-5 img a:active, .grid-5 .error img a:active, .error .grid-5 img a:active {
   position: relative;
 }
 
@@ -2841,12 +2856,8 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   }
 }
 @media only screen and (max-width: 40em) {
-  .eventdates, .location, .caclocation > div, .newscontacts, .relatedlinks, .addfiles, .newseventlocation, .calendar {
+  .location, .caclocation > div, .calendar {
     width: 100%;
-  }
-
-  .newseventlocation li {
-    display: inline;
   }
 
   .gismap_iframe, .cacgismap, .gismap {
@@ -2860,6 +2871,7 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
   float: left;
   margin-bottom: 1em;
   position: relative;
+  width: 100%;
   /*@else if $point == mobile {
     @media only screen and (max-width: 40em) { @content; }
   }*/
@@ -3078,42 +3090,117 @@ scrollbar-arrow-color: #efefef;}*/
 }
 
 .eventdates {
-  clear: both;
-  width: 30%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  .eventdates {
+    clear: both;
+    width: 30%;
+  }
+}
+
+.content ul.eventdatetime {
+  clear: none;
+}
+
+.eventdatetime {
+  float: left;
+  width: 50%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  .eventdatetime {
+    float: none;
+    width: auto;
+  }
 }
 
 .newseventmap {
-  width: 69%;
-  overflow: hidden;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  .newseventmap {
+    width: 69%;
+    overflow: hidden;
+  }
 }
 
 .newseventlocation {
-  float: left;
-  width: 40%;
-  margin-right: 2%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  .newseventlocation {
+    float: left;
+    width: 40%;
+    margin-right: 2%;
+  }
 }
 
 .gismap {
   float: left;
-  margin: 0 0 10px 10px;
+  margin: 0 0 1em 1em;
   width: 46%;
   height: 182px;
   overflow: hidden;
 }
 
 /*remove later*/
+.content .addfiles li, .content .newscontacts li, .content .relatedlinks li {
+  margin-left: 0;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  .content .addfiles li, .content .newscontacts li, .content .relatedlinks li {
+    margin-left: 2.5em;
+  }
+}
+
 .addfiles, .newscontacts, .relatedlinks {
-  margin-right: 1%;
-  width: 28%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  .addfiles, .newscontacts, .relatedlinks {
+    margin-right: 1%;
+    width: 28%;
+  }
 }
 
 .newscontacts {
-  width: 38%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  .newscontacts {
+    width: 38%;
+  }
 }
 
 .rsssharing {
   clear: both;
-  margin-top: 20px;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  .rsssharing {
+    padding: 1em;
+    background: #89a1cb;
+    /*lightblue?*/
+    border-radius: 0 0 5px 5px;
+  }
 }
 
 .rsssharing a {
@@ -3157,9 +3244,27 @@ scrollbar-arrow-color: #efefef;}*/
 }
 
 #col3 .mainarticlelinks, #col3 .maineventslinks, #col3 .council, #col3 .maineventslinks, #col3 .council {
-  float: none;
-  width: 100%;
   font-size: 1.05em;
+  width: 100%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #col3 .mainarticlelinks, #col3 .maineventslinks, #col3 .council, #col3 .maineventslinks, #col3 .council {
+    float: left;
+    width: 49%;
+  }
+}
+@media only screen and (min-width: 65em) {
+  #col3 .mainarticlelinks, #col3 .maineventslinks, #col3 .council, #col3 .maineventslinks, #col3 .council {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 #col3 .mainarticlelinks h2, #col3 .maineventslinks h2, #col3 .council h2, #col3 .maineventslinks h2, #col3 .council h2 {
@@ -3190,11 +3295,6 @@ scrollbar-arrow-color: #efefef;}*/
   }
 }
 
-.council {
-  float: left;
-  width: 58%;
-}
-
 .councilframe {
   border: 0;
   box-shadow: none;
@@ -3222,10 +3322,20 @@ scrollbar-arrow-color: #efefef;}*/
 
 /*New 1col - april 2012*/
 .outline, iframe, .content .map, .youtube img, .grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li, .images, .section img, .callout img, .confirm img, .org img, .warning img, .error img {
-  /*padding:0.85% 0.85% 1.5%; background:#fff; border:1px solid #ddd;*/
+  padding: 0 0 0.5em;
+  background: #fff;
+  border: 1px solid #ddd;
   border-radius: 2px;
   box-shadow: 0 1px 1px #999;
   position: relative;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  .outline, iframe, .content .map, .youtube img, .grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li, .images, .section img, .callout img, .confirm img, .org img, .warning img, .error img {
+    padding: 0 0 1em;
+  }
 }
 
 .largeimage {
@@ -3432,7 +3542,7 @@ h3.close:before {
   position: absolute;
   bottom: -48%;
   left: 50%;
-  -webkit-filter: drop-shadow(0 2px 1px #bbbbbb);
+  -webkit-filter: drop-shadow(0 2px 1px #bbb);
   /*@else if $point == mobile {
     @media only screen and (max-width: 40em) { @content; }
   }*/
@@ -3447,7 +3557,6 @@ h3.close:before {
   0% {
     background-position: 100% 0;
   }
-
   100% {
     background-position: 0% 100%;
   }
@@ -3456,7 +3565,6 @@ h3.close:before {
   0% {
     background-position: 100% 0;
   }
-
   100% {
     background-position: 0% 100%;
   }
@@ -3557,7 +3665,6 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
     0% {
       background-position: 0 100%;
     }
-
     100% {
       background-position: 100% 0;
     }
@@ -3566,7 +3673,6 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
     0% {
       background-position: 0 100%;
     }
-
     100% {
       background-position: 100% 0;
     }
@@ -3821,10 +3927,14 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
 }
 
 .content .map {
-  margin: 1%;
+  margin-bottom: 1em;
   height: 200px;
 }
-
+@inlcude bp(tablet) {
+  .content .map {
+    margin: 1%;
+  }
+}
 .content .third.map {
   height: 125px;
 }
@@ -3841,43 +3951,37 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
 
 /*Status - oct 2012*/
 .confirm, .org {
-  border: 2px solid #657838;
+  border: 2px solid #42a35a;
 }
 
 .section.confirm .close, .section.org .close, .confirm h3, .org h3, .section.confirm:hover h3, .section.org:hover h3 {
-  background: #657838;
+  background: #42a35a;
   border: 0;
   font-weight: normal;
 }
 
 .warning {
-  border: 2px solid #ffe88c;
+  border: 2px solid #f6b83f;
 }
 
 .section.warning .close, .warning h3, .section.warning:hover h3 {
-  background: #ffe88c;
+  background: #f6b83f;
   border: 0;
   font-weight: normal;
-  color: #333;
-  text-shadow: 1px 1px 1px #ccc;
 }
 
 .error {
-  border: 2px solid #b74742;
+  border: 2px solid #c0392b;
 }
 
 .section.error .close, .error h3, .section.error:hover h3 {
-  background: #b74742;
+  background: #c0392b;
   border: 0;
   font-weight: normal;
 }
 
 .section.confirm .arrow, .section.org .arrow, .section.warning .arrow, .section.error .arrow {
   border-color: #fff transparent transparent transparent;
-}
-
-.section.warning .arrow {
-  border-color: #333 transparent transparent transparent;
 }
 
 /*  sliderkit-core.css

@@ -9,6 +9,9 @@
 
 #Nav a 					{color:#fff; text-shadow:1px 1px 3px #111;}
 #Nav a:hover		{border:0;}
+#Nav #Home:hover {
+	@include bp(tablet) {border-bottom:1px solid #999; @include gradient($link, lighten($link, 10%));} 
+	@include bp(desktop) {border:0; background:transparent;} }
 
 #Nav #Lines, #Nav #Lines:active	{float:left; margin:2%; line-height:30px; font-size:1.1em; padding:0 1%; font-weight:normal; position:absolute; top:-3em; left:0;
 	@include bp(tablet) {top:45%;}
