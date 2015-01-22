@@ -2163,13 +2163,47 @@ background-size: 80% 80%; background-position:center; background-repeat: no-repe
     float: right;
     width: 30%;
     padding: 0 0 0 1%;
-    -webkit-animation: slidein 0.75s;
-    animation: slidein 0.75s;
   }
 }
 @media only screen and (min-width: 90em) {
   #col3 {
     width: 25%;
+  }
+}
+
+#col3 .box {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  #col3 .box {
+    -webkit-animation: slidein 0.75s;
+    animation: slidein 0.75s;
+  }
+}
+
+#col3 .box:nth-child(2) {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  #col3 .box:nth-child(2) {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+  }
+}
+
+#col3 .box:nth-child(3) {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  #col3 .box:nth-child(3) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
   }
 }
 

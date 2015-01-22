@@ -25,8 +25,15 @@
 	@include bp(wide) {width:60%;} }
 #col3 		{width:100%; margin:0; clear:both;
 	@include bp(tablet) {padding:1em 1% 0 0;}
-	@include bp(desktop) {clear:none; float:right; width:30%; padding:0 0 0 1%; -webkit-animation:slidein 0.75s; animation:slidein 0.75s;} 
+	@include bp(desktop) {clear:none; float:right; width:30%; padding:0 0 0 1%;} 
 	@include bp(wide) {width:25%;} }
+
+#col3 .box {
+	@include bp(desktop) {-webkit-animation:slidein 0.75s; animation:slidein 0.75s;} }
+#col3 .box:nth-child(2) {
+	@include bp(desktop) {-webkit-animation-delay:0.25s; animation-delay:0.25s;} }
+#col3 .box:nth-child(3) {
+	@include bp(desktop) {-webkit-animation-delay:0.5s; animation-delay:0.5s;} }
 
 #col1.land ~ #col2 {width:99%;
 	@include bp(desktop) {width:78%;} 
