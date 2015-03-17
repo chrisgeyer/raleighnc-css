@@ -1780,3 +1780,267 @@ ul.progress li.completed.active,ul.progress li.completed.toggle:hover {
 .section.warning .arrow {
   border-color: #333 transparent transparent transparent;
 }
+
+.neogov {
+  padding-bottom: 275%;
+  overflow: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tasks {
+  display: none;
+}
+
+.tasks li {
+  border-left: 5px solid #3c61a5;
+  margin-bottom: 1em;
+  background: #ddd;
+}
+
+.tasks a {
+  padding: 1em;
+  display: block;
+}
+
+@media only screen and (max-width: 40em) {
+  .tasks {
+    display: block;
+  }
+
+  #Nav {
+    box-shadow: none;
+  }
+}
+
+#sdmwob button {
+  margin: 1em 0;
+}
+
+#csvLink {
+  margin-right: 1em;
+}
+
+#VendorSearch {
+  font-size: 1em;
+  padding: 0.45em;
+}
+/*new slideshow - nov 2014*/
+ul.slideshow {
+  height: 0;
+  padding-bottom: 75%;
+}
+/* Hide the radio */
+.slideshow input {
+  display: none;
+}
+/* Navigation */
+.slideshow li input + label {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  z-index: 999;
+  background: #333;
+  color: #fff;
+  padding: 1%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.slideshow li:nth-child(2) label {
+  left: 7%;
+}
+
+.slideshow li:nth-child(3) label {
+  left: 13%;
+}
+
+.slideshow li:nth-child(4) label {
+  left: 19%;
+}
+
+.slideshow li:nth-child(5) label {
+  left: 25%;
+}
+
+.slideshow li:nth-child(6) label {
+  left: 31%;
+}
+
+.slideshow li:nth-child(7) label {
+  left: 37%;
+}
+
+.slideshow li:nth-child(8) label {
+  left: 43%;
+}
+
+.ie8 .slideshow input + label {
+  display: none;
+}
+/* Active navigation */
+.slideshow li input:checked + label {
+  background-color: #3c61a5;
+  color: #fff;
+}
+/* Images */
+.slideshow li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* Show the image */
+.slideshow li input:checked ~ img {
+  z-index: 99;
+}
+/*Captions*/
+.slideshow li span {
+  cursor: default;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  padding: 0 10px;
+  text-align: right;
+  opacity: 0;
+}
+/* Show the caption */
+.slideshow li input:checked ~ span {
+  opacity: 1;
+  z-index: 100;
+}
+
+.bmx, .arts, .baseball, .basketball, .bocce, .carousel, .dogpark, .boating, .multipurpose, .picnic_shelter, 
+.playground, .commcenter, .skateboarding, .trail, .swimming, .tennis_center, .tennis, .greenway, .train,
+.volleyball {
+  background: url(images/sprites.png);
+  float: right;
+  margin-left: 0.25em;
+}
+
+.bmx {
+  background-position: -70px -35px;
+  width: 31px;
+  height: 31px;
+}
+
+.arts {
+  background-position: 0 0;
+  width: 31px;
+  height: 31px;
+}
+
+.baseball {
+  background-position: -35px 0;
+  width: 31px;
+  height: 31px;
+}
+
+.basketball {
+  background-position: -70px 0;
+  width: 31px;
+  height: 31px;
+}
+
+.bocce {
+  background-position: -105px 0;
+  width: 31px;
+  height: 31px;
+}
+
+.carousel {
+  background-position: -140px 0;
+  width: 31px;
+  height: 31px;
+}
+
+.dogpark {
+  background-position: 0 -35px;
+  width: 31px;
+  height: 31px;
+}
+
+.boating {
+  background-position: -35px -35px;
+  width: 31px;
+  height: 31px;
+}
+
+.multipurpose {
+  background-position: -105px -35px;
+  width: 31px;
+  height: 31px;
+}
+
+.picnic_shelter {
+  background-position: -140px -35px;
+  width: 31px;
+  height: 31px;
+}
+
+.playground {
+  background-position: 0 -70px;
+  width: 31px;
+  height: 31px;
+}
+
+.commcenter {
+  background-position: -35px -70px;
+  width: 31px;
+  height: 31px;
+}
+
+.skateboarding {
+  background-position: -70px -70px;
+  width: 31px;
+  height: 31px;
+}
+
+.trail {
+  background-position: -105px -70px;
+  width: 31px;
+  height: 31px;
+}
+
+.swimming {
+  background-position: -140px -70px;
+  width: 31px;
+  height: 31px;
+}
+
+.tennis_center {
+  background-position: -35px -105px;
+  width: 31px;
+  height: 31px;
+}
+
+.tennis {
+  background-position: 0 -105px;
+  width: 31px;
+  height: 31px;
+}
+
+.greenway {
+  background-position: -70px -105px;
+  width: 31px;
+  height: 31px;
+}
+
+.train {
+  background-position: -105px -105px;
+  width: 31px;
+  height: 31px;
+}
+
+.volleyball {
+  background-position: -140px -105px;
+  width: 31px;
+  height: 31px;
+}     
