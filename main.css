@@ -10,7 +10,7 @@ Description:		Global structural elements
 Created:				3.2.2012
 Last Modified:	4.8.2013 (cwg)
 ---------------------------------------------------- */
-/* Establish basic layout elements.
+/* Establish basic layout elements
 -------------------------------------------------------------- */
 * {
   -webkit-box-sizing: border-box;
@@ -22,7 +22,7 @@ body {
   background: #efefef;
 }
 
-html, body, #Main, #Article, #sidebar, #Sidebar, #screenWrapper, .wrapper, #navigation, #Header, #Nav, #contentArea, #col1, #col2, #col3, #col1Large, #col2Large, #accolade, #footerContent {
+html, body, #Main, #Article, #sidebar, #Sidebar, #navigation, #Header, #Nav, #contentArea, #col1, #col2, #col3, #Footer {
   margin: 0;
   padding: 0;
 }
