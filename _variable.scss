@@ -1,17 +1,31 @@
 // Variables
 $link:#3c61a5;
-$linkhover:#657838;
 $green:#657838;
-$orange:#ee6d2b;
+$orange:#e88b2c;
 $offwhite:#f7f7f7;
-$lightblue:#d7e2f1;
+$teal:#80aeb5;
 
 @mixin gradient ($start:#ffffff, $stop:#ffffff) {
 	background:mix($start, $stop);
-	// background-image:-webkit-gradient(linear, top, bottom, from($start), to($stop));
-	background-image:linear-gradient(to bottom, $start, $stop);
+	background:linear-gradient(to bottom, $start, $stop);
 }
 
 @mixin transition ($property, $time, $method) {
-	        transition:$property $time $method;
+	transition:$property $time $method;
+}
+
+// desktop first default, need to switch to mobile first and add desktop bp
+@mixin bp($point) {
+  @if $point == wide {
+    @media only screen and (min-width: 90em) { @content; }
+  }
+  @if $point == desktop {
+    @media only screen and (min-width: 65em) { @content; }
+  }
+  @else if $point == tablet {
+    @media only screen and (min-width:40em) { @content; }
+  }
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
 }

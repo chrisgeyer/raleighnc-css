@@ -5,11 +5,6 @@ Created:			2.8.2012
 LastModified:	3.2.2012 (cwg)
 
 ---------------------------------------- */
-/* ----------------------------------------------------
-Description:		Global structural elements
-Created:				3.2.2012
-Last Modified:	4.8.2013 (cwg)
----------------------------------------------------- */
 /* Establish basic layout elements
 -------------------------------------------------------------- */
 * {
@@ -27,14 +22,29 @@ html, body, #Main, #Article, #sidebar, #Sidebar, #navigation, #Header, #Nav, #co
   padding: 0;
 }
 
-.fixedwidth, #Header, #contentArea, #Main, #Search {
-  margin: 0 auto;
-  width: 960px;
+.fixedwidth, #Header, #Nav ul, #contentArea, #Main {
+  width: 100%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  .fixedwidth, #Header, #Nav ul, #contentArea, #Main {
+    margin: 0 auto;
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 90em) {
+  .fixedwidth, #Header, #Nav ul, #contentArea, #Main {
+    width: 80%;
+  }
 }
 
-/* Text elements.
+/* Links
 -------------------------------------------------------------- */
-/*Link*/
 a {
   color: #3c61a5;
   text-decoration: none;
@@ -50,6 +60,10 @@ a:hover, a:focus {
 }
 a:active {
   top: 1px;
+  	         		         /*
+    -webkit-transform: translate(2px);
+        -ms-transform: translate(2px);
+            transform: translate(2px);*/
 }
 
 #contentArea a:before {
@@ -63,7 +77,7 @@ a:active {
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 #contentArea a:hover:before {
@@ -72,12 +86,41 @@ a:active {
   transform: scaleX(1);
 }
 
+.content a:link, .content a:visited, table a:link {
+  border-bottom: 1px solid #3c61a5;
+  text-shadow: none;
+}
+
+.content a:visited {
+  border-bottom: 1px solid #537ac1;
+}
+
+.content a:after {
+  border: 0;
+}
+
 /* Header elements.
 -------------------------------------------------------------- */
 #navigation {
   font-size: 0.9em;
   background: #5784d5;
-  height: 141px;
+  /*check color for active tabs*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #navigation {
+    /*@include gradient(#5c8fea, #537ac1); height:auto; for smooth fixed nav */
+  }
+}
+@media only screen and (min-width: 65em) {
+  #navigation {
+    height: 141px;
+  }
 }
 
 .ie9 #navigation {
@@ -85,111 +128,185 @@ a:active {
 }
 
 #Header {
-  height: 95px;
   overflow: hidden;
   position: relative;
-  color: #fff;
-  background: url(images/Skyline1.png) top left no-repeat;
-  background-position: 30% 50%;
+  text-align: center;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
 }
-
-#Header a {
-  color: #fff;
-  line-height: 20px;
+@media only screen and (min-width: 40em) {
+  #Header {
+    height: 95px;
+    background: url(images/Skyline1.png) no-repeat;
+    background-position: 20%;
+    /*background-size:100%;*/
+    text-align: left;
+  }
 }
-
-#Header a:hover {
-  border: 0;
-}
-
-#CitySeal {
-  width: 45%;
-  cursor: pointer;
+@media only screen and (min-width: 90em) {
+  #Header {
+    background-position: 40%;
+    background-repeat: no-repeat;
+    box-shadow: none;
+  }
 }
 
 .logo {
-  float: left;
-  margin: 5px;
-  width: 85px;
-  -webkit-filter: drop-shadow(1px 1px 3px #31417b);
-  filter: drop-shadow(1px 1px 3px #31417b);
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(1px 1px 5px #333);
+  filter: drop-shadow(1px 1px 5px #333);
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  .logo {
+    width: 70px;
+  }
+}
+
+#Header .logo {
+  display: none;
+  position: absolute;
+  right: 3%;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Header .logo {
+    display: inline;
+    position: static;
+    width: 85px;
+    margin: 0.25em 0 0 1em;
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Header .logo {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 90em) {
+  #Header .logo {
+    display: none;
+  }
 }
 
 .raleigh {
-  margin: 0.6em 0 0 0.2em;
-  font-size: 2.2em;
-  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-  display: inline;
-  position: absolute;
-  text-shadow: 1px 1px 3px #31417b;
+  font-size: 2em;
+  padding-left: 0.25em;
   color: #fff;
-  transition: all 0.5s ease-in-out;
+  display: inline;
+  vertical-align: middle;
+  text-shadow: 1px 1px 3px #111;
+  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", serif;
+  transition: all, .5s, ease-in-out;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  .raleigh {
+    font-size: 2.2em;
+  }
+}
+@media only screen and (min-width: 90em) {
+  .raleigh {
+    display: block;
+    padding-top: 0.5em;
+  }
 }
 
 .raleigh:hover {
   cursor: pointer;
   -webkit-transform: scale(1.25) translate(0.5em);
+  -ms-transform: scale(1.25) translate(0.5em);
   transform: scale(1.25) translate(0.5em);
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
 }
-
-.utility, .sizer, #Weather, #SearchBox {
-  position: absolute;
-  right: 2%;
-}
-
-.utility {
-  top: 10%;
-  font-size: 0.8em;
-  display: none;
-}
-
-.utility li {
-  float: left;
-  padding-right: 2em;
-}
-
-.utility li:last-child {
-  border-right: none;
-}
-
-#Weather {
-  top: 5%;
-  right: 14%;
-  display: none;
-}
-
-#Weather img {
-  float: left;
-  margin: -1% -10% 0 0;
-  width: 40%;
-}
-
-.temp {
-  font-size: 1.5em;
-}
-
-.sizer {
-  top: 5%;
-  display: none;
-}
-
-.sizer span {
-  cursor: pointer;
+@media only screen and (min-width: 90em) {
+  .raleigh:hover {
+    -webkit-transform: scale(1.25) translate(3.75em);
+    -ms-transform: scale(1.25) translate(3.75em);
+    transform: scale(1.25) translate(3.75em);
+  }
 }
 
 #SearchBox {
-  bottom: 15%;
-  right: 0;
-  width: 35%;
+  /*visibility:hidden;*/
+  position: fixed;
+  overflow: hidden;
+  /*top:85px; right:9%;*/
+  width: 0;
+  -webkit-transform: translate(0.75em, 0.75em);
+  -ms-transform: translate(0.75em, 0.75em);
+  transform: translate(0.75em, 0.75em);
+  transition: all, .4s, ease-in-out;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #SearchBox {
+    position: static;
+    float: right;
+    width: 40%;
+    -webkit-transform: translate(0, -4em);
+    -ms-transform: translate(0, -4em);
+    transform: translate(0, -4em);
+  }
+}
+@media only screen and (min-width: 65em) {
+  #SearchBox {
+    width: 29%;
+    /*-webkit-transform:translate(40em, -3.75em); -ms-transform:translate(40em, -3.75em); transform:translate(40em, -3.75em);*/
+  }
+}
+@media only screen and (min-width: 90em) {
+  #SearchBox {
+    width: 24%;
+    -webkit-transform: translate(0, -3em);
+    -ms-transform: translate(0, -3em);
+    transform: translate(0, -3em);
+  }
+}
+
+#SearchBox.visible {
+  width: 95%;
+  z-index: 200;
 }
 
 #SearchInput {
-  float: left;
-  margin: 0 0 0 1%;
-  padding: 5px;
-  width: 70%;
+  margin: 0;
+  padding: 0.25em;
+  width: 79%;
+  vertical-align: middle;
   border: 1px solid #ddd;
-  border-bottom: 1px solid #aaa;
   border-radius: 2px 0 0 2px;
   font: bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma';
   transition: box-shadow 0.3s ease-in-out;
@@ -204,10 +321,10 @@ a:active {
 }
 
 #SearchBox .action {
-  float: left;
-  margin: -1px 0;
-  padding: 7px;
+  margin: 0 0 0 -0.25em;
+  padding: 0.5em;
   width: 20%;
+  vertical-align: middle;
   font-size: 1em;
   font-weight: 300;
   border-radius: 0 3px 3px 0;
@@ -216,16 +333,20 @@ a:active {
   cursor: pointer;
   border: 1px solid #666;
   text-shadow: 1px 1px 3px #111;
+  /*@extend .icon-search;*/
 }
 
-#Search .action, #Search .accolades a, .accolades #Search a {
-  background-color: #c43c2b;
-  background-image: -webkit-linear-gradient(#dd4b39, #ac2d1e);
-  background-image: linear-gradient(to bottom, #dd4b39, #ac2d1e);
+#Search .action {
+  background: #c43c2b;
+  background: linear-gradient(to bottom, #DD4B39, #ac2d1e);
 }
 
 .ie8 .icon-search:before, .ie8 #Glass:before {
   content: "Search";
+}
+
+.utility {
+  display: none;
 }
 
 /* Main navigation elements.
@@ -237,54 +358,327 @@ a:active {
   box-shadow: 0 1px 2px #777;
   transition: all 0.5s linear;
   background: #333;
+  text-align: center;
+  position: relative;
 }
 
 #Nav ul {
-  transition: all 0.15s ease-in-out;
+  /*display:none;*/
+  margin: 0;
+  clear: both;
+  width: 100%;
+  transition: display, 0.15s, cubic-bezier(0, 1.12, 0.39, 0.98);
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav ul {
+    display: block;
+    width: 90%;
+    float: right;
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Nav ul {
+    display: table-row;
+  }
+}
+@media only screen and (min-width: 90em) {
+  #Nav ul {
+    padding-left: 1em;
+    width: 80%;
+  }
 }
 
 #Nav ul.visible {
   display: block;
-  transition: all 0.15s ease-in-out;
-}
-
-#Nav li {
-  float: left;
-  height: 45px;
-  text-align: center;
-  transition: background 0.2s ease-in-out;
-}
-
-.current {
-  background: #476db3;
-  background-image: linear-gradient(to bottom, #3c61a5, #537ac1);
 }
 
 #Nav a {
-  padding: 0 14px;
   color: #fff;
-  line-height: 45px;
   text-shadow: 1px 1px 3px #111;
-  text-decoration: none;
 }
 
 #Nav a:hover {
   border: 0;
 }
 
+#Nav #Home:hover {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav #Home:hover {
+    border-bottom: 1px solid #999;
+    background: #476db3;
+    background: linear-gradient(to bottom, #3c61a5, #537ac1);
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Nav #Home:hover {
+    border: 0;
+    background: transparent;
+  }
+}
+
+#Nav #Lines, #Nav #Lines:active {
+  float: left;
+  margin: 2%;
+  line-height: 30px;
+  font-size: 1.1em;
+  padding: 0 1%;
+  font-weight: normal;
+  position: absolute;
+  top: -3em;
+  left: 0;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav #Lines, #Nav #Lines:active {
+    top: 45%;
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Nav #Lines, #Nav #Lines:active {
+    top: 0;
+    margin: 1%;
+  }
+}
+
+#Nav #Lines:hover {
+  border: 1px solid #666;
+}
+
+#Lines.display {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  #Lines.display {
+    display: none;
+  }
+}
+
+#Lines span {
+  display: none;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  #Lines span {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 60em) and (max-width: 71em) {
+  #Lines span {
+    display: none;
+  }
+}
+#Home {
+  font-weight: 700;
+  display: block;
+  margin: 1em;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Home {
+    display: block;
+    position: absolute;
+    height: 50px;
+    width: 10%;
+    border-bottom: 1px solid #999;
+    text-align: center;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Home {
+    display: none;
+  }
+}
+
+#Glass {
+  font-weight: 700;
+  line-height: 20px;
+  padding: 5px;
+  float: right;
+  vertical-align: baseline;
+  margin: 1.5%;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  top: -2.25em;
+  right: 0;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Glass {
+    display: none;
+  }
+}
+
+#Glass.hidden {
+  display: none;
+}
+
+#Nav li {
+  border-top: 1px solid #999;
+  text-align: left;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav li {
+    float: left;
+    width: 25%;
+    border: 0;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Nav li {
+    width: auto;
+    transition: background 0.2s ease-in-out;
+  }
+}
+
 #Nav li:hover {
   font-weight: normal;
   color: #fff;
   background: #476db3;
-  background-image: linear-gradient(to bottom, #3c61a5, #537ac1);
+  background: linear-gradient(to bottom, #3c61a5, #537ac1);
+}
+
+#Nav li:first-child {
+  display: none;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  #Nav li:first-child {
+    display: inline-block;
+  }
+}
+
+#Nav li:nth-child(-n+5) {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav li:nth-child(-n+5) {
+    border-bottom: 1px solid #999;
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Nav li:nth-child(-n+5) {
+    border: 0;
+  }
+}
+
+#Nav li:nth-child(5) {
+  /*font-size:0.75em;*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav li:nth-child(5) {
+    border-right: none;
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 65em) {
+  #Nav li:nth-child(5) {
+    /*width:17%;*/
+  }
+}
+
+@media only screen and (min-width: 40em) and (max-width: 51em) {
+  #Nav li:nth-child(5) {
+    height: 50px;
+    font-size: 0.85em;
+  }
+}
+.current {
+  background: #476db3;
+  background: linear-gradient(to bottom, #3c61a5, #537ac1);
 }
 
 .current a:hover, .current:hover a {
   color: #fff;
 }
 
-#Nav li:first-child {
-  border-left: none;
+#Nav li a {
+  padding: 1.1em;
+  display: inline-block;
+  width: 100%;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 40em) {
+  #Nav li a {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 90em) {
+  #Nav li a {
+    padding-right: 1.4em;
+    padding-left: 1.4em;
+  }
+}
+
+#Nav li:first-child a {
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  #Nav li:first-child a {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+  }
 }
 
 @media only screen and (min-width: 1em) {
@@ -295,32 +689,6 @@ a:active {
     vertical-align: sub;
   }
 }
-#Nav #Lines, #Nav #Lines:active {
-  float: left;
-  margin: 0.5%;
-  line-height: 30px;
-  font-size: 1.1em;
-  padding: 0 1%;
-  font-weight: normal;
-}
-
-.ie8 #Nav #Lines {
-  line-height: 25px;
-}
-
-#Nav #Lines:hover {
-  border: 1px solid #666;
-}
-
-#Home, #Glass {
-  display: none;
-  font-weight: 700;
-}
-
-#Lines.display {
-  display: none;
-}
-
 @-webkit-keyframes slidein {
   0% {
     -webkit-transform: translateX(110%);
@@ -343,10 +711,19 @@ a:active {
 }
 /* Main content areas.
 -------------------------------------------------------------- */
-#contentArea, #Main, #Search {
-  padding: 2% 1%;
+#contentArea, #Main {
+  padding: 0.5em;
   overflow: hidden;
   background: #fff;
+  /*@else if $point == mobile {
+    @media only screen and (max-width: 40em) { @content; }
+  }*/
+}
+@media only screen and (min-width: 65em) {
+  #contentArea, #Main {
+    padding: 1.5em 0;
+    background: none;
+  }
 }
 
 #col1 {
@@ -368,7 +745,6 @@ a:active {
 
 #col1.menu {
   margin: 0;
-  border: 1px solid #ddd;
   transition: margin-left 0.15s cubic-bezier(0, 1.12, 0.39, 0.98);
 }
 
@@ -397,7 +773,11 @@ a:active {
   padding: 0;
 }
 
-#col1.land ~ #col2, #col1.land ~ #col3 {
+#col1.land ~ #col2 {
+  width: 78%;
+}
+
+#col1.land ~ #col3 {
   width: 78%;
 }
 
@@ -416,7 +796,7 @@ a:active {
   position: relative;
 }
 
-#Sidebar, #sidebar {
+#Sidebar {
   float: left;
   width: 29%;
   padding: 0.5% 0 0 1%;
@@ -424,7 +804,6 @@ a:active {
 
 /* Footer elements.
 -------------------------------------------------------------- */
-/*Accolades*/
 .box.accolades {
   margin: 0;
   padding: 1%;
@@ -432,7 +811,7 @@ a:active {
   text-align: center;
   position: relative;
   box-shadow: 0 2px 3px #999;
-  background: #63979f;
+  background: #80aeb5;
 }
 
 .accolades h3 {
@@ -452,12 +831,6 @@ a:active {
   text-decoration: none;
 }
 
-.wrapper .accolades a {
-  margin: 0;
-  font-size: 0.9em;
-  float: none;
-}
-
 #Footer {
   margin: 0 auto;
   padding: 1%;
@@ -465,12 +838,13 @@ a:active {
   font-size: 0.85em;
   color: #fff;
   position: relative;
-  background-color: #444;
+  background: #444;
 }
 
 #Footer .logo {
   margin-left: 40%;
   -webkit-filter: none;
+  filter: none;
 }
 
 #Footer h3 {
@@ -494,9 +868,7 @@ a:active {
   color: #fff;
   border: 1px solid #657838;
   box-shadow: 0 4px 0 #485528;
-  background-color: #7b9244;
-  background-image: -webkit-linear-gradient(#91ac50, #657838);
-  background-image: linear-gradient(to bottom, #91ac50, #657838);
+  background: #7b9244;
 }
 
 .socialmedia {
@@ -512,12 +884,12 @@ a:active {
   float: left;
   margin-right: 5px;
   border-radius: 20px;
-  box-shadow: 0px 1px 2px #666;
+  box-shadow: 0 1px 2px #666;
 }
 
 .bow {
   border-radius: 3px;
-  box-shadow: 0px 1px 2px #666;
+  box-shadow: 0 1px 2px #666;
   width: 110px;
   opacity: 0.9;
   vertical-align: middle;
@@ -550,12 +922,7 @@ a:active {
   padding-bottom: 10px;
 }
 
-/* ----------------------------------------------------
-
-Description:	Styling typography elements
-Created:			2.3.2012
-LastModified:	2.22.2012 (cwg)
-
+/* Styling typography elements
 ---------------------------------------------------- */
 body {
   color: #444;
@@ -563,7 +930,7 @@ body {
 }
 
 .content {
-  font-family: Optima,Segoe,"Segoe UI",Candara,Calibri,Arial,sans-serif;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
 
 /* Headings
@@ -610,7 +977,7 @@ h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
 /* Text elements
 -------------------------------------------------------------- */
 p {
-  margin: 0 0 1.618 0;
+  margin: 0 0 1.618em 0;
 }
 
 blockquote {
@@ -628,13 +995,7 @@ em {
 }
 
 /* Lists
---------------------------------------------------------------
-li ul, li ol 		{margin:0 1.5em; line-height:.875em}
-li ul li 				{line-height:1.125em;}
-ul							{list-style-type:none;}
-ul.list 				{list-style-type:disc;}
-ul.simple li		{margin:0;padding:0;display:inline;}
-ol 							{list-style-type:decimal;}*/
+-------------------------------------------------------------- */
 ul, ol {
   margin: 0 0 1em 0;
   padding: 0;
@@ -686,14 +1047,10 @@ table {
 
 table th, table thead tr td, table.bids tr:nth-child(5n+1) td {
   padding: 1% 2%;
-  background: #63979f;
+  background: #80aeb5;
   color: #fff;
   text-shadow: 1px 1px 1px #333;
   font-weight: 700;
-}
-
-table.bids tr:nth-child(5n+1) td a {
-  color: #131d34;
 }
 
 table.no-border, table.no-border td {
@@ -718,24 +1075,14 @@ table.devserv tr:nth-child(even) td {
   background: #d6e4ec;
 }
 
-table.paragraph {
-  margin: 0;
-}
-
-table.paragraph td {
-  padding: 0;
+table.bids tr:nth-child(5n+1) td a {
+  color: #131d34;
 }
 
 /* Messaging
---------------------------------------------------------------
-.small 				{margin-bottom:1.875em; font-size:.8em; line-height:1.875em;}
-.large 				{margin-bottom:1.25em; font-size:1.2em; line-height:2.5em;}*/
+-------------------------------------------------------------- */
 .quiet {
   color: #666;
-}
-
-.loud {
-  color: #000;
 }
 
 .highlight {
@@ -758,14 +1105,12 @@ table.paragraph td {
   border-radius: 2px;
   color: #fff;
 }
-
 .announce h2 {
   display: inline;
   color: #fff;
   text-shadow: none;
   vertical-align: middle;
 }
-
 .announce a {
   color: #fff;
   padding: 0.2em 0.5em 0.1em;
@@ -773,15 +1118,13 @@ table.paragraph td {
   margin: 0.3em;
   border-radius: 3px;
 }
-
 .announce a:hover {
   background: #fff;
   color: #444;
 }
 
-/*Main CSS
-============*/
-/*Generic classes*/
+/*Generic classes
+-------------------------------------------------------------- */
 .cf {
   overflow: hidden;
 }
@@ -919,7 +1262,7 @@ img {
   cursor: pointer;
   text-decoration: none;
   background: #8c8c8b;
-  background-image: linear-gradient(to bottom, #666665, #B2B2B2);
+  background: linear-gradient(to bottom, #666665, #B2B2B2);
 }
 
 .action:active {
@@ -938,44 +1281,21 @@ img {
 
 .active, .toggle:hover {
   opacity: 1;
-  font-weight: 700;
   -webkit-filter: grayscale(0%);
 }
 
-.dotted, .newsList li, #Tools li {
+/*OOCSS - start using % for placeholders not needed in compiled css*/
+.dotted {
   border-bottom: 1px dotted #ddd;
 }
 
-.underline, #col1 h3 {
+.underline {
   border-bottom: 1px solid #ddd;
 }
 
-.inlineblock, .toggle, .eventdates, .newseventmap, .addfiles, .newscontacts, .relatedlinks, .org ul, .content ul.individual, .parkfacts, .parkbullets {
+.toggle {
   display: inline-block;
   vertical-align: top;
-}
-
-/*Links*/
-.content a:link, .content a:visited, table a:link {
-  border-bottom: 1px solid #3c61a5;
-  text-shadow: none;
-}
-
-.content a:visited {
-  border-bottom: 1px solid #537ac1;
-}
-
-.content a:after {
-  border: 0;
-}
-
-.section .coricon, .coricon {
-  margin: 0;
-  padding: 0 0 0 2px;
-  border: 0;
-  background: none;
-  vertical-align: middle;
-  box-shadow: none;
 }
 
 @-webkit-keyframes fadein {
@@ -994,7 +1314,8 @@ img {
     opacity: 1;
   }
 }
-/*Pages*/
+/*Pages
+-------------------------------------------------------------- */
 .content {
   margin: 0 auto;
   min-width: 10em;
@@ -1004,10 +1325,6 @@ img {
 
 #Article .content {
   padding: 0;
-}
-
-#storyContentWrapper {
-  padding: 0 20px;
 }
 
 div.updatedDate {
@@ -1066,9 +1383,7 @@ div.updatedDate {
   border-radius: 5px;
   box-shadow: 0 2px 4px #aaa;
   border: 1px solid #ddd;
-  background-color: #d4d4d5;
-  background-image: -webkit-linear-gradient(#ddddde, #cccccd);
-  background-image: linear-gradient(to bottom, #ddddde, #cccccd);
+  background: #d4d4d5;
 }
 
 .findmyservice, .calendar h1 {
@@ -1379,7 +1694,7 @@ div.updatedDate {
   overflow: hidden;
 }
 
-.grid-1 .outline a:active, .grid-1 li a:active, .grid-1 .images a:active, .grid-1 iframe a:active, .grid-1 .content .map a:active, .content .grid-1 .map a:active, .grid-1 .youtube img a:active, .youtube .grid-1 img a:active, .grid-1 .section img a:active, .section .grid-1 img a:active, .grid-1 .callout img a:active, .callout .grid-1 img a:active, .grid-1 .confirm img a:active, .confirm .grid-1 img a:active, .grid-1 .org img a:active, .org .grid-1 img a:active, .grid-1 .warning img a:active, .warning .grid-1 img a:active, .grid-1 .error img a:active, .error .grid-1 img a:active, .grid-2 .outline a:active, .grid-2 li a:active, .grid-2 .images a:active, .grid-2 iframe a:active, .grid-2 .content .map a:active, .content .grid-2 .map a:active, .grid-2 .youtube img a:active, .youtube .grid-2 img a:active, .grid-2 .section img a:active, .section .grid-2 img a:active, .grid-2 .callout img a:active, .callout .grid-2 img a:active, .grid-2 .confirm img a:active, .confirm .grid-2 img a:active, .grid-2 .org img a:active, .org .grid-2 img a:active, .grid-2 .warning img a:active, .warning .grid-2 img a:active, .grid-2 .error img a:active, .error .grid-2 img a:active, .grid-3 .outline a:active, .grid-3 li a:active, .grid-3 .images a:active, .grid-3 iframe a:active, .grid-3 .content .map a:active, .content .grid-3 .map a:active, .grid-3 .youtube img a:active, .youtube .grid-3 img a:active, .grid-3 .section img a:active, .section .grid-3 img a:active, .grid-3 .callout img a:active, .callout .grid-3 img a:active, .grid-3 .confirm img a:active, .confirm .grid-3 img a:active, .grid-3 .org img a:active, .org .grid-3 img a:active, .grid-3 .warning img a:active, .warning .grid-3 img a:active, .grid-3 .error img a:active, .error .grid-3 img a:active, .grid-4 .outline a:active, .grid-4 li a:active, .grid-4 .images a:active, .grid-4 iframe a:active, .grid-4 .content .map a:active, .content .grid-4 .map a:active, .grid-4 .youtube img a:active, .youtube .grid-4 img a:active, .grid-4 .section img a:active, .section .grid-4 img a:active, .grid-4 .callout img a:active, .callout .grid-4 img a:active, .grid-4 .confirm img a:active, .confirm .grid-4 img a:active, .grid-4 .org img a:active, .org .grid-4 img a:active, .grid-4 .warning img a:active, .warning .grid-4 img a:active, .grid-4 .error img a:active, .error .grid-4 img a:active, .grid-5 .outline a:active, .grid-5 li a:active, .grid-5 .images a:active, .grid-5 iframe a:active, .grid-5 .content .map a:active, .content .grid-5 .map a:active, .grid-5 .youtube img a:active, .youtube .grid-5 img a:active, .grid-5 .section img a:active, .section .grid-5 img a:active, .grid-5 .callout img a:active, .callout .grid-5 img a:active, .grid-5 .confirm img a:active, .confirm .grid-5 img a:active, .grid-5 .org img a:active, .org .grid-5 img a:active, .grid-5 .warning img a:active, .warning .grid-5 img a:active, .grid-5 .error img a:active, .error .grid-5 img a:active {
+.grid-1 .outline a:active, .grid-1 li a:active, .grid-1 .images a:active, .grid-1 iframe a:active, .grid-1 .content .map a:active, .content .grid-1 .map a:active, .grid-1 .youtube img a:active, .youtube .grid-1 img a:active, .grid-1 .section img a:active, .section .grid-1 img a:active, .grid-1 .callout img a:active, .callout .grid-1 img a:active, .grid-1 .confirm img a:active, .grid-1 .org img a:active, .confirm .grid-1 img a:active, .org .grid-1 img a:active, .grid-1 .org img a:active, .org .grid-1 img a:active, .grid-1 .warning img a:active, .warning .grid-1 img a:active, .grid-1 .error img a:active, .error .grid-1 img a:active, .grid-2 .outline a:active, .grid-2 li a:active, .grid-2 .images a:active, .grid-2 iframe a:active, .grid-2 .content .map a:active, .content .grid-2 .map a:active, .grid-2 .youtube img a:active, .youtube .grid-2 img a:active, .grid-2 .section img a:active, .section .grid-2 img a:active, .grid-2 .callout img a:active, .callout .grid-2 img a:active, .grid-2 .confirm img a:active, .grid-2 .org img a:active, .confirm .grid-2 img a:active, .org .grid-2 img a:active, .grid-2 .org img a:active, .org .grid-2 img a:active, .grid-2 .warning img a:active, .warning .grid-2 img a:active, .grid-2 .error img a:active, .error .grid-2 img a:active, .grid-3 .outline a:active, .grid-3 li a:active, .grid-3 .images a:active, .grid-3 iframe a:active, .grid-3 .content .map a:active, .content .grid-3 .map a:active, .grid-3 .youtube img a:active, .youtube .grid-3 img a:active, .grid-3 .section img a:active, .section .grid-3 img a:active, .grid-3 .callout img a:active, .callout .grid-3 img a:active, .grid-3 .confirm img a:active, .grid-3 .org img a:active, .confirm .grid-3 img a:active, .org .grid-3 img a:active, .grid-3 .org img a:active, .org .grid-3 img a:active, .grid-3 .warning img a:active, .warning .grid-3 img a:active, .grid-3 .error img a:active, .error .grid-3 img a:active, .grid-4 .outline a:active, .grid-4 li a:active, .grid-4 .images a:active, .grid-4 iframe a:active, .grid-4 .content .map a:active, .content .grid-4 .map a:active, .grid-4 .youtube img a:active, .youtube .grid-4 img a:active, .grid-4 .section img a:active, .section .grid-4 img a:active, .grid-4 .callout img a:active, .callout .grid-4 img a:active, .grid-4 .confirm img a:active, .grid-4 .org img a:active, .confirm .grid-4 img a:active, .org .grid-4 img a:active, .grid-4 .org img a:active, .org .grid-4 img a:active, .grid-4 .warning img a:active, .warning .grid-4 img a:active, .grid-4 .error img a:active, .error .grid-4 img a:active, .grid-5 .outline a:active, .grid-5 li a:active, .grid-5 .images a:active, .grid-5 iframe a:active, .grid-5 .content .map a:active, .content .grid-5 .map a:active, .grid-5 .youtube img a:active, .youtube .grid-5 img a:active, .grid-5 .section img a:active, .section .grid-5 img a:active, .grid-5 .callout img a:active, .callout .grid-5 img a:active, .grid-5 .confirm img a:active, .grid-5 .org img a:active, .confirm .grid-5 img a:active, .org .grid-5 img a:active, .grid-5 .org img a:active, .org .grid-5 img a:active, .grid-5 .warning img a:active, .warning .grid-5 img a:active, .grid-5 .error img a:active, .error .grid-5 img a:active {
   position: relative;
 }
 
@@ -1788,7 +2103,7 @@ iframe, .content .map {
 
 /*Templates
 ====================*/
-/*Boards-Commissions*/
+/*BC-CAC*/
 .bclogo {
   float: right;
   border-radius: 3px;
@@ -1851,127 +2166,6 @@ iframe, .content .map {
   background: #fff;
 }
 
-#top h1 {
-  margin: 1% 2% 0;
-  width: 95%;
-}
-
-#top img {
-  margin-bottom: -5px;
-  display: none;
-}
-
-.employmentType {
-  width: 99%;
-  padding: 0 2%;
-}
-
-.employmentType div[style] {
-  display: none;
-}
-
-.employmentType div {
-  margin-left: 0.5em;
-}
-
-.empJump li a {
-  float: left;
-  margin: 0 15px 20px 0;
-  border-bottom: 1px solid #fff;
-}
-
-.employmentType h3 {
-  clear: both;
-  margin: 1em 0 0.5em;
-}
-
-.empTitle {
-  clear: both;
-  margin: 0 0.5em 0 0;
-  font-size: 1.1em;
-  font-weight: 700;
-}
-
-.empClose, .empSalary {
-  float: left;
-  margin: 0 0 0.25em;
-  font-size: 0.9em;
-}
-
-.empDept, .empNo {
-  float: left;
-  margin: 0 0 0.5em 0;
-  font-size: 0.9em;
-}
-
-.empDept {
-  clear: both;
-}
-
-.empNone {
-  font-style: italic;
-}
-
-.empNone:last-child {
-  display: none;
-}
-
-#top:hover, #top:active, .employmentType > a:hover, .employmentType > a:active {
-  text-decoration: none;
-  cursor: default;
-}
-
-.content .job li {
-  list-style: none;
-  margin-left: 0;
-  padding: 5px;
-}
-
-.employmentRequirements li, .employmentDuties li {
-  margin-left: 20px;
-  list-style-type: disc;
-}
-
-.employmentDisclaimer {
-  margin-top: 20px;
-  color: #666;
-}
-
-#col3 .employmentType {
-  padding: 0;
-}
-
-#col3 h1 img, #col3 .empJump, #col3 .empNo, #col3 .empSalary, #col3 .empDept, #col3 .empClose, #col3 .employmentType div[style] {
-  display: none;
-}
-
-#col3 #top h1 {
-  margin-top: 2%;
-  width: 99%;
-  padding: 3% 1%;
-  color: #333;
-  font-size: 1.4em;
-  text-shadow: none;
-  position: relative;
-}
-
-#col3 .employmentType h3 {
-  border-radius: 3px;
-  font-size: 1.4em;
-}
-
-#col3 .empTitle {
-  font-weight: normal;
-  font-size: 1em;
-  border-bottom: 1px dotted #ccc;
-  width: 98%;
-  margin: 0 0 6px 0;
-}
-
-#col3 a[title=Volunteer] {
-  display: none;
-}
-
 .content .parkfacts li {
   list-style: none;
   margin: 0;
@@ -1998,6 +2192,7 @@ iframe, .content .map {
     background-position: 0% 100%;
   }
 }
+/*Project*/
 label.project {
   margin-right: 5px;
   display: inline-block;
@@ -2027,7 +2222,7 @@ ul.progress li {
   transition: all 1s ease-in;
 }
 
-ul.progress li:first-child:before, ul.progress li.active ~ li:before, ul.progress li.toggle:hover ~ li:before {
+ul.progress li:first-child:before, ul.progress li.active ~ li:before, ul.progress li.toggle:hover ~ li:before, ul.progress li.toggle:hover ~ li:before {
   content: ' ';
   position: absolute;
   top: 0;
@@ -2042,7 +2237,7 @@ ul.progress li:first-child:before, ul.progress li.active ~ li:before, ul.progres
   transition: all 1s ease-in;
 }
 
-ul.progress li.active ~ li:before, ul.progress li.toggle:hover ~ li:before {
+ul.progress li.active ~ li:before, ul.progress li.toggle:hover ~ li:before, ul.progress li.toggle:hover ~ li:before {
   border-top-color: #e6ecf0;
   border-right: 8px solid #e6ecf0;
   border-bottom-color: #e6ecf0;
@@ -2082,7 +2277,7 @@ ul.progress li.completed {
   animation: fill 1s linear;
 }
 
-ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
+ul.progress li.completed.active, ul.progress li.completed.toggle:hover, ul.progress li.completed.toggle:hover {
   margin-right: 4%;
   text-shadow: 1px 3px 5px #333;
   font-weight: 700;
@@ -2125,7 +2320,7 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
   border: none;
 }
 
-.outline, .grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li, .images, iframe, .content .map, .youtube img, .section img, .callout img, .confirm img, .org img, .warning img, .error img {
+.outline, .grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li, .images, iframe, .content .map, .youtube img, .section img, .callout img, .confirm img, .org img, .org img, .warning img, .error img {
   padding: 0 0 0.25em;
   background: #fff;
   border: 1px solid #ddd;
@@ -2179,7 +2374,7 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
   margin: 1.5em 0;
 }
 
-.callout, .confirm, .org, .warning, .error {
+.callout, .confirm, .org, .org, .warning, .error {
   clear: both;
   margin: 1.5em 0;
   background: #f7f7f7;
@@ -2189,15 +2384,15 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
   overflow: hidden;
 }
 
-.section img.left, .callout img.left, .confirm img.left, .org img.left, .warning img.left, .error img.left {
+.section img.left, .callout img.left, .confirm img.left, .org img.left, .org img.left, .warning img.left, .error img.left {
   margin: 0 .75em .75em 0;
 }
 
-.section img.right, .callout img.right, .confirm img.right, .org img.right, .warning img.right, .error img.right {
+.section img.right, .callout img.right, .confirm img.right, .org img.right, .org img.right, .warning img.right, .error img.right {
   margin: 0 0 .75em .75em;
 }
 
-.section img.left.full, .section .related img.left.map, .related .section img.left.map, .section img.right.full, .section .related img.right.map, .related .section img.right.map, .callout img.left.full, .confirm img.left.full, .org img.left.full, .warning img.left.full, .error img.left.full, .callout .related img.left.map, .related .callout img.left.map, .confirm .related img.left.map, .related .confirm img.left.map, .org .related img.left.map, .related .org img.left.map, .warning .related img.left.map, .related .warning img.left.map, .error .related img.left.map, .related .error img.left.map, .callout img.right.full, .confirm img.right.full, .org img.right.full, .warning img.right.full, .error img.right.full, .callout .related img.right.map, .related .callout img.right.map, .confirm .related img.right.map, .related .confirm img.right.map, .org .related img.right.map, .related .org img.right.map, .warning .related img.right.map, .related .warning img.right.map, .error .related img.right.map, .related .error img.right.map {
+.section img.left.full, .section .related img.left.map, .related .section img.left.map, .section img.right.full, .section .related img.right.map, .related .section img.right.map, .callout img.left.full, .confirm img.left.full, .org img.left.full, .org img.left.full, .warning img.left.full, .error img.left.full, .callout .related img.left.map, .related .callout img.left.map, .confirm .related img.left.map, .org .related img.left.map, .related .confirm img.left.map, .related .org img.left.map, .org .related img.left.map, .related .org img.left.map, .warning .related img.left.map, .related .warning img.left.map, .error .related img.left.map, .related .error img.left.map, .callout img.right.full, .confirm img.right.full, .org img.right.full, .org img.right.full, .warning img.right.full, .error img.right.full, .callout .related img.right.map, .related .callout img.right.map, .confirm .related img.right.map, .org .related img.right.map, .related .confirm img.right.map, .related .org img.right.map, .org .related img.right.map, .related .org img.right.map, .warning .related img.right.map, .related .warning img.right.map, .error .related img.right.map, .related .error img.right.map {
   float: none;
   margin: 0;
 }
@@ -2231,7 +2426,7 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
   cursor: pointer;
 }
 
-.callout h3, .confirm h3, .org h3, .warning h3, .error h3, .callout h3.close, .confirm h3.close, .org h3.close, .warning h3.close, .error h3.close, .section .close .callout h3, .section .close .confirm h3, .section .close .org h3, .section .close .warning h3, .section .close .error h3 {
+.callout h3, .confirm h3, .org h3, .org h3, .warning h3, .error h3, .callout h3.close, .confirm h3.close, .org h3.close, .org h3.close, .warning h3.close, .error h3.close, .section .close .callout h3, .section .close .confirm h3, .section .close .org h3, .section .close .org h3, .section .close .warning h3, .section .close .error h3 {
   margin: 0;
   padding: 0.5% 1%;
   color: #fff;
@@ -2289,7 +2484,7 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
   overflow: hidden;
 }
 
-.callout div, .confirm div, .org div, .warning div, .error div {
+.callout div, .confirm div, .org div, .org div, .warning div, .error div {
   padding: 2%;
   background: #f7f7f7;
 }
@@ -2334,7 +2529,7 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
 }
 
 /*Ally*/
-.ally, #SearchBox label, .addevent input[type="checkbox"], .js .closed, .homeicon, .glassicon {
+.ally, #SearchBox label, #SearchBox label, .addevent input[type="checkbox"], .js .closed, .homeicon, .glassicon {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2499,7 +2694,7 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
     font-size: 0.9em;
   }
 
-  .icon-home:before, #Home:before, #Glass:before, #Nav li:first-child > a:before {
+  .icon-home:before, #Home:before, #Home:before, #Glass:before, #Nav li:first-child > a:before {
     content: "\e608";
     line-height: 42px;
     font-size: 1.5em;
@@ -2629,7 +2824,7 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
     vertical-align: middle;
   }
 
-  .icon-search:before, #Glass:before {
+  .icon-search:before, #Glass:before, #Glass:before {
     content: "\e61d";
   }
 
@@ -2653,11 +2848,11 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
 }
 
 /*Status - oct 2012*/
-.confirm {
+.confirm, .org {
   border: 2px solid #42a35a;
 }
 
-.section.confirm .close, .section.org .close, .confirm h3, .org h3, .section.confirm:hover h3, .section.org:hover h3 {
+.section.confirm .close, .section.org .close, .section.org .close, .confirm h3, .org h3, .org h3, .section.confirm:hover h3, .section.org:hover h3, .section.org:hover h3 {
   background: #42a35a;
   border: 0;
   font-weight: normal;
@@ -2685,7 +2880,7 @@ ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
   font-weight: normal;
 }
 
-.section.confirm .arrow, .section.org .arrow, .section.warning .arrow, .section.error .arrow {
+.section.confirm .arrow, .section.org .arrow, .section.org .arrow, .section.warning .arrow, .section.error .arrow {
   border-color: #fff transparent transparent transparent;
 }
 
@@ -2969,7 +3164,7 @@ ul.slideshow {
     font-size: 1.1em;
   }
 
-  .fixedwidth, #Header, #contentArea, #Main, #Search, #Header, #Nav ul, #contentArea, #Main, #Search {
+  .fixedwidth, #Header, #Nav ul, #contentArea, #Main, #Header, #Nav ul, #contentArea, #Main, #Search {
     width: 80%;
     max-width: 1220px;
   }
@@ -3203,7 +3398,7 @@ ul.slideshow {
     border: 0;
   }
 
-  .fixedwidth, #Header, #contentArea, #Main, #Search, #Header, #Nav ul, #contentArea, #Main, #Search {
+  .fixedwidth, #Header, #Nav ul, #contentArea, #Main, #Header, #Nav ul, #contentArea, #Main, #Search {
     width: 100%;
   }
 
@@ -3398,7 +3593,7 @@ ul.slideshow {
     hyphens: auto;
   }
 
-  .fixedwidth, #Header, #contentArea, #Main, #Search, #Header, #Nav ul, #contentArea, #Main, #Search {
+  .fixedwidth, #Header, #Nav ul, #contentArea, #Main, #Header, #Nav ul, #contentArea, #Main, #Search {
     width: 100%;
   }
 
@@ -3544,7 +3739,7 @@ ul.slideshow {
     display: block;
   }
 
-  .callout, .confirm, .org, .warning, .error, .content .callout, .content .confirm, .content .org, .content .warning, .content .error, #col2 .contact {
+  .callout, .confirm, .org, .org, .warning, .error, .content .callout, .content .confirm, .content .org, .content .org, .content .warning, .content .error, #col2 .contact {
     margin: 1%;
   }
 
@@ -3729,7 +3924,7 @@ ul.slideshow {
     margin-left: -2%;
   }
 
-  ul.progress li:first-child:before, ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
+  ul.progress li:first-child:before, ul.progress li.completed.active, ul.progress li.completed.toggle:hover, ul.progress li.completed.toggle:hover {
     border: 0;
   }
 
@@ -3738,11 +3933,11 @@ ul.slideshow {
     background-position: 100% 0%;
   }
 
-  ul.progress li.completed.active, ul.progress li.completed.toggle:hover {
+  ul.progress li.completed.active, ul.progress li.completed.toggle:hover, ul.progress li.completed.toggle:hover {
     margin: 0 0 18px -2%;
   }
 
-  ul.progress li.active.completed:after, ul.progress li.completed.toggle:hover:after {
+  ul.progress li.active.completed:after, ul.progress li.completed.toggle:hover:after, ul.progress li.completed.toggle:hover:after {
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
     border-top: 15px solid #63979f;
@@ -3794,7 +3989,7 @@ ul.slideshow {
     margin: 10px 8px;
   }
 
-  .icon-home:before, #Home:before, #Glass:before {
+  .icon-home:before, #Home:before, #Home:before, #Glass:before {
     line-height: 20px;
     margin-right: 5%;
     vertical-align: middle;
@@ -3927,7 +4122,6 @@ ul.slideshow {
   height: 0;
   background: #222;
   opacity: 0.6;
-  -ms-filter: "alpha(opacity=60)";
 }
 .sliderkit img {
   width: 100%;
@@ -3993,6 +4187,7 @@ ul.slideshow {
     -ms-filter: none;
   }
 
+  /*Black prints faster: h5bp.com/s*/
   a, a:visited {
     text-decoration: underline;
     color: #781351;
@@ -4014,10 +4209,12 @@ ul.slideshow {
     content: "";
   }
 
+  /*Don't show links for images, or javascript/internal links*/
   thead {
     display: table-header-group;
   }
 
+  /*h5bp.com/t*/
   tr, img {
     page-break-inside: avoid;
   }
@@ -4037,7 +4234,7 @@ ul.slideshow {
 
   body {
     background: transparent;
-    font: 100%/1.5 Georgia,Times New Roman,serif;
+    font: 100%/1.5 Georgia, Times New Roman, serif;
   }
 
   #col2:before, #Article:before {

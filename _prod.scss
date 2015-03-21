@@ -1,6 +1,5 @@
-/*Main CSS
-============*/
-/*Generic classes*/
+/*Generic classes
+-------------------------------------------------------------- */
 .cf							{overflow:hidden;}
 .clear					{clear:both; margin:0;}
 .hidden 				{display:none;}
@@ -27,143 +26,56 @@
 .line, hr 			{clear:both; margin:0.6em 0 1.2em 0; width:100%; height:1px; background:#ddd; border:0;}
 .formbox				{padding:0 2%; font-size:1.1em;}
 img 						{border:0; max-width:100%;}
-.action, .action:visited 	{margin:5%; padding:6px 18px; border:1px solid #666; border-radius:2px; text-shadow:0 1px rgba(0,0,0,0.1); color:#fff; font-size:1.1em; font-weight:700; background:#767676;}
+.action, .action:visited {margin:5%; padding:6px 18px; border:1px solid #666; border-radius:2px; text-shadow:0 1px rgba(0,0,0,0.1); color:#fff; font-size:1.1em; font-weight:700; background:#767676;}
 .action:hover 	{border:1px solid #b2b2b2; color:#fff; text-shadow:1px 1px 3px #111; box-shadow:0 1px 1px rgba(0,0,0,0.2); cursor:pointer; text-decoration:none; @include gradient(#666665, #B2B2B2);}
 .action:active 	{box-shadow:inset 0 1px 2px rgba(0,0,0,0.3)}
 .action img			{display:none;}
+.toggle         {@extend %inlineblock; cursor:pointer; opacity:0.5; -webkit-filter:#{'grayscale(100%)'};}
+.toggle:hover   {@extend .active;}
+.active         {opacity:1; -webkit-filter:#{'grayscale(0%)'};}
 
-.toggle {
-  cursor: pointer;
-  opacity: 0.5;
-  -webkit-filter: grayscale(100%);
-}
-
-.active,.toggle:hover {
-  opacity: 1;
-  font-weight: 700;
-  -webkit-filter: grayscale(0%);
-}
-
-.dotted,.newsList li,#Tools li {
-  border-bottom: 1px dotted #ddd;
-}
-
-.underline,#col1 h3 {
-  border-bottom: 1px solid #ddd;
-}
-
-.inlineblock,.toggle,.eventdates,.newseventmap,.addfiles,.newscontacts,.relatedlinks,.org ul,.content ul.individual,.parkfacts,.parkbullets {
-  display: inline-block;
-  vertical-align: top;
-}
-
-/*Links*/
-.content a:link, .content a:visited, table a:link 	{ border-bottom: 1px solid #3c61a5;
-  text-shadow: none;
-}
-
-.content a:visited {
-  border-bottom: 1px solid #537ac1;
-}
-
-.content a:after {
-  border: 0;
-}
-.section .coricon, .coricon {margin:0; padding:0 0 0 2px; border:0; background:none; vertical-align:middle; box-shadow:none;}
+/*OOCSS - start using % for placeholders not needed in compiled css*/
+.dotted         {border-bottom:1px dotted #ddd;}
+.underline      {border-bottom:1px solid #ddd;}
+%inlineblock    {display:inline-block; vertical-align:top;}
 
 @-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
-
 @keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
-
-/*Pages*/
+/*Pages
+-------------------------------------------------------------- */
 .content {margin:0 auto; min-width:10em; max-width:50em; padding:1% 2%;}
 #Article .content {padding:0;}
-#storyContentWrapper {
-  padding: 0 20px;
-}
-
-div.updatedDate {
-  color: #555;
-  font-size: 0.8em;
-  margin: 0.5em 0 1em;
-  border-bottom: 1px solid #ddd;
-  position: relative;
-}
-
-#addThisButtons {
-  position: absolute;
-  right: 10px;
-  top: 110px;
-  display: none;
-}
-
-.box.ratings {
-  clear: both;
-}
-
-.ratings li {
-  display: inline-block;
-}
-
-.comments textarea {
-  width: 50%;
-}
-
-.ratings input,.comments input {
-  width: 7em;
-  height: 3em;
-}
-
-#col1Large {
-  position: relative;
-}
-
-.updated {
-  position: absolute;
-  padding-left: 72%;
-  color: #666;
-}
-
+span.updatedDate {}
+div.updatedDate {color:#555; font-size:0.8em; margin:0.5em 0 1em; border-bottom:1px solid #ddd; position:relative;}
+#addThisButtons {position:absolute; right:10px; top:110px; display:none;}
+.box.ratings {clear:both;}
+.ratings li {display:inline-block;}
+.comments textarea {width:50%;}
+.ratings input, .comments input {width:7em; height:3em;}
+#col1Large {position:relative;}
+.updated {position:absolute; padding-left:72%; color:#666;}
 .pagetitle,.content h1,.landing,#top h1,#col3 .employmentType h3 {
-  background: #3c61a5;
-  color: #fff;
-  text-shadow: 1px 3px 5px #333;
-  padding: 2% 2% 1%;
-  border-radius: 3px;
-}
-
+  background:$link; color:#fff; text-shadow:1px 3px 5px #333; padding:2% 2% 1%; border-radius:3px;}
 .sectiontitle,.employmentType h3,#col3 #top h1 {
   margin: 0;
   padding: 0.5% 1%;
   border-radius: 5px;
   box-shadow: 0 2px 4px #aaa;
   border: 1px solid #ddd;
-  background-color: #d4d4d5;
-  background-image: -webkit-linear-gradient(#ddddde, #cccccd);
-  background-image: linear-gradient(to bottom, #ddddde,#cccccd);
+  background: #d4d4d5;
 }
 
 .findmyservice,.calendar h1 {
   margin-left: -4%;
   padding: 1% 4%;
-  background: #3c61a5;
+  background:$link;
   color: #fff;
   font-size: 1.5em;
   text-shadow: 0 -1px #3c61a5,0 1px #3c61a5;
@@ -174,10 +86,7 @@ div.updatedDate {
 /*Left Col
 ===========*/
 /*Global*/
-.shortdesc,.content h1+h3 {
-  font-style: italic;
-  color: #666;
-}
+.shortdesc,.content h1+h3 {font-style:italic; color:#666;}
 
 #col1 h3 {
   background: #ddd;
@@ -877,42 +786,13 @@ iframe,.content .map {
 
 /*Templates
 ====================*/
-/*Boards-Commissions*/
-.bclogo {
-  float: right;
-  border-radius: 3px;
-  border: 1px solid #ddd;
-  position: relative;
-  right: -2px;
-}
-
-.org ul,.content ul.individual {
-  text-align: center;
-  float: none;
-  margin-right: -4px;
-  margin-bottom: 1em;
-  padding: 0;
-  width: 33.2%;
-}
-
-.org ul:nth-child(1) li:first-child {
-  padding: 0;
-}
-
-.org h4 {
-  background: #657838;
-  color: #fff;
-  text-shadow: 1px 3px 5px #333;
-  width: 105%;
-}
-
-.cacgismap,.gismap_iframe {
-  float: left;
-  margin: 0 0 0 2%;
-  width: 62%;
-  height: 256px;
-  overflow: hidden;
-}
+/*BC-CAC*/
+.bclogo {float:right; border-radius:3px; border:1px solid #ddd; position:relative; right:-2px;}
+.org {@extend .confirm;}
+.org ul, .content ul.individual {text-align:center; float:none; margin-right:-4px; margin-bottom:1em; padding:0; width:33.2%;}
+.org ul:nth-child(1) li:first-child {padding:0;}
+.org h4 {background:$green; color:#fff; text-shadow:1px 3px 5px #333; width:105%;}
+.cacgismap, .gismap_iframe {float:left; margin:0 0 0 2%; width:62%; height:256px; overflow:hidden;}
 
 .bio {
   clear: both;
@@ -940,127 +820,6 @@ iframe,.content .map {
   background: #fff;
 }
 
-#top h1 {
-  margin: 1% 2% 0;
-  width: 95%;
-}
-
-#top img {
-  margin-bottom: -5px;
-  display: none;
-}
-
-.employmentType {
-  width: 99%;
-  padding: 0 2%;
-}
-
-.employmentType div[style] {
-  display: none;
-}
-
-.employmentType div {
-  margin-left: 0.5em;
-}
-
-.empJump li a {
-  float: left;
-  margin: 0 15px 20px 0;
-  border-bottom: 1px solid #fff;
-}
-
-.employmentType h3 {
-  clear: both;
-  margin: 1em 0 0.5em;
-}
-
-.empTitle {
-  clear: both;
-  margin: 0 0.5em 0 0;
-  font-size: 1.1em;
-  font-weight: 700;
-}
-
-.empClose,.empSalary {
-  float: left;
-  margin: 0 0 0.25em;
-  font-size: 0.9em;
-}
-
-.empDept,.empNo {
-  float: left;
-  margin: 0 0 0.5em 0;
-  font-size: 0.9em;
-}
-
-.empDept {
-  clear: both;
-}
-
-.empNone {
-  font-style: italic;
-}
-
-.empNone:last-child {
-  display: none;
-}
-
-#top:hover,#top:active,.employmentType>a:hover,.employmentType>a:active {
-  text-decoration: none;
-  cursor: default;
-}
-
-.content .job li {
-  list-style: none;
-  margin-left: 0;
-  padding: 5px;
-}
-
-.employmentRequirements li,.employmentDuties li {
-  margin-left: 20px;
-  list-style-type: disc;
-}
-
-.employmentDisclaimer {
-  margin-top: 20px;
-  color: #666;
-}
-
-#col3 .employmentType {
-  padding: 0;
-}
-
-#col3 h1 img,#col3 .empJump,#col3 .empNo,#col3 .empSalary,#col3 .empDept,#col3 .empClose,#col3 .employmentType div[style] {
-  display: none;
-}
-
-#col3 #top h1 {
-  margin-top: 2%;
-  width: 99%;
-  padding: 3% 1%;
-  color: #333;
-  font-size: 1.4em;
-  text-shadow: none;
-  position: relative;
-}
-
-#col3 .employmentType h3 {
-  border-radius: 3px;
-  font-size: 1.4em;
-}
-
-#col3 .empTitle {
-  font-weight: normal;
-  font-size: 1em;
-  border-bottom: 1px dotted #ccc;
-  width: 98%;
-  margin: 0 0 6px 0;
-}
-
-#col3 a[title=Volunteer] {
-  display: none;
-}
-
 .content .parkfacts li {
   list-style: none;
   margin: 0;
@@ -1072,114 +831,27 @@ iframe,.content .map {
 }
 
 @-webkit-keyframes fill {
-  0% {
-    background-position: 100% 0%;
-  }
-
-  100% {
-    background-position: 0% 100%;
-  }
+  0% {background-position:100% 0%;}
+  100% {background-position:0% 100%;}
 }
-
 @keyframes fill {
-  0% {
-    background-position: 100% 0%;
-  }
-
-  100% {
-    background-position: 0% 100%;
-  }
+  0% {background-position:100% 0%;}
+  100% {background-position:0% 100%;}
 }
 
-label.project {
-  margin-right: 5px;
-  display: inline-block;
-  width: 50px;
-}
+/*Project*/
+label.project {margin-right:5px; display:inline-block; width:50px;}
 
-ul.progress {
-  padding-left: 1%;
-  overflow: hidden;
-}
-
-ul.progress li {
-  float: left;
-  text-align: center;
-  position: relative;
-  background: #e6ecf0;
-  background-image: -webkit-linear-gradient(right, #e6ecf0 0%, #e6ecf0 50%, #63979f 50%, #63979f 100%);
-  background-image: linear-gradient(to right, #63979f 0%,#63979f 50%,#e6ecf0 50%,#e6ecf0 100%);
-  background-size: 200% 100%;
-  background-position-x: 100%;
-  background-position-y: 0%;
-  background-position: 100% 0%;
-  display: inline;
-  margin: 0;
-  padding: 6px;
-  width: 23%;
-  transition: all 1s ease-in;
-}
-
-ul.progress li:first-child:before,ul.progress li.active ~ li:before,ul.progress li.toggle:hover ~ li:before {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  right: 100%;
-  height: 0;
-  width: 0;
-  border: 20px solid transparent;
-  border-top-color: #4b747b;
-  border-right: 8px solid #4b747b;
-  border-bottom-color: #4b747b;
-  border-left-width: 8px;
-  transition: all 1s ease-in;
-}
-
-ul.progress li.active ~ li:before,ul.progress li.toggle:hover ~ li:before {
-  border-top-color: #e6ecf0;
-  border-right: 8px solid #e6ecf0;
-  border-bottom-color: #e6ecf0;
-}
-
-ul.progress li:last-child:after,ul.progress li.completed:after {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  left: 100%;
-  height: 0;
-  width: 0;
-  border: 18px solid transparent;
-  border-right-width: 8px;
-  border-left: 8px solid #e6ecf0;
-  transition: all 1s ease-in;
-}
-
-ul.progress li.completed:after {
-  border-left: 8px solid #4b747b;
-}
-
-ul.progress li.completed:first-child {
-  margin-left: 2%;
-}
-
-ul.progress li.completed {
-  background-position-x: 0%;
-  background-position-y: 100%;
-  background-position: 0% 100%;
-  background: #4b747b;
-  color: #fff;
-}
-
-ul.progress li.completed {
-  -webkit-animation: fill 1s linear;
-  animation: fill 1s linear;
-}
-
-ul.progress li.completed.active,ul.progress li.completed.toggle:hover {
-  margin-right: 4%;
-  text-shadow: 1px 3px 5px #333;
-  font-weight: 700;
-}
+ul.progress {padding-left:1%; overflow:hidden;}
+ul.progress li {float:left; text-align:center; position:relative; background:#e6ecf0; background-image:-webkit-linear-gradient(right, #e6ecf0 0%, #e6ecf0 50%, #63979f 50%, #63979f 100%); background-image:linear-gradient(to right, #63979f 0%,#63979f 50%,#e6ecf0 50%,#e6ecf0 100%); background-size:200% 100%; background-position-x:100%; background-position-y:0%; background-position:100% 0%; display:inline; margin:0; padding:6px; width:23%; transition:all 1s ease-in;}
+ul.progress li:first-child:before,ul.progress li.active ~ li:before,ul.progress li.toggle:hover ~ li:before {content:' '; position:absolute; top:0; right:100%; height:0; width:0; border:20px solid transparent; border-top-color:#4b747b; border-right:8px solid #4b747b; border-bottom-color:#4b747b; border-left-width:8px; transition: all 1s ease-in;}
+ul.progress li.active ~ li:before,ul.progress li.toggle:hover ~ li:before {border-top-color:#e6ecf0; border-right:8px solid #e6ecf0; border-bottom-color:#e6ecf0;}
+ul.progress li:last-child:after,ul.progress li.completed:after {content:' '; position:absolute; top:0; left:100%; height:0; width:0; border:18px solid transparent; border-right-width:8px; border-left:8px solid #e6ecf0; transition:all 1s ease-in;}
+ul.progress li.completed:after {border-left:8px solid #4b747b;}
+ul.progress li.completed:first-child {margin-left:2%;}
+ul.progress li.completed {background-position-x:0%; background-position-y:100%; background-position:0% 100%; background:#4b747b; color:#fff;}
+ul.progress li.completed {-webkit-animation:fill 1s linear; animation:fill 1s linear;}
+ul.progress li.completed.active,ul.progress li.completed.toggle:hover {margin-right:4%; text-shadow:1px 3px 5px #333; font-weight:700;}
 
 /*New 1col - april 2012*/
 .sharing {
