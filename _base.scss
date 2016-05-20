@@ -1,9 +1,9 @@
 /* Establish basic layout elements
 -------------------------------------------------------------- */
-*     {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+*     {box-sizing:border-box;}
 body  {background:#efefef;}
 
-html, body, #Main, #Article, #sidebar, #Sidebar, #navigation, #Header, #Nav, #contentArea, #col1, #col2, #col3, #Footer
+html, body, .wrapper, #navigation, #Header, #Nav, #contentArea, #col1, #col2, #col3, #Footer
 										{margin:0; padding:0;}
 .fixedwidth         {width:100%;
   @include bp(desktop) {margin:0 auto; width:85%;}
@@ -15,71 +15,53 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 	&:visited		{color:lighten($link, 10%);}
 	&:hover,
 	&:focus 		{color:$green; @include transition(all, .25s, ease-in-out);}
-	&:active 		{top:1px;/*
-  -webkit-transform: translate(2px);
-      -ms-transform: translate(2px);
-          transform: translate(2px);*/}
+	&:active 		{top:1px;}
 }
-#contentArea a:before {content:''; position:absolute; width:100%; height:1px; bottom:-1px; left:0; background:$green; visibility:hidden; 
-  -webkit-transform:scaleX(0);
-          transform:scaleX(0); transition:all .3s ease-in-out;}
-#contentArea a:hover:before {visibility:visible; 
-  -webkit-transform:scaleX(1);
-          transform:scaleX(1);}
+#contentArea a:before {content:''; position:absolute; width:100%; height:1px; bottom:-1px; left:0; background:$green; visibility:hidden; transform:scaleX(0); transition:all .3s ease-in-out;}
+#contentArea a:hover:before {visibility:visible; transform:scaleX(1);}
 .content a:link, .content a:visited, table a:link {border-bottom:1px solid $link; text-shadow:none;}
 .content a:visited {border-bottom:1px solid lighten($link, 10%);}
 .content a:after {border:0;}
 
 /* Header elements.
 -------------------------------------------------------------- */
-#navigation {font-size:0.9em; background:#5784d5; /*check color for active tabs*/
-  @include bp(tablet) {/*@include gradient(#5c8fea, #537ac1); height:auto; for smooth fixed nav */}
+#navigation {font-size:0.9em; background:#5784d5;
   @include bp(desktop){height:141px;} }
-.ie9 #navigation {font-size:0.85em;} //for large ie9 home icon
 
 #Header {overflow:hidden; position:relative; text-align:center; @extend .fixedwidth;
-  @include bp(tablet) {height:95px; background:url(images/Skyline1.png) no-repeat; background-position:20%; /*background-size:100%;*/ text-align:left;}
+  @include bp(tablet) {height:95px; background:url(images/Skyline1.png) no-repeat; background-position:20%; text-align:left;}
   @include bp(wide){background-position:40%; background-repeat:no-repeat; box-shadow:none;} }
-// #Header a:hover {border:0;}
 
-// #CitySeal						{width:45%; cursor:pointer;}
-.logo {vertical-align:middle; cursor:pointer; -webkit-filter:drop-shadow(1px 1px 5px #333); filter:drop-shadow(1px 1px 5px #333);
+.logo {vertical-align:middle; cursor:pointer; filter:drop-shadow(1px 1px 5px #333);
   @include bp(tablet) {width:70px;} }
 #Header .logo {display:none; position:absolute; right:3%; margin:0; padding:0; width:60px;
   @include bp(tablet) {display:inline; position:static; width:85px; margin:0.25em 0 0 1em;}
   @include bp(desktop) {margin:0;}
-  @include bp(wide) {display:none;} } // relook at why there are absolute defaults here
+  @include bp(wide) {display:none;} }
 .raleigh  {font-size:2em; padding-left:0.25em; color:#fff; display:inline; vertical-align:middle; text-shadow:1px 1px 3px #111; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", serif; transition:all, .5s, ease-in-out;
   @include bp(desktop) {font-size:2.2em;}
   @include bp(wide) {display:block; padding-top:0.5em;} }
-.raleigh:hover      {cursor:pointer;
-  -webkit-transform: scale(1.25) translate(0.5em);
-      -ms-transform: scale(1.25) translate(0.5em);
-          transform: scale(1.25) translate(0.5em);
-  @include bp(wide) {-webkit-transform: scale(1.25) translate(3.75em);
-      -ms-transform: scale(1.25) translate(3.75em);
-          transform: scale(1.25) translate(3.75em);} }
-          // check to see if this can keep state after 1s on hover rather than revert
+.raleigh:hover      {cursor:pointer; transform: scale(1.25) translate(0.5em);
+  @include bp(wide) {transform: scale(1.25) translate(3.75em);} }
 
-#SearchBox/*, #Glass*/    {/*visibility:hidden;*/ position:fixed; overflow:hidden; /*top:85px; right:9%;*/ width:0; -webkit-transform:translate(0.75em, 0.75em); -ms-transform:translate(0.75em, 0.75em); transform:translate(0.75em, 0.75em); transition:all, .4s, ease-in-out; 
-  @include bp(tablet) {position:static; float:right; width:40%; -webkit-transform:translate(0, -4em); -ms-transform:translate(0, -4em); transform:translate(0, -4em);}
-  @include bp(desktop) {width:29%; /*-webkit-transform:translate(40em, -3.75em); -ms-transform:translate(40em, -3.75em); transform:translate(40em, -3.75em);*/}
-  @include bp(wide) {width:24%; -webkit-transform:translate(0, -3em); -ms-transform:translate(0, -3em); transform:translate(0, -3em);} }
-#SearchBox.visible {width:95%; z-index:200;}
+#SearchBox          {position:fixed; overflow:hidden; width:0; transform:translate(0.75em, 0.75em); transition:all, .4s, ease-in-out; 
+  @include bp(tablet) {position:static; float:right; width:40%; transform:translate(0, -4em);}
+  @include bp(desktop) {width:29%;}
+  @include bp(wide) {width:24%; transform:translate(0, -3em);} }
+#SearchBox.visible  {width:95%; z-index:200;}
 #SearchBox label    {@extend .ally;}
-#SearchInput        {margin:0; padding:0.25em; width:79%; vertical-align:middle; border:1px solid #ddd; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; @include transition(box-shadow, .3s, ease-in-out);}
+#SearchInput        {margin:0; padding:0.25em; width:79%; vertical-align:middle; border:1px solid #ddd; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; transition:box-shadow, .3s, ease-in-out;}
 #SearchInput:focus  {box-shadow:0 0 5px rgba(81, 203, 238, 1);}
 #SearchInput::-webkit-input-placeholder, #SearchInput::-moz-placeholder, #SearchInput:-ms-input-placeholder {font-weight:normal;}
-#SearchBox .action  {margin:0 0 0 -0.25em; padding:0.5em; width:20%; vertical-align:middle; font-size:1em; font-weight:300; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111; /*@extend .icon-search;*/}
+#SearchBox .action  {margin:0 0 0 -0.25em; padding:0.5em; width:20%; vertical-align:middle; font-size:1em; font-weight:300; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111;}
 #Search .action     {@include gradient(#DD4B39, darken(#DD4B39, 15%));}
-.ie8 .icon-search:before {content:"Search";}
 
 .utility {display:none;}
 
 /* Main navigation elements.
 -------------------------------------------------------------- */
 #Nav            {float:left; width:100%; z-index:100; box-shadow:0 1px 2px #777; @include transition(all, .5s, linear); background:#333; text-align:center; position:relative;}
-#Nav ul         {/*display:none;*/ margin:0; clear:both; width:100%; transition:display, .15s, cubic-bezier(0,1.12,.39,.98); @extend .fixedwidth;
+#Nav ul         {margin:0; clear:both; width:100%; transition:display, .15s, cubic-bezier(0,1.12,.39,.98); @extend .fixedwidth;
   @include bp(tablet) {display:block; width:90%; float:right;}
   @include bp(desktop) {display:table-row;} 
   @include bp(wide) {padding-left:1em; width:80%;} }
@@ -102,7 +84,7 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 @media only screen and (min-width:60em) and (max-width:71em) {
   #Lines span {display:none;}
 }
-#Home {@extend .icon-home; font-weight:700; display:block; margin:1em; //need to fix tablet hover
+#Home {@extend .icon-home; font-weight:700; display:block; margin:1em;
   @include bp(tablet) {display:block; position:absolute; height:50px; width:10%; border-bottom:1px solid #999; text-align:center; margin:0;}
   @include bp(desktop) {display:none;} }
 #Glass {@extend .icon-search; font-weight:700; line-height:20px; padding:5px; float:right; vertical-align:baseline; margin:1.5%; font-size:1.5em; cursor:pointer; position:absolute; top:-2.25em; right:0;
@@ -118,16 +100,15 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 #Nav li:nth-child(-n+5) {
   @include bp(tablet) {border-bottom:1px solid #999;} 
   @include bp(desktop) {border:0;} }
-#Nav li:nth-child(5) {/*font-size:0.75em;*/
-  @include bp(tablet) {border-right:none; font-size:1em;}
-  @include bp(desktop) {/*width:17%;*/} }
+#Nav li:nth-child(5) {
+  @include bp(tablet) {border-right:none; font-size:1em;} }
 @media only screen and (min-width:40em) and (max-width:51em) {
   #Nav li:nth-child(5) {height:50px; font-size:0.85em;}
 }
-.current        {@include gradient($link, lighten($link, 10%));} // try sliding bottom border like twitter
+.current        {@include gradient($link, lighten($link, 10%));}
 .current a:hover, .current:hover a {color:#fff;}
 
-#Nav li a       {padding:1.1em/* 0.75em*/; display:inline-block; width:100%;
+#Nav li a       {padding:1.1em; display:inline-block; width:100%;
   @include bp(tablet) {width:auto;} 
   @include bp(wide) {padding-right:1.4em; padding-left:1.4em;} }
 #Nav li:first-child a {

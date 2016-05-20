@@ -19,8 +19,6 @@ h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 /* Text elements
 -------------------------------------------------------------- */
 p 						{margin:0 0 1.618em 0;}
-
-blockquote 		{margin:1.5em;color:#777;font-style:italic;}
 strong 				{font-weight:700;}
 em 						{font-style:italic;}
 
@@ -52,10 +50,6 @@ table.bids tr:nth-child(5n+1) td a {color:#131d34;}
 
 /* Messaging
 -------------------------------------------------------------- */
-.quiet			{color:#666;}
-.highlight 	{background:#ffc;}
-.added 			{background:#060; color:#fff;}
-.removed 		{color:#900;}
 .announce   {margin:0 1em; padding:0.5em 0.75em; background:#c0392b; border-radius:2px; color:#fff;
   h2      {display:inline; color:#fff; text-shadow:none; vertical-align:middle;}
   a       {color:#fff; padding:0.2em 0.5em 0.1em; border:1px solid #fff; margin:0.3em; border-radius:3px;}
