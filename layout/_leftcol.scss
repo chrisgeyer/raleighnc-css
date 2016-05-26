@@ -1,0 +1,54 @@
+#col1 h3 {font-size:1.25em; @extend .underline; line-height:1.3; background:#ddd; text-align:center; 
+	@include bp(desktop) {border-radius:3px 3px 0 0;} }
+
+.icons, .depts {
+	@include bp(desktop) {background:$offwhite;} }
+
+/*Global*/
+.box.icons 						{/*margin-right:0;*/ padding:0;}
+.icons ul 						{margin:0;
+	@include bp(desktop) {background:#ddd; padding-bottom:2%; border-radius:0 0 3px 3px;} }
+.icons a 							{margin:2% 0 4% 0; padding:3%; display:block; border-radius:3px;
+ @include bp(desktop) {background:#ececec; border-bottom:1px solid #ececec; text-shadow:1px 1px 1px #ccc;} }
+.box.icons a:hover 		{-webkit-transform:scale(1.1) translateX(0.5em); -ms-transform:scale(1.1) translateX(0.5em); transform:scale(1.1) translateX(0.5em);}
+
+/*Department dropdown*/
+.box.depts {overflow:visible;}
+#deptSelector select, .depts select {display:block; width:100%;
+	@include bp(tablet) {display:none;} }
+
+/* General dropdown styles */
+.dropdown {@extend .icons; position:relative; display:none;
+	@include bp(tablet) {display:block;} }
+.dropdown .arrow {float:right; margin:5%; border-color:$link transparent transparent transparent; border-width:10px 8px 0;}
+.dropdown a, .dropdown a:hover {margin:2% 0; font-size:1.3em; cursor:pointer;}
+.dropdown a:hover .arrow {border-color:$green transparent transparent transparent;}
+.related .dropdown a {font-size:1em;}
+.related .dropdown .arrow {margin:1%; border-color:$link transparent transparent transparent;}
+.related .dropdown a:hover .arrow {border-color:$green transparent transparent transparent;}
+.js .dropdown ul {z-index:1000; margin:2px 0; background-color:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:1px 3px 5px #666; overflow:hidden;}
+.dropdown ul:after {content:''; display:inline-block; border-left:9px solid transparent; border-right:9px solid transparent; border-bottom:9px solid #fff; position:absolute; top:39px; left:105px;}
+#col3 .dropdown ul:after {border-bottom:none;}
+.dropdown li a, .dropdown li a:hover {padding:0 0 0 5px; font-size:1em; background:#fff; text-shadow:none;}
+
+.dropdown .fixed {position:relative;}
+
+.leftnav li 		{padding:0.25em; 
+	@include bp(desktop) {background:$offwhite;} }
+
+.box, #popularPages, #popularSearch, #col3 .mainarticlelinks, #col3 .maineventslinks {margin-bottom:1em; position:relative; /*overflow:hidden;*/}
+.related h3, #popularPages h2, #popularSearch h2, #col3 .mainarticlelinks h2, #col3 .maineventslinks h2 {margin:0; padding:0.5em 0.5em 0.25em; background:$link; color:#fff; text-shadow:1px 3px 5px #333; border-radius:3px 3px 0 0; box-shadow:none; line-height:1;}
+#popularPages h2, #popularSearch h2 {@extend .h3;}
+.related ul, #popularPages ul, #popularSearch ul, #col3 .mainarticlelinks ul, #col3 .maineventslinks ul, .open ul, .council ul {margin:0; background:#89a1cb; padding-bottom:2%; border-radius:0 0 3px 3px;}
+.related li, #popularPages li, #popularSearch li, #col3 .mainarticlelinks li, #col3 .maineventslinks li, .open li, .council li {margin:0; padding:2% 4%; background:$offwhite;}
+#col3 .mainarticlelinks li, #col3 .maineventslinks li {min-height:4em;}
+.content .related a {text-decoration:none;}
+.primary h3, .primary ul {background:$teal;}
+
+// #col2Large #popularPages {float:left; margin:0 1%; padding:0; width:54%;}
+
+.govdelivery h3 		{/*font-size:1.1em;*/ background:$green;}
+.govdelivery ul	 		{background:#d9decf;}
+/*.govdelivery a 			{color:$green;
+	&:visited					{color:lighten($link, 10%);}
+}*/

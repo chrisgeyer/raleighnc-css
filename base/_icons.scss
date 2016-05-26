@@ -1,12 +1,6 @@
-/*Ally*/
-.js .ally, .homeicon, .glassicon {position:absolute; clip:rect(1px 1px 1px 1px);/*IE6/7*/ clip:rect(1px, 1px, 1px, 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
-.ie8 .homeicon {position:relative;}
+.js .ally, .homeicon, .glassicon {position:absolute; clip:rect(1px 1px 1px 1px); padding:0; border:0; height:1px; width:1px; overflow:hidden;}
 
-/*Icons*/
-@font-face {
-	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot');
-	font-weight: normal; font-style: normal;}
+@font-face {font-family:'icomoon';src:url('fonts/icomoon.eot');font-weight:normal;font-style:normal;}
 
 @font-face {
 	font-family: 'icomoon';
@@ -17,9 +11,7 @@
 	font-weight: normal; font-style: normal;}
 
 @media only screen and (min-width:1em) {
-	/* Use the following CSS code if you want to have a class per icon*/
 	[class^="icon-"]:before, [class*=" icon-"]:before, [class^="icon-"]:after, [class*=" icon-"]:after, .mainRss a:after, #Nav li:first-child > a:before, #Home:before, #Glass:before, #Nav #Lines:after, a[href $='.doc']:after, a[href $='.pdf']:after, a[href $='.docx']:after, a[href $='.xls']:after, a[href $='.xlsx']:after, a[href $='.zip']:after, a[href ^="mailto:"]:after, a[href^='http']:after, a[href *='/Contacts/']:after, .utility a:before, .content a:not(.imglink)[href$='FormsDirectory.html']:after, .content a:not(.imglink)[href^='http://onlinedevcenter']:after, .content a:not(.imglink)[href$='CurrentDevelopmentActivity.html']:after, .content a:not(.imglink)[href$='Face2FaceServices.html']:after, .content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html']:after, .content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:after, .content a:not(.imglink)[href*='DevelopmentFeeSchedule']:after, a:not(.imglink)[href*='/extra/Books/']:after, .addevent label:after {
-	/*.icon-mail, .icon-location, .icon-calendar, .icon-calendar-2, .icon-file-word, .icon-file-pdf, .icon-file-excel, .icon-user, .icon-play, .icon-lines, .icon-new-tab, .icon-warning, .icon-play-alt, .icon-play-2, .icon-camera, .icon-home, .icon-document-alt-fill, .icon-folder, .icon-folder-2, .icon-file-zip, .icon-phone, .icon-share, .icon-search, .icon-DSFormDirectory, .icon-DSFeeSchedule, .icon-DSFaceToFace, .icon-DSOnlineDevelopment, .icon-DSStandardDrawing, .icon-DSZonning, .icon-mail-2, .icon-DSCurrentDevelopment, .icon-facebook, .icon-twitter, .icon-youtube, .icon-flickr, .icon-feed, .icon-gplus, .icon-linkedin, .icon-pinterest, .icon-book {*/
 		font-family: 'icomoon';
 		speak: none;
 		font-style: normal;
@@ -28,11 +20,10 @@
 		text-transform: none;
 		line-height: 1;
 
-		/* Better Font Rendering =========== */
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;}
 
-	.action:hover .icon-mail {position:relative; top:-5px; @include transition(top, .25s, ease-in-out);}
+	.action:hover .icon-mail {position:relative; top:-5px; transition:top .25s ease-in-out;}
 	a[href $='.doc'], a[href $='.docx'] {@extend .icon-file-word;}
 	// a:not(.imglink)[href $='.pdf'] {@extend .icon-file-pdf;}
 	a[href $='.xls'], a[href $='.xlsx'] {@extend .icon-file-excel;}
@@ -50,7 +41,7 @@
 	.content a:not(.imglink)[href$='CurrentDevelopmentActivity.html']:before {@extend .icon-DSCurrentDevelopment:before;}
 	.content a:not(.imglink)[href$='Face2FaceServices.html']:before {@extend .icon-DSFaceToFace:before;}
 	.content a:not(.imglink)[href$='DrawingsStandardDetailsIndex.html']:before {@extend .icon-DSStandardDrawing:before;}
-	.content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:before {@extend .icon-DSZonning:before;}
+	.content a:not(.imglink)[href$='ZoningPermitsBusiness.html']:before {@extend .icon-DSZoning:before;}
 
 	.icon-mail:before {content: "\e600";  font-size:2em; padding-right:5px; vertical-align:middle;}
 	.icon-location:before {content: "\e601"; font-size:2em; vertical-align:middle; padding-right:5px;}
@@ -72,7 +63,7 @@
 	.icon-file-powerpoint:after {content: "\e619"; margin-left:0.25em; font-size:1em; color:#dd5800;}
 	.icon-file-zip:after {content: "\e61a"; margin-left:0.25em; font-size:1em; color:#666;}
 	.icon-phone:before {content: "\e60b";}
-	.icon-DSZonning:before {content: "\e621"; @extend .icon-DS;}
+	.icon-DSZoning:before {content: "\e621"; @extend .icon-DS;}
 	.icon-DSStandardDrawing:before {content: "\e622"; @extend .icon-DS;}
 	.icon-DSOnlineDevelopment:before {content: "\e623"; @extend .icon-DS;}
 	.icon-DSFormDirectory:before {content: "\e624"; @extend .icon-DS;}
@@ -89,7 +80,7 @@
 	.icon-google-plus:before {content: "\e610";}
 	.icon-pinterest:before {content: "\e615"; color:$orange; background:#fff; font-size:0.6em; border-radius:10px; text-shadow:1px 1px 1px #ccc;}
 	.icon-warning:before {content: "\e61b";}
-	.icon-notification:before {content: "\e61c";}
+	.icon-notification:before {content: "\e61c"; font-size:2.5em; color:#fff; margin:0.2em; vertical-align: middle;}
 	.icon-search:before {content: "\e61d";}
 	.icon-clock:after {content: "\e628"; font-size:1em;}
 

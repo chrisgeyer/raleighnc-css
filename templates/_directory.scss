@@ -1,0 +1,20 @@
+#contactForm	{margin:2% 5%; padding:1%; background:#eee; overflow:hidden; border:2px solid #ddd; border-radius:5px; box-shadow:0 2px 3px #999;}
+#contactSearchForm li {padding:0.5%;}
+#contactSearchForm label {width:28%; display:inline-block;}
+#contactSearchForm select, #contactSearchForm input[type="text"] {width:50%;}
+#contactSearchForm select {margin-left:-1%;}
+#contactSearchForm .action {float:right; margin:0 2%;}
+.resultArea			{padding:1% 2%;}
+.resultArea p   {display:none;}
+#viewBy 				{float:left; display:none;}
+#viewBy ~ .resultPaging {display:none;}
+#peopleResults ~ .resultPaging {display:block;}
+.numberResults 	{float:left;}
+.paging 				{float:right;}
+#peopleResults 	{clear:both; width:100%; overflow:hidden;}
+.departmentRow 	{clear:both; background:#ddd; font-weight:700; text-align:center; padding:0 1%; font-size:1.1em;}
+.contactResultsName, .contactResultsTitle, .contactResultsDiv, .contactResultsPhoneNumber {float:left; margin:1% 0 0 0; padding:0 1%; width:30%;}
+.contactResultsName, .contactResultsPhoneNumber {clear:both;}
+.contactResultsTitle {width:40%;}
+.contactResultsPhoneNumber {margin:0; padding:1%; width:98%; border-bottom:1px dotted #ddd;}
+// .contactResultsName:nth-child(odd), .contactResultsTitle:nth-child(odd), .contactResultsDiv:nth-child(odd), .contactResultsPhoneNumber:nth-child(odd) {background:#ddd;}

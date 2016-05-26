@@ -1,0 +1,127 @@
+.bmx,  .arts,  .baseball,  .basketball,  .bocce,  .carousel,  .dogpark,  .boating,  .multipurpose,  .picnic_shelter,  
+.playground,  .commcenter,  .skateboarding,  .trail,  .swimming,  .tennis_center,  .tennis,  .greenway,  .train, 
+.volleyball {
+  background: url(images/sprites.png);
+  float: right;
+  margin-left: 0.25em;
+}
+
+.bmx {
+  background-position: -70px -35px;
+  width: 31px;
+  height: 31px;
+}
+
+.arts {
+  background-position: 0 0;
+  width: 31px;
+  height: 31px;
+}
+
+.baseball {
+  background-position: -35px 0;
+  width: 31px;
+  height: 31px;
+}
+
+.basketball {
+  background-position: -70px 0;
+  width: 31px;
+  height: 31px;
+}
+
+.bocce {
+  background-position: -105px 0;
+  width: 31px;
+  height: 31px;
+}
+
+.carousel {
+  background-position: -140px 0;
+  width: 31px;
+  height: 31px;
+}
+
+.dogpark {
+  background-position: 0 -35px;
+  width: 31px;
+  height: 31px;
+}
+
+.boating {
+  background-position: -35px -35px;
+  width: 31px;
+  height: 31px;
+}
+
+.multipurpose {
+  background-position: -105px -35px;
+  width: 31px;
+  height: 31px;
+}
+
+.picnic_shelter {
+  background-position: -140px -35px;
+  width: 31px;
+  height: 31px;
+}
+
+.playground {
+  background-position: 0 -70px;
+  width: 31px;
+  height: 31px;
+}
+
+.commcenter {
+  background-position: -35px -70px;
+  width: 31px;
+  height: 31px;
+}
+
+.skateboarding {
+  background-position: -70px -70px;
+  width: 31px;
+  height: 31px;
+}
+
+.trail {
+  background-position: -105px -70px;
+  width: 31px;
+  height: 31px;
+}
+
+.swimming {
+  background-position: -140px -70px;
+  width: 31px;
+  height: 31px;
+}
+
+.tennis_center {
+  background-position: -35px -105px;
+  width: 31px;
+  height: 31px;
+}
+
+.tennis {
+  background-position: 0 -105px;
+  width: 31px;
+  height: 31px;
+}
+
+.greenway {
+  background-position: -70px -105px;
+  width: 31px;
+  height: 31px;
+}
+
+.train {
+  background-position: -105px -105px;
+  width: 31px;
+  height: 31px;
+}
+
+.volleyball {
+  background-position: -140px -105px;
+  width: 31px;
+  height: 31px;
+}     

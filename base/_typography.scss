@@ -1,11 +1,7 @@
-/* Styling typography elements
----------------------------------------------------- */
 body	{color:#444; font:100%/1.618 sans-serif;}
 .content {font-family:Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;}
 
-/* Headings
--------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {/*margin:0 0 0.5em 0;*/ color:mix(#222, #333); font-weight:300; font-family:sans-serif; text-shadow:1px 1px 1px #ccc; text-rendering:optimizeLegibility;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {margin:0 0 0.5em 0; color:mix(#222, #333); font-weight:300; font-family:sans-serif; text-shadow:1px 1px 1px #ccc; text-rendering:optimizeLegibility;}
 
 h1, .h1 			{font-size:2.2em; margin-bottom:0; line-height:1;}
 h2, .h2				{font-size:1.8em;}
@@ -16,16 +12,12 @@ h6, .h6 			{font-size:0.8em;}
 
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 
-/* Text elements
---------------------------------------------------------------*/
 p 						{margin:0 0 1.618em 0;}
 
 blockquote 		{margin:1.5em;color:#777;font-style:italic;}
 strong 				{font-weight:700;}
 em 						{font-style:italic;}
 
-/* Lists
---------------------------------------------------------------*/
 ul, ol 	{margin:0 0 1em 0; padding:0;}
 ul li 	{margin:0; padding:0; list-style:none; line-height:1.3;}
 .content {
@@ -40,23 +32,21 @@ ul li 	{margin:0; padding:0; list-style:none; line-height:1.3;}
 	.nolist li 	{list-style:none; margin:0; padding:0 3px;}
 }
 
-/* Tables
---------------------------------------------------------------*/
 table 						{margin:1.25em 0 1.5em 0; width:100%; border-collapse:collapse; border:1px solid #fff;}
 table th, table thead tr td, table.bids tr:nth-child(5n+1) td {padding:1% 2%; background:$teal; color:#fff; text-shadow:1px 1px 1px #333; font-weight:700;}
+table.bids tr:nth-child(5n+1) td a {color: #131d34;}
 table.no-border, table.no-border td {border:0;}
-table td					{background:#d2dde4; border:1px solid #fff; padding:1%;}
+table td					{background:#e6ecf0; border:1px solid #fff; padding:1%;}
 table td p 				{margin:0;}
 table.stripe tr:nth-child(even) td {background:$offwhite;}
 table.devserv tr:nth-child(even) td {background:#d6e4ec;}
 
-/* Messaging
---------------------------------------------------------------*/
 .quiet				{color:#666;}
 .highlight 		{background:#ffc;}
 .added 				{background:#060; color:#fff;}
 .removed 			{color:#900;}
-.announce 		{margin:10px; padding:0 5px 5px 5px; background:#d5dff2; border:3px solid #c28176; border-radius:10px;
-  img {float:left; margin-bottom:10px; width:90px; height:90px;}
-  h2 	{margin:5px 0 5px 90px;}
+.announce 		{margin: 0 1em; padding: 0.5em 0.75em; background: #c0392b; border-radius: 2px; color: #fff;
+	h2 {display: inline; color: #fff; text-shadow: none; vertical-align: middle;}
+	a {color: #fff; padding: 0.2em 0.5em 0.1em; border: 1px solid #fff; margin: 0.3em; border-radius: 3px;}
+	a:hover {background: #fff; color: #444;}
 }

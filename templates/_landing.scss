@@ -1,27 +1,24 @@
-/*News & Events
-================*/
-/*Featured News Grid - Mar 2014*/
+.tasks 		{
+	@include bp(desktop) {display:none;} }
+.tasks li {border-left:5px solid #3c61a5; margin-bottom:1em; background:#ddd;}
+.tasks a  {padding:1em; display:block;}
+
 .grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {/*margin:1% 2%;*/ overflow:hidden;}
 .grid-1 .outline a:active, .grid-2 .outline a:active, .grid-3 .outline a:active, .grid-4 .outline a:active, .grid-5 .outline a:active {position:relative;}
-// #contentArea .grid-1 a:hover, #contentArea .grid-2 a:hover, #contentArea .grid-3 a:hover, #contentArea .grid-4 a:hover, #contentArea .grid-5 a:hover {border:0;}
 .grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li {@extend .outline; font-size:1.1em; margin-bottom:2%; padding:0 !important; text-align:center; background:#fff;}
 #Grid a:after {display:none;}
 .grid-1 span, .grid-2 span, .grid-3 span, .grid-4 span, .grid-5 span {padding:2%; display:block;}
-// .grid-1 li:hover, .grid-2 li:hover, .grid-3 li:hover, .grid-4 li:hover, .grid-5 li:hover {-webkit-transform:scale(1.05) rotate(-4deg); -ms-transform:scale(1.05) rotate(-4deg); transform:scale(1.05) rotate(-4deg); @include transition(all, 0.5s, ease);}
-
-// #columns:hover .pin:not(:hover) {opacity: 0.4;}
 
 .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li:first-child, .ie8 .grid-5 li {float:left; width:49%;}
-.grid-5 li:nth-child(2) {float:left; width:49%;} /* seperate bc ie8 doesnt support nth child*/
+.grid-5 li:nth-child(2) {float:left; width:49%;}
 .grid-2 li:nth-child(odd), .grid-3 li:nth-child(odd), .grid-4 li:nth-child(odd), .grid-5 li:nth-child(odd), .grid-5 li:nth-child(4) {margin-right:2%;}
 .grid-3 li:nth-child(3), .grid-4 li:nth-child(3), .grid-5 li:nth-child(3) {clear:both;}
 .grid-1 li {width:49%; margin:0 auto; float:none;}
-.grid-3 li:nth-child(3) {width:49%; margin:0 auto; float:none;} /* seperate bc ie8 doesnt support nth child*/
+.grid-3 li:nth-child(3) {width:49%; margin:0 auto; float:none;}
 .grid-5 li {float:left; width:32%;}
 .grid-5 li:nth-child(5) {margin-right:0;}
 
 @media only screen and (max-width:40em) {
-	// .grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {padding-right:1%;}
 	#Grid li {float:none; width:100%; margin-bottom:0.5em; overflow:hidden; background:$offwhite; font-size:1.3em;}
 	.grid-5 li img, .grid-4 li img, .grid-3 li img, .grid-2 li img, .grid-1 li img {float:right; width:50%; margin-left:2%;}
 	.grid-5 li:first-child img, .grid-4 li:first-child img, .grid-3 li:first-child img, .grid-2 li:first-child img, .grid-1 li img {float:none; width:100%; margin:0;}
@@ -33,11 +30,9 @@
 
 @media only screen and (max-width:40em) {
 	.location, .caclocation > div, .calendar {width:100%;}
-	// .newseventlocation li {display:inline;}
 	.gismap_iframe, .cacgismap, .gismap {float:none; margin:2%; width:91%;}
 }
 
-/*News List*/
 .mainarticlelinks {float:left; margin-bottom:1em; position:relative; width:100%;
 	@include bp(tablet) {width:49%;}
 	@include bp(desktop) {width:59%;} }
@@ -46,13 +41,13 @@
 	@include bp(desktop) {display:block; position:absolute; top:0; right:5%;} }
 .mainRss a  {@extend .icon-feed;}
 .mainRss a:hover {text-decoration:none;}
-.scroll {margin:0; background:#ddd; padding-bottom:2%; border-radius:0 0 3px 3px; /*box-shadow:0 3px 5px #999;*/ height:350px; overflow-y:auto; overflow:hidden;
+.scroll {margin:0; background:#ddd; padding-bottom:2%; border-radius:0 0 3px 3px; height:350px; overflow-y:auto; overflow:hidden;
 	@include bp(tablet) {overflow:auto;} }
 .newsList ul {@extend .scroll;}
 .newsList li {padding:0.5em; background:$offwhite; @extend .dotted;}
 .malDate {font-size:0.9em; color:#666;}
 a.more {margin-top:1px; padding:1%; background:#ddd; text-align:center; border-radius:0 0 5px 5px;}
-.newsList a.more, .eventsList a.more {display:block; /*add in angled style here*/
+.newsList a.more, .eventsList a.more {display:block;
 	@include bp(tablet) {display:none;} }
 
 .scroll ::-webkit-scrollbar{width:9px;height:9px;}
@@ -61,30 +56,20 @@ a.more {margin-top:1px; padding:1%; background:#ddd; text-align:center; border-r
 .scroll ::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#999;border-radius:8px;}
 .scroll ::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#999;border-radius:8px;}
 
-/*.newsList ul {scrollbar-face-color:#999998;
-// scrollbar-shadow-color: #2D2C4D;
-// scrollbar-highlight-color:#7D7E94;
-// scrollbar-3dlight-color: #7D7E94;
-// scrollbar-darkshadow-color: #2D2C4D;
-scrollbar-track-color: $offwhite;
-scrollbar-arrow-color: #efefef;}*/
-
 #col2Large .newsList ul, #col2Large .eventsList ul {height:auto;}
 
-/*Events List*/
 .maineventslinks {@extend .mainarticlelinks;
 	@include bp(tablet) {margin-left:2%;}
 	@include bp(desktop) {width:39%;} }
 .eventsList ul {@extend .scroll;}
 .eventsList li {padding:0.5em; background:$offwhite; clear:both;}
 .message 		{font-style:italic; margin-left:25%;}
-.eventDate 	{float:left; margin:0 5% 0 0; padding:0; width:20%; text-align:center; color:#fff; border-radius:3px; background:lighten($link, 5%);; text-shadow:0 1px 2px #333; /*background:#fff; border-radius:2px; box-shadow:0 2px 3px #999;*/}
+.eventDate 	{float:left; margin:0 5% 0 0; padding:0; width:20%; text-align:center; color:#fff; border-radius:3px; background:lighten($link, 5%);; text-shadow:0 1px 2px #333;}
 .eventDay 	{font-size:1.3em;}
 .eventTitle {display:inline;}
 .eventTitle a {margin:0;}
 .eventTimes {color:#666; margin:0 0 1% 25%;}
 
-/*News Article*/
 .newsAlert {margin-right:5px; color:#b74742; font-weight:700; display:inline;}
 .images {float:right; margin:0 0 10px 10px; @extend .outline;}
 .images {width:56%;}
@@ -98,7 +83,7 @@ scrollbar-arrow-color: #efefef;}*/
 	@include bp(tablet) {width:69%; overflow:hidden;} }
 .newseventlocation {
 	@include bp(tablet) {float:left; width:40%; margin-right:2%;} }
-.gismap {float:left; margin:0 0 1em 1em; width:46%; height:182px; overflow:hidden;} /*remove later*/
+.gismap {float:left; margin:0 0 1em 1em; width:46%; height:182px; overflow:hidden;}
 .content .addfiles li, .content .newscontacts li, .content .relatedlinks li {margin-left:0;
 	@include bp(tablet) {margin-left:2.5em;} }
 .addfiles, .newscontacts, .relatedlinks {@extend %inlineblock;
@@ -126,10 +111,8 @@ scrollbar-arrow-color: #efefef;}*/
 
 #col3 .mainarticlelinks ul, #col3 .maineventslinks ul {height:300px;}
 
-/*Home Page Feature*/
 .landing {display:none; margin-bottom:0.25em; text-align:center; @extend .pagetitle;
 	@include bp(tablet) {display:block;} }
-// .council {float:left; width:58%;}
 .council {@extend .maineventslinks;}
 .councilframe {border:0; box-shadow:none; margin:0; width:99.9%; height:140px; border-radius:0; padding:0; margin:2% 0;}
 .council ul {@extend .scroll; height:auto; overflow:hidden;}

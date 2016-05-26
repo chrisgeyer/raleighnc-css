@@ -1,9 +1,7 @@
-/* Main navigation elements.
--------------------------------------------------------------- */
-#Nav 						{float:left; width:100%; z-index:100; box-shadow:0 1px 2px #777; @include transition(all, .5s, linear); background:#333; text-align:center; position:relative;}
-#Nav ul					{/*display:none;*/ margin:0; clear:both; width:100%; transition:display, .15s, cubic-bezier(0,1.12,.39,.98); @extend .fixedwidth;
+#Nav 						{float:left; width:100%; z-index:100; box-shadow:0 1px 2px #777; transition:all .5s linear; background:#333; text-align:center; position:relative;}
+#Nav ul					{margin:0; clear:both; width:100%; transition:display .15s cubic-bezier(0,1.12,.39,.98); @extend .fixedwidth;
 	@include bp(tablet) {display:block; width:90%; float:right;}
-	@include bp(desktop) {display:table-row;} 
+	@include bp(desktop) {} 
 	@include bp(wide) {padding-left:1em; width:80%;} }
 #Nav ul.visible	{display:block;}
 
@@ -24,7 +22,7 @@
 @media only screen and (min-width:60em) and (max-width:71em) {
 	#Lines span {display:none;}
 }
-#Home	{@extend .icon-home; font-weight:700; display:block; margin:1em; //need to fix tablet hover
+#Home	{@extend .icon-home; font-weight:700; display:block; margin:1em;
 	@include bp(tablet) {display:block; position:absolute; height:50px; width:10%; border-bottom:1px solid #999; text-align:center; margin:0;}
 	@include bp(desktop) {display:none;} }
 #Glass {@extend .icon-search; font-weight:700; line-height:20px; padding:5px; float:right; vertical-align:baseline; margin:1.5%; font-size:1.5em; cursor:pointer; position:absolute; top:-2.25em; right:0;
@@ -33,7 +31,7 @@
 
 #Nav li 				{border-top:1px solid #999; text-align:left;
 	@include bp(tablet) {float:left; width:25%; border:0; text-align:center}
-	@include bp(desktop) {width:auto; @include transition(background, .2s, ease-in-out);} }
+	@include bp(desktop) {width:auto; transition:background .2s ease-in-out;} }
 #Nav li:hover		{font-weight:normal; color:#fff; @include gradient($link, lighten($link, 10%));}
 #Nav li:first-child {display:none;
 	@include bp(desktop) {display:inline-block;} }
@@ -46,7 +44,7 @@
 @media only screen and (min-width:40em) and (max-width:51em) {
 	#Nav li:nth-child(5) {height:50px; font-size:0.85em;}
 }
-.current 				{@include gradient($link, lighten($link, 10%));} // try sliding bottom border like twitter
+.current 				{@include gradient($link, lighten($link, 10%));}
 .current a:hover, .current:hover a {color:#fff;}
 
 #Nav li a 			{padding:1.1em/* 0.75em*/; display:inline-block; width:100%;
@@ -58,15 +56,6 @@
 	#Nav li:first-child > a:before {content: "\e608"; line-height:42px; font-size:1.5em; vertical-align:sub;}
 }
 
-
-@-webkit-keyframes slidein {
-	0% {
-		-webkit-transform:translateX(110%); 
-						transform:translateX(110%);}
-	100% {
-		-webkit-transform:translateX(0%); 
-						transform:translateX(0%);}
-}
 @keyframes slidein {
 	0% {
 		-webkit-transform:translateX(110%); 
@@ -74,45 +63,6 @@
 	100% {
 		-webkit-transform:translateX(0%); 
 						transform:translateX(0%);}
-}
-
-@-webkit-keyframes smooth-entry-reverse {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(2em);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-@-moz-keyframes smooth-entry-reverse {
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(2em);
-  }
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
-}
-@keyframes smooth-entry-reverse {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(2em);
-    -moz-transform: translateY(2em);
-    -ms-transform: translateY(2em);
-    -o-transform: translateY(2em);
-    transform: translateY(2em);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-  }
 }
 
 @media only screen and (min-width:60em) and (max-width:64em) {
@@ -124,18 +74,9 @@
 	#Lines, .logo, .depts h3 {display:none;}
 }
 
-.wrapper.push {@include transition(all, 1s, ease);
-		-webkit-transform:translateX(50%);
-				-ms-transform:translateX(50%);
-						transform:translateX(50%);
-	@include bp(tablet) {
-		-webkit-transform:translateX(25%);
-				-ms-transform:translateX(25%);
-						transform:translateX(25%);}
-	@include bp(desktop) {
-		-webkit-transform:translateX(0);
-				-ms-transform:translateX(0);
-						transform:translateX(0);}					
+.wrapper.push {transition:all 1s ease; transform:translateX(50%);
+	@include bp(tablet) {transform:translateX(25%);}
+	@include bp(desktop) {transform:translateX(0);}					
 	}
 
 @media only screen and (max-width:40em) {

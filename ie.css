@@ -1,16 +1,1 @@
-:root #Nav li:first-child a {font-size:1em;}
-/*:root .icon-mail {font-size:0.6em;}*/
-:root .arrow 				{border-right:8px solid transparent;}
-:root .close .arrow {border-top:8px solid transparent;}
-@media \0screen { .homeicon {position:relative;} }
-
-/*@media only screen and (min-width:1em) { .icon-mail:after, .icon-location:before, .icon-calendar:before, .icon-calendar-2:before, .icon-file-word:after, .icon-file-pdf:after, .icon-file-excel:after, .icon-user:before, .icon-play, .icon-lines:after, .icon-new-tab:after, .icon-warning, .icon-play-alt, .icon-play-2, .icon-camera, .icon-home:before, .icon-document-alt-fill, .icon-folder, .icon-folder-2, .icon-file-powerpoint:after, .icon-file-zip:after, .icon-phone, .icon-share, .icon-search, .icon-DSFormDirectory:before, .icon-DSFeeSchedule:before, .icon-DSFaceToFace:before, .icon-DSOnlineDevelopment:before, .icon-DSStandardDrawing:before, .icon-DSZonning:before, .icon-mail-2:before, .icon-DSCurrentDevelopment:before, .icon-facebook, .icon-twitter, .icon-youtube, .icon-flickr, .icon-feed:before, .icon-gplus, .icon-linkedin, .icon-pinterest, .icon-book, #Nav li:first-child > a:before {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;}
-}*/
+/*no longer needed with old ie upgraded*/
