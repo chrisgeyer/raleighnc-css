@@ -3,7 +3,7 @@
 .tasks li {border-left:5px solid #3c61a5; margin-bottom:1em; background:#ddd;}
 .tasks a  {padding:1em; display:block;}
 
-.grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {/*margin:1% 2%;*/ overflow:hidden;}
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {margin:1% 2%; overflow:hidden;}
 .grid-1 .outline a:active, .grid-2 .outline a:active, .grid-3 .outline a:active, .grid-4 .outline a:active, .grid-5 .outline a:active {position:relative;}
 .grid-1 li, .grid-2 li, .grid-3 li, .grid-4 li, .grid-5 li {@extend .outline; font-size:1.1em; margin-bottom:2%; padding:0 !important; text-align:center; background:#fff;}
 #Grid a:after {display:none;}

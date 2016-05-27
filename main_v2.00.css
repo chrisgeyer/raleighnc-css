@@ -595,15 +595,16 @@ a:active {
 }
 
 #col1 {
-  width: 50%;
-  margin: 0;
-  position: fixed;
-  top: 0;
-  left: -50%;
-  bottom: 0;
-  z-index: 150;
-  background: #555;
+  margin: 0.5%;
+  padding-top: 1.5%;
+  float: left;
+  position: static;
+  width: 14%;
+  background: #f7f7f7;
+  box-shadow: none;
+  border-radius: 3px;
   border: 0;
+  font-size: 0.85em;
 }
 @media only screen and (min-width: 40em) {
   #col1 {
@@ -626,7 +627,6 @@ a:active {
     z-index: 50;
     background: #f7f7f7;
     border-radius: 3px;
-    border: 1px solid #ddd;
     transition: margin-left 0.15s cubic-bezier(0, 1.12, 0.39, 0.98);
   }
 }
@@ -655,15 +655,8 @@ a:active {
 }
 
 #col1.land {
-  width: 50%;
-  margin: 0;
-  position: fixed;
-  top: 0;
-  left: -50%;
-  bottom: 0;
-  z-index: 150;
-  background: #555;
-  border: 0;
+  margin: 0.5%;
+  width: 14%;
 }
 @media only screen and (min-width: 40em) {
   #col1.land {
@@ -677,7 +670,7 @@ a:active {
     width: 19%;
     float: left;
     position: static;
-    background: transparent;
+    border: 0;
   }
 }
 @media only screen and (min-width: 95em) {
@@ -834,7 +827,7 @@ a:active {
 /*@media only screen and (min-width:60em) and (max-width:95em) {
 	#col1.land ~ #col3 #right > div:nth-child(1) {width:58%;}
 }*/
-@media only screen and (min-width: 90em) {
+@media only screen and (min-width: 95em) {
   .dropdown, #Footer .logo {
     display: block;
   }
@@ -1882,7 +1875,7 @@ div.updatedDate {
 }
 
 .grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {
-  /*margin:1% 2%;*/
+  margin: 1% 2%;
   overflow: hidden;
 }
 
