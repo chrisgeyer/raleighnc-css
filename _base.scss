@@ -1,23 +1,19 @@
-/* Establish basic layout elements
--------------------------------------------------------------- */
 *     {box-sizing:border-box;}
 body  {background:#efefef;}
 
 html, body, .wrapper, #navigation, #Header, #Nav, #contentArea, #col1, #col2, #col3, #Footer
 										{margin:0; padding:0;}
-.fixedwidth         {width:100%;
-  @include bp(desktop) {margin:0 auto; width:85%;}
-  @include bp(wide) {width:80%;} }
+.fixedwidth         {margin:0 auto; width:85%;}
 
 /* Links
 -------------------------------------------------------------- */
-a			{color:$link; text-decoration:none; position:relative; @include transition(all, .25s, ease-in-out);
+a			{color:$link; text-decoration:none; position:relative; transition:all 0.25s ease-in-out;
 	&:visited		{color:lighten($link, 10%);}
 	&:hover,
-	&:focus 		{color:$green; @include transition(all, .25s, ease-in-out);}
+	&:focus 		{color:$green; transition:all 0.25s ease-in-out;}
 	&:active 		{top:1px;}
 }
-#contentArea a:before {content:''; position:absolute; width:100%; height:1px; bottom:-1px; left:0; background:$green; visibility:hidden; transform:scaleX(0); transition:all .3s ease-in-out;}
+#contentArea a:before {content:''; position:absolute; width:100%; height:1px; bottom:-1px; left:0; background:$green; visibility:hidden; transform:scaleX(0); transition:all 0.3s ease-in-out;}
 #contentArea a:hover:before {visibility:visible; transform:scaleX(1);}
 .content a:link, .content a:visited, table a:link {border-bottom:1px solid $link; text-shadow:none;}
 .content a:visited {border-bottom:1px solid lighten($link, 10%);}
@@ -38,19 +34,19 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
   @include bp(tablet) {display:inline; position:static; width:85px; margin:0.25em 0 0 1em;}
   @include bp(desktop) {margin:0;}
   @include bp(wide) {display:none;} }
-.raleigh  {font-size:2em; padding-left:0.25em; color:#fff; display:inline; vertical-align:middle; text-shadow:1px 1px 3px #111; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", serif; transition:all, .5s, ease-in-out;
+.raleigh  {font-size:2em; padding-left:0.25em; color:#fff; display:inline; vertical-align:middle; text-shadow:1px 1px 3px #111; font-family:"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", serif; transition:all 0.5s ease-in-out;
   @include bp(desktop) {font-size:2.2em;}
   @include bp(wide) {display:block; padding-top:0.5em;} }
 .raleigh:hover      {cursor:pointer; transform: scale(1.25) translate(0.5em);
   @include bp(wide) {transform: scale(1.25) translate(3.75em);} }
 
-#SearchBox          {position:fixed; overflow:hidden; width:0; transform:translate(0.75em, 0.75em); transition:all, .4s, ease-in-out; 
+#SearchBox          {position:fixed; overflow:hidden; width:0; transform:translate(0.75em, 0.75em); transition:all 0.4s ease-in-out; 
   @include bp(tablet) {position:static; float:right; width:40%; transform:translate(0, -4em);}
   @include bp(desktop) {width:29%;}
   @include bp(wide) {width:24%; transform:translate(0, -3em);} }
 #SearchBox.visible  {width:95%; z-index:200;}
 #SearchBox label    {@extend .ally;}
-#SearchInput        {margin:0; padding:0.25em; width:79%; vertical-align:middle; border:1px solid #ddd; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; transition:box-shadow, .3s, ease-in-out;}
+#SearchInput        {margin:0; padding:0.25em; width:79%; vertical-align:middle; border:1px solid #ddd; border-radius:2px 0 0 2px; font:bold 1.25em 'lucida sans', 'trebuchet MS', 'Tahoma'; transition:box-shadow 0.3s ease-in-out;}
 #SearchInput:focus  {box-shadow:0 0 5px rgba(81, 203, 238, 1);}
 #SearchInput::-webkit-input-placeholder, #SearchInput::-moz-placeholder, #SearchInput:-ms-input-placeholder {font-weight:normal;}
 #SearchBox .action  {margin:0 0 0 -0.25em; padding:0.5em; width:20%; vertical-align:middle; font-size:1em; font-weight:300; border-radius:0 3px 3px 0; overflow:visible; position:relative; cursor:pointer; border:1px solid #666; text-shadow:1px 1px 3px #111;}
@@ -60,7 +56,7 @@ a			{color:$link; text-decoration:none; position:relative; @include transition(a
 
 /* Main navigation elements.
 -------------------------------------------------------------- */
-#Nav            {float:left; width:100%; z-index:100; box-shadow:0 1px 2px #777; @include transition(all, .5s, linear); background:#333; text-align:center; position:relative;}
+#Nav            {float:left; width:100%; z-index:100; box-shadow:0 1px 2px #777; transition:all 0.5s linear; background:#333; text-align:center; position:relative;}
 #Nav ul         {margin:0; clear:both; width:100%; transition:display, .15s, cubic-bezier(0,1.12,.39,.98); @extend .fixedwidth;
   @include bp(tablet) {display:block; width:90%; float:right;}
   @include bp(desktop) {display:table-row;} 
